@@ -10,11 +10,23 @@ enableRobotsTXT = true
   tag = "tags"
 
 [permalinks.taxonomy]
+  categories = "/category/"
+  tags = "/tag/"
+
+[permalinks.term]
   categories = "/category/:slug/"
   tags = "/tag/:slug/"
 
+# /feed/index.xml (served as /feed/); terms get /category/<x>/feed/index.xml.
+# Legacy /feed.xml is handled by static/_redirects (301 -> /feed/).
 [outputFormats.RSS]
-  baseName = "feed"
+  baseName = "feed/index"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  page = ["HTML"]
 
 [markup.goldmark.renderer]
   unsafe = true
