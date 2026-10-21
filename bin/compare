@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Build the pixelpilot review (original vs new site) and open it from disk.
+# Usage: bin/compare [--shoot] [--no-open]
+#   --shoot    retake all screenshots first (bin/screenshot --all)
+#   --no-open  only build the page
+# Baseline = screenshots/orig as committed at tag orig-screenshots-2026-10-21
+# (pixelpilot reads the baseline from git; override with BASELINE_REF=<ref>).
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+shoot=0; open_page=1
+for a in "$@"; do
+  case "$a" in
+    --shoot) shoot=1 ;;
+    --no-open) open_page=0 ;;
+    *) echo "Usage: bin/compare [--shoot] [--no-open]" >&2; exit 2 ;;
+  esac
+done
+
+[ "$shoot" = 1 ] && bin/screenshot --all
+
+out=tmp/screenshot-review
+rm -rf "$out"
+"${PIXELPILOT:-$HOME/src/dotfiles/bin/pixelpilot}" \
+  --baseline "${BASELINE_REF:-orig-screenshots-2026-10-21}" \
+  --screenshots-dir screenshots/orig \
+  --current-dir screenshots/dev \
+  --baseline-dir "$out/baseline" \
+  --output-html "$out/index.html" \
+  --title "justaddwater.dk: original (baseline) vs new Hugo (current)" >/dev/null
+
+echo "Review page: $PWD/$out/index.html"
+[ "$open_page" = 1 ] && open "$out/index.html"
+exit 0
