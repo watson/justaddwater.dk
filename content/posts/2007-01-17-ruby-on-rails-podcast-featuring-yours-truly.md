@@ -7,6 +7,7 @@ wp_id: 515
 categories: ["justaddwater.dk", "Podcast", "Prototyping", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "ruby", "rails", "podcast", "obie fernandez", "geoffrey grosenbach", "transcript", "copenhagenrb", "capgemini"]
 ---
 
 ... and other members of the [Copenhagen Ruby Brigade](http://copenhagenrb.dk/2007/1/6/copenhagen-rb-interviewed-in-the-rails-podcast/).

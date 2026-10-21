@@ -7,6 +7,7 @@ wp_id: 83
 categories: ["Browser"]
 tags: []
 author: "jesper"
+technorati: ["browser", "firefox", "firefox extension", "extension", "keyboard shortcut", "keyboard", "shortcut", "easter egg"]
 ---
 
 Do you use Firefox? Accidentally I discovered this keyboard shortcut.\

@@ -7,6 +7,7 @@ wp_id: 789
 categories: ["Usability"]
 tags: ["Accessibility", "calendar", "Humor", "Usability", "User experience"]
 author: "jesper"
+technorati: ["usability", "bad usability calendar", "calendar", "2008"]
 ---
 
 Just a quick note to mention that my friend Eidar and his colleagues at Netlife Research in Norway are now preparing the 2008 version of the Bad Usability Calendar. Please do post your proposals as a bad usability calendar is a perfect wallpaper and I have used it on several occasions for raising awareness about usability in project teams.

@@ -7,6 +7,7 @@ wp_id: 758
 categories: ["Ruby on Rails", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "enterprise", "rails", "railsconf", "khoi vinh", "reform", "plugin"]
 ---
 
 Take a look at Khoi Vinhs brilliant article [If It Looks Like a Cow, Swims Like a Dolphin and Quacks Like a Duck, It Must Be Enterprise Software](http://www.subtraction.com/archives/2007/1019_if_it_looks_.php):

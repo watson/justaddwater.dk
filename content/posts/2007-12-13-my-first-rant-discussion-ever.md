@@ -7,6 +7,7 @@ wp_id: 804
 categories: ["Psychology", "Software"]
 tags: []
 author: "jesper"
+technorati: ["e-texteditor", "forum", "discussion", "flame war", "discussion judo"]
 ---
 
 How do you manage to help discussions being constructive and treating people with mutual respect? I just had this strange experience. You pay \$34.95 for a text editor, and suddenly you're allowed to yell and swear aththe developers. WHAT?

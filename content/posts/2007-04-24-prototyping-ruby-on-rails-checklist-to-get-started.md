@@ -7,6 +7,7 @@ wp_id: 594
 categories: ["Prototyping", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "prototyping", "rapid prototyping", "preparation", "rails", "ruby", "setup"]
 ---
 
 **Update May 10: this article is no longer password protected. [Explanation why](/2007/05/11/ruby-on-rails-checklist-now-public-available/ "Justaddwater.dk: Ruby on Rails Checklist Now Public Available").**

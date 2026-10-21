@@ -7,6 +7,7 @@ wp_id: 437
 categories: ["Accessibility", "JavaScript", "Web Development"]
 tags: []
 author: "thomas"
+technorati: ["Internet Explorer", "IE", "IE6", "IE7", "png fix", "images", "accessibility", "screen reader", "JAWS", "DOM", "HTML", "JavaScript", "web development"]
 ---
 
 It is no secret that all versions of Internet Explorer on Windows prior to version 7.0 has a flaw in its PNG renderer. The flaw basically involves the rendering of the alpha transparency and means that the images cannot fade nicely into the background.

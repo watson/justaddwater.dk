@@ -7,6 +7,7 @@ wp_id: 792
 categories: ["HTML", "Humor", "JavaScript", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["spacer.gif", "webstandards"]
 ---
 
 In case you missed it, Dustin Diaz has written this excellent parody on what the hottest web techniques were like before webstandards and css were invented.\

@@ -7,6 +7,7 @@ wp_id: 109
 categories: ["Browser"]
 tags: []
 author: "jesper"
+technorati: ["IE", "IE3", "IE4", "IE5", "IE5.5", "IE6", "IE7", "multiple internet explorers", "microsoft internet explorer", "standalone", "browser", "cross-browser"]
 ---
 
 **Update 2006-09-28: [All IE Browsers Standalone On Same PC](/2006/09/28/all-ie-browsers-standalone-on-same-pc/ "Justaddwater.dk: All IE Browsers Standalone On Same PC") (September 28, 2006) solves the problem.**

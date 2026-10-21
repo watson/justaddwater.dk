@@ -1,7 +1,10 @@
-{{- /* WP excerpt: hand-written one (data/excerpts.json, see bin/export-excerpts) else first 55 words + [&hellip;]. */ -}}
-{{- with index hugo.Data.excerpts .Params.slug -}}{{ . | safeHTML }}
+{{- /* WP excerpt: hand-written one (data/excerpts.json, see bin/export-excerpts) else first 55 words + [&hellip;]. Texturized like WP. */ -}}
+{{- $h := "" -}}
+{{- with index hugo.Data.excerpts .Params.slug -}}{{ $h = . }}
 {{- else -}}
 {{- $t := .Plain | htmlUnescape | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+{{- $t = $t | replaceRE ` – ` " — " -}}
 {{- $w := split $t " " -}}
-{{- if gt (len $w) 55 -}}<p>{{ delimit (first 55 $w) " " | htmlEscape }} [&hellip;]</p>{{ else }}<p>{{ $t | htmlEscape }}</p>{{ end -}}
+{{- if gt (len $w) 55 -}}{{ $h = printf "<p>%s [&hellip;]</p>" (delimit (first 55 $w) " " | htmlEscape) }}{{ else }}{{ $h = printf "<p>%s</p>" ($t | htmlEscape) }}{{ end -}}
 {{- end -}}
+{{- partial "tx.html" (dict "s" $h "plain" false) -}}

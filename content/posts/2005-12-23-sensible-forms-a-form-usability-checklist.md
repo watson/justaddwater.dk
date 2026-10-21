@@ -7,6 +7,7 @@ wp_id: 49
 categories: ["Forms", "Usability"]
 tags: []
 author: "thomas"
+technorati: ["usability", "forms", "web forms", "html forms", "validation", "form validation"]
 ---
 
 I heard [via WebWord](http://www.webword.com/2005/12/22/sensible-forms-a-form-usability-checklist/) that A List Apart had [an interesting article on form usability](http://www.alistapart.com/articles/sensibleforms). It is a very good article that's definitely worth a read. Below is just my comment to the article and my own thoughts on the subject form usability.

@@ -7,6 +7,7 @@ wp_id: 590
 categories: ["Code", "CSS", "Errors", "Productivity", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["css", "debug", "debugging", "style editor", "css view", "firefox plugin", "firefox add-on", "modi2", "slayeroffice", "firebug", "productivity"]
 ---
 
 Firebug keeps surprising me. I've recently been working on code for several web designs and this little trick helped me to understand existing HTML and CSS much faster. Just to give an example I use our Justaddwater RSS feed page (but could be any page).

@@ -7,6 +7,7 @@ wp_id: 246
 categories: ["AJAX", "Java", "JavaOne"]
 tags: []
 author: "thomas"
+technorati: ["JavaOne", "java", "Delta Air Lines", "convention", "conference", "USA", "Dutch", "immigration", "San Francisco", "California", "AJAX", "SOA", "JSF"]
 ---
 
 [JavaOne](http://java.sun.com/javaone/sf/ "JavaOne 2006 Conference Homepage") is the biggest Java convention in the world held once a year in USA. Five of my colleagues and me from Capgemini have taken the long trip from Denmark to San Francisco in California (19 hours!). My plan is to give you daily updates on all the interesting sessions I’m attending. I’m especially looking forward to hearing the following:

@@ -7,6 +7,7 @@ wp_id: 38
 categories: ["AJAX", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "jakobnielsen"]
 ---
 
 Via [Ajaxian](http://ajaxian.com/archives/2005/12/jakob_nielsen_w_1.html) I saw an alleged article by Jakob Nielsen "Why Ajax sucks (most of the time)". I jumped right into the joke, and read the Ajaxian post carefully. Normally, Alertboxes are published every two weeks and the latest was published [yesterday](/2005/12/05/usability-testing-videos/).

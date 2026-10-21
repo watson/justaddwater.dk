@@ -7,6 +7,7 @@ wp_id: 494
 categories: ["justaddwater.dk", "Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["eyetracking", "usability", "heatmap", "heatmaps", "crazyegg", "quantitative", "testing", "mouse", "tracking", "eye tracking", "mouse tracking", "mouse", "trackpad"]
 ---
 
 Recently I was recommended taking a look at [CrazyEgg](http://crazyegg.com) which could be a possible candidate for creating heatmaps of user navigation. Rather than to be specific to CrazyEgg, I would like to comment on the general principles and pitfalls when using the methodology that CrazyEgg uses.

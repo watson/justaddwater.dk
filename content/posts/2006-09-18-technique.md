@@ -7,6 +7,7 @@ wp_id: 393
 categories: ["CSS", "HTML", "justaddwater.dk", "Web Development", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["javascript", "bookmarklet", "toolbox", "webstandards", "web standards"]
 ---
 
 Technique for using the toolbox: Locating problems in HTML.

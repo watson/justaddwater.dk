@@ -7,6 +7,7 @@ wp_id: 417
 categories: ["Accessibility", "Best of Justaddwater", "Humor", "Usability", "User experience"]
 tags: []
 author: "jesper"
+technorati: ["usability", "accessibility", "calendar", "anti-usability", "user experience", "ux", "uxp"]
 ---
 
 Perfect wallpaper for any project room. The Bad Usability Calendar from Norwegian company [Netlife Research](http://www.netliferesearch.com/).

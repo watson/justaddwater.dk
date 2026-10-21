@@ -1,0 +1,5 @@
+{{- /* WP "F jS, Y" style: "May 13th, 2006" (arg: time) */ -}}
+{{- $d := .Day -}}
+{{- $s := "th" -}}
+{{- if not (and (ge $d 11) (le $d 13)) -}}{{ with index (slice "th" "st" "nd" "rd" "th" "th" "th" "th" "th" "th") (mod $d 10) }}{{ $s = . }}{{ end }}{{ end -}}
+{{- printf "%s %d%s, %d" (.Format "January") $d $s .Year -}}

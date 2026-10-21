@@ -7,6 +7,7 @@ wp_id: 609
 categories: ["Productivity", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["webdevelopment", "programming", "command", "shell", "console", "powershell", "powercmd", "ruby on rails", "windows", "xp", "winxp"]
 ---
 
 The standard windows command window (console) sucks for several usability reasons:

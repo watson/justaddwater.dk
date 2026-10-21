@@ -2,6 +2,6 @@
 <h2 class="pagetitle">{{ .Title }}</h2>
 {{ range (where site.RegularPages "Type" "posts").GroupByDate "2006" "desc" }}
 <h3>{{ .Key }}</h3>
-<div id="oldernews"><ul>{{ range .Pages.ByDate.Reverse }}<li class="linkable"><a href="{{ .RelPermalink }}"><span class="title">{{ .Title }}</span> <span class="time">{{ .Date.Format "Jan 2" }}</span></a></li>{{ end }}</ul></div>
+<div id="oldernews"><ul>{{ range .Pages.ByDate.Reverse }}<li class="linkable"><a href="{{ .RelPermalink }}"><span class="title">{{ partial "tt.html" .Title }}</span> <span class="time">{{ .Date.Format "Jan 2" }}</span></a></li>{{ end }}</ul></div>
 {{ end }}
 {{ end }}

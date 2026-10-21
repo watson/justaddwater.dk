@@ -7,6 +7,7 @@ wp_id: 795
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["frank spillers", "experience dynamics", "usability", "user experience", "poster"]
 ---
 
 Frank Spillers from [Experience Dynamics](http://www.experiencedynamics.com/) wrote me this morning, and promted us to bring an exclusive pre-release of his new poster.

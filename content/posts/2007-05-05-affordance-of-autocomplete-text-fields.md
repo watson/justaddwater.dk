@@ -7,6 +7,7 @@ wp_id: 626
 categories: ["Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["usability", "autocomplete", "affordance", "hints", "hidden functionality", "examples", "discoverabilility", "guidelines"]
 ---
 
 In my opinion, the autocomplete input boxes have a very low discoverability because they're basically just textfields with added JavaScript.

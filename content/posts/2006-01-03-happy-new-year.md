@@ -7,6 +7,7 @@ wp_id: 53
 categories: ["justaddwater.dk"]
 tags: []
 author: "thomas"
+technorati: ["justaddwater.dk", "new year"]
 ---
 
 Hi and welcome back in 2006. As you might have noticed, we've been a little lacy over the holidays - but not to worry... We'll be back in force ;)

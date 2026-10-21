@@ -7,6 +7,7 @@ wp_id: 208
 categories: ["Podcast"]
 tags: []
 author: "jesper"
+technorati: ["james surowiecki", "wisdom of crowds", "psychology", "sxsw", "jim coudal", "jason fried"]
 ---
 
 Using the internet to make remarkably intelligent desicions.

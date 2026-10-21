@@ -7,6 +7,7 @@ wp_id: 605
 categories: ["Code", "CSS", "HTML", "JavaScript", "Productivity", "Ruby on Rails", "Software"]
 tags: []
 author: "jesper"
+technorati: ["editor", "e-texteditor", "etexteditor", "windows", "textmate", "html", "css", "javascript", "rails", "ruby on rails", "ruby", "rubyonrails", "cygwin"]
 ---
 
 I have been looking a fast, intuitive editor for my Windows laptop.

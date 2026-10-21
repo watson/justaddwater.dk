@@ -7,6 +7,7 @@ wp_id: 570
 categories: ["Events/seminars"]
 tags: []
 author: "jesper"
+technorati: ["event", "conference", "reboot", "copenhagen", "denmark", "reboot9"]
 ---
 
 May 31st and June 1st, the annual Reboot conference will take place here in Copenhagen.

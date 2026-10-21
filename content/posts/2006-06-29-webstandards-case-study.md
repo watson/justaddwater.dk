@@ -7,6 +7,7 @@ wp_id: 319
 categories: ["Browser", "Code", "Errors", "HTML", "JavaScript", "Performance", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["webstandards", "w3c", "browser errors", "code", "performance", "javascript", "html", "dom", "spacer.gif"]
 ---
 
 Project managers often have a hard time understanding web standards and why they matter. In this case, my arguments made a perfect business case for the managers of a particular project.

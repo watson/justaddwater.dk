@@ -7,6 +7,7 @@ wp_id: 397
 categories: ["Events/seminars", "justaddwater.dk", "ui11"]
 tags: []
 author: "jesper"
+technorati: ["uiconf", "ui11", "jared spool", "luke wroblevski", "bill scott", "bill patton", "rolf molich", "david malouf", "rolfmolich", "usabilitydagene", "conference", "event"]
 ---
 
 Update: All notes collected in the category "[UI11](/category/eventsseminars/ui11/)".

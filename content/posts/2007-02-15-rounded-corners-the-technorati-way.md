@@ -7,6 +7,7 @@ wp_id: 550
 categories: ["Code", "CSS", "HTML", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["web standards", "css", "html", "rounded corners", "technorati", "tantek celic", "eric meyer"]
 ---
 
 It's been a while where web standards don't get the attention it deserves on this blog. In that spirit, here's a behind-the-scenes view on how Technorati makes rounded corners on a faded background.

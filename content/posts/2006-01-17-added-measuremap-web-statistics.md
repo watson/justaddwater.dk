@@ -7,6 +7,7 @@ wp_id: 92
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
 author: "jesper"
+technorati: ["web statistics", "web stats", "wordpress", "wordpress dashboard", "google analytics", "measuremap"]
 ---
 
 We just started using MeasureMap and have added it to this blog after [Jared Spool recommended it in a comment](/2006/01/12/blog-software-usability/#comment-67 "Jared spool comment on justaddwater.dk").

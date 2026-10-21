@@ -7,6 +7,7 @@ wp_id: 225
 categories: ["justaddwater.dk", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "businesscase", "business", "prototyping", "prototypes", "wireframes"]
 ---
 
 I recieved some mails and comments on my recent article: [Ruby on Rails as rapid prototyping tool\

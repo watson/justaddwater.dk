@@ -7,6 +7,7 @@ wp_id: 268
 categories: ["Blogging", "justaddwater.dk", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["blogging", "corporate blogging", "capgemini", "andy mulholland", "ron tolido", "justaddwater.dk", "usability", "legal", "comments", "commenting policy"]
 ---
 
 From a [former colleague](http://www.grancomo.com/luis-villa/ "Grancomo: Luis Villa del Campo") I just learned that Capgemini started our first official corporate weblog: [CTO Blog](http://www.capgemini.com/ctoblog/ "Capgemini CTO Blog") by corporate CTO Andy Mulholland and Northern Europe Asia Pacific CTO Ron Tolido.

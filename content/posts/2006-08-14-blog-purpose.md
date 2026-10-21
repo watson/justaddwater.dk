@@ -7,6 +7,7 @@ wp_id: 366
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["justaddwater.dk", "blogging", "capgemini", "technorati", "jakob nielsen", "jared spool", "eric reiss", "john rhodes", "joe clark", "jonathan boutelle", "steve krug", "thomas snitker", "mike kuniavski"]
 ---
 
 Today, ten months ago, Thomas and I started Justaddwater.dk. Our purpose then was to share our **thoughts about usability and web standards**. It's time to review our profile after ten months with 135 posts, 420 comments (not to mention 10,000 spam comments) and over 500 links from 250 websites (according to Technorati).

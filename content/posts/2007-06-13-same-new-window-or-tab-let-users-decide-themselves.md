@@ -7,6 +7,7 @@ wp_id: 674
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["popup", "popup window", "usability", "keyboard", "keyboard shortcut", "browser"]
 ---
 
 Sidebar note to the related article "[Open New Window Still Has Usability Issues](/2007/06/13/open-new-window-still-has-usability-issues/ "Justaddwater.dk: Open New Window Still Has Usability Issues")".

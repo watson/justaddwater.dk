@@ -7,6 +7,7 @@ wp_id: 720
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "errors", "error prevention", "jakob nielsen", "webword", "wordpress"]
 ---
 
 The blog software Wordpress is just released in version 2.3. One of the new additions are a feature that can rescue and correct links when users accidentally follow a link in an email broken over 2 lines. Or following an old link that the blog author has renamed.

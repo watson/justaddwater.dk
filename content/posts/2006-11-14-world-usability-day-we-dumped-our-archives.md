@@ -7,6 +7,7 @@ wp_id: 451
 categories: ["Blogging", "justaddwater.dk", "Usability"]
 tags: []
 author: "thomas"
+technorati: ["justaddwater.dk", "usability", "blogging", "blog archive", "world usability day", "wud", "wud2006", "pogo sticking"]
 ---
 
 Today is [World Usability Day](http://worldusabilityday.org/). Here on Justaddwater.dk, **we have celebrated with finally scrapping our blog archive**.

@@ -7,6 +7,7 @@ wp_id: 234
 categories: ["Accessibility", "Browser", "Web Standards"]
 tags: []
 author: "thomas"
+technorati: ["browsers", "screenshots", "browsershots", "service", "web standards", "accessibility"]
 ---
 
 A free online service called [Browsershots](http://browsershots.org/) has just launched (still beta). You provide it with a URI and it will take real screenshots in different browsers of that page.

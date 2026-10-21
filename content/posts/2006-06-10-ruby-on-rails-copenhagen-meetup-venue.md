@@ -7,6 +7,7 @@ wp_id: 292
 categories: ["Code", "justaddwater.dk", "Ruby on Rails"]
 tags: []
 author: "thomas"
+technorati: ["ruby on rails", "meetup", "copenhagen", "cafe selina"]
 ---
 
 We can now finally reveal the venue for the Ruby on Rails meetup in Copenhagen:

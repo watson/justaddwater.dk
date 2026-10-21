@@ -7,6 +7,7 @@ wp_id: 448
 categories: ["User Interface"]
 tags: []
 author: "thomas"
+technorati: ["Microsoft Office", "Office 2007", "user interface", "UI", "jensen harris", "design", "Ribbon", "user experience"]
 ---
 
 Jensen Harris who's the Group Manager of the Microsoft Office User Experience Team has for the past year been blogging about the new and exiting user interface of upcoming Office 2007.

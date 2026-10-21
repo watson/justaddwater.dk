@@ -7,6 +7,7 @@ wp_id: 559
 categories: ["Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["google", "confusability", "chris mcevoy", "inconsistency", "information architecture"]
 ---
 
 Chris McEvoy has some good and thorough observations around the inconsistencies in Google's menues. Even though the menus are extremely simple, they seem to differ on most of the 26 sites mentioned.

@@ -7,6 +7,7 @@ wp_id: 681
 categories: ["Hardware"]
 tags: []
 author: "jesper"
+technorati: ["hardware", "windows xp", "wireless", "intel", "lenovo", "t60p", "t60"]
 ---
 
 Warning to our frequent readers: This is not about usability or webstandards.

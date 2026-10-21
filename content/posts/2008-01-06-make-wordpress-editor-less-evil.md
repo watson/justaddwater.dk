@@ -7,6 +7,7 @@ wp_id: 854
 categories: ["Usability", "WordPress"]
 tags: []
 author: "thomas"
+technorati: ["wordpress", "editor", "wysiwyg", "quotes", "code", "usability", "source code"]
 ---
 
 This Friday, Jesper and I had a chat about things we don't like about the current WordPress WYSIWYG editor. In particular when trying to write code examples in our posts:

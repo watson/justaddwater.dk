@@ -7,6 +7,7 @@ wp_id: 501
 categories: ["Best of Justaddwater", "HTML", "Humor"]
 tags: []
 author: "jesper"
+technorati: ["html", "tag", "visualization", "fun", "humour", "flickr", "photo pool", "creative commons"]
 ---
 
 Inspired by Neatorama's "[Visual HTML joke](http://www.neatorama.com/2007/01/01/visual-html-joke/)" that got [digged](http://digg.com/programming/Visual_HTML_joke) recently.

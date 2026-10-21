@@ -7,6 +7,7 @@ wp_id: 664
 categories: ["Events/seminars", "Speaking", "User experience"]
 tags: []
 author: "jesper"
+technorati: ["interaction design", "user experience", "uxp", "human", "humane", "reboot", "reboot9", "jef raskin", "allpeers"]
 ---
 
 Reboot was very good this year, and after meeting people like Mathias Müller-Prove (works with user experience on [OpenOffice](http://openoffice.org) and [did another presentation](http://www.reboot.dk/artefact-1993-en.html "Reboot presentation: A duel between desktop and web applications")), Matthew (works in [AllPeers](http://allpeers.com/) \&mdash; a company that does an interestning firefox plugin, that I unfortunately never got a demo of).

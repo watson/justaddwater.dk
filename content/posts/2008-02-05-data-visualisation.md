@@ -7,6 +7,7 @@ wp_id: 877
 categories: ["Inspiration"]
 tags: []
 author: "jesper"
+technorati: ["design", "inspiration", "graphs", "visualization"]
 ---
 
 What a treasury of old and new maps, images, graphs -- all you can imagine. [www.math.yorku.ca/SCS/Gallery/milestone/](http://www.math.yorku.ca/SCS/Gallery/milestone/) (found via wikipedia: [information graphics](http://en.wikipedia.org/wiki/Information_graphics))

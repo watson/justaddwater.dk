@@ -7,6 +7,7 @@ wp_id: 308
 categories: ["Forms", "Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["usability", "user interface", "form", "forms", "progressive disclosure", "country selector"]
 ---
 
 Here is an example of a smart country selector. From installation of an Ipod Nano. The usability principle is called progressive disclosure: First, display the most typical settings, then give the ability to show all in the special cases.

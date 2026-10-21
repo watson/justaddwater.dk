@@ -7,6 +7,7 @@ wp_id: 384
 categories: ["Browser", "CSS", "User Interface", "Web Development", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["internet explorer", "ie 7", "microsoft", "browser", "css", "standalone", "web standards", "strict mode", "quirks mode"]
 ---
 
 The Internet Explorer team is preparing to ship the next major version of the world's most popular browser. The IE team has written an update on which CSS bugfixes that will make it into the final release.

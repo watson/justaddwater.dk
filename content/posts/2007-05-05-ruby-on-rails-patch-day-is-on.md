@@ -7,6 +7,7 @@ wp_id: 634
 categories: ["Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "rubyonrails", "ruby", "rails", "rapid prototyping", "copenhagenrb"]
 ---
 
 We're in the middle of Ruby on Rails Patch Day in the Copenhagen.rb (the copenhagen ruby society).

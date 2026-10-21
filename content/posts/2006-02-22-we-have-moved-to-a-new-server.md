@@ -7,6 +7,7 @@ wp_id: 161
 categories: ["justaddwater.dk"]
 tags: []
 author: "thomas"
+technorati: ["justaddwater.dk"]
 ---
 
 If you have tried to read our blog within the last half hour you might have gotten a "Permission denied" error. This was due to a server move that should have gone smoothly - but as it sometimes happens with server moves things go wrong. But after a bit of hacking it now seems to run again.

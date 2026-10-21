@@ -7,6 +7,7 @@ wp_id: 231
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
 author: "thomas"
+technorati: ["justaddwater.dk", "statistics", "web statistics"]
 ---
 
 Ok... I know that we are soon done with April, but I just haven't gotten around to publishing the March statistics yet - So hare they are - better late than never:

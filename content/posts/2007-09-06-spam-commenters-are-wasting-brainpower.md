@@ -7,6 +7,7 @@ wp_id: 705
 categories: ["Blogging", "Brainpower", "spam"]
 tags: []
 author: "jesper"
+technorati: ["spam comments", "spam", "comment spam", "brainpower", "idiot"]
 ---
 
 Imagine the amount of collective brainpower idiotic spammers waste on creative ideas for new ways to get past spam filters.

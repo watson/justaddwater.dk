@@ -7,6 +7,7 @@ wp_id: 94
 categories: ["Blogging", "justaddwater.dk", "Usability", "WordPress"]
 tags: []
 author: "thomas"
+technorati: ["usability", "blogging", "blogs", "WordPress", "Ta-da Lists", "Movable Type", "Kubrick", "themes"]
 ---
 
 Many blogs today use common blogging software like WordPress or Movable Type. Tools like these are very easy to set up and you will probably get your blog up and running with the default design within 10-15 minutes. This speed comes at a price though...

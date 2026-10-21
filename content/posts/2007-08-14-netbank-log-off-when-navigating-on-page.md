@@ -7,6 +7,7 @@ wp_id: 696
 categories: ["User experience", "Website"]
 tags: []
 author: "jesper"
+technorati: ["nykredit", "bank", "netbank", "user experience", "uxp", "usability test", "banking", "online banking"]
 ---
 
 I just realized that the netbank I use logs me off when I request a page which the bank defined as "outside the netbank".

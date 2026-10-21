@@ -7,6 +7,7 @@ wp_id: 672
 categories: ["Productivity", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["agile", "project", "management", "assumptions", "productivity"]
 ---
 
 Here is some agile methodology worth paying attention to, **stating that even wrong decisions allow developers to keep momentum and push a project forward**:

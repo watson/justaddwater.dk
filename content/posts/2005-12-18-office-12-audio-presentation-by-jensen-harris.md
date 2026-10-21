@@ -7,6 +7,7 @@ wp_id: 45
 categories: ["Podcast", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "podcast", "mp3", "presentation", "Jensen Harris", "BayCHI", "Evan Williams", "Odeo", "Jason Kottke", "user experience"]
 ---
 
 BayCHI has put yet another audio recording online. The latest event is a two hour presentation with [Jensen Harris](http://blogs.msdn.com/jensenh/) of the Microsoft Office team. He shares his thougts on usability and the challenges of shaping the new user interface.

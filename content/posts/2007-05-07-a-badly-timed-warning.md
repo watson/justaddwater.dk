@@ -7,6 +7,7 @@ wp_id: 640
 categories: ["Humor", "Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["windows", "battery", "warning", "usability", "user interface", "useless", "humour"]
 ---
 
 Why is it that my laptop gives me this warning:

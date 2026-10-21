@@ -7,6 +7,7 @@ wp_id: 179
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
 author: "thomas"
+technorati: ["justaddwater.dk", "statistics", "web statistics", "Analytics", "Google Analytics"]
 ---
 
 Once again we have a month worth of statistics boiled down to a few easy-to-read paragraphs with the highlights of last months log files.

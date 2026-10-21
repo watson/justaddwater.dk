@@ -7,6 +7,7 @@ wp_id: 580
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["windows", "start", "menu", "microsoft", "word", "frequently", "usage"]
 ---
 
 After 9 days away from ordinary work, then suddently Microsoft Word snug back on the list of most used programs:

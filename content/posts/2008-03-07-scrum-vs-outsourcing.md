@@ -7,6 +7,7 @@ wp_id: 908
 categories: ["Agile", "Video"]
 tags: []
 author: "jesper"
+technorati: ["agile", "scrum", "video", "presentation", "jeff sutherland"]
 ---
 
 More from Jeff Sutherland (the video presentation i posted about yesterday). This time on outsourcing (sending to India) vs implementing Scrum locally.

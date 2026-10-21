@@ -7,6 +7,7 @@ wp_id: 400
 categories: ["Events/seminars", "ui11"]
 tags: []
 author: "jesper"
+technorati: ["jeffrey eisenberg", "uiconf", "ui11", "marketing", "web", "godaddy"]
 ---
 
 From UI 11 Conference, Cambridge, Boston October 10, 2006.

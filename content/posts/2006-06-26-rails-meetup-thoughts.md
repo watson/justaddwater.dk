@@ -7,6 +7,7 @@ wp_id: 341
 categories: ["Code", "Events/seminars", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "copenhagen", "meetup", "denmark"]
 ---
 
 Thomas and I are really looking forward to this week's Copenhagen Rails Meetup. Remember to join us

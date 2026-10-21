@@ -7,6 +7,7 @@ wp_id: 276
 categories: []
 tags: []
 author: "jesper"
+technorati: ["event", "seminar", "jesse james garrett", "adaptive path", "copenhagen", "denmark", "reboot", "reboot8", "snitker"]
 ---
 
 Jesper's notes from Jesse James Garrett’s event "[The elements of User Experience](http://www.adaptivepath.com/events/2006/may3/)" in Copenhagen, Denmark, May 31, 2006.

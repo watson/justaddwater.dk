@@ -7,6 +7,7 @@ wp_id: 226
 categories: ["Businesscase", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "business case", "enterprise"]
 ---
 
 Thought this would be a good opportunity to have a look at the business perspective of using Ruby on Rails for the enterprise. [The Business Case for Ruby on Rails](http://www.quotedprintable.com/articles/2005/12/21/the-business-case-for-ruby-on-rails "Quoted Printable: The Business Case for Ruby on Rails") inspired me to see what has been written on the business perspective since this was written December last year.

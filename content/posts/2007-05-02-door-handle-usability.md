@@ -7,6 +7,7 @@ wp_id: 615
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "door", "door handle", "gary larson", "joe goldberg", "daniel szuc", "don norman", "jens meiert", "ok/cancel", "kevin cheng", "tom chi"]
 ---
 
 What's a usability blog without a post about door handles?

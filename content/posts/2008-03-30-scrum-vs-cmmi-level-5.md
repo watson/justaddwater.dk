@@ -7,6 +7,7 @@ wp_id: 909
 categories: ["Agile"]
 tags: []
 author: "jesper"
+technorati: ["agile", "scrum", "cmm", "cmmi", "project management", "video", "presentation", "toyota"]
 ---
 
 A final quote from Jeff Sutherlands presentation: [Agile and Scrum Tuning](/2008/03/06/video-agile-and-scrum-tuning-by-jeff-sutherland/) I wrote about recently.

@@ -7,6 +7,7 @@ wp_id: 646
 categories: ["Hardware", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["hardware", "laptop", "usability", "lenovo", "thinkpad", "t60p", "dell", "d600"]
 ---
 
 ***Update: CPU fan speed can be controlled. See updated notes below...(2007-11-06)***\

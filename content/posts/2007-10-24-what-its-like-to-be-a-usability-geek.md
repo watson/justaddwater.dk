@@ -7,6 +7,7 @@ wp_id: 757
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["usability", "geek", "labeling", "misunderstanding"]
 ---
 
 I gladly admit that I'm a usability geek, which means that sometimes, the most important things for me may be small and insignificant for others. I encounter this every day. Here are two examples from today.

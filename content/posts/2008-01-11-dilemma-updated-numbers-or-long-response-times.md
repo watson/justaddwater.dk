@@ -7,6 +7,7 @@ wp_id: 853
 categories: ["Performance", "Usability", "User experience"]
 tags: []
 author: "jesper"
+technorati: ["usability", "performance", "user experience", "paypal", "response time"]
 ---
 
 Paypal showed me this splash screen when logging in:

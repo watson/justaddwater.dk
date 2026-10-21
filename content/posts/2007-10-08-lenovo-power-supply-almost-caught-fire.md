@@ -7,6 +7,7 @@ wp_id: 721
 categories: ["Errors", "Hardware"]
 tags: []
 author: "jesper"
+technorati: ["lenovo", "laptop", "burning", "fire", "danger", "hazard"]
 ---
 
 I have mentioned before usability issues of my Lenovo Thinkpad T60p computer. Usability issues is one thing. Another—and potential deadly—thing happened Saturday evening at home. This is what I write to our internal support and expect them to forward.

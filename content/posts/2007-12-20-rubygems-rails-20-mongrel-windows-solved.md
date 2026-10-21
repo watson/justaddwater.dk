@@ -7,6 +7,7 @@ wp_id: 828
 categories: ["Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby", "rails", "mongrel", "rubygems", "copenhagenrb", "rails2.0"]
 ---
 
 Now is the time to revoke the install warning [Rails 2.0, gem install, Windows =\> Mongrel Trouble](/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/ "Permanent Link to Rails 2.0, gem install, Windows => Mongrel Trouble") I wrote about December 9th as Rails 2.0 was released.

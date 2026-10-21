@@ -7,6 +7,7 @@ wp_id: 480
 categories: ["Businesscase", "justaddwater.dk", "Ruby on Rails", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["justaddwater", "ruby on rails", "rails", "interview", "newspaper", "showcase", "capgemini", "thomas watson", "jesper rønn-jensen"]
 ---
 
 Thomas and I are interviewed in Danish newspaper "Børsen" today. The article is a 10,000 feet business overview on the productivity gains and possibilities with Ruby on Rails.

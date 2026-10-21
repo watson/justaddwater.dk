@@ -7,6 +7,7 @@ wp_id: 618
 categories: ["Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["usability", "progressive disclosure", "affordance", "hints", "hidden functionality", "examples"]
 ---
 
 Many of today have extremely advanced features and functionality. But the trend towards simpler, slicker user interfaces points towards hiding some of the functionality. Hiding functionality is — in my point of view — a very good thing for usability.

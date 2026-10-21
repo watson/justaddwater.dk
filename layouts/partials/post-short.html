@@ -4,7 +4,7 @@
 {{- $t = cond (gt (len $t) 52) (printf "%s..." (substr $t 0 52)) $t -}}
 <div class="post" id="post-{{ .Params.wp_id }}">
 	<h2>
-		<a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">{{ .Title }}</a>
+		<a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ partial "tt.html" .Title }}">{{ partial "tt.html" .Title }}</a>
 		<span class="nowrap">
 			<span class="author">by {{ index (split $au.name " ") 0 }}</span>
 			<span class="time">{{ .Date.Format "Jan 2" }}</span>
@@ -14,11 +14,11 @@
 		<img src="/images/comment.gif" width="24" height="23" alt="" />
 		<span>
 		{{ partial "commentlink.html" (dict "p" . "tail" "") }}
-		| <a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">Read entire article</a>
+		| <a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ partial "tt.html" .Title }}">Read entire article</a>
 		</span>
 	</div>
 	<div class="entry">
 		{{ partial "excerpt.html" . }}
-		<p class="continue-reading"><a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">Continue reading &raquo;{{ $t | safeHTML }}&laquo;</a></p>
+		<p class="continue-reading"><a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ partial "tt.html" .Title }}">Continue reading &raquo;{{ $t | safeHTML }}&laquo;</a></p>
 	</div>
 </div>

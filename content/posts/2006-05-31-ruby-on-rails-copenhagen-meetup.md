@@ -7,6 +7,7 @@ wp_id: 269
 categories: ["Best of Justaddwater", "Code", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["copenhagen", "rails", "ruby on rails", "reboot", "reboot8"]
 ---
 
 UPDATE: We finaly found a venue for the meetup, located in the central Copenhagen just next to The Rock and "Gammel Torv":

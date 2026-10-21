@@ -7,6 +7,7 @@ wp_id: 535
 categories: ["Errors"]
 tags: []
 author: "jesper"
+technorati: ["google", "mail", "gmail", "downtime", "uptime", "server", "failure"]
 ---
 
 Right now, Google Mail disappeared just as I was about to send an email.

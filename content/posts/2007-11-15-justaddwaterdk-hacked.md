@@ -7,6 +7,7 @@ wp_id: 779
 categories: ["justaddwater.dk", "WordPress"]
 tags: []
 author: "thomas"
+technorati: ["script kiddie", "hacking", "hacker", "cracker", "WordPress", "security", "justaddwater.dk", "bug", "blogging software", "hacked", "vulnerability", "apache", "log files"]
 ---
 
 ### The non-technical version:

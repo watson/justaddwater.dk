@@ -7,6 +7,7 @@ wp_id: 876
 categories: ["Agile", "Prototyping", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby", "rails", "agile", "web", "development", "capgemini", "madsbuus", "jesperrønnjensen", "presentation", "trade show", "project manager", "waterfall"]
 ---
 
 My colleague Mads and myself made an internal "sales show" for the way we use Ruby on Rails to deliver web projects that are fast, small, agile prototypes in close collaboration with clients.

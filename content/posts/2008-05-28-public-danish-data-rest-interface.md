@@ -7,6 +7,7 @@ wp_id: 930
 categories: ["capgemini", "Code", "Events/seminars", "Presentation", "Ruby on Rails", "smartlunch", "Speaking"]
 tags: ["oiorest", "Presentation", "rest", "smartlunch", "Video"]
 author: "jesper"
+technorati: ["soa", "rest", "danish", "oiorest", "public", "dalager", "christian dalager", "presentation", "capgemini", "smartlunch"]
 ---
 
 Christian Dalager and I did an internal Capgemini SmartLunch presentation about REST interfaces in the public Danish sector. REST interface is great news for those in favor of easy-to-integrate, scalable SOA interfaces, and REST services is actually used more than SOAP, XMLRPC, etc. in companies offering multiple interfaces to their data (Amazon, Yahoo, Google, Ebay, Microsoft and more).

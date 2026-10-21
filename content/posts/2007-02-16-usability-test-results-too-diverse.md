@@ -7,6 +7,7 @@ wp_id: 558
 categories: ["justaddwater.dk", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "rolfmolich", "rolf molich", "jared spool", "testing", "diverse", "jakob nielsen"]
 ---
 
 Rolf Molich has done a lot to make the usability profession what it is today. He keeps asking questions to what we thought would be common wisdom 5 years ago, and he keeps asking questions. Now, addressing the fact that usability test results can be very diverse (and often are).

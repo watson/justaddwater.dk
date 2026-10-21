@@ -7,6 +7,7 @@ wp_id: 426
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["blogging", "blog usability", "ibm", "guidelines", "policy"]
 ---
 
 Via [Keith Instone](http://instone.org/ibmblogroll) I learned that IBM's US frontpage story today is about blogs.

@@ -7,6 +7,7 @@ wp_id: 755
 categories: ["Software", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["e-texteditor", "textmate", "bundle", "snippet", "command", "convert", "html", "entities"]
 ---
 
 Happy New Year everybody. Here is a tiny Textmate or E-Texteditor Snippet: Convert HTML entities for viewing code. I created this recently for a HTML cookbook on a project, where we made HTML pages showing HTML example code. It converts

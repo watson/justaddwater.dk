@@ -7,6 +7,7 @@ wp_id: 322
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["justaddwater", "justaddwater.dk", "photoshoot", "michael bothager", "jesper rønn-jensen", "thomas watson steen", "thomas watson"]
 ---
 
 You may have noticed the updated photos of the authors on this blog. Recently Thomas and I met up with Michael Bothager (colleague) to do a photo session.

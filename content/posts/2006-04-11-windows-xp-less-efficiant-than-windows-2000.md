@@ -7,6 +7,7 @@ wp_id: 222
 categories: ["Usability"]
 tags: []
 author: "thomas"
+technorati: ["Windows XP", "Windows 2000", "XP", "usability", "productivity"]
 ---
 
 One usability mantra states: The fewer mouse clicks to get from A to B the better. This is always in front of every usability experts mind. But have anybody told Microsoft?

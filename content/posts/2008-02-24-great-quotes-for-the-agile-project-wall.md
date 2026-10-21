@@ -7,6 +7,7 @@ wp_id: 901
 categories: ["Agile", "Productivity", "Prototyping", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["agile", "quotes", "simplicity", "enterprise", "ruby on rails", "productivity", "prototyping"]
 ---
 
 At a recent internal Capgemini tradeshow, we had the pleasure of using some great quotes that really benefit working the way I like the best: Small agile teams where we can show and tell -- make working software and prototypes very fast in close collaboration with clients.

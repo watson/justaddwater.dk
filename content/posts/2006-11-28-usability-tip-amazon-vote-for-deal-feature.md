@@ -7,6 +7,7 @@ wp_id: 471
 categories: ["Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["amazon", "wisdom of crowds", "usability", "psychology", "user interface", "ui"]
 ---
 
 Here is an example from Amazon.com, on how to encourage people to participate.

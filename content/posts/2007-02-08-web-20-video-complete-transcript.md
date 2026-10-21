@@ -7,6 +7,7 @@ wp_id: 542
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["web2.0", "video", "youtube", "michael wesch", "mojiti", "transcript", "claude almansi"]
 ---
 
 With the help and encouragement of [Claude Almansi](http://www.noimedia.org/), I have now transcribed the web 2.0 video "We are the web" ([my notes from yesterday](/2007/02/07/web-video-20-just-text-or-rethink-our-future/ "Justaddwater.dk: Web 2.0 Video: Just Text or Rethink Our Future?")). Full text transcript available right here below.

@@ -7,6 +7,7 @@ wp_id: 291
 categories: ["Events/seminars", "justaddwater.dk", "Speaking"]
 tags: []
 author: "jesper"
+technorati: ["reboot", "reboot8", "presentation", "talk", "ruby on rails", "networking"]
 ---
 
 Last weeks [reboot8](http://reboot.dk) conference in Copenhagen is over, and it's time to get back to work. There were some very good talks but it's the audience that makes reboot a special event. The highlights of my reboot were the talks from [Ben Hammersley](http://www.benhammersley.com/Ben/Talks.html), [Jesse James Garret](http://blog.jjg.net), [Doc Searls](http://doc.weblogs.com/whoIsDoc) and [Jeremy Keith](http://adactio.com/articles/1132/) (who was asked by [Håkan Wium Lie](http://www.w3.org/People/howcome/) if there was anything he'd like him to add to the HTML A element).

@@ -7,6 +7,7 @@ wp_id: 495
 categories: ["Prototyping", "Ruby on Rails", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["hobo", "prototyping", "html", "ruby on rails", "business case", "capgemini", "productivity", "work", "rubyonrails", "rails"]
 ---
 
 Earlier I wrote how we use [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Justaddwater.dk: Ruby on Rails as rapid prototyping tool (April 2006)") at work. [Hobo](http://hobocentral.net/blog/) is a promising plugin for Ruby on Rails to speed up development even more. At work, we've been looking into rapid prototyping of web applications for quite some time. Hobo might even help us to speed up development even more.

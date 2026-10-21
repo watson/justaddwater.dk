@@ -7,6 +7,7 @@ wp_id: 600
 categories: ["Code", "Productivity", "Prototyping", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["svn", "subversion", "tortoisesvn", "windows", "xp", "local", "repository"]
 ---
 
 UPDATE May 1st, 2007 (forgot the two final steps 8 and 9).

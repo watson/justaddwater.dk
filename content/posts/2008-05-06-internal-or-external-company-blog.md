@@ -7,6 +7,7 @@ wp_id: 925
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["blog", "company", "corporate", "enterprise", "internal", "capgemini", "external"]
 ---
 
 Roughly 2 years ago we started an international User Experience network in Capgemini. And everybody aggreed that we should have a blog. After a short period of time, the blog became stale and I have not visited it since then.

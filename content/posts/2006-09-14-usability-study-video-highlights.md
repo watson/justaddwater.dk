@@ -7,6 +7,7 @@ wp_id: 389
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["jakob nielsen", "usability", "video", "highlights"]
 ---
 
 Jakob Nielsen published a new article "[User Testing is Not Entertainment](http://www.useit.com/alertbox/user-testing-showbiz.html "Alertbox: User Testing is Not Entertainment")". The second half is actually about entertainment - sort of.

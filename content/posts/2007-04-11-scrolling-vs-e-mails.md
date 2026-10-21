@@ -7,6 +7,7 @@ wp_id: 582
 categories: ["E-mails", "Usability"]
 tags: []
 author: "thomas"
+technorati: ["SvN", "emails", "e-mails", "usability", "scrolling", "belowthefold"]
 ---
 
 ![Newspaper photo](http://justaddwater.dk/wp-content/uploads/2007/04/preview_newspaper.thumbnail.jpg)Ever heard the term "Below the fold"? This refers to the time before online, before internet - in the days when newspapers ruled the world. When folding a newspaper in half you only see the top part, and the adverts and headlines in the bottom part of the front-page don't get get that much attention.

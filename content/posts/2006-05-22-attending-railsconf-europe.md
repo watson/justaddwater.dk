@@ -7,6 +7,7 @@ wp_id: 262
 categories: ["Events/seminars", "Prototyping", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["RailsConf Europe", "ruby on rails", "london", "event", "conference", "david heinemeier hansson", "dave thomas", "kathy sierra", "jamis buck", "marcel molina jr", "thomas fuchs", "david alan black", "chad fowler", "rake", "jim weirich", "capgemini", "rapid prototyping"]
 ---
 
 Thomas and I are attending [RailsConf Europe](http://europe.railsconf.org/) in London, September 14-15 later this year.

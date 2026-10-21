@@ -7,6 +7,7 @@ wp_id: 293
 categories: ["Links", "Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["james surowiecki", "wisdom of crowds", "psychology", "prediction markets"]
 ---
 
 How to let ordinary people make wise predictions for you better than experts.

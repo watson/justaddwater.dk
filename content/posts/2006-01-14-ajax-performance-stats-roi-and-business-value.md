@@ -7,6 +7,7 @@ wp_id: 71
 categories: ["AJAX", "Best of Justaddwater", "Businesscase", "Performance", "Usability", "Web Standards", "Web Statistics"]
 tags: []
 author: "jesper"
+technorati: ["macrumor", "ajax", "performance", "ajaxian", "macworld", "architecture", "webdevelopment"]
 ---
 
 How do you build a system that can deliver and update content to 100,000 people simultaneously? Via [Ajaxian.com](http://ajaxian.com/?p=735 "Ajax Reduces Load on MacRumors.com Servers") I saw this article from MacRumors on what traffic they got when Steve Jobs delivered his keynote on MacWorld a few days ago.

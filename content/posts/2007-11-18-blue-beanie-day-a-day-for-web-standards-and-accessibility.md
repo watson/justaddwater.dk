@@ -7,6 +7,7 @@ wp_id: 782
 categories: ["Accessibility", "Web Standards"]
 tags: []
 author: "thomas"
+technorati: ["Blue Beanie Day", "Jeffery Zeldman", "DWWS", "Designing With Web Standards", "Web Standards", "Accessibility", "Facebook", "Flickr", "book", "event"]
 ---
 
 ![Designing With Web Standards cover photo](/wp-content/uploads/2007/11/dwws.jpg)

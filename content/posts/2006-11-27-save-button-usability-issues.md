@@ -7,6 +7,7 @@ wp_id: 468
 categories: ["Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["usability", "gmail", "writely", "save", "save button", "tog"]
 ---
 
 The other day I noted that the Restart button in Windows probably appeared because of buggy software.

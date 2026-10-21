@@ -7,6 +7,7 @@ wp_id: 40
 categories: ["Search Engines"]
 tags: []
 author: "thomas"
+technorati: ["SEO", "Search Engine Optimization", "Search Engines", "Google", "SEOmoz", "Newsweek", "Rand Fishkin", "Matt Cutts"]
 ---
 
 It all began about a week ago with Rand Fishkin of SEOmoz' releasing his "[Beginner's Guide to Search Engine Optimization](http://www.seomoz.org/beginners.php)". I had a look at the guide back then, but did not mention neither it nor its [Usability chapter](http://www.seomoz.org/articles/bg5.php). Today (or actually in a week if you look at the date) Newsweek is publishing an [interview with Rand Fishkin](http://msnbc.msn.com/id/10415455/site/newsweek/) about SEO - Search Engine Optimization - including a nice picture of him and his mom - I guess she must be very proud ;)

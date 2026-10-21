@@ -7,6 +7,7 @@ wp_id: 477
 categories: ["justaddwater.dk", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "paradox of choice", "jakob nielsen", "psychology", "productivity"]
 ---
 
 I might be stating the obvious here, but it's sometimes good to be able to back it up by real research. Via Jakob Nielsen's "[Productivity and Screen Size](http://www.useit.com/alertbox/screen-productivity.html)":

@@ -7,6 +7,7 @@ wp_id: 698
 categories: ["Links", "Security", "Speaking", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["google", "cio", "innovation", "maps", "route planning", "baekdal", "security", "usability", "passwords"]
 ---
 
 Two very interesting videos about Google

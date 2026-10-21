@@ -1,15 +1,17 @@
-{{ $c := index hugo.Data.comments .Params.slug }}
-{{ with $c }}
-<h3 id="comments">{{ len . }} Responses to &ldquo;{{ $.Title }}&rdquo;</h3>
+{{- /* Read-only comments, WordPress/Kubrick markup. Flat list, alternating "alt" class, as the original. */ -}}
+{{ $c := sort (index hugo.Data.comments .Params.slug | default slice) "date" }}
+{{ $n := len $c }}
+{{ if gt $n 0 }}
+<h3 id="comments">{{ if eq $n 1 }}One Response{{ else }}{{ $n }} Responses{{ end }} to &#8220;{{ partial "tt.html" .Title }}&#8221;</h3>
 <ol class="commentlist">
-{{ range . }}{{ if not .parent }}{{ template "comment" (dict "c" . "all" $c "n" 0) }}{{ end }}{{ end }}
+{{ range $i, $x := $c }}{{ $id := $x.id }}
+<li{{ if eq (mod $i 2) 0 }} class="alt"{{ end }} id="comment-{{ $id }}">
+<cite>{{ if $x.url }}<a href="{{ $x.url }}" class="url" rel="external">{{ $x.author }}</a>{{ else }}{{ $x.author }}{{ end }}</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-{{ $id }}" title="">{{ $t := time.AsTime $x.date }}{{ partial "ordinal-date.html" $t }} at {{ $t.Format "15:04" }} (GMT-1)</a> </small>
+{{ $m := $x.html | markdownify | string }}{{ if not (hasPrefix (trim $m " \n") "<") }}{{ $m = printf "<p>%s</p>" $m }}{{ end }}{{ partial "tx.html" (dict "s" $m "plain" false) }}
+</li>
+{{ end }}
 </ol>
 {{ end }}
-{{ define "comment" }}{{ $id := .c.id }}
-<li class="{{ if eq (mod .n 2) 0 }}alt{{ end }}" id="comment-{{ $id }}">
-<cite>{{ if .c.url }}<a href="{{ .c.url }}" rel="nofollow ugc">{{ .c.author }}</a>{{ else }}{{ .c.author }}{{ end }}</cite> Says:<br>
-<small class="commentmetadata"><a href="#comment-{{ $id }}">{{ time.AsTime .c.date | time.Format "January 2, 2006 at 15:04" }}</a></small>
-<div class="ctext">{{ .c.html | markdownify }}</div>
-</li>
-{{ range where .all "parent" $id }}{{ template "comment" (dict "c" . "all" $.all "n" (add $.n 1)) }}{{ end }}
-{{ end }}
+{{ if or (eq $n 0) (ne .Type "posts") }}<p class="nocomments">Comments are closed.</p>{{ end }}

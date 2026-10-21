@@ -7,6 +7,7 @@ wp_id: 919
 categories: ["Events/seminars", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["rubyfools", "rails", "ruby", "conference", "capgemini", "sponsor", "beer"]
 ---
 
 I thought I'd better post this before April Fools day tomorrow. My employer, Capgemini has accepted to sponsor the [Copenhagen RubyFools conference](http://jaoo.dk/ruby-cph/conference/) from today and till Wendesday.\

@@ -7,6 +7,7 @@ wp_id: 2
 categories: ["AJAX", "Best of Justaddwater", "Businesscase"]
 tags: []
 author: "jesper"
+technorati: ["usabililty", "ajax validation", "javascript", "interaction design", "ASP.Net", "AJAX.Net", "business case"]
 ---
 
 As a followup to my earlier post "[AJAX performance stats, ROI, and business value](/2006/01/14/ajax-performance-stats-roi-and-business-value/ "Justaddwater.dk: AJAX performance stats, ROI, and business value")", I decided that I'd share with you some considerations on a recent project I was involved in. I can't give you all the juicy details, and I might never be able to show you the final solution or tell, who the customer is.

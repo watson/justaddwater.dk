@@ -7,6 +7,7 @@ wp_id: 325
 categories: ["Accessibility", "Blogging", "justaddwater.dk", "Usability", "WordPress"]
 tags: []
 author: "jesper"
+technorati: ["blog", "usability", "spam", "comments", "akismet", "bbcode", "dom scripting", "javascript", "captcha"]
 ---
 
 Since yesterday, the volume of spam comments has gone up even more. Now we get 150 spam comments every 12 hours. ([Yesterday it was 21 hours](/2006/06/23/spam-comments-just-got-worse/ "Justaddwater.dk: Spam comments just got worse")). I promised to tell about what countermeasures we have taken against spam comments.

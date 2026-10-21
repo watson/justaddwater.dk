@@ -7,6 +7,7 @@ wp_id: 381
 categories: ["Best of Justaddwater", "Code", "Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "rails plugin", "simple localization", "l10n", "i18n", "internationalization", "danish", "swedish", "dutch", "spanish", "german", "swedish chef", "pirate talk", "pirate day", "translation"]
 ---
 
 Recently I've been working on a plugin for Ruby on Rails that help me out when creating new Rails applications in Danish. Previously, when we've created Danish prototypes for our customers **all the default Rails error messages were still written in English**.

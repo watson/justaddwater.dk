@@ -7,6 +7,7 @@ wp_id: 271
 categories: ["Events/seminars", "Speaking"]
 tags: []
 author: "jesper"
+technorati: ["reboot", "reboot8", "copenhagen", "denmark", "conference", "speaking", "thomas madsen-mygdal"]
 ---
 
 \[updated with Friday program\]

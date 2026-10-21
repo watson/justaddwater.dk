@@ -7,6 +7,7 @@ wp_id: 676
 categories: ["Blogging", "justaddwater.dk", "spam", "WordPress"]
 tags: []
 author: "jesper"
+technorati: ["akismet", "spam", "blog usability", "usability", "blogging", "wordpress"]
 ---
 
 I am back from vacation and saw that Akismet has caught more than 22,000 spam comments over a two week period. That is roughly one spam comment every minute (65 comments each hour). Since February when we passed 100,000 spam comments, we have now passed a quarter million spam comments. (277,421 when I made the screenshot below).

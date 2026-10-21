@@ -7,6 +7,7 @@ wp_id: 910
 categories: ["Agile", "capgemini", "Presentation", "smartlunch"]
 tags: ["Agile", "capgemini", "Presentation", "scrum", "smartlunch", "Speaking", "Video"]
 author: "jesper"
+technorati: ["scrum", "agile", "capgemini", "presentation", "video"]
 ---
 
 If you understand Danish, then this internal presentation might be something for you.

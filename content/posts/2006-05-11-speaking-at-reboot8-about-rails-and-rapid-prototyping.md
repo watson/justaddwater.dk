@@ -7,6 +7,7 @@ wp_id: 240
 categories: ["Prototyping", "Ruby on Rails", "Speaking"]
 tags: []
 author: "jesper"
+technorati: ["event", "speaking", "presentation", "rapid prototyping", "ruby on rails", "reboot", "reboot8"]
 ---
 
 I'm thrilled to announce that I'll be giving a brief talk at [reboot8.0\

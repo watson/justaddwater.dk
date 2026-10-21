@@ -7,6 +7,7 @@ wp_id: 479
 categories: ["Blogging", "justaddwater.dk", "User experience"]
 tags: []
 author: "jesper"
+technorati: ["justaddwater", "blogging", "blog", "user experience", "popular", "popularity"]
 ---
 
 At Justaddwater, we're introducing a new category: "[Best of Justaddwater](/category/best-of-justaddwater/)". Alexander, the Chief Happiness Officer, came up with a ["best of"-category](http://positivesharing.com/2006/12/my-favorites/), that I think any blog could benefit from. Absolutely a brilliant idea.

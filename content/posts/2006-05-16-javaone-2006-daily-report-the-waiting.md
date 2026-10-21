@@ -7,6 +7,7 @@ wp_id: 248
 categories: ["JavaOne"]
 tags: []
 author: "thomas"
+technorati: ["JavaOne", "java", "convention", "conference", "USA", "San Francisco", "California"]
 ---
 
 It is now Thursday morning - The day where the big JavaOne convention starts. For the last couple of days we have been playing tourists in the beautiful hills of San Francisco.

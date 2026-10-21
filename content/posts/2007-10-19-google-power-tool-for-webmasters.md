@@ -7,6 +7,7 @@ wp_id: 745
 categories: ["Accessibility", "Errors", "Review", "Search Engines"]
 tags: []
 author: "thomas"
+technorati: ["Google Webmaster Tools", "Google Webmaster Central", "sitemap", "sitemaps", "tool", "review", "search engines", "http errors", "accessibility"]
 ---
 
 ![Google Webmaster Tools logo](/wp-content/uploads/2007/10/tools2.gif)If you run a blog or any other website for that matter, you might want to check out [Google Webmaster Central](http://www.google.com/webmasters/) - in particular their [Google Webmaster Tool](http://www.google.com/webmasters/tools/) - if you haven't already seen it.

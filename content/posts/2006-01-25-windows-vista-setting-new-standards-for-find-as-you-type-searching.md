@@ -7,6 +7,7 @@ wp_id: 108
 categories: ["Search Engines", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["windows xp", "windows vista", "comparison", "user experience", "usability", "live search", "find-as-you-type", "google suggest", "gmail", "amazon"]
 ---
 
 Very interesting read from a user interface point-of-view. I stumbled upon a walkthrough of Windows Vista. An interesting perspective here is that the **search field has gotten a prominent position** on the Start menu itself.

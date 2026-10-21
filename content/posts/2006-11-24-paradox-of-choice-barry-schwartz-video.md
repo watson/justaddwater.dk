@@ -7,6 +7,7 @@ wp_id: 465
 categories: ["ui11", "Usability", "User experience", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["barry schwartz", "uiconf", "ui11", "choice", "psychology", "paradox", "usability", "user experience", "lukew", "luke wroblewski", "video", "talk", "speech"]
 ---
 
 The most influential talk I have heard this year is [Barry Schwartz](http://www.swarthmore.edu/SocSci/bschwar1/) on the paradox of choice. I cannot recommend this talk enough, so I was thrilled to see that Barry did a similar talk that's available on Google Video.

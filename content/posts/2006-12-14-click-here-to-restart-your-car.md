@@ -7,6 +7,7 @@ wp_id: 481
 categories: ["Humor", "Usability", "User Interface"]
 tags: []
 author: "thomas"
+technorati: ["cars", "microsoft", "general motors", "GM", "usability", "video", "user interface", "humor", "funny"]
 ---
 
 I just saw the very funny usability video called '[Lexus Self-Parking “Usability” Test](http://usabilityworks.org/2006/12/06/lexus-self-parking-usability-test/ "Matthew Oliphant's usabilityworks.org - Lexus Self-Parking “Usability” Test")' (via Matthew Oliphant).

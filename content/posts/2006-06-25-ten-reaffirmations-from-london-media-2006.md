@@ -7,6 +7,7 @@ wp_id: 323
 categories: ["Accessibility", "AJAX", "Events/seminars", "User experience", "User Interface", "Web Development", "Web Standards"]
 tags: []
 author: "luis"
+technorati: ["web", "conference", "event", "@media", "@media 2006", "w3c", "jon hicks", "eric meyer", "veerle peters", "cameron moll", "nete koechley", "jeff veen", "tantek celik", "andy clarke", "dave shea", "molly holzschlag", "joe clark", "accessibility", "usability", "user experience", "javascript", "ajax", "presentation"]
 ---
 
 Hi, this is Luis Villa, Thomas and Jesper's former colleague at Capgemini Spain. They couldn't make it to @media in London last week, so they asked me to give a summary of the event.

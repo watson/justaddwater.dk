@@ -7,6 +7,7 @@ wp_id: 541
 categories: ["CSS", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["anti webstandards", "anti usability", "spacer gif", "table based layout", "david siegel", "transparent gif", "transparent pixel", "joe kleinberg", "wikipedia"]
 ---
 
 All of a sudden, [Joe Kleinberg](http://www.directaccess.tv/ "Joe Kleinberg (directaccess.tv)") posted a comment on "[Who invented the Spacer.gif](/2006/03/03/who-invented-the-spacergif/ "Justaddwater.dk: Who invented the Spacer.gif?")", with the claim that he actually invented the technique \[before David Siegel\]:

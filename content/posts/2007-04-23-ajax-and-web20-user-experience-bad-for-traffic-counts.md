@@ -7,6 +7,7 @@ wp_id: 593
 categories: ["AJAX", "User experience", "Web Statistics"]
 tags: []
 author: "jesper"
+technorati: ["yahoo", "myspace", "traffic", "analysis", "visitors", "pageviews", "user experience", "uxp", "web statistics", "stats"]
 ---
 
 Back in December I read somewhere that MySpace had taken over the position as the most visited website from Yahoo.

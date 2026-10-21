@@ -7,6 +7,7 @@ wp_id: 116
 categories: ["Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["google code", "web standards", "web developer", "html", "IE7"]
 ---
 
 Google posted a very interesting study with regards to web standards. As new browsers get better and better support for web standards, our awareness is raised to make sure web applications also support the future browsers (such as Internet Explorer 7.

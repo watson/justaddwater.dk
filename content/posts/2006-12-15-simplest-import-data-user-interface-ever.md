@@ -7,6 +7,7 @@ wp_id: 488
 categories: ["Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["user interface", "ui", "simple", "usability", "google", "finance", "yahoo", "import", "user experience"]
 ---
 
 The new Google Finance has introduced the simplest “import” feature I have ever seen.\

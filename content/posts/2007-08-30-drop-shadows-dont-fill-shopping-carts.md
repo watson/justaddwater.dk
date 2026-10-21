@@ -7,6 +7,7 @@ wp_id: 700
 categories: ["Web Development"]
 tags: []
 author: "jesper"
+technorati: ["zeldman", "an event apart", "aneventapart", "web development", "copywriting", "web", "project management"]
 ---
 
 I think Zeldman has a fantastic point here:

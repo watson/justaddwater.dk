@@ -7,6 +7,7 @@ wp_id: 675
 categories: ["Accessibility", "Browser", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["opera", "opera mini", "nokia", "wordpress", "usability", "browser", "mobile", "user experience", "uxp"]
 ---
 
 While being on vacation in beautiful Toscana, Italy, i'm trying out the Opera Mini browser on my Nokia 6233 cell phone. It is actually possible to use the blog administration software on the browser (log in, navigate, write posts, etc.)

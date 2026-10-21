@@ -7,6 +7,7 @@ wp_id: 407
 categories: ["Events/seminars", "Podcast", "ui11"]
 tags: []
 author: "jesper"
+technorati: ["jared spool", "uiconf", "ui11", "scent", "trigger words"]
 ---
 
 \[Jesper's note: There is actually a lot of this that I decided not to jot down. Jared said that his talk is available on Google Video. However, I couldn't find it\]

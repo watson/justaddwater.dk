@@ -7,6 +7,7 @@ wp_id: 396
 categories: ["Best of Justaddwater", "Browser"]
 tags: []
 author: "jesper"
+technorati: ["browser", "internet explorer", "multiple browsers", "ie", "ie7", "ie6", "ie55", "ie5", "ie50", "ie4", "ie3", "windows", "standalone"]
 ---
 
 Yousif Al Saif of Tredosoft is probably best known for the [IE7 standalone](http://tredosoft.com/IE7_standalone) browser installer that can run isolated on a Windows machine without disturbing the version already installed. I wrote about this in "[IE7, web standards and css support](/2006/08/28/ie-7-web-standards-and-css-support/)".

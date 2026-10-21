@@ -7,6 +7,7 @@ wp_id: 147
 categories: ["Web Statistics"]
 tags: []
 author: "jesper"
+technorati: ["web stats", "web statistics", "measure map", "google analytics"]
 ---
 
 For quite some time, I wanted to write what Google Analytics could improve to make it more useful. Google beat me to it. They just acquired [Measure Map](http://measuremap.com/ "Measure Map homepage") for an undisclosed price.

@@ -7,6 +7,7 @@ wp_id: 711
 categories: ["Events/seminars", "Presentation", "Railsconf", "Speaking"]
 tags: ["Presentation", "Railsconf", "Speaking"]
 author: "jesper"
+technorati: ["railsconf", "berlin", "europe", "capgemini", "presentation", "ruby on rails", "ruby", "rails", "madsbuus", "speaking"]
 ---
 
 For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.

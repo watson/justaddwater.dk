@@ -7,6 +7,7 @@ wp_id: 282
 categories: ["Best of Justaddwater", "Events/seminars", "Presentation", "Railsconf", "Ruby on Rails", "Speaking"]
 tags: ["Presentation", "Productivity", "Prototyping", "rails", "Speaking"]
 author: "jesper"
+technorati: ["reboot", "reboot8", "conference", "speaking", "ruby on rails", "capgemini", "copenhagen", "denmark"]
 ---
 
 Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.

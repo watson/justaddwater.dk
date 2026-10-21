@@ -7,6 +7,7 @@ wp_id: 101
 categories: ["Blogging", "Search Engines"]
 tags: []
 author: "thomas"
+technorati: ["technorati tags", "blog", "blogging"]
 ---
 
 [Technorati](http://technorati.com/) is for blogs what Google is for the rest of the web: The \#1 place to go when searching for a topic of interest. One of its most powerful features is the ability to use tags - the so called Technorati Tags. Technorati Tags are small linked words situated somewhere inside your post (in our case they are located in small print at the bottom of each post).

@@ -7,6 +7,7 @@ wp_id: 546
 categories: ["Links"]
 tags: []
 author: "jesper"
+technorati: ["folksonomies", "social", "tagging", "web2.0", "content", "photos", "news", "blogging", "taggers", "guuui", "henrik olsen", "david weinberger", "report"]
 ---
 
 A quick tip from Henrik Olsen, [GUUUI (Interaction Designers Coffebreak)](http://www.guuui.com/posting.php?id=1921):

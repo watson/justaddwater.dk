@@ -7,6 +7,7 @@ wp_id: 859
 categories: ["Humor", "Usability"]
 tags: ["Accessibility", "calendar", "Humor", "Usability", "User experience"]
 author: "jesper"
+technorati: ["usability", "calendar", "humour"]
 ---
 
 My Norwegian friend Eidar just wrote to inform me that their company ([Netlife Research](http://www.netliferesearch.no/)) has finally released Bad Usability Calendar 2008. Last year, the calendar got quite popular and even Jakob Nielsen mentioned it in [one of his newsletters.](/2007/02/12/jakob-nielsen-mentions-bad-usability-calendar-in-latest-newsletter/)

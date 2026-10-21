@@ -7,6 +7,7 @@ wp_id: 924
 categories: ["justaddwater.dk"]
 tags: ["subversion"]
 author: "jesper"
+technorati: ["subversion", "dry-run", "git"]
 ---
 
 Quick Subversion trick:

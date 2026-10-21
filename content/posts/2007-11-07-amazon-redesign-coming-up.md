@@ -7,6 +7,7 @@ wp_id: 775
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["amazon", "redesign", "quick tour", "usability", "testing"]
 ---
 
 On some computers, Amazon are preparing for the final steps of rolling out their new redesign... Just in time for Christmas shopping.

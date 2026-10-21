@@ -7,6 +7,7 @@ wp_id: 906
 categories: ["Agile"]
 tags: []
 author: "jesper"
+technorati: ["agile", "scrum", "video", "presentation", "jeff sutherland"]
 ---
 
 Scrum video presentation from Jeff Sutherland (speech from December 2006 but highly relevant). The presentation is really packet with great quotes and inspiration. I wonder if I ever will be motivated to work in traditional big waterfall projects again...

@@ -7,6 +7,7 @@ wp_id: 305
 categories: ["Blogging", "capgemini", "Events/seminars", "justaddwater.dk", "Presentation", "Speaking"]
 tags: ["Blogging", "event", "Presentation", "Speaking"]
 author: "jesper"
+technorati: ["event", "speaking", "presentation", "blogging", "corporate weblogs", "capgemini", "justaddwater.dk"]
 ---
 
 This morning we're speaking in about corporate weblogs in Copenhagen, Denmark. It’s hosted by the [Danish IT Industry Association](http://www.itb.dk/site.asp?p=51), and We’ll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini.

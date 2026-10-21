@@ -7,6 +7,7 @@ wp_id: 866
 categories: ["Accessibility", "Web Development", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["standards", "web standards", "webstandards", "sharepoint", "sharepoint 2007", "MOSS", "2007", "microsoft", "cameron moll", "xhtml", "css", "w3c"]
 ---
 
 Emil Stenström's recent "[Sharepoint 2007 from an interface developer’s view](http://friendlybit.com/css/sharepoint-2007-from-an-interface-developers-view/)" is definitely worth reading if you care about webstandards, accessibility and decent frontend code in general.\

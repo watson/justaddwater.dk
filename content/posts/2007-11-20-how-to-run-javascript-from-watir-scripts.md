@@ -7,6 +7,7 @@ wp_id: 778
 categories: ["Code", "JavaScript"]
 tags: []
 author: "jesper"
+technorati: ["ruby", "enterprise", "business case", "watir", "testing", "javascript"]
 ---
 
 What's Watir? Read "[Watir: Another sweetspot for Enterprise Ruby](/2006/07/14/watir-sweetspot-enterprise-ruby/)"

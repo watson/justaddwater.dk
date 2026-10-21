@@ -7,6 +7,7 @@ wp_id: 793
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["justaddwater", "spam comments", "akismet"]
 ---
 
 We got this spam comment yesterday with link to the article itself: It points to the very article it tries to comment.

@@ -7,6 +7,7 @@ wp_id: 43
 categories: ["Accessibility", "CSS", "Usability"]
 tags: []
 author: "thomas"
+technorati: ["fonts", "web fonts", "typography", "css", "web design", "usability", "accessibility", "Andy Hume"]
 ---
 
 Just want to tell you about a very great and informative article on sitepoint.com by Andy Hume I just read called "[The Anatomy of Web Fonts](http://www.sitepoint.com/article/anatomy-web-fonts)".

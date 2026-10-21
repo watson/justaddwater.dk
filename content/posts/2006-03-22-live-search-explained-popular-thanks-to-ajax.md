@@ -7,6 +7,7 @@ wp_id: 190
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["justaddwater", "popular", "max kiesler", "technorati", "measuremap", "blogging"]
 ---
 
 In case you wanted to know what's popular on Justaddwater.dk right now:

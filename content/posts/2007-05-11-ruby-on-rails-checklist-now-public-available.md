@@ -7,6 +7,7 @@ wp_id: 645
 categories: ["Prototyping", "Ruby on Rails", "WordPress"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "prototyping", "rapid prototyping", "preparation", "rails", "wordpress", "usability", "stealth", "password", "protection", "rss", "frontpage", "private", "privacy", "blogging"]
 ---
 
 Today I've removed password protection on the article "[Prototyping Ruby on Rails Checklist to Get Started](/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/ "Permanent Link: Protected: Prototyping Ruby on Rails Checklist to Get Started")".

@@ -7,6 +7,7 @@ wp_id: 168
 categories: ["Accessibility", "Browser"]
 tags: []
 author: "jesper"
+technorati: ["usability", "browser support", "accessibility", "yahoo"]
 ---
 
 [Yahoo! Developer Network: Graded Browser Support](http://developer.yahoo.net/yui/articles/gbs/gbs.html)

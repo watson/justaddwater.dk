@@ -7,6 +7,7 @@ wp_id: 42
 categories: ["Best of Justaddwater", "Links", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "usertesting", "video", "jakob nielsen"]
 ---
 
 On recent occations, I've realised that usability test videos make a strong point, when convincing team members, developers and management. Hearing somebody *telling* about users is just soo second-hand impression.

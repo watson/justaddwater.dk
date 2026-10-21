@@ -7,6 +7,7 @@ wp_id: 761
 categories: ["Hardware"]
 tags: []
 author: "jesper"
+technorati: ["lenovo", "thinkpad", "t60p", "t60", "ati", "fan", "cpu", "temperature"]
 ---
 
 Since I got my Lenovo Thinkpad T60p I have always wondered why the fan kept running away (even just after booting).

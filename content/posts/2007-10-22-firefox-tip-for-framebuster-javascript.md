@@ -7,6 +7,7 @@ wp_id: 748
 categories: ["Browser", "JavaScript", "Web Development"]
 tags: ["JavaScript"]
 author: "jesper"
+technorati: ["javascript", "frameset", "frames", "frame buster", "inline", "firefox", "location.replace"]
 ---
 
 I have for long been struggling with an internal legacy application that wraps the content page in a frameset. Very annoying because I have spent some time to reverse engineer a poor-mans API to the application.

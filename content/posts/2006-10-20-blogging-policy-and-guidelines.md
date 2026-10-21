@@ -7,6 +7,7 @@ wp_id: 427
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["blogging", "blog usability", "ibm", "guidelines", "policy"]
 ---
 
 Part of our "blog usability" series.

@@ -7,6 +7,7 @@ wp_id: 894
 categories: ["Productivity"]
 tags: []
 author: "jesper"
+technorati: ["productivity", "rss", "feed reader ban", "ban"]
 ---
 
 I got this question today from Lars Pind, who is a brilliant former developer now coaching other software developers:

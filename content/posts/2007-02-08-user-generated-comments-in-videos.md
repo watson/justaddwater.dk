@@ -7,6 +7,7 @@ wp_id: 540
 categories: ["Links", "Video"]
 tags: []
 author: "jesper"
+technorati: ["video", "mojiti", "web2.0", "cut-up", "poetry"]
 ---
 
 User involvement is king. The web is built on participation.

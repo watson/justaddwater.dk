@@ -7,6 +7,7 @@ wp_id: 849
 categories: ["Agile", "Productivity", "Video"]
 tags: []
 author: "jesper"
+technorati: ["agile", "teamwork", "collaboration", "video", "construction", "building", "house", "productivity"]
 ---
 
 You may know this video, where American construction workers compete to build a house as fast as possible.

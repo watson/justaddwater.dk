@@ -7,6 +7,7 @@ wp_id: 75
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "user experience", "definition", "user experience definition", "peter morville", "jesse james garret", "microsoft", "windows vista", "robert rubinoff"]
 ---
 
 Usability work is often related to user experience, and both concepts have a remarkable recognition among usability professionals, among other web consultants, among our clients and in corporate management. I would like to go beyond the words "User Experience" and give a clear, concise, simple definition that's easy to remember, that everybody can understand.

@@ -7,6 +7,7 @@ wp_id: 390
 categories: ["Businesscase"]
 tags: []
 author: "jesper"
+technorati: ["jakob nielsen", "joel spolsky", "david heinemeier hansson", "ruby on rails", "joelonsoftware", "businesscase", "business case", "railsconf"]
 ---
 
 Jakob Nielsen's newsletters often contains small comments to usability related stuff in the news. His latest newsletter is no exception, but misses a very important point.

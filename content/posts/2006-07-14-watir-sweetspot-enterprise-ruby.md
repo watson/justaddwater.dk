@@ -7,6 +7,7 @@ wp_id: 362
 categories: ["Businesscase"]
 tags: []
 author: "jesper"
+technorati: ["ruby", "enterprise", "business case", "watir"]
 ---
 
 There are many speculations regarding Ruby (the programming language) and it's ready-ness for enterprise use. The other day, a colleague of mine found an absolutely sweet spot: Automated testing via the browser interface.

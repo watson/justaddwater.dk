@@ -7,6 +7,7 @@ wp_id: 441
 categories: ["Accessibility", "Humor", "Usability", "User experience"]
 tags: ["Accessibility", "calendar", "Humor", "Usability", "User experience"]
 author: "jesper"
+technorati: ["usability", "accessibility", "calendar", "anti-usability", "user experience", "ux", "uxp", "humor"]
 ---
 
 Our Norwegian friends at Netlife Research have opened for suggestions to next years Bad Usability Calendar. I already used the [2006 calendar with great impact](/2006/10/16/bad-usability-calendar/ "Justaddwater.dk: Bad Usability Calendar 2006") in my professional engagements, and I'm really looking forward to next year's version.

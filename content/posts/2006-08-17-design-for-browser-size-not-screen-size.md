@@ -7,6 +7,7 @@ wp_id: 367
 categories: ["Best of Justaddwater", "Browser", "Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["usability", "screen size", "screen resolution", "browser", "web design", "liquid layout", "window size", "jakob nielsen", "web statistics"]
 ---
 
 ***Update 2006-11-08:** Baekdal has published numbers (hard evidence) on browser size. And a fun research video too. See "[Actual Browser Sizes (final)](/2006/10/31/actual-browser-sizes-final/)*

@@ -1,23 +1,27 @@
 {{ define "main" }}
 {{ if eq .Type "posts" }}{{ $posts := where site.RegularPages "Type" "posts" }}{{ $s := $posts.ByDate }}
 <div class="navigation">
-{{ with $s.Next . }}<div class="alignleft">&laquo; <a href="{{ .RelPermalink }}" rel="prev">{{ .Title }}</a></div>{{ end }}
-{{ with $s.Prev . }}<div class="alignright"><a href="{{ .RelPermalink }}" rel="next">{{ .Title }}</a> &raquo;</div>{{ end }}
+{{ with $s.Next . }}<div class="alignleft">&laquo; <a href="{{ .RelPermalink }}" rel="prev">{{ partial "tt.html" .Title }}</a></div>{{ end }}
+{{ with $s.Prev . }}<div class="alignright"><a href="{{ .RelPermalink }}" rel="next">{{ partial "tt.html" .Title }}</a> &raquo;</div>{{ end }}
 </div>
 <div style="clear:both"></div>
 {{ end }}
 <div class="post">
-<h2>{{ .Title }}</h2>
+<h2>{{ partial "tt.html" .Title }}</h2>
 <div class="entry">
 {{ .Content }}
 {{ if eq .RelPermalink "/archive/" }}{{ partial "archive-lists.html" . }}{{ end }}
-{{ with .Params.tags }}<p class="technorati">Technorati Tags: {{ range . }}<a href="/tag/{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
+{{ with .Params.technorati }}<p><small>Technorati Tags: {{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $p := site.GetPage (printf "/tags/%s" ($t | urlize)) }}{{ if $p }}<a href="{{ $p.RelPermalink }}" rel="tag">{{ $t }}</a>{{ else }}{{ $t }}{{ end }}{{ end }}</small></p>{{ end }}
 </div>
 {{ if eq .Type "posts" }}
-<p class="postmetadata alt"><small>
-This entry was posted by {{ with index hugo.Data.authors (.Params.author | default "jesper") }}{{ .name }}{{ end }} on {{ .Date.Format "Monday, January 2, 2006 15:04" }}{{ with .Params.categories }} and is filed under {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="/category/{{ $c | urlize }}/" rel="category tag">{{ $c }}</a>{{ end }}{{ end }}.
-Comments are archived and read-only.
-</small></p>
+<p class="postmetadata alt">
+<small>
+This entry was posted by {{ with index hugo.Data.authors (.Params.author | default "jesper") }}{{ .name }}{{ end }}
+on {{ .Date.Format "Monday" }}, {{ partial "ordinal-date.html" .Date }} at {{ .Date.Format "15:04" }} (GMT-1){{ with .Params.categories }} and is filed under {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="/category/{{ $c | urlize }}/" rel="category tag">{{ $c }}</a>{{ end }}{{ end }}.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
 {{ end }}
 </div>
 {{ if ne .RelPermalink "/archive/" }}{{ partial "comments.html" . }}{{ end }}

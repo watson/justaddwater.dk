@@ -7,6 +7,7 @@ wp_id: 105
 categories: ["justaddwater.dk", "Links", "Search Engines"]
 tags: []
 author: "jesper"
+technorati: ["video", "ibm", "linux", "wisdom", "community", "quote"]
 ---
 
 Via [Del.icio.us popular list](http://del.icio.us/popular "Del.icio.us popular bookmarks list") I found this quote from an [IBM Linux commercial](http://video.google.com/videoplay?docid=-3182711082396344549 "IBM Linux commercial on google video")

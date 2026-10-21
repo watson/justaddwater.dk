@@ -7,6 +7,7 @@ wp_id: 937
 categories: ["Code", "Inspiration"]
 tags: []
 author: "jesper"
+technorati: ["book", "review", "dry", "repeat", "repetition", "pragmatic programmer", "pragprog", "code"]
 ---
 
 [![The Pragmatic Programmer](http://www.pragprog.com/images/covers/190x228/tpp.jpg?1184184147 "pragmatic programmer book image")](http://www.pragprog.com/titles/tpp/the-pragmatic-programmer)

@@ -7,6 +7,7 @@ wp_id: 330
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["blogging", "akismet", "wordpress plugin", "spam comments"]
 ---
 
 The last days, we've experienced a lot more spam comments than usual. For some months now, we have removed about 50 spam comments each day here at Justaddwater.dk.

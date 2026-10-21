@@ -7,6 +7,7 @@ wp_id: 548
 categories: ["HTML", "Humor", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["the onion", "microsoft", "windows", "vista", "humor", "paperclip", "paint", "solitare", "security wireless", "web standards", "google"]
 ---
 
 The Onion has a humorous feature list from Microsoft Vista in the recent issue:

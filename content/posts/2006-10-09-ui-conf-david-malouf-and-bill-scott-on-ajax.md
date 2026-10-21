@@ -7,6 +7,7 @@ wp_id: 398
 categories: ["AJAX", "Events/seminars", "justaddwater.dk", "Prototyping", "ui11"]
 tags: []
 author: "jesper"
+technorati: ["david malouf", "bill scott", "uiconf", "ui11", "ajax", "ria", "google spreadsheets", "prototyping", "irise", "axure", "rails", "visio"]
 ---
 
 David Malouf and Bill Scott: Designing Powerful Web Apps with Ajax\

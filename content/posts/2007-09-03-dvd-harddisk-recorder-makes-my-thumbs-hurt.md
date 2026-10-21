@@ -7,6 +7,7 @@ wp_id: 701
 categories: ["User experience", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["user experience", "usability", "dvd", "recorder", "harddisk", "amitech"]
 ---
 
 Last week our old DVD player stopped working, and we decided it was time for a technological quantum leap.

@@ -7,6 +7,7 @@ wp_id: 683
 categories: ["Productivity"]
 tags: []
 author: "jesper"
+technorati: ["photoshop", "productivity", "tip", "web", "rounded corners", "michaelbernth"]
 ---
 
 I had to ask my old colleague and friend [Michael Bernth](http://www.bernth.dk/ "Michael Bernth homepage") for help today for a Photoshop tip.

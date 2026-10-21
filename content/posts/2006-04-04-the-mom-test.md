@@ -7,6 +7,7 @@ wp_id: 18
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability"]
 ---
 
 Wayfaring, a new maps based webtool is working to make the interface easier to use. From the [Wayfaring blog](http://www.wayfaring.com/blog/?p=6):

@@ -7,6 +7,7 @@ wp_id: 401
 categories: ["Events/seminars", "ui11"]
 tags: []
 author: "jesper"
+technorati: ["gerry mcgovern", "uiconf", "ui11", "seo", "search", "web search", "bmw", "website optimization"]
 ---
 
 AOL clicks related to search result position.

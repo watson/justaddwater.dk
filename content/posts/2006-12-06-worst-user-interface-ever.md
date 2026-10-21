@@ -7,6 +7,7 @@ wp_id: 474
 categories: ["justaddwater.dk", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["usability", "ui", "user interface", "codinghorror", "wget"]
 ---
 
 Joseph Cooney found a fantastic example of a confusing user interface. (via Jeff Atwood).

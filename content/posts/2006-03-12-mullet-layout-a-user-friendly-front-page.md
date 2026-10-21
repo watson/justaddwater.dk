@@ -7,6 +7,7 @@ wp_id: 162
 categories: ["Best of Justaddwater", "Blogging", "justaddwater.dk", "Usability", "WordPress"]
 tags: []
 author: "thomas"
+technorati: ["blogging", "usability", "layout", "WordPress"]
 ---
 
 Both Jesper and I have been quite busy working on Capgemini projects the last month + the server move two weeks ago, a new version of WordPress, a skiing vacation and a broken leg took most of my spare time. So the posting-frequency have dropped a little lately. But don't fear we are still here ;)

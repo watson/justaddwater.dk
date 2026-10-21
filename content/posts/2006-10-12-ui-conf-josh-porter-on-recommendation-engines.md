@@ -7,6 +7,7 @@ wp_id: 410
 categories: ["Events/seminars", "justaddwater.dk", "ui11"]
 tags: []
 author: "jesper"
+technorati: ["joshua porter", "uiconf", "ui11", "recommendation", "reputation", "jakob nielsen", "uie", "bokardo", "filtering", "social", "netflix", "niel hunt"]
 ---
 
 \[Jesper's note: It will be interesting to see how this maps to Jakob Nielsen's old ideas about [reputation managers](http://www.useit.com/alertbox/990905.html).\]

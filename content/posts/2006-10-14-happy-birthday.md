@@ -7,6 +7,7 @@ wp_id: 411
 categories: ["Blogging", "justaddwater.dk", "Web Statistics"]
 tags: []
 author: "thomas"
+technorati: ["birthday", "anniversary", "justaddwater.dk", "web standards", "usability", "blog", "blogging", "weblog", "web statistics", "ajax", "graphs", "wordpress", "google analytics", "Max Kiesler", "Dan Webb", "David Black", "David Heinemeier Hansson", "DHH", "Eric Reiss", "Jakob Nielsen", "Jakob Skjerning", "Jared Spool", "Joe Clark", "John Rhodes", "Line Pedersen", "Luis Villa", "Obie Fernandez", "Olle Jonsson", "Steve Krug", "Thomas Madsen-Mygdal", "Thomas Visby Snitker", "Trine-Maria"]
 ---
 
 ![Justaddwater.dk - 1 year anniversary](/wp-content/uploads/2006/10/justaddwater-1year-narrow_resize.jpg)Today is our anniversary! One year ago, on this day, Jesper and I sat down in the office to chat. It was Friday and we quickly started talking about our favorite subject: What could we do to **raise awareness of usability and web standards** inside Capgemini?

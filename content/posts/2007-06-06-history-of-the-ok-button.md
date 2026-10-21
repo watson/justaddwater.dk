@@ -7,6 +7,7 @@ wp_id: 666
 categories: ["User Interface"]
 tags: []
 author: "jesper"
+technorati: ["apple lisa", "ok", "ok-button", "do it", "dialog", "interaction design", "user interface"]
 ---
 
 Via [Kareem Mayan's blog](http://www.reemer.com/archives/2007/05/06/why_the_ok_button_is_so_named/), I came across this story from 1982, when the Apple Lisa team decided upon using "OK" on the confirmation buttons in stead of "Do It":

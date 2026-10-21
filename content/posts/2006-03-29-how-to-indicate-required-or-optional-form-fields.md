@@ -7,6 +7,7 @@ wp_id: 199
 categories: ["Accessibility", "Best of Justaddwater", "Forms", "Usability"]
 tags: []
 author: "thomas"
+technorati: ["usability", "accessibility", "forms", "screen reader", "screen readers"]
 ---
 
 I got [a question from Kimberly](/2005/12/23/sensible-forms-a-form-usability-checklist/#comment-2039), one of our reader, in the [Sensible Forms: A Form Usability Checklist](/2005/12/23/sensible-forms-a-form-usability-checklist/) post where she asks where the best place to display the asterisk indicating a required field in af form is:

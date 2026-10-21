@@ -7,6 +7,7 @@ wp_id: 219
 categories: ["Accessibility", "Blogging", "justaddwater.dk", "Newsletter", "RSS", "Syndication"]
 tags: []
 author: "thomas"
+technorati: ["accessibility", "newsletter", "email", "rss", "atom", "zoodoka", "justaddwater.dk", "syndication", "aggregator"]
 ---
 
 Syndicated feeds in form of RSS or Atom is the hot way of getting news from around the world delivered instantly and dynamically to your desktop. Previously a user could only do so by registering for an e-mail newsletter.

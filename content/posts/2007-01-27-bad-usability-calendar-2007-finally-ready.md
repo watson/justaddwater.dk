@@ -7,6 +7,7 @@ wp_id: 520
 categories: ["Accessibility", "AJAX", "Humor", "Usability", "User experience"]
 tags: ["Accessibility", "calendar", "Humor", "Usability", "User experience"]
 author: "jesper"
+technorati: ["usability", "accessibility", "calendar", "anti-usability", "user experience", "ux", "uxp", "humor"]
 ---
 
 I've been waiting for this with excitement: Eidar and the rest of NetLife Research in Norway have finally [released the 2007 version of Bad Usability Calendar](http://www.iallenkelhet.no/bad-usability-calendar-2007-is-here).

@@ -7,6 +7,7 @@ wp_id: 115
 categories: ["Best of Justaddwater", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["user experience", "usability", "live search", "find-as-you-type", "google suggest", "gmail", "kayak", "autocomplete", "windows vista", "apple spotlight", "msn desktop search"]
 ---
 
 Trend: Live search will gradually replace traditional search in web applications. As mainstream programs such as Windows Vista matures up to release, and live search is deeply integrated, we can expect more web pages implementing live search. Apple's Spotlight and MSN Desktop Search uses the same Live search paradigm that we'll probably see a lot more in the year to come.

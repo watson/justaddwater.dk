@@ -213,7 +213,12 @@ for it in chan.findall("item"):
             "slug": slug, "url": path, "wp_id": int(it.findtext(W + "post_id")),
             "categories": cats, "tags": tags,
             "author": AUTHOR_SLUG.get(it.findtext(D + "creator") or "", it.findtext(D + "creator") or "jesper")}
-    body = to_md(it.findtext(C + "encoded") or "")
+    raw = it.findtext(C + "encoded") or ""
+    techno = []
+    for m in re.finditer(r"\[tags[^\]]*\](.*?)\[/?tags\]", raw, flags=re.S):
+        techno += [x.strip() for x in re.split(r"[,\n]", re.sub(r"<[^>]+>", "", m.group(1))) if x.strip()]
+    if techno: meta["technorati"] = techno
+    body = to_md(raw)
     base = "content/posts/%s-%s.md" % (date[:10], slug) if ptype == "post" else "content/pages/%s.md" % slug
     write(base, fm(meta) + body + "\n"); stats[ptype] += 1; n += 1
     coms = []

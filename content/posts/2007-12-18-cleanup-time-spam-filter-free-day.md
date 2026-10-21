@@ -7,6 +7,7 @@ wp_id: 807
 categories: ["justaddwater.dk", "spam", "WordPress"]
 tags: []
 author: "jesper"
+technorati: ["wordpress", "akismet", "spam", "comment spam", "spam filter free day."]
 ---
 
 1111 spam comments in the last 24 hours have been published on Justaddwater.dk. Just for the record, all of them are now deleted. The many spam comments has had no effect whatsoever with respect to Google PageRank or similar, since we kept \<code\>rel="nofollow"\</code\> on all links. Besides, we quickly removed all spam comments at the end of Spam Filter Free Day.

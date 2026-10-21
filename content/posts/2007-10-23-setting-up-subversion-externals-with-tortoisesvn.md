@@ -7,6 +7,7 @@ wp_id: 750
 categories: ["Web Development"]
 tags: []
 author: "jesper"
+technorati: ["svn", "svn:externals", "propedit", "tortoise"]
 ---
 
 Just a tip I spent some time on figuring out: Found information today on how to use TortoiseSVN to manage svn:externals. I'm working on a big project where we need many different branches and parts to use the same css and images libraries throughout all subprojects.

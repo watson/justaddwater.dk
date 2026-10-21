@@ -7,6 +7,7 @@ wp_id: 402
 categories: ["Agile", "Events/seminars", "ui11"]
 tags: []
 author: "jesper"
+technorati: ["jeff patton", "uiconf", "ui11", "agile", "software", "development", "webdevelopment", "iterations"]
 ---
 
 *\[Live notes from UI Conf\]*\

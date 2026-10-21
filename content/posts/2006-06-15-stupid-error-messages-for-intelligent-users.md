@@ -7,6 +7,7 @@ wp_id: 315
 categories: ["Usability"]
 tags: []
 author: "thomas"
+technorati: ["stylus studio", "usability", "error messages", "validation"]
 ---
 
 I have just downloaded and installed a trial version of Stylus Studio, an XML suite for software developers. After the installation the user is prompted for some personal information in order to receive a license key in an e-mail.

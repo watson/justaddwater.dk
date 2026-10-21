@@ -7,6 +7,7 @@ wp_id: 523
 categories: ["Code", "JavaScript", "justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["javascript", "bookmarklet", "favelet", "cookie editor", "cookies", "editor", "cookie"]
 ---
 
 2 years ago I wrote a small javascript to view, edit and delete cookies.

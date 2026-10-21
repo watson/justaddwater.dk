@@ -7,6 +7,7 @@ wp_id: 945
 categories: ["JavaScript"]
 tags: ["JavaScript", "library", "opensource", "project"]
 author: "jesper"
+technorati: ["javascript", "opensource", "project", "library"]
 ---
 
 For a current project, I created a tiny number formatter that inserts thousand delimiters in a string:

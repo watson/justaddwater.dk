@@ -7,6 +7,7 @@ wp_id: 663
 categories: ["Events/seminars", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "interaction design", "rolf molich", "expert reviews", "sigchi", "copenhagen", "denmark", "event", "snitker", "ben schneiderman"]
 ---
 
 Interaction Design Day, Copenhagen\

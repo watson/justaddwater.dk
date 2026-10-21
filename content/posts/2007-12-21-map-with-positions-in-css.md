@@ -7,6 +7,7 @@ wp_id: 829
 categories: ["Usability", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["html", "code", "webstandards", "css", "map", "positioning"]
 ---
 
 These days I'm working on the HTML and CSS for this map, but I want to hear your opinions as what to recommend from a usability point of view:

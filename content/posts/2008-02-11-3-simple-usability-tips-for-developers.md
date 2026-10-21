@@ -7,6 +7,7 @@ wp_id: 890
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "definition"]
 ---
 
 It takes a lifetime to become an expert on the usability field. Many developers may be interested in creating usable, successful applications. But the entry barrier is sometimes too high -- it's easier to rely on the usability experts than to know about usable applications themselves.

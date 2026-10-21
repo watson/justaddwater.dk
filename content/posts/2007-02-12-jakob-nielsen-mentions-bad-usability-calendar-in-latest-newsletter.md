@@ -7,6 +7,7 @@ wp_id: 547
 categories: ["Humor", "justaddwater.dk", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["jakob nielsen", "usability", "accessibility", "calendar", "anti-usability", "user experience", "nettlife research"]
 ---
 
 Just a quick note. Jakob Nielsen mentions Bad Usability Calendar in his latest newsletter, and links to our Norwegian friends at NetLife Research that originally published it. I'm publishing all of the newsletter text below because his past newsletters are not available online.

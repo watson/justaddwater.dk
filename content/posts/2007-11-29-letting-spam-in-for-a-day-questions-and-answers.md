@@ -7,6 +7,7 @@ wp_id: 790
 categories: ["Blogging", "justaddwater.dk", "spam", "WordPress"]
 tags: []
 author: "jesper"
+technorati: ["akismet", "spam", "comments", "justaddwater", "blogging", "spam-filter-free", "spam filter", "wordpress"]
 ---
 
 Note that our [spam experiment](/2007/11/27/announcement-spam-filter-free-day/) scheduled for December 15th got mentioned by the Akismet Blog, Blogherald, and many other blogs.

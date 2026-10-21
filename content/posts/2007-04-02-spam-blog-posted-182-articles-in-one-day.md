@@ -7,6 +7,7 @@ wp_id: 574
 categories: ["Blogging", "justaddwater.dk", "spam", "WordPress"]
 tags: []
 author: "jesper"
+technorati: ["akismet", "spam", "comments", "spam blog", "spam comment blog"]
 ---
 
 We just got a trackback link from a spam blog linking to Thomas' [latest blog post](/2007/04/01/google-gives-you-free-internet/).

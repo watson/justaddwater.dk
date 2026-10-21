@@ -7,6 +7,7 @@ wp_id: 456
 categories: ["Blogging", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["blog usabilty", "blogging", "usability", "digg", "delicious", "social bookmarking", "bookmarks"]
 ---
 
 "Make this page my home page"

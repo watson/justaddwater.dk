@@ -7,6 +7,7 @@ wp_id: 715
 categories: ["Events/seminars", "Railsconf", "Speaking"]
 tags: []
 author: "jesper"
+technorati: ["dhh", "dave thomas", "ruby on rails", "railsconfeurope", "railsconf", "railsconf europe 2007", "berlin", "copenhagenrb", "copenhagen.rb", "casper fabricius", "speaking", "event"]
 ---
 
 I wanted this post to be named "Usability Lessons from RailsConf Europe 2007" — but realized that only some what I want to write below is about usability.

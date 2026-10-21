@@ -7,6 +7,7 @@ wp_id: 569
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["usability", "publishing", "frequency", "review", "axure", "e texteditor", "e", "paul graham", "wikipedia", "progressive disclosure", "busy", "work"]
 ---
 
 It's been 9 days since the last blog post. Both Thomas and I are extremely busy with projects at the moment. As you probably know, Thomas started up for himself recently, and I am hunting new possibilities at our clients (along with the project I'm already assigned to).

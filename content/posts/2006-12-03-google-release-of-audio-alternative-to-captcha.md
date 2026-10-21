@@ -7,6 +7,7 @@ wp_id: 475
 categories: ["Accessibility"]
 tags: []
 author: "jesper"
+technorati: ["accessibility", "google", "captcha", "image", "audio", "alternative"]
 ---
 
 Google updated their CAPTCHA logic to provide an audio alternative for visual impaired users — or also users that have a hard time reading the twisted letters.

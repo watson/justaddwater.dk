@@ -7,6 +7,7 @@ wp_id: 275
 categories: ["Events/seminars", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["event", "seminar", "jesse james garrett", "adaptive path", "copenhagen", "denmark", "reboot", "reboot8", "snitker"]
 ---
 
 Today I’m attending [Jesse James Garrett](http://blog.jjg.net/)’s event "[The elements of User Experience](http://www.adaptivepath.com/events/2006/may3/)" here in Copenhagen. I'll update this post during the day with my notes. ~~if there's network access which I sort of hope.~~

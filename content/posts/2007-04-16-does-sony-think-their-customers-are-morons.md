@@ -7,6 +7,7 @@ wp_id: 584
 categories: ["Accessibility", "Security", "User experience", "Video"]
 tags: []
 author: "thomas"
+technorati: ["DRM", "piracy", "Sony", "Philips", "Toshiba", "CD", "DVD", "storage", "music industry", "film industry", "movies", "file sharing", "accessibility", "user experience", "uxp", "video", "security"]
 ---
 
 **I'm not pirating music or films, and I will gladly pay huge sums of money to huge world-wide record companies and film studios. But if they insist on protecting their publications with DRM, I will in turn insist only to pay half the price at the shop counter in return for less accessible content.**

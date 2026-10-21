@@ -7,6 +7,7 @@ wp_id: 545
 categories: ["Accessibility", "AJAX", "Humor", "Usability", "User experience"]
 tags: ["Accessibility", "calendar", "Humor", "Usability", "User experience"]
 author: "jesper"
+technorati: ["usability", "accessibility", "calendar", "anti-usability", "user experience", "ux", "uxp", "humor", "ajax"]
 ---
 
 Thomas Baekdal and I have translated and are now publishing Bad Usability Calendar 2007 in Danish.

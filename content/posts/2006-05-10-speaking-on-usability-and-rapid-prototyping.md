@@ -7,6 +7,7 @@ wp_id: 239
 categories: ["Businesscase", "Prototyping", "Ruby on Rails", "Speaking", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["event", "speaking", "presentation", "usability testing", "rapid prototyping", "ruby on rails", "snitker", "business case"]
 ---
 
 For those of you in Denmark in the Copenhagen area.

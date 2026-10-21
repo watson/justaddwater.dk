@@ -7,6 +7,7 @@ wp_id: 33
 categories: ["Links", "Productivity"]
 tags: []
 author: "jesper"
+technorati: ["cameronmoll", "productivity", "requirements", "focus"]
 ---
 
 I wanted to post this for a while. But it's definitely worth a mention if you're working with software development. [\

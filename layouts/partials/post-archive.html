@@ -3,7 +3,7 @@
 {{- $d := .Date.Day -}}
 {{- $sfx := "th" -}}{{ if and (ne $d 11) (ne $d 12) (ne $d 13) }}{{ $m := mod $d 10 }}{{ if eq $m 1 }}{{ $sfx = "st" }}{{ else if eq $m 2 }}{{ $sfx = "nd" }}{{ else if eq $m 3 }}{{ $sfx = "rd" }}{{ end }}{{ end -}}
 <div class="post">
-	<h3 id="post-{{ .Params.wp_id }}"><a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">{{ .Title }}</a></h3>
+	<h3 id="post-{{ .Params.wp_id }}"><a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ partial "tt.html" .Title }}">{{ partial "tt.html" .Title }}</a></h3>
 	<small>{{ .Date.Format "Monday, January" }} {{ $d }}{{ $sfx }}, {{ .Date.Year }} by {{ $au.name }}</small>
 	<div class="entry">
 		{{ partial "excerpt.html" . }}

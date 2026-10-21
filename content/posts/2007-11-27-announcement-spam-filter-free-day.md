@@ -7,6 +7,7 @@ wp_id: 785
 categories: ["Best of Justaddwater", "Blogging", "justaddwater.dk", "spam", "Usability", "WordPress"]
 tags: []
 author: "jesper"
+technorati: ["akismet", "spam", "comments", "justaddwater", "blogging", "spam-filter-free", "spam filter", "wordpress"]
 ---
 
 Get ready for a suicide mission: On this blog, we will remove our spam filter completely for one day, December 15th.

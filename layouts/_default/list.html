@@ -9,8 +9,8 @@
 <div id="oldernews">
 <ul>
 {{ range after 5 $p.Pages }}<li id="post-{{ .Params.wp_id }}" class="linkable">
-	<a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">
-		<span class="title">{{ .Title }}</span>
+	<a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ partial "tt.html" .Title }}">
+		<span class="title">{{ partial "tt.html" .Title }}</span>
 		<span class="time">{{ .Date.Format "Jan 2" }}</span>
 	</a>
 </li>

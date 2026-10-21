@@ -7,6 +7,7 @@ wp_id: 160
 categories: ["AJAX", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["wysiwyg", "html form editor", "jotform"]
 ---
 
 This one's really nice. you can edit an HTML form with this interface (click to enlarge). You can literally create a form in seconds.\

@@ -7,6 +7,7 @@ wp_id: 671
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "mom", "test", "usability testing", "mom test", "flickr", "nytimes"]
 ---
 
 Here is a good writeup from New York Times on why Flickr fails "The Mom Test":

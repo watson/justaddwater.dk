@@ -7,6 +7,7 @@ wp_id: 673
 categories: ["Usability"]
 tags: []
 author: "jesper"
+technorati: ["popup", "popup window", "usability", "jakob nielsen", "sitepoint", "neil turner", "thickbox", "flickr", "organizer"]
 ---
 
 Open new windows is a no-no for several reasons. Frequently readers probably know this already, but since I'm often seeing this on Danish web pages, I think it's time to reopen the discussion with new considerations.

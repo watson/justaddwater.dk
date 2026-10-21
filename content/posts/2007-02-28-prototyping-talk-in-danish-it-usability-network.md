@@ -7,6 +7,7 @@ wp_id: 560
 categories: ["Events/seminars", "justaddwater.dk", "Prototyping"]
 tags: []
 author: "thomas"
+technorati: ["event", "meeting", "prototyping", "visio", "rubyonrails", "axure", "ruby on rails", "rolf molich", "dansk it"]
 ---
 
 Jesper and I were invited yesterday to speak for the [Danish IT usability network](http://www.dansk-it.dk/netvaerk/4_typer_netvaerk/kompetence_netvaerk/usability.aspx "Dansk IT usability kompetencenetværk") (link in Danish) about prototyping and our experience with prototypes.

@@ -7,6 +7,7 @@ wp_id: 193
 categories: ["Usability"]
 tags: []
 author: "thomas"
+technorati: ["usability", "bbc", "dell"]
 ---
 
 I just thought I would share a good experience I had today :)

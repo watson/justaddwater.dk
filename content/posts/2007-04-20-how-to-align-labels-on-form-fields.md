@@ -7,6 +7,7 @@ wp_id: 583
 categories: ["Forms", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["interaction design", "ixd", "usability", "eye-tracking", "form", "design", "webdevelopment", "lukew", "yahoo", "best practice"]
 ---
 
 **Form usability revisited.** In case you missed it, Luke Wroblewski (principal designer of Yahoo!), has made a thorough presentation on best practices in form design. The entire 112 page presentation is definitely worth a read. Kind of required read in my work :)

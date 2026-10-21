@@ -7,6 +7,7 @@ wp_id: 55
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
 author: "jesper"
+technorati: ["google analytics", "google", "stats", "hacks", "technorati"]
 ---
 
 We use Google Analytics as a stat tool on justaddwater.dk, and we're overall satisfied with it. Unfortunately, one crucial feature is hidden and very hard to find. Here is how you find referring URLs and not only the referring websites.

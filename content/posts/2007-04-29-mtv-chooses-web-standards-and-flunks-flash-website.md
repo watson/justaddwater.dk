@@ -7,6 +7,7 @@ wp_id: 607
 categories: ["Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["web standards", "xhtml", "html", "css", "flash", "mtv", "usability"]
 ---
 
 UX Magazine reports that MTV drops their Flash based website in favor of a common-sense web standards based solution.

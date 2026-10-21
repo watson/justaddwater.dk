@@ -7,6 +7,7 @@ wp_id: 802
 categories: ["Psychology"]
 tags: []
 author: "jesper"
+technorati: ["change", "psychology", "life"]
 ---
 
 I ran into this that we use internally in Capgemini to help people open up for new ideas. Out of curiosity: Which one of these did you hear yesterday? Post a comment, and I'll make an updated version of the ones you hear the most.

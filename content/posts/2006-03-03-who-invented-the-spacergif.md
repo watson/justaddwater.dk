@@ -7,6 +7,7 @@ wp_id: 163
 categories: ["Best of Justaddwater", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["anti webstandards", "anti usability", "spacer gif", "table based layout", "david siegel", "jakob nielsen", "transparent gif", "transparent pixel"]
 ---
 
 Do you remember this fish?

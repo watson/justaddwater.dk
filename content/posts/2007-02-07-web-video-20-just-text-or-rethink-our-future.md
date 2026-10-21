@@ -7,6 +7,7 @@ wp_id: 538
 categories: ["Links", "Syndication", "Video"]
 tags: []
 author: "jesper"
+technorati: ["web2.0", "video", "youtube", "michael wesch", "mojiti", "transcript", "social", "copyright", "authorship", "privacy", "ethics", "identity", "rhetoric", "governance", "family"]
 ---
 
 Must see [Michael Wesch](http://www.ksu.edu/sasw/anthro/wesch.htm) of Kansas University released a brilliant video on the possibilities of the web.

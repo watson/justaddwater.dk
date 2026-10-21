@@ -7,6 +7,7 @@ wp_id: 132
 categories: ["Best of Justaddwater", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["usability", "jared spool", "jonathan boutelle", "pogosticking"]
 ---
 
 Pogosticking is best explained with examples:

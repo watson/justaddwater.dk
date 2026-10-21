@@ -7,6 +7,7 @@ wp_id: 420
 categories: ["Events/seminars", "ui11", "Usability"]
 tags: []
 author: "jesper"
+technorati: ["uiconf", "ui11", "usability", "conference", "event", "jared spool", "josh porter", "luke wroblewski", "barry schwartz", "calendar"]
 ---
 
 [UI11](http://www.uie.com/events/uiconf/2006/) is over and I headed back to Denmark to digest the insightful presentations. The conference had many highlights and it was truly inspirational to meet so many bright people.Some highlights are worth mentioning.

@@ -7,6 +7,7 @@ wp_id: 565
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["capgemini", "job", "jobs", "usability", "web developer", "web development", "copenhagen", "denmark"]
 ---
 
 My company is looking for skilled colleagues with rare combination of being both a web developer and usability specialist. The job is in Copenhagen, Denmark.

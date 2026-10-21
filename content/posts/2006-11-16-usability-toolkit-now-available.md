@@ -7,6 +7,7 @@ wp_id: 461
 categories: ["Usability", "User Interface", "Web Development"]
 tags: []
 author: "jesper"
+technorati: ["usability toolkit", "sitepoint", "danielszuc", "gerry gaffney", "fridge", "magnet", "blueprints", "user interface", "ui", "web development"]
 ---
 
 Daniel Szuc tipped me about [The Usability Toolkit](http://www.sitepoint.com/books/usability1/), now available from Sitepoint.

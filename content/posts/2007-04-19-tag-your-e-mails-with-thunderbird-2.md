@@ -7,6 +7,7 @@ wp_id: 588
 categories: ["E-mails", "Taxonomy", "Usability", "User Interface"]
 tags: []
 author: "thomas"
+technorati: ["Mozilla Thunderbird", "Microsoft Outlook", "e-mail", "email", "mail", "folksonomy", "taxonomy", "tags", "Gmail", "del.icio.us", "Google Mail", "mac", "OS X", "Apple", "Mail.app", "usability", "user interface", "e-mail client", "thunderbird2", "web 2.0"]
 ---
 
 One of the cornerstones in Web 2.0 are the [folksonomy](http://en.wikipedia.org/wiki/Folksonomy "Wikipedia: Folksonomy"), a user generated taxonomy, popularly referred to as **tags**. Google made tags popular ([they call them labels](http://mail.google.com/mail/help/why_gmail.html#label "About Gmail: Labels")) when they launched Gmail (taxonomy) and the online bookmark service del.icio.us [gave us tags](http://del.icio.us/help/tags "del.icio.us help: What are tags?") + social network = folksonomy.

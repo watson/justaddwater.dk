@@ -7,6 +7,7 @@ wp_id: 668
 categories: ["Events/seminars", "Prototyping", "Railsconf", "Ruby on Rails", "Speaking"]
 tags: []
 author: "jesper"
+technorati: ["rails", "rubyonrails", "event", "railsconf", "conference", "oreilly", "berlin", "copenhagenrb", "madsbuus", "dalager", "legacy"]
 ---
 
 Woohoo. I got a response from O'Reilly that my talk for RailsConf in Berlin is accepted. I will be presenting with my colleague [Mads Buus](http://www.upperbound.net/upperbound/show/HomePage), who's also active in our [Copenhagen Ruby user group](http://copenhagenrb.dk/).

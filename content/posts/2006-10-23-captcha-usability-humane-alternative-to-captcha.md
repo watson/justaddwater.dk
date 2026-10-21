@@ -7,6 +7,7 @@ wp_id: 428
 categories: ["Accessibility", "Usability", "Web Standards"]
 tags: []
 author: "jesper"
+technorati: ["accessibility", "ajax", "microsoft", "atlas", ".net", "javascript", "wordpress", "akismet"]
 ---
 
 Revisiting CAPTCHA: Since W3C wrote about "[inaccessibility of CAPTCHA](http://www.w3.org/TR/turingtest/)" almost a year ago, a new technique has emerged:

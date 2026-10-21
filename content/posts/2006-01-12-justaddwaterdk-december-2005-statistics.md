@@ -7,6 +7,7 @@ wp_id: 54
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
 author: "thomas"
+technorati: ["statistics", "web statistics", "browsers", "analytics", "google analytics"]
 ---
 
 Better late then never... In the spirit of sharing here is our statistics for December 2005. We have as usual filtered out our own hits, so these numbers should show only "real" readers. Enjoy :)

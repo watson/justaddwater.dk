@@ -7,6 +7,7 @@ wp_id: 913
 categories: ["Agile"]
 tags: []
 author: "jesper"
+technorati: ["touch", "screen", "request", "lazyweb", "scrum", "scrum board", "screenshot"]
 ---
 
 Time for a Lazyweb request.

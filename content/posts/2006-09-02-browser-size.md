@@ -7,6 +7,7 @@ wp_id: 385
 categories: ["Browser", "justaddwater.dk", "Usability", "User Interface"]
 tags: []
 author: "jesper"
+technorati: ["usability", "screen size", "screen resolution", "browser", "web design", "liquid layout", "window size", "jakob nielsen", "web statistics", "thomas baekdal", "jakob skjerning"]
 ---
 
 I asked for numbers confirming my thoughts recently in "[Design for Browser Size — Not Screen Size](/2006/08/17/design-for-browser-size-not-screen-size/ "Permanent Link to Design for Browser Size — Not Screen Size")".

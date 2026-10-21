@@ -7,6 +7,7 @@ wp_id: 531
 categories: ["Blogging", "justaddwater.dk", "spam", "Usability", "WordPress"]
 tags: []
 author: "thomas"
+technorati: ["WordPress", "Apache", "httpd", "htaccess", "filter", "spam", "blogging", "Akismet", "usability", "comments", "trackbacks", "justaddwater.dk"]
 ---
 
 **Today justaddwater.dk got spam comment number 100,000.** But actually the real number is much higher since we have incorporated a couple of measures to catch the spam even before it reaches WordPress or [Akismet](http://akismet.com/ "Tool for stopping comment and trackback spam").

@@ -7,6 +7,7 @@ wp_id: 929
 categories: ["justaddwater.dk"]
 tags: []
 author: "jesper"
+technorati: ["technorati", "round", "corners", "jquery", "unobtrusive", "javascript", "library", "github"]
 ---
 
 If you ever use [rounded corners the Technorati way](/2007/02/15/rounded-corners-the-technorati-way/), here is some additional code I created recently.

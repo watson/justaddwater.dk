@@ -7,6 +7,7 @@ wp_id: 858
 categories: ["Ruby on Rails"]
 tags: []
 author: "jesper"
+technorati: ["ruby on rails", "rails plugin", "simple localization", "l10n", "i18n", "internationalization", "danish", "swedish", "dutch", "spanish", "german", "swedish chef", "pirate talk", "pirate day", "translation"]
 ---
 
 Just a quick note to tell that I released version 0.9 of the L10n-simplified plugin. It has been a year since last release, but I had nohurry since the last version already fit for Rails 2.0.

@@ -7,6 +7,7 @@ wp_id: 431
 categories: ["Browser"]
 tags: []
 author: "jesper"
+technorati: ["firefox", "firefox2", "autocomplete", "live search", "browser", "search", "tip", "productivity"]
 ---
 
 As Firefox 2 is set to release this Tuesday, I just want to share this neat trick with you.

@@ -7,6 +7,7 @@ wp_id: 59
 categories: ["Usability"]
 tags: []
 author: "thomas"
+technorati: ["shortcuts", "keyboard shortcuts", "internationalization", "i18n", "usability", "Windows XP", "Microsoft Office", "Windows", "XP"]
 ---
 
 I just read a post on "Jensen Harris: An Office User Interface Blog" called "[The 50/50 Rule](http://blogs.msdn.com/jensenh/archive/2006/01/09/510783.aspx)" which got me thinking...

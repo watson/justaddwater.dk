@@ -7,6 +7,7 @@ wp_id: 403
 categories: ["Events/seminars", "justaddwater.dk", "ui11"]
 tags: []
 author: "jesper"
+technorati: ["luke wroblewski", "uiconf", "ui11", "visual", "design", "visceral", "yahoo", "ebay", "screen size", "browser size"]
 ---
 
 *\[Live notes from UI Conf\]*\
