@@ -2,15 +2,21 @@
 // bin/screenshot - full-page screenshots for visually comparing new vs original site.
 //
 // Usage:
-//   bin/screenshot --dev              http://localhost:1313      -> screenshots/dev/
-//   bin/screenshot --orig             http://justaddwater.dk     -> screenshots/orig/
-//   bin/screenshot --dev --host URL   override host (output dir still screenshots/dev)
-//   bin/screenshot --orig --pages FILE   use another page list
-//   bin/screenshot --dev --only 05,07    only these numbers (or slug substrings)
+//   bin/screenshot --all                 dev + orig concurrently (same as --dev --orig)
+//   bin/screenshot --dev                 http://localhost:1313   -> screenshots/dev/
+//   bin/screenshot --orig                http://justaddwater.dk  -> screenshots/orig/
+//   --host URL     override host (only with a single site; output dir unchanged)
+//   --pages FILE   use another page list
+//   --only 05,07   only these numbers (or slug substrings)
+//   --width N      viewport width, default 800 (deviceScaleFactor 1, full page)
+//   --jobs N       parallel pages per site (default dev 4, orig 2)
 //
 // Pages: bin/screenshot-pages.txt (one path per line, "# comment", optional
-// "dev=/x/ orig=/y/" overrides). Same list for both hosts => identical file
-// names (NN-slug.png). Plain http is fine; HTTPS errors are ignored.
+// "dev=/x/ orig=/y/" overrides). File number NN is the position among the
+// non-comment lines, so append new pages at the end. Same list for both hosts
+// => identical names (NN-slug.png). Fast: domcontentloaded + images decoded
+// (3s cap), 15s navigation timeout, one retry, analytics/ads blocked,
+// animations/caret disabled. Exit code 1 if any page failed.
 // Setup once: yarn install && npx playwright install chromium
 const fs = require('fs'), path = require('path');
 const root = path.resolve(__dirname, '..');
@@ -18,53 +24,76 @@ const { chromium } = require(path.join(root, 'node_modules', 'playwright'));
 
 const args = process.argv.slice(2);
 const opt = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : null; };
-const mode = args.includes('--orig') ? 'orig' : args.includes('--dev') ? 'dev' : null;
-if (!mode) { console.error('usage: bin/screenshot --dev|--orig [--host URL] [--pages FILE] [--only a,b]'); process.exit(2); }
-const host = (opt('--host') || (mode === 'dev' ? 'http://localhost:1313' : 'http://justaddwater.dk')).replace(/\/$/, '');
+const all = args.includes('--all');
+const modes = ['dev', 'orig'].filter(m => all || args.includes('--' + m));
+if (!modes.length) { console.error('usage: bin/screenshot --all|--dev|--orig [--host URL] [--pages FILE] [--only a,b] [--width N] [--jobs N]'); process.exit(2); }
+const width = parseInt(opt('--width') || '800', 10);
 const pagesFile = opt('--pages') || path.join(__dirname, 'screenshot-pages.txt');
 const only = (opt('--only') || '').split(',').filter(Boolean);
-const outDir = path.join(root, 'screenshots', mode);
-fs.mkdirSync(outDir, { recursive: true });
-
-const pages = fs.readFileSync(pagesFile, 'utf8').split('\n').map(l => l.replace(/\s#.*$/, '').trim())
-  .filter(l => l && !l.startsWith('#')).map((l, i) => {
-    const [p, ...rest] = l.split(/\s+/);
-    const ov = Object.fromEntries(rest.map(r => r.split('=')));
-    const slug = (p === '/' ? 'home' : p.replace(/^\/|\/$/g, '').split('/').pop()).slice(0, 40);
-    return { n: String(i + 1).padStart(2, '0'), path: ov[mode] || p, slug };
-  });
-
+const BLOCK = /google-analytics|googletagmanager|doubleclick|googlesyndication|feedburner|measuremap|statcounter|quantserve|scorecardresearch|adsense|pagead|technorati\.com\/.*(badge|counter)/i;
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-(async () => {
-  const browser = await chromium.launch();
-  const ctx = await browser.newContext({ viewport: { width: 1200, height: 900 }, ignoreHTTPSErrors: true });
+
+function loadPages(mode) {
+  return fs.readFileSync(pagesFile, 'utf8').split('\n').map(l => l.replace(/\s#.*$/, '').trim())
+    .filter(l => l && !l.startsWith('#')).map((l, i) => {
+      const [p, ...rest] = l.split(/\s+/);
+      const ov = Object.fromEntries(rest.map(r => r.split('=')));
+      const slug = (p === '/' ? 'home' : p.replace(/^\/|\/$/g, '').split('/').pop()).slice(0, 40);
+      return { n: String(i + 1).padStart(2, '0'), path: ov[mode] || p, slug };
+    }).filter(p => !only.length || only.some(o => o === p.n || p.slug.includes(o)));
+}
+
+async function shoot(ctx, url, out) {
   const page = await ctx.newPage();
-  const ok = [], failed = [];
-  for (const p of pages) {
-    if (only.length && !only.some(o => o === p.n || p.slug.includes(o))) continue;
-    const file = `${p.n}-${p.slug}.png`, url = host + p.path;
-    try {
-      const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
-      await page.waitForLoadState('load', { timeout: 30000 }).catch(() => {});
-      const status = resp ? resp.status() : 0;
-      await page.waitForLoadState('networkidle', { timeout: 20000 }).catch(() => {});
-      // scroll through to trigger lazy images, then wait for all to finish
-      await page.evaluate(async () => {
-        for (let y = 0; y < document.body.scrollHeight; y += 800) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 60)); }
-        window.scrollTo(0, 0);
-        await Promise.all([...document.images].filter(i => !i.complete).map(i => new Promise(r => { i.onload = i.onerror = r; setTimeout(r, 8000); })));
-      });
-      await page.screenshot({ path: path.join(outDir, file), fullPage: true });
-      (status >= 400 ? failed : ok).push(`${file} ${url} HTTP ${status}`);
-      console.log(`${status >= 400 ? 'BAD ' : 'ok  '} ${file} (HTTP ${status})`);
-    } catch (e) {
-      failed.push(`${file} ${url} ${e.message.split('\n')[0]}`);
-      console.log(`FAIL ${file}: ${e.message.split('\n')[0]}`);
+  try {
+    const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    await page.addStyleTag({ content: '*,*::before,*::after{animation:none!important;transition:none!important;caret-color:transparent!important}' }).catch(() => {});
+    await page.evaluate(() => Promise.race([
+      Promise.all([...document.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; })))
+        .then(() => Promise.all([...document.images].map(i => i.decode ? i.decode().catch(() => {}) : 0))),
+      new Promise(r => setTimeout(r, 3000))]));
+    await page.screenshot({ path: out, fullPage: true, animations: 'disabled', caret: 'hide', timeout: 15000 });
+    return resp ? resp.status() : 0;
+  } finally { await page.close().catch(() => {}); }
+}
+
+async function runSite(mode) {
+  const host = ((modes.length === 1 && opt('--host')) || (mode === 'dev' ? 'http://localhost:1313' : 'http://justaddwater.dk')).replace(/\/$/, '');
+  const jobs = parseInt(opt('--jobs') || (mode === 'dev' ? '4' : '2'), 10);
+  const outDir = path.join(root, 'screenshots', mode);
+  fs.mkdirSync(outDir, { recursive: true });
+  const queue = loadPages(mode), ok = [], failed = [];
+  const browser = await chromium.launch();
+  const ctx = await browser.newContext({ viewport: { width, height: 900 }, deviceScaleFactor: 1, ignoreHTTPSErrors: true, reducedMotion: 'reduce' });
+  await ctx.route('**/*', r => { const u = new URL(r.request().url()); return u.host !== new URL(host).host && BLOCK.test(u.host + u.pathname) ? r.abort() : r.continue(); });
+  const worker = async (w) => {
+    if (mode === 'orig') await sleep(w * 150);
+    for (let p; (p = queue.shift());) {
+      const file = `${p.n}-${p.slug}.png`, url = host + p.path;
+      let err = null, status = 0;
+      for (let a = 0; a < 2; a++) {
+        try { status = await shoot(ctx, url, path.join(outDir, file)); err = null; if (status < 500) break; err = `HTTP ${status}`; }
+        catch (e) { err = e.message.split('\n')[0]; }
+      }
+      if (err || status >= 400) { failed.push(`${file} ${url} ${err || 'HTTP ' + status}`); console.log(`FAIL ${mode} ${file}: ${err || 'HTTP ' + status}`); }
+      else { ok.push(file); console.log(`ok   ${mode} ${file}`); }
     }
-    await sleep(mode === 'orig' ? 800 : 100);
-  }
+  };
+  await Promise.all(Array.from({ length: jobs }, (_, w) => worker(w)));
   await browser.close();
-  console.log(`\nSummary (${mode}, ${host}): ${ok.length} ok, ${failed.length} failed`);
-  failed.forEach(f => console.log('  - ' + f));
-  process.exit(failed.length ? 1 : 0);
+  return { mode, host, ok, failed };
+}
+
+(async () => {
+  const t0 = Date.now();
+  const results = await Promise.all(modes.map(runSite));
+  console.log('');
+  let bad = 0;
+  for (const r of results) {
+    console.log(`Summary ${r.mode} (${r.host}, width ${width}): ${r.ok.length} ok, ${r.failed.length} failed`);
+    r.failed.forEach(f => console.log('  - ' + f));
+    bad += r.failed.length;
+  }
+  console.log(`Wall-clock: ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  process.exit(bad ? 1 : 0);
 })();

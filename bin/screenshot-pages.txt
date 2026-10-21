@@ -35,3 +35,4 @@
 /2015/03/29/easter-egg-css-circles/ # late post, CSS demo
 /2005/10/14/frist-post/ # very short first post
 /2012/02/14/criteria-for-the-capgemini-software-engineer-certification/ # no comments, longish
+/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/ # unicode chars, added later (numbered by position: last)
