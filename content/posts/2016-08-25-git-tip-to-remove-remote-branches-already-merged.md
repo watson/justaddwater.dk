@@ -10,7 +10,7 @@ tags: []
 
 Let's talk about source control and an efficient way of using Git.
 
-I like the projects where you have a \`master\` branch and a few feature branches, which are actively being worked upon. Only a few branches are present at a given time, and this is less confusing for the contributors in the repository.
+I like the projects where you have a `master` branch and a few feature branches, which are actively being worked upon. Only a few branches are present at a given time, and this is less confusing for the contributors in the repository.
 
 A couple of times I have been on a project where old branches were not cleaned up.
 
@@ -20,7 +20,7 @@ Step 1: List all branches that are already merged:
 
 `$ git branch -r --merged`
 
-Lists all remote branches which are already merged. In case you want to find the old ones, you can sort them by commit date with the flag \`--sort=committerdate\`
+Lists all remote branches which are already merged. In case you want to find the old ones, you can sort them by commit date with the flag `--sort=committerdate`
 
 Example:
 
@@ -34,7 +34,7 @@ The list returned from above will also contain origin/HEAD and origin/master wit
 
 `$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin`
 
-we simply remove them with \`grep -v\`
+we simply remove them with `grep -v`
 
 Step 3: Feed list into a delete command
 

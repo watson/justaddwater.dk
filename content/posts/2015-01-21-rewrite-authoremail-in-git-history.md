@@ -32,7 +32,7 @@ CommitDate: Tue Jan 13 09:56:13 2015 +0100\
 
  
 
-I had to rewrite the history in order to fix the email addresses. Turns out \`git filter-branch\` could help:
+I had to rewrite the history in order to fix the email addresses. Turns out `git filter-branch` could help:
 
  
 

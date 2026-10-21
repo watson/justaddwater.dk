@@ -29,17 +29,19 @@ Interesting!
 
 I ended up implementing it as `display:inline-block;` which also works fine. Here is my final rules for styling buttons as links
 
-> .clickable, button.tertiary, input.tertiary{\
->   color: #339;\
->   text-decoration: underline;\
->   display: inline-block; /\* else underline won't work \*/\
->   cursor: pointer;\
->   border: none;\
->   background-color: transparent;\
->   font-size: 1em;\
->   padding: 0;\
-> }\
-> .clickable:hover, button.tertiary:hover, input.tertiary:hover{\
->   text-decoration: underline;\
->   color: #669;\
-> }
+```
+.clickable, button.tertiary, input.tertiary{
+  color: #339;
+  text-decoration: underline;
+  display: inline-block; /* else underline won't work */
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  padding: 0;
+}
+.clickable:hover, button.tertiary:hover, input.tertiary:hover{
+  text-decoration: underline;
+  color: #669;
+}
+```

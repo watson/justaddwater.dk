@@ -87,7 +87,7 @@
   "url": "http://justaddwater.dk/",
   "date": "2011-03-09 22:17:24",
   "type": "",
-  "html": "@Markus, yeah unfortunately wordpress tries to clever-change all quotes and double dashes.\n\nIt is really really a wrong default and very annoying.\n\nBTW, you can avoid the double dashes by using the single letter equivalents \"-n\" for dry-run and \"-r\" for revision. But it then becomes less intuitive and a bit harder to learn:\n\nThen the expression becomes:\n\n> svn merge –n –r BASE:HEAD ."
+  "html": "@Markus, yeah unfortunately wordpress tries to clever-change all quotes and double dashes.\n\nIt is really really a wrong default and very annoying.\n\nBTW, you can avoid the double dashes by using the single letter equivalents \"-n\" for dry-run and \"-r\" for revision. But it then becomes less intuitive and a bit harder to learn:\n\nThen the expression becomes:\n\n```\nsvn merge –n –r BASE:HEAD .\n```"
  },
  {
   "id": 513653,

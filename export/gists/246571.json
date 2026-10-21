@@ -1,0 +1,10 @@
+{
+ "id": "246571",
+ "files": [
+  {
+   "filename": "server.rb",
+   "language": "Ruby",
+   "content": "#!/usr/bin/env ruby\n# Modified from http://yehudakatz.com/2007/08/06/webrick-anywhere/\nrequire 'webrick'\ninclude WEBrick\n\ns = HTTPServer.new(\n  :Port            => ARGV[0] || 2000,\n  :DocumentRoot    => Dir::pwd\n)\n\n## mount subdirectories\ns.mount(\"\",\n        HTTPServlet::FileHandler, \".\",\n        true)  #<= allow to show directory index.\n\ntrap(\"INT\"){ s.shutdown }\ns.start"
+  }
+ ]
+}

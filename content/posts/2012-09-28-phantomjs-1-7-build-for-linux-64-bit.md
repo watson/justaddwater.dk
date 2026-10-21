@@ -30,16 +30,17 @@ PhantomJS is a fantastic tool for automating tests, since it is a headless brows
 
 I followed the [build instructions](http://phantomjs.org/build.html "Phantomjs 1.7.0 official build instructions") (the instructions described for Amazon EC2 also worked on the fedora I am running).
 
-> sudo yum install gcc gcc-c++ make git openssl-devel freetype-devel fontconfig-devel\
-> git clone git://github.com/ariya/phantomjs.git\
-> cd phantomjs\
-> git checkout 1.7\
-> ./build.sh --jobs 1
->
-> \#(added step below by me)\
-> sudo yum install upx
->
-> After finishing the build, run deploy/package.sh which creates PhantomJS binary tarball that can be moved around and/or extracted to a different location. This is the correct way to install the built binary into an arbitrary directory, i.e. do not simply copy the executable as it won't work.
+```
+sudo yum install gcc gcc-c++ make git openssl-devel freetype-devel fontconfig-devel
+git clone git://github.com/ariya/phantomjs.git
+cd phantomjs
+git checkout 1.7
+./build.sh --jobs 1
+
+#(added step below by me)
+sudo yum install upx
+After finishing the build, run deploy/package.sh which creates PhantomJS binary tarball that can be moved around and/or extracted to a different location. This is the correct way to install the built binary into an arbitrary directory, i.e. do not simply copy the executable as it won't work.
+```
 
 The link I posted is the actual outcome of ./deploy/package.sh
 

@@ -12,22 +12,22 @@ For projects I sometimes have lots of screenshots which I have to repeat wheneve
 
 I ended up creating this little handy script based on webkit2png (download source)
 
-> \
->
-> \#!/usr/bin/env sh\
-> HOST="http://localhost:8080/myproject/viewer"\
-> /usr/bin/python webkit2png -F -o "01dashboard" \$HOST/dashboard\
-> /usr/bin/python webkit2png -F -o "02showdetail" \$HOST/detail\
-> /usr/bin/python webkit2png -F -o "03listpage" \$HOST/list
+```
+#!/usr/bin/env sh
+HOST="http://localhost:8080/myproject/viewer"
+/usr/bin/python webkit2png -F -o "01dashboard" $HOST/dashboard
+/usr/bin/python webkit2png -F -o "02showdetail" $HOST/detail
+/usr/bin/python webkit2png -F -o "03listpage" $HOST/list
+```
 
 This created the following 3 files in my directory:
 
-> \
->
-> \$ ls -1\
-> 01dashboard.png\
-> 02showdetail.png\
-> 03listpage.png
+```
+$ ls -1
+01dashboard.png
+02showdetail.png
+03listpage.png
+```
 
 Really simple and easy to use.
 

@@ -718,3 +718,7 @@ a img {
 
 /* archive page lists */
 .entry ul.children { margin-left: 1.2em; }
+
+/* code blocks */
+.entry pre,.entry blockquote pre{font-family:"Courier New",Menlo,monospace;font-size:12px;line-height:1.4;text-align:left;white-space:pre;overflow-x:auto;margin:1em 0;padding:8px 10px;background:#f6f6f6;border:1px solid #ddd}
+.entry pre code,.entry blockquote pre code{font-family:inherit;font-size:inherit;text-align:left;white-space:pre;background:none;padding:0}

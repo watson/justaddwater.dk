@@ -1,0 +1,10 @@
+{
+ "id": "432704",
+ "files": [
+  {
+   "filename": "pre-commit.bat",
+   "language": "Batchfile",
+   "content": "REM Subversion pre-commit hook for Windows machine\nREM put this in your SVN repository folder /hooks/pre-commit.bat\nREM we use it with svn version \nREM http://stackoverflow.com/questions/869248/windows-pre-commit-hook-for-comment-length-subversion\n\n@echo off  \n:: Stops commits that have empty log messages.        \n@echo off  \n\nsetlocal  \n\nrem Subversion sends through the path to the repository and transaction id  \nset REPOS=%1  \nset TXN=%2           \n\nrem line below ensures at least one character \".\", 5 characters require change to \".....\"\nsvnlook log %REPOS% -t %TXN% | findstr . > nul  \nif %errorlevel% gtr 0 (goto err) else exit 0  \n\n:err  \necho. 1>&2  \necho Your commit has been blocked because you didn't enter a comment. 1>&2  \necho Write a log message describing the changes made and try again. 1>&2\necho Thanks 1>&2\nexit 1\n"
+  }
+ ]
+}

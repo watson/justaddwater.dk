@@ -16,30 +16,42 @@ So i ended up with some short search/replace, which are really handy in IntelliJ
 
 Search template
 
-> assertTrue(\$msg\$, \$actual\$);
+```
+assertTrue($msg$, $actual$);
+```
 
 Replacement template:
 
-> org.junit.Assert.assertThat.assertThat(\$msg\$, \$actual\$, org.hamcrest.core.Is.is(true));
+```
+org.junit.Assert.assertThat.assertThat($msg$, $actual$, org.hamcrest.core.Is.is(true));
+```
 
 ## Remove "assertEquals" with delta values
 
 Search template
 
-> assertEquals(\$msg\$, \$expected\$, \$actual\$, \$delta\$);
+```
+assertEquals($msg$, $expected$, $actual$, $delta$);
+```
 
 Replacement template:
 
-> org.junit.Assert.assertThat(\$msg\$, \$actual\$, org.hamcrest.core.Is.is(\$expected\$));
+```
+org.junit.Assert.assertThat($msg$, $actual$, org.hamcrest.core.Is.is($expected$));
+```
 
 ## Optional Replace "assertEquals" with "assertThat"
 
 Search template
 
-> assertEquals(\$msg\$, \$expected\$, \$actual\$);
+```
+assertEquals($msg$, $expected$, $actual$);
+```
 
 Replacement template:
 
-> org.junit.Assert.assertThat.assertThat(\$msg\$, \$actual\$, org.hamcrest.core.Is.is(\$expected\$));
+```
+org.junit.Assert.assertThat.assertThat($msg$, $actual$, org.hamcrest.core.Is.is($expected$));
+```
 
 [![](/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat-300x247.png "intellij-structural-search-assertequals-replace-by-assertThat")](/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat.png)

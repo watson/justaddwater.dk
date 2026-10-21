@@ -28,6 +28,7 @@ import json, os, re, subprocess, sys
 import xml.etree.ElementTree as ET
 from html import unescape
 from urllib.parse import unquote, urlparse
+import urllib.request
 
 if {"-h", "--help"} & set(sys.argv[1:]):
     print(__doc__.strip())
@@ -40,6 +41,75 @@ BLOCK = r"(?:table|thead|tbody|tfoot|tr|td|th|div|dl|dt|dd|ul|ol|li|pre|form|blo
 ONLY = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else None
 LIMIT = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else None
 
+GIST_RE = r'<script[^>]*src="https?://gist\.github\.com/(?:([\w-]+)/)?(\w+)\.js(?:\?file=([^"&]*))?"[^>]*>\s*</script>'
+GIST_STATS = {"fetched": 0, "cached": 0, "fallback": 0}
+LANGS = {"sh": "bash", "bash": "bash", "rb": "ruby", "js": "javascript", "py": "python", "java": "java", "xml": "xml",
+         "html": "html", "css": "css", "reg": "ini", "php": "php", "sql": "sql", "yml": "yaml", "yaml": "yaml",
+         "json": "json", "c": "c", "cs": "csharp", "pl": "perl", "bat": "bat", "md": "markdown", "rake": "ruby"}
+_gist_seen = {}
+
+def gist_data(gid):
+    path = "export/gists/%s.json" % gid
+    if os.path.exists(path):
+        if gid not in _gist_seen: GIST_STATS["cached"] += 1
+        _gist_seen[gid] = 1
+        return json.load(open(path, encoding="utf8"))
+    req = urllib.request.Request("https://api.github.com/gists/" + gid, headers={"User-Agent": "export-to-hugo", "Accept": "application/vnd.github+json"})
+    if os.environ.get("GITHUB_TOKEN"): req.add_header("Authorization", "Bearer " + os.environ["GITHUB_TOKEN"])
+    try:
+        d = json.load(urllib.request.urlopen(req, timeout=30))
+    except Exception as e:
+        sys.stderr.write("gist %s: fetch failed (%s)\n" % (gid, e)); return None
+    d = {"id": gid, "files": [{"filename": f["filename"], "language": f.get("language"), "content": f.get("content", "")} for f in d["files"].values()]}
+    write(path, json.dumps(d, ensure_ascii=False, indent=1) + "\n")
+    GIST_STATS["fetched"] += 1; _gist_seen[gid] = 1
+    return d
+
+def esc(x): return x.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+def gist_html(m):
+    user, gid, only = m.group(1), m.group(2), unquote(m.group(3) or "")
+    url = "https://gist.github.com/%s%s" % (user + "/" if user else "", gid)
+    d = gist_data(gid)
+    files = [f for f in (d or {}).get("files", []) if not only or f["filename"] == only]
+    if not files:
+        GIST_STATS["fallback"] += 1
+        return '<p><a href="%s">View gist %s on GitHub</a></p>' % (url, gid)
+    out = []
+    for f in files:
+        ext = f["filename"].rsplit(".", 1)[-1].lower() if "." in f["filename"] else ""
+        lang = LANGS.get(ext) or (f.get("language") or "").lower().replace(" ", "")
+        out.append('<p><em>%s \u2014 <a href="%s">gist on GitHub</a></em></p>\n<pre><code%s>%s</code></pre>' % (
+            esc(f["filename"]), url, ' class="language-%s"' % lang if lang else "", esc(f["content"].rstrip("\n"))))
+    return "\n".join(out)
+
+def gists(t):
+    # a gist script inside a heading/paragraph is moved in front of it so the block stays intact
+    def hoist(m):
+        found = list(re.finditer(GIST_RE, m.group(0), flags=re.I))
+        if not found: return m.group(0)
+        rest = re.sub(GIST_RE, "", m.group(0), flags=re.I)
+        return "\n\n".join(gist_html(g) for g in found) + "\n\n" + rest
+    t = re.sub(r"<(h[1-6]|p)\b[^>]*>.*?</\1>", hoist, t, flags=re.I | re.S)
+    return re.sub(GIST_RE, gist_html, t, flags=re.I)
+
+def plain(h):
+    h = re.sub(r"<br\s*/?>", "\n", h, flags=re.I)
+    return unescape(re.sub(r"<[^>]+>", "", h))
+
+def blockquote_pre(t):
+    """<blockquote> holding only <pre> and Apple-style <p class="pN"> text is a monospace block, not a quote."""
+    PART = r"<pre\b[^>]*>.*?</pre>|<p\b[^>]*>.*?</p>"
+    def fix(m):
+        inner = m.group(1)
+        parts = re.findall(PART, inner, flags=re.S | re.I)
+        if not parts or re.sub(PART, "", inner, flags=re.S | re.I).strip(): return m.group(0)
+        if not any(x.lower().startswith("<pre") for x in parts): return m.group(0)
+        if any(not x.lower().startswith("<pre") and not re.match(r'<p class="p\d+"', x) for x in parts): return m.group(0)
+        txt = "\n".join(plain(re.sub(r"^<[^>]+>|</(?:pre|p)>$", "", x.strip())).strip("\n") for x in parts)
+        return '<pre><code class="language-text">%s</code></pre>' % esc(txt)
+    return re.sub(r"<blockquote\b[^>]*>(.*?)</blockquote>", fix, t, flags=re.S | re.I)
+
 def shortcodes(t):
     t = re.sub(r"\[tags[^\]]*\].*?\[/?tags\]", "", t, flags=re.S)
     def code(m):
@@ -49,9 +119,8 @@ def shortcodes(t):
     t = re.sub(r'\[caption[^\]]*?caption="([^"]*)"[^\]]*\](.*?)\[/caption\]',
                lambda m: "<p>%s</p>\n\n<p><em>%s</em></p>" % (m.group(2).strip(), m.group(1)), t, flags=re.S)
     t = re.sub(r"\[/?caption[^\]]*\]", "", t)
-    # embeds pandoc would drop: gist scripts and iframes become plain links
-    t = re.sub(r'<script[^>]*src="https?://gist\.github\.com/(\w+)\.js"[^>]*>\s*</script>',
-               r'<p><a href="https://gist.github.com/\1">View gist \1 on GitHub</a></p>', t, flags=re.I)
+    t = gists(t)
+    t = blockquote_pre(t)
     t = re.sub(r'<iframe[^>]*src="([^"]+)"[^>]*>.*?</iframe>',
                r'<p><a href="\1">Embedded content: \1</a></p>', t, flags=re.I | re.S)
     return t
@@ -111,6 +180,8 @@ def to_md(html):
     md = r.stdout if r.returncode == 0 else html
     md = re.sub(r"(?m)^\\[ \t]*$\n?", "", md)      # lone hard breaks beside block elements
     md = re.sub(r"\\\n(?=\n)", "\n", md)          # hard break at paragraph end
+    # source used Markdown-style `code` spans in plain text; pandoc escapes the backticks
+    md = "".join(c if i % 2 else re.sub(r"\\`([^`\n]+)\\`", r"`\1`", c) for i, c in enumerate(re.split(r"(?m)(^```.*?^```$)", md, flags=re.S)))
     return md.strip()
 
 def fm(d): return "---\n" + "\n".join("%s: %s" % (k, json.dumps(v, ensure_ascii=False)) for k, v in d.items()) + "\n---\n\n"
@@ -143,4 +214,5 @@ for it in chan.findall("item"):
                      "date": c.findtext(W + "comment_date"), "type": c.findtext(W + "comment_type") or "",
                      "html": to_md(c.findtext(W + "comment_content") or "")})
     if coms: write("data/comments/%s.json" % slug, json.dumps(coms, ensure_ascii=False, indent=1)); ncom += len(coms)
+print("gists: fetched %(fetched)d, cached %(cached)d, fallback %(fallback)d" % GIST_STATS)
 print("posts %d, pages %d, comments %d" % (stats["post"], stats["page"], ncom))

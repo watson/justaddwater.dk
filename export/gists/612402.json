@@ -1,0 +1,15 @@
+{
+ "id": "612402",
+ "files": [
+  {
+   "filename": "com.google.gwt.template.binder.java",
+   "language": "Java",
+   "content": "/* add this to IntelliJ Idea \"File>Settings> Live templates\"\n *\n * Abbreviation: binder\n * Group:        user\n * Description:  GWT UiBinder bootstrapping on existing class\n *\n */\n\n    @com.google.gwt.uibinder.client.UiTemplate(\"$CLASS$.ui.xml\")\n    interface Binder extends com.google.gwt.uibinder.client.UiBinder<com.google.gwt.user.client.ui.HTMLPanel,$CLASS$> {\n    }\n\n    private static Binder ourUiBinder = GWT.create(Binder.class);\n\n    //public $CLASS$() {\n    //    com.google.gwt.user.client.ui.HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);\n    //}\n"
+  },
+  {
+   "filename": "com.google.gwt.template.file.uibinder.xml",
+   "language": "XML",
+   "content": "<!-- \n  add this to IntelliJ Idea \"File > Settings > File templates\"\n  \"Templates\" tab\n  Name:      GWT UI binder\n  Extension: xml\n\n-->\n<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'\n             xmlns:g='urn:import:com.google.gwt.user.client.ui'>\n  <${ROOT_TAG_NAME}>\n    \n  </${ROOT_TAG_NAME}>\n</ui:UiBinder>"
+  }
+ ]
+}

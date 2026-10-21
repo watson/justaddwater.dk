@@ -14,7 +14,71 @@ To follow the Don't Repeat Yourself principle, I created a script to make it a o
 
 Feel free to use and modify the code (which i put on GitHub so you can fork and pull from it): <http://gist.github.com/199558>
 
-[View gist 199558 on GitHub](https://gist.github.com/199558)
+*parsepage.rb — [gist on GitHub](https://gist.github.com/199558)*
+
+``` ruby
+#!/usr/bin/env ruby
+# Script that wraps grabbing and selecting stuff from HTML page via CSS selectors
+# Created 2009-10-01 by Jesper Rønn-Jensen, www.justaddwater.dk
+#
+# For usage, run parsepage.rb without arguments.
+#
+# Feel free to modify, fork and improve as long as you commit your changes back to me :)
+def usage
+  <<-EOF #.gsub('    ', '')
+    === USAGE ===
+    parsepage.rb [uri] [css_selector]
+
+    === example ===
+    parsepage.rb "http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/" "h3"
+
+
+    U=http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/
+    parsepage.rb $U "h1,h2,h3"
+
+
+    === OPTIONS ===
+    --text-only      lists only text from matching elements
+    --list-html      lists all matches as HTML <li> elements
+    --count          Count number of matches
+  EOF
+end
+
+
+print usage if ARGV.empty?
+
+
+puts ARGV.inspect
+require "rubygems"
+require "nokogiri"
+require "open-uri"
+
+doc = Nokogiri::HTML(open(ARGV[0]))
+matches =  doc.css(ARGV[1])
+
+result = []
+result << "no matches found" if matches.empty?
+
+
+if (ARGV.include?('--text-only'))
+  result << matches.map{|element| "#{element.text}"}
+elsif  (ARGV.include?('--html-list'))
+  result << matches.map{|element| "<li>#{element.text}<li>"}
+else
+  result << matches.to_s
+end
+
+result << ''
+result << "TOTAL (#{matches.size} match#{'es' if matches.size != 1} found for '#{ARGV[1]}')" if (ARGV.include?('--count'))
+puts result.join("\n")
+
+
+# TODO stuff that would be great to support
+#
+# * support for local files
+# * refactor so this could be used to return a Nokogiri object with selection via irb
+#
+```
 
 I created the script because I wanted to extract headings from a recent article. You could also use it for creating table of contents or similar.
 

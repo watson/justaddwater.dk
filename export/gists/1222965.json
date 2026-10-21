@@ -1,0 +1,15 @@
+{
+ "id": "1222965",
+ "files": [
+  {
+   "filename": "WTF-complete.java",
+   "language": "Java",
+   "content": "package dk.justaddwater.wtf\n\nimport java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\n\n/**\n * Created by IntelliJ IDEA.\n * User: Jesper Rønn-Jensen\n * Date: 16/09/11\n * <p/>\n * None functional WTF annotation to amuse developers\n * <p/>\n * Usage: Annotate hard-to-understand code with the @WTF annotation\n * <p/>\n * <p>The <code>WTF</code> annotation supports two optional parameters.\n *\n * The first, <code>explain</code>, and write why you dont understand this annotated element\n *\n * The second, <code>explanation</code>, is to explain why and how the element should be used\n *\n * NOTE that explanation element is DEPRECATED and considered bad style to use, since you are supposed to change\n * the code to something better and more readable!\n *\n * \n */\n@Retention(RetentionPolicy.SOURCE)\n@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.LOCAL_VARIABLE})\npublic @interface WTF {\n\n    /**\n     * Optionally specify <code>explain</code>, and write why you dont understand this annotated element\n     */\n    String explain() default \"\";\n\n    /**\n     * Optionally add <code>explanation</code>, and to explain why and how the element should be used\n     */\n    @Deprecated\n    String  explanation() default \"\";\n}\n"
+  },
+  {
+   "filename": "WTF.java",
+   "language": "Java",
+   "content": "@Retention(RetentionPolicy.SOURCE)\n@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.LOCAL_VARIABLE})\npublic @interface WTF {\n\n    /**\n     * Optionally specify <code>explain</code>, and write why you dont understand this annotated element\n     */\n    String explain() default \"\";\n\n    /**\n     * Optionally add <code>explanation</code>, and to explain why and how the element should be used\n     */\n    @Deprecated\n    String  explanation() default \"\";\n}\n"
+  }
+ ]
+}

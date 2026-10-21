@@ -12,6 +12,8 @@ Just a quick note to self about this tip i found. It is a Windows (XP) helpful c
 
 Delete all files in temp folder:
 
-> DEL /F /S /Q %TEMP%
+```
+DEL /F /S /Q %TEMP%
+```
 
 Taken from the "[A-Z Index of the Windows CMD command line](http://ss64.com/nt/del.htm)"

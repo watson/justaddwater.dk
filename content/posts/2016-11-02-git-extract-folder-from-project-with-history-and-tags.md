@@ -8,11 +8,11 @@ categories: ["Code", "git"]
 tags: []
 ---
 
-This is a short note regarding the use of \`git filter-branch\` when you want to split a git repository and preserve the history.
+This is a short note regarding the use of `git filter-branch` when you want to split a git repository and preserve the history.
 
 I had some issues in finding the correct parameters. In case this also can help others, you can find the command here.
 
-In case you are not yet familiar with the possibilities of \`git filter-branch\`, I suggest you look into the  [Git book: Rewriting history](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#The-Nuclear-Option:-filter-branch), which has a good introduction to the command.
+In case you are not yet familiar with the possibilities of `git filter-branch`, I suggest you look into the  [Git book: Rewriting history](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#The-Nuclear-Option:-filter-branch), which has a good introduction to the command.
 
 Now, to start you should clone the repository you want to change (since you will completely rewrite history in the new repos).
 

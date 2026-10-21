@@ -1,0 +1,10 @@
+{
+ "id": "848907",
+ "files": [
+  {
+   "filename": "delete_svn_subfolders.reg",
+   "language": "Windows Registry Entries",
+   "content": "Windows Registry Editor Version 5.00\n;\n; Running this file will give you an extra context menu item in Windows Explorer\n; \"Delete SVN folders\"\n;\n; For the selected folder, it will remove all subfolders named \".svn\" and their content\n; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/\n;\n; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )\n;\n;\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Folder\\shell\\DeleteSVN]\n@=\"Delete SVN Folders\"\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Folder\\shell\\DeleteSVN\\command]\n@=\"cmd.exe /c \\\"TITLE Removing SVN Folders in %1 && FOR /r \\\"%1\\\" %%f IN (.svn) DO RD /s /q \\\"%%f\\\" \\\"\"\n"
+  }
+ ]
+}

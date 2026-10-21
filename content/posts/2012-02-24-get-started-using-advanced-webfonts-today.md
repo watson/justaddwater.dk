@@ -14,14 +14,16 @@ I saw this example on [a blog today](http://uxcampcph.org/):
 
 Studying the code, it turns out this is just [clever use of Google's font api](https://developers.google.com/webfonts/docs/getting_started). What you essentially do is to add this to your \<HEAD\> element:
 
-> \<!-- Google Fonts --\> \
-> \<link href='[http://fonts.googleapis.com/css?family=Cabin Sketch:bold](http://fonts.googleapis.com/css?family=Cabin%20Sketch:bold)' rel='stylesheet' type='text/css' /\> \
-> \<style type="text/css" media="screen"\> \
->   h1 { font-family: 'Cabin Sketch', arial, serif; } \
->   .entry-title { \
->     font-family:'Cabin Sketch'; \
->   } \
-> \</style\>
+```
+<!-- Google Fonts --> 
+<link href='http://fonts.googleapis.com/css?family=Cabin Sketch:bold' rel='stylesheet' type='text/css' /> 
+<style type="text/css" media="screen"> 
+  h1 { font-family: 'Cabin Sketch', arial, serif; } 
+  .entry-title { 
+    font-family:'Cabin Sketch'; 
+  } 
+</style>
+```
 
 Now the stylesheet referenced takes care of the rest. It's as simple as that!
 
@@ -55,4 +57,5 @@ One word of caution: Think twice before adding a lot of extra bytes to your web 
 
  
 
->
+```
+```

@@ -1,0 +1,10 @@
+{
+ "id": "8c5fe0d78f77adc7320f",
+ "files": [
+  {
+   "filename": "fill_up_to.rb",
+   "language": "Ruby",
+   "content": "MIN_COUNT = 2\n\n# Naïve implementation, just return whatever number I need\ndef sum_up_a(existing)\n  return 2 if existing == 0\n  return 1 if existing == 1\n  return 0\nend\n\nsum_up_a(0)   # => 2\nsum_up_a(1)   # => 1\nsum_up_a(2)   # => 0\nsum_up_a(3)   # => 0\nsum_up_a(10)  # => 0\n\n\n# slightly improved with less conditionals\ndef sum_up_b(existing)\n  return 0 if existing >= MIN_COUNT\n  MIN_COUNT - existing\nend\n\nsum_up_b(0)   # => 2\nsum_up_b(1)   # => 1\nsum_up_b(2)   # => 0\nsum_up_b(3)   # => 0\nsum_up_b(10)  # => 0\n\n\n# my favorite: return the biggest number either 0 or the difference\n# Works well because difference is only positive for numbers where I \n# need some extra rows\ndef sum_up_c(existing)\n  [MIN_COUNT - existing, 0].max \nend\n\nsum_up_c(0)   # => 2\nsum_up_c(1)   # => 1\nsum_up_c(2)   # => 0\nsum_up_c(3)   # => 0\nsum_up_c(10)  # => 0\n"
+  }
+ ]
+}

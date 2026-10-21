@@ -1,0 +1,10 @@
+{
+ "id": "297427",
+ "files": [
+  {
+   "filename": "validate_models.rake",
+   "language": "Ruby",
+   "content": "#put this file in /lib/tasks and run `rake db:models:validate`\n#created 2010-02-07 by Jesper Rønn-Jensen\nrequire 'find'\n\nnamespace :db do\n  namespace :models do\n    desc 'Dumps all models into fixtures.'\n    task :validate => :environment do\n      models = []\n      Find.find(RAILS_ROOT + '/app/models') do |path|\n        unless File.directory?(path) then models << path.match(/(\\w+).rb/)[1] end\n      end\n  \n      puts \"Found models: \" + models.join(', ')\n      errors = []\n      models.each do |m|\n        puts \"Validating #{m.camelize} items\"\n#        m.camelize.constantize.transaction do\n          m.camelize.constantize.all.each do |item|\n            if item.valid?\n              print \".\"\n            else\n              print \"E\"\n              errors << item\n            end\n          end\n#        end#end transaction\n        puts \"\"\n      end\n      errors.each do |item|\n        puts \"ERROR in #{item.inspect}\"\n      end\n    end#end task\n  end\nend"
+  }
+ ]
+}

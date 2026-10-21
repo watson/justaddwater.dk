@@ -1,0 +1,15 @@
+{
+ "id": "174cea58433d2f06968f",
+ "files": [
+  {
+   "filename": "svn_create.sh",
+   "language": "Shell",
+   "content": "#!/usr/bin/env bash\n# set -x\n# script here will create new subversion repository (file based).\n# then it will make 10 commits\n# Then we will manipulate the commit dates of the ten commits\n\nSTART_FOLDER=$(pwd)\nREPO=repo02\nWD=working2\nHOOKFILE=$REPO/hooks/pre-revprop-change\n# svn repository\nsvnadmin create $REPO\n\necho '#!/usr/bin/env bash' > $HOOKFILE\necho 'exit 0' >> $HOOKFILE\nchmod +x $HOOKFILE\n\n\n#checkout a working copy\n\ncd \"$START_FOLDER\"\n\nsvn checkout \"file://$START_FOLDER/$REPO\" \"$WD\"\ncd \"$START_FOLDER\"\ncd \"$WD\"\n\ntouch README.txt\nsvn add README.txt\n\nfor i in 1 2 3 4 5 6 7 8 9 10\ndo\n   echo \"line $i\" >> README.txt\n   svn ci -m \"commit number $i (originally created $(date +\"%Y-%m-%d %T\"))\"\ndone\n\nsvn update\nsvn log\n"
+  },
+  {
+   "filename": "svn_modify.sh",
+   "language": "Shell",
+   "content": "#!/usr/bin/env bash\n# \n# We have 10 commits in a repository. Lets set commit dates to May 1st, 1981-1990\n#\n# set -x\n\nSTART_FOLDER=$(pwd)\nWD=working2\n\n\ncd \"$START_FOLDER\"\ncd \"$WD\"\n\nfor i in 1 2 3 4 5 6 7 8 9 10\ndo\n  YEAR=$(echo \"1980 + $i\" | bc )\n  svn propset --revprop -r $i  svn:date \"$YEAR-05-01T10:00:00.000000Z\"\ndone\n\nsvn update\n"
+  }
+ ]
+}

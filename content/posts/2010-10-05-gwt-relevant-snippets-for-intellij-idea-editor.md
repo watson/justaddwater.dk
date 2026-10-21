@@ -14,4 +14,42 @@ Snippet 1: Live template to bootstrap a class to use UI binder logic. Very usefu
 
 Snippet 2: Create new UiBinder.ui.xml file. Intellij has support for creating entire new java class + uibinder file. That is useful for new classes, but most often I find myself converting an existing class, and needed this shortcut for that.
 
-[View gist 612402 on GitHub](https://gist.github.com/612402)
+*com.google.gwt.template.binder.java — [gist on GitHub](https://gist.github.com/612402)*
+
+``` java
+/* add this to IntelliJ Idea "File>Settings> Live templates"
+ *
+ * Abbreviation: binder
+ * Group:        user
+ * Description:  GWT UiBinder bootstrapping on existing class
+ *
+ */
+
+    @com.google.gwt.uibinder.client.UiTemplate("$CLASS$.ui.xml")
+    interface Binder extends com.google.gwt.uibinder.client.UiBinder<com.google.gwt.user.client.ui.HTMLPanel,$CLASS$> {
+    }
+
+    private static Binder ourUiBinder = GWT.create(Binder.class);
+
+    //public $CLASS$() {
+    //    com.google.gwt.user.client.ui.HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);
+    //}
+```
+
+*com.google.gwt.template.file.uibinder.xml — [gist on GitHub](https://gist.github.com/612402)*
+
+``` xml
+<!-- 
+  add this to IntelliJ Idea "File > Settings > File templates"
+  "Templates" tab
+  Name:      GWT UI binder
+  Extension: xml
+
+-->
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+  <${ROOT_TAG_NAME}>
+    
+  </${ROOT_TAG_NAME}>
+</ui:UiBinder>
+```

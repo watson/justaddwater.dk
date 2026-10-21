@@ -12,33 +12,33 @@ I recently deleted a branch from our (svn) code repository. Did you know that it
 
 Svn checkout, svn info, etc. all fail when you try to access the deleted branch immediately:
 
-> \
-> \$ HOST=https://repository.com/repos_path\
-> \$ svn log --limit=3 \$HOST/portal/branches/VA1-12\
-> svn: '/svn/repos_path/!svn/bc/8881/portal/branches/VA1-12' path not found\
-> 
+```
+$ HOST=https://repository.com/repos_path
+$ svn log --limit=3 $HOST/portal/branches/VA1-12
+svn: '/svn/repos_path/!svn/bc/8881/portal/branches/VA1-12' path not found
+```
 
 But the interesting thing is that we need to add a so-called peg revision, denoted by the @ after the URL:
 
-> \
-> \$ svn log --limit=3 \$HOST/portal/branches/VA1-12@8800\
-> \
-> ------------------------------------------------------------------------\
-> r8774 \| jronn \| 2009-11-23 11:30:40 +0100 (Mon, 23 Nov 2009) \| 3 lines\
-> \
-> Max height in search results (indberetninger): 34px is 2 lines for a total of max 4 lines.\
-> \
-> Also converted spaces to tabs and removed trailing whitespace for consistency\
-> ------------------------------------------------------------------------\
-> r8769 \| jronn \| 2009-11-17 17:01:25 +0100 (Tue, 17 Nov 2009) \| 1 line\
-> \
-> Horizontal train first-shot with new image files\
-> ------------------------------------------------------------------------\
-> r8768 \| jronn \| 2009-11-17 17:01:21 +0100 (Tue, 17 Nov 2009) \| 1 line\
-> \
-> Removed image files having not been used for a long time\
-> ------------------------------------------------------------------------\
-> 
+```
+$ svn log --limit=3 $HOST/portal/branches/VA1-12@8800
+
+------------------------------------------------------------------------
+r8774 | jronn | 2009-11-23 11:30:40 +0100 (Mon, 23 Nov 2009) | 3 lines
+
+Max height in search results (indberetninger): 34px is 2 lines for a total of max 4 lines.
+
+Also converted spaces to tabs and removed trailing whitespace for consistency
+------------------------------------------------------------------------
+r8769 | jronn | 2009-11-17 17:01:25 +0100 (Tue, 17 Nov 2009) | 1 line
+
+Horizontal train first-shot with new image files
+------------------------------------------------------------------------
+r8768 | jronn | 2009-11-17 17:01:21 +0100 (Tue, 17 Nov 2009) | 1 line
+
+Removed image files having not been used for a long time
+------------------------------------------------------------------------
+```
 
 And to recover the deleted branch (for instance by checking out a copy):
 

@@ -1,0 +1,10 @@
+{
+ "id": "199558",
+ "files": [
+  {
+   "filename": "parsepage.rb",
+   "language": "Ruby",
+   "content": "#!/usr/bin/env ruby\n# Script that wraps grabbing and selecting stuff from HTML page via CSS selectors\n# Created 2009-10-01 by Jesper Rønn-Jensen, www.justaddwater.dk\n#\n# For usage, run parsepage.rb without arguments.\n#\n# Feel free to modify, fork and improve as long as you commit your changes back to me :)\ndef usage\n  <<-EOF #.gsub('    ', '')\n    === USAGE ===\n    parsepage.rb [uri] [css_selector]\n\n    === example ===\n    parsepage.rb \"http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/\" \"h3\"\n\n\n    U=http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/\n    parsepage.rb $U \"h1,h2,h3\"\n\n\n    === OPTIONS ===\n    --text-only      lists only text from matching elements\n    --list-html      lists all matches as HTML <li> elements\n    --count          Count number of matches\n  EOF\nend\n\n\nprint usage if ARGV.empty?\n\n\nputs ARGV.inspect\nrequire \"rubygems\"\nrequire \"nokogiri\"\nrequire \"open-uri\"\n\ndoc = Nokogiri::HTML(open(ARGV[0]))\nmatches =  doc.css(ARGV[1])\n\nresult = []\nresult << \"no matches found\" if matches.empty?\n\n\nif (ARGV.include?('--text-only'))\n  result << matches.map{|element| \"#{element.text}\"}\nelsif  (ARGV.include?('--html-list'))\n  result << matches.map{|element| \"<li>#{element.text}<li>\"}\nelse\n  result << matches.to_s\nend\n\nresult << ''\nresult << \"TOTAL (#{matches.size} match#{'es' if matches.size != 1} found for '#{ARGV[1]}')\" if (ARGV.include?('--count'))\nputs result.join(\"\\n\")\n\n\n# TODO stuff that would be great to support\n#\n# * support for local files\n# * refactor so this could be used to return a Nokogiri object with selection via irb\n#\n"
+  }
+ ]
+}

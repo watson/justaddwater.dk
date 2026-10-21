@@ -12,7 +12,27 @@ There are alternatives to [Resolve Symlinks When Copying Files With Rsync .](../
 
 How about firing up a (tiny) webserver that starts up quickly. Yehuda Katz suggested this some years ago:
 
-[View gist 246571 on GitHub](https://gist.github.com/246571)
+*server.rb — [gist on GitHub](https://gist.github.com/246571)*
+
+``` ruby
+#!/usr/bin/env ruby
+# Modified from http://yehudakatz.com/2007/08/06/webrick-anywhere/
+require 'webrick'
+include WEBrick
+
+s = HTTPServer.new(
+  :Port            => ARGV[0] || 2000,
+  :DocumentRoot    => Dir::pwd
+)
+
+## mount subdirectories
+s.mount("",
+        HTTPServlet::FileHandler, ".",
+        true)  #<= allow to show directory index.
+
+trap("INT"){ s.shutdown }
+s.start
+```
 
 Just drop this file in any directory, run the script, and it serves the files. I use this frequently for instance when I need to browser test static files on different virtual machines. (I modified the script shebang to work on my Mac).
 

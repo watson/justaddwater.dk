@@ -32,4 +32,6 @@ Adjusted command to vacuum iPhoto database files:
 
  
 
-> cd ~/Pictures/iPhoto\\ Library/ &&  for dbase in \`find . -name '\*.db'\`; do sqlite3 \$dbase "vacuum;"; done
+```
+cd ~/Pictures/iPhoto\ Library/ &&  for dbase in `find . -name '*.db'`; do sqlite3 $dbase "vacuum;"; done
+```

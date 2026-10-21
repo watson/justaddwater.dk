@@ -21,21 +21,24 @@ With this, you can easily modify time stamps if, for instance, your svn server c
 
 Make sure your svn repository accepts property changes. (commit dates and messages are just properties which are basically unversioned).
 
-For your repository, you need to make sure the hook file \`pre-revprop-change\` exists, is executable and has exit code 0. An easy way is to write a file which always exists with code 0:
+For your repository, you need to make sure the hook file `pre-revprop-change` exists, is executable and has exit code 0. An easy way is to write a file which always exists with code 0:
 
-\# write this file to \`repository_directory/hooks/pre-revprop-change\`
+\# write this file to `repository_directory/hooks/pre-revprop-change`
 
-> \#!/usr/bin/env sh
->
-> exit 0
+```
+#!/usr/bin/env sh
+exit 0
+```
 
 ##  Step 2: change date on the revision you want:
 
 In this example I will set the date for revision 1 to May 1st, 1981.
 
-> svn propset --revprop -r 1 svn:date "1981-05-01T10:00:00.000000Z"
+```
+svn propset --revprop -r 1 svn:date "1981-05-01T10:00:00.000000Z"
+```
 
-\`svn propset\` command will set certain properties. You can set many properties, and in this example we manipulate \`svn:date\`. If we want to change the log message, we can use \`svn:log\`.
+`svn propset` command will set certain properties. You can set many properties, and in this example we manipulate `svn:date`. If we want to change the log message, we can use `svn:log`.
 
 I deliberately chose a date from before SVN was made. Subversion is from 2001, so this commit is now made 20 years before SVN was out.
 
@@ -47,15 +50,110 @@ I created a combined script, which has has the steps mentioned above, and also i
 
  
 
-The result
+*svn_create.sh — [gist on GitHub](https://gist.github.com/jesperronn/174cea58433d2f06968f)*
+
+``` bash
+#!/usr/bin/env bash
+# set -x
+# script here will create new subversion repository (file based).
+# then it will make 10 commits
+# Then we will manipulate the commit dates of the ten commits
+
+START_FOLDER=$(pwd)
+REPO=repo02
+WD=working2
+HOOKFILE=$REPO/hooks/pre-revprop-change
+# svn repository
+svnadmin create $REPO
+
+echo '#!/usr/bin/env bash' > $HOOKFILE
+echo 'exit 0' >> $HOOKFILE
+chmod +x $HOOKFILE
+
+
+#checkout a working copy
+
+cd "$START_FOLDER"
+
+svn checkout "file://$START_FOLDER/$REPO" "$WD"
+cd "$START_FOLDER"
+cd "$WD"
+
+touch README.txt
+svn add README.txt
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+   echo "line $i" >> README.txt
+   svn ci -m "commit number $i (originally created $(date +"%Y-%m-%d %T"))"
+done
+
+svn update
+svn log
+```
+
+*svn_modify.sh — [gist on GitHub](https://gist.github.com/jesperronn/174cea58433d2f06968f)*
+
+``` bash
+#!/usr/bin/env bash
+# 
+# We have 10 commits in a repository. Lets set commit dates to May 1st, 1981-1990
+#
+# set -x
+
+START_FOLDER=$(pwd)
+WD=working2
+
+
+cd "$START_FOLDER"
+cd "$WD"
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+  YEAR=$(echo "1980 + $i" | bc )
+  svn propset --revprop -r $i  svn:date "$YEAR-05-01T10:00:00.000000Z"
+done
+
+svn update
+```
+
+### The result
 
 The result is a fine modified commit history which could look like this
 
-> \$ svn log\
-> \
-> \
->
-> r10 \| jesper \| 1990-05-01 12:00:00 +0200 (Tue, 01 May 1990) \| 1 line commit number 10 (originally created 2015-04-15 22:21:35) ------------------------------------------------------------------------ r9 \| jesper \| 1989-05-01 12:00:00 +0200 (Mon, 01 May 1989) \| 1 line commit number 9 (originally created 2015-04-15 22:21:34) ------------------------------------------------------------------------ r8 \| jesper \| 1988-05-01 12:00:00 +0200 (Sun, 01 May 1988) \| 1 line commit number 8 (originally created 2015-04-15 22:21:33) ------------------------------------------------------------------------ r7 \| jesper \| 1987-05-01 12:00:00 +0200 (Fri, 01 May 1987) \| 1 line commit number 7 (originally created 2015-04-15 22:21:32) ------------------------------------------------------------------------ r6 \| jesper \| 1986-05-01 12:00:00 +0200 (Thu, 01 May 1986) \| 1 line commit number 6 (originally created 2015-04-15 22:21:31) ------------------------------------------------------------------------ r5 \| jesper \| 1985-05-01 12:00:00 +0200 (Wed, 01 May 1985) \| 1 line commit number 5 (originally created 2015-04-15 22:21:30) ------------------------------------------------------------------------ r4 \| jesper \| 1984-05-01 12:00:00 +0200 (Tue, 01 May 1984) \| 1 line commit number 4 (originally created 2015-04-15 22:21:29) ------------------------------------------------------------------------ r3 \| jesper \| 1983-05-01 12:00:00 +0200 (Sun, 01 May 1983) \| 1 line commit number 3 (originally created 2015-04-15 22:21:28) ------------------------------------------------------------------------ r2 \| jesper \| 1982-05-01 12:00:00 +0200 (Sat, 01 May 1982) \| 1 line commit number 2 (originally created 2015-04-15 22:21:27) ------------------------------------------------------------------------ r1 \| jesper \| 1981-05-01 12:00:00 +0200 (Fri, 01 May 1981) \| 1 line commit number 1 (originally created 2015-04-15 22:21:26) ------------------------------------------------------------------------
+```
+$ svn log
+r10 | jesper | 1990-05-01 12:00:00 +0200 (Tue, 01 May 1990) | 1 line
+commit number 10 (originally created 2015-04-15 22:21:35)
+------------------------------------------------------------------------
+r9 | jesper | 1989-05-01 12:00:00 +0200 (Mon, 01 May 1989) | 1 line
+commit number 9 (originally created 2015-04-15 22:21:34)
+------------------------------------------------------------------------
+r8 | jesper | 1988-05-01 12:00:00 +0200 (Sun, 01 May 1988) | 1 line
+commit number 8 (originally created 2015-04-15 22:21:33)
+------------------------------------------------------------------------
+r7 | jesper | 1987-05-01 12:00:00 +0200 (Fri, 01 May 1987) | 1 line
+commit number 7 (originally created 2015-04-15 22:21:32)
+------------------------------------------------------------------------
+r6 | jesper | 1986-05-01 12:00:00 +0200 (Thu, 01 May 1986) | 1 line
+commit number 6 (originally created 2015-04-15 22:21:31)
+------------------------------------------------------------------------
+r5 | jesper | 1985-05-01 12:00:00 +0200 (Wed, 01 May 1985) | 1 line
+commit number 5 (originally created 2015-04-15 22:21:30)
+------------------------------------------------------------------------
+r4 | jesper | 1984-05-01 12:00:00 +0200 (Tue, 01 May 1984) | 1 line
+commit number 4 (originally created 2015-04-15 22:21:29)
+------------------------------------------------------------------------
+r3 | jesper | 1983-05-01 12:00:00 +0200 (Sun, 01 May 1983) | 1 line
+commit number 3 (originally created 2015-04-15 22:21:28)
+------------------------------------------------------------------------
+r2 | jesper | 1982-05-01 12:00:00 +0200 (Sat, 01 May 1982) | 1 line
+commit number 2 (originally created 2015-04-15 22:21:27)
+------------------------------------------------------------------------
+r1 | jesper | 1981-05-01 12:00:00 +0200 (Fri, 01 May 1981) | 1 line
+commit number 1 (originally created 2015-04-15 22:21:26)
+------------------------------------------------------------------------
+```
 
 ## More info
 

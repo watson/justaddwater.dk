@@ -16,4 +16,32 @@ All commit-hook example files that go with Subversion are written in bash (as un
 
 Here is a the pre-commit hook rewritten as a windows .bat file.
 
-[View gist 432704 on GitHub](https://gist.github.com/432704)
+*pre-commit.bat — [gist on GitHub](https://gist.github.com/432704)*
+
+``` bat
+REM Subversion pre-commit hook for Windows machine
+REM put this in your SVN repository folder /hooks/pre-commit.bat
+REM we use it with svn version 
+REM http://stackoverflow.com/questions/869248/windows-pre-commit-hook-for-comment-length-subversion
+
+@echo off  
+:: Stops commits that have empty log messages.        
+@echo off  
+
+setlocal  
+
+rem Subversion sends through the path to the repository and transaction id  
+set REPOS=%1  
+set TXN=%2           
+
+rem line below ensures at least one character ".", 5 characters require change to "....."
+svnlook log %REPOS% -t %TXN% | findstr . > nul  
+if %errorlevel% gtr 0 (goto err) else exit 0  
+
+:err  
+echo. 1>&2  
+echo Your commit has been blocked because you didn't enter a comment. 1>&2  
+echo Write a log message describing the changes made and try again. 1>&2
+echo Thanks 1>&2
+exit 1
+```

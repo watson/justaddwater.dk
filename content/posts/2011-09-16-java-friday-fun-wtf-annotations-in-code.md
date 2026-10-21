@@ -16,6 +16,26 @@ IN this spirit, i created a quick @WTF annotation for Java.
 
 Besides being completely useless (its removed at compile time), its only purpose is to give developers a new way to express themselves in code.
 
+*WTF.java — [gist on GitHub](https://gist.github.com/1222965)*
+
+``` java
+@Retention(RetentionPolicy.SOURCE)
+@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.LOCAL_VARIABLE})
+public @interface WTF {
+
+    /**
+     * Optionally specify <code>explain</code>, and write why you dont understand this annotated element
+     */
+    String explain() default "";
+
+    /**
+     * Optionally add <code>explanation</code>, and to explain why and how the element should be used
+     */
+    @Deprecated
+    String  explanation() default "";
+}
+```
+
 The cartoon states "The only valid measurement of code quality: WTFs/minute". With the \<code\>@WTF\</code\> annotations, I would like to take it a little further. By annotating the code, you can actually encourage colleagues to help you fix it.
 
 The best fix for WTF-code is of course to refactor, so that it becomes readable.

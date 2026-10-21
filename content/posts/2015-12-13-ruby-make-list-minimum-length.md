@@ -62,3 +62,49 @@ I like the latter, since too many conditional statements tend to clutter the log
  
 
 Complete example gist avalilable on Github:
+
+*fill_up_to.rb — [gist on GitHub](https://gist.github.com/jesperronn/8c5fe0d78f77adc7320f)*
+
+``` ruby
+MIN_COUNT = 2
+
+# Naïve implementation, just return whatever number I need
+def sum_up_a(existing)
+  return 2 if existing == 0
+  return 1 if existing == 1
+  return 0
+end
+
+sum_up_a(0)   # => 2
+sum_up_a(1)   # => 1
+sum_up_a(2)   # => 0
+sum_up_a(3)   # => 0
+sum_up_a(10)  # => 0
+
+
+# slightly improved with less conditionals
+def sum_up_b(existing)
+  return 0 if existing >= MIN_COUNT
+  MIN_COUNT - existing
+end
+
+sum_up_b(0)   # => 2
+sum_up_b(1)   # => 1
+sum_up_b(2)   # => 0
+sum_up_b(3)   # => 0
+sum_up_b(10)  # => 0
+
+
+# my favorite: return the biggest number either 0 or the difference
+# Works well because difference is only positive for numbers where I 
+# need some extra rows
+def sum_up_c(existing)
+  [MIN_COUNT - existing, 0].max 
+end
+
+sum_up_c(0)   # => 2
+sum_up_c(1)   # => 1
+sum_up_c(2)   # => 0
+sum_up_c(3)   # => 0
+sum_up_c(10)  # => 0
+```

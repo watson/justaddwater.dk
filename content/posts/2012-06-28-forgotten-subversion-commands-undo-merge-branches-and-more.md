@@ -26,7 +26,7 @@ It also makes sense to view latest commit comment, and possibly include the revi
 
 svn log --limit 1
 
-After this, you should to an \`svn status\` and (if you are satisfied with the result), then commit:
+After this, you should to an `svn status` and (if you are satisfied with the result), then commit:
 
 svn commit -m "reverted accidentally committed previous version"
 
@@ -38,17 +38,17 @@ svn st -u
 
 The -u flag gives  an overview of **what has been updated on the server.** This is what IDEs like Eclipse and IntelliJ do behind the scenes.
 
-I have seen much confusion caused when \`svn log\` will not show what changed on the server. In case you need more info, then investigate the changes with
+I have seen much confusion caused when `svn log` will not show what changed on the server. In case you need more info, then investigate the changes with
 
 svn log -r BASE:HEAD
 
-As opposed to \`svn log\`, this command actually shows log messages on the server.
+As opposed to `svn log`, this command actually shows log messages on the server.
 
 and if you need the list of files changed:
 
 svn diff -r xxx:HEAD --summarize
 
-Where xxx represents the version number of BASE (and you can get it with \`svn info\`)
+Where xxx represents the version number of BASE (and you can get it with `svn info`)
 
 More info: <http://stackoverflow.com/questions/1444005/displaying-a-list-of-files-that-have-changed-since-last-changeset-in-svn>
 
@@ -56,8 +56,10 @@ More info: <http://stackoverflow.com/questions/1444005/displaying-a-list-of-fil
 
 After branching, it's easy to keep up-to-date with changes of the trunk. Just go to the branch, and merge all from trunk, like this:
 
-> cd branch\
-> svn merge ^/trunk
+```
+cd branch
+svn merge ^/trunk
+```
 
  
 
@@ -73,11 +75,12 @@ After this merge, you can just commit the changes with a standard comment that c
 
 In this case I want to merge all changes from trunk to a specific branch. (I am doing this daily to keep my branch updated). First step is to find the branch split point:
 
-> \$ svn log --stop-on-copy \| tail -n 4\
-> r1769 \| jesper \| 2012-05-09 11:07:45 +0200 (Wed, 09 May 2012) \| 1 line
->
-> Adding the new branch in subversion\
-> ------------------------------------------------------------------------
+```
+$ svn log --stop-on-copy | tail -n 4
+r1769 | jesper | 2012-05-09 11:07:45 +0200 (Wed, 09 May 2012) | 1 line
+Adding the new branch in subversion
+------------------------------------------------------------------------
+```
 
 So, the revision number is "1769", which marks the first split point of the branch.
 
@@ -85,7 +88,9 @@ We now have a way to target all trunk changes with a higher revision number than
 
 The merge command is then:
 
->  svn merge -r 1769:HEAD ^/trunk .
+```
+ svn merge -r 1769:HEAD ^/trunk .
+```
 
  
 
