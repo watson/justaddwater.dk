@@ -10,13 +10,15 @@
 //   --pages FILE   use another page list
 //   --only 05,07   only these numbers (or slug substrings)
 //   --width N      viewport width, default 800 (deviceScaleFactor 1, full page)
-//   --jobs N       parallel pages per site (default dev 4, orig 2)
+//   --jobs N       parallel pages per site (default 4)
+//   --wait MS      max wait per page for load, network idle, fonts, images and CSS
+//                  background images (default 10000); a slow asset never hangs a run
 //
 // Pages: bin/screenshot-pages.txt (one path per line, "# comment", optional
 // "dev=/x/ orig=/y/" overrides). File number NN is the position among the
 // non-comment lines, so append new pages at the end. Same list for both hosts
 // => identical names (NN-slug.png). Fast: domcontentloaded + images decoded
-// (3s cap), 15s navigation timeout, one retry, analytics/ads blocked,
+// (--wait cap, default 10 s), 20 s navigation timeout, one retry, analytics/ads blocked,
 // animations/caret disabled. Exit code 1 if any page failed.
 // Setup once: yarn install && npx playwright install chromium
 // Examples:
@@ -39,8 +41,9 @@ const args = process.argv.slice(2);
 const opt = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : null; };
 const all = args.includes('--all');
 const modes = ['dev', 'orig'].filter(m => all || args.includes('--' + m));
-if (!modes.length) { console.error('usage: bin/screenshot --all|--dev|--orig [--host URL] [--pages FILE] [--only a,b] [--width N] [--jobs N]  (see --help)'); process.exit(2); }
+if (!modes.length) { console.error('usage: bin/screenshot --all|--dev|--orig [--host URL] [--pages FILE] [--only a,b] [--width N] [--jobs N] [--wait MS]  (see --help)'); process.exit(2); }
 const width = parseInt(opt('--width') || '800', 10);
+const waitMs = parseInt(opt('--wait') || '10000', 10);
 const pagesFile = opt('--pages') || path.join(__dirname, 'screenshot-pages.txt');
 const only = (opt('--only') || '').split(',').filter(Boolean);
 const BLOCK = /google-analytics|googletagmanager|doubleclick|googlesyndication|feedburner|measuremap|statcounter|quantserve|scorecardresearch|adsense|pagead|technorati\.com\/.*(badge|counter)/i;
@@ -59,23 +62,43 @@ function loadPages(mode) {
     }).filter(p => !only.length || only.some(o => o === p.n || p.slug.includes(o)));
 }
 
+// Waits until the page is really painted: load event, network idle, fonts, every <img> decoded and every
+// CSS background image loaded, each capped by --wait (default 10 s) so a dead asset never hangs a run.
+async function settle(page, waitMs) {
+  await page.waitForLoadState('load', { timeout: waitMs }).catch(() => {});
+  await page.waitForLoadState('networkidle', { timeout: waitMs }).catch(() => {});
+  await page.evaluate((cap) => {
+    const bgUrls = new Set();
+    for (const el of document.querySelectorAll('*')) {
+      for (const pseudo of [null, '::before', '::after']) {
+        const bg = getComputedStyle(el, pseudo).backgroundImage;
+        for (const m of bg.matchAll(/url\(["']?([^"')]+)["']?\)/g)) bgUrls.add(m[1]);
+      }
+    }
+    const load = (u) => new Promise(r => { const i = new Image(); i.onload = i.onerror = () => r(); i.src = u; });
+    const imgs = [...document.images].map(i => i.complete ? (i.decode ? i.decode().catch(() => {}) : 0)
+      : new Promise(r => { i.onload = i.onerror = r; }).then(() => i.decode ? i.decode().catch(() => {}) : 0));
+    return Promise.race([
+      Promise.all([document.fonts ? document.fonts.ready : 0, ...imgs, ...[...bgUrls].map(load)]),
+      new Promise(r => setTimeout(r, cap))]);
+  }, waitMs);
+  await page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))));
+}
+
 async function shoot(ctx, url, out) {
   const page = await ctx.newPage();
   try {
-    const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+    const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
     await page.addStyleTag({ content: '*,*::before,*::after{animation:none!important;transition:none!important;caret-color:transparent!important}' }).catch(() => {});
-    await page.evaluate(() => Promise.race([
-      Promise.all([...document.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; })))
-        .then(() => Promise.all([...document.images].map(i => i.decode ? i.decode().catch(() => {}) : 0))),
-      new Promise(r => setTimeout(r, 3000))]));
-    await page.screenshot({ path: out, fullPage: true, animations: 'disabled', caret: 'hide', timeout: 15000 });
+    await settle(page, waitMs);
+    await page.screenshot({ path: out, fullPage: true, animations: 'disabled', caret: 'hide', timeout: 20000 });
     return resp ? resp.status() : 0;
   } finally { await page.close().catch(() => {}); }
 }
 
 async function runSite(mode) {
   const host = ((modes.length === 1 && opt('--host')) || (mode === 'dev' ? 'http://localhost:1313' : 'http://justaddwater.dk')).replace(/\/$/, '');
-  const jobs = parseInt(opt('--jobs') || (mode === 'dev' ? '4' : '2'), 10);
+  const jobs = parseInt(opt('--jobs') || (mode === 'dev' ? '4' : '4'), 10);
   const outDir = path.join(root, 'screenshots', mode);
   fs.mkdirSync(outDir, { recursive: true });
   const queue = loadPages(mode), ok = [], failed = [];

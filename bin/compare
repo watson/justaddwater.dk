@@ -53,6 +53,12 @@ EOT
   exit 1
 fi
 
+cat <<EOT
+Comparing:
+  BASELINE = screenshots/orig  (original WordPress site, http://justaddwater.dk) as committed at $ref ($(git rev-parse --short "$ref"))
+  CURRENT  = screenshots/dev   (new Hugo site, http://localhost:1313) from the working tree
+  Retake the current side with: bin/compare --shoot   (restart Hugo first with bin/dev restart if you changed hugo.toml)
+EOT
 out=tmp/screenshot-review
 rm -rf "$out"
 "${PIXELPILOT:-$HOME/src/dotfiles/bin/pixelpilot}" \
