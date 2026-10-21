@@ -16,7 +16,11 @@ The Onion has a humorous feature list from Microsoft Vista in the recent issue:
 >
 > Microsoft released its new operating system, Vista, on Jan. 30. Here are some of its features:
 >
+> PPDIVOPEN0PP
+>
 > ![Microsoft Vista Released](http://www.theonion.com/content/files/images/Infographic-Microsoft.jpg "Microsoft Vista Released")
+>
+> PPDIVCLOSE0PP
 >
 > - Microsoft Word's helpful paper-clip icon now blinks at rate of normal humans
 > - Enhanced graphics on "System Is Not Responding" pop-up window

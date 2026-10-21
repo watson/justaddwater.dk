@@ -76,7 +76,11 @@ Finally, revisiting the diagram by Bryce Glass ([soldierant](http://soldierant.n
 
 > [](http://www.flickr.com/photos/bryce/106972762/ "Big picture on Flickr.com")
 >
+> PPDIVOPEN0PP
+>
 > [![User experience diagram](http://static.flickr.com/37/106972762_7fbced62e7.jpg)](http://www.flickr.com/photos/bryce/106972762/ "Big picture on Flickr.com")
+>
+> PPDIVCLOSE0PP
 
 > Click image for big version on Flickr. My previous post: "[User Experience Diagram](/2006/03/06/user-experience-diagram/ "Permanent Link: User Experience Diagram")"
 

@@ -176,15 +176,46 @@ def wpautop(t):
         pos = end.end()
     return "\n\n".join(o for o in out if o)
 
+def protect_styled_divs(html):
+    """Pandoc drops <div> wrappers, losing float/centering. Swap each styled <div>...</div> (balanced, so nested
+    divs work) for marker paragraphs; restore_styled_divs() puts the real tags back around the converted Markdown."""
+    tags, out, pos = [], [], 0
+    open_re = re.compile(r'<div\b[^>]*\sstyle="[^"]*"[^>]*>', re.I)
+    tok = re.compile(r'<div\b|</div\s*>', re.I)
+    while True:
+        m = open_re.search(html, pos)
+        if not m:
+            out.append(html[pos:]); break
+        depth, end = 1, None
+        for t in tok.finditer(html, m.end()):
+            depth += 1 if t.group(0).lower().startswith("<div") else -1
+            if depth == 0:
+                end = t; break
+        if end is None:                      # unbalanced: leave as is
+            out.append(html[pos:m.end()]); pos = m.end(); continue
+        n = len(tags); tags.append(m.group(0))
+        out.append(html[pos:m.start()])
+        out.append("<p>PPDIVOPEN%dPP</p>%s<p>PPDIVCLOSE%dPP</p>" % (n, html[m.end():end.start()], n))
+        pos = end.end()
+    return "".join(out), tags
+
+def restore_styled_divs(md, tags):
+    for n, tag in enumerate(tags):
+        md = re.sub(r"(?m)^\s*PPDIVOPEN%dPP\s*$" % n, "\n" + tag + "\n", md)
+        md = re.sub(r"(?m)^\s*PPDIVCLOSE%dPP\s*$" % n, "\n</div>\n", md)
+    return md
+
 def to_md(html):
     html = wpautop(shortcodes(html))
     html = re.sub(r'(href|src)="https?://(?:www\.)?justaddwater\.dk(/[^"]*)"', r'\1="\2"', html)
     # explicit <br> hugging block boundaries only produces stray `\\` after conversion
     html = re.sub(r"(?:<br\s*/?>(?:\s|&nbsp;|\xa0)*)+(?=</(?:li|p|td|th|ul|ol|div|blockquote)>|<(?:ul|ol|blockquote|table|p|div)[\s>])", "", html, flags=re.I)
     html = re.sub(r"(<(?:li|ul|ol|td|th)(?:\s[^>]*)?>)\s*(?:<br\s*/?>\s*)+", r"\1", html, flags=re.I)
+    html, div_tags = protect_styled_divs(html)
     r = subprocess.run(["pandoc", "-f", "html", "-t", "gfm-raw_html", "--wrap=none"],
                        input=html, capture_output=True, text=True)
     md = r.stdout if r.returncode == 0 else html
+    md = restore_styled_divs(md, div_tags)
     md = re.sub(r"(?m)^\\[ \t]*$\n?", "", md)      # lone hard breaks beside block elements
     md = re.sub(r"\\\n(?=\n)", "\n", md)          # hard break at paragraph end
     # source used Markdown-style `code` spans in plain text; pandoc escapes the backticks

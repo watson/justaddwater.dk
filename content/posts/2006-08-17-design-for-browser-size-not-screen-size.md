@@ -54,7 +54,11 @@ My problem is that often people are not using a maximized browser, but a browser
 
 18% of all web users who use big screens (above 1200x1024), including me (and most of my web developer colleagues). I also fit perfect on the other finding: I never surf with my browser maximized. Here is what my laptop screen looks like:
 
+<div style="text-align: center">
+
 ![Screen size 1400x1050](/wp-content/uploads/2006/08/outerwindow-14001.png)
+
+</div>
 
 1400x1050 screen resolution with a normal Internet Explorer window gives 941x1017 usable content area
 

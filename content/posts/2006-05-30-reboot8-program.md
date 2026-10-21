@@ -40,7 +40,11 @@ I'll be speaking in the "demos" section somewhere between 16.45 and 17.30.
 > | 19.45 | Dinner |  |  |  |  |  |  |  |  |
 > | 20.00 | reboot8 Evening Lounge Ben Hammersley: How to be a Renaissance Man Ubermorgen/eToy Nis & Niis Punk as diy counterculture |  |  | x |  |  | DIY Cinema: Bring you scifi classics, digital history videos and Steve Jobs keynotes along to show |  |  |
 >
+> PPDIVOPEN0PP
+>
 > \[[edit](http://reboot.dk/wiki/index.php?title=Program&action=edit&section=2 "Program")\]
+>
+> PPDIVCLOSE0PP
 >
 > ### FRIDAY 2nd OF JUNE
 >

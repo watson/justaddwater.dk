@@ -24,7 +24,11 @@ The report is published 3 months before Jakob Nielsen focused on [weblog usabili
 
 For instance, we do not have fotos of Thomas and I on this weblog, but to please the grumpy crowd here's one of me and Jakob Nielsen:
 
+<div style="text-align: center">
+
 ![IMG_1551](http://static.flickr.com/30/65199575_ad1a0ab136_m.jpg)
+
+</div>
 
 Jesper Rønn-Jensen and Jakob Nielsen, Usability Week, Copenhagen, 2004
 

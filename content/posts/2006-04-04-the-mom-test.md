@@ -16,7 +16,11 @@ Wayfaring, a new maps based webtool is working to make the interface easier to u
 
 Interesting stuff. Wish we could use moms a bit more in the development projects.
 
+<div style="text-align: center">
+
 ![Mena Trott's Mom](/wp-content/uploads/2006/04/cimg1536.JPG-thumb.jpg)
+
+</div>
 
 [Meena Trotts Mom](http://www.sixapart.com/about/corner/2005/09/mena_trotts_mom.html) has contributed to usertesting at the blogging company Six Apart[\
 ](http://www.sixapart.com/about/corner/2005/09/mena_trotts_mom.html)
