@@ -8,7 +8,7 @@ Usage: bin/export-to-hugo [--limit N]
 import json, os, re, subprocess, sys
 import xml.etree.ElementTree as ET
 from html import unescape
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 SRC = "export/justaddwater.sanitized.xml"
@@ -17,9 +17,10 @@ BLOCK = r"(?:table|thead|tbody|tfoot|tr|td|th|div|dl|dt|dd|ul|ol|li|pre|form|blo
 LIMIT = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else None
 
 def shortcodes(t):
-    t = re.sub(r"\[tags[^\]]*\].*?\[/tags\]", "", t, flags=re.S)
-    t = re.sub(r"\[code(?:\s+lang(?:uage)?=\"?\w+\"?)?\](.*?)\[/code\]",
-               lambda m: "<pre><code>%s</code></pre>" % m.group(1), t, flags=re.S)
+    t = re.sub(r"\[tags[^\]]*\].*?\[/?tags\]", "", t, flags=re.S)
+    t = re.sub(r"\[code(?:\s+lang(?:uage)?=\"?(\w+)\"?)?\](.*?)\[/code\]",
+               lambda m: '<pre><code%s>%s</code></pre>' % (' class="language-%s"' % m.group(1) if m.group(1) else "", m.group(2)),
+               t, flags=re.S)
     t = re.sub(r"\[/?caption[^\]]*\]", "", t)
     return t
 
@@ -60,9 +61,9 @@ for it in chan.findall("item"):
     ptype = it.findtext(W + "post_type")
     if ptype not in ("post", "page"): continue
     if LIMIT and n >= LIMIT: break
-    slug = it.findtext(W + "post_name") or "post-%s" % it.findtext(W + "post_id")
+    slug = unquote(it.findtext(W + "post_name") or "") or "post-%s" % it.findtext(W + "post_id")
     date = (it.findtext(W + "post_date") or "")
-    path = urlparse(it.findtext("link") or "").path or "/%s/" % slug
+    path = unquote(urlparse(it.findtext("link") or "").path) or "/%s/" % slug
     cats = [c.text for c in it.findall("category") if c.get("domain") == "category"]
     tags = [c.text for c in it.findall("category") if c.get("domain") == "post_tag"]
     meta = {"title": " ".join(unescape(it.findtext("title") or slug).split()), "date": date.replace(" ", "T"),

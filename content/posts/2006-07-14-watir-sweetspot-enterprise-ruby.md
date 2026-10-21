@@ -20,11 +20,13 @@ It's nothing new that automated browser testing can be done, but when I ask abou
 
 Watir gets started with just four lines of code:
 
-    require 'watir'
-    require 'watir/WindowHelper'
-    include Watir
+``` ruby
+require 'watir'
+require 'watir/WindowHelper'
+include Watir
 
-    ie = IE.new
-    ie.goto(test_site) 
+ie = IE.new
+ie.goto(test_site) 
+```
 
 In my opinion, Watir + Ruby is a winnner. So easy to get started. So great payoff for a small amount of time invested. Jaw-dropping reactions on developers and testers that don't even know Ruby. It's a definite winner.

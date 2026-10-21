@@ -1,8 +1,8 @@
 ---
 title: "Spoken Git Commit Log — Another Annoyance at the Office"
 date: "2009-09-30T10:23:26"
-slug: "spoken-git-commit-log-%e2%80%94-another-annoyance-at-the-office"
-url: "/2009/09/30/spoken-git-commit-log-%e2%80%94-another-annoyance-at-the-office/"
+slug: "spoken-git-commit-log-—-another-annoyance-at-the-office"
+url: "/2009/09/30/spoken-git-commit-log-—-another-annoyance-at-the-office/"
 wp_id: 1161
 categories: ["Code", "git", "Humor", "Web Development"]
 tags: ["Code", "git", "Humor", "logging"]

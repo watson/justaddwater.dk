@@ -22,33 +22,45 @@ My problem this week: I wanted to share some work with a colleague. Unfortunatel
 
 Developer's workflow: Push changes to 'remote':
 
-    cd local #developer's local repository
-    git pull ../remote master #get the latest code from 'remote' repository
-    git push ../remote master #push the recent commits from here to the 'remote' folder
+``` bash
+
+cd local #developer's local repository
+git pull ../remote master #get the latest code from 'remote' repository
+git push ../remote master #push the recent commits from here to the 'remote' folder
+```
 
 ### Git remote makes it easier
 
 In stead of using a path in "git pull ../remote master", it's even easier to add the path just like you would do on GitHub or similar:
 
-    git remote add origin ../remote/ #one time for all
-    git pull origin master # pull from the 'remote' directory
-    git push origin master #push recent commits from here to the 'remote' folder
+``` bash
+
+git remote add origin ../remote/ #one time for all
+git pull origin master # pull from the 'remote' directory
+git push origin master #push recent commits from here to the 'remote' folder
+```
 
 ### Bonus tip: Using remote git to SSH server
 
 It's real easy to make a remote backup copy of your Git repository even if you have not set up a git server. Here is an example of how I did it on a server where I have SSH access to:
 
-    git remote add origin ssh://jesper@myserver.com/~/project.git/
+``` bash
+
+git remote add origin ssh://jesper@myserver.com/~/project.git/
+```
 
 Setup the repository on the remote server:
 
-    $ ssh jesper@myserver.com
-    Welcome to myserver.com!
-    $ mkdir project.git && cd project.git/
-    $ git --bare init
-    Initialized empty Git repository in /home/jesper/project.git
-    $ exit
-    Bye!
+``` bash
+
+$ ssh jesper@myserver.com
+Welcome to myserver.com!
+$ mkdir project.git && cd project.git/
+$ git --bare init
+Initialized empty Git repository in /home/jesper/project.git
+$ exit
+Bye!
+```
 
 ### Related posts:
 

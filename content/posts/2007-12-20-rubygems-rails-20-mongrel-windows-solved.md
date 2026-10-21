@@ -14,9 +14,11 @@ Rubygems 1.0 was released 10 hours ago and solves the Win32 problems mentioned i
 
 So for now, back to:
 
-    > gem update --system
-    > gem update rails
-    > gem update mongrel
+``` ruby
+> gem update --system
+> gem update rails
+> gem update mongrel
+```
 
 And everything works for me. Note that for now, there still is a problem with mongrel_service (will probably be fixed in next version). Luis Lavena describes a workaround in his updated article.
 

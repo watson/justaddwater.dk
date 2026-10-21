@@ -14,25 +14,38 @@ Is it possible to run JavaScript functions or execute code from within your Wati
 
 ### Call JavaScript Functions from Watir script
 
-    win = ie.document.parentWindow
-    win.ToggleProj('1')
+``` ruby
+
+
+win = ie.document.parentWindow
+win.ToggleProj('1')
+```
 
 ### Inject JavaScript to run from Watir script
 
 I used this to alter a JavaScript function on the existing page:
 
-    @ie.document.parentWindow.eval('
-      window.CheckReport=function(){return true}')
+``` ruby
+
+@ie.document.parentWindow.eval('
+  window.CheckReport=function(){return true}')
+```
 
 As you can see, you can reference the window object and use eval to execute your snippets. The easier way is to add this custom method for easy reference
 
-    # Add accessor for DOM window object
-    class Watir::IE; def window; document.parentWindow; end; end
+``` ruby
+
+# Add accessor for DOM window object
+class Watir::IE; def window; document.parentWindow; end; end
+```
 
 Then you can write the last example as:
 
-    @ie.window.eval('
-      window.CheckReport=function(){return true}')
+``` ruby
+
+@ie.window.eval('
+  window.CheckReport=function(){return true}')
+```
 
 Much more intuitive and straightforward. Thanks to my colleague [Tobias](http://tobiashm.jaiku.com/) for the trick.
 

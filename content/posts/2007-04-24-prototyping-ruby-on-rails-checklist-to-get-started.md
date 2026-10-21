@@ -45,24 +45,28 @@ This is for my Windows XP laptop:
 
 Assuming you have Ruby and RubyGems installed, install the other gems needed:
 
-    gem install rails --include-dependencies #run only if needed
-    gem install rake piston sqlite3-ruby mysql --include-dependencies
-    #Command line commands to test your install: gem, rails, svn
-    #
-    #Remember Mongrel as well
-    gem install mongrel --include-dependencies
-    #
-    #I also use these on a regular basis, but leave them out for now:
-    #gem install scrubyt rspec rcov rubyful_soup mechanize hpricot zentest mocha cheat --include-dependencies
+``` ruby
+gem install rails --include-dependencies #run only if needed
+gem install rake piston sqlite3-ruby mysql --include-dependencies
+#Command line commands to test your install: gem, rails, svn
+#
+#Remember Mongrel as well
+gem install mongrel --include-dependencies
+#
+#I also use these on a regular basis, but leave them out for now:
+#gem install scrubyt rspec rcov rubyful_soup mechanize hpricot zentest mocha cheat --include-dependencies
+```
 
 Get hold of [ActiveScaffold plugin](http://activescaffold.com/) and my [LocalizationSimplified plugin](/2006/08/24/ruby-on-rails-plugin-localize-your-rails-app/) ([project page](http://rubyforge.org/projects/l10n-simplified/)), and Rails trunk if you like. (maybe I should also add [Smart-Form](http://agilewebdevelopment.com/plugins/smart_form "Smart-Form 1.0 Rails plugin"), and the [Caboose sample app](http://www.caboo.se/articles/2007/4/3/caboose-sample-rails-application), but won't add it here before I try it out)
 
 With the help of [Piston](http://www.rubyinside.com/advent2006/12-piston.html "Managing Rails Plugins With Piston (Ruby Advent Calendar 2006)"), it's easy to administer plugins and version them:
 
-    cd vendor/plugins
-    piston import http://dev.rubyonrails.org/svn/rails/trunk vendor/rails
-    piston import http://activescaffold.googlecode.com/svn/tags/active_scaffold
-    piston import svn://rubyforge.org/var/svn/l10n-simplified
+``` ruby
+cd vendor/plugins
+piston import http://dev.rubyonrails.org/svn/rails/trunk vendor/rails
+piston import http://activescaffold.googlecode.com/svn/tags/active_scaffold
+piston import svn://rubyforge.org/var/svn/l10n-simplified
+```
 
 ## Client preparation
 

@@ -1,0 +1,7 @@
+{{ define "main" }}
+<h1>{{ if .IsHome }}Latest posts{{ else }}{{ .Title }}{{ end }}</h1>
+{{ $pages := cond .IsHome (where site.RegularPages "Type" "posts") .Pages }}
+{{ $p := .Paginate $pages.ByDate.Reverse }}
+<ul class="posts">{{ range $p.Pages }}<li><time>{{ .Date.Format "2006-01-02" }}</time> <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+{{ template "_internal/pagination.html" . }}
+{{ end }}

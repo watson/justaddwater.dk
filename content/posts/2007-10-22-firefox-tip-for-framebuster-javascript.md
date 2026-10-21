@@ -12,14 +12,18 @@ I have for long been struggling with an internal legacy application that wraps t
 
 Problem: An inline "reverse" framebuster script that makes sure that everything is nicely(?) wrapped in the frameset. As you see it's included inline in the HTML.
 
-      url = "application_url";
-      if (parent.frames[0]) {
-        if (parent.frames[0].name != 'FrameMain') {
-          document.location.replace(url);
-        }
-      }else{
-        document.location.replace(url);
-      }
+``` javascript
+
+
+  url = "application_url";
+  if (parent.frames[0]) {
+    if (parent.frames[0].name != 'FrameMain') {
+      document.location.replace(url);
+    }
+  }else{
+    document.location.replace(url);
+  }
+```
 
 One thing is I never understood the thing about putting everything in a frameset. In this case, I have not been able to change the code. But as I have to use the application every now and then, the big question is:
 

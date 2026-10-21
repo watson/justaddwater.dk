@@ -18,41 +18,48 @@ I remember Eric Meyer mentioned this solution back at a workshop in 2005 (before
 
 HTML for the box:
 
-      ..
-      
-        ..
-        ..
-      
-      
-      
-      
-      
+``` html
+
+
+  ..
+  
+    ..
+    ..
+  
+  
+  
+  
+  
+```
 
 
 The HTML is then styled with the following CSS:
 
-    div.bloginfo-summary {background:
-      url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;
-      float:left;margin-bottom:20px;padding:10px;width:690px}
-    /* Large radius image backgrounds */
-    .boxc {position:relative;}
-    .boxc b.cn { height: 10px; width: 10px; background:
-     url(http://static.technorati.com/static/css/img/corners/white.png) no-repeat;
-     position:absolute;
-     }
-    .boxc b.tl {top: -1px; left: -1px; background-position: top left;}
-    .boxc b.tr {top: -1px; right: -1px; background-position: top right;}
-    .boxc b.bl {bottom: -1px; left: -1px; background-position: bottom left;}
-    .boxc b.br {bottom: -1px; right: -1px; background-position: bottom right;}
+``` css
 
-    /* IE Filters */
-        * html .boxc b.bl {bottom:-2px}
-        * html .boxc b.br {bottom:-2px}
-        * html .boxc b.cn {background-image:
-           url(http://static.technorati.com/static/css/img/corners/white.gif);
-           line-height: 1px;
-           font-size: 1px;
-          }
+div.bloginfo-summary {background:
+  url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;
+  float:left;margin-bottom:20px;padding:10px;width:690px}
+/* Large radius image backgrounds */
+.boxc {position:relative;}
+.boxc b.cn { height: 10px; width: 10px; background:
+ url(http://static.technorati.com/static/css/img/corners/white.png) no-repeat;
+ position:absolute;
+ }
+.boxc b.tl {top: -1px; left: -1px; background-position: top left;}
+.boxc b.tr {top: -1px; right: -1px; background-position: top right;}
+.boxc b.bl {bottom: -1px; left: -1px; background-position: bottom left;}
+.boxc b.br {bottom: -1px; right: -1px; background-position: bottom right;}
+
+/* IE Filters */
+    * html .boxc b.bl {bottom:-2px}
+    * html .boxc b.br {bottom:-2px}
+    * html .boxc b.cn {background-image:
+       url(http://static.technorati.com/static/css/img/corners/white.gif);
+       line-height: 1px;
+       font-size: 1px;
+      }
+```
 
 
 So, graphically displayed, the `<b>` elements are actually positioned in each corner with no content:

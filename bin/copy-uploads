@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Copy uploads from the wget mirror into Hugo's static/ dir.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+src=mirror/justaddwater.dk/wp-content/uploads
+[ -d "$src" ] || { echo "run bin/mirror first" >&2; exit 1; }
+mkdir -p static/wp-content
+rsync -a --exclude='*\?*' "$src/" static/wp-content/uploads/
+echo "uploads: $(find static/wp-content/uploads -type f | wc -l | tr -d ' ') files, $(du -sh static/wp-content/uploads | cut -f1)"

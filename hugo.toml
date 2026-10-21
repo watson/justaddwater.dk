@@ -1,0 +1,23 @@
+baseURL = "https://justaddwater.dk/"
+locale = "en"
+title = "Just Add Water"
+pagerSize = 20
+disableKinds = ["section"]
+enableRobotsTXT = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks.taxonomy]
+  categories = "/category/:slug/"
+  tags = "/tag/:slug/"
+
+[outputFormats.RSS]
+  baseName = "feed"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  description = "Usability, web development and blogging, 2005–2016. An archive."

@@ -1,0 +1,13 @@
+{{ $c := index hugo.Data.comments .Params.slug }}
+{{ with $c }}
+<section class="comments" id="comments"><h2>{{ len . }} comments (archived, read-only)</h2>
+{{ range . }}{{ if not .parent }}{{ template "comment" (dict "c" . "all" $c) }}{{ end }}{{ end }}
+</section>
+{{ end }}
+{{ define "comment" }}{{ $id := .c.id }}
+<div class="comment" id="comment-{{ $id }}">
+<p class="meta"><strong>{{ if .c.url }}<a href="{{ .c.url }}" rel="nofollow ugc">{{ .c.author }}</a>{{ else }}{{ .c.author }}{{ end }}</strong> · {{ substr .c.date 0 10 }}</p>
+{{ .c.html | markdownify }}
+{{ range where .all "parent" $id }}<div class="reply">{{ template "comment" (dict "c" . "all" $.all) }}</div>{{ end }}
+</div>
+{{ end }}

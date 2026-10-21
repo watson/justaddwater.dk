@@ -16,28 +16,31 @@ I just sent this to the [CSS-D discussion list](http://archivist.incutio.com/vie
 >
 > So my question is: How is this solved in for instance GMail where content i only one line high (and additional overflowing content is hidden). Please share your thoughts on this, and if you could point me to any information on how to solve this.
 >
->     < !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+> ``` html
+>
+> < !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 >
 >
 >
 >
->     table{
->     width:300px;
->     border:1px dashed red;
->     }
->     td{
->     vertical-align: top;
->     background-color: #dfc;
->     height: 10px; /* table cell does not obey this height */
->     }
+> table{
+> width:300px;
+> border:1px dashed red;
+> }
+> td{
+> vertical-align: top;
+> background-color: #dfc;
+> height: 10px; /* table cell does not obey this height */
+> }
 >
 >
 >
 >
->     I want table row to be the height of 1 text line.
+> I want table row to be the height of 1 text line.
 >
 >
->     1. start cell not much content
+> 1. start cell not much content
+> ```
 
 2\. second cell has insanely long content that I know will always wrap
 
@@ -64,18 +67,20 @@ I'll post the results here as I find out how Google GMail does the trick. Please
 >
 > Now this works the same with table cells. See below and note that you must set table to have the table-layout: fixed property for it to work.
 >
->     .tbl {
->         table-layout:fixed;
->         border-top: 5px solid #333;
->         border-collapse: collapse;
->         background: #fff;
->          }
->     .tbl td {
->         border-bottom: 1px dashed #333;
->         padding: 2px 5px;
->         text-overflow:ellipsis;
->         overflow:hidden;
->         white-space:nowrap;
->      } 
+> ``` css
+> .tbl {
+>     table-layout:fixed;
+>     border-top: 5px solid #333;
+>     border-collapse: collapse;
+>     background: #fff;
+>      }
+> .tbl td {
+>     border-bottom: 1px dashed #333;
+>     padding: 2px 5px;
+>     text-overflow:ellipsis;
+>     overflow:hidden;
+>     white-space:nowrap;
+>  } 
+> ```
 
 Note that he also adds `white-space:nowrap`. Otherwise it won't work. [Example page - working](/wp-content/uploads/2006/03/fixed-table-cells-working.html)

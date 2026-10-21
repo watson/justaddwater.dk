@@ -33,5 +33,3 @@ Here are a few of my ideas I have drafts of (some with no content, others with m
   
 
 Some of these are our own content, and others "just" cite other sources for the exciting stuff. I know, it would probably affect your choices, but based on the list above, **what are the things you'd like to read about the most?**
-
-\[tags\]usability, publishing, frequency, review, axure, e texteditor, e, paul graham, wikipedia, progressive disclosure, busy, work\[tags\]

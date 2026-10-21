@@ -60,13 +60,18 @@ Recently, Thomas and I met with François Nonnenmacher, a French Capgemini emplo
 
 A variation of this would be to use DOM scripting to change the URL the form posts to via JavaScript. Example:
 
+``` html
+```
+
 And then via DOM scripting change form.action to the proper URL (`wp-comments-post.php`).
 
-    var obj = document.getElementById('postform')
+``` javascript
+var obj = document.getElementById('postform')
 
-    if(obj)
+if(obj)
 
-    obj.action = "wp-comments-post.php"
+obj.action = "wp-comments-post.php"
+```
 
 ### Moderate all comments before publishing
 
