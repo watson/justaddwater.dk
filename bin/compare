@@ -3,7 +3,7 @@
 # Usage: bin/compare [--shoot] [--no-open]
 #   --shoot    retake all screenshots first (bin/screenshot --all)
 #   --no-open  only build the page
-# Baseline = screenshots/orig as committed at tag orig-screenshots-2026-10-21
+# Baseline = screenshots/orig as committed at tag orig-screenshots-v2
 # (pixelpilot reads the baseline from git; override with BASELINE_REF=<ref>).
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -20,7 +20,7 @@ Usage: bin/compare [--shoot] [--no-open] [-h|--help]
 
 Compares screenshots/dev (current, the new Hugo site) against screenshots/orig
 (baseline, the original WordPress site) as committed at git tag
-orig-screenshots-2026-10-21. Writes tmp/screenshot-review/index.html and opens
+orig-screenshots-v2. Writes tmp/screenshot-review/index.html and opens
 it with 'open' (no server needed).
 
 Environment:
@@ -44,7 +44,7 @@ done
 out=tmp/screenshot-review
 rm -rf "$out"
 "${PIXELPILOT:-$HOME/src/dotfiles/bin/pixelpilot}" \
-  --baseline "${BASELINE_REF:-orig-screenshots-2026-10-21}" \
+  --baseline "${BASELINE_REF:-orig-screenshots-v2}" \
   --screenshots-dir screenshots/orig \
   --current-dir screenshots/dev \
   --baseline-dir "$out/baseline" \
