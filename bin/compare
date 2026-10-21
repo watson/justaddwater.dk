@@ -41,10 +41,22 @@ done
 
 [ "$shoot" = 1 ] && bin/screenshot --all
 
+ref="${BASELINE_REF:-orig-screenshots-v2}"
+if ! git merge-base --is-ancestor "$ref" HEAD 2>/dev/null; then
+  cat >&2 <<EOT
+Baseline '$ref' is missing or not reachable from HEAD (was history rewritten?).
+pixelpilot needs a tag reachable from HEAD. Find the commit that holds the
+original screenshots and re-point the tag at it:
+  git log --oneline -- screenshots/orig | head -3
+  git tag -f $ref <commit>
+EOT
+  exit 1
+fi
+
 out=tmp/screenshot-review
 rm -rf "$out"
 "${PIXELPILOT:-$HOME/src/dotfiles/bin/pixelpilot}" \
-  --baseline "${BASELINE_REF:-orig-screenshots-v2}" \
+  --baseline "$ref" \
   --screenshots-dir screenshots/orig \
   --current-dir screenshots/dev \
   --baseline-dir "$out/baseline" \
