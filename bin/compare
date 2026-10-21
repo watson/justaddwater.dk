@@ -1,73 +1,62 @@
 #!/usr/bin/env bash
-# Build the pixelpilot review (original vs new site) and open it from disk.
-# Usage: bin/compare [--shoot] [--no-open]
-#   --shoot    retake all screenshots first (bin/screenshot --all)
-#   --no-open  only build the page
-# Baseline = screenshots/orig as committed at tag orig-screenshots-v2
-# (pixelpilot reads the baseline from git; override with BASELINE_REF=<ref>).
+# Compare the original WordPress site with the new Hugo site, from the screenshot folders.
+# Usage: bin/compare [--shoot] [--no-open] [--report] [--fail-above PCT] [--only a,b]
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 usage() {
   cat <<EOT
-bin/compare - build the pixelpilot review (original vs new site) and open it from disk
+bin/compare - compare screenshots/orig (original WordPress) with screenshots/dev (new Hugo) in pixelpilot
 
-Usage: bin/compare [--shoot] [--no-open] [-h|--help]
+Usage: bin/compare [--shoot] [--no-open] [--report] [--fail-above PCT] [--only a,b] [-h|--help]
 
-  --shoot     retake all screenshots first (bin/screenshot --all, ~25 s)
-  --no-open   only build the page, do not open the browser
-  -h, --help  show this help
+  --shoot            retake all screenshots first (bin/screenshot --all, ~25 s)
+  --no-open          build the review page but do not open the browser
+  --report           print a numeric table instead (per page: sizes, height delta,
+                     % differing pixels, first differing row, per-100px bands)
+  --fail-above PCT   with --report: exit 1 if any page differs by more than PCT %
+  --only a,b         with --report: only these pages (number or file-name prefix)
+  -h, --help         show this help
 
-Compares screenshots/dev (current, the new Hugo site) against screenshots/orig
-(baseline, the original WordPress site) as committed at git tag
-orig-screenshots-v2. Writes tmp/screenshot-review/index.html and opens
-it with 'open' (no server needed).
+Default: builds tmp/screenshot-review/index.html and opens it from disk (no server).
+Both sides are plain folders read in place (no git tags needed): the baseline is
+screenshots/orig, the current side is screenshots/dev.
 
 Environment:
-  BASELINE_REF=<ref>   git ref to read the baseline PNGs from
-  PIXELPILOT=<path>    pixelpilot executable (default ~/src/dotfiles/bin/pixelpilot)
+  PIXELPILOT=<path>   pixelpilot executable (default ~/src/dotfiles/bin/pixelpilot)
 EOT
 }
 
-shoot=0; open_page=1
-for a in "$@"; do
-  case "$a" in
+shoot=0; open_page=1; report=0; fail_above=""; only=""
+while [ $# -gt 0 ]; do
+  case "$1" in
     --shoot) shoot=1 ;;
     --no-open) open_page=0 ;;
+    --report) report=1 ;;
+    --fail-above) fail_above="${2:?--fail-above needs a percentage}"; shift ;;
+    --only) only="${2:?--only needs a list}"; shift ;;
     -h|--help) usage; exit 0 ;;
     *) usage >&2; exit 2 ;;
   esac
+  shift
 done
 
 [ "$shoot" = 1 ] && bin/screenshot --all
 
-ref="${BASELINE_REF:-orig-screenshots-v2}"
-if ! git merge-base --is-ancestor "$ref" HEAD 2>/dev/null; then
-  cat >&2 <<EOT
-Baseline '$ref' is missing or not reachable from HEAD (was history rewritten?).
-pixelpilot needs a tag reachable from HEAD. Find the commit that holds the
-original screenshots and re-point the tag at it:
-  git log --oneline -- screenshots/orig | head -3
-  git tag -f $ref <commit>
-EOT
-  exit 1
+pp="${PIXELPILOT:-$HOME/src/dotfiles/bin/pixelpilot}"
+args=(--baseline-folder screenshots/orig --current-dir screenshots/dev
+      --baseline-label "WordPress (original)" --current-label "Hugo (new)")
+
+if [ "$report" = 1 ]; then
+  [ -n "$fail_above" ] && args+=(--fail-above "$fail_above")
+  [ -n "$only" ] && args+=(--only "$only")
+  exec "$pp" "${args[@]}" --report
 fi
 
-cat <<EOT
-Comparing:
-  BASELINE = screenshots/orig  (original WordPress site, http://justaddwater.dk) as committed at $ref ($(git rev-parse --short "$ref"))
-  CURRENT  = screenshots/dev   (new Hugo site, http://localhost:1313) from the working tree
-  Retake the current side with: bin/compare --shoot   (restart Hugo first with bin/dev restart if you changed hugo.toml)
-EOT
 out=tmp/screenshot-review
 rm -rf "$out"
-"${PIXELPILOT:-$HOME/src/dotfiles/bin/pixelpilot}" \
-  --baseline "$ref" \
-  --screenshots-dir screenshots/orig \
-  --current-dir screenshots/dev \
-  --baseline-dir "$out/baseline" \
-  --output-html "$out/index.html" \
-  --title "justaddwater.dk: original (baseline) vs new Hugo (current)" >/dev/null
+"$pp" "${args[@]}" --baseline-dir "$out/baseline" --output-html "$out/index.html" \
+  --title "justaddwater.dk: WordPress (original) vs Hugo (new)" >/dev/null
 
 echo "Review page: $PWD/$out/index.html"
 [ "$open_page" = 1 ] && open "$out/index.html"
