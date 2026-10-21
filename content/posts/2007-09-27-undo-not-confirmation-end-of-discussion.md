@@ -6,6 +6,7 @@ url: "/2007/09/27/undo-not-confirmation-end-of-discussion/"
 wp_id: 718
 categories: ["Usability", "User experience"]
 tags: []
+author: "jesper"
 ---
 
 Asa Raskin has made a really useful example of how to implement undo easily in user interfaces. Here's the example file (linked directly to a page at his company Humanized). Try deleting some items and then press undo.

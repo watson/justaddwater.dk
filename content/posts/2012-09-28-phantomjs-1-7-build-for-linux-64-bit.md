@@ -6,6 +6,7 @@ url: "/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/"
 wp_id: 1663
 categories: ["Code", "Continous integration", "Testing"]
 tags: ["phantomjs", "testing"]
+author: "jesper"
 ---
 
 At a project I work on, we needed PhantomJS to run from a Redhat Fedora 64 bit machine.

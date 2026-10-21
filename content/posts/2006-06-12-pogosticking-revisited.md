@@ -6,6 +6,7 @@ url: "/2006/06/12/pogosticking-revisited/"
 wp_id: 299
 categories: ["Blogging", "justaddwater.dk", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Earlier I wrote about [Pogosticking and why it should be avoided](/2006/02/05/pogosticking-and-why-it-should-be-avoided/ "Justaddwater.dk: Pogosticking and why it should be avoided"). I mentioned that pogosticking is: **Unnecessary navigation and extra clicks that occurs because pages do not match the information users need to find what they are looking for**.

@@ -6,6 +6,7 @@ url: "/2007/06/11/agile-tip-use-assumptions-to-keep-momentum/"
 wp_id: 672
 categories: ["Productivity", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 Here is some agile methodology worth paying attention to, **stating that even wrong decisions allow developers to keep momentum and push a project forward**:

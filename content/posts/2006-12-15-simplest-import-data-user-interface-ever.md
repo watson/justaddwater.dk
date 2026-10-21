@@ -6,6 +6,7 @@ url: "/2006/12/15/simplest-import-data-user-interface-ever/"
 wp_id: 488
 categories: ["Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 The new Google Finance has introduced the simplest “import” feature I have ever seen.\

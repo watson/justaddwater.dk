@@ -6,6 +6,7 @@ url: "/2009/09/29/print-css-background-logo-hack/"
 wp_id: 1163
 categories: ["Code", "CSS", "Web Development"]
 tags: ["CSS", "hack", "webdevelopment"]
+author: "jesper"
 ---
 
 I learned this nice little hack to bypass the standard browser setting that normally prevents background images from being printed.

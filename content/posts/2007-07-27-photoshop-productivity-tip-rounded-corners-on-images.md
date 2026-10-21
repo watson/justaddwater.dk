@@ -6,6 +6,7 @@ url: "/2007/07/27/photoshop-productivity-tip-rounded-corners-on-images/"
 wp_id: 683
 categories: ["Productivity"]
 tags: []
+author: "jesper"
 ---
 
 I had to ask my old colleague and friend [Michael Bernth](http://www.bernth.dk/ "Michael Bernth homepage") for help today for a Photoshop tip.

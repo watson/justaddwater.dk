@@ -6,6 +6,7 @@ url: "/2006/03/28/new-google-layout-more-usable/"
 wp_id: 197
 categories: ["Best of Justaddwater", "Usability"]
 tags: []
+author: "thomas"
 ---
 
 After [a tip from Ars Technica](http://arstechnica.com/news.ars/post/20060326-6460.html "Ars Technica: Take a sneak peek at Google's new interface") I found that is was possible to cheat [Google](http://www.google.com/ "Google") into letting you test their new front page design (you can do it too!).

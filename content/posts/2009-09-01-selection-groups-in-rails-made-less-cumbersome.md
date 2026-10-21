@@ -6,6 +6,7 @@ url: "/2009/09/01/selection-groups-in-rails-made-less-cumbersome/"
 wp_id: 1128
 categories: ["Code", "Ruby on Rails"]
 tags: ["Code", "rails", "Ruby on Rails", "Web Development"]
+author: "jesper"
 ---
 
 I made this addition today after (once again) struggling with option groups for a nested Rails model.

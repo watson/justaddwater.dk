@@ -6,6 +6,7 @@ url: "/2008/05/08/webdesign-tutorial-by-rap-video/"
 wp_id: 926
 categories: ["Humor", "Video", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 Learning web design by a hiphop video is really neat.

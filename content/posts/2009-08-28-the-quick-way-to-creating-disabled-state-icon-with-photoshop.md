@@ -6,6 +6,7 @@ url: "/2009/08/28/the-quick-way-to-creating-disabled-state-icon-with-photoshop/"
 wp_id: 1124
 categories: ["Web Development"]
 tags: []
+author: "jesper"
 ---
 
 For an internal demo, I had to make my own disabled and :hover states of some buttons.

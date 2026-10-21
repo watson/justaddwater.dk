@@ -6,6 +6,7 @@ url: "/2006/01/15/user-experience-clear-and-easy-to-use-definition-needed/"
 wp_id: 75
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Usability work is often related to user experience, and both concepts have a remarkable recognition among usability professionals, among other web consultants, among our clients and in corporate management. I would like to go beyond the words "User Experience" and give a clear, concise, simple definition that's easy to remember, that everybody can understand.

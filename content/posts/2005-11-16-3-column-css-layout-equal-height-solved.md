@@ -6,6 +6,7 @@ url: "/2005/11/16/3-column-css-layout-equal-height-solved/"
 wp_id: 10
 categories: ["CSS", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Recently the CSS hackers at Position is Everything posted an indepth article "[In search of the one true layout](http://positioniseverything.net/articles/onetruelayout/)". After a couple of reads, it seems that this is the future way of making 3-column page layout. In fact, it can be used for any number of columns.

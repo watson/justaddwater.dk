@@ -6,6 +6,7 @@ url: "/2006/06/05/javaone-2006-daily-report-ehhh-daily/"
 wp_id: 284
 categories: ["Java", "JavaOne"]
 tags: []
+author: "thomas"
 ---
 
 Ok... what happened? I was blogging about my trip to JavaOne ([The arrival](/2006/05/14/javaone-2006-daily-report-the-arrival/ "Permanent Link to JavaOne 2006 daily report: The arrival"), [The waiting](/2006/05/16/javaone-2006-daily-report-the-waiting/ "Permanent Link to JavaOne 2006 daily report: The waiting"), [Day One](/2006/05/17/javaone-2006-daily-report-day-one/ "Permanent Link to JavaOne 2006 daily report: Day One")), and then what? No day two or anything. There are many excuses but none of them really matter since this is a blog and here I make the rules. Ok Jesper does as well, and he have been teasing me with the missing posts from JavaOne. Sorry :(

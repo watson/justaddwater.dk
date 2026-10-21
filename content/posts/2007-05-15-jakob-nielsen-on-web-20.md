@@ -6,6 +6,7 @@ url: "/2007/05/15/jakob-nielsen-on-web-20/"
 wp_id: 650
 categories: ["Usability", "User Interface", "Web Development"]
 tags: []
+author: "thomas"
 ---
 
 ![Jakob Nielsen vs. Justaddwater](/wp-content/uploads/2007/05/jakob_faucets_small.jpg)Yesterday BBC published a short article entitled "[Web 2.0 'neglecting good design'](http://news.bbc.co.uk/1/hi/technology/6653119.stm "BBC NEWS | Technology | Web 2.0 'neglecting good design'")". The journalist apparently attended a talk by Jakob Nielsen where he talked about usability issues in Web 2.0. The article is basically just a summary of the talk, and the main focus is that **many websites, in the rush to be more Web 2.0, neglect usability.**

@@ -6,6 +6,7 @@ url: "/2009/01/28/human-time-format-gone-wrong/"
 wp_id: 1017
 categories: ["Usability", "User Interface"]
 tags: ["format", "human", "jaiku", "time", "Usability"]
+author: "jesper"
 ---
 
 In general it's good to use the human time formats (1 hour ago, 2 months ago, etc.) that you see in many of the new web applications. In general, the detail level is up the shorter the time span.

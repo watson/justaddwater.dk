@@ -6,6 +6,7 @@ url: "/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing
 wp_id: 1332
 categories: ["capgemini", "Presentation", "smartlunch"]
 tags: ["capgemini", "cucumber", "Presentation", "smartlunch", "Speaking", "testing"]
+author: "jesper"
 ---
 
 Today I did an internal presentation on how we used Cucumber as testing framework on several recent occasions.

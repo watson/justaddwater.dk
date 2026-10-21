@@ -6,6 +6,7 @@ url: "/2006/01/25/multiple-versions-of-ie-in-one-windows-pc-prepare-for-ie7/"
 wp_id: 109
 categories: ["Browser"]
 tags: []
+author: "jesper"
 ---
 
 **Update 2006-09-28: [All IE Browsers Standalone On Same PC](/2006/09/28/all-ie-browsers-standalone-on-same-pc/ "Justaddwater.dk: All IE Browsers Standalone On Same PC") (September 28, 2006) solves the problem.**

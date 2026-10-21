@@ -6,6 +6,7 @@ url: "/2012/01/28/gwt-developer-plugin-now-works-with-firefox-9/"
 wp_id: 1562
 categories: ["Code", "Web Development"]
 tags: ["Code", "gwt", "Web Development"]
+author: "jesper"
 ---
 
 (UPDATED) The GWT developer plugin has been updated to works with Firefox 9, a couple of days ago.

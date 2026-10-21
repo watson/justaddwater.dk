@@ -6,6 +6,7 @@ url: "/2009/11/26/remove-trailing-space-from-source-files/"
 wp_id: 1241
 categories: ["Code"]
 tags: ["Code", "find", "sed", "shell", "trailing", "whitespace"]
+author: "jesper"
 ---
 
 When it comes to source code, i am a perfectionist. I cant stand to see trailing whitespace, interchanged tabs/spaces, etc.

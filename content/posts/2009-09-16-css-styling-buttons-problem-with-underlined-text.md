@@ -6,6 +6,7 @@ url: "/2009/09/16/css-styling-buttons-problem-with-underlined-text/"
 wp_id: 1141
 categories: ["CSS", "Web Development", "Web Standards"]
 tags: ["button", "CSS", "HTML", "input", "Web Standards"]
+author: "jesper"
 ---
 
 I ran into the challenge the other day to style a\<button\> element to make it look like a link (with underline and everything).

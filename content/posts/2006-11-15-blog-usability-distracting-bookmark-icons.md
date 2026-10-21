@@ -6,6 +6,7 @@ url: "/2006/11/15/blog-usability-distracting-bookmark-icons/"
 wp_id: 456
 categories: ["Blogging", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 "Make this page my home page"

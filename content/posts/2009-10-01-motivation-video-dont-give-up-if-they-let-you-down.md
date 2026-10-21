@@ -6,6 +6,7 @@ url: "/2009/10/01/motivation-video-dont-give-up-if-they-let-you-down/"
 wp_id: 1168
 categories: ["Video"]
 tags: []
+author: "jesper"
 ---
 
 Great motivational video. If you are turned down like the Beatles by the Decca record company, never give up!

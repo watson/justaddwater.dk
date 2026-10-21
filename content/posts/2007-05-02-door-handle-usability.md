@@ -6,6 +6,7 @@ url: "/2007/05/02/door-handle-usability/"
 wp_id: 615
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 What's a usability blog without a post about door handles?

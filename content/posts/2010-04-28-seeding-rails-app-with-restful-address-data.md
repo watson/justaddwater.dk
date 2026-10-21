@@ -6,6 +6,7 @@ url: "/2010/04/28/seeding-rails-app-with-restful-address-data/"
 wp_id: 1341
 categories: ["Code", "Ruby on Rails"]
 tags: ["bootstrap", "Code", "rails", "ruby"]
+author: "jesper"
 ---
 
 Grabbing data from Restful webservices has never been easier. I use this code in the Rails /db/seeds.rb file to grab data from the Danish webservice with addresses, municipalities, regions, etc.

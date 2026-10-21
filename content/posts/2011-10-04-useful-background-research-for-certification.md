@@ -6,6 +6,7 @@ url: "/2011/10/04/useful-background-research-for-certification/"
 wp_id: 1529
 categories: ["capgemini", "Web Development"]
 tags: ["capgemini", "certification", "Links", "rup"]
+author: "jesper"
 ---
 
 I have just applied for certification to become Capgemini Software Engineer level 1+2. The process had some tests and a thorough application formula where i should describe my deeds.

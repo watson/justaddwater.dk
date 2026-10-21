@@ -6,6 +6,7 @@ url: "/2008/01/21/interaction-design-send-to-a-friend/"
 wp_id: 867
 categories: ["Links", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 For a work project I had to make a "send email to a friend", and looked for inspiration the following places. I'm not commenting it here, these are just the raw examples I found.

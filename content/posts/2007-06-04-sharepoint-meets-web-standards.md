@@ -6,6 +6,7 @@ url: "/2007/06/04/sharepoint-meets-web-standards/"
 wp_id: 665
 categories: ["Web Development", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Cameron Moll posted detailed tips on how to modify a standard Microsof Sharepoint 2007 installation into something with an acceptable output that's valid XHTML and CSS, and less bloated with a much smaller footprint. **In other words, a workaround for making Sharepoint work a little better out of the box**.

@@ -6,6 +6,7 @@ url: "/2009/01/15/bad-usability-calendar-2009-is-out/"
 wp_id: 1007
 categories: ["justaddwater.dk"]
 tags: ["Accessibility", "calendar", "Humor", "Usability", "User experience"]
+author: "jesper"
 ---
 
 My Norwegian friend Eidar from NetLife Research pointed out that the 2009 version of the bad usability calendar is now online.

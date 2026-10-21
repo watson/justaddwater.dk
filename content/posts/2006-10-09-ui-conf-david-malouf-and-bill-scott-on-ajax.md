@@ -6,6 +6,7 @@ url: "/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/"
 wp_id: 398
 categories: ["AJAX", "Events/seminars", "justaddwater.dk", "Prototyping", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 David Malouf and Bill Scott: Designing Powerful Web Apps with Ajax\

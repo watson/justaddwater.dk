@@ -6,6 +6,7 @@ url: "/2009/10/05/tiny-script-to-extract-html-structure-from-page/"
 wp_id: 1176
 categories: ["Code"]
 tags: ["Code", "nokogiri", "ruby", "script"]
+author: "jesper"
 ---
 
 I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It's pretty straight-forward from scratch.

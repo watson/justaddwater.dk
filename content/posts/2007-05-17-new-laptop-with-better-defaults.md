@@ -6,6 +6,7 @@ url: "/2007/05/17/new-laptop-with-better-defaults/"
 wp_id: 646
 categories: ["Hardware", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 ***Update: CPU fan speed can be controlled. See updated notes below...(2007-11-06)***\

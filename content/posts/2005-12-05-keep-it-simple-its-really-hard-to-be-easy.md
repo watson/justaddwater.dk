@@ -6,6 +6,7 @@ url: "/2005/12/05/keep-it-simple-its-really-hard-to-be-easy/"
 wp_id: 37
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 > \[…\]How about this scenario: You fly off to a vacation, renting a car at the airport. After you get going, you spend the rest of the afternoon trying to figure out how to turn on the windshield wipers, or the lights, or the air/conditioner.

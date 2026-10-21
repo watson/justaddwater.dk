@@ -6,6 +6,7 @@ url: "/2007/01/31/why-ajax-failed-then-succeeded/"
 wp_id: 530
 categories: ["AJAX", "Speaking"]
 tags: []
+author: "jesper"
 ---
 
 E-Week has notes from "Google's Bosworth" (which must be [Adam Bosworth](http://en.wikipedia.org/wiki/Adam_Bosworth), formerly employed at Microsoft and working on the IE4 team).

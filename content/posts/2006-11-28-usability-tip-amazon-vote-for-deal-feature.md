@@ -6,6 +6,7 @@ url: "/2006/11/28/usability-tip-amazon-vote-for-deal-feature/"
 wp_id: 471
 categories: ["Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 Here is an example from Amazon.com, on how to encourage people to participate.

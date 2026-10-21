@@ -6,6 +6,7 @@ url: "/blogtools/"
 wp_id: 57
 categories: []
 tags: []
+author: "jesper"
 ---
 
 A post about referring pages, inspired me to write this list of public websites, that have info about Justaddwater.dk. It's a collection of links that we use to administrate blog and see who refers to our pages.

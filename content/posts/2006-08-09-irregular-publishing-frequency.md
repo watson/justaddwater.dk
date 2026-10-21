@@ -6,6 +6,7 @@ url: "/2006/08/09/irregular-publishing-frequency/"
 wp_id: 364
 categories: ["Blogging", "justaddwater.dk", "Usability"]
 tags: []
+author: "thomas"
 ---
 
 ![Sun](/wp-content/uploads/2006/08/sol_grafik.jpg)According to Jakob Nielsen's [top ten design mistakes on weblogs](http://www.useit.com/alertbox/weblogs.html "Jakob Nielsen's Alertbox, October 17, 2005: Weblog Usability: The Top Ten Design Mistakes") the 7th worst thing is irregular publishing frequency.

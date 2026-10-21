@@ -6,6 +6,7 @@ url: "/2007/04/26/howto-create-a-temporary-local-subversion-repository/"
 wp_id: 600
 categories: ["Code", "Productivity", "Prototyping", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 UPDATE May 1st, 2007 (forgot the two final steps 8 and 9).

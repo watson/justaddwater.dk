@@ -6,6 +6,7 @@ url: "/2011/01/05/automatic-excel-time-format-without-colon-in-input/"
 wp_id: 1395
 categories: ["office"]
 tags: ["excel", "microsoft", "office", "Productivity", "time", "timereporting"]
+author: "jesper"
 ---
 
 For a simple Excel sheet time reporting, i needed to enter hours every day for arrival and departure time.

@@ -6,6 +6,7 @@ url: "/2009/06/14/comments-working-again/"
 wp_id: 1101
 categories: ["justaddwater.dk", "spam", "User experience", "Web Development", "WordPress"]
 tags: []
+author: "thomas"
 ---
 
 Thanks to one of our dear readers we just discovered a bug in our commenting system that basically meant that you could not leave a comment on any of our posts. This has now been fixed and you can now again tell us your thoughts.

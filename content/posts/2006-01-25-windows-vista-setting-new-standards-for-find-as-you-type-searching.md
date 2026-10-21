@@ -6,6 +6,7 @@ url: "/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searc
 wp_id: 108
 categories: ["Search Engines", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Very interesting read from a user interface point-of-view. I stumbled upon a walkthrough of Windows Vista. An interesting perspective here is that the **search field has gotten a prominent position** on the Start menu itself.

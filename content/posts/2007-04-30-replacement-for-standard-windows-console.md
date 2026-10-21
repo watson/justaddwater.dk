@@ -6,6 +6,7 @@ url: "/2007/04/30/replacement-for-standard-windows-console/"
 wp_id: 609
 categories: ["Productivity", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 The standard windows command window (console) sucks for several usability reasons:

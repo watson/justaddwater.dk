@@ -6,6 +6,7 @@ url: "/2006/05/18/elements-of-user-experience-copenhagen-may-31st/"
 wp_id: 249
 categories: ["Events/seminars", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Just a quick note: I'm attending Jesse James Garrett's event in Copenhagen May 31st, "[The elements of User Experience](http://www.adaptivepath.com/events/2006/may3/)". I'm really looking forward to this, as I'm a big admirer of [Jesse](http://blog.jjg.net/) and [Adaptive Path](http://adaptivepath.com).

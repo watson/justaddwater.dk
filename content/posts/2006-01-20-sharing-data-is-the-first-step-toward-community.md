@@ -6,6 +6,7 @@ url: "/2006/01/20/sharing-data-is-the-first-step-toward-community/"
 wp_id: 105
 categories: ["justaddwater.dk", "Links", "Search Engines"]
 tags: []
+author: "jesper"
 ---
 
 Via [Del.icio.us popular list](http://del.icio.us/popular "Del.icio.us popular bookmarks list") I found this quote from an [IBM Linux commercial](http://video.google.com/videoplay?docid=-3182711082396344549 "IBM Linux commercial on google video")

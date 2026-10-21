@@ -6,6 +6,7 @@ url: "/2006/10/10/uiconf-jeff-patton-agile-development/"
 wp_id: 402
 categories: ["Agile", "Events/seminars", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 *\[Live notes from UI Conf\]*\

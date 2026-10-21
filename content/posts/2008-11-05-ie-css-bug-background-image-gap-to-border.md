@@ -6,6 +6,7 @@ url: "/2008/11/05/ie-css-bug-background-image-gap-to-border/"
 wp_id: 963
 categories: ["justaddwater.dk"]
 tags: ["Browser", "bug", "CSS", "ie"]
+author: "jesper"
 ---
 
 Workaround needed for this annoying bug:

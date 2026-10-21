@@ -6,6 +6,7 @@ url: "/2008/01/06/make-wordpress-editor-less-evil/"
 wp_id: 854
 categories: ["Usability", "WordPress"]
 tags: []
+author: "thomas"
 ---
 
 This Friday, Jesper and I had a chat about things we don't like about the current WordPress WYSIWYG editor. In particular when trying to write code examples in our posts:

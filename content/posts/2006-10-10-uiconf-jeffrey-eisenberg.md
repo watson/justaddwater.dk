@@ -6,6 +6,7 @@ url: "/2006/10/10/uiconf-jeffrey-eisenberg/"
 wp_id: 400
 categories: ["Events/seminars", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 From UI 11 Conference, Cambridge, Boston October 10, 2006.

@@ -6,6 +6,7 @@ url: "/2007/07/31/say-no-as-often-as-you-say-yes/"
 wp_id: 33
 categories: ["Links", "Productivity"]
 tags: []
+author: "jesper"
 ---
 
 I wanted to post this for a while. But it's definitely worth a mention if you're working with software development. [\

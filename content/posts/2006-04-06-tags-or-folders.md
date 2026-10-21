@@ -6,6 +6,7 @@ url: "/2006/04/06/tags-or-folders/"
 wp_id: 167
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Quite some time ago Ari Paparo wrote an interesting article about "Getting it right", all the big and little details that matter to make a successful web application. I remember Blink.com that he writes about and used it to port my browser bookmarks between my home PC and my various work PC's.

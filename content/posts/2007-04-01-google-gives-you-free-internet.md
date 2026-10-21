@@ -6,6 +6,7 @@ url: "/2007/04/01/google-gives-you-free-internet/"
 wp_id: 572
 categories: ["Humor", "Search Engines"]
 tags: []
+author: "thomas"
 ---
 
 According to a newly published [website](http://www.google.com/tisp/ "Google TiSP") and a [press release](http://www.google.com/tisp/press.html "Google Press Center: Google announces free in-home wireless broadband service"), the Californian giant Google is now offering free broadband internet. How do they achieve this? Through the toilet in your house! The thorough reader might notice the date of the press release though ;o)

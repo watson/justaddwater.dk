@@ -6,6 +6,7 @@ url: "/2008/03/31/free-beer-for-rubyfools-attendees/"
 wp_id: 919
 categories: ["Events/seminars", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 I thought I'd better post this before April Fools day tomorrow. My employer, Capgemini has accepted to sponsor the [Copenhagen RubyFools conference](http://jaoo.dk/ruby-cph/conference/) from today and till Wendesday.\

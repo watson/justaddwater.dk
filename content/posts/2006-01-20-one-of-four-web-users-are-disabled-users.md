@@ -6,6 +6,7 @@ url: "/2006/01/20/one-of-four-web-users-are-disabled-users/"
 wp_id: 35
 categories: ["Accessibility", "Best of Justaddwater", "Usability", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Did you know that up to 25% of all visitors on your website have some kind of accessibility problem. Some of your users may be blind, deaf, dyslectic, has learning disabilities or motoric disabilities such as schlerosis, parkinson's disease, etc. A so-called functional disability.

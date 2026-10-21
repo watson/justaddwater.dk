@@ -6,6 +6,7 @@ url: "/2007/02/06/100000-blog-spam-comments/"
 wp_id: 531
 categories: ["Blogging", "justaddwater.dk", "spam", "Usability", "WordPress"]
 tags: []
+author: "thomas"
 ---
 
 **Today justaddwater.dk got spam comment number 100,000.** But actually the real number is much higher since we have incorporated a couple of measures to catch the spam even before it reaches WordPress or [Akismet](http://akismet.com/ "Tool for stopping comment and trackback spam").

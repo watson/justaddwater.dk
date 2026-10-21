@@ -6,6 +6,7 @@ url: "/2011/10/10/gwt-developer-plugin-for-firefox-7-is-now-ready/"
 wp_id: 1531
 categories: ["Code", "Web Development"]
 tags: ["Code", "gwt", "Web Development"]
+author: "jesper"
 ---
 
 **UPDATED 2011-12-14:** [Prebuilt](http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/) folder now contains Firefox 8 version of the GWT developer plugin.

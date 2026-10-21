@@ -6,6 +6,7 @@ url: "/contact-us/"
 wp_id: 93
 categories: []
 tags: []
+author: "thomas"
 ---
 
 If you want to get in touch with us in another way then leaving a comment on a post on this site, you can use the contact form below or call us directly ([we respect your privacy](/privacy/ "Justaddwater.dk Privacy Policy")).

@@ -6,6 +6,7 @@ url: "/2006/10/19/blogging-big-frontpage-news-at-ibm/"
 wp_id: 426
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Via [Keith Instone](http://instone.org/ibmblogroll) I learned that IBM's US frontpage story today is about blogs.

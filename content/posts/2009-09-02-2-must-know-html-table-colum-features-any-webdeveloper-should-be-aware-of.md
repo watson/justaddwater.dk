@@ -6,6 +6,7 @@ url: "/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-
 wp_id: 1135
 categories: ["HTML", "Web Standards"]
 tags: ["HTML", "tables", "Web Development", "Web Standards"]
+author: "jesper"
 ---
 
 I was reading up on the good old HTML specification and discovered a feature I had always wanted -- and it's already there:\

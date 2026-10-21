@@ -6,6 +6,7 @@ url: "/2012/11/09/git-checkout-old-revisions-by-date/"
 wp_id: 1658
 categories: ["Code"]
 tags: ["git"]
+author: "jesper"
 ---
 
 I wanted to do some code stats for a repository. This line checks out old revisions by date and shows code stats:

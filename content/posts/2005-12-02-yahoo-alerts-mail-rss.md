@@ -6,6 +6,7 @@ url: "/2005/12/02/yahoo-alerts-mail-rss/"
 wp_id: 30
 categories: ["RSS", "Usability", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Podtech has an [exclusive interview](http://www.podtech.net/?p=229) about Yahoo! and pushing RSS to their 227 million email users. Yahoo! has built RSS into their alerts services at alerts.yahoo.com and furthermore they've built an RSS reader into their email service. Other bloggers have more about this including [Techcrunch](http://www.techcrunch.com/2005/11/29/rss-is-now-integrated-into-yahoo-mail-and-alerts/), [Om Malik](http://gigaom.com/2005/11/30/oddposts-rss-lives-again-in-yahoo-mail/), [John Musser](http://blog.programmableweb.com/?p=161), [BusinessBlogWire](http://www.businessblogwire.com/2005/11/yahoo_rss_email_folder_can_hel.html).

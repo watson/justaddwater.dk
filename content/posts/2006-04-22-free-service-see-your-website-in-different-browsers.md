@@ -6,6 +6,7 @@ url: "/2006/04/22/free-service-see-your-website-in-different-browsers/"
 wp_id: 234
 categories: ["Accessibility", "Browser", "Web Standards"]
 tags: []
+author: "thomas"
 ---
 
 A free online service called [Browsershots](http://browsershots.org/) has just launched (still beta). You provide it with a URI and it will take real screenshots in different browsers of that page.

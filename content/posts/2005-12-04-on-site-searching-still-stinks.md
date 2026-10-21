@@ -6,6 +6,7 @@ url: "/2005/12/04/on-site-searching-still-stinks/"
 wp_id: 28
 categories: ["Search Engines", "Usability"]
 tags: []
+author: "thomas"
 ---
 
 It has been said many times before. Jared Spool [said it in 1997](http://www.uie.com/articles/search_stinks/). Today 8 years later little have been done to improve them: Site-specific search engines.

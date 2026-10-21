@@ -6,6 +6,7 @@ url: "/2006/02/21/jotform-wysiwyg-html-form-generator/"
 wp_id: 160
 categories: ["AJAX", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 This one's really nice. you can edit an HTML form with this interface (click to enlarge). You can literally create a form in seconds.\

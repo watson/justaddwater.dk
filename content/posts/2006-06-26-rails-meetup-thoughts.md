@@ -6,6 +6,7 @@ url: "/2006/06/26/rails-meetup-thoughts/"
 wp_id: 341
 categories: ["Code", "Events/seminars", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 Thomas and I are really looking forward to this week's Copenhagen Rails Meetup. Remember to join us

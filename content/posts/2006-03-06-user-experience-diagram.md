@@ -6,6 +6,7 @@ url: "/2006/03/06/user-experience-diagram/"
 wp_id: 171
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Bryce Glass ([soldierant](http://soldierant.net/)) and Frank Spillers have created a stunning diagram on User Experience (Via [Column Two](http://www.steptwo.com.au/columntwo/archives/002047.html)).

@@ -6,6 +6,7 @@ url: "/2012/06/20/jim-webber-on-qcon-new-york/"
 wp_id: 1624
 categories: ["Events/seminars", "QCon"]
 tags: []
+author: "jesper"
 ---
 
 Please help me choose the best photos I took during Jim Webbers talk at qCon New York.

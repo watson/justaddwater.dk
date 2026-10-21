@@ -6,6 +6,7 @@ url: "/2007/06/09/flickr-flunks-the-mom-test/"
 wp_id: 671
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Here is a good writeup from New York Times on why Flickr fails "The Mom Test":

@@ -6,6 +6,7 @@ url: "/2006/11/30/happy-birthday-usability-must-die/"
 wp_id: 469
 categories: ["AJAX", "Humor", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Even with the radical website title, I think it deserves a mention that [UsabilityMustDie](http://www.usabilitymustdie.com/) [celebrates its fifth anniversary](http://usability.typepad.com/confusability/2006/11/talkin_bout_a_p.html). Congratulations to Chris McEvoy! Keep up the good and humorous work.

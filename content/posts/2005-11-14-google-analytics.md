@@ -6,6 +6,7 @@ url: "/2005/11/14/google-analytics/"
 wp_id: 16
 categories: ["justaddwater.dk", "Usability", "Web Standards", "Web Statistics"]
 tags: []
+author: "jesper"
 ---
 
 We just signed up for testing the new [Google Analytics](http://www.google.com/analytics) statistics software. It gives us an idea of who is browsing our website. On the humorous side, the signup process is missing something. It seems that the license agreement is not found. Hilarious. Of course I accepted (but I'm still wondering what that means). We're looking forward to try this out.

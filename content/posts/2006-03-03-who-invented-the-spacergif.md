@@ -6,6 +6,7 @@ url: "/2006/03/03/who-invented-the-spacergif/"
 wp_id: 163
 categories: ["Best of Justaddwater", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Do you remember this fish?

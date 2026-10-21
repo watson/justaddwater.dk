@@ -6,6 +6,7 @@ url: "/2005/11/28/disney-moved-away-from-webstandards/"
 wp_id: 14
 categories: ["CSS", "Usability", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Webstandards evangelist Molly Holzschlag wrote a brisk [open letter to the Disney Store](http://www.molly.com/2005/11/03/an-open-letter-to-disney-store-uk/) after they recently dumped their webstandards compliant site and introduced table-based layouts, spacer gifs, \<font\>-tags and lots of style attributes.

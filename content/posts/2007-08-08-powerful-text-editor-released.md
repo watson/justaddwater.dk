@@ -6,6 +6,7 @@ url: "/2007/08/08/powerful-text-editor-released/"
 wp_id: 695
 categories: ["Code", "Productivity", "Ruby on Rails", "Software"]
 tags: []
+author: "jesper"
 ---
 
 [E-texteditor](http://e-texteditor.com/) just got out of beta. [I have actively contributed](http://www.e-texteditor.com/forum/search.php?search_author=jesperrr) with improvement suggestions and error reports, as this editor has all needed features for rapid web devlopment, and has potential to become even better.

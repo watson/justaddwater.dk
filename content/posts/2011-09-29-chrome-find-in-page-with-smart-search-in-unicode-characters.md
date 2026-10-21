@@ -6,6 +6,7 @@ url: "/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/"
 wp_id: 1512
 categories: ["Browser", "Usability"]
 tags: ["Browser", "chrome", "find", "google", "search", "Usability", "webkit"]
+author: "jesper"
 ---
 
 Look at this chrome search for the Danish letter "æ" in a page.\

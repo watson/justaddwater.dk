@@ -6,6 +6,7 @@ url: "/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/"
 wp_id: 1550
 categories: ["Code"]
 tags: ["Code", "maven", "nexus"]
+author: "jesper"
 ---
 
 In our maven3 pom.xml files for a particular project, we have defined a reference to an internal Nexus repository. Since we are behind a firewall, the Nexus repository also has to be mirror of the outside world. I discovered that this **generic \<mirrorOf\> from my settings.xml is actually evil**:

@@ -6,6 +6,7 @@ url: "/2006/09/12/nielsen-joel-on-software-and-david-heinemeier-hansson/"
 wp_id: 390
 categories: ["Businesscase"]
 tags: []
+author: "jesper"
 ---
 
 Jakob Nielsen's newsletters often contains small comments to usability related stuff in the news. His latest newsletter is no exception, but misses a very important point.

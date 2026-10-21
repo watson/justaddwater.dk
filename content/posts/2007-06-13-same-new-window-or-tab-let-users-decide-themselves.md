@@ -6,6 +6,7 @@ url: "/2007/06/13/same-new-window-or-tab-let-users-decide-themselves/"
 wp_id: 674
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Sidebar note to the related article "[Open New Window Still Has Usability Issues](/2007/06/13/open-new-window-still-has-usability-issues/ "Justaddwater.dk: Open New Window Still Has Usability Issues")".

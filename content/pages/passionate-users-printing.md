@@ -6,6 +6,7 @@ url: "/passionate-users-printing/"
 wp_id: 388
 categories: []
 tags: []
+author: "jesper"
 ---
 
 *Letter to Kathy Sierra dated August 22nd, 2006, where I discovered some problems with printing pages from her blog: [Creating Passionate Users](http://headrush.typepad.com/ "Kathy Sierra blog: Creating Passionate Users").*

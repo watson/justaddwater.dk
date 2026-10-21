@@ -6,6 +6,7 @@ url: "/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-projec
 wp_id: 1247
 categories: ["Code", "git", "Web Development"]
 tags: ["Code", "git", "ignore"]
+author: "jesper"
 ---
 
 For a project I'm working on, I had to change some files with personal settings, and the files kept showing up with a `git status`.

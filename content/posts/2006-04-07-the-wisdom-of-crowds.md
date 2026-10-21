@@ -6,6 +6,7 @@ url: "/2006/04/07/the-wisdom-of-crowds/"
 wp_id: 208
 categories: ["Podcast"]
 tags: []
+author: "jesper"
 ---
 
 Using the internet to make remarkably intelligent desicions.

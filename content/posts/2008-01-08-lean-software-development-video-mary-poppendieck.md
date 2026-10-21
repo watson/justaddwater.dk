@@ -6,6 +6,7 @@ url: "/2008/01/08/lean-software-development-video-mary-poppendieck/"
 wp_id: 848
 categories: ["Agile", "Productivity", "Video"]
 tags: []
+author: "jesper"
 ---
 
 Here are some great examples i jotted down when watching Mary Poppendieck's presentation at Google: "[Competing on the basis of speed](http://video.google.com/videoplay?docid=-5105910452864283694)". See my notes below.

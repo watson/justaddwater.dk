@@ -6,6 +6,7 @@ url: "/2007/09/06/spam-commenters-are-wasting-brainpower/"
 wp_id: 705
 categories: ["Blogging", "Brainpower", "spam"]
 tags: []
+author: "jesper"
 ---
 
 Imagine the amount of collective brainpower idiotic spammers waste on creative ideas for new ways to get past spam filters.

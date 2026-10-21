@@ -6,6 +6,7 @@ url: "/2007/08/27/crop-or-resize-alternative-stretch-your-images/"
 wp_id: 699
 categories: ["User experience", "Video"]
 tags: []
+author: "jesper"
 ---
 
 This video by Dr. Ariel Shamir from Siggraph 2007 demonstates an alternative to traditional cropping vs. resizing of images. As images on web pages target many different screen sizes, this alternative describes a way to measure the least significan lines in a photo and "stretch" images along these lines.

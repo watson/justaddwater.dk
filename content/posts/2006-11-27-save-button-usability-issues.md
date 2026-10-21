@@ -6,6 +6,7 @@ url: "/2006/11/27/save-button-usability-issues/"
 wp_id: 468
 categories: ["Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 The other day I noted that the Restart button in Windows probably appeared because of buggy software.

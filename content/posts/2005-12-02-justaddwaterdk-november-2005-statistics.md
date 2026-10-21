@@ -6,6 +6,7 @@ url: "/2005/12/02/justaddwaterdk-november-2005-statistics/"
 wp_id: 34
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
+author: "thomas"
 ---
 
 We have been online with our Blog for little over a month now. This means that for the first time we now have a full month worth of log files. Since we love sharing we of cause also want to let you know the status of our statistics. Besides the server log files, we are trying out Google’s new Analytics service, but this was not added to the site until the 14th of November, so we only got about two weeks worth of data from that. Anyway to the point...

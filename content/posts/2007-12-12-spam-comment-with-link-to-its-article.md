@@ -6,6 +6,7 @@ url: "/2007/12/12/spam-comment-with-link-to-its-article/"
 wp_id: 793
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 We got this spam comment yesterday with link to the article itself: It points to the very article it tries to comment.

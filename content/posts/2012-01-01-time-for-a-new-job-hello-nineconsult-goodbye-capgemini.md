@@ -6,6 +6,7 @@ url: "/2012/01/01/time-for-a-new-job-hello-nineconsult-goodbye-capgemini/"
 wp_id: 1535
 categories: ["Brainpower", "capgemini", "job"]
 tags: ["capgemini", "job", "nineconsult"]
+author: "jesper"
 ---
 
 As the year 2011 comes to an end, it is also time for me to quit my job, which i have had for more than a decade.

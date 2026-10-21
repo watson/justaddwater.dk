@@ -6,6 +6,7 @@ url: "/2005/11/13/firefox-usability-work/"
 wp_id: 15
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Ben Goodger from the core Firefox development team has written about some usability issues that they've been working on: [Improving Tabbed Browsing](http://weblogs.mozillazine.org/ben/archives/009210.html).

@@ -6,6 +6,7 @@ url: "/2007/05/05/ruby-on-rails-patch-day-is-on/"
 wp_id: 634
 categories: ["Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 We're in the middle of Ruby on Rails Patch Day in the Copenhagen.rb (the copenhagen ruby society).

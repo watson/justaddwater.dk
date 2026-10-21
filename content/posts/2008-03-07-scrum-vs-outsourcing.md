@@ -6,6 +6,7 @@ url: "/2008/03/07/scrum-vs-outsourcing/"
 wp_id: 908
 categories: ["Agile", "Video"]
 tags: []
+author: "jesper"
 ---
 
 More from Jeff Sutherland (the video presentation i posted about yesterday). This time on outsourcing (sending to India) vs implementing Scrum locally.

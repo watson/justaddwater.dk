@@ -6,6 +6,7 @@ url: "/2009/09/23/internal-apps-in-firefox/"
 wp_id: 1152
 categories: ["Accessibility", "Browser", "capgemini"]
 tags: ["Accessibility", "capgemini", "firefox", "greasemonkey", "login", "workaround"]
+author: "jesper"
 ---
 
 This post is probably highly irrelevant unless you work at Capgemini and want to use the [internal nordic applications](http://applications.capgemini.se/) in Firefox.

@@ -6,6 +6,7 @@ url: "/2006/03/26/inform-the-user-about-the-differences/"
 wp_id: 193
 categories: ["Usability"]
 tags: []
+author: "thomas"
 ---
 
 I just thought I would share a good experience I had today :)

@@ -6,6 +6,7 @@ url: "/2008/11/30/busy-not-updating-blog/"
 wp_id: 977
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Justaddwater.dk has suffered very infrequent updates for a long period of time. Actually a lot is going on both for Thomas and me -- but our activities seldom make it to this blog. Here is an update of what has been keeping us busy.

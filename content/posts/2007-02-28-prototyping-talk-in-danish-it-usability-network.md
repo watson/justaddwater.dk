@@ -6,6 +6,7 @@ url: "/2007/02/28/prototyping-talk-in-danish-it-usability-network/"
 wp_id: 560
 categories: ["Events/seminars", "justaddwater.dk", "Prototyping"]
 tags: []
+author: "thomas"
 ---
 
 Jesper and I were invited yesterday to speak for the [Danish IT usability network](http://www.dansk-it.dk/netvaerk/4_typer_netvaerk/kompetence_netvaerk/usability.aspx "Dansk IT usability kompetencenetværk") (link in Danish) about prototyping and our experience with prototypes.

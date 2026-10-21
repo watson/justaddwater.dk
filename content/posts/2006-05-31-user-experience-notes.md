@@ -6,6 +6,7 @@ url: "/2006/05/31/user-experience-notes/"
 wp_id: 275
 categories: ["Events/seminars", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 Today I’m attending [Jesse James Garrett](http://blog.jjg.net/)’s event "[The elements of User Experience](http://www.adaptivepath.com/events/2006/may3/)" here in Copenhagen. I'll update this post during the day with my notes. ~~if there's network access which I sort of hope.~~

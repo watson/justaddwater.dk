@@ -6,6 +6,7 @@ url: "/2005/11/22/usabilitydagene-tuesday1/"
 wp_id: 23
 categories: ["justaddwater.dk", "Usability"]
 tags: []
+author: "thomas"
 ---
 
 It was Tuesday - The second and final day of the Danish usability conference "[Usability Dagene 2005](http://dansk-it.dk/sw3696.asp)" (Usability Days 2005). Today’s keynotes was delivered first by [Eric Reiss](http://www.e-reiss.com/About%20us/About%20Eric%20Reiss.aspx) and then from Rolf Molich from [DialogDesign](http://www.dialogdesign.dk/inenglish.html) in the afternoon.

@@ -6,6 +6,7 @@ url: "/2008/01/02/speed-house-building-video-teamwork-and-collaboration/"
 wp_id: 849
 categories: ["Agile", "Productivity", "Video"]
 tags: []
+author: "jesper"
 ---
 
 You may know this video, where American construction workers compete to build a house as fast as possible.

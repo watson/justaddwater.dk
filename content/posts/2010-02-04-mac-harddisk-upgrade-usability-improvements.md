@@ -6,6 +6,7 @@ url: "/2010/02/04/mac-harddisk-upgrade-usability-improvements/"
 wp_id: 1264
 categories: ["OS X", "Usability", "User experience"]
 tags: ["mac", "restore", "system", "usablitiy"]
+author: "jesper"
 ---
 
 Blogging for the first time in a long time from my wife's computer, because I'm installing my brand new Intel SSD hard drive in my macbook.

@@ -7,15 +7,15 @@
 /about-the-authors/ # fixed page
 /contact-us/ # fixed page
 /privacy/ # fixed page
-/subscribe/ # fixed page
+/2011/04/10/dk-danske-netbank-usability-problem/ # Danish-language post
 /blogtools/ # fixed page
 /wordpress-plugins/ # fixed page, 142 comments? (long list page)
 /notes-elements-of-user-experience/ # fixed page: notes
 /passionate-users-printing/ # fixed page
 /usabilitydagene-notes-jesper/ # fixed page
 /accessibility-background-danish-center-for-accessibility/ # fixed page
-/thank-you-for-subscribing/ # fixed page
-/thank-you-for-verifying-your-email-subscription/ # fixed page
+/2006/06/25/ten-reaffirmations-from-london-media-2006/ # post by the author luis (empty sidebar on the original)
+/2006/08/17/design-for-browser-size-not-screen-size/ # 'Best of' post with images
 /category/usability/ # category page
 /2006/05/19/rails-tip-scaffolding-lists/ # fenced code blocks
 /2007/11/20/how-to-run-javascript-from-watir-scripts/ # code snippets (Watir)

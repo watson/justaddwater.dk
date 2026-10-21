@@ -6,6 +6,7 @@ url: "/2007/03/03/stop-usability-problems-at-its-inception/"
 wp_id: 561
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Jared Spool has a thoughtful article "[Usability Testing. Oh, The Things You Learn](http://www.uie.com/articles/usability_tests_learn/)". One of his points is that web development teams have made decisions at certain times where usability problems are introduced because key information is missing at design time.

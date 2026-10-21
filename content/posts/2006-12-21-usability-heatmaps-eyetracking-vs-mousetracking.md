@@ -6,6 +6,7 @@ url: "/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/"
 wp_id: 494
 categories: ["justaddwater.dk", "Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 Recently I was recommended taking a look at [CrazyEgg](http://crazyegg.com) which could be a possible candidate for creating heatmaps of user navigation. Rather than to be specific to CrazyEgg, I would like to comment on the general principles and pitfalls when using the methodology that CrazyEgg uses.

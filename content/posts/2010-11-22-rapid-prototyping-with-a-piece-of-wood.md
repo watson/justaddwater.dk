@@ -6,6 +6,7 @@ url: "/2010/11/22/rapid-prototyping-with-a-piece-of-wood/"
 wp_id: 1378
 categories: ["Agile", "Productivity", "Prototyping"]
 tags: ["Productivity", "Prototyping", "rapid prototyping"]
+author: "jesper"
 ---
 
 May I recommend Aza Raskins recent presentation on Rapid prototyping. He shares a lot of very insightful thoughts on how (and why) rapid prototyping is so important.

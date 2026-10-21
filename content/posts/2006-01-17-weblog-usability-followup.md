@@ -6,6 +6,7 @@ url: "/2006/01/17/weblog-usability-followup/"
 wp_id: 85
 categories: ["Blogging", "justaddwater.dk", "RSS", "Usability", "WordPress"]
 tags: []
+author: "jesper"
 ---
 
 In the previous "[Mullet-style blog layout and complete archive page](/2006/01/09/mullet-style-blog-layout-and-complete-archive-page/ "Justaddwater.dk: Mullet-style blog layout and complete archive page")" we had a look on the Mullet-style blog page that makes more content available on the fronpage, and also argued for replacing monthly archives with a single archive page.Danish "[brugervenligeblogs.dk](http://www.brugervenligeblogs.dk/2006/01/er-weblogs-brugervenlige.html "brugervenligeblogs.dk: er weblogs brugervenlige?")" pointed me to a research document from July 2005: [Blog Mainstream Market Penetration Likely Limited By Basic Usability Issues](http://www.catalystgroupdesign.com/people/press/blogpress.asp "Catalyst Group Design - Blog Mainstream Market Penetration Likely Limited ") by Catalyst Group Design. The 19 page usability report is available as [PDF (119KB)](http://www.catalystgroupdesign.com/cofactors/upload/Blog_usability_report.pdf "PDF version of Catalyst Group Design: Blog Mainstream Market Penetration Likely Limited By Basic Usability Issues").

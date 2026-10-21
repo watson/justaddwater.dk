@@ -6,6 +6,7 @@ url: "/2008/04/29/how-to-make-a-dry-run-with-svn-update/"
 wp_id: 924
 categories: ["justaddwater.dk"]
 tags: ["subversion"]
+author: "jesper"
 ---
 
 Quick Subversion trick:

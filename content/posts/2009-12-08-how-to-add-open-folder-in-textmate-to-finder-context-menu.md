@@ -6,6 +6,7 @@ url: "/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/"
 wp_id: 1252
 categories: ["OS X"]
 tags: ["automator", "mac", "osx", "textmate"]
+author: "jesper"
 ---
 
 I wanted to add a menu item in Finder's context menu that would open the selected folder in Textmate.\

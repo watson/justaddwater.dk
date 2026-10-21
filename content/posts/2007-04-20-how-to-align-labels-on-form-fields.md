@@ -6,6 +6,7 @@ url: "/2007/04/20/how-to-align-labels-on-form-fields/"
 wp_id: 583
 categories: ["Forms", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 **Form usability revisited.** In case you missed it, Luke Wroblewski (principal designer of Yahoo!), has made a thorough presentation on best practices in form design. The entire 112 page presentation is definitely worth a read. Kind of required read in my work :)

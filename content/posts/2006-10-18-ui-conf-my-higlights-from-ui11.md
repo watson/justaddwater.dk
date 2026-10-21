@@ -6,6 +6,7 @@ url: "/2006/10/18/ui-conf-my-higlights-from-ui11/"
 wp_id: 420
 categories: ["Events/seminars", "ui11", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 [UI11](http://www.uie.com/events/uiconf/2006/) is over and I headed back to Denmark to digest the insightful presentations. The conference had many highlights and it was truly inspirational to meet so many bright people.Some highlights are worth mentioning.

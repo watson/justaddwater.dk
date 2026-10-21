@@ -6,6 +6,7 @@ url: "/2007/09/11/innovative-but-hidden-text-field-interaction/"
 wp_id: 709
 categories: ["Productivity", "Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 You might know this example. It works this way in Adobe Photoshop.

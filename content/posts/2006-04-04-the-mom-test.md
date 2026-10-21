@@ -6,6 +6,7 @@ url: "/2006/04/04/the-mom-test/"
 wp_id: 18
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Wayfaring, a new maps based webtool is working to make the interface easier to use. From the [Wayfaring blog](http://www.wayfaring.com/blog/?p=6):

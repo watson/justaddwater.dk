@@ -6,6 +6,7 @@ url: "/2008/03/06/video-agile-and-scrum-tuning-by-jeff-sutherland/"
 wp_id: 906
 categories: ["Agile"]
 tags: []
+author: "jesper"
 ---
 
 Scrum video presentation from Jeff Sutherland (speech from December 2006 but highly relevant). The presentation is really packet with great quotes and inspiration. I wonder if I ever will be motivated to work in traditional big waterfall projects again...

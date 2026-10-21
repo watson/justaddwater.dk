@@ -6,6 +6,7 @@ url: "/2008/01/13/rails-localization-plugin-release-version-09/"
 wp_id: 858
 categories: ["Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 Just a quick note to tell that I released version 0.9 of the L10n-simplified plugin. It has been a year since last release, but I had nohurry since the last version already fit for Rails 2.0.

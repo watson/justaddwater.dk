@@ -6,6 +6,7 @@ url: "/2006/01/03/happy-new-year/"
 wp_id: 53
 categories: ["justaddwater.dk"]
 tags: []
+author: "thomas"
 ---
 
 Hi and welcome back in 2006. As you might have noticed, we've been a little lacy over the holidays - but not to worry... We'll be back in force ;)

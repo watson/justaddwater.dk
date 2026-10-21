@@ -6,6 +6,7 @@ url: "/2005/12/12/fixback-is-fixing-trackback-in-wordpress/"
 wp_id: 41
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
+author: "thomas"
 ---
 
 I've been a bit irritated with WordPress for a while now (our blogging software for justaddwarer.dk). For some reason most of our trackbacks from other blogs seem to use ugly styled permalinks. With that I mean http://justaddwater.dk/?p=41 instead of the much nicer http://justaddwater.dk/2005/12/12/fixback-is-fixing-trackback-in-wordpress/.

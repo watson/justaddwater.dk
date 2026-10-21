@@ -6,6 +6,7 @@ url: "/2005/11/24/usabilitydagene-tuesday2/"
 wp_id: 24
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Knife, mushrooms, voodo doll, beer mats, two crushed bisquits and a 1997 FLSchmidt brochure: **Eric Reiss** was the major highlight of day two ([Thomas already blogged about it](/2005/11/22/usabilitydagene-tuesday1/)).

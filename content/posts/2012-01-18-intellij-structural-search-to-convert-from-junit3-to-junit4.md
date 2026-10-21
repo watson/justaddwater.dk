@@ -6,6 +6,7 @@ url: "/2012/01/18/intellij-structural-search-to-convert-from-junit3-to-junit4/"
 wp_id: 1541
 categories: ["Code", "Web Development"]
 tags: ["Code", "editor", "ide", "intellij", "Java"]
+author: "jesper"
 ---
 
 Just a quick tip for intellij users. For an old project i wanted to convert JUnit 3 testcases to JUnit4 format. Most stuff was already in place, but after the conversion, i found that some of the old "assertTrue", "assertFalse", and "assertEquals" statements were failing.

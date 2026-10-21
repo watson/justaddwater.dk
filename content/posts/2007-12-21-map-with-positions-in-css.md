@@ -6,6 +6,7 @@ url: "/2007/12/21/map-with-positions-in-css/"
 wp_id: 829
 categories: ["Usability", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 These days I'm working on the HTML and CSS for this map, but I want to hear your opinions as what to recommend from a usability point of view:

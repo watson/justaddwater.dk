@@ -6,6 +6,7 @@ url: "/2006/06/10/ruby-on-rails-copenhagen-meetup-venue/"
 wp_id: 292
 categories: ["Code", "justaddwater.dk", "Ruby on Rails"]
 tags: []
+author: "thomas"
 ---
 
 We can now finally reveal the venue for the Ruby on Rails meetup in Copenhagen:

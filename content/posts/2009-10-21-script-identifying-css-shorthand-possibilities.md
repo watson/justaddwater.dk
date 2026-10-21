@@ -6,6 +6,7 @@ url: "/2009/10/21/script-identifying-css-shorthand-possibilities/"
 wp_id: 1211
 categories: ["Code", "CSS"]
 tags: ["Code", "CSS"]
+author: "jesper"
 ---
 
 For my own convenience I created this script to identify css files where colors like \#aaaaaa can be rewritten in the short form \#aaa

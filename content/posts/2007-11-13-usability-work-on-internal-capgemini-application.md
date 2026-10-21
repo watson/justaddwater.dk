@@ -6,6 +6,7 @@ url: "/2007/11/13/usability-work-on-internal-capgemini-application/"
 wp_id: 767
 categories: ["justaddwater.dk", "Review", "Usability"]
 tags: ["capgemini", "improvements", "qlockwise", "timereporting", "Usability"]
+author: "jesper"
 ---
 
 I have recently been working with usability an internal timereporting system in Capgemini.

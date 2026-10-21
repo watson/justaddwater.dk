@@ -6,6 +6,7 @@ url: "/2007/10/24/what-its-like-to-be-a-usability-geek/"
 wp_id: 757
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 I gladly admit that I'm a usability geek, which means that sometimes, the most important things for me may be small and insignificant for others. I encounter this every day. Here are two examples from today.

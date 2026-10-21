@@ -6,6 +6,7 @@ url: "/2007/04/11/back-to-work-the-reality-of-word/"
 wp_id: 580
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 After 9 days away from ordinary work, then suddently Microsoft Word snug back on the list of most used programs:

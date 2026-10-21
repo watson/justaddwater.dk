@@ -6,6 +6,7 @@ url: "/2009/10/02/useful-usability-tips/"
 wp_id: 1173
 categories: ["Usability"]
 tags: ["Usability"]
+author: "jesper"
 ---
 
 Smashing Magazine recently published "[10 Useful Usability Findings and Guidelines](http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/)". Actually great work by Dmitry Fadeyev. I find the list well-written, well documented and the principles are easy to apply (or advocate in your team).

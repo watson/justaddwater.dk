@@ -6,6 +6,7 @@ url: "/2006/04/24/assistive/"
 wp_id: 169
 categories: ["Accessibility", "justaddwater.dk", "Usability", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 As a followup to my post [25% of all web users are disabled](/2006/01/20/one-of-four-web-users-are-disabled-users/ "Permanent Link: 25% of all web users are disabled"), I saw that Microsoft commissioned Forrester to make research about accessibility and assistive technologies.

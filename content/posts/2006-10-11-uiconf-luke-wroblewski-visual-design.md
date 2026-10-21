@@ -6,6 +6,7 @@ url: "/2006/10/11/uiconf-luke-wroblewski-visual-design/"
 wp_id: 403
 categories: ["Events/seminars", "justaddwater.dk", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 *\[Live notes from UI Conf\]*\

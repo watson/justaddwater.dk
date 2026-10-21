@@ -6,6 +6,7 @@ url: "/2009/12/01/run-tiny-webserver-from-any-directory/"
 wp_id: 1245
 categories: ["Code"]
 tags: []
+author: "jesper"
 ---
 
 There are alternatives to [Resolve Symlinks When Copying Files With Rsync .](../2009/10/15/resolve-symlinks-when-copying-files-with-rsync/ "Permanent Link to Resolve Symlinks When Copying Files With Rsync")

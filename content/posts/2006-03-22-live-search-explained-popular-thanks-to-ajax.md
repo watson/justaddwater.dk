@@ -6,6 +6,7 @@ url: "/2006/03/22/live-search-explained-popular-thanks-to-ajax/"
 wp_id: 190
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 In case you wanted to know what's popular on Justaddwater.dk right now:

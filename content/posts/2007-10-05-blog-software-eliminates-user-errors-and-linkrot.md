@@ -6,6 +6,7 @@ url: "/2007/10/05/blog-software-eliminates-user-errors-and-linkrot/"
 wp_id: 720
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 The blog software Wordpress is just released in version 2.3. One of the new additions are a feature that can rescue and correct links when users accidentally follow a link in an email broken over 2 lines. Or following an old link that the blog author has renamed.

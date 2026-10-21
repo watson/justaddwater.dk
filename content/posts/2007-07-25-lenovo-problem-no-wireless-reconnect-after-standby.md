@@ -6,6 +6,7 @@ url: "/2007/07/25/lenovo-problem-no-wireless-reconnect-after-standby/"
 wp_id: 681
 categories: ["Hardware"]
 tags: []
+author: "jesper"
 ---
 
 Warning to our frequent readers: This is not about usability or webstandards.

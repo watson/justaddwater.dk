@@ -6,6 +6,7 @@ url: "/2008/08/03/could-you-fit-the-internet-in-windows-recycle-bin/"
 wp_id: 942
 categories: ["Humor"]
 tags: ["Humor"]
+author: "jesper"
 ---
 
 "Send 'Internet' to Recycle bin?"

@@ -6,6 +6,7 @@ url: "/2008/02/11/3-simple-usability-tips-for-developers/"
 wp_id: 890
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 It takes a lifetime to become an expert on the usability field. Many developers may be interested in creating usable, successful applications. But the entry barrier is sometimes too high -- it's easier to rely on the usability experts than to know about usable applications themselves.

@@ -6,6 +6,7 @@ url: "/2012/06/14/count-number-of-jobs-in-hudson/"
 wp_id: 1596
 categories: ["Web Development"]
 tags: ["hudson", "JavaScript", "jenkins"]
+author: "jesper"
 ---
 
 I wanted to count the number of jobs running on a Hudson server (continuous integration) at work.

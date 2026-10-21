@@ -6,6 +6,7 @@ url: "/2009/11/06/greasemonkey-script-for-removing-scrollbars-on-al-anon-page/"
 wp_id: 1235
 categories: ["Personal"]
 tags: []
+author: "jesper"
 ---
 
 I have recently discovered an alcoholic in my family. And in order to deal with that, a friend pointed me to Al-Anon which has material and publications to help relatives.

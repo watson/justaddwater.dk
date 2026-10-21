@@ -6,6 +6,7 @@ url: "/2008/06/23/dont-repeat-yourself-unless-reading-book/"
 wp_id: 937
 categories: ["Code", "Inspiration"]
 tags: []
+author: "jesper"
 ---
 
 [![The Pragmatic Programmer](http://www.pragprog.com/images/covers/190x228/tpp.jpg?1184184147 "pragmatic programmer book image")](http://www.pragprog.com/titles/tpp/the-pragmatic-programmer)

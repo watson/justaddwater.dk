@@ -6,6 +6,7 @@ url: "/2006/10/12/barry-schwartz-the-paradox-of-choice/"
 wp_id: 406
 categories: ["Events/seminars", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 *\[Jesper's live notes from UI Conf. Barry Schwartz really has some deep insightful psychological points, that we can actually use in our daily work as usability professionals.*\

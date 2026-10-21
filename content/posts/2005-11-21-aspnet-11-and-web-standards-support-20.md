@@ -6,6 +6,7 @@ url: "/2005/11/21/aspnet-11-and-web-standards-support-20/"
 wp_id: 19
 categories: ["Code", "CSS", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 At the moment, I'm working on a project where we develop ASP.Net components to a Microsoft Sharepoint Portal Server. I'm working on the user interface, other developers take care of the backend ASP.Net functionality, integration and business logic.

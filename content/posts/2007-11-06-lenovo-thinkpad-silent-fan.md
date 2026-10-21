@@ -6,6 +6,7 @@ url: "/2007/11/06/lenovo-thinkpad-silent-fan/"
 wp_id: 761
 categories: ["Hardware"]
 tags: []
+author: "jesper"
 ---
 
 Since I got my Lenovo Thinkpad T60p I have always wondered why the fan kept running away (even just after booting).

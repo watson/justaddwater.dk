@@ -6,6 +6,7 @@ url: "/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/"
 wp_id: 1361
 categories: ["Web Development"]
 tags: ["development", "gwt", "Java", "w", "Web Development"]
+author: "jesper"
 ---
 
 I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it's a very short list.

@@ -6,6 +6,7 @@ url: "/2006/06/23/spam-comments-just-got-worse/"
 wp_id: 330
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 The last days, we've experienced a lot more spam comments than usual. For some months now, we have removed about 50 spam comments each day here at Justaddwater.dk.

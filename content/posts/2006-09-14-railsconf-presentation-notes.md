@@ -6,6 +6,7 @@ url: "/2006/09/14/railsconf-presentation-notes/"
 wp_id: 391
 categories: ["Events/seminars", "Presentation", "Railsconf", "Speaking"]
 tags: []
+author: "jesper"
 ---
 
 Just a short note that I just published my first notes from the RailsConf keynote presentations. RailsConf ends tomorrow, Friday, and I expect that more notes will show up on our Rails related website: copenhagen.rb

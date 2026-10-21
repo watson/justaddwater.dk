@@ -6,6 +6,7 @@ url: "/2009/03/19/jef-raskins-first-law-of-interface-design-explained/"
 wp_id: 1055
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 In variation of Isaac Asimov's first law of robotics, Jef Raskin writes the first law of interface design:

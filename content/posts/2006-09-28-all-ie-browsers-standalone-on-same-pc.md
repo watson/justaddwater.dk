@@ -6,6 +6,7 @@ url: "/2006/09/28/all-ie-browsers-standalone-on-same-pc/"
 wp_id: 396
 categories: ["Best of Justaddwater", "Browser"]
 tags: []
+author: "jesper"
 ---
 
 Yousif Al Saif of Tredosoft is probably best known for the [IE7 standalone](http://tredosoft.com/IE7_standalone) browser installer that can run isolated on a Windows machine without disturbing the version already installed. I wrote about this in "[IE7, web standards and css support](/2006/08/28/ie-7-web-standards-and-css-support/)".

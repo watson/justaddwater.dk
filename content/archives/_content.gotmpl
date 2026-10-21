@@ -1,4 +1,4 @@
-{{- /* Generates /YYYY/, /YYYY/MM/ and /author/jesper/ (+ /page/N/) archive pages from posts. Regeneration-safe. */ -}}
+{{- /* Generates /YYYY/, /YYYY/MM/ and /author/<slug>/ (+ /page/N/) archive pages from posts. Regeneration-safe. */ -}}
 {{- /* site.RegularPages is unavailable in adapters, so derive dates from content/posts/YYYY-MM-DD-*.md file names. */ -}}
 {{- $per := 20 -}}
 {{- $names := slice -}}
@@ -14,8 +14,20 @@
   {{ $d := time.AsTime (printf "%s-01T00:00:00Z" $k) }}
   {{ $.AddPage (dict "path" (printf "m%s" $k) "title" (printf "Archive for %s" ($d.Format "January, 2006")) "kind" "page" "layout" "datearchive" "url" (printf "/%s/%s/" $y $m) "params" (dict "archive" "month" "year" $y "month" $m)) }}
 {{- end -}}
-{{- $n := math.Ceil (div (float (len $names)) $per) | int -}}
+{{- /* Author archives: only authors the original serves (data/authors.yaml archive: true; thomas/admin 404 there). */ -}}
+{{- $counts := dict -}}
+{{- range $names -}}
+  {{ $src := readFile (printf "content/posts/%s" .) }}
+  {{ $a := "jesper" }}{{ with findRESubmatch `(?m)^author: "(\w+)"` $src 1 }}{{ $a = index (index . 0) 1 }}{{ end }}
+  {{ $counts = merge $counts (dict $a (add (int (index $counts $a)) 1)) }}
+{{- end -}}
+{{- range $slug, $au := hugo.Data.authors -}}
+{{- if $au.archive -}}
+{{- $total := int (index $counts $slug) -}}
+{{- $n := math.Ceil (div (float (math.Max $total 1)) $per) | int -}}
 {{- range seq $n -}}
-  {{ $u := cond (eq . 1) "/author/jesper/" (printf "/author/jesper/page/%d/" .) }}
-  {{ $.AddPage (dict "path" (printf "author-jesper-%d" .) "title" "Author Archive" "kind" "page" "layout" "datearchive" "url" $u "params" (dict "archive" "author" "pagenum" . "pages" $n "per" $per)) }}
+  {{ $u := cond (eq . 1) (printf "/author/%s/" $slug) (printf "/author/%s/page/%d/" $slug .) }}
+  {{ $.AddPage (dict "path" (printf "author-%s-%d" $slug .) "title" "Author Archive" "kind" "page" "layout" "datearchive" "url" $u "params" (dict "archive" "author" "author" $slug "pagenum" . "pages" $n "per" $per "htmltitle" $au.name)) }}
+{{- end -}}
+{{- end -}}
 {{- end -}}

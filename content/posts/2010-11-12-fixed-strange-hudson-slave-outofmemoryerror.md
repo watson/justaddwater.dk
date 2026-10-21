@@ -6,6 +6,7 @@ url: "/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/"
 wp_id: 1373
 categories: ["Continous integration", "Java"]
 tags: ["continuous integration", "hudson", "Java", "setup", "slave"]
+author: "jesper"
 ---
 
 At a current project I am working on, we use Hudson and Maven to build our Java code. Strangely, one of the slaves constantly failed with an OutOfMemory error. We tried two obvious fixes. The first did not work:

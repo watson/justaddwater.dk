@@ -6,6 +6,7 @@ url: "/2007/09/11/busy-preparing-railsconf-presentation/"
 wp_id: 711
 categories: ["Events/seminars", "Presentation", "Railsconf", "Speaking"]
 tags: ["Presentation", "Railsconf", "Speaking"]
+author: "jesper"
 ---
 
 For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.

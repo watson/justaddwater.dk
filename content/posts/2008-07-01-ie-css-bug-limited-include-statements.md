@@ -6,6 +6,7 @@ url: "/2008/07/01/ie-css-bug-limited-include-statements/"
 wp_id: 939
 categories: ["Browser", "CSS"]
 tags: []
+author: "jesper"
 ---
 
 I found out that Internet explorer only interprets 32 @include statements in CSS for a webpage. The rest is silently ignored.

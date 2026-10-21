@@ -6,6 +6,7 @@ url: "/2008/08/28/download-pages-ie-vs-firefox/"
 wp_id: 951
 categories: ["Usability"]
 tags: ["screenshot", "Usability"]
+author: "jesper"
 ---
 
 Here are two different download paradigms presented by [Firefox download page](http://www.mozilla-europe.org/en/firefox/) and [Microsoft Internet Explorer 8 download page](http://www.microsoft.com/windows/internet-explorer/beta/worldwide-sites.aspx?icid=ie8_asdf123)

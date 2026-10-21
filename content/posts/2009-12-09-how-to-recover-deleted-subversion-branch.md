@@ -6,6 +6,7 @@ url: "/2009/12/09/how-to-recover-deleted-subversion-branch/"
 wp_id: 1257
 categories: ["Code", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 I recently deleted a branch from our (svn) code repository. Did you know that it's the general recommendation to delete a branch after a merge to ensure that nobody commits to it. (see [svnmerge wiki](http://www.orcaware.com/svn/wiki/Svnmerge.py#Merging_development_branches_back_to_trunk) for more on that advice)

@@ -6,6 +6,7 @@ url: "/2006/11/14/world-usability-day-we-dumped-our-archives/"
 wp_id: 451
 categories: ["Blogging", "justaddwater.dk", "Usability"]
 tags: []
+author: "thomas"
 ---
 
 Today is [World Usability Day](http://worldusabilityday.org/). Here on Justaddwater.dk, **we have celebrated with finally scrapping our blog archive**.

@@ -6,6 +6,7 @@ url: "/2006/11/13/88-never-use-personalization/"
 wp_id: 447
 categories: ["Best of Justaddwater", "Usability", "User experience"]
 tags: []
+author: "jesper"
 ---
 
 I conducted a little research today on our intranet. We have a links list that can be personalized to your preference.

@@ -6,6 +6,7 @@ url: "/2008/06/26/ten-principles-of-google-user-experience/"
 wp_id: 938
 categories: ["Usability", "User experience"]
 tags: []
+author: "jesper"
 ---
 
 [Jungle drums](/2008/02/15/how-i-keep-informed-without-my-rss-reader-killing-me/ "Justaddwater.dk: How I keep Informed Without My RSS Reader Killing Me  (Feb 15)") pointed me to the [brilliant usability principles posted by Google](http://www.google.com/intl/en/corporate/ux.html). I decided to quote them below here, because it would be interesting to see what changes will be applied over time.

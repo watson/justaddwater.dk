@@ -6,6 +6,7 @@ url: "/2006/03/12/justaddwaterdk-february-2006-statistics/"
 wp_id: 179
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
+author: "thomas"
 ---
 
 Once again we have a month worth of statistics boiled down to a few easy-to-read paragraphs with the highlights of last months log files.

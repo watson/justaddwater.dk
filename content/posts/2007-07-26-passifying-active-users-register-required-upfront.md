@@ -6,6 +6,7 @@ url: "/2007/07/26/passifying-active-users-register-required-upfront/"
 wp_id: 693
 categories: ["Usability", "User experience"]
 tags: []
+author: "jesper"
 ---
 
 A colleague of mine \&mdash; and I don't consider him lazy \&mdash; told me today, that he would refrain from participating in a product forum because he had to register as a user. In his opinion, it was [an interesting debate](http://www.axialis.net/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=4;t=000352) of a product missing an essential feature. An employee from the company had already promised that the feature be in the next version, but another question was coming up \&mdash; when would the next release be?

@@ -6,6 +6,7 @@ url: "/2012/02/24/get-started-using-advanced-webfonts-today/"
 wp_id: 1580
 categories: ["Web Development", "Web Standards"]
 tags: ["Web Development", "webdevelopment", "webfonts"]
+author: "jesper"
 ---
 
 I saw this example on [a blog today](http://uxcampcph.org/):

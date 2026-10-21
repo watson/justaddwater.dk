@@ -6,6 +6,7 @@ url: "/2006/09/11/railsconf-europe/"
 wp_id: 387
 categories: ["Events/seminars", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 We are heading to London Wednesday to attend RailsConf ([described earlier](/2006/05/22/attending-railsconf-europe/ "Justaddwater.dk: Attending RailsConf Europe, London, September")). I'm really looking forward to the exciting presentations. I'm glad we're two Capgemini employees going, because many of the parallel sessions [in the schedule](http://europe.railsconf.org/pages/schedule "Railsconf Europe: Schedule") look interesting.

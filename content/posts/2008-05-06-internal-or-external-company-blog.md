@@ -6,6 +6,7 @@ url: "/2008/05/06/internal-or-external-company-blog/"
 wp_id: 925
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Roughly 2 years ago we started an international User Experience network in Capgemini. And everybody aggreed that we should have a blog. After a short period of time, the blog became stale and I have not visited it since then.

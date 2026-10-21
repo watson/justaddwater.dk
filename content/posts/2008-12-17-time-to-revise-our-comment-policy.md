@@ -6,6 +6,7 @@ url: "/2008/12/17/time-to-revise-our-comment-policy/"
 wp_id: 982
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Our experiment [Spam Filter Free Day](/2007/12/15/today-is-spam-filter-free-day/) had one year anniversary yesterday. We won't repeat the experiment as it gave us a tremendous amount of comments to administer.

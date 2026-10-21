@@ -6,6 +6,7 @@ url: "/2011/04/04/how-to-move-intellij-system-file-to-another-folder/"
 wp_id: 1444
 categories: ["Web Development"]
 tags: ["editor", "ide", "intellij"]
+author: "jesper"
 ---
 
 For work, I use IntelliJ IDEA, when working in Java world. For my current client, there is a quota on my user directory, which means I have to move IDEA system files to another folders.

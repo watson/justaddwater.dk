@@ -6,6 +6,7 @@ url: "/2007/11/15/justaddwaterdk-hacked/"
 wp_id: 779
 categories: ["justaddwater.dk", "WordPress"]
 tags: []
+author: "thomas"
 ---
 
 ### The non-technical version:

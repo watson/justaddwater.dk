@@ -6,6 +6,7 @@ url: "/2007/01/19/microsofts-commitment-to-web-standards/"
 wp_id: 518
 categories: ["HTML", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 [Molly interviewed Bill Gates](http://www.molly.com/2006/12/14/who-questions-bill-gates-commitment-to-web-standards/) on Microsoft's commitment to web standards. Today, Roger added his comments in his article: [Bill Gates on Web standards: Huh?](http://www.456bereastreet.com/archive/200701/bill_gates_on_web_standards_huh/).

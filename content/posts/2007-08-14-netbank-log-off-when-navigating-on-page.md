@@ -6,6 +6,7 @@ url: "/2007/08/14/netbank-log-off-when-navigating-on-page/"
 wp_id: 696
 categories: ["User experience", "Website"]
 tags: []
+author: "jesper"
 ---
 
 I just realized that the netbank I use logs me off when I request a page which the bank defined as "outside the netbank".

@@ -6,6 +6,7 @@ url: "/2007/04/19/tag-your-e-mails-with-thunderbird-2/"
 wp_id: 588
 categories: ["E-mails", "Taxonomy", "Usability", "User Interface"]
 tags: []
+author: "thomas"
 ---
 
 One of the cornerstones in Web 2.0 are the [folksonomy](http://en.wikipedia.org/wiki/Folksonomy "Wikipedia: Folksonomy"), a user generated taxonomy, popularly referred to as **tags**. Google made tags popular ([they call them labels](http://mail.google.com/mail/help/why_gmail.html#label "About Gmail: Labels")) when they launched Gmail (taxonomy) and the online bookmark service del.icio.us [gave us tags](http://del.icio.us/help/tags "del.icio.us help: What are tags?") + social network = folksonomy.

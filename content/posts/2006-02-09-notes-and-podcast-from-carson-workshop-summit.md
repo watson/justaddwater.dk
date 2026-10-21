@@ -6,6 +6,7 @@ url: "/2006/02/09/notes-and-podcast-from-carson-workshop-summit/"
 wp_id: 146
 categories: ["Links", "Podcast"]
 tags: []
+author: "jesper"
 ---
 
 ***UPDATE 2006-02-22:** Podcasts available. All podcasts are now available for download from [Carson Workshops Summit](http://carsonworkshops.com/summit/)*

@@ -6,6 +6,7 @@ url: "/2008/03/27/scrum-presentation-edit/"
 wp_id: 917
 categories: ["Agile", "capgemini", "Presentation", "smartlunch", "Video"]
 tags: ["Agile", "capgemini", "Presentation", "scrum", "smartlunch", "Video"]
+author: "jesper"
 ---
 
 Jakob Scmidt Sørensen made an edited boiled down of his [Internal Capgemini Scrum Presentation](/2008/03/08/internal-capgemini-scrum-presentation/).

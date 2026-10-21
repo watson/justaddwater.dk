@@ -6,6 +6,7 @@ url: "/2006/10/20/blogging-policy-and-guidelines/"
 wp_id: 427
 categories: ["Blogging", "justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Part of our "blog usability" series.

@@ -6,6 +6,7 @@ url: "/2005/11/18/danish-usability-conference/"
 wp_id: 20
 categories: ["justaddwater.dk", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 [![IMG_1551](http://static.flickr.com/30/65199575_ad1a0ab136_m.jpg)](http://www.flickr.com/photos/jesper/65199575/ "Photo Sharing")\

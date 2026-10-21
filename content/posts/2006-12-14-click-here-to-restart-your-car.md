@@ -6,6 +6,7 @@ url: "/2006/12/14/click-here-to-restart-your-car/"
 wp_id: 481
 categories: ["Humor", "Usability", "User Interface"]
 tags: []
+author: "thomas"
 ---
 
 I just saw the very funny usability video called '[Lexus Self-Parking “Usability” Test](http://usabilityworks.org/2006/12/06/lexus-self-parking-usability-test/ "Matthew Oliphant's usabilityworks.org - Lexus Self-Parking “Usability” Test")' (via Matthew Oliphant).

@@ -6,6 +6,7 @@ url: "/2015/01/21/rewrite-authoremail-in-git-history/"
 wp_id: 1733
 categories: ["git"]
 tags: []
+author: "jesper"
 ---
 
 After my harddisk crashed and I reinstalled the machine recently, I misconfigured my Git to set EMAIL as email address.

@@ -6,6 +6,7 @@ url: "/2006/05/24/chinese-blog-most-popular-worldwide/"
 wp_id: 267
 categories: ["Blogging"]
 tags: []
+author: "jesper"
 ---
 
 Just realized that the most popular blog on [Technorati's top 100 list](http://technorati.com/pop/blogs/ "Technorati.com: Popular blogs") is the Chinese [老徐 徐静蕾 新浪BLOG](http://technorati.com/weblog/2006/05/103.html). With links from almost 30,000 websites, that's an amazing achievement. When did that happen? Who's linking to this?

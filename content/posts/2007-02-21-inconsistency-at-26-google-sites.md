@@ -6,6 +6,7 @@ url: "/2007/02/21/inconsistency-at-26-google-sites/"
 wp_id: 559
 categories: ["Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 Chris McEvoy has some good and thorough observations around the inconsistencies in Google's menues. Even though the menus are extremely simple, they seem to differ on most of the 26 sites mentioned.

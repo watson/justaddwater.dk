@@ -6,6 +6,7 @@ url: "/2007/09/22/railsconf-europe-2007-recap/"
 wp_id: 715
 categories: ["Events/seminars", "Railsconf", "Speaking"]
 tags: []
+author: "jesper"
 ---
 
 I wanted this post to be named "Usability Lessons from RailsConf Europe 2007" — but realized that only some what I want to write below is about usability.

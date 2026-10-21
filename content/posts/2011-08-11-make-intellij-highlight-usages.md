@@ -6,6 +6,7 @@ url: "/2011/08/11/make-intellij-highlight-usages/"
 wp_id: 1480
 categories: ["Java", "Productivity", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 By default, Eclipse highlights usage of a word, if you double click it. But IntelliJ IDEA can also do that.

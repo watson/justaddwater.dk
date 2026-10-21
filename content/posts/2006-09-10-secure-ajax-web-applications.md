@@ -6,6 +6,7 @@ url: "/2006/09/10/secure-ajax-web-applications/"
 wp_id: 386
 categories: ["AJAX", "Security", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 Scott Dietzen of Zimbra posted a decent article about [security issues in AJAX web applications](http://www.zimbra.com/blog/archives/2006/09/securing_ajax.html "Zimbra blog: Securing Ajax").

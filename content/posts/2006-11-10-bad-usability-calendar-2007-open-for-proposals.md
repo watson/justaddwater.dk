@@ -6,6 +6,7 @@ url: "/2006/11/10/bad-usability-calendar-2007-open-for-proposals/"
 wp_id: 441
 categories: ["Accessibility", "Humor", "Usability", "User experience"]
 tags: ["Accessibility", "calendar", "Humor", "Usability", "User experience"]
+author: "jesper"
 ---
 
 Our Norwegian friends at Netlife Research have opened for suggestions to next years Bad Usability Calendar. I already used the [2006 calendar with great impact](/2006/10/16/bad-usability-calendar/ "Justaddwater.dk: Bad Usability Calendar 2006") in my professional engagements, and I'm really looking forward to next year's version.

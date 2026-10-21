@@ -6,6 +6,7 @@ url: "/2005/11/21/google-analytics-vs-usability/"
 wp_id: 22
 categories: ["Usability", "Web Statistics"]
 tags: []
+author: "thomas"
 ---
 
 I've had some more time to test the new [Google Analytics](http://www.google.com/analytics/) service since the last time my colleague Jesper [first wrote](/2005/11/14/google-analytics/) about it. There is still some usability issues that of cause very well could be because the service of today still is only a week old. As mentioned previously we had a problem seeing that Analytics actually was receiving and processing hits on our site. When I added yet another site a couple of days later on the 16th, the lack of response from the service was still an issue.

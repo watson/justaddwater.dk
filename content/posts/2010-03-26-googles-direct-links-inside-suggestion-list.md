@@ -6,6 +6,7 @@ url: "/2010/03/26/googles-direct-links-inside-suggestion-list/"
 wp_id: 1298
 categories: ["Usability", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 I just saw this feature today: Google added direct links into the list of autocompleting search results:

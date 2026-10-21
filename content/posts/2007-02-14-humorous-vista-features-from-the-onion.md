@@ -6,6 +6,7 @@ url: "/2007/02/14/humorous-vista-features-from-the-onion/"
 wp_id: 548
 categories: ["HTML", "Humor", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 The Onion has a humorous feature list from Microsoft Vista in the recent issue:

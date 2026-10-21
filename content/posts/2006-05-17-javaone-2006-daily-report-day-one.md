@@ -6,6 +6,7 @@ url: "/2006/05/17/javaone-2006-daily-report-day-one/"
 wp_id: 258
 categories: ["Java", "JavaOne"]
 tags: []
+author: "thomas"
 ---
 
 The day started with a "Sun General Session" for all conference attendees. If there is one sentence that is worth repeating from this session it must be this one by Rich Green when he is asked by Jonathan Schwartz (President and CEO of Sun) "Are you gonna open source Java?":

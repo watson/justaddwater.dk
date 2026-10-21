@@ -6,6 +6,7 @@ url: "/2006/05/23/blog-usability-linking/"
 wp_id: 264
 categories: ["Blogging", "Links", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Blog linking can be painful. Sometimes it's the one thing that takes most time when I'm writing for this weblog. I just saw a brilliant example from the new Alistapart article by Joe Clark.

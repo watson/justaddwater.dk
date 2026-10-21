@@ -6,6 +6,7 @@ url: "/2006/01/24/more-numbers-confirming-25-of-web-users-disabled/"
 wp_id: 107
 categories: ["Accessibility", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 UPDATE: This is reposted (with a new URL): I forgot to fill out a title for the article and my blog software did not stop me. This is of course a usability issue as the software is not dealing with my stupidity and eagerness to press the publish button ;-)

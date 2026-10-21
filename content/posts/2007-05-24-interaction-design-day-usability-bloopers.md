@@ -6,6 +6,7 @@ url: "/2007/05/24/interaction-design-day-usability-bloopers/"
 wp_id: 663
 categories: ["Events/seminars", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Interaction Design Day, Copenhagen\

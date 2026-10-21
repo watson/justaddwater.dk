@@ -6,6 +6,7 @@ url: "/2007/09/14/should-a-blog-have-a-privacy-policy/"
 wp_id: 218
 categories: ["Blogging", "justaddwater.dk", "Usability"]
 tags: []
+author: "thomas"
 ---
 
 ![Digital Footprints](http://justaddwater.dk/wp-content/uploads/2007/09/digital_footprints.jpg)When asking a user about personal details you should also tell what you are going to use it for. Basically it's always good practice to have a privacy policy available on your website so users can see what data is being collected about them, how it is uses etc.

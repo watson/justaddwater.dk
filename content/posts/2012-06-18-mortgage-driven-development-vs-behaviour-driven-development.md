@@ -6,6 +6,7 @@ url: "/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/"
 wp_id: 1613
 categories: ["Events/seminars", "QCon", "Testing", "Web Development"]
 tags: ["bdd", "cucumber", "event", "Presentation", "qconnewyork"]
+author: "jesper"
 ---
 
 As you may already know, I am in New York with my company, attending the QCon conference.

@@ -6,6 +6,7 @@ url: "/2006/02/05/pogosticking-and-why-it-should-be-avoided/"
 wp_id: 132
 categories: ["Best of Justaddwater", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Pogosticking is best explained with examples:

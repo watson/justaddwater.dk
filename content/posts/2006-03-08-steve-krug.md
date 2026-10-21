@@ -6,6 +6,7 @@ url: "/2006/03/08/steve-krug/"
 wp_id: 175
 categories: ["Accessibility", "justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 ![dont-make-me-think.jpg](/wp-content/uploads/2006/03/dont-make-me-think.jpg)I'm a big fan of [Steve Krug](http://www.sensible.com/ "Steve Krug website") and especially the "[Don't make me think](http://www.sensible.com/buythebook.html "Don't make me think: buy the book")" mantra (because most people actually get the point). In his [presentation at the Boston-IA chapter](http://www.boston-ia.org/news/article_17.html "Boston-IA: ") from Jan 26, this blog suddently shows up.

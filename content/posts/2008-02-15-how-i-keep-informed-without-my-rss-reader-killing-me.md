@@ -6,6 +6,7 @@ url: "/2008/02/15/how-i-keep-informed-without-my-rss-reader-killing-me/"
 wp_id: 894
 categories: ["Productivity"]
 tags: []
+author: "jesper"
 ---
 
 I got this question today from Lars Pind, who is a brilliant former developer now coaching other software developers:

@@ -6,6 +6,7 @@ url: "/2009/01/14/intranet-inspiration/"
 wp_id: 995
 categories: ["Usability"]
 tags: ["capgemini", "intranet", "Usability"]
+author: "jesper"
 ---
 
 Just purchased Jakob Nielsen's new screenshot-packed "[10 Best Intranets of 2009](http://www.useit.com/alertbox/intranet_design.html)" report, which I plan to use as inspiration in my company.

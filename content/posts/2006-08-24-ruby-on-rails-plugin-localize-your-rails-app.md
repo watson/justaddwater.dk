@@ -6,6 +6,7 @@ url: "/2006/08/24/ruby-on-rails-plugin-localize-your-rails-app/"
 wp_id: 381
 categories: ["Best of Justaddwater", "Code", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 Recently I've been working on a plugin for Ruby on Rails that help me out when creating new Rails applications in Danish. Previously, when we've created Danish prototypes for our customers **all the default Rails error messages were still written in English**.

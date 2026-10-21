@@ -6,6 +6,7 @@ url: "/2006/12/03/google-release-of-audio-alternative-to-captcha/"
 wp_id: 475
 categories: ["Accessibility"]
 tags: []
+author: "jesper"
 ---
 
 Google updated their CAPTCHA logic to provide an audio alternative for visual impaired users — or also users that have a hard time reading the twisted letters.

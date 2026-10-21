@@ -6,6 +6,7 @@ url: "/2008/03/08/internal-capgemini-scrum-presentation/"
 wp_id: 910
 categories: ["Agile", "capgemini", "Presentation", "smartlunch"]
 tags: ["Agile", "capgemini", "Presentation", "scrum", "smartlunch", "Speaking", "Video"]
+author: "jesper"
 ---
 
 If you understand Danish, then this internal presentation might be something for you.

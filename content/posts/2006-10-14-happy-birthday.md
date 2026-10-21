@@ -6,6 +6,7 @@ url: "/2006/10/14/happy-birthday/"
 wp_id: 411
 categories: ["Blogging", "justaddwater.dk", "Web Statistics"]
 tags: []
+author: "thomas"
 ---
 
 ![Justaddwater.dk - 1 year anniversary](/wp-content/uploads/2006/10/justaddwater-1year-narrow_resize.jpg)Today is our anniversary! One year ago, on this day, Jesper and I sat down in the office to chat. It was Friday and we quickly started talking about our favorite subject: What could we do to **raise awareness of usability and web standards** inside Capgemini?

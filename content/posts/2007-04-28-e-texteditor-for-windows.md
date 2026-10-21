@@ -6,6 +6,7 @@ url: "/2007/04/28/e-texteditor-for-windows/"
 wp_id: 605
 categories: ["Code", "CSS", "HTML", "JavaScript", "Productivity", "Ruby on Rails", "Software"]
 tags: []
+author: "jesper"
 ---
 
 I have been looking a fast, intuitive editor for my Windows laptop.

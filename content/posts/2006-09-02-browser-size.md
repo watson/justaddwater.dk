@@ -6,6 +6,7 @@ url: "/2006/09/02/browser-size/"
 wp_id: 385
 categories: ["Browser", "justaddwater.dk", "Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 I asked for numbers confirming my thoughts recently in "[Design for Browser Size — Not Screen Size](/2006/08/17/design-for-browser-size-not-screen-size/ "Permanent Link to Design for Browser Size — Not Screen Size")".

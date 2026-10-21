@@ -6,6 +6,7 @@ url: "/2007/06/13/open-new-window-still-has-usability-issues/"
 wp_id: 673
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Open new windows is a no-no for several reasons. Frequently readers probably know this already, but since I'm often seeing this on Danish web pages, I think it's time to reopen the discussion with new considerations.

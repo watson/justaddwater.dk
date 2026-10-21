@@ -6,6 +6,7 @@ url: "/2009/01/08/css-fun-flag-deprecated-html-tags/"
 wp_id: 990
 categories: ["CSS", "Web Development", "Web Standards"]
 tags: ["css webdevelopment deprecated html validation"]
+author: "jesper"
 ---
 
 Here is a little fun CSS snippet that helped me identify deprecated HTML on a recent project. Put these lines into the CSS file of your website:

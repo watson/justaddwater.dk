@@ -6,6 +6,7 @@ url: "/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/"
 wp_id: 1117
 categories: ["Code", "git", "Web Development"]
 tags: ["Code", "git", "github"]
+author: "jesper"
 ---
 
 **UPDATE 9 hours later: Changed to "remote = origin" to the specific branch "remote = dean" which works!**

@@ -6,6 +6,7 @@ url: "/2009/02/21/using-local-file-based-git-server-laziness/"
 wp_id: 1029
 categories: ["Code", "justaddwater.dk", "Web Development"]
 tags: ["Code", "git", "ssh", "svn", "Web Development"]
+author: "jesper"
 ---
 
 My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup:

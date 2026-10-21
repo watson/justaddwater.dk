@@ -6,6 +6,7 @@ url: "/2006/06/20/misleading-error-messages-litteraly/"
 wp_id: 318
 categories: ["Errors", "Usability"]
 tags: []
+author: "thomas"
 ---
 
 We all know that giving the user a correct error message is essential. It is important that the message is clearly visible and written in a way so that there is no doubt what the problem is.

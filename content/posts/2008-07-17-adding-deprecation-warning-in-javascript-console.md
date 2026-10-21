@@ -6,6 +6,7 @@ url: "/2008/07/17/adding-deprecation-warning-in-javascript-console/"
 wp_id: 940
 categories: ["Code", "JavaScript"]
 tags: ["JavaScript"]
+author: "jesper"
 ---
 
 I used this quick trick today to help me clean up and refactor some javascript functions today:

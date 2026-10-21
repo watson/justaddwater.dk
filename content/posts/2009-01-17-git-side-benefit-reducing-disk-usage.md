@@ -6,6 +6,7 @@ url: "/2009/01/17/git-side-benefit-reducing-disk-usage/"
 wp_id: 1014
 categories: ["Code"]
 tags: ["Code", "git", "gitify", "svn"]
+author: "jesper"
 ---
 
 A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed.\

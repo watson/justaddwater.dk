@@ -6,6 +6,7 @@ url: "/2009/09/21/sell-more-add-next-steps-to-your-status-messages/"
 wp_id: 1146
 categories: ["Usability", "User experience", "Web Development"]
 tags: ["e-commerce", "Usability", "User experience"]
+author: "jesper"
 ---
 
 Sometimes, when doing web development, we forget that not everybody are as familiar with the web jargon as ourselves.

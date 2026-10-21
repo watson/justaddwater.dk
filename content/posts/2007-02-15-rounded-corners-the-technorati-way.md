@@ -6,6 +6,7 @@ url: "/2007/02/15/rounded-corners-the-technorati-way/"
 wp_id: 550
 categories: ["Code", "CSS", "HTML", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 It's been a while where web standards don't get the attention it deserves on this blog. In that spirit, here's a behind-the-scenes view on how Technorati makes rounded corners on a faded background.

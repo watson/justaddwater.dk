@@ -6,6 +6,7 @@ url: "/2007/02/07/web-video-20-just-text-or-rethink-our-future/"
 wp_id: 538
 categories: ["Links", "Syndication", "Video"]
 tags: []
+author: "jesper"
 ---
 
 Must see [Michael Wesch](http://www.ksu.edu/sasw/anthro/wesch.htm) of Kansas University released a brilliant video on the possibilities of the web.

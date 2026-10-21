@@ -6,6 +6,7 @@ url: "/2012/02/14/criteria-for-the-capgemini-software-engineer-certification/"
 wp_id: 1571
 categories: ["capgemini"]
 tags: ["capgemini", "certification"]
+author: "jesper"
 ---
 
 It turns out i could not find any public web description of the certification I took last autumn while working with Capgemini.

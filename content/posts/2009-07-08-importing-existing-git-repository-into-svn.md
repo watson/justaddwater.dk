@@ -6,6 +6,7 @@ url: "/2009/07/08/importing-existing-git-repository-into-svn/"
 wp_id: 1104
 categories: ["Code"]
 tags: ["Code", "git", "subversion", "svn", "Web Development"]
+author: "jesper"
 ---
 
 Many of my colleagues know svn but are in general not (yet) ready jump over to using Git for bigger projects.

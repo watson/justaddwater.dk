@@ -6,6 +6,7 @@ url: "/2010/10/01/successful-approach-to-user-experience/"
 wp_id: 1357
 categories: ["User Interface"]
 tags: []
+author: "jesper"
 ---
 
 I have a reading proposal for you: Marc Hedlund's "[Why Wesabe Lost to Mint](http://blog.precipice.org/why-wesabe-lost-to-mint)". Wesabe and Mint were competing to be the best free web-based personal financial management services.

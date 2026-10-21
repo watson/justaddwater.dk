@@ -6,6 +6,7 @@ url: "/2008/03/14/where-to-find-a-giant-affordable-touch-screen/"
 wp_id: 913
 categories: ["Agile"]
 tags: []
+author: "jesper"
 ---
 
 Time for a Lazyweb request.

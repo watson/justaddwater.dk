@@ -6,6 +6,7 @@ url: "/2015/12/13/ruby-make-list-minimum-length/"
 wp_id: 1781
 categories: ["Code", "Ruby on Rails"]
 tags: ["Code", "ruby"]
+author: "jesper"
 ---
 
 In a Ruby on Rails app, I wanted a list to be at least of two items. This could be done in several ways.

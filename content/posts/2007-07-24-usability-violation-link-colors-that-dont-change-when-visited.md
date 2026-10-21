@@ -6,6 +6,7 @@ url: "/2007/07/24/usability-violation-link-colors-that-dont-change-when-visited/
 wp_id: 310
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Links should change colors when visited to assist the user in navigation. This may be common knowledge to you. Nevertheless, from time to time I run into graphical designers that are not aware of this web convention and why it should be so.

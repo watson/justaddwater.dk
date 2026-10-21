@@ -6,6 +6,7 @@ url: "/2010/04/20/groovy-for-hudson-console/"
 wp_id: 1305
 categories: ["Code"]
 tags: ["Code", "groovy"]
+author: "jesper"
 ---
 
 Hudson continuous integration server has a console which is good for testing scripts and access to commands that your Hudson jobs need.

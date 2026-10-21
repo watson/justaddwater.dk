@@ -6,6 +6,7 @@ url: "/2008/11/07/plugin-for-railss-resource-controller/"
 wp_id: 969
 categories: ["Code", "Ruby on Rails"]
 tags: ["Code", "plugin", "rails"]
+author: "jesper"
 ---
 
 If you're using Resource Controller for Ruby on Rails, you may want to look atthe plugin I just created.

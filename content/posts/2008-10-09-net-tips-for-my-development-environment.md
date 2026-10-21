@@ -6,6 +6,7 @@ url: "/2008/10/09/net-tips-for-my-development-environment/"
 wp_id: 958
 categories: ["Web Development"]
 tags: ["development", "iis", "microsoft", "visual studio", "Web Development"]
+author: "jesper"
 ---
 
 At a recent project I had to work in a full-blown .NET environment. Here are some of the tips I collected from my colleagues.

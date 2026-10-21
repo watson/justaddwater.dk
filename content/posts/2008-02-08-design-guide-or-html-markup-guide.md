@@ -6,6 +6,7 @@ url: "/2008/02/08/design-guide-or-html-markup-guide/"
 wp_id: 861
 categories: ["Web Development", "Web Standards"]
 tags: ["htmlguide", "Productivity", "Web Standards"]
+author: "jesper"
 ---
 
 At a recent project, there was a requirement to describe the CSS used on a site, as a documentation, other developers could use. We decided to go a bit further -- not only documenting the CSS classes -- but making a guide that developers could find easy to use. Also we wanted developers with little or no CSS knowledge to be able to use the guide.

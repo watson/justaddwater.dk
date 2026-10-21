@@ -6,6 +6,7 @@ url: "/2006/05/10/speaking-on-usability-and-rapid-prototyping/"
 wp_id: 239
 categories: ["Businesscase", "Prototyping", "Ruby on Rails", "Speaking", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 For those of you in Denmark in the Copenhagen area.

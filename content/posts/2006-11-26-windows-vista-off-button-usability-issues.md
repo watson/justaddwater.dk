@@ -6,6 +6,7 @@ url: "/2006/11/26/windows-vista-off-button-usability-issues/"
 wp_id: 467
 categories: ["Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 Below is my argument that some user interface widgets are introduced only because of buggy software. First let's have a look at Windows Vista. Joel Spolsky is picking on the 24 people that designed the Off button in Windows Vista: [Choices = Headaches](http://www.joelonsoftware.com/items/2006/11/21.html).

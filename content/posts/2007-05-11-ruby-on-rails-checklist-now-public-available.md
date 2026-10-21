@@ -6,6 +6,7 @@ url: "/2007/05/11/ruby-on-rails-checklist-now-public-available/"
 wp_id: 645
 categories: ["Prototyping", "Ruby on Rails", "WordPress"]
 tags: []
+author: "jesper"
 ---
 
 Today I've removed password protection on the article "[Prototyping Ruby on Rails Checklist to Get Started](/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/ "Permanent Link: Protected: Prototyping Ruby on Rails Checklist to Get Started")".

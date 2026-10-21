@@ -6,6 +6,7 @@ url: "/2007/02/07/google-mail-downtime/"
 wp_id: 535
 categories: ["Errors"]
 tags: []
+author: "jesper"
 ---
 
 Right now, Google Mail disappeared just as I was about to send an email.

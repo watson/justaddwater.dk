@@ -6,6 +6,7 @@ url: "/2009/11/03/zyb-com-sync-with-new-nokia-e52-phone/"
 wp_id: 1215
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 The company I work for has negotiated a new phone deal with another tele provider, which meant everybody had to change phones and numbers.

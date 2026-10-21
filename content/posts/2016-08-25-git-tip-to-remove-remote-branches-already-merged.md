@@ -6,6 +6,7 @@ url: "/2016/08/25/git-tip-to-remove-remote-branches-already-merged/"
 wp_id: 1798
 categories: ["git"]
 tags: []
+author: "jesper"
 ---
 
 Let's talk about source control and an efficient way of using Git.

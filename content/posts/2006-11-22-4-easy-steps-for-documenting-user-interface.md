@@ -6,6 +6,7 @@ url: "/2006/11/22/4-easy-steps-for-documenting-user-interface/"
 wp_id: 462
 categories: ["Best of Justaddwater", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 I was asked today on which best practices exist in documenting user interfaces. Especially with focus on documenting how and where the user interface (GUI) communicates with backend services.

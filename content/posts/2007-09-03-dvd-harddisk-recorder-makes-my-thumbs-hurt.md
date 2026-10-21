@@ -6,6 +6,7 @@ url: "/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/"
 wp_id: 701
 categories: ["User experience", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 Last week our old DVD player stopped working, and we decided it was time for a technological quantum leap.

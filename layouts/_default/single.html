@@ -15,7 +15,7 @@
 </div>
 {{ if eq .Type "posts" }}
 <p class="postmetadata alt"><small>
-This entry was posted by Jesper Rønn-Jensen on {{ .Date.Format "Monday, January 2, 2006 15:04" }}{{ with .Params.categories }} and is filed under {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="/category/{{ $c | urlize }}/" rel="category tag">{{ $c }}</a>{{ end }}{{ end }}.
+This entry was posted by {{ with index hugo.Data.authors (.Params.author | default "jesper") }}{{ .name }}{{ end }} on {{ .Date.Format "Monday, January 2, 2006 15:04" }}{{ with .Params.categories }} and is filed under {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="/category/{{ $c | urlize }}/" rel="category tag">{{ $c }}</a>{{ end }}{{ end }}.
 Comments are archived and read-only.
 </small></p>
 {{ end }}

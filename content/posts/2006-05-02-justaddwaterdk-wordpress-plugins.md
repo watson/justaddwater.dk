@@ -6,6 +6,7 @@ url: "/2006/05/02/justaddwaterdk-wordpress-plugins/"
 wp_id: 236
 categories: ["justaddwater.dk", "WordPress"]
 tags: []
+author: "thomas"
 ---
 
 I've created a bunch of WordPress plugins for our justaddwater.dk blog. In the spirit of sharing I've made a couple of them available for download. My plan is to make all of them available as soon as they are ready for the public. I've created a page called "[WordPress Plugins](/wordpress-plugins/)" under justaddwater.dk where you always can find and download our latest plugins.

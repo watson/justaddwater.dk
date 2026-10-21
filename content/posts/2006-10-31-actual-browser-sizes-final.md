@@ -6,6 +6,7 @@ url: "/2006/10/31/actual-browser-sizes-final/"
 wp_id: 435
 categories: ["Browser", "Usability", "Web Development", "Web Statistics"]
 tags: []
+author: "thomas"
 ---
 
 The numbers are in! Jesper first asked the question in "[Design for Browser Size — Not Screen Size](/2006/08/17/design-for-browser-size-not-screen-size/ "Design for Browser Size — Not Screen Size")" and quickly after Thomas Baekdal of [baekdal.com](http://baekdal.com/ "Baekdal.com - The Goal is Pretty Simple") took up the challenge. After publishing [his preliminary results](http://www.baekdal.com/articles/Usability/actual-browser-size-preliminary "Actual Browser Sizes - Preview") he have now unveiled [**the final report**](http://www.baekdal.com/reports/actual-browser-sizes/ "Actual Browser Sizes (final)"):

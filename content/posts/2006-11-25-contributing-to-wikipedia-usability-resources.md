@@ -6,6 +6,7 @@ url: "/2006/11/25/contributing-to-wikipedia-usability-resources/"
 wp_id: 466
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Recently I contacted Frank Spillers (of [experience dynamics](http://www.experiencedynamics.com/)) in order to update wikipedia with citations in an article he originally crafted.

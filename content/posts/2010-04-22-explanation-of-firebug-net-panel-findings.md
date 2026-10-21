@@ -6,6 +6,7 @@ url: "/2010/04/22/explanation-of-firebug-net-panel-findings/"
 wp_id: 1311
 categories: ["Web Development"]
 tags: ["firebug", "http", "network", "Web Development"]
+author: "jesper"
 ---
 
 Jan Odvarko – one of the Firebug developers – posted some very good explanations on the information available from the Firebug net panel.

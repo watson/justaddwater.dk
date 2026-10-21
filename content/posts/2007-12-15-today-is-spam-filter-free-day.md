@@ -6,6 +6,7 @@ url: "/2007/12/15/today-is-spam-filter-free-day/"
 wp_id: 805
 categories: ["Blogging", "justaddwater.dk", "spam", "WordPress"]
 tags: []
+author: "thomas"
 ---
 
 Saturday the 15th is Spam Filter Free Day here at justaddwater.dk. Why would we ever want to do something like that you ask? Well up until recently we received about 2-3000 spam comments each day so we thought we would draw attention to the wasted bandwidth, time and energy that all these spam comments consume. Not to speak of the large amount of hours with manually filtering all comments that our different spam filtering techniques free us from.

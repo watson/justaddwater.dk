@@ -6,6 +6,7 @@ url: "/2006/10/12/ui-conf-jared-spool/"
 wp_id: 407
 categories: ["Events/seminars", "Podcast", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 \[Jesper's note: There is actually a lot of this that I decided not to jot down. Jared said that his talk is available on Google Video. However, I couldn't find it\]

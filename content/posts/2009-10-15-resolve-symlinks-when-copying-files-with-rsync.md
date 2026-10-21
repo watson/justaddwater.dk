@@ -6,6 +6,7 @@ url: "/2009/10/15/resolve-symlinks-when-copying-files-with-rsync/"
 wp_id: 1207
 categories: ["Code"]
 tags: []
+author: "jesper"
 ---
 
 In a project I'm working on there is a structure where images and css are common for some of the subprojects. One folder has static pages for testing HTML + CSS layout. This folder has some symlinks to the /css folder and /images folder.

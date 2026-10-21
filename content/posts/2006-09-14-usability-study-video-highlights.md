@@ -6,6 +6,7 @@ url: "/2006/09/14/usability-study-video-highlights/"
 wp_id: 389
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Jakob Nielsen published a new article "[User Testing is Not Entertainment](http://www.useit.com/alertbox/user-testing-showbiz.html "Alertbox: User Testing is Not Entertainment")". The second half is actually about entertainment - sort of.

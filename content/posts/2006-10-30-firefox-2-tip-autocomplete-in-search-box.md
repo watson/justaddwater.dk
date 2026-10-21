@@ -6,6 +6,7 @@ url: "/2006/10/30/firefox-2-tip-autocomplete-in-search-box/"
 wp_id: 431
 categories: ["Browser"]
 tags: []
+author: "jesper"
 ---
 
 As Firefox 2 is set to release this Tuesday, I just want to share this neat trick with you.

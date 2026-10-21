@@ -6,6 +6,7 @@ url: "/2007/05/09/google-analytics-redesign-flaw-slipped-through/"
 wp_id: 641
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Lou Rosenfeld wrote that [google analytics is redesigned](http://louisrosenfeld.com/home/bloug_archive/2007/05/google_analytics_redesigned.html) and has short notes from the demo that [Jeff Veen](http://www.veen.com/jeff/archives/000965.html) and his team gave at [Emetrics](http://www.emetrics.org/2007/sanfrancisco/) yesterday. There is a cool demo on the [google analytics website](http://services.google.com/analytics/tour/index_en-US.html).

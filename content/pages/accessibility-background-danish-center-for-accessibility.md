@@ -6,6 +6,7 @@ url: "/accessibility-background-danish-center-for-accessibility/"
 wp_id: 98
 categories: []
 tags: []
+author: "jesper"
 ---
 
 [« Back to "One of four web users are disabled users"](/2006/01/20/one-of-four-web-users-are-disabled-users/ "One of four web users are disabled users")

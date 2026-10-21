@@ -6,6 +6,7 @@ url: "/2007/01/08/best-brainstorming-tool-instant-messaging/"
 wp_id: 504
 categories: ["Brainpower"]
 tags: []
+author: "jesper"
 ---
 
 Instant messaging tools like messenger, google talk or similar are apparently better tools for brainstorming than for instance email or wikis.

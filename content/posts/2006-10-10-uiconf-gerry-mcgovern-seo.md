@@ -6,6 +6,7 @@ url: "/2006/10/10/uiconf-gerry-mcgovern-seo/"
 wp_id: 401
 categories: ["Events/seminars", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 AOL clicks related to search result position.

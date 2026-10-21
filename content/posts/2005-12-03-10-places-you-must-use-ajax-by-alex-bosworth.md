@@ -6,6 +6,7 @@ url: "/2005/12/03/10-places-you-must-use-ajax-by-alex-bosworth/"
 wp_id: 36
 categories: ["AJAX", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 > It's now officially annoying to use web apps that haven't replaced clunky html functionality with peppy Ajax goodness.

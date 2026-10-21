@@ -6,6 +6,7 @@ url: "/2007/08/30/drop-shadows-dont-fill-shopping-carts/"
 wp_id: 700
 categories: ["Web Development"]
 tags: []
+author: "jesper"
 ---
 
 I think Zeldman has a fantastic point here:

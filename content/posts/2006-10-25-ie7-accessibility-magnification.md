@@ -6,6 +6,7 @@ url: "/2006/10/25/ie7-accessibility-magnification/"
 wp_id: 434
 categories: ["Accessibility", "Browser"]
 tags: []
+author: "thomas"
 ---
 
 It just occurred to me that the new Internet Explorer 7 ships with a zoom tool.

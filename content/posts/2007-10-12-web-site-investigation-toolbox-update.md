@@ -6,6 +6,7 @@ url: "/2007/10/12/web-site-investigation-toolbox-update/"
 wp_id: 725
 categories: ["HTML", "JavaScript", "Web Development", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 I figured the original bookmarklet toolbox needed an update (i have updated and added a few bookmarklets since I first posted [Toolbox — locating problems in HTML](/2006/09/18/toolbox/ "Permanent Link: Toolbox — locating problems in HTML")). Quirksmode detection, Layout grid and more.

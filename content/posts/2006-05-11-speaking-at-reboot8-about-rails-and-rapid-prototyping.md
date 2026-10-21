@@ -6,6 +6,7 @@ url: "/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/"
 wp_id: 240
 categories: ["Prototyping", "Ruby on Rails", "Speaking"]
 tags: []
+author: "jesper"
 ---
 
 I'm thrilled to announce that I'll be giving a brief talk at [reboot8.0\

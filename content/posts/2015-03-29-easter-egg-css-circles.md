@@ -6,6 +6,7 @@ url: "/2015/03/29/easter-egg-css-circles/"
 wp_id: 1747
 categories: ["Code", "CSS"]
 tags: []
+author: "jesper"
 ---
 
 We are approaching easter, and I couldn't resist to make eggs on the project I am working on these days:

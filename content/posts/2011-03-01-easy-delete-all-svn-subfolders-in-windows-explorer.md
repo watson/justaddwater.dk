@@ -6,6 +6,7 @@ url: "/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/"
 wp_id: 1414
 categories: ["justaddwater.dk"]
 tags: ["subversion", "svn", "Web Development", "windows"]
+author: "jesper"
 ---
 
 I had to repair a flawed Subversion repository recently (not all files were committed). I had my local repository checked out. This was the flawed part, containing only parts of the folders and files it should.

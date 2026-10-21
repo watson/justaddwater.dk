@@ -6,6 +6,7 @@ url: "/2005/11/30/web-developers-collection-of-browser-tools/"
 wp_id: 29
 categories: ["AJAX", "CSS", "JavaScript", "Links", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 With the release of Firefox 1.5, I thought it's time to make a round up on the tools and plugins that makes my everyday work faster, more efficient. Here are some of my favorite tools for Firefox and a few for Internet Explorer.

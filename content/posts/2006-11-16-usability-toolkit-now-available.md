@@ -6,6 +6,7 @@ url: "/2006/11/16/usability-toolkit-now-available/"
 wp_id: 461
 categories: ["Usability", "User Interface", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 Daniel Szuc tipped me about [The Usability Toolkit](http://www.sitepoint.com/books/usability1/), now available from Sitepoint.

@@ -6,6 +6,7 @@ url: "/2007/05/07/a-badly-timed-warning/"
 wp_id: 640
 categories: ["Humor", "Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 Why is it that my laptop gives me this warning:

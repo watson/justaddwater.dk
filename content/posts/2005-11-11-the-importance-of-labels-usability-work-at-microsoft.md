@@ -6,6 +6,7 @@ url: "/2005/11/11/the-importance-of-labels-usability-work-at-microsoft/"
 wp_id: 13
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 Jensen Harris (working on Office 12) has written about using [labels to aid the understanding of icons](http://blogs.msdn.com/jensenh/archive/2005/11/01/487661.aspx).\

@@ -6,6 +6,7 @@ url: "/2007/02/13/danish-newspaper-interview-capgemini-on-rails/"
 wp_id: 480
 categories: ["Businesscase", "justaddwater.dk", "Ruby on Rails", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 Thomas and I are interviewed in Danish newspaper "Børsen" today. The article is a 10,000 feet business overview on the productivity gains and possibilities with Ruby on Rails.

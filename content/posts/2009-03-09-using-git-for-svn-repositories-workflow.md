@@ -6,6 +6,7 @@ url: "/2009/03/09/using-git-for-svn-repositories-workflow/"
 wp_id: 1038
 categories: ["Code", "git"]
 tags: ["git", "svn", "workflow"]
+author: "jesper"
 ---
 
 For the last months I have been using Git to work with my Subversion repositories. Besides from [reducing disk usage](/2009/01/17/git-side-benefit-reducing-disk-usage/ "justaddwater.dk | Git Side Benefit: Reducing Disk Usage"), Git also makes my work slightly faster and independent of network access -- I can make commits to repository which is sync'ed later when I get online.

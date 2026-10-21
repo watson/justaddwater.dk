@@ -1,0 +1,21 @@
+# Authors, from the original justaddwater.dk (wp:author entries, JAW author widget, /author/<slug>/ pages).
+# Front matter `author:` holds the slug. WP login "admin" = Thomas Watson Steen (slug thomas), see docs/authors.md.
+# archive: true  -> the original serves /author/<slug>/ (200); thomas/admin are 404 there.
+# bio/photo empty -> the original's "About the Author" widget renders nothing (empty sidebar), as for Luis.
+jesper:
+  name: Jesper Rønn-Jensen
+  photo: /images/jesper.jpg
+  archive: true
+  bio: |
+    <p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+thomas:
+  name: Thomas Watson Steen
+  photo: /images/thomas.jpg
+  archive: false
+  bio: |
+    <p>Working the web since 1995, Thomas Watson Steen is a web standards and usability expert. He is a partner in the company '3dbyggeri danmark', a new IT start-up in Denmark specializing in consulting and IT services to the construction sector.</p>
+luis:
+  name: Luis Villa
+  photo: ""
+  archive: true
+  bio: ""

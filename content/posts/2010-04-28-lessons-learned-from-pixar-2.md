@@ -6,6 +6,7 @@ url: "/2010/04/28/lessons-learned-from-pixar-2/"
 wp_id: 1337
 categories: ["Inspiration", "Presentation", "Productivity"]
 tags: ["Inspiration", "pixar"]
+author: "jesper"
 ---
 
 I took Jeff Atwodd's advice and watched Ed Catmull of Pixar: "Keep your crises small". A presentation about lessons learned from successes and crises at Pixar.

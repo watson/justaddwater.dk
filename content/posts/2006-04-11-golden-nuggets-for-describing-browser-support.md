@@ -6,6 +6,7 @@ url: "/2006/04/11/golden-nuggets-for-describing-browser-support/"
 wp_id: 168
 categories: ["Accessibility", "Browser"]
 tags: []
+author: "jesper"
 ---
 
 [Yahoo! Developer Network: Graded Browser Support](http://developer.yahoo.net/yui/articles/gbs/gbs.html)

@@ -6,6 +6,7 @@ url: "/2007/11/07/amazon-redesign-coming-up/"
 wp_id: 775
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 On some computers, Amazon are preparing for the final steps of rolling out their new redesign... Just in time for Christmas shopping.

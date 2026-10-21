@@ -6,6 +6,7 @@ url: "/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-peopl
 wp_id: 129
 categories: ["Accessibility"]
 tags: []
+author: "jesper"
 ---
 
 *An online petition is being circulated to all Internet users for the purpose of collecting signatures showing support for Google to make its word verification scheme accessible to the blind and visually impaired.*

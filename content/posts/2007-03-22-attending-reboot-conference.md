@@ -6,6 +6,7 @@ url: "/2007/03/22/attending-reboot-conference/"
 wp_id: 570
 categories: ["Events/seminars"]
 tags: []
+author: "jesper"
 ---
 
 May 31st and June 1st, the annual Reboot conference will take place here in Copenhagen.

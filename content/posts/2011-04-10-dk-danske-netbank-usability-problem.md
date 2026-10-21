@@ -6,6 +6,7 @@ url: "/2011/04/10/dk-danske-netbank-usability-problem/"
 wp_id: 1454
 categories: ["In Danish", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 \[English: From time to time, I will post stories in Danish, when I consider it to be specifically relevent to Danish usage, (or simply easier for me). Therefore, find the below story in Danish (and here is a translate article link, in case you want to read it in Englsh)\]

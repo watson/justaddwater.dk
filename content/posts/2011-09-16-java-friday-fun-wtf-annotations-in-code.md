@@ -6,6 +6,7 @@ url: "/2011/09/16/java-friday-fun-wtf-annotations-in-code/"
 wp_id: 1492
 categories: ["Code", "Java"]
 tags: ["Code", "Java", "quality", "Review", "wtf"]
+author: "jesper"
 ---
 
 Time for a little geeky gimmick. Some developers see and express a lot of "WTF??" while trying to understand code

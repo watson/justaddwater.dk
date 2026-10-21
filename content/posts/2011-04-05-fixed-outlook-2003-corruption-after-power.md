@@ -6,6 +6,7 @@ url: "/2011/04/05/fixed-outlook-2003-corruption-after-power/"
 wp_id: 1457
 categories: ["E-mails"]
 tags: ["outlook"]
+author: "jesper"
 ---
 
 The power disappeared at our office, and killed outlook 2003. Suddently I got this error:\

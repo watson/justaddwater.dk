@@ -6,6 +6,7 @@ url: "/2007/04/16/does-sony-think-their-customers-are-morons/"
 wp_id: 584
 categories: ["Accessibility", "Security", "User experience", "Video"]
 tags: []
+author: "thomas"
 ---
 
 **I'm not pirating music or films, and I will gladly pay huge sums of money to huge world-wide record companies and film studios. But if they insist on protecting their publications with DRM, I will in turn insist only to pay half the price at the shop counter in return for less accessible content.**

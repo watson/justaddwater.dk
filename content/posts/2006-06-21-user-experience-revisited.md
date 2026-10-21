@@ -6,6 +6,7 @@ url: "/2006/06/21/user-experience-revisited/"
 wp_id: 320
 categories: ["Best of Justaddwater", "Usability", "User experience"]
 tags: []
+author: "jesper"
 ---
 
 Since last time I wrote on the [various definitions of user experience](/2006/01/15/user-experience-clear-and-easy-to-use-definition-needed/ "Justaddwater.dk: User Experience. Clear and easy-to-use definition needed"), Bryce Glass, Mike Kuniavsky and Thomas Baekdal have made excellent points on the subject of providing a single, clear understandable definition of user experience.

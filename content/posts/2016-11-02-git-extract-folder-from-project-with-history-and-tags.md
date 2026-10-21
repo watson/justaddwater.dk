@@ -6,6 +6,7 @@ url: "/2016/11/02/git-extract-folder-from-project-with-history-and-tags/"
 wp_id: 1809
 categories: ["Code", "git"]
 tags: []
+author: "jesper"
 ---
 
 This is a short note regarding the use of `git filter-branch` when you want to split a git repository and preserve the history.

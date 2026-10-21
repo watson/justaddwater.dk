@@ -6,6 +6,7 @@ url: "/2008/08/18/introducing-tiny-javascript-number-formatter/"
 wp_id: 945
 categories: ["JavaScript"]
 tags: ["JavaScript", "library", "opensource", "project"]
+author: "jesper"
 ---
 
 For a current project, I created a tiny number formatter that inserts thousand delimiters in a string:

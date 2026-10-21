@@ -6,6 +6,7 @@ url: "/2008/06/16/fixes-to-common-css-problems/"
 wp_id: 932
 categories: ["CSS", "Web Development", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Just home again from two weeks vacation, I found this in my delicious popular feed (i usually scan the delicious popular feed for links others find interesting).

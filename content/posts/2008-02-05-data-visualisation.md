@@ -6,6 +6,7 @@ url: "/2008/02/05/data-visualisation/"
 wp_id: 877
 categories: ["Inspiration"]
 tags: []
+author: "jesper"
 ---
 
 What a treasury of old and new maps, images, graphs -- all you can imagine. [www.math.yorku.ca/SCS/Gallery/milestone/](http://www.math.yorku.ca/SCS/Gallery/milestone/) (found via wikipedia: [information graphics](http://en.wikipedia.org/wiki/Information_graphics))

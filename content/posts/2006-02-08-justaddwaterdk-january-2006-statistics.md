@@ -6,6 +6,7 @@ url: "/2006/02/08/justaddwaterdk-january-2006-statistics/"
 wp_id: 138
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
+author: "thomas"
 ---
 
 January is so far the most visited month. To give you an idea of who you and your fellow readers are, here is our first statistics posts for the new year. As usual we have filtered out our own hits so the numbers below only show "real" readers :)

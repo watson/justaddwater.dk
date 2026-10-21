@@ -6,6 +6,7 @@ url: "/2006/09/18/technique/"
 wp_id: 393
 categories: ["CSS", "HTML", "justaddwater.dk", "Web Development", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Technique for using the toolbox: Locating problems in HTML.

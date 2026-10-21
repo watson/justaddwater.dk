@@ -6,6 +6,7 @@ url: "/2008/06/18/the-dark-side-of-information-architecture/"
 wp_id: 933
 categories: ["Humor", "Inspiration"]
 tags: []
+author: "jesper"
 ---
 
 Dark side of IA. Actually, these are two odd shaped holes in the city wall of Alcúdia, Mallorca, Spain. It immediately reminded me of the letters I and A. I publish them under creative commons license, so feel free to use.

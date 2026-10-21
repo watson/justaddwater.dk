@@ -6,6 +6,7 @@ url: "/2006/05/15/speaking-on-corporate-weblogging-event/"
 wp_id: 245
 categories: ["Blogging", "justaddwater.dk", "Presentation", "Speaking"]
 tags: ["Blogging", "Presentation", "Speaking"]
+author: "jesper"
 ---
 
 June 13, Thomas and I are invited to speak at an event about corporate weblogs in Copenhagen, Denmark. It's hosted by the [Danish IT Industry Association](http://www.itb.dk/site.asp?p=51), and We'll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini. Also, there will be a chance to hear [Thomas Madsen-Mygdal](http://bootstrapping.net/), [Andreas Johannsen](http://asynkron.dk) and the CEO of Sun, Denmark Peter Rindsig ([who hasn't got a blog](http://www.google.com/search?hl=en&q=%22peter+rindsig%22+blog)).\

@@ -6,6 +6,7 @@ url: "/2009/09/28/bash-or-ruby-for-removing-multiple-trac-spam-tickets/"
 wp_id: 1159
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 I had to clean up a public Trac ticket db where anonymous tickets are allowed. I had to issue commands like this:

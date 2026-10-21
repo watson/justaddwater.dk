@@ -6,6 +6,7 @@ url: "/2006/10/16/bad-usability-calendar/"
 wp_id: 417
 categories: ["Accessibility", "Best of Justaddwater", "Humor", "Usability", "User experience"]
 tags: []
+author: "jesper"
 ---
 
 Perfect wallpaper for any project room. The Bad Usability Calendar from Norwegian company [Netlife Research](http://www.netliferesearch.com/).

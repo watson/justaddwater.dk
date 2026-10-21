@@ -6,6 +6,7 @@ url: "/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/"
 wp_id: 410
 categories: ["Events/seminars", "justaddwater.dk", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 \[Jesper's note: It will be interesting to see how this maps to Jakob Nielsen's old ideas about [reputation managers](http://www.useit.com/alertbox/990905.html).\]

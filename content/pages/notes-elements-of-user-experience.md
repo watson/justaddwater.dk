@@ -6,6 +6,7 @@ url: "/notes-elements-of-user-experience/"
 wp_id: 276
 categories: []
 tags: []
+author: "jesper"
 ---
 
 Jesper's notes from Jesse James Garrett’s event "[The elements of User Experience](http://www.adaptivepath.com/events/2006/may3/)" in Copenhagen, Denmark, May 31, 2006.

@@ -6,6 +6,7 @@ url: "/2005/11/01/javascript-shell-useful-tool-for-editing-dom-and-javascript/"
 wp_id: 8
 categories: ["JavaScript"]
 tags: []
+author: "jesper"
 ---
 
 Jesse Ruderman has a tool for live-editing JavaScript and DOM on any webpage. I have found it very useful and indispensable for rapid JavaScript development, bug finding in unknown code.

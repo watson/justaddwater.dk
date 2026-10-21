@@ -6,6 +6,7 @@ url: "/2005/10/31/place-in-heaven-for-ajax-programmers/"
 wp_id: 6
 categories: ["AJAX"]
 tags: []
+author: "jesper"
 ---
 
 Just saw this quote in the [Zimbra blog](http://www.zimbra.com/blog/archives/2005/10/ajax_programmin.html).

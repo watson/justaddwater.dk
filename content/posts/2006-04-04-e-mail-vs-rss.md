@@ -6,6 +6,7 @@ url: "/2006/04/04/e-mail-vs-rss/"
 wp_id: 219
 categories: ["Accessibility", "Blogging", "justaddwater.dk", "Newsletter", "RSS", "Syndication"]
 tags: []
+author: "thomas"
 ---
 
 Syndicated feeds in form of RSS or Atom is the hot way of getting news from around the world delivered instantly and dynamically to your desktop. Previously a user could only do so by registering for an e-mail newsletter.

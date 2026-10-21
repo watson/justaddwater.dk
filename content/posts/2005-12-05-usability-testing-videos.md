@@ -6,6 +6,7 @@ url: "/2005/12/05/usability-testing-videos/"
 wp_id: 31
 categories: ["Links", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Usability testing videos are an eye-opener. Jakob Nielsen presented a few video clips on last weeks "Usability Dagene 2005". Today he made one of them public available in his new alertbox [Talking-head video is boring online](http://www.useit.com/alertbox/video.html).

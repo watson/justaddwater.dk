@@ -6,6 +6,7 @@ Usage: bin/export-to-hugo [--limit N] [--only SLUG]
 Reads:   export/justaddwater.sanitized.xml (make it with bin/sanitize-export)
 Writes:  content/posts/<date>-<slug>.md, content/pages/<slug>.md,
          data/comments/<slug>.json   (comments, with parent ids)
+         Each item gets `author:` (jesper|thomas|luis; WP login admin -> thomas).
 Permalinks are preserved through each file's `url` front-matter field.
 
 Options:
@@ -37,6 +38,12 @@ if {"-h", "--help"} & set(sys.argv[1:]):
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 SRC = "export/justaddwater.sanitized.xml"
 W = "{http://wordpress.org/export/1.2/}"; C = "{http://purl.org/rss/1.0/modules/content/}"
+D = "{http://purl.org/dc/elements/1.1/}"
+# WordPress login (dc:creator) -> author slug in data/authors.yaml. The login "admin" is Thomas Watson Steen
+# (wp:author_display_name; confirmed by the original's sidebar photo/bio on admin posts, see docs/authors.md).
+AUTHOR_SLUG = {"jesper": "jesper", "admin": "thomas", "luis": "luis"}
+# Pages that exist in the export but 404 on the original site; not generated. Add slugs here to drop more.
+SKIP_SLUGS = {"subscribe", "thank-you-for-subscribing", "thank-you-for-verifying-your-email-subscription"}
 BLOCK = r"(?:table|thead|tbody|tfoot|tr|td|th|div|dl|dt|dd|ul|ol|li|pre|form|blockquote|h[1-6]|hr|p|figure|object|embed|script|style|iframe)"
 ONLY = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else None
 LIMIT = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else None
@@ -197,13 +204,15 @@ for it in chan.findall("item"):
     if LIMIT and n >= LIMIT: break
     if ONLY and it.findtext(W + "post_name") != ONLY: continue
     slug = unquote(it.findtext(W + "post_name") or "") or "post-%s" % it.findtext(W + "post_id")
+    if slug in SKIP_SLUGS: continue
     date = (it.findtext(W + "post_date") or "")
     path = unquote(urlparse(it.findtext("link") or "").path) or "/%s/" % slug
     cats = [c.text for c in it.findall("category") if c.get("domain") == "category"]
     tags = [c.text for c in it.findall("category") if c.get("domain") == "post_tag"]
     meta = {"title": " ".join(unescape(it.findtext("title") or slug).split()), "date": date.replace(" ", "T"),
             "slug": slug, "url": path, "wp_id": int(it.findtext(W + "post_id")),
-            "categories": cats, "tags": tags}
+            "categories": cats, "tags": tags,
+            "author": AUTHOR_SLUG.get(it.findtext(D + "creator") or "", it.findtext(D + "creator") or "jesper")}
     body = to_md(it.findtext(C + "encoded") or "")
     base = "content/posts/%s-%s.md" % (date[:10], slug) if ptype == "post" else "content/pages/%s.md" % slug
     write(base, fm(meta) + body + "\n"); stats[ptype] += 1; n += 1

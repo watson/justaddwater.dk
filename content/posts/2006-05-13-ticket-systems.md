@@ -6,6 +6,7 @@ url: "/2006/05/13/ticket-systems/"
 wp_id: 244
 categories: ["Performance", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Michael Heilemann wrote a rant on Billetlugen, a Danish company that sells tickets to concerts, etc. Two weeks ago they sold 85,000 tickets to Madonna's only concert in scandinavia, August 24 in Horsens, Denmark. I had the worst user experience ever, and Billetlugen's systems failed to sell me the tickets.

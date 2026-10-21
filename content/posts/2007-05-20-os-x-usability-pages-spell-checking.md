@@ -6,6 +6,7 @@ url: "/2007/05/20/os-x-usability-pages-spell-checking/"
 wp_id: 658
 categories: ["OS X", "Usability"]
 tags: []
+author: "thomas"
 ---
 
 I've been the proud owner of a MacBook Pro for a couple of months now. This is my first real experience with a Mac and my expectations where, not to say the least, great. I of cause expected some transition issues, me being a long time Microsoft Windows user and all - But the problems I've encountered where way bigger and stranger than I ever expected.

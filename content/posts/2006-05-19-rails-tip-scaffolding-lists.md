@@ -6,6 +6,7 @@ url: "/2006/05/19/rails-tip-scaffolding-lists/"
 wp_id: 261
 categories: ["Code", "Ruby on Rails", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 You might wonder what a code example is doing here in a blog about usability and web standards. As you might know, Thomas and I are both web developers, and we're really obsessed about **making usable web applications**.

@@ -6,6 +6,7 @@ url: "/2006/08/28/ie-7-web-standards-and-css-support/"
 wp_id: 384
 categories: ["Browser", "CSS", "User Interface", "Web Development", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 The Internet Explorer team is preparing to ship the next major version of the world's most popular browser. The IE team has written an update on which CSS bugfixes that will make it into the final release.

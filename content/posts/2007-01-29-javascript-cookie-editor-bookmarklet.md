@@ -6,6 +6,7 @@ url: "/2007/01/29/javascript-cookie-editor-bookmarklet/"
 wp_id: 523
 categories: ["Code", "JavaScript", "justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 2 years ago I wrote a small javascript to view, edit and delete cookies.

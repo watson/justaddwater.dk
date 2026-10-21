@@ -6,6 +6,7 @@ url: "/2009/09/30/spoken-git-commit-log-—-another-annoyance-at-the-office/"
 wp_id: 1161
 categories: ["Code", "git", "Humor", "Web Development"]
 tags: ["Code", "git", "Humor", "logging"]
+author: "jesper"
 ---
 
 Here is a short one-liner that really annoyed my colleagues today.\

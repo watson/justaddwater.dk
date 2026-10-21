@@ -6,6 +6,7 @@ url: "/2006/11/13/office-2007-user-interface-complete-overview/"
 wp_id: 448
 categories: ["User Interface"]
 tags: []
+author: "thomas"
 ---
 
 Jensen Harris who's the Group Manager of the Microsoft Office User Experience Team has for the past year been blogging about the new and exiting user interface of upcoming Office 2007.

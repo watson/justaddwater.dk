@@ -6,6 +6,7 @@ url: "/2006/01/16/firefox-keyboard-secret-shortcut-to-remove-text-from-page/"
 wp_id: 83
 categories: ["Browser"]
 tags: []
+author: "jesper"
 ---
 
 Do you use Firefox? Accidentally I discovered this keyboard shortcut.\

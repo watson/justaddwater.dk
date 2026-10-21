@@ -6,6 +6,7 @@ url: "/2006/01/27/html-use-and-abuse-in-one-billion-webpages/"
 wp_id: 116
 categories: ["Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Google posted a very interesting study with regards to web standards. As new browsers get better and better support for web standards, our awareness is raised to make sure web applications also support the future browsers (such as Internet Explorer 7.

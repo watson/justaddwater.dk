@@ -6,6 +6,7 @@ url: "/2010/06/10/windows-svn-pre-commit-hook/"
 wp_id: 1354
 categories: ["Code"]
 tags: ["Code", "subversion", "svn", "windows"]
+author: "jesper"
 ---
 
 At a current project I work on, we use a Windows server to run our subversion repository.

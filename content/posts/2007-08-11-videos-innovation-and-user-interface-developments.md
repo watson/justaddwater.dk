@@ -6,6 +6,7 @@ url: "/2007/08/11/videos-innovation-and-user-interface-developments/"
 wp_id: 698
 categories: ["Links", "Security", "Speaking", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Two very interesting videos about Google

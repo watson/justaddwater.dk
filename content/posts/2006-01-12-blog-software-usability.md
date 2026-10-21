@@ -6,6 +6,7 @@ url: "/2006/01/12/blog-software-usability/"
 wp_id: 60
 categories: ["AJAX", "Blogging", "Links", "Web Statistics", "WordPress"]
 tags: []
+author: "jesper"
 ---
 
 *UPDATE: Owen's comment pointed me to [WordPress Admin Dashboard replacement](http://blog.taragana.com/index.php/archive/angsumans-wordpress-20-dashboard-replacement-how-to-trim-the-fat-resource-hogging-wordpress-admin-dashboard/) which apparently adresses some of the issues I'm pointing out.*

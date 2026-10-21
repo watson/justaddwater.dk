@@ -6,6 +6,7 @@ url: "/2008/02/02/selling-ruby-rails-and-agile-project-management/"
 wp_id: 876
 categories: ["Agile", "Prototyping", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 My colleague Mads and myself made an internal "sales show" for the way we use Ruby on Rails to deliver web projects that are fast, small, agile prototypes in close collaboration with clients.

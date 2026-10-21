@@ -6,6 +6,7 @@ url: "/2006/05/30/reboot8-program/"
 wp_id: 271
 categories: ["Events/seminars", "Speaking"]
 tags: []
+author: "jesper"
 ---
 
 \[updated with Friday program\]

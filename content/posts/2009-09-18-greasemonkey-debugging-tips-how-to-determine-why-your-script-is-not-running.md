@@ -6,6 +6,7 @@ url: "/2009/09/18/greasemonkey-debugging-tips-how-to-determine-why-your-script-i
 wp_id: 1144
 categories: ["Web Development"]
 tags: ["greasemonkey", "Web Development"]
+author: "jesper"
 ---
 
 After running into some trouble with getting a Greasemonkey to work, I just wanted to share this list with you of things to look out for when your Greasemonkey script does not seem to run. What are the common pitfalls you see around. I'll gladly add them here.

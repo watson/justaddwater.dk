@@ -6,6 +6,7 @@ url: "/2009/05/16/i-cant-get-an-adsense-account/"
 wp_id: 1066
 categories: ["Rant", "Review", "Search Engines", "Usability", "User experience"]
 tags: []
+author: "thomas"
 ---
 
 This is one of the most dissatisfying customer experiences I've had in a long, long time.

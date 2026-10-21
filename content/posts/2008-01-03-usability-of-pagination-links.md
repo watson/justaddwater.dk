@@ -6,6 +6,7 @@ url: "/2008/01/03/usability-of-pagination-links/"
 wp_id: 841
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 In case you missed the thorough pagination gallery that was published in November: [Pagination Gallery: Examples And Good Practices](http://www.smashingmagazine.com/2007/11/16/pagination-gallery-examples-and-good-practices/ "Pagination Gallery: Examples And Good Practices")

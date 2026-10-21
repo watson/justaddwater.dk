@@ -6,6 +6,7 @@ url: "/2006/01/09/mullet-style-blog-layout-and-complete-archive-page/"
 wp_id: 58
 categories: ["Best of Justaddwater", "Blogging", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 ### Return of the mullet

@@ -6,6 +6,7 @@ url: "/2006/07/05/justaddwaterdk-photoshoot/"
 wp_id: 322
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 You may have noticed the updated photos of the authors on this blog. Recently Thomas and I met up with Michael Bothager (colleague) to do a photo session.

@@ -6,6 +6,7 @@ url: "/2006/12/06/worst-user-interface-ever/"
 wp_id: 474
 categories: ["justaddwater.dk", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 Joseph Cooney found a fantastic example of a confusing user interface. (via Jeff Atwood).

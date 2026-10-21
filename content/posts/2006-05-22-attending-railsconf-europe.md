@@ -6,6 +6,7 @@ url: "/2006/05/22/attending-railsconf-europe/"
 wp_id: 262
 categories: ["Events/seminars", "Prototyping", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 Thomas and I are attending [RailsConf Europe](http://europe.railsconf.org/) in London, September 14-15 later this year.

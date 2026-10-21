@@ -6,6 +6,7 @@ url: "/wordpress-plugins/"
 wp_id: 235
 categories: []
 tags: []
+author: "thomas"
 ---
 
 We have developed a bunch of WordPress plugins to make ours and the reader's life's easier. On this page you can read about and download these plugins. *We are currently in the process of making the plugins public, so more will be added here shortly.*

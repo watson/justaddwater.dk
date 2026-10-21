@@ -6,6 +6,7 @@ url: "/2006/05/30/funny-signs/"
 wp_id: 274
 categories: ["Humor", "justaddwater.dk", "Signs"]
 tags: []
+author: "thomas"
 ---
 
 Sometimes I run into a sign that I just don't understand or sometimes they are just plain funny. I was skiing in Hemsedal in Norway a couple of months ago and took this picture of an in-case-of-fire sign next to the hotel elevator at Skogstad Hotel:

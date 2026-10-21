@@ -6,6 +6,7 @@ url: "/2006/01/19/blog-usability-improvements-what-well-change-to-make-this-blog
 wp_id: 99
 categories: ["Blogging", "justaddwater.dk", "Usability", "WordPress"]
 tags: []
+author: "jesper"
 ---
 
 To follow up on Thomas' post from yesterday about how to [improve usability on out-of-the-box wordpress blog](/2006/01/18/blog-usability-improvements/ "Justaddwater.dk: Blog usability improvements"), we decided to prioritize the ~~23~~ 20 point list that we'll work on. (Three items are already done since we started the list).

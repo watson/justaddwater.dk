@@ -6,6 +6,7 @@ url: "/2007/09/17/railsconf-live-notes-testing-tutorial/"
 wp_id: 714
 categories: ["Events/seminars", "Railsconf", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 I'm at RailsConf Europe here in Berlin, and now attending the full-day session "[Ruby (and Rails) Testing Techniques: Charity Tutorial](http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736) by Marcel Molina and Chad Fowler.

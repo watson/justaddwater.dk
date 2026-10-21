@@ -6,6 +6,7 @@ url: "/2006/01/12/justaddwaterdk-december-2005-statistics/"
 wp_id: 54
 categories: ["justaddwater.dk", "Web Statistics"]
 tags: []
+author: "thomas"
 ---
 
 Better late then never... In the spirit of sharing here is our statistics for December 2005. We have as usual filtered out our own hits, so these numbers should show only "real" readers. Enjoy :)

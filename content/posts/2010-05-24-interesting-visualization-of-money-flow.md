@@ -6,6 +6,7 @@ url: "/2010/05/24/interesting-visualization-of-money-flow/"
 wp_id: 1351
 categories: ["visualization"]
 tags: ["visualization"]
+author: "jesper"
 ---
 
 It is often said that an image is worth a thousand words. New York Times is a good resource for interesting visualization on current topics. The article on [Europe's Web of Debt](http://www.nytimes.com/interactive/2010/05/02/weekinreview/02marsh.html) is rather good at conveying a lot of information on the recent European Debt crisis. The width of the arrows and circles represents size of debt.

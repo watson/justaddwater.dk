@@ -6,6 +6,7 @@ url: "/about-the-authors/"
 wp_id: 9
 categories: []
 tags: []
+author: "jesper"
 ---
 
 This weblog is run and maintained by Jesper Rønn-Jensen from [NineConsult](http://nine.dk/) and Thomas Watson Steen from [3dbyggeri danmark](http://www.3dbyggeri.dk/).

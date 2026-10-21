@@ -6,6 +6,7 @@ url: "/2008/01/11/dilemma-updated-numbers-or-long-response-times/"
 wp_id: 853
 categories: ["Performance", "Usability", "User experience"]
 tags: []
+author: "jesper"
 ---
 
 Paypal showed me this splash screen when logging in:

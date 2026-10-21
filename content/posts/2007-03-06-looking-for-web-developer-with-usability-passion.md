@@ -6,6 +6,7 @@ url: "/2007/03/06/looking-for-web-developer-with-usability-passion/"
 wp_id: 565
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 My company is looking for skilled colleagues with rare combination of being both a web developer and usability specialist. The job is in Copenhagen, Denmark.

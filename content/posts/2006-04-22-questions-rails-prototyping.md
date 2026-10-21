@@ -6,6 +6,7 @@ url: "/2006/04/22/questions-rails-prototyping/"
 wp_id: 225
 categories: ["justaddwater.dk", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 I recieved some mails and comments on my recent article: [Ruby on Rails as rapid prototyping tool\

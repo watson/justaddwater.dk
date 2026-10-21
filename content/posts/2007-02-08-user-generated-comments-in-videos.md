@@ -6,6 +6,7 @@ url: "/2007/02/08/user-generated-comments-in-videos/"
 wp_id: 540
 categories: ["Links", "Video"]
 tags: []
+author: "jesper"
 ---
 
 User involvement is king. The web is built on participation.

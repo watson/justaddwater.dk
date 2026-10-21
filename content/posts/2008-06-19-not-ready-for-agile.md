@@ -6,6 +6,7 @@ url: "/2008/06/19/not-ready-for-agile/"
 wp_id: 935
 categories: ["Agile", "justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Pragmatic programmer Andy Hunt's "[Stage 0: Not Ready For Agile](http://blog.toolshed.com/2008/06/stage-0-not-rea.html)" is a brilliant blog post where he ponders over counter-indicators for an agile organization. So if you see these, your organization is probably not agile.

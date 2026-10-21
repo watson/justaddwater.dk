@@ -6,6 +6,7 @@ url: "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/"
 wp_id: 803
 categories: ["Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 UPDATE December 20th: Problems are history with new Rubygems 1.0 release. See: [Rubygems: Rails 2.0, Mongrel, Windows, solved](/2007/12/20/rubygems-rails-20-mongrel-windows-solved/).

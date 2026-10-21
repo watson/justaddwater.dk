@@ -6,6 +6,7 @@ url: "/2009/03/10/textmate-path-modification-ruby-version-issues/"
 wp_id: 1044
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 I had some issues with Ruby on my macbook after upgrading Ruby from 1.8.6 to 1.8.7.

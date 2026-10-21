@@ -6,6 +6,7 @@ url: "/2006/06/28/blog-usability-avoid-spam-comments-part-2/"
 wp_id: 344
 categories: ["Blogging", "justaddwater.dk", "WordPress"]
 tags: []
+author: "thomas"
 ---
 
 ![Can of SPAM](/wp-content/uploads/2006/06/spamcan-small2_resize.jpg)In our previous article [Blog usability: Avoid spam comments](/2006/06/24/blog-usability-avoid-spam-comments/ "justaddwater.dk: Blog usability: Avoid spam comments") we discussed the two ways we currently where fighting spam comments on our blog:

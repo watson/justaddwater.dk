@@ -6,6 +6,7 @@ url: "/2006/02/03/ie7-beta-running-side-by-side-with-ie6/"
 wp_id: 131
 categories: ["Browser"]
 tags: []
+author: "jesper"
 ---
 
 **Update: [All IE Browsers Standalone On Same PC](/2006/09/28/all-ie-browsers-standalone-on-same-pc/ "Justaddwater.dk: All IE Browsers Standalone On Same PC") (September 28, 2006) solves the problem.**

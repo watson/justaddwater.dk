@@ -6,6 +6,7 @@ url: "/2007/12/06/1996-humour-ahead-spacergif-table-layouts/"
 wp_id: 792
 categories: ["HTML", "Humor", "JavaScript", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 In case you missed it, Dustin Diaz has written this excellent parody on what the hottest web techniques were like before webstandards and css were invented.\

@@ -6,6 +6,7 @@ url: "/2008/03/30/scrum-vs-cmmi-level-5/"
 wp_id: 909
 categories: ["Agile"]
 tags: []
+author: "jesper"
 ---
 
 A final quote from Jeff Sutherlands presentation: [Agile and Scrum Tuning](/2008/03/06/video-agile-and-scrum-tuning-by-jeff-sutherland/) I wrote about recently.

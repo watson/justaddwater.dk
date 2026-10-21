@@ -6,6 +6,7 @@ url: "/2014/03/09/iphoto-11-performance-tuning-tips-revised/"
 wp_id: 1709
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 My iPhoto library with 6000+ family photos was running slow on my macbook. So I looked for performance tuning tips on the net.

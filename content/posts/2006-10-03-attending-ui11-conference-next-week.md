@@ -6,6 +6,7 @@ url: "/2006/10/03/attending-ui11-conference-next-week/"
 wp_id: 397
 categories: ["Events/seminars", "justaddwater.dk", "ui11"]
 tags: []
+author: "jesper"
 ---
 
 Update: All notes collected in the category "[UI11](/category/eventsseminars/ui11/)".

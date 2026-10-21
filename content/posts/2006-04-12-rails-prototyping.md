@@ -6,6 +6,7 @@ url: "/2006/04/12/rails-prototyping/"
 wp_id: 221
 categories: ["Best of Justaddwater", "Businesscase", "Code", "Prototyping", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 Ruby on Rails might be the perfect match as a prototyping tool. It delivers consistent productivity gains compared to any other prototyping tool. Very few lines of code makes it easy to change. Here is why we use it at work as our preferred prototyping tool.

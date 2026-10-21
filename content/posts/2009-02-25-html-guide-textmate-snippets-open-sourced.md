@@ -6,6 +6,7 @@ url: "/2009/02/25/html-guide-textmate-snippets-open-sourced/"
 wp_id: 1036
 categories: ["Web Development", "Web Standards"]
 tags: ["htmlguide", "portals", "Productivity", "Ruby on Rails", "virk.dk", "Web Development", "Web Standards"]
+author: "jesper"
 ---
 
 One year ago I published "[Design Guide or HTML Markup Guide](../2008/02/08/design-guide-or-html-markup-guide/ "Permanent Link: Design Guide or HTML Markup Guide")" with link to the HTML guide we did for the biggest Danish business internet portal.

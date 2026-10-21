@@ -6,6 +6,7 @@ url: "/2007/12/07/justaddwater-readers-exclusive-usability-of-web-applications-p
 wp_id: 795
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Frank Spillers from [Experience Dynamics](http://www.experiencedynamics.com/) wrote me this morning, and promted us to bring an exclusive pre-release of his new poster.

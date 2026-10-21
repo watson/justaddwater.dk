@@ -6,6 +6,7 @@ url: "/2012/01/23/batch-screenshots-with-webkit2png/"
 wp_id: 1544
 categories: ["Code"]
 tags: ["automation", "Code", "screenshot", "webkit"]
+author: "jesper"
 ---
 
 For projects I sometimes have lots of screenshots which I have to repeat whenever I change subtle things in the CSS or HTML.

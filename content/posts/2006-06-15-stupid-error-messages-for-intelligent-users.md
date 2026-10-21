@@ -6,6 +6,7 @@ url: "/2006/06/15/stupid-error-messages-for-intelligent-users/"
 wp_id: 315
 categories: ["Usability"]
 tags: []
+author: "thomas"
 ---
 
 I have just downloaded and installed a trial version of Stylus Studio, an XML suite for software developers. After the installation the user is prompted for some personal information in order to receive a license key in an e-mail.

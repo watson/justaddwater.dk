@@ -6,6 +6,7 @@ url: "/2006/01/16/web-users-judge-sites-instantly/"
 wp_id: 84
 categories: ["Usability"]
 tags: []
+author: "thomas"
 ---
 
 According to [an article in "news @ nature.com"](http://www.nature.com/news/2006/060109/full/060109-13.html "Web users judge sites in the blink of an eye") by Michael Hopkin a new study shows that first impressions not only lasts but also counts more then we first imagined. The article is based on a Canadian study led by Gitte Lindgaard of Carleton University in Ottawa:

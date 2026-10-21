@@ -6,6 +6,7 @@ url: "/usabilitydagene-notes-jesper/"
 wp_id: 87
 categories: []
 tags: []
+author: "jesper"
 ---
 
 This is Jesper's notes from Danish Conference Usability Dagene, November 21-22, 2005. **Notes are in Danish and intended for Thomas' and Jesper's personal use**. However, we decided to make them public available to make it easier for ourselves to use the notes actively.

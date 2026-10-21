@@ -6,6 +6,7 @@ url: "/2009/05/11/it-frustration-and-counter-productive-applications/"
 wp_id: 1062
 categories: ["Usability"]
 tags: ["frustration", "internal", "Usability"]
+author: "jesper"
 ---
 
 Frustrated by internal systems! I just finished writing a page for our intranet. But now I ended up **frustrated with no article published**:

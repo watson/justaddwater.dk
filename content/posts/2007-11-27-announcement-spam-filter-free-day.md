@@ -6,6 +6,7 @@ url: "/2007/11/27/announcement-spam-filter-free-day/"
 wp_id: 785
 categories: ["Best of Justaddwater", "Blogging", "justaddwater.dk", "spam", "Usability", "WordPress"]
 tags: []
+author: "jesper"
 ---
 
 Get ready for a suicide mission: On this blog, we will remove our spam filter completely for one day, December 15th.

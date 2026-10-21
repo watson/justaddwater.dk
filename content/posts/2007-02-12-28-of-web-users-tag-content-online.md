@@ -6,6 +6,7 @@ url: "/2007/02/12/28-of-web-users-tag-content-online/"
 wp_id: 546
 categories: ["Links"]
 tags: []
+author: "jesper"
 ---
 
 A quick tip from Henrik Olsen, [GUUUI (Interaction Designers Coffebreak)](http://www.guuui.com/posting.php?id=1921):

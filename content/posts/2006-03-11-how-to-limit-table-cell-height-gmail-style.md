@@ -6,6 +6,7 @@ url: "/2006/03/11/how-to-limit-table-cell-height-gmail-style/"
 wp_id: 176
 categories: ["Code", "CSS", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 I just sent this to the [CSS-D discussion list](http://archivist.incutio.com/viewlist/css-discuss/71697 "CSS-D: How to limit table cell height (GMail style)")

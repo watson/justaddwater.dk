@@ -6,6 +6,7 @@ url: "/2011/03/10/challenges-configuring-hudson-emails/"
 wp_id: 1437
 categories: ["Continous integration", "Web Development"]
 tags: ["configuration", "continuous integration", "hudson", "Web Development"]
+author: "jesper"
 ---
 
 My recent Stackoverflow question [How to use Hudson “Parameterized Build” values in an email](http://stackoverflow.com/questions/5181502/how-to-use-hudson-parameterized-build-values-in-an-email) earned me the "tumbleweed" badge because it had almost no views (39 in a week), got no answers and no votes. Therefore I decided to offer 200 of my reputation points for a usable answer.

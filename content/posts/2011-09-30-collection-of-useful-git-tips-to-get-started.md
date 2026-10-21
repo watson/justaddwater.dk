@@ -6,6 +6,7 @@ url: "/2011/09/30/collection-of-useful-git-tips-to-get-started/"
 wp_id: 1520
 categories: ["Code", "git"]
 tags: ["git"]
+author: "jesper"
 ---
 
 I thought it was time to collect some of my most useful findings when working with Git.

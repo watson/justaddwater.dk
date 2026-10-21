@@ -6,6 +6,7 @@ url: "/2008/03/11/the-design-of-internal-enterprise-applications/"
 wp_id: 911
 categories: ["User Interface"]
 tags: []
+author: "jesper"
 ---
 
 I really fell in spontaneous love with this drawing, that shows the relation between the simplest and the most complex of all known products and websites. Apple and Google representing the first. Internal Enterpricey applications representing the latter.

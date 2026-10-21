@@ -6,6 +6,7 @@ url: "/2008/01/03/make-logo-bigger-cream/"
 wp_id: 850
 categories: ["Humor"]
 tags: []
+author: "jesper"
 ---
 
 Via [Francois](http://padawan.info/2007/11/make-my-logo-bi.html), I saw this funny video TV-Shop style: [Make my logo bigger](http://www.makemylogobiggercream.com/).

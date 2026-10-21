@@ -6,6 +6,7 @@ url: "/2008/06/17/find-occurences-of-text-string-in-files/"
 wp_id: 934
 categories: ["Software", "Unix"]
 tags: []
+author: "jesper"
 ---
 
 I had to search for occurences of string in particular files, and using Cygwin i did the following:

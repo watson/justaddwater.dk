@@ -6,6 +6,7 @@ url: "/2008/01/01/avoid-innovation-the-word-use-better-words-instead/"
 wp_id: 847
 categories: ["Psychology", "Web Development"]
 tags: []
+author: "jesper"
 ---
 
 Scott Berkun brilliantly notes that the word "innovation" has lost it's meaning. [Stop saying innovation - here’s why](http://www.scottberkun.com/blog/2008/stop-saying-innovation-heres-why/ "Permanent Link to Stop saying innovation - here’s why")

@@ -6,6 +6,7 @@ url: "/2009/05/29/shorthand-to-clean-up-installed-rubygems-but-dont-cleanup-rail
 wp_id: 1098
 categories: ["Ruby on Rails", "Web Development"]
 tags: ["rails", "Ruby on Rails", "Rubygems"]
+author: "jesper"
 ---
 
 I trimmed my installed Rubygems on my local development machine. The command "`sudo gem cleanup`" is just for that.

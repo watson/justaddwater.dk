@@ -6,6 +6,7 @@ url: "/2005/11/21/usabilitydagene-monday/"
 wp_id: 21
 categories: ["Blogging", "Usability", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 I really liked Jakob Nielsen's keynote.\

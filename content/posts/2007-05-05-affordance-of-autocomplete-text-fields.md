@@ -6,6 +6,7 @@ url: "/2007/05/05/affordance-of-autocomplete-text-fields/"
 wp_id: 626
 categories: ["Usability", "User Interface"]
 tags: []
+author: "jesper"
 ---
 
 In my opinion, the autocomplete input boxes have a very low discoverability because they're basically just textfields with added JavaScript.

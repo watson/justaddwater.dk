@@ -6,6 +6,7 @@ url: "/2006/01/31/usability-light-bulb-jokes/"
 wp_id: 130
 categories: ["Usability"]
 tags: []
+author: "jesper"
 ---
 
 John Rhodes of Webword found [this fantastic lightbulb joke](http://www.webword.com/2006/01/31/usability-joke/ "Webword: usability joke") from Szuc & Gaffney:

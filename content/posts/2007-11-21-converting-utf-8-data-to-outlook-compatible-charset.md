@@ -6,6 +6,7 @@ url: "/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/"
 wp_id: 784
 categories: ["Code", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 A problem in a current Rails app just found a decent solution, as Danish letters like æøå did not show up decently. It turned out (surprise) that Outlook had a problem accepting UTF-8 charset.

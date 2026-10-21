@@ -6,6 +6,7 @@ url: "/2008/05/20/invited-to-expert-workshop-future-of-internet/"
 wp_id: 928
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 This Friday I'm invited to attend a workshop on the future of Internet (usage) hosted by [Innovation Lab](http://ilab.dk) -- a Danish company that has a lot of experience in searching and analyzing future trends.\

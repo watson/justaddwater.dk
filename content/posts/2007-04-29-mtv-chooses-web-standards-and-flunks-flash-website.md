@@ -6,6 +6,7 @@ url: "/2007/04/29/mtv-chooses-web-standards-and-flunks-flash-website/"
 wp_id: 607
 categories: ["Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 UX Magazine reports that MTV drops their Flash based website in favor of a common-sense web standards based solution.

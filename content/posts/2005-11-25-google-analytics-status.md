@@ -6,6 +6,7 @@ url: "/2005/11/25/google-analytics-status/"
 wp_id: 25
 categories: ["Usability", "Web Statistics"]
 tags: []
+author: "thomas"
 ---
 
 Just a quick note on Google and their Analytics tool. I've just recieved a service announcement from Google Analytics. They here - among other things - state the current information on the most common questions they are receiving. One of them is:

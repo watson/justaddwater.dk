@@ -6,6 +6,7 @@ url: "/2012/06/28/forgotten-subversion-commands-undo-merge-branches-and-more/"
 wp_id: 1587
 categories: ["Code", "Web Development"]
 tags: ["Code", "git", "subversion", "svn"]
+author: "jesper"
 ---
 
 In a current project I use a lot of Subversion (svn) from the command-line.

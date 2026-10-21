@@ -6,6 +6,7 @@ url: "/2009/02/01/interaction-design-experiment-delete-row/"
 wp_id: 1027
 categories: ["Usability", "User Interface"]
 tags: ["google", "Usability"]
+author: "jesper"
 ---
 
 It took me a little while to use the new file deletion principle from Google Groups administrator.

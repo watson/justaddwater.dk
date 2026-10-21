@@ -6,6 +6,7 @@ url: "/2009/03/13/web-server-power-calculation/"
 wp_id: 1053
 categories: ["Web Development", "Website"]
 tags: ["power consumption", "web server", "work"]
+author: "jesper"
 ---
 
 In our company's basement a small server room where we put a few sandbox machines we use for quickly starting up projects, simple project and version control management. Over the time, quite a few of our clients have benefited from this setup as it can create instant project infrastructure.

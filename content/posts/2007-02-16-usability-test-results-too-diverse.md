@@ -6,6 +6,7 @@ url: "/2007/02/16/usability-test-results-too-diverse/"
 wp_id: 558
 categories: ["justaddwater.dk", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 Rolf Molich has done a lot to make the usability profession what it is today. He keeps asking questions to what we thought would be common wisdom 5 years ago, and he keeps asking questions. Now, addressing the fact that usability test results can be very diverse (and often are).

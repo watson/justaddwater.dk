@@ -6,6 +6,7 @@ url: "/2008/04/24/capgemini-website-article-prototyping-and-ruby-on-rails/"
 wp_id: 923
 categories: ["Prototyping", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 It's official: Today our web team posted an article on our Danish Capgemini website: Prototyping and Ruby on Rails.\

@@ -6,6 +6,7 @@ url: "/2006/06/25/ten-reaffirmations-from-london-media-2006/"
 wp_id: 323
 categories: ["Accessibility", "AJAX", "Events/seminars", "User experience", "User Interface", "Web Development", "Web Standards"]
 tags: []
+author: "luis"
 ---
 
 Hi, this is Luis Villa, Thomas and Jesper's former colleague at Capgemini Spain. They couldn't make it to @media in London last week, so they asked me to give a summary of the event.

@@ -6,6 +6,7 @@ url: "/2009/08/19/rup-vs-scrum-vs-kanban/"
 wp_id: 1114
 categories: ["Agile"]
 tags: []
+author: "jesper"
 ---
 
 For a presentation tomorrow, [my colleague Mads](http://www.upperbound.net/ "Mads Buus Westmark personal website: upperbound.net") decided to include this illustration that compares the number of "rules" in some of the most used software development philosophies.I think the visualization has it all:

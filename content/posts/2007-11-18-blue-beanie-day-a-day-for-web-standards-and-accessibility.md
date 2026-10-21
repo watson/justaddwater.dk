@@ -6,6 +6,7 @@ url: "/2007/11/18/blue-beanie-day-a-day-for-web-standards-and-accessibility/"
 wp_id: 782
 categories: ["Accessibility", "Web Standards"]
 tags: []
+author: "thomas"
 ---
 
 ![Designing With Web Standards cover photo](/wp-content/uploads/2007/11/dwws.jpg)

@@ -6,6 +6,7 @@ url: "/2006/04/11/windows-xp-less-efficiant-than-windows-2000/"
 wp_id: 222
 categories: ["Usability"]
 tags: []
+author: "thomas"
 ---
 
 One usability mantra states: The fewer mouse clicks to get from A to B the better. This is always in front of every usability experts mind. But have anybody told Microsoft?

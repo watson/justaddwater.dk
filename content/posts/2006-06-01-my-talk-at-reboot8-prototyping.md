@@ -6,6 +6,7 @@ url: "/2006/06/01/my-talk-at-reboot8-prototyping/"
 wp_id: 282
 categories: ["Best of Justaddwater", "Events/seminars", "Presentation", "Railsconf", "Ruby on Rails", "Speaking"]
 tags: ["Presentation", "Productivity", "Prototyping", "rails", "Speaking"]
+author: "jesper"
 ---
 
 Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.

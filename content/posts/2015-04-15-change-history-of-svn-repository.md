@@ -6,6 +6,7 @@ url: "/2015/04/15/change-history-of-svn-repository/"
 wp_id: 1759
 categories: ["Code", "git"]
 tags: []
+author: "jesper"
 ---
 
 Somebody asked me if it's possible to change history of an SVN repository like you can do in Git.

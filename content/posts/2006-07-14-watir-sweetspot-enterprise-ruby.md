@@ -6,6 +6,7 @@ url: "/2006/07/14/watir-sweetspot-enterprise-ruby/"
 wp_id: 362
 categories: ["Businesscase"]
 tags: []
+author: "jesper"
 ---
 
 There are many speculations regarding Ruby (the programming language) and it's ready-ness for enterprise use. The other day, a colleague of mine found an absolutely sweet spot: Automated testing via the browser interface.

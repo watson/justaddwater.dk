@@ -6,6 +6,7 @@ url: "/2013/06/19/generate-css-sprite-for-all-worlds-flags/"
 wp_id: 1594
 categories: ["justaddwater.dk"]
 tags: []
+author: "jesper"
 ---
 
 Recently i worked on a project, which had to use flag icons for all flags in the world. The implementation looked like this:

@@ -6,6 +6,7 @@ url: "/2009/08/13/remove-smileys-in-messenger-program-ichat-for-mac/"
 wp_id: 1106
 categories: ["OS X", "Software", "Usability"]
 tags: []
+author: "jesper"
 ---
 
 It has long annoyed me that there is no intuitive, straightforward way to disable smileys in chat programs.

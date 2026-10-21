@@ -6,6 +6,7 @@ url: "/2008/01/20/sharepoint-2007-accessibility-and-impossible-ui-customization/
 wp_id: 866
 categories: ["Accessibility", "Web Development", "Web Standards"]
 tags: []
+author: "jesper"
 ---
 
 Emil Stenström's recent "[Sharepoint 2007 from an interface developer’s view](http://friendlybit.com/css/sharepoint-2007-from-an-interface-developers-view/)" is definitely worth reading if you care about webstandards, accessibility and decent frontend code in general.\

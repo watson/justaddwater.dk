@@ -1,0 +1,40 @@
+{{- /* Sidebar variants as on the original: post -> "About the Author" of its author (nothing for Luis); /archive/ -> none; everything else -> Authors/Subscribe/Pages. */ -}}
+{{- if eq .RelPermalink "/archive/" -}}
+{{- else if eq .Type "posts" -}}
+{{- $a := index hugo.Data.authors (.Params.author | default "jesper") -}}
+<div id="sidebar"><ul>
+{{ if and $a $a.bio }}<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+{{ with $a.photo }}<p style="text-align: center"><img src="{{ . }}" title="Photograph of author {{ $a.name }}" alt="Photograph of author {{ $a.name }}"></p>{{ end }}{{ $a.bio | safeHTML }}
+</li>{{ end }}
+</ul></div>
+{{- else -}}
+<div id="sidebar"><ul>
+<li id="search-2" class="widget widget_search"><form method="get" id="searchform" action="/">
+<div><input type="text" value="" name="s" id="s">
+<input type="submit" id="searchsubmit" value="Search">
+</div>
+</form>
+</li>
+<li id="text-1" class="widget widget_text"><h2 class="widgettitle">Authors</h2>
+<div class="textwidget"><p>This blog is written by Jesper R&oslash;nn-Jensen from NineConsult and Thomas Watson Steen from 3dbyggeri danmark.</p>
+<p><a href="/about-the-authors/">About the authors</a></p></div>
+</li>
+<li id="text-2" class="widget widget_text"><h2 class="widgettitle">Subscribe to this Blog</h2>
+<div class="textwidget"><p>
+Subscribe <a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=520581">by e-mail</a> or get our feed directly to your feed reader:
+</p>
+<p style="text-align: center">
+<a href="/feed/" title="Subscribe to our feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"></a>
+</p></div>
+</li>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+<ul>
+<li class="page_item page-item-93"><a href="/contact-us/">Contact us</a></li>
+<li class="page_item page-item-57"><a href="/blogtools/">Justaddwater.dk tools page</a></li>
+<li class="page_item page-item-235"><a href="/wordpress-plugins/">WordPress Plugins</a></li>
+<li class="page_item page-item-388"><a href="/passionate-users-printing/">Creating Passionate Users website printing problems solved in CSS</a></li>
+<li class="page_item page-item-276"><a href="/notes-elements-of-user-experience/">Jesper&#8217;s Notes, &quot;Elements of User Experience&quot;</a></li>
+</ul>
+</li>
+</ul></div>
+{{- end -}}

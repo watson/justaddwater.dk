@@ -6,6 +6,7 @@ url: "/2006/05/31/ruby-on-rails-copenhagen-meetup/"
 wp_id: 269
 categories: ["Best of Justaddwater", "Code", "Ruby on Rails"]
 tags: []
+author: "jesper"
 ---
 
 UPDATE: We finaly found a venue for the meetup, located in the central Copenhagen just next to The Rock and "Gammel Torv":

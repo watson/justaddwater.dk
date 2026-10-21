@@ -6,6 +6,7 @@ url: "/2006/04/10/xmlhttprequest-soon-becoming-w3c-standard/"
 wp_id: 220
 categories: ["AJAX", "Browser", "JavaScript", "Web Standards", "XML"]
 tags: []
+author: "thomas"
 ---
 
 I just found out ([via BorkWeb](http://borkweb.com/story/xmlhttprequest-object-w3c-working-draft "BorkWeb: XMLHttpRequest Object W3C Working Draft")) that the W3C is looking to standardizing the XMLHttpRequest object which is the foundation for all AJAX based applications.
