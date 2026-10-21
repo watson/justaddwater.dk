@@ -1,0 +1,37 @@
+# One URL path per line, same list for --dev and --orig. Format:
+#   /path/   # why chosen
+# Optional per-host override when paths differ: /path/ dev=/x/ orig=/y/   # why
+/ # front page
+# NOTE: /all-posts/ is dev-only (404 on original); left out to keep pairs 1:1.
+/archive/ # fixed page: archive
+/about-the-authors/ # fixed page
+/contact-us/ # fixed page
+/privacy/ # fixed page
+/subscribe/ # fixed page
+/blogtools/ # fixed page
+/wordpress-plugins/ # fixed page, 142 comments? (long list page)
+/notes-elements-of-user-experience/ # fixed page: notes
+/passionate-users-printing/ # fixed page
+/usabilitydagene-notes-jesper/ # fixed page
+/accessibility-background-danish-center-for-accessibility/ # fixed page
+/thank-you-for-subscribing/ # fixed page
+/thank-you-for-verifying-your-email-subscription/ # fixed page
+/categories/usability/ orig=/category/usability/ # category page (dev URL differs from original)
+/2006/05/19/rails-tip-scaffolding-lists/ # fenced code blocks
+/2007/11/20/how-to-run-javascript-from-watir-scripts/ # code snippets (Watir)
+/2009/10/15/resolve-symlinks-when-copying-files-with-rsync/ # gist link + code
+/2005/11/14/google-analytics/ # linked images / embeds
+/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/ # longest post (26KB)
+/2006/05/13/ticket-systems/ # nested bullets
+/2007/02/15/rounded-corners-the-technorati-way/ # nested bullets + code
+/2007/02/21/inconsistency-at-26-google-sites/ # tables, images in tables
+/2007/12/18/cleanup-time-spam-filter-free-day/ # images in bullet list, 73 comments
+/2005/11/18/danish-usability-conference/ # image inside link, Danish context, floated thumbnail
+/2005/11/16/3-column-css-layout-equal-height-solved/ # CSS/float layout post, no comments file
+/2006/11/06/the-ie-png-fix-vs-accessibility/ # images/alignment
+/2008/06/26/ten-principles-of-google-user-experience/ # long post, list
+/2006/01/08/google-analytics-trick-how-to-view-referring-urls/ # 101 comments
+/2008/01/06/make-wordpress-editor-less-evil/ # 70 comments
+/2015/03/29/easter-egg-css-circles/ # late post, CSS demo
+/2005/10/14/frist-post/ # very short first post
+/2012/02/14/criteria-for-the-capgemini-software-engineer-certification/ # no comments, longish

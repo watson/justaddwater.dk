@@ -1,0 +1,9 @@
+{
+  "name": "justaddwater-tools",
+  "private": true,
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "pngjs": "7.0.0"
+  },
+  "packageManager": "yarn@1.22.22"
+}
