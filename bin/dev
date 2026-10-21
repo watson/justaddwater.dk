@@ -3,6 +3,7 @@
 #
 #   bin/dev [start]   start the server in the background (default)
 #   bin/dev stop      stop the server
+#   bin/dev restart   stop, rebuild with `hugo --gc --quiet`, then start
 #   bin/dev status    show whether the server is running
 #
 # PORT overrides the port (default 1313). Non-default ports use their own
@@ -22,10 +23,11 @@ fi
 URL="http://localhost:$PORT/"
 
 usage() {
-  echo "Usage: bin/dev [start|stop|status]" >&2
-  echo "  start   start Hugo dev server on port $PORT (default)" >&2
-  echo "  stop    stop the server on port $PORT" >&2
-  echo "  status  show server status on port $PORT" >&2
+  echo "Usage: bin/dev [start|stop|restart|status]" >&2
+  echo "  start    start Hugo dev server on port $PORT (default)" >&2
+  echo "  stop     stop the server on port $PORT" >&2
+  echo "  restart  stop, rebuild (hugo --gc --quiet), and start on port $PORT" >&2
+  echo "  status   show server status on port $PORT" >&2
   echo "Set PORT=<n> to use a different port." >&2
 }
 
@@ -94,7 +96,8 @@ cmd_start() {
   exit 1
 }
 
-cmd_stop() {
+# Stop the server on $PORT. Returns 0 if the port is free afterwards, 1 otherwise.
+stop_server() {
   local pid
   pid="$(recorded_pid)"
   local targets=""
@@ -107,7 +110,7 @@ cmd_stop() {
   if [ -z "$targets" ]; then
     rm -f "$PID_FILE"
     echo "No Hugo server running on port $PORT; nothing to stop."
-    exit 0
+    return 0
   fi
 
   local p
@@ -133,10 +136,44 @@ cmd_stop() {
   rm -f "$PID_FILE"
   if [ -z "$(listening_pids)" ]; then
     echo "Stopped Hugo server on port $PORT (pid $(echo $targets))."
-  else
-    echo "Sent kill to Hugo server on port $PORT (pid $(echo $targets)), but port $PORT is still in use." >&2
+    return 0
   fi
+  echo "Sent kill to Hugo server on port $PORT (pid $(echo $targets)), but port $PORT is still in use." >&2
+  return 1
+}
+
+cmd_stop() {
+  stop_server || true
   exit 0
+}
+
+cmd_restart() {
+  echo "Restarting Hugo server on port $PORT..."
+  if ! stop_server; then
+    echo "Restart aborted: port $PORT is still in use after stop. Free it, then run: $(restart_hint)" >&2
+    exit 1
+  fi
+
+  echo "Building site: hugo --gc --quiet"
+  if ! hugo --gc --quiet; then
+    # --quiet hides error details, so re-run without it to show the cause.
+    hugo --gc >&2 || true
+    echo "Restart aborted: hugo build failed (see error above). Server on port $PORT is stopped." >&2
+    echo "Fix the error, then run: $(restart_hint)" >&2
+    exit 1
+  fi
+  echo "Build succeeded."
+
+  cmd_start
+}
+
+# Copy-pasteable command to re-run restart on the current PORT.
+restart_hint() {
+  if [ "$PORT" = "1313" ]; then
+    echo "bin/dev restart"
+  else
+    echo "PORT=$PORT bin/dev restart"
+  fi
 }
 
 cmd_status() {
@@ -165,7 +202,8 @@ cmd_status() {
 
 case "${1:-start}" in
   start)  cmd_start ;;
-  stop)   cmd_stop ;;
-  status) cmd_status ;;
+  stop)    cmd_stop ;;
+  restart) cmd_restart ;;
+  status)  cmd_status ;;
   *)      usage; exit 2 ;;
 esac
