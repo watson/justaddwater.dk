@@ -22,13 +22,32 @@ else
 fi
 URL="http://localhost:$PORT/"
 
+help_text() {
+  cat <<EOT
+bin/dev - run the Hugo dev server for this site (live-reloads content, layouts, assets)
+
+Usage: bin/dev [start|stop|restart|status|help]
+
+Commands:
+  start    start the server in the background on port $PORT, wait until it
+           answers, print the URL (default; does nothing if already running)
+  stop     stop the server (uses the pid file, else whatever listens on $PORT)
+  restart  stop, rebuild the site with 'hugo --gc --quiet' (a broken template
+           or hugo.toml aborts here with the real error), then start again.
+           Needed after hugo.toml or new layouts/ directories change.
+  status   show whether the server is up (exit 0 = up, 1 = down)
+  help     show this help (also -h, --help)
+
+Environment:
+  PORT=<n>   use another port (default 1313); pid/log files are per port
+
+Files: logs/hugo-server.pid, logs/hugo-server.log
+Example: PORT=1399 bin/dev start
+EOT
+}
+
 usage() {
-  echo "Usage: bin/dev [start|stop|restart|status]" >&2
-  echo "  start    start Hugo dev server on port $PORT (default)" >&2
-  echo "  stop     stop the server on port $PORT" >&2
-  echo "  restart  stop, rebuild (hugo --gc --quiet), and start on port $PORT" >&2
-  echo "  status   show server status on port $PORT" >&2
-  echo "Set PORT=<n> to use a different port." >&2
+  help_text >&2
 }
 
 # PIDs of processes listening on $PORT (newline separated, may be empty).
@@ -205,5 +224,6 @@ case "${1:-start}" in
   stop)    cmd_stop ;;
   restart) cmd_restart ;;
   status)  cmd_status ;;
+  help|-h|--help) help_text ;;
   *)      usage; exit 2 ;;
 esac

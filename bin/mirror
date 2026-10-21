@@ -1,8 +1,28 @@
 #!/usr/bin/env bash
 # Mirror justaddwater.dk into ./mirror (frozen safety copy). Re-runnable.
-# Usage: bin/mirror [--lint-only] [base-url]
+# Usage: bin/mirror [-h|--help] [base-url]
 set -euo pipefail
 cd "$(dirname "$0")/.."
+
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+  cat <<EOT
+bin/mirror - wget mirror of the live site into ./mirror (frozen safety copy)
+
+Usage: bin/mirror [-h|--help] [BASE_URL]
+
+  BASE_URL    site to mirror (default http://justaddwater.dk/)
+
+Downloads pages, images, CSS and JS from justaddwater.dk and www.justaddwater.dk
+only, rewrites links for local browsing, skips wp-admin, login, search and
+reply links, and waits ~0.3 s between requests (the old PHP 5.2 server is slow).
+Re-runnable; unchanged files are skipped. Takes a while for the whole site.
+
+Output: mirror/ (git-ignored), log in logs/mirror-YYYYMMDD.log
+Exit:   wget code 8 (some 404s) is normal and does not fail the script.
+Next:   bin/scan (check uploads for suspicious files), bin/copy-uploads
+EOT
+  exit 0
+fi
 
 URL="${1:-http://justaddwater.dk/}"
 OUT="mirror"

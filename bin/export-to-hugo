@@ -1,14 +1,37 @@
 #!/usr/bin/env python3 -I
 """Convert the sanitized WordPress export into Hugo content (stdlib + pandoc).
 
-Writes: content/posts/<slug>.md, content/<page>.md, data/comments/<slug>.json.
-Permalinks are preserved via the `url` front-matter field.
-Usage: bin/export-to-hugo [--limit N]
+Usage: bin/export-to-hugo [--limit N] [--only SLUG]
+
+Reads:   export/justaddwater.sanitized.xml (make it with bin/sanitize-export)
+Writes:  content/posts/<date>-<slug>.md, content/pages/<slug>.md,
+         data/comments/<slug>.json   (comments, with parent ids)
+Permalinks are preserved through each file's `url` front-matter field.
+
+Options:
+  --limit N     convert only the first N items (quick test)
+  --only SLUG   convert a single post/page by slug
+  -h, --help    show this help
+
+Notes:
+  * Takes about 6-7 minutes for everything (one pandoc call per item and
+    comment); run it in the background or a spare terminal.
+  * It overwrites generated files but deletes nothing. Hand-written files such
+    as content/all-posts.md and content/archives/ are left alone, but if you
+    `rm -rf content data` first, restore them from git.
+  * Needs pandoc on PATH (brew install pandoc).
+
+Example:
+  bin/export-to-hugo --only ticket-systems && bin/dev status
 """
 import json, os, re, subprocess, sys
 import xml.etree.ElementTree as ET
 from html import unescape
 from urllib.parse import unquote, urlparse
+
+if {"-h", "--help"} & set(sys.argv[1:]):
+    print(__doc__.strip())
+    sys.exit(0)
 
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 SRC = "export/justaddwater.sanitized.xml"

@@ -1,12 +1,28 @@
 #!/usr/bin/env python3 -I
-"""Make a commit-safe copy of the WordPress export.
+"""Make a commit-safe copy of the raw WordPress export.
 
-Keeps published content and approved comments; strips commenter emails/IPs,
-author emails, and anything draft/private/pending/trashed.
-Usage: bin/sanitize-export [raw.xml] [out.xml]
+Usage: bin/sanitize-export [RAW_XML] [OUT_XML]
+  RAW_XML   default export/raw-justaddwater.xml (git-ignored, keep it private)
+  OUT_XML   default export/justaddwater.sanitized.xml (safe to commit)
+
+Keeps:   published posts, pages and attachments, and approved comments.
+Strips:  commenter emails and IPs, author emails, comment metadata, the
+         subscribe-to-comments subscriber lists, and every draft, private,
+         pending or trashed item.
+Note:    email-like text typed inside a comment body is left as is.
+
+Options:
+  -h, --help   show this help
+
+Example:
+  bin/sanitize-export && grep -c '<wp:comment_author_email>[^<]' export/justaddwater.sanitized.xml
 """
 import os, re, sys
 import xml.etree.ElementTree as ET
+
+if {"-h", "--help"} & set(sys.argv[1:]):
+    print(__doc__.strip())
+    sys.exit(0)
 
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 src = sys.argv[1] if len(sys.argv) > 1 else "export/raw-justaddwater.xml"

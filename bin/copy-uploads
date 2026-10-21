@@ -2,6 +2,20 @@
 # Copy uploads from the wget mirror into Hugo's static/ dir.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+  cat <<EOT
+bin/copy-uploads - copy uploads from the wget mirror into Hugo's static/ dir
+
+Usage: bin/copy-uploads [-h|--help]
+
+Copies mirror/justaddwater.dk/wp-content/uploads/ to
+static/wp-content/uploads/ with rsync (files with '?' in the name, i.e.
+query-string copies made by wget, are skipped). Re-runnable.
+Needs the mirror first: run bin/mirror.
+EOT
+  exit 0
+fi
 src=mirror/justaddwater.dk/wp-content/uploads
 [ -d "$src" ] || { echo "run bin/mirror first" >&2; exit 1; }
 mkdir -p static/wp-content

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // bin/screenshot - full-page screenshots for visually comparing new vs original site.
 //
-// Usage:
+// Usage: bin/screenshot --all|--dev|--orig [options]   (-h, --help shows this)
+//
 //   bin/screenshot --all                 dev + orig concurrently (same as --dev --orig)
 //   bin/screenshot --dev                 http://localhost:1313   -> screenshots/dev/
 //   bin/screenshot --orig                http://justaddwater.dk  -> screenshots/orig/
@@ -18,15 +19,27 @@
 // (3s cap), 15s navigation timeout, one retry, analytics/ads blocked,
 // animations/caret disabled. Exit code 1 if any page failed.
 // Setup once: yarn install && npx playwright install chromium
+// Examples:
+//   bin/screenshot --all                  retake everything (~25 s)
+//   bin/screenshot --dev --only 01,34     two pages on the new site
+//   bin/compare                           then review the diffs in pixelpilot
 const fs = require('fs'), path = require('path');
 const root = path.resolve(__dirname, '..');
+
+if (process.argv.slice(2).some(a => a === '-h' || a === '--help')) {
+  const lines = fs.readFileSync(__filename, 'utf8').split('\n').slice(1);
+  const out = [];
+  for (const l of lines) { if (!l.startsWith('//')) break; out.push(l.replace(/^\/\/ ?/, '')); }
+  console.log(out.join('\n'));
+  process.exit(0);
+}
 const { chromium } = require(path.join(root, 'node_modules', 'playwright'));
 
 const args = process.argv.slice(2);
 const opt = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : null; };
 const all = args.includes('--all');
 const modes = ['dev', 'orig'].filter(m => all || args.includes('--' + m));
-if (!modes.length) { console.error('usage: bin/screenshot --all|--dev|--orig [--host URL] [--pages FILE] [--only a,b] [--width N] [--jobs N]'); process.exit(2); }
+if (!modes.length) { console.error('usage: bin/screenshot --all|--dev|--orig [--host URL] [--pages FILE] [--only a,b] [--width N] [--jobs N]  (see --help)'); process.exit(2); }
 const width = parseInt(opt('--width') || '800', 10);
 const pagesFile = opt('--pages') || path.join(__dirname, 'screenshot-pages.txt');
 const only = (opt('--only') || '').split(',').filter(Boolean);

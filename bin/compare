@@ -8,12 +8,34 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+usage() {
+  cat <<EOT
+bin/compare - build the pixelpilot review (original vs new site) and open it from disk
+
+Usage: bin/compare [--shoot] [--no-open] [-h|--help]
+
+  --shoot     retake all screenshots first (bin/screenshot --all, ~25 s)
+  --no-open   only build the page, do not open the browser
+  -h, --help  show this help
+
+Compares screenshots/dev (current, the new Hugo site) against screenshots/orig
+(baseline, the original WordPress site) as committed at git tag
+orig-screenshots-2026-10-21. Writes tmp/screenshot-review/index.html and opens
+it with 'open' (no server needed).
+
+Environment:
+  BASELINE_REF=<ref>   git ref to read the baseline PNGs from
+  PIXELPILOT=<path>    pixelpilot executable (default ~/src/dotfiles/bin/pixelpilot)
+EOT
+}
+
 shoot=0; open_page=1
 for a in "$@"; do
   case "$a" in
     --shoot) shoot=1 ;;
     --no-open) open_page=0 ;;
-    *) echo "Usage: bin/compare [--shoot] [--no-open]" >&2; exit 2 ;;
+    -h|--help) usage; exit 0 ;;
+    *) usage >&2; exit 2 ;;
   esac
 done
 

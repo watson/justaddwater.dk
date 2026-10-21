@@ -1,9 +1,22 @@
 #!/usr/bin/env python3 -I
 """Flag suspicious files and links on justaddwater.dk (read-only; never opens files).
 
-Checks: (1) files in mirror/ by extension and magic bytes,
-        (2) media library + comment bodies via the WP REST API.
-Usage: bin/scan [--no-api] [--no-files]   Report: logs/scan-report.txt
+Usage: bin/scan [--no-files] [--no-api]
+
+Checks:
+  files  every file under mirror/ by extension (zip, exe, js, php ...) and by
+         magic bytes (e.g. an executable disguised as an image)
+  api    the WordPress media library (non-image attachments) and all comments
+         via http://justaddwater.dk/wp-json (risky links, script/iframe tags)
+
+Options:
+  --no-files    skip the mirror/ file check (needs no mirror)
+  --no-api      skip the live-site API checks (works offline)
+  -h, --help    show this help
+
+Output: printed, and written to logs/scan-report.txt
+Exit:   always 0; read the report. Treat anything flagged as untrusted: list or
+        read it as text, never open or execute it.
 """
 import json, os, re, sys, urllib.request
 from urllib.parse import urlparse
@@ -76,6 +89,10 @@ def scan_api():
     say("  %d flagged" % n)
 
 if __name__ == "__main__":
+    if {"-h", "--help"} & set(sys.argv[1:]):
+        print(__doc__.strip())
+        sys.exit(0)
+    
     os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
     if "--no-files" not in sys.argv: scan_files()
     if "--no-api" not in sys.argv: scan_api()
