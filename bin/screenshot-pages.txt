@@ -16,7 +16,7 @@
 /accessibility-background-danish-center-for-accessibility/ # fixed page
 /thank-you-for-subscribing/ # fixed page
 /thank-you-for-verifying-your-email-subscription/ # fixed page
-/categories/usability/ orig=/category/usability/ # category page (dev URL differs from original)
+/category/usability/ # category page
 /2006/05/19/rails-tip-scaffolding-lists/ # fenced code blocks
 /2007/11/20/how-to-run-javascript-from-watir-scripts/ # code snippets (Watir)
 /2009/10/15/resolve-symlinks-when-copying-files-with-rsync/ # gist link + code

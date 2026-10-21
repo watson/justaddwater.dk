@@ -1,9 +1,23 @@
 {{ define "main" }}
-<article>
-<h1>{{ .Title }}</h1>
-{{ if eq .Type "posts" }}<p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-{{ range .Params.categories }} · <a href="/category/{{ . | urlize }}/">{{ . }}</a>{{ end }}</p>{{ end }}
+{{ if eq .Type "posts" }}{{ $posts := where site.RegularPages "Type" "posts" }}{{ $s := $posts.ByDate }}
+<div class="navigation">
+{{ with $s.Prev . }}<div class="alignleft">&laquo; <a href="{{ .RelPermalink }}" rel="prev">{{ .Title }}</a></div>{{ end }}
+{{ with $s.Next . }}<div class="alignright"><a href="{{ .RelPermalink }}" rel="next">{{ .Title }}</a> &raquo;</div>{{ end }}
+</div>
+<div style="clear:both"></div>
+{{ end }}
+<div class="post">
+<h2>{{ .Title }}</h2>
+<div class="entry">
 {{ .Content }}
-</article>
+{{ with .Params.tags }}<p class="technorati">Technorati Tags: {{ range . }}<a href="/tag/{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
+</div>
+{{ if eq .Type "posts" }}
+<p class="postmetadata alt"><small>
+This entry was posted by Jesper Rønn-Jensen on {{ .Date.Format "Monday, January 2, 2006 15:04" }}{{ with .Params.categories }} and is filed under {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="/category/{{ $c | urlize }}/" rel="category tag">{{ $c }}</a>{{ end }}{{ end }}.
+Comments are archived and read-only.
+</small></p>
+{{ end }}
+</div>
 {{ partial "comments.html" . }}
 {{ end }}

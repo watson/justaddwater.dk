@@ -3,15 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}justaddwater.dk | Instant Usability &amp; Web Standards{{ else }}{{ .Title }} · justaddwater.dk{{ end }}</title>
 <meta name="description" content="{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ site.Params.description }}{{ end }}">
-<link rel="alternate" type="application/rss+xml" href="/feed.xml" title="{{ site.Title }}">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="{{ site.Title }}">
 {{ $css := resources.Get "site.css" | minify }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 </head>
-<body>
-<header><a class="brand" href="/">Just Add Water</a>
-<nav><a href="/category/usability/">Usability</a> <a href="/categories/">Topics</a> <a href="/all-posts/">All posts</a> <a href="/feed.xml">RSS</a></nav></header>
-<main>{{ block "main" . }}{{ end }}</main>
-<footer>An archive of justaddwater.dk, 2005–2016 · by Jesper Rønn-Jensen</footer>
+<body{{ if not (eq .Kind "page") }} class="home-bg"{{ end }}>
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="{{ if eq .Kind "page" }}widecolumn{{ else }}narrowcolumn{{ end }}">
+{{ block "main" . }}{{ end }}
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align:center"><img src="/images/jesper.jpg" width="100" alt="Photograph of author Jesper Rønn-Jensen"></p>
+<p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p>
+<p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+<li class="widget"><h2 class="widgettitle">Browse</h2><ul>
+<li><a href="/all-posts/">All posts</a></li>
+<li><a href="/category/">Categories</a></li>
+<li><a href="/category/usability/">Usability</a></li>
+<li><a href="/feed/">RSS feed</a></li>
+</ul></li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk is a static archive, proudly powered by <a href="https://gohugo.io/">Hugo</a>
+</p></div>
+</div>
 </body>
 </html>

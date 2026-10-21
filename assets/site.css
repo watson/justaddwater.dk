@@ -1,10 +1,717 @@
-:root{--bg:#fff;--fg:#1d1f23;--mute:#666;--link:#0b5cad;--rule:#e3e3e3}
-@media(prefers-color-scheme:dark){:root{--bg:#16181c;--fg:#e6e6e6;--mute:#9aa0a6;--link:#7db7f0;--rule:#2d3036}}
-body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 Georgia,serif}
-header,main,footer{max-width:42rem;margin:0 auto;padding:1rem}
-header{display:flex;gap:1rem;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid var(--rule)}
-.brand{font-weight:bold;text-decoration:none;color:var(--fg)}nav a{margin-right:.8rem;font:15px system-ui}
-a{color:var(--link)}img{max-width:100%;height:auto}pre{overflow:auto;background:var(--rule);padding:.8rem;font-size:15px}
-.meta,time,footer{color:var(--mute);font:14px system-ui}.posts{list-style:none;padding:0}.posts li{margin:.4rem 0}
-.comment{border-top:1px solid var(--rule);margin-top:1rem;padding-top:.5rem}.reply{margin-left:1.2rem}
-table{border-collapse:collapse;max-width:100%;display:block;overflow:auto}td,th{border:1px solid var(--rule);padding:.2rem .5rem}
+/*  
+Theme Name: justaddwater.dk 
+Theme URI: http://justaddwater.dk/
+Description: The justaddwater.dk theme based on the default WordPress 2.3 theme.
+Version: 1.3
+Author: Thomas Watson Steen
+Author URI: http://justaddwater.dk/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+	
+*/
+
+/* Begin Typography & Colors */
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background: #d5d6d7 url('/images/kubrickbgcolor.jpg');
+	color: #333;
+	text-align: center;
+	}
+
+#page {
+	background-color: white;
+	border: 1px solid #959596;
+	text-align: left;
+	}
+
+#header {
+	background: #73a0c5 url('/images/personalheader-bg.jpg') no-repeat bottom center;
+	}
+
+#headerimg 	{ 
+	background: url('/images/personalheader.jpg') no-repeat center;
+	margin: 7px 9px 0; 
+	height: 192px; 
+	width: 740px; 
+	} 
+
+#content {
+	font-size: 1.2em
+	}
+
+p.continue-reading {
+	font-size: 90%;
+	line-height: 90% 
+	}
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.narrowcolumn .entry, .widecolumn .entry {
+	line-height: 1.4em;
+	margin-top: -0.6em
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+	
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+#oldernews {
+	margin-top: 0.5em
+	}
+
+#oldernews ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0
+	}
+
+#oldernews ul li a {
+        border-bottom: 1px dotted #CCC;
+        padding: 3px 2px 2px 2px
+        }
+
+#oldernews ul li a span.time {
+        color: #999;
+	/* font-family: "Courier New", Courier, monospace;
+	font-size: 8pt;
+	float: left; */
+        white-space: nowrap
+        }
+
+.linkable a:link, .linkable a:visited {
+	text-decoration: none;
+	display: block
+	}
+
+.linkable a:hover {
+	background-color: #FAA;
+	text-decoration: none
+	}
+
+.alt {
+	background-color: #f8f8f8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+
+#footer {
+	background: #eee url('/images/kubrickfooter.jpg') no-repeat top; 
+	border: none;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+    font-size: 4em;
+    text-align: left;
+    padding-left: 20px;
+    line-height:1.2em;
+    width:400px
+	}
+
+#headerimg .description {
+	font-size: 2em;
+	text-align: left;
+	padding-left: 20px;
+	line-height: 1.5em;
+	}
+
+.quote {
+        font-size: 1.2em;
+        text-align: left;
+        margin-left: 60px;
+	margin-top: 36px;
+        line-height: 1.5em;	
+	}
+
+h2 {
+	font-size: 1.6em;
+	}
+
+h2.pagetitle {
+	font-size: 1.6em;
+	}
+
+#sidebar h2 {
+	font-family: 'Lucida Grande', Verdana, Sans-Serif;
+	font-size: 1.2em;
+	}
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, #headerimg .description, .quote {
+	text-decoration: none;
+	color: white;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+	
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+	
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+	
+#wp-calendar #prev a, #wp-calendar #next a {
+	font-size: 9pt;
+	}
+
+#wp-calendar a {
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body {
+	margin: 0;
+	padding: 0; 
+	}
+
+#page {
+	background-color: white;
+	margin: 20px auto;
+	padding: 0;
+	width: 760px;
+	border: 1px solid #959596;
+	}
+	
+#header {
+	background-color: #73a0c5;
+	margin: 0 !important;
+	margin: 0 0 0 1px;
+	padding: 1px;
+	height: 198px;
+	width: 758px;
+	}
+
+#headerimg {
+	margin: 0;
+	height: 180px;
+	width: 720px;
+	border: 1px solid black;
+	margin-top: 17px;
+	margin-left: 18px;
+	}
+
+.narrowcolumn {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 450px;
+	}
+
+.widecolumn {
+	float: left;
+	padding: 10px 0 20px 45px;
+	margin: 5px 0 0 0;
+	width: 450px;
+	}
+	
+.post {
+	margin: 0 0 40px;
+	text-align: justify;
+	}
+
+.post h2 {
+	text-align: left
+	}
+
+.post h2 span.author {
+	font-size: 0.7em; 
+	color: #FAA; 
+	font-family: "Courier New", Courier, monospace
+	}
+
+.post h2 span.time {
+	font-size: 1em;
+	color: #AAA
+	}
+
+.post div.postmenu {
+	margin-top: 0.35em 
+	}
+
+.post div.postmenu span {
+	vertical-align: 50%
+	}
+
+.nowrap {
+	white-space: nowrap
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+
+.widecolumn .smallattachment {
+	text-align: center;
+	float: left;
+	width: 128px;
+	margin: 5px 5px 5px 0px;
+}
+
+.widecolumn .attachment {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.postmetadata {
+	clear: left;
+}
+	
+#footer {
+	padding: 0 0 0 1px;
+	margin: 0 auto;
+	width: 760px;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 30px;
+	margin: 0;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 30px;
+	text-align: center;
+	}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+	
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Lists */
+
+.entry ul {
+	padding: 0 0 0 30px;
+	} 
+
+.entry li {
+	margin: 7px 0 8px 10px;
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	list-style-type: circle;
+	list-style-image: none;
+	margin: 3px 0 0 3px;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px; 
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	overflow: hidden;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 20px 0 10px 0;
+	margin-left: 545px;
+	width: 190px;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+#wp-calendar td.pad:hover { /* Doesn't work in IE */
+	background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+/* ---- additions for the static archive ---- */
+.home-bg #page{background:url("/images/kubrickbg-ltr.jpg") repeat-y top;border:none}
+#page{overflow:hidden}
+#sidebar img{max-width:100%;height:auto}
+#sidebar{margin-left:545px}
+.entry img{max-width:100%;height:auto}
+.entry pre{overflow:auto;background:#f4f4f4;padding:6px}
+.entry table{display:block;overflow:auto;max-width:100%}
+.post .time{font-size:1em;color:#AAA}
+.post h2 a{color:#333}
+.postmeta{margin:.4em 0;color:#777;font-size:.9em}
+.terms{list-style:none;padding:0}
+.commentlist li.reply{margin-left:20px}
+.commentlist ol{padding:0}
+.commentlist li ol{margin-top:0}
+#footer a{color:#06c}
+.pagination{margin:20px 0;text-align:center}
+@media(max-width:800px){
+ #page,#header,#footer{width:auto;max-width:760px;margin-left:auto;margin-right:auto}
+ #page{margin:0;border:none}
+ #header{width:auto;height:auto}
+ #headerimg{width:auto;max-width:100%;height:180px;background-size:cover;margin:7px 9px 0;box-sizing:border-box}
+ h1{font-size:3em;width:auto}
+ .quote{display:none}
+ .narrowcolumn,.widecolumn{float:none;width:auto;padding:10px 15px 20px}
+ #sidebar{margin:0;width:auto;padding:10px 15px}
+ .home-bg #page{background:#fff}
+}
+.ctext{font-weight:normal;line-height:1.5em;margin:10px 5px 10px 0}.ctext p{margin:10px 0}
+#sidebar #about-the-author img{width:100px;height:auto}

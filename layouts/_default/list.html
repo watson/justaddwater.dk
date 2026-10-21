@@ -1,7 +1,11 @@
 {{ define "main" }}
-<h1>{{ if .IsHome }}Latest posts{{ else }}{{ .Title }}{{ end }}</h1>
+{{ if not .IsHome }}<h2 class="pagetitle">{{ .Title }}</h2>{{ end }}
 {{ $pages := cond .IsHome (where site.RegularPages "Type" "posts") .Pages }}
 {{ $p := .Paginate $pages.ByDate.Reverse }}
-<ul class="posts">{{ range $p.Pages }}<li><time>{{ .Date.Format "2006-01-02" }}</time> <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
-{{ template "_internal/pagination.html" . }}
+{{ range $p.Pages }}
+<div class="post"><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="time">{{ .Date.Format "Jan 2, 2006" }}</span></h2>
+<div class="entry"><p>{{ .Summary | plainify | truncate 300 }}</p>
+<p class="continue-reading"><a href="{{ .RelPermalink }}">Continue reading &raquo;{{ .Title }}&laquo;</a></p></div></div>
+{{ end }}
+<div class="navigation">{{ with $p.Prev }}<div class="alignleft"><a href="{{ .URL }}">&laquo; Newer</a></div>{{ end }}{{ with $p.Next }}<div class="alignright"><a href="{{ .URL }}">More articles &raquo;</a></div>{{ end }}</div>
 {{ end }}
