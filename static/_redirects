@@ -8,8 +8,9 @@
 
 # WordPress category/tag slugs that differ from Hugo term slugs
 
-/category/eventsseminars/ /category/events/ 301
-/category/eventsseminars/feed/ /category/events/feed/ 301
+/category/eventsseminars/ /category/events/seminars/ 301
+/category/eventsseminars/feed/ /category/events/seminars/feed/ 301
+/category/events/ /category/events/seminars/ 301
 /category/justaddwaterdk/ /category/justaddwater.dk/ 301
 /category/justaddwaterdk/feed/ /category/justaddwater.dk/feed/ 301
 /category/testing-2/ /category/testing/ 301

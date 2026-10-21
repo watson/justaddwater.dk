@@ -1,8 +1,8 @@
 {{ define "main" }}
 {{ if eq .Type "posts" }}{{ $posts := where site.RegularPages "Type" "posts" }}{{ $s := $posts.ByDate }}
 <div class="navigation">
-{{ with $s.Prev . }}<div class="alignleft">&laquo; <a href="{{ .RelPermalink }}" rel="prev">{{ .Title }}</a></div>{{ end }}
-{{ with $s.Next . }}<div class="alignright"><a href="{{ .RelPermalink }}" rel="next">{{ .Title }}</a> &raquo;</div>{{ end }}
+{{ with $s.Next . }}<div class="alignleft">&laquo; <a href="{{ .RelPermalink }}" rel="prev">{{ .Title }}</a></div>{{ end }}
+{{ with $s.Prev . }}<div class="alignright"><a href="{{ .RelPermalink }}" rel="next">{{ .Title }}</a> &raquo;</div>{{ end }}
 </div>
 <div style="clear:both"></div>
 {{ end }}
@@ -10,6 +10,7 @@
 <h2>{{ .Title }}</h2>
 <div class="entry">
 {{ .Content }}
+{{ if eq .RelPermalink "/archive/" }}{{ partial "archive-lists.html" . }}{{ end }}
 {{ with .Params.tags }}<p class="technorati">Technorati Tags: {{ range . }}<a href="/tag/{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>{{ end }}
 </div>
 {{ if eq .Type "posts" }}
@@ -19,5 +20,5 @@ Comments are archived and read-only.
 </small></p>
 {{ end }}
 </div>
-{{ partial "comments.html" . }}
+{{ if ne .RelPermalink "/archive/" }}{{ partial "comments.html" . }}{{ end }}
 {{ end }}

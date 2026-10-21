@@ -1,0 +1,20 @@
+{{ $posts := where site.RegularPages "Type" "posts" }}
+<h2>Archives by Month:</h2>
+<ul>
+{{ range $posts.GroupByDate "2006-01" "desc" }}{{ $d := (index .Pages 0).Date }}<li><a href="/{{ $d.Format "2006/01" }}/">{{ $d.Format "January 2006" }}</a></li>
+{{ end }}
+</ul>
+<h2>Archives by Subject:</h2>
+{{- /* WordPress parent/child categories (children are flat Hugo terms). */ -}}
+{{ $children := dict "events/seminars" (slice "javaone" "qcon" "railsconf" "speaking") "web-standards" (slice "atom" "html" "xml") }}
+{{ $all := site.Taxonomies.categories }}
+{{ $kids := slice }}{{ range $children }}{{ $kids = $kids | append . }}{{ end }}
+<ul>
+<li class="categories">Categories<ul>
+{{ range $all.Alphabetical }}{{ $slug := .Page.RelPermalink | strings.TrimPrefix "/category/" | strings.TrimSuffix "/" }}{{ if not (in $kids $slug) }}
+<li class="cat-item"><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+{{ with index $children $slug }}<ul class="children">{{ range . }}{{ with $all.Get . }}<li class="cat-item"><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>{{ end }}{{ end }}</ul>{{ end }}
+</li>
+{{ end }}{{ end }}
+</ul></li>
+</ul>

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h2 class="pagetitle">{{ .Title }}</h2>
+{{ $posts := where site.RegularPages "Type" "posts" }}
+{{ $a := .Params.archive }}
+{{ if eq $a "year" }}{{ $posts = where $posts "Date.Year" (int .Params.year) }}
+{{ else if eq $a "month" }}{{ $y := int .Params.year }}{{ $m := int (strings.TrimLeft "0" .Params.month) }}{{ $posts = where (where $posts "Date.Year" $y) "Date.Month" $m }}{{ end }}
+{{ $posts = $posts.ByDate.Reverse }}
+{{ $pn := 1 }}{{ if eq $a "author" }}{{ $pn = int .Params.pagenum }}{{ $per := int .Params.per }}{{ $posts = first $per (after (mul (sub $pn 1) $per) $posts) }}{{ end }}
+{{ range $posts }}
+<div class="post"><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="time">{{ .Date.Format "Jan 2, 2006" }}</span></h2>
+<div class="entry"><p>{{ .Summary | plainify | truncate 300 }}</p>
+<p class="continue-reading"><a href="{{ .RelPermalink }}">Continue reading &raquo;{{ .Title }}&laquo;</a></p></div></div>
+{{ end }}
+{{ if eq $a "author" }}<div class="navigation">
+{{ if gt $pn 1 }}<div class="alignleft"><a href="{{ cond (eq $pn 2) "/author/jesper/" (printf "/author/jesper/page/%d/" (sub $pn 1)) }}">&laquo; Newer</a></div>{{ end }}
+{{ if lt $pn (int .Params.pages) }}<div class="alignright"><a href="/author/jesper/page/{{ add $pn 1 }}/">More articles &raquo;</a></div>{{ end }}</div>{{ end }}
+{{ end }}

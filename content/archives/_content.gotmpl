@@ -1,0 +1,21 @@
+{{- /* Generates /YYYY/, /YYYY/MM/ and /author/jesper/ (+ /page/N/) archive pages from posts. Regeneration-safe. */ -}}
+{{- /* site.RegularPages is unavailable in adapters, so derive dates from content/posts/YYYY-MM-DD-*.md file names. */ -}}
+{{- $per := 20 -}}
+{{- $names := slice -}}
+{{- range os.ReadDir "content/posts" -}}{{ if and (not .IsDir) (findRE `^\d{4}-\d{2}-\d{2}-` .Name) }}{{ $names = $names | append .Name }}{{ end }}{{ end -}}
+{{- $years := slice -}}{{- $months := slice -}}
+{{- range $names -}}{{ $years = $years | append (substr . 0 4) }}{{ $months = $months | append (substr . 0 7) }}{{ end -}}
+{{- range $years | uniq -}}
+  {{ $y := . }}
+  {{ $.AddPage (dict "path" (printf "y%s" $y) "title" (printf "Archive for %s" $y) "kind" "page" "layout" "datearchive" "url" (printf "/%s/" $y) "params" (dict "archive" "year" "year" $y)) }}
+{{- end -}}
+{{- range $months | uniq -}}
+  {{ $k := . }}{{ $y := substr $k 0 4 }}{{ $m := substr $k 5 2 }}
+  {{ $d := time.AsTime (printf "%s-01T00:00:00Z" $k) }}
+  {{ $.AddPage (dict "path" (printf "m%s" $k) "title" (printf "Archive for %s" ($d.Format "January, 2006")) "kind" "page" "layout" "datearchive" "url" (printf "/%s/%s/" $y $m) "params" (dict "archive" "month" "year" $y "month" $m)) }}
+{{- end -}}
+{{- $n := math.Ceil (div (float (len $names)) $per) | int -}}
+{{- range seq $n -}}
+  {{ $u := cond (eq . 1) "/author/jesper/" (printf "/author/jesper/page/%d/" .) }}
+  {{ $.AddPage (dict "path" (printf "author-jesper-%d" .) "title" "Author Archive" "kind" "page" "layout" "datearchive" "url" $u "params" (dict "archive" "author" "pagenum" . "pages" $n "per" $per)) }}
+{{- end -}}

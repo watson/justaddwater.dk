@@ -702,7 +702,7 @@ a img {
 .commentlist li ol{margin-top:0}
 #footer a{color:#06c}
 .pagination{margin:20px 0;text-align:center}
-@media(max-width:800px){
+@media(max-width:740px){
  #page,#header,#footer{width:auto;max-width:760px;margin-left:auto;margin-right:auto}
  #page{margin:0;border:none}
  #header{width:auto;height:auto}
@@ -715,3 +715,6 @@ a img {
 }
 .ctext{font-weight:normal;line-height:1.5em;margin:10px 5px 10px 0}.ctext p{margin:10px 0}
 #sidebar #about-the-author img{width:100px;height:auto}
+
+/* archive page lists */
+.entry ul.children { margin-left: 1.2em; }
