@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Mirror justaddwater.dk into ./mirror (frozen safety copy). Re-runnable.
+# Usage: bin/mirror [--lint-only] [base-url]
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+URL="${1:-http://justaddwater.dk/}"
+OUT="mirror"
+command -v wget >/dev/null || { echo "wget missing: brew install wget" >&2; exit 1; }
+
+mkdir -p "$OUT" logs
+wget \
+  --mirror \
+  --page-requisites \
+  --adjust-extension \
+  --convert-links \
+  --no-parent \
+  --domains justaddwater.dk,www.justaddwater.dk \
+  --reject-regex '(wp-login|wp-admin|xmlrpc|\?replytocom=|/feed/.+|\?s=)' \
+  --wait 0.3 --random-wait \
+  --tries 3 --timeout 30 \
+  --user-agent "justaddwater-archive/1.0 (owner mirror)" \
+  --directory-prefix "$OUT" \
+  --append-output "logs/mirror-$(date +%Y%m%d).log" \
+  "$URL" || echo "wget exited $? (code 8 = some 404s, usually fine)"
+
+echo "Files:  $(find "$OUT" -type f | wc -l | tr -d ' ')"
+echo "Size:   $(du -sh "$OUT" | cut -f1)"
+echo "Posts:  $(find "$OUT" -name '*.html' | wc -l | tr -d ' ') html pages"
+echo "Log:    logs/mirror-$(date +%Y%m%d).log"
