@@ -687,6 +687,7 @@ a img {
 
 /* ---- additions for the static archive ---- */
 .home-bg #page{background:url("/images/kubrickbg-ltr.jpg") repeat-y top;border:none}
+.bg-wide #page{background:url("/images/kubrickbgwide.jpg") repeat-y top;border:none}
 #page{overflow:hidden}
 #sidebar img{max-width:100%;height:auto}
 #sidebar{margin-left:545px}
@@ -711,7 +712,7 @@ a img {
  .quote{display:none}
  .narrowcolumn,.widecolumn{float:none;width:auto;padding:10px 15px 20px}
  #sidebar{margin:0;width:auto;padding:10px 15px}
- .home-bg #page{background:#fff}
+ .home-bg #page,.bg-wide #page{background:#fff}
 }
 .ctext{font-weight:normal;line-height:1.5em;margin:10px 5px 10px 0}.ctext p{margin:10px 0}
 
@@ -721,3 +722,8 @@ a img {
 /* code blocks */
 .entry pre,.entry blockquote pre{font-family:"Courier New",Menlo,monospace;font-size:12px;line-height:1.4;text-align:left;white-space:pre;overflow-x:auto;margin:1em 0;padding:8px 10px;background:#f6f6f6;border:1px solid #ddd}
 .entry pre code,.entry blockquote pre code{font-family:inherit;font-size:inherit;text-align:left;white-space:pre;background:none;padding:0}
+
+/* headings after a left-aligned photo paragraph clear it (original had inline clear:both on those h3) */
+.entry p:has(> img[align=left]) ~ h3{clear:both}
+/* group photo paragraph on /about-the-authors/ was text-align:center in the original (lost in the markdown export) */
+.entry p:has(> img[src*="mb-2006-018-C-00117"]){text-align:center}

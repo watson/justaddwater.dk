@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="{{ site.Language.Locale }}">
 <head>
 <meta charset="utf-8">
@@ -9,7 +9,7 @@
 {{ $css := resources.Get "site.css" | minify }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 </head>
 {{ $wide := or (eq .Type "posts") (eq .RelPermalink "/archive/") }}
-<body{{ if not $wide }} class="home-bg"{{ end }}>
+<body class="{{ if eq .Type "posts" }}bg-wide{{ else }}home-bg{{ end }}">
 <div id="page">
 <div id="header"><div id="headerimg">
 <h1><a href="/">justaddwater.dk</a></h1>

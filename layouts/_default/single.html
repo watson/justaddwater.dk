@@ -1,4 +1,13 @@
 {{ define "main" }}
+{{ if eq .RelPermalink "/archive/" }}
+<form method="get" id="searchform" action="/">
+<div><input type="text" value="" name="s" id="s">
+<input type="submit" id="searchsubmit" value="Search">
+</div>
+</form>
+
+{{ partial "archive-lists.html" . }}
+{{ else }}
 {{ if eq .Type "posts" }}{{ $posts := where site.RegularPages "Type" "posts" }}{{ $s := $posts.ByDate }}
 <div class="navigation">
 {{ with $s.Next . }}<div class="alignleft">&laquo; <a href="{{ .RelPermalink }}" rel="prev">{{ partial "tt.html" .Title }}</a></div>{{ end }}
@@ -12,8 +21,8 @@
 {{ .Content }}
 {{ if eq .RelPermalink "/archive/" }}{{ partial "archive-lists.html" . }}{{ end }}
 {{ with .Params.technorati }}<p><small>Technorati Tags: {{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $p := site.GetPage (printf "/tags/%s" ($t | urlize)) }}{{ if $p }}<a href="{{ $p.RelPermalink }}" rel="tag">{{ $t }}</a>{{ else }}{{ $t }}{{ end }}{{ end }}</small></p>{{ end }}
-</div>
 {{ if eq .Type "posts" }}
+{{- /* as on the original, the meta box sits inside .entry (the original ticket-systems post also has a stray <ol /> around it: one page, not replicated) */ -}}
 <p class="postmetadata alt">
 <small>
 This entry was posted by {{ with index hugo.Data.authors (.Params.author | default "jesper") }}{{ .name }}{{ end }}
@@ -24,5 +33,7 @@ Both comments and pings are currently closed.
 </p>
 {{ end }}
 </div>
+</div>
 {{ if ne .RelPermalink "/archive/" }}{{ partial "comments.html" . }}{{ end }}
+{{ end }}
 {{ end }}
