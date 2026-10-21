@@ -12,15 +12,10 @@ Jesper and I were invited yesterday to speak for the [Danish IT usability networ
 
 In short, the presentation touched
 
-- \
 - Prototyping, how and when to get up to speed
-  \
 - Cases from the public and financial sectors where we have been prototyping
-  \
 - Experience with different tools, such as Axure and Ruby on Rails
-  \
 - Lots of good questions from the audience
-  
 
 We were around 25 people in total, and both Jesper and I were impressed with the good and relevant questions that everybody had. Actually, it was a shame we were not able to stay for the afternoon group discussions about the different presentations.
 
@@ -30,11 +25,6 @@ I had a talk with [Rolf Molich](http://www.upassoc.org/upa_publications/upa_voic
 
 Here are the links Jesper promised to post with comparison of different prototyping tools. I also added a link to a more detailed look on Ruby on Rails as a prototyping tool (published by Jesper here on justaddwater.dk).
 
-- \
-- Boxes and Arrows: [Visio Replacement? You Be the Judge](http://www.boxesandarrows.com/view/visio_replaceme) (Nov 2006)[\
-  ](http://www.boxesandarrows.com/view/visio_replaceme)
-  \
+- Boxes and Arrows: [Visio Replacement? You Be the Judge](http://www.boxesandarrows.com/view/visio_replaceme) (Nov 2006) [](http://www.boxesandarrows.com/view/visio_replaceme)
 - GUUUI.com: [Results from a survey of web prototyping tools usage](http://www.guuui.com/issues/01_03_02.php) (2002)
-  \
 - Justaddwater.dk: [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link: Ruby on Rails as rapid prototyping tool") (Apr 2006)
-  \

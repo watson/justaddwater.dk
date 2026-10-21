@@ -18,17 +18,12 @@ From Snitker & Co's newsletter that is sent out today: (in Danish)
 >
 > **Prototype-drevet udvikling der øger forretningsforståelsen — og brugeroplevelsen**
 >
-> Jesper Rønn-Jensen fortæller om et værktøj, der kan bygge prototyper op til 10 gange hurtigere - med følgende fordele:\
+> Jesper Rønn-Jensen fortæller om et værktøj, der kan bygge prototyper op til 10 gange hurtigere - med følgende fordele:
 >
-> - \
 > - Flyt fokus fra corporate experience (hvad afsendervirksomheden ønsker) til user experience (hvad brugerne kommer til at opleve)
->   \
 > - Flyt fokus fra en papirprototype til en kørende applikation
->   \
 > - Nedbring fasen fra idé til testklar prototype fra måneder til få dage
->   \
 >
-> \
 > Jesper Rønn-Jensen arbejder til dagligt i Capgemini og står sammen med Thomas Watson bag webloggen [justaddwater.dk](//). Præsentationen er en snig-premiere på Jespers præsentation på reboot8 den 1. juni.
 >
 > Gå-klogere-hjem-møder:\

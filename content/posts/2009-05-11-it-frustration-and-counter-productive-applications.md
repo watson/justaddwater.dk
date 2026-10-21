@@ -24,11 +24,7 @@ I wonder if you have similar experiences from your daily life with IT systems? I
 
 Related articles:
 
-- \
 - [3 Simple Usability Tips For Developers](../2008/02/11/3-simple-usability-tips-for-developers/ "Permanent Link: 3 Simple Usability Tips For Developers") (Feb. 2008)
-  \
 - [Jef Raskin’s First Law of Interface Design Explained](../2009/03/19/jef-raskins-first-law-of-interface-design-explained/ "Permanent Link: Jef Raskin’s First Law of Interface Design Explained") (March 2009)
-  
-
 
 ##

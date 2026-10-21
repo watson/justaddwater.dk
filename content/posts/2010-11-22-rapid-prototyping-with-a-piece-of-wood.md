@@ -10,14 +10,15 @@ tags: ["Productivity", "Prototyping", "rapid prototyping"]
 
 May I recommend Aza Raskins recent presentation on Rapid prototyping. He shares a lot of very insightful thoughts on how (and why) rapid prototyping is so important.
 
+[Embedded content: http://player.vimeo.com/video/16527312](http://player.vimeo.com/video/16527312)
+
 [Rapid Prototyping with Aza Raskin](http://vimeo.com/16527312) from [Dan Braghis](http://vimeo.com/zerolab) on [Vimeo](http://vimeo.com).
 
 Aza Raskin, creative lead at Firefox, shares some tips and tricks about rapid prototyping at the Mozilla Drumbeat festival
 
 One of his points: "**Aim to finish a usable artifact in a day. This helps you focus and scope.**"
 
-He shows this block of wood as example:\
-![](/wp-content/uploads/2010/11/Screen-shot-2010-11-22-at-10.04.34-PM.png "block of wood that used as prototype for palm pilot")
+He shows this block of wood as example: ![](/wp-content/uploads/2010/11/Screen-shot-2010-11-22-at-10.04.34-PM.png "block of wood that used as prototype for palm pilot")
 
 > This block of wood has rather a history, because it is also a Palm Pilot. I regarded it started at Palm. Actually,
 >
@@ -32,12 +33,7 @@ Prototyping is highly addictive and also a necessity for getting feedback fast.
 
 Related articles:
 
-- \
 - [Capgemini website article: Prototyping and Ruby on Rails](/2008/04/24/capgemini-website-article-prototyping-and-ruby-on-rails/ "Permanent Link to Capgemini website article: Prototyping and Ruby on Rails") (apr 2008)
-  \
 - [Prototyping Talk in Danish IT Usability Network](/2007/02/28/prototyping-talk-in-danish-it-usability-network/ "Permanent Link: Prototyping Talk in Danish IT Usability Network") (may 2006)
-  \
 - [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link: Ruby on Rails as rapid prototyping tool") (apr 2006)
-  \
 - UX Magazine article: [How To Prototype And Influence People with Aza Raskin (November 2nd)](http://uxmag.com/design/how-to-prototype-and-influence-people)
-  \

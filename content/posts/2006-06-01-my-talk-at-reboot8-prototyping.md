@@ -28,24 +28,15 @@ Topic: Prototype driven development with Ruby on Rails, and demo of the applicat
 
 Here are material if you are looking for more info:
 
-- \
 - [Ruby on Rails](http://rubyonrails.org "Ruby on Rails Website")
-  
 
 Links to agile software development methods:
 
-- \
 - [Agile software development](http://en.wikipedia.org/wiki/Agile_software_development) (wikipedia)
-  \
 - [Extreme Programming](http://en.wikipedia.org/wiki/Extreme_Programming) (wikipedia)
-  \
 - [Scrum (in management)](http://en.wikipedia.org/wiki/Scrum_%28in_management%29) (wikipedia)
-  \
 - [Lean software development](http://en.wikipedia.org/wiki/Lean_software_development) (wikipedia)
-  \
 - [Getting Real](https://gettingreal.37signals.com/) (37Signals)
-  
-
 
 ### Your feedback
 

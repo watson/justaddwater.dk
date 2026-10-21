@@ -18,14 +18,12 @@ Jeffs words:
 >
 > On a personal note, I've got a much different job now that the design work on Analytics has wrapped up. I now lead a team of over 30 designers and researchers responsible for the user experience of Google's web applications.
 
-
 ### Still waiting
 
 Unfortunately, it seems that we will have to wait a bit more before we can use the new interface for Justaddwater.dk. My google analytics front screen has this note:
 
 > We're excited to announce the newly redesigned Google Analytics.\
 > Over the next several weeks, we will be migrating all existing Analytics accounts to the new Google Analytics interface.
-
 
 ### Example screenshots
 
@@ -45,12 +43,9 @@ Over a year ago I wrote about the tedious process [to view referring URLs in Goo
 
 [![google analytics v2 discover data](http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_discover_data-2_sm-1.jpg)](http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_discover_data-2.jpg)
 
-
 In the list in the bottom, it looks very similar to the old version, and I cannot see the unique URL (unless the screenshot above gets unique links from the frontpages of stumbleupon.com, google.com, and fredcavazza.net?).
 
-
 Unfortunately, it seems like it's still necessary to dig after the information regarding the unique URLs.
-
 
 Compare to how it is now:
 

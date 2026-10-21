@@ -14,15 +14,10 @@ The usual design guide that dictates colors for headings, which images to use fo
 
 An HTML Guide has the following advantages over a traditional design guide:
 
-- \
 - Developers can focus on business logic.
-  \
 - No knowledge of CSS required for web developers. Experts took care of CSS, browser bugs, aligning pixels, etc.
-  \
 - Testing can be less thorough on other browsers once the initial work is done.
-  \
 - Service providers can save money as one portlet/webpart can integrate into many portals \*)
-  
 
 \*)  over time as a common format emerge on several portals.
 
@@ -46,28 +41,14 @@ And then there is the corresponding HTML markup for creating that particular exa
 
 List with examples that are public available on the web
 
-- \
-- **Virk.dk (Denmark):** [HTML Guide](http://htmlguide.virk.dk/) (in Danish)\
-  Virk.dk is the Danish public portal for everything companies need to interact with public authorities.\
-  Technical note: Still has minor browser rendering issues that we are looking into. HTML is as clean as the graphical design allows.
-  \
-- **TDC (Denmark):** [Metaform guide](http://manual.tdconline.dk/metaform_markup/definition/form/) (in Danish)\
-  TDC, the big Danish telco has a similar guide, also public available.\
-  Technical note: Suffers from [tag soup](http://en.wikipedia.org/wiki/Tag_soup), but otherwise is very comprehensive.
-  
+- **Virk.dk (Denmark):** [HTML Guide](http://htmlguide.virk.dk/) (in Danish) Virk.dk is the Danish public portal for everything companies need to interact with public authorities. Technical note: Still has minor browser rendering issues that we are looking into. HTML is as clean as the graphical design allows.
+- **TDC (Denmark):** [Metaform guide](http://manual.tdconline.dk/metaform_markup/definition/form/) (in Danish) TDC, the big Danish telco has a similar guide, also public available. Technical note: Suffers from [tag soup](http://en.wikipedia.org/wiki/Tag_soup), but otherwise is very comprehensive.
 
 I will update this list if you know of **any examples that you know of**. If possible, provide all the following  information:
 
-- \
 - Name or domain of the guide
-  \
 - Language
-  \
 - URL for public version of the guide
-  \
 - Short description of guide scope or content
-  \
 - Corresponding graphical design guide (if applicable)
-  \
 - Technical note
-  \

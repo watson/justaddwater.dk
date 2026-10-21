@@ -22,21 +22,15 @@ Before we move to the examples, I must say that this list is big enough so that 
 
 ### Wikipedia definition
 
-
 > **![Wikipedia logo](/wp-content/uploads/2006/01/wiki-en.png)User experience** is a term used to describe the overall experience and satisfaction a user has when using a product or system. It most commonly refers to a combination of software and business topics, such as selling over the web, but it applies to any result of interaction design. Interactive voice response systems, for instance, are a frequently mentioned design that can lead to a poor user experience.
 
 *From [Wikipedia: User experience](http://en.wikipedia.org/wiki/User_experience "Wikipedia: User experience")*
 
 Wikipedia suggests three links in the bottom:
 
-- \
 - [The Elements of User Experience](http://www.jjg.net/elements/ "http://www.jjg.net/elements/"), \[book\] by [Jesse James Garrett](http://en.wikipedia.org/wiki/Jesse_James_Garrett "Jesse James Garrett")
-  \
 - [How to Quantify the User Experience](http://www.sitepoint.com/article/quantify-user-experience "http://www.sitepoint.com/article/quantify-user-experience"), by Robert Rubinoff
-  \
 - [User experience network](http://uxnet.org/ "http://uxnet.org"), cooperation and collaboration for user experience professionals
-  
-
 
 ### Jesse James Garrett
 
@@ -54,19 +48,13 @@ Robert Rubinoff uses this definition in his article [How to Quantify the User Ex
 >
 > The term "user experience" refers to a concept that places the end-user at the focal point of design and development efforts, as opposed to the system, its applications or its aesthetic value alone. It's based on the general concept of user-centered design.
 >
-> The user experience is primarily made up of a four factors:\
+> The user experience is primarily made up of a four factors:
 >
-> - \
 > - branding
->   \
 > - [usability](http://www.sitepoint.com/glossary.php?q=U#term_60 "Usability refers to the ease with which a user can use an interface to achieve their goals.")
->   \
 > - functionality
->   \
 > - content
->   \
 >
-> \
 > Independently, none of these factors makes for a positive user experience; however, taken together, these factors constitute the main ingredients for a website's success.
 
 What I really like about his approach is that he uses a scorecard to visualize the results. This makes it relatively easy to compare the user experience by definition. Here's his example spider chart:
@@ -80,16 +68,12 @@ What I really like about his approach is that he uses a scorecard to visualize t
 > **What is User Experience?**\
 > User Experience (UX) is an emerging field concerned with improving the design of anything people experience: a web site, a toy, or a museum. UX is inherently interdisciplinary, synthesizing methods, techniques, and wisdom from many fields, ranging from brand design to ethnography to library science to architecture and more.
 
-
 ### Peter Morville definition
 
 Another model worth mentioning is Peter Morville's Facets on the User Experience mentioned in a 2004 essay "[User Experience Design](http://semanticstudios.com/publications/semantics/000029.php "Peter Morville: User Experience Design")".
 
-> \
->
 > ![Peter Morville: Seven facets of User Experience: useful, usable, desirable, findable, accessible, credible, valuable](/wp-content/uploads/2006/01/honeycomb.png)
 >
-> \
 > **Facets of the User Experience**
 >
 > [](http://semanticstudios.com/publications/semantics/000029.php) When I broadened my interest from IA to UX, I found the need for a new diagram to illustrate the facets of user experience - especially to help clients understand why they must move beyond usability - and so with a little help from my friends developed the user experience honeycomb.
@@ -102,7 +86,6 @@ Peter Morville: Seven facets of User Experience: useful, usable, desirable, find
 >
 > Third, each facet of the user experience honeycomb can serve as a singular looking glass, transforming how we see what we do, and enabling us to explore beyond conventional boundaries.
 
-
 ### Google
 
 [![user experience - Google Search](/wp-content/uploads/2006/01/user%20experience%20-%20Google%20Search.thumbnail.png)](/wp-content/uploads/2006/01/user%20experience%20-%20Google%20Search.png "user experience - Google Search")A [Google Search on user experience](http://www.google.com/search?q=user+experience "Google Search: User Experience") reveals 235 million hits. The three links mentioned by Wikipedia are number 3, 8 and 13 on the search result page.
@@ -113,10 +96,8 @@ Let's end this roundup with what triggered me: The Webword post "[Windows Vista 
 
 [![Microsoft web page: Windows Vista User Experience highlighted ](/wp-content/uploads/2006/01/screenshot%20windows%20vista%20user%20experience%20highlight.thumbnail.png)](/wp-content/uploads/2006/01/screenshot%20windows%20vista%20user%20experience%20highlight.png "Microsoft web page: Windows Vista User Experience highlighted ")I highlighted the word "experience" and it turns out that this is not only "user experience" but also "computing experience" and "desktop experience". Hmm. This is probably where marketing and reality meets.
 
-> User Experience\
+> User Experience
 >
 > Windows Vista introduces a breakthrough user experience and is designed to help you feel confident in your ability to view, find, and organize information and to control your computing experience.The visual sophistication of Windows Vista helps streamline your computing experience by refining common window elements so you can better focus on the content on the screen rather than on how to access it. The desktop experience is more informative, intuitive, and helpful. And new tools bring better clarity to the information on your computer, so you can see what your files contain without opening them, find applications and files instantly, navigate efficiently among open windows, and use wizards and dialog boxes more confidently.
->
-> 
 
 *Text and screenshot from [Windows Vista User Experience and features overview](http://www.microsoft.com/windowsvista/features/ "Microsoft web page: Windows Vista User Experience: The features").*

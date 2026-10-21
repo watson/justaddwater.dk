@@ -19,15 +19,10 @@ They also did a [similar calender for 2005](http://www.netliferesearch.com/artic
 
 The calendar is an absolutely must-have asset for any future projects. I see several benefits:
 
-- \
 - Good humour makes usability easy to understand
-  \
 - Easy to understand for all project resources
-  \
 - Visibility of usability in projects
-  \
 - An actual calendar that can be used for simple scheduling (at least for some of the months that are not completely covered by popup-windows or similar!)
-  
 
 And I will also print a poster to decorate my manager's wall next to "[The importance of User Experience"](http://www.experiencedynamics.com/science_of_usability/usability_posters/user_experience/) poster by Frank Spillers. In my opinion the [best visual explanation](/2006/06/21/user-experience-revisited/) of user experience.
 

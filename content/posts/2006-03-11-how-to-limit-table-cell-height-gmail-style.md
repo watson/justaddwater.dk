@@ -17,12 +17,11 @@ I just sent this to the [CSS-D discussion list](http://archivist.incutio.com/vie
 > So my question is: How is this solved in for instance GMail where content i only one line high (and additional overflowing content is hidden). Please share your thoughts on this, and if you could point me to any information on how to solve this.
 >
 > ``` html
->
 > < !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
->
->
->
->
+> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+> <head>
+> <title></title>
+> <style type="text/css">
 > table{
 > width:300px;
 > border:1px dashed red;
@@ -32,39 +31,32 @@ I just sent this to the [CSS-D discussion list](http://archivist.incutio.com/vie
 > background-color: #dfc;
 > height: 10px; /* table cell does not obey this height */
 > }
+> </style>
+> </head>
 >
->
->
->
-> I want table row to be the height of 1 text line.
->
->
-> 1. start cell not much content
+> <body>
+> <p>I want table row to be the height of 1 text line.</p>
+> <table>
+> <tr>
+> <td>1. start cell not much content</td>
+> <td>2. second cell has insanely long content that I know will always wrap</td>
+> </tr>
+> </table>
+> </body>
+> </html>
 > ```
-
-2\. second cell has insanely long content that I know will always wrap
-
-Any help appreciated,\
-Jesper
-
---\
-Jesper Rønn-Jensen\
-Capgemini Danmark A/S\
-[http://justaddwater.dk/](/) (weblog)
-
-
+>
+> Any help appreciated,\
+> Jesper
+>
+> -- Jesper Rønn-Jensen Capgemini Danmark A/S [http://justaddwater.dk/](/) (weblog)
 
 [Example page - not working](/wp-content/uploads/2006/03/fixed-table-cells-notworking.html)
 
-
 I'll post the results here as I find out how Google GMail does the trick. Please share any tricks that you know of here. Oh, for your information, solution must work in Internet Explorer...
-
 
 *UPDATE: Now working!* Thanks to the information at [BlakeMS blog](http://www.blakems.com/archives/000077.html "BlakeMS.com: Using text-overflow"), I now got it working (no Javascript necessary).
 
-
-> \
->
 > Now this works the same with table cells. See below and note that you must set table to have the table-layout: fixed property for it to work.
 >
 > ``` css

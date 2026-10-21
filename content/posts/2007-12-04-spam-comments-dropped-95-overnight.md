@@ -20,8 +20,5 @@ Is anybody else experiencing heavy drops in spam traffic?
 
 Related info:
 
-- \
 - [Announcement: Spam Filter Free Day](/2007/11/27/announcement-spam-filter-free-day/)
-  \
 - [Letting Spam In For A Day Questions and Answers](/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/)
-  \

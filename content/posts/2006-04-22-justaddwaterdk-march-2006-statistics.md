@@ -21,17 +21,11 @@ Visits and Pageviews, March 2006 - *Source: Google Analytics*
 
 After Max Kiesler published his "[Round-up of 30 AJAX tutorials](http://www.maxkiesler.com/index.php/weblog/comments/round_up_of_30_ajax_tutorials/ "Max Kiesler: Round-up of 30 AJAX tutorials")" on the 15th, Jespers old post about Live search got a lot of attention. The list also contains two newcomers - Number 4 and number 5:
 
-1.  \
-2.  [Live search explained](/2006/01/26/live-search-explained/) (961 visitors)
-    \
-3.  [AJAX performance stats, ROI, and business value](/2006/01/14/ajax-performance-stats-roi-and-business-value/) (262 visitors)
-    \
-4.  [AJAX businesscase: Reduce development costs and increase usability](/2006/02/08/ajax-businesscase/) (195 visitors)
-    \
-5.  [New Google layout more usable](/2006/03/28/new-google-layout-more-usable/) (182 visitors)
-    \
-6.  [Windows Vista setting new standards for Find-as-You-Type searching](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/) (137 visitors)
-    
+1.  [Live search explained](/2006/01/26/live-search-explained/) (961 visitors)
+2.  [AJAX performance stats, ROI, and business value](/2006/01/14/ajax-performance-stats-roi-and-business-value/) (262 visitors)
+3.  [AJAX businesscase: Reduce development costs and increase usability](/2006/02/08/ajax-businesscase/) (195 visitors)
+4.  [New Google layout more usable](/2006/03/28/new-google-layout-more-usable/) (182 visitors)
+5.  [Windows Vista setting new standards for Find-as-You-Type searching](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/) (137 visitors)
 
 *Source: Measure Map*
 

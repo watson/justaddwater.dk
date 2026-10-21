@@ -18,14 +18,9 @@ Suddenly the [25% claim in the earlier post](/2006/01/20/one-of-four-web-users-a
 
 If 57% of web users can benefit from assistive problems, then it's because web pages (and browsers, screens, etc) are not optimal. We as web developers can do more to support these 57% percent. Here are the obvious ones for me.
 
-- \
 - Support webstandards: Valid HTML
-  \
 - WAI/WCAG accessibility
-  \
 - Avoid small text (although still widely used on major Danish websites like [DR](http://www.dr.dk "DR.dk: Danish Broadcasting Corporation"), [TV2](http://tv2.dk/ "TV2: Danish channel 2"), [Krak](http://www.krak.dk/ "Krak. Routeplanning"), [Jubii](http://www.jubii.dk/ "Jubii.dk part of Lycos"), etc.)
-  
-
 
 ### Somewhat related thoughts:
 

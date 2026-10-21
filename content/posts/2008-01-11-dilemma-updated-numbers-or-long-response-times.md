@@ -18,12 +18,8 @@ It is time-consuming for an application to check if there are new payments on ev
 
 The Paypal example has these advantages:
 
-- \
 - Faster response times -- does not wait for a backend account check
-  \
 - Server less sensitive for extreme load because each request uses less cpu power
-  \
 - Server can handle more users because each request ends faster
-  
 
 Any other pros or cons you like to add?

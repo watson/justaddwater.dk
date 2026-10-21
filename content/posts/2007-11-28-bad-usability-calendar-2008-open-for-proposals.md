@@ -18,12 +18,7 @@ From this year's official announcement you can see that this time there are priz
 
 More info:
 
-- \
 - Netlife Research: [Bad Usability Calendar 2008 under construction](http://www.iallenkelhet.no/bad-usability-calendar-2008-under-construction-give-us-your-ideas)
-  \
 - Justaddwater.dk: [Bad Usability Calendar 2007 in Danish](/2007/02/09/bad-usability-calendar-2007-in-danish/ "Justaddwater.dk: Bad Usability Calendar 2007 in Danish")
-  \
 - Justaddwater.dk: [Bad Usability Calendar 2007 Finally Ready](/2007/01/27/bad-usability-calendar-2007-finally-ready/ "Justaddwater.dk: Bad Usability Calendar 2007 Finally Ready")
-  \
 - Justaddwater.dk: [Bad Usability Calendar (2006)](/2006/10/16/bad-usability-calendar/ "Justaddwater.dk: Bad Usability Calendar 2006")
-  \

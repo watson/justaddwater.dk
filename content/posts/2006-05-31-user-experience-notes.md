@@ -20,19 +20,12 @@ Click image to view notes[\
 
 I'm really looking forward to this, alhough mentally [my presentation at reboot](/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/ "Justaddwater.dk: Speaking at reboot8 about Rails and rapid prototyping  ") is taking a lot of my attention. There are several things that I look forward to:
 
-- \
 - Meeting Jesse. I really look forward to see and hear him and the workshop.
-  \
 - User experience is on of those really fuzzy buzzwords, and I've previously searched for a [clear definition](/2006/01/15/user-experience-clear-and-easy-to-use-definition-needed/ "User Experience. Clear and easy-to-use definition needed") and [found a good diagram](/2006/03/06/user-experience-diagram/ "Justaddwater.dk: User Experience Diagram"). I expect that we have a conversation about that.
-  
 
 Also I look forward to meet other reboot attendees and I am told that [Snitker.com](http://snitker.dom) sponsors some free drinks afterwards in Zum Biergarden nearby! (At least, that's what Thomas Snitker told me couple of weeks ago).\
 Older related posts:
 
-- \
 - My [Flickr photos](http://flickr.com/photos/jesper/tags/jessejamesgarrett/ "Jesper's Flickr photos") of the event
-  \
 - [Elements of User Experience, Copenhagen, May 31st](/2006/05/18/elements-of-user-experience-copenhagen-may-31st/ "Permanent Link: Elements of User Experience, Copenhagen, May 31st")
-  \
 - [User Experience. Clear and easy-to-use definition needed](/2006/01/15/user-experience-clear-and-easy-to-use-definition-needed/ "Justaddwater.dk: User Experience. Clear and easy-to-use definition needed")
-  \

@@ -14,21 +14,13 @@ The tests were of two formats: 10 questions in 15 minutes, and 30 questions in 4
 
 For the tests I took, these were some links with background material which I found most helpful:
 
-- \
 - IBM Developerworks: [Understanding RUP roles](http://www.ibm.com/developerworks/rational/library/apr05/crain/index.html)
-  \
 - Wikipedia [Capability Maturity Model Integration (**CMMI**)](http://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration)
-  \
 - Wikipedia [RUP (Rational Unified Process)](http://en.wikipedia.org/wiki/IBM_Rational_Unified_Process)
-  \
 - Wikipedia [Software configuration management](http://en.wikipedia.org/wiki/Software_configuration_management)
-  \
 - Wikipedia [Enterprise architecture](http://en.wikipedia.org/wiki/Information_Systems_Architecture)
-  \
 - Unified Process for EDUcation: A [Software Architecture Document example](http://www.upedu.org/process/activity/chklists/ck_sad.htm)
-  \
 - and finally a blog post about [test specification techniques](http://appdevchronicles.blogspot.com/2007/10/test-specification-techniques.html)
-  
 
 As you may notice, the topics mostly covered were RUP, IAF (a capgemini architecture framework), A little CMMI, and hardly any agile methodologies at all. No SCRUM, Lean, Kanban or similar references. Although i think i saw one question on XP (eXtreme Programming).
 

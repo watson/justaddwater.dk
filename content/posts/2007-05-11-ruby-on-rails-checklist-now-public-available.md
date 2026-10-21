@@ -12,11 +12,8 @@ Today I've removed password protection on the article "[Prototyping Ruby on Rail
 
 Sorry to have you waiting. There are two main reasons why I have kept it private:
 
-1.  \
-2.  I wanted to check that the description worked well for me. And today I got my new laptop.
-    \
-3.  It surprised me that a password protected article shows up on the front-page, RSS feeds, etc.
-    
+1.  I wanted to check that the description worked well for me. And today I got my new laptop.
+2.  It surprised me that a password protected article shows up on the front-page, RSS feeds, etc.
 
 As I found out the original file was published, I felt that I could not remove it even though I was not ready to publish entirely.
 

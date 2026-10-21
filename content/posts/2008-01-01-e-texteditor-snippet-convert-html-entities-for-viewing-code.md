@@ -10,13 +10,9 @@ tags: []
 
 Happy New Year everybody. Here is a tiny Textmate or E-Texteditor Snippet: Convert HTML entities for viewing code. I created this recently for a HTML cookbook on a project, where we made HTML pages showing HTML example code. It converts
 
-- \
 - & to \&amp;
-  \
 - \< to \&lt;
-  \
 - \> to \&gt;
-  
 
 [![e-texteditor-bundle-editor-convert-html-entities-thumb.png](/wp-content/uploads/2007/12/e-texteditor-bundle-editor-convert-html-entities-thumb.png)](/wp-content/uploads/2007/12/e-texteditor-bundle-editor-convert-html-entities.png "e-texteditor-bundle-editor-convert-html-entities.png")
 
@@ -45,23 +41,22 @@ text.html
 Code:  
     #!/usr/bin/env ruby
     # By Jesper Rønn-Jensen, 2007-12-19 (Last update: 2007-12-19)
-    # escape &,<,> to show in HTML pages
-    $KCODE = 'U'
+    # escape &amp;,&lt;,&gt; to show in HTML pages
+    $KCODE = &#039;U&#039;
 
     $char_to_entity = { }
-    File.open("#{ENV['TM_BUNDLE_SUPPORT']}/entities.txt").read.scan(/^(\d+)\t(.+)$/) do |key, value|
-      $char_to_entity[[key.to_i].pack('U')] = value
+    File.open(&quot;#{ENV[&#039;TM_BUNDLE_SUPPORT&#039;]}/entities.txt&quot;).read.scan(/^(\d+)\t(.+)$/) do |key, value|
+      $char_to_entity[[key.to_i].pack(&#039;U&#039;)] = value
     end
 
     def encode (text)
-      text.gsub(/[<>&]/) do |ch|
+      text.gsub(/[&lt;&gt;&amp;]/) do |ch|
         ent = $char_to_entity[ch]
-        ent ? "&#{ent};" : sprintf("%02X;", ch.unpack("U")[0])
+        ent ? &quot;&amp;#{ent};&quot; : sprintf(&quot;%02X;&quot;, ch.unpack(&quot;U&quot;)[0])
       end
     end
 
     print encode(STDIN.read)
-
 
 The blog software messes up single/double quotes, so here is a link to the raw snippet file which I put in `/Bundles/HTML.tmbundle/Commands`. On my E-texteditor/Windows install that is `C:\Documents and Settings\[username]\Application Data\e`\
 `\Bundles\HTML.tmbundle\Commands . `

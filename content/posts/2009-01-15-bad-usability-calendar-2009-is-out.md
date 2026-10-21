@@ -20,11 +20,6 @@ Download from: [Badusability.com](http://www.badusability.com/)
 
 Previous articles:
 
-
-[Bad Usability Calendar 2008](/2008/01/17/bad-usability-calendar-2008/ "Permanent Link to Bad Usability Calendar 2008")
-
-
-[Bad Usability Calendar 2007 Finally Ready](/2007/01/27/bad-usability-calendar-2007-finally-ready/ "Permanent Link to Bad Usability Calendar 2007 Finally Ready")
-
-
-[Bad Usability Calendar](/2006/10/16/bad-usability-calendar/ "Permanent Link to Bad Usability Calendar") (2005 and 2006)
+- [Bad Usability Calendar 2008](/2008/01/17/bad-usability-calendar-2008/ "Permanent Link to Bad Usability Calendar 2008")
+- [Bad Usability Calendar 2007 Finally Ready](/2007/01/27/bad-usability-calendar-2007-finally-ready/ "Permanent Link to Bad Usability Calendar 2007 Finally Ready")
+- [Bad Usability Calendar](/2006/10/16/bad-usability-calendar/ "Permanent Link to Bad Usability Calendar") (2005 and 2006)

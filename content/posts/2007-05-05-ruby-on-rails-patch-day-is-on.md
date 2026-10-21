@@ -20,8 +20,5 @@ Hopefully we'll squash some bugs for everybody to benefit from. And hopefully, t
 
 More info:
 
-- \
 - Copenhagen Ruby Brigade: [Rails Patch Day](http://copenhagenrb.dk/2007/4/21/rails-patch-dag) (more info by [Mentalized](http://mentalized.net/journal/2007/04/27/rails_patch_night/), [Olle](http://ollehost.dk/blog/?p=342))
-  \
 - Justaddwater.dk: [Ruby on Rails as Rapid Prototyping Tool](/2006/04/12/rails-prototyping/)
-  \

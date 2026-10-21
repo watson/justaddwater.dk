@@ -24,17 +24,11 @@ My comment: It doesn't matter if you call it Find-as-you-type or live search or 
 
 Previously, Live search has been implemented in multiple desktop and web applications.
 
-- \
 - The browser address bar autocompletes as you type based on the web adresses you previously typed.
-  \
 - Windows XP file manager autocompletes when you open a new file from an application.
-  \
 - Microsoft Outlook autocompletes contact names as you type.
-  \
 - Google's web based GMail also autocompletes contact names (and is much better than Outlook in guessing correctly). [Link to GMail demo with autocomplete](http://www.google.com/mail/help/tour/Communicate2.html "Google GMail: demo of email compose").
-  \
 - [Google Suggest](http://www.google.com/webhp?hl=en&complete=1 "Google labs: Google suggest") is a find-as-you-type version of Google web search.
-  
 
 In all of these examples, You're actually searching without pressing a search button. Here are screenshots of GMail and Google Suggest:
 

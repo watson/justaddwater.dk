@@ -40,13 +40,9 @@ By the way, Del.icio.us continues to surprise me: My [collection](http://del.ici
 
 Like Ari, I'm sure that tags make a difference in stead of folders.
 
-- \
 - You can puth thing in multiple categories
-  \
 - You don't duplicate items: Just tag them
-  \
 - An item containing multiple tags i easier to find
-  
 
 This idea is used in countless Web2.0 applications. Del.icio.us, Technorati, Flickr to name a few, and recently Amazon allowed tagging products on their American website.
 

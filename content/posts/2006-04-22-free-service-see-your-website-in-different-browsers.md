@@ -14,26 +14,15 @@ A free online service called [Browsershots](http://browsershots.org/) has just l
 
 Currently you get screenshots from the following browser brands:
 
-- \
 - Epiphany 1.4.8
-  \
 - Firefox 1.0.4
-  \
 - Firefox 1.5.0
-  \
 - Galeon 1.3.20
-  \
 - Konqueror 3.3
-  \
 - Mozilla 1.7.8
-  \
 - MSIE 6.0
-  \
 - MSIE 7.0 Beta
-  \
 - Opera 8.50
-  \
 - Safari 2.0
-  
 
 You can even choose multiple screen resolutions as well.

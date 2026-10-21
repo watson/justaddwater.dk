@@ -14,28 +14,26 @@ Usually I add four non-semantic elements to each corner of a div box to round:\
 HTML for the box:
 
 ``` html
-
-
-  ..
-  
+<div class="round">
+  <h2>..</h2>
+  <ul>
+    <li>..</li>
     ..
-    ..
-  
-  
-  
-  
-  
+  </ul>
+  <b class="cn tr"></b>
+  <b class="cn br"></b>
+  <b class="cn tl"></b>
+  <b class="cn bl"></b>
+</div>
 ```
-
 
 Well, what if you could just write:
 
 ``` html
-
-
+<div class="round">
 ...
+</div>
 ```
-
 
 So that the round corners magic was separated semantically away from the HTML code?. This is how you can do it.
 
@@ -44,7 +42,6 @@ The trick is to add the b-elements with jquery. This way i'll append the rounded
 Create a file named roundcorners.js
 
 ``` javascript
-
 // Add rounded corners to all div elements with class="round"
 // Adds corners the "technorati way", described on
 // http://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/
@@ -52,18 +49,16 @@ Create a file named roundcorners.js
 // also works on images, which it wraps in a div element to add the
 // necessary content
 var round_corners = function(){
- var str = '';
+ var str = '<b class="cn tl"></b><b class="cn tr"></b><b class="cn bl"></b><b class="cn br"></b>';
   $('.round').addClass("boxc").append(str);
 };
 
 $(document).ready( function(){round_corners();});
 ```
 
-
 Create a file named roundcorners.css:
 
 ``` css
-
 .boxc {
 padding:0px;
 position:relative;
@@ -107,17 +102,16 @@ line-height:1px;
 }
 ```
 
-
-Put the two image files in the same directory as roundcorners.css: [roundwhite.png](http://static.technorati.com/static/css/img/corners/white.png), [roundwhite.gif](http://static.technorati.com/static/css/img/corners/white.gif)
+Put the two image files in the same directory as roundcorners.css:\
+[roundwhite.png](http://static.technorati.com/static/css/img/corners/white.png), [roundwhite.gif](http://static.technorati.com/static/css/img/corners/white.gif)
 
 Now in your HTML file header, add references to load JQuery, the css and js file:
 
 ``` html
-
-
-
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="roundcorners.js"></script>
+<link type="text/css" rel="stylesheet" href="roundcorners.css"></link>
 ```
-
 
 Finally, add css class "round" to any div on your page.
 

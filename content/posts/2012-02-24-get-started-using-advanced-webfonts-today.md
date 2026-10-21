@@ -33,21 +33,14 @@ From [googles FAQ](https://developers.google.com/webfonts/faq):
 
 > **What browsers are supported?**
 >
-> The Google Web Fonts API is compatible with the following browsers:\
+> The Google Web Fonts API is compatible with the following browsers:
 >
-> - \
 > - Google Chrome: version 4.249.4+
->   \
 > - Mozilla Firefox: version: 3.5+
->   \
 > - Apple Safari: version 3.1+
->   \
 > - Opera: version 10.5+
->   \
 > - Microsoft Internet Explorer: version 6+
->   \
 >
-> \
 > **Does the Google Web Fonts API work on mobile devices?**
 >
 > The Google Web Fonts API works reliably on the vast majority of modern mobile operating systems, including Android 2.2+ and iOS 4.2+ (iPhone, iPad, iPod). Support for earlier iOS versions is limited.

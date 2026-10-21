@@ -18,15 +18,10 @@ The chart gives a good overview af what's been going on. Information of individu
 
 [![Google-Analytics-referring-urls](http://static.flickr.com/37/82489027_60abb70353.jpg)](http://www.flickr.com/photos/jesper/82489027/ "'Referring Source' in 'Marketing Optimization' › 'Visitor Segment Performance'")
 
-1.  \
-2.  From the left menu, choose **"All reports" \> "Marketing Optimization" \> "Visitor Segent Performance" \> "Referring Source"**
-    \
-3.  On this page are the referring websites. Well, default view is only the top ten referring websites. To see all of them, I change the dropdown to 100, which is enough for our website.
-    \
-4.  The arrow nex to each website on the list is a hidden menu. Choose "Cross Segment Performance", and whoaa, another menu appears.
-    \
-5.  Choose "Content" to bring up our destination: Finally a list of referring URL's from a website.
-    
+1.  From the left menu, choose **"All reports" \> "Marketing Optimization" \> "Visitor Segent Performance" \> "Referring Source"**
+2.  On this page are the referring websites. Well, default view is only the top ten referring websites. To see all of them, I change the dropdown to 100, which is enough for our website.
+3.  The arrow nex to each website on the list is a hidden menu. Choose "Cross Segment Performance", and whoaa, another menu appears.
+4.  Choose "Content" to bring up our destination: Finally a list of referring URL's from a website.
 
 [![justaddwater.dk referring URLs for Technorati December 2005](http://static.flickr.com/37/82489030_4c5941d6b1_o.png)](http://www.flickr.com/photos/jesper/82489001/ "justaddwater.dk referring URLs for Technorati December 2005. Click to see full image")
 
@@ -35,10 +30,7 @@ The list is really interesting. It shows a very few keywords with more than a fe
 
 In the next couple of days we'll post more on
 
-- \
 - what Google Analytics could improve, and
-  \
 - our monthly statisticss from Google Analytics
-  
 
 While you're waiting for the December statistics, here's a link to the previous [Justaddwater.dk November 2005 Statistics](/2005/12/02/justaddwaterdk-november-2005-statistics/).

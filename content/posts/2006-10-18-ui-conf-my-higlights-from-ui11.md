@@ -51,25 +51,17 @@ Finally it was truly inspiring to meet so many like-minded and inspiring people.
 
 ### Great photo opportunity
 
-UI Conf was a great chance to take some photos. I posted the better of them on flickr. But some are worth highlighting here. [![Barry Schwartz](http://static.flickr.com/95/267800531_5281bead2c_s.jpg)](http://www.flickr.com/photos/jesper/267800531/ "Photo Sharing")[![Morning sunrise in Boston](http://static.flickr.com/99/266005673_9a7c10927d_s.jpg)](http://www.flickr.com/photos/jesper/266005673/ "Photo Sharing")[![Beer at the Cheers Bar](http://static.flickr.com/108/268227641_edc138473c_s.jpg)](http://www.flickr.com/photos/jesper/268227641/ "Photo Sharing")[![Luke Wroblewski presenting (closeup)](http://static.flickr.com/100/267101116_1cb3f02871_s.jpg)](http://www.flickr.com/photos/jesper/267101116/ "Photo Sharing")[![John Rhodes](http://static.flickr.com/108/269194080_5432e06723_s.jpg)](http://www.flickr.com/photos/jesper/269194080/ "Photo Sharing")
+UI Conf was a great chance to take some photos. I posted the better of them on flickr. But some are worth highlighting here.\
+[![Barry Schwartz](http://static.flickr.com/95/267800531_5281bead2c_s.jpg)](http://www.flickr.com/photos/jesper/267800531/ "Photo Sharing")[![Morning sunrise in Boston](http://static.flickr.com/99/266005673_9a7c10927d_s.jpg)](http://www.flickr.com/photos/jesper/266005673/ "Photo Sharing")[![Beer at the Cheers Bar](http://static.flickr.com/108/268227641_edc138473c_s.jpg)](http://www.flickr.com/photos/jesper/268227641/ "Photo Sharing")[![Luke Wroblewski presenting (closeup)](http://static.flickr.com/100/267101116_1cb3f02871_s.jpg)](http://www.flickr.com/photos/jesper/267101116/ "Photo Sharing")[![John Rhodes](http://static.flickr.com/108/269194080_5432e06723_s.jpg)](http://www.flickr.com/photos/jesper/269194080/ "Photo Sharing")
 
 Here are my notes from the presentations
 
-
-[UI Conf: Josh Porter on recommendation engines](/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/ "Permanent Link to UI Conf: Josh Porter on recommendation engines")
-
-[UI Conf: Jared Spool](/2006/10/12/ui-conf-jared-spool/ "Permanent Link to UI Conf: Jared Spool")
-
-[UI Conf: Barry Schwartz, the paradox of choice](/2006/10/12/barry-schwartz-the-paradox-of-choice/ "Permanent Link to UI Conf: Barry Schwartz, the paradox of choice")
-
-[UI Conf: Luke Wroblewski on Visual Design in the Development Process](/2006/10/11/uiconf-luke-wroblewski-visual-design/ "Permanent Link to UI Conf: Luke Wroblewski on Visual Design in the Development Process")
-
-[UI Conf: Jeff Patton on Agile Development](/2006/10/10/uiconf-jeff-patton-agile-development/ "Permanent Link to UI Conf: Jeff Patton on Agile Development")
-
-[UI Conf: Gerry McGovern on Search engine optimization](/2006/10/10/uiconf-gerry-mcgovern-seo/ "Permanent Link to UI Conf: Gerry McGovern on Search engine optimization")
-
-[UI Conf: Jeffrey Eisenberg on Top activities of Design & Usability Teams](/2006/10/10/uiconf-jeffrey-eisenberg/ "Permanent Link to UI Conf: Jeffrey Eisenberg on Top activities of Design & Usability Teams")
-
-[UI Conf: David Malouf and Bill Scott on AJAX](/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/ "Permanent Link to UI Conf: David Malouf and Bill Scott on AJAX")
-
-[Attending UI11 Conference next week](/2006/10/03/attending-ui11-conference-next-week/ "Permanent Link to Attending UI11 Conference next week")
+- [UI Conf: Josh Porter on recommendation engines](/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/ "Permanent Link to UI Conf: Josh Porter on recommendation engines")
+- [UI Conf: Jared Spool](/2006/10/12/ui-conf-jared-spool/ "Permanent Link to UI Conf: Jared Spool")
+- [UI Conf: Barry Schwartz, the paradox of choice](/2006/10/12/barry-schwartz-the-paradox-of-choice/ "Permanent Link to UI Conf: Barry Schwartz, the paradox of choice")
+- [UI Conf: Luke Wroblewski on Visual Design in the Development Process](/2006/10/11/uiconf-luke-wroblewski-visual-design/ "Permanent Link to UI Conf: Luke Wroblewski on Visual Design in the Development Process")
+- [UI Conf: Jeff Patton on Agile Development](/2006/10/10/uiconf-jeff-patton-agile-development/ "Permanent Link to UI Conf: Jeff Patton on Agile Development")
+- [UI Conf: Gerry McGovern on Search engine optimization](/2006/10/10/uiconf-gerry-mcgovern-seo/ "Permanent Link to UI Conf: Gerry McGovern on Search engine optimization")
+- [UI Conf: Jeffrey Eisenberg on Top activities of Design & Usability Teams](/2006/10/10/uiconf-jeffrey-eisenberg/ "Permanent Link to UI Conf: Jeffrey Eisenberg on Top activities of Design & Usability Teams")
+- [UI Conf: David Malouf and Bill Scott on AJAX](/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/ "Permanent Link to UI Conf: David Malouf and Bill Scott on AJAX")
+- [Attending UI11 Conference next week](/2006/10/03/attending-ui11-conference-next-week/ "Permanent Link to Attending UI11 Conference next week")

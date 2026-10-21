@@ -14,24 +14,13 @@ They are in both PNG and PDF format.
 
 Here is a complete list of all the cheat sheets listed so far:
 
-- \
 - World of Warcraft Cheat Sheet
-  \
 - Ruby on Rails Cheat Sheet
-  \
 - ASP / VBScript Cheat Sheet
-  \
 - HTML Character Entities Cheat Sheet
-  \
 - JavaScript Cheat Sheet
-  \
 - MySQL Cheat Sheet
-  \
 - mod_rewrite Cheat Sheet
-  \
 - CSS Cheat Sheet
-  \
 - PHP Cheat Sheet
-  \
 - RGB Hex Colour Chart
-  \

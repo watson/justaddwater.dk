@@ -15,7 +15,6 @@ On the Meeting model in the Rails app I want to save to calendar in an Outlook c
 meeting.rb:
 
 ``` ruby
-
 require 'icalendar'
 require 'date'
 
@@ -38,7 +37,6 @@ class Meeting < ActiveRecord::Base
 And meetings_controller.rb:
 
 ``` ruby
-
 require 'icalendar'
 require 'iconv'
 

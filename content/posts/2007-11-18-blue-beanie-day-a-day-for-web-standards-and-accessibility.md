@@ -12,11 +12,8 @@ tags: []
 
 I just got an event invitation on Facebook asking me to join "[Blue Beanie Day](http://www.facebook.com/event.php?eid=6209917619 "Facebook Event: Blue Beanie Day")". Two questions quickly popped into my head:
 
-1.  \
-2.  What is a Blue Beanie?
-    \
-3.  Where do I get one?
-    
+1.  What is a Blue Beanie?
+2.  Where do I get one?
 
 If you are into web standards and accessibility you have already seen a blue beanie on the cover of Jeffery Zeldman's great book "[Designing With Web Standards](http://www.zeldman.com/dwws/ "Zeldman: Designing With Web Standards")". A must-have for any web developer - both amateurs and professionals. You can see the cover here to the right.
 

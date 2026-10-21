@@ -12,17 +12,11 @@ Yousif Al Saif of Tredosoft is probably best known for the [IE7 standalone](http
 
 Now he posted an article that makes it dead simple to run multiple Internet Explorers. It's a simple one-click installer that makes you choose any of the following versions of IE:
 
-- \
 - IE 6
-  \
 - IE 5.5
-  \
 - IE 5.0
-  \
 - IE4.01
-  \
 - IE3
-  
 
 Here's a screenshot of the installer:\
 ![Screenshot of Multiple IE installer](http://tredosoft.com/files/multi-ie/setup1.png)

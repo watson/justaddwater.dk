@@ -14,15 +14,10 @@ Lately Microsoft ASP.Net has been giving me some headaches. It's breaking my pri
 
 Principles for a decent web-based application
 
-- \
 - Validate HTML
-  \
 - Validate CSS
-  \
 - Accessibility principles
-  \
 - Avoid bloated HTML code
-  
 
 Here are some of the ASP usercontrols that are causing me trouble
 

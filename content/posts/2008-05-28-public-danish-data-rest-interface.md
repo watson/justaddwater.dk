@@ -14,19 +14,12 @@ Christian Dalager and I did an internal Capgemini SmartLunch presentation about 
 
 The Danish National IT and Telecom Agency has published some really useful data as a REST interface (although they haven't committed themselves yet to make the service permanent). The published data is a complete dataset for Denmark which includes:
 
-- \
 - 2.2 million adresses including geolocation data in 2 formats
-  \
 - Roughly 106.000 roads
-  \
 - Postal districts
-  \
 - Municipalities
-  \
 - Regions (similar to states in the US)
-  \
 - Schools, election districts and more...
-  
 
 I really enjoyed the presentation, and I also enjoyed that external non-capgemini people showed up and made the discussion more nuanced and exact.
 

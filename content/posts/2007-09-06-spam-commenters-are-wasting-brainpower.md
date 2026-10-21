@@ -27,12 +27,7 @@ Remember the Seti project, where you could make your computer processor availabl
 
 Related posts:
 
-- \
 - [Blog Usability: Spam Comments Irritate Subscribers](/2007/07/10/blog-usability-spam-comments-irritate-subscribers/ "Permanent Link to Blog Usability: Spam Comments Irritate Subscribers")
-  \
 - [Spam Blog Posted 182 Articles in One Day](/2007/04/02/spam-blog-posted-182-articles-in-one-day/ "Permanent Link to Spam Blog Posted 182 Articles in One Day")
-  \
 - [100,000 Blog Spam Comments](/2007/02/06/100000-blog-spam-comments/ "Permanent Link to 100,000 Blog Spam Comments")
-  \
 - [Blog Usability: Avoid Spam Comments (part 1)](/2006/06/24/blog-usability-avoid-spam-comments/ "Permanent Link to Blog Usability: Avoid Spam Comments") [(Part 2)](/2006/06/28/blog-usability-avoid-spam-comments-part-2/ "Permanent Link to Blog Usability: Avoid Spam Comments (Part 2)")
-  \

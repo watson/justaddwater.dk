@@ -16,10 +16,6 @@ If you're not familiar with The Mom Test, it's basically a quick way to see if y
 
 Related info:
 
-- \
 - NY Times: [Photo sharing even the folks can handle](http://www.nytimes.com/2007/06/05/technology/circuits/05pogue.html?ex=1338696000&en=d1ec17016491d91e&ei=5124&partner=permalink&exprod=permalink) (June 5, 2007)
-  \
 - Justaddwater.dk: [The Mom Test](/2006/04/04/the-mom-test/) (April 2006)
-  \
 - UIE: [5-second usability test](http://www.uie.com/articles/five_second_test/)
-  \

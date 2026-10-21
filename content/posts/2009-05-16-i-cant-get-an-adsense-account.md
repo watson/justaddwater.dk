@@ -22,15 +22,10 @@ Why did Google write that e-mail address to my customer? My colleague had not pr
 
 Anyway. I thought it would be best to close my newly created AdSense account and begin the whole process again. Now how do you close an AdSense account? Officially Google will tell you that if you'd like to remove products from your account, you just have to follow these steps:
 
-1.  \
-2.  Sign in to your Google Account.
-    \
-3.  Visit the [My Account page](https://www.google.com/accounts/ManageAccount).
-    \
-4.  Click the **Edit** link located next to 'My products.'
-    \
-5.  Select the product you'd like to remove from your account.
-    
+1.  Sign in to your Google Account.
+2.  Visit the [My Account page](https://www.google.com/accounts/ManageAccount).
+3.  Click the **Edit** link located next to 'My products.'
+4.  Select the product you'd like to remove from your account.
 
 The truth is that I'm using 15+ Google products and not *one* can be removed this way. The only option I have after clicking the **Edit** link is to close my entire Google Account all together!
 

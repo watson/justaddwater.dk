@@ -42,7 +42,8 @@ Most people write a page, but few are actually focusing on the connection betwee
 
 ### Low fare, cheap flight
 
-\* Low fare: 700 \* Cheap Flight: 1,800,000
+\* Low fare: 700\
+\* Cheap Flight: 1,800,000
 
 > At a travel conference, showed this example. "Gerry we can never use the word cheap on our website. It would hurt our brand". 3 months later the company went into liquidation.
 

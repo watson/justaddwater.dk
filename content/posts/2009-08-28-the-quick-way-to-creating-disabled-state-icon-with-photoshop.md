@@ -18,19 +18,14 @@ In Photoshop, create a new layer for each button state. Select the layer and cho
 
 **Disabled state background-image:**
 
-- \
 - Saturation: -80
-  \
 - Lightness: +40
-  
 
 ![photoshop-elements-saturation-for-disabled-buttons](/wp-content/uploads/2009/08/photoshop-elements-saturation-for-disabled-buttons-300x184.png "photoshop-elements-saturation-for-disabled-buttons")
 
 **Hover state background-image:**
 
-- \
 - Saturation: +15
-  
 
 You have each icon defined now with several states in the same file. Perfect for using the [CSS sprites technique](http://www.alistapart.com/articles/sprites "A List Apart: CSS Sprites (2004) by Dave Shea") for showing them as background images on the buttons.
 

@@ -25,15 +25,10 @@ No posts newer than 11 days are hit by spam comments. 2 comments on "[Spam Comme
 
 So on this particular day, spam comments only hit in after 11 days and should be used to our advantage. There are currently these different strategies to consider:
 
-1.  \
-2.  Close old posts for comments
-    \
-3.  Close old posts for comments but keep active posts open
-    \
-4.  Hold back comments on old posts for moderation
-    \
-5.  Hold back comments on old posts for moderation unless posted by a user that has a previously approved comment
-    
+1.  Close old posts for comments
+2.  Close old posts for comments but keep active posts open
+3.  Hold back comments on old posts for moderation
+4.  Hold back comments on old posts for moderation unless posted by a user that has a previously approved comment
 
 Thomas and I talked this over yesterday, and would really prefer number 4, and we can live with number 3. Number 1 and 2 are implemented by a wordpress plugin (i forget the name).
 
@@ -43,20 +38,10 @@ Does anybody know a plugin that can do number 3 or 4?.
 
 ## Wordpress flaws and bugs:
 
-
-- \
 - Three comments were incorrectly held for moderation by Wordpress even though the link limit were set to 99 and the comments clearly did not contain 99 links.[![spam-filter-free-day-awaiting-moderation-thumb.png](/wp-content/uploads/2007/12/spam-filter-free-day-awaiting-moderationthumb.png)](/wp-content/uploads/2007/12/spam-filter-free-day-awaiting-moderation.png "spam-filter-free-day-awaiting-moderation.png")
-  \
-- The interface for marking comments as spam is unproductive. It took me two hours to mark 1111 comments as spam (and de-spamming 6 valid comments). I used "mass edit" screen and checked all. Pressed "mark checked comments as spam". Then pressed OK to the JavaScript confirmation.\
-  [![spam-filter-free-day-deleting-confirmation-thumb.png](/wp-content/uploads/2007/12/spam-filter-free-day-deleting-confirmation-thumb.png)](/wp-content/uploads/2007/12/spam-filter-free-day-deleting-confirmation-thumb.png "spam-filter-free-day-deleting-confirmation.png")I don't know the internal procedures here -- but it seems as if wordpress sends the 20 spam marked comments directly to Akismet. And waits for the response before showing me the next page. My workaround here was to first open page 1-20 in 20 different tabs. Then for each of them check all and press "mark checked comments as spam".
-  \
-- Recheck Queue for spam is a brilliant feature -- but works on the wrong data. The feature should be copied to the "comments" tab. This way, you could force a rerun if your spam filter is out of order for a period of time. Also that would be the usecase of people trying out a spam filter. "wow I got more spam comments than I can handle. Let me try and install a spam filter and see what it can do for me". In this case, the spam filter not only works forward in time after activation, but also backwards. (obviously there must be a feature to review the past comments marked as spam).\
-  ![spam-filter-free-day-recheck-que-for-spam.png](/wp-content/uploads/2007/12/spam-filter-free-day-recheck-que-for-spam.png)
-  \
-- Blank email posts slip through even when the setting does not allow it. I have suspected this to happen also in previous versions of Wordpress. Several of the 1111 comments we recieved during Spam Filter Free Day were with blank email. And that should not be possible because of the setting in Wordpress "Comment author must fill out name and e-mail" (found at Admin\>Options\>Discussion).\
-  ![spam-filter-free-day-blank-emails.png](/wp-content/uploads/2007/12/spam-filter-free-day-blank-emails.png)\
-  I would expect these comments to be rejected and not even show up at the administrators' panels. But for some reasons they still appear. Perhaps a tiny bug in Wordpress? Or maybe spammers found a hole? Or are these trackbacks/pingbacks that just look like comments? Or maybe the [updated Akismet version 2.1.2](http://blog.akismet.com/2007/12/17/new-plugin-version-21/) actually deals with this because they added separate tabs for trackbacks and pingbacks?
-  
+- The interface for marking comments as spam is unproductive. It took me two hours to mark 1111 comments as spam (and de-spamming 6 valid comments). I used "mass edit" screen and checked all. Pressed "mark checked comments as spam". Then pressed OK to the JavaScript confirmation. [![spam-filter-free-day-deleting-confirmation-thumb.png](/wp-content/uploads/2007/12/spam-filter-free-day-deleting-confirmation-thumb.png)](/wp-content/uploads/2007/12/spam-filter-free-day-deleting-confirmation-thumb.png "spam-filter-free-day-deleting-confirmation.png")I don't know the internal procedures here -- but it seems as if wordpress sends the 20 spam marked comments directly to Akismet. And waits for the response before showing me the next page. My workaround here was to first open page 1-20 in 20 different tabs. Then for each of them check all and press "mark checked comments as spam".
+- Recheck Queue for spam is a brilliant feature -- but works on the wrong data. The feature should be copied to the "comments" tab. This way, you could force a rerun if your spam filter is out of order for a period of time. Also that would be the usecase of people trying out a spam filter. "wow I got more spam comments than I can handle. Let me try and install a spam filter and see what it can do for me". In this case, the spam filter not only works forward in time after activation, but also backwards. (obviously there must be a feature to review the past comments marked as spam). ![spam-filter-free-day-recheck-que-for-spam.png](/wp-content/uploads/2007/12/spam-filter-free-day-recheck-que-for-spam.png)
+- Blank email posts slip through even when the setting does not allow it. I have suspected this to happen also in previous versions of Wordpress. Several of the 1111 comments we recieved during Spam Filter Free Day were with blank email. And that should not be possible because of the setting in Wordpress "Comment author must fill out name and e-mail" (found at Admin\>Options\>Discussion). ![spam-filter-free-day-blank-emails.png](/wp-content/uploads/2007/12/spam-filter-free-day-blank-emails.png) I would expect these comments to be rejected and not even show up at the administrators' panels. But for some reasons they still appear. Perhaps a tiny bug in Wordpress? Or maybe spammers found a hole? Or are these trackbacks/pingbacks that just look like comments? Or maybe the [updated Akismet version 2.1.2](http://blog.akismet.com/2007/12/17/new-plugin-version-21/) actually deals with this because they added separate tabs for trackbacks and pingbacks?
 
 All in all, we learned a few lessons and found some areas, where wordpress could improve in order to deal with comments that slips through. Total time consumption for removing these comments were 2 hours, which actually surprised us to be very low. But note also that this was not "just" a day without Akismet. In that case, we would probably had to keep comments under surveillance, and remove them during the day. In that case, time consumption would perhaps have been something like 6 hours during a 24 hour period.
 

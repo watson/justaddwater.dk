@@ -36,18 +36,11 @@ prencher:
 
 There are other threads with a similar tone, for instance "[:( Bugs i hate](http://www.e-texteditor.com/forum/viewtopic.php?t=1934)" and " [](http://www.e-texteditor.com/forum/viewtopic.php?p=7953&highlight=#7953)[User prioritized bug fixes and features](http://www.e-texteditor.com/forum/viewtopic.php?t=1927)". You can read my reply and follow along in the forum. But I think the most important issues here are:
 
-- \
 - How do you facilitate an open forum to keep a constructive tone?
-  \
 - Is there some kind of magic "discussion judo" that could be applied
-  
 
 Related info:
 
-- \
 - E-texteditor bug forum: "[Age old bugs STILL NOT FIXED: selection and window size...](http://www.e-texteditor.com/forum/viewtopic.php?t=1897)"
-  \
 - Justaddwater: [Powerful Text Editor Released](/2007/08/08/powerful-text-editor-released/ "Permanent Link to Powerful Text Editor Released") (August 8th)
-  \
 - Justaddwater: [E-Texteditor For Windows](/2007/04/28/e-texteditor-for-windows/ "Permanent Link to E-Texteditor For Windows") (April 28th)
-  \

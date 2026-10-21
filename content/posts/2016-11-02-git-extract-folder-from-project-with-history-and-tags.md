@@ -30,9 +30,6 @@ git filter-branch --prune-empty --tag-name-filter cat --subdirectory-filter \$DI
 
 A few notes:
 
-- \
 - `--prune-empty` will remove all commits that has no relation to the folder you extract
-  \
 - `--tag-name-filter cat` will also rewrite any tags you put on the commits that are rewritten
-  \
 - `--subdirectory-filter` takes a foldername as parameter, but I needed to add `-- --all` to make it work

@@ -91,7 +91,10 @@ Cartoon: superman cannot choose, standing between 25 dresses with all the alphab
 
 ### which one to choose
 
-decision making. effect on satisfaction. How satisified are people once they have chosen between 6.5million stereos? \* people mey do better \* but they may feel worse
+decision making.\
+effect on satisfaction. How satisified are people once they have chosen between 6.5million stereos?\
+\* people mey do better\
+\* but they may feel worse
 
 buying jeans. presented with lots of choices
 
@@ -128,7 +131,9 @@ Lessons learned\
 
 ### Satisfaction curve
 
-Subjective state related to number of choices. \[graph that tops at some choices\] [![Satisfaction curve](http://static.flickr.com/120/267786407_410ad0a2d5_m.jpg)](http://www.flickr.com/photos/jesper/267786407/ "Photo Sharing")
+Subjective state related to number of choices.\
+\[graph that tops at some choices\]\
+[![Satisfaction curve](http://static.flickr.com/120/267786407_410ad0a2d5_m.jpg)](http://www.flickr.com/photos/jesper/267786407/ "Photo Sharing")
 
 Conclusion: welfare is not increased with number of choices. You figure out where the sweet spot is.
 

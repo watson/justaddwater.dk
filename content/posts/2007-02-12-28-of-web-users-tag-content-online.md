@@ -28,7 +28,10 @@ Actually it's a very interesting report. Some interesting findings:
 
 Also the report includes an interview with David Weinberger with some brilliant example on how tagging adds value to websites and web users as a whole:
 
-> There's an altruistic appeal to tagging as well. Tagging at public sites can give you a sense that you're adding to a shared stream of knowledge. At del.icio.us, or other such sites, tag a page “robotics” and you know that it's automatically added to the list of pages tagged that way, so anyone else interested in that topic can find it.
+> There's an altruistic appeal to tagging as well. Tagging at public sites can give you a sense that\
+> you're adding to a shared stream of knowledge. At del.icio.us, or other such sites, tag a page\
+> “robotics” and you know that it's automatically added to the list of pages tagged that way, so\
+> anyone else interested in that topic can find it.
 >
 > Q: So, there are benefits beyond the individual.
 >

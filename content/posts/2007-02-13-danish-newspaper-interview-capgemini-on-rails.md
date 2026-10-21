@@ -18,14 +18,8 @@ For the benefit of the Danish speaking readers, I really want to include the ent
 
 Further information:
 
-
-Today's Newspaper Børsen: [avis.borsen.dk](http://avis.borsen.dk/), page 47 (requires login/authentication). Link is probably only working today. Capgemini Nordic resources probably have access through corporate intranet via our IP number.
-
-
-Børsen article [Alternative link (containing the date 2007-02-13)](http://bor.x-cago.com/20070213/public/index.html#) (probably also requires login/authentication)
-
-Justaddwater.dk: [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link to Ruby on Rails as rapid prototyping tool")
-
-Justaddwater.dk: [category "businesscase"](/category/businesscase/)
-
-[Copenhagen Ruby Brigade](http://copenhagenrb.dk/) (copenhagenrb.dk)
+- Today's Newspaper Børsen: [avis.borsen.dk](http://avis.borsen.dk/), page 47 (requires login/authentication). Link is probably only working today. Capgemini Nordic resources probably have access through corporate intranet via our IP number.
+- Børsen article [Alternative link (containing the date 2007-02-13)](http://bor.x-cago.com/20070213/public/index.html#) (probably also requires login/authentication)
+- Justaddwater.dk: [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link to Ruby on Rails as rapid prototyping tool")
+- Justaddwater.dk: [category "businesscase"](/category/businesscase/)
+- [Copenhagen Ruby Brigade](http://copenhagenrb.dk/) (copenhagenrb.dk)

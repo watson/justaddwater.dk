@@ -56,22 +56,12 @@ Photos from the evening below. It was really a lovely evening and the discussion
 
 More info:
 
-- \
 - Casper Fabricius notes: [Dave Thomas keynote](http://casperfabricius.com/blog/2007/09/17/railsconf-the-art-in-rails/), [DHH keynote](http://casperfabricius.com/blog/2007/09/18/railsconf2007-dhh/)
-  \
 - DHH: [Good times at RailsConf Europe](http://www.loudthinking.com/posts/12-good-times-at-railsconf-europe)
-  \
 - DHH: [Sun surprises at RailsConf Europe 2007](http://www.loudthinking.com/posts/11-sun-surprises-at-railsconf-europe-2007)
-  \
 - Justaddwater.dk: [Busy Preparing RailsConf Presentation](/2007/09/11/busy-preparing-railsconf-presentation/ "Permanent Link to Busy Preparing RailsConf Presentation")
-  \
 - Justaddwater.dk: [Ruby on Rails for the enterprise: Business perspective](/2006/05/16/rails-enterprise-business-perspective/ "Permanent Link: Ruby on Rails for the enterprise: Business perspective") (May 2006)
-  \
 - Justaddwater.dk: [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link: Ruby on Rails as rapid prototyping tool") (Apr 2006)
-  \
 - Justaddwater.dk [All articles about prototyping](/category/prototyping/)
-  \
 - Flickr: All my photos from [RailsConf Europe 2007](http://www.flickr.com/photos/jesper/sets/72157594299044587/) (and from [2006](http://www.flickr.com/photos/jesper/sets/72157602046575760/))
-  \
 - [Reform plugin homepage](http://reform.quickanddirty.dk/)
-  \

@@ -75,8 +75,5 @@ These are the basic techniques that have been helpful for me when investigating 
 
 Related reading:
 
-- \
 - [toolbox for locating problems in HTML](/2006/09/18/toolbox)
-  \
 - [Why web standards matter (case study)](/2006/06/29/webstandards-case-study/)
-  \

@@ -55,15 +55,10 @@ Refucturing the code to make it undreadable and hard for others to understand:
 
 So, for Darren Workshy, to pay his mortgages he will follow these best practices
 
-- \
 - Include as much irrelevant detail in your features as possible
-  \
 - keeps them boring to read
-  \
 - and nice and brittle (hard to read)
-  \
 - Avoid using words you hear business people using. Invent your own instead!
-  
 
 [![](/wp-content/uploads/2012/06/IMG_6589-matwynne-bdd-cucumber-3-300x199.jpg "Matt Wynne best practices for MDD Mortgage-driven development")](/wp-content/uploads/2012/06/IMG_6589-matwynne-bdd-cucumber-3.jpg)
 
@@ -76,8 +71,5 @@ His talk about Mortgage-driven development provided many examples that turned ar
 
 More info:
 
-- \
 - My [Twitter stream (@jesperronn)](https://twitter.com/#!/jesperronn)
-  \
 - Danish [Version2 guest blog entries from my colleague Jesper S. Møller](http://www.version2.dk/blog/turen-gaar-til-new-york-46025)
-  \

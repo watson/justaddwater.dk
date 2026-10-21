@@ -14,6 +14,8 @@ I decided to import the data into a local database to ensure it could work offli
 
 Code from `/db/seeds.rb` file:
 
+[View gist 382105 on GitHub](https://gist.github.com/382105)
+
 Now I can access municipalities in a grouped selectbox like so in the view code:
 
     <%

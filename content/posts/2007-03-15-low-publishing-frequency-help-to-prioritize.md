@@ -16,20 +16,12 @@ It's a bit embarrassing, because we really have a lot of drafts waiting to be fi
 
 Here are a few of my ideas I have drafts of (some with no content, others with most content).
 
-- \
 - Usability review, "E - Texteditor"
-  \
 - Usability review, Axure 4.4 prototyping tool
-  \
 - 7 usability tips every web developer should know
-  \
 - Great developer advice from Paul Graham: Great Hackers
-  \
 - Redesign Proposal, Wikipedia Search Result Page
-  \
 - Usability advice: Progressive Disclosure
-  \
 - Usability advice: link colors that change
-  
 
 Some of these are our own content, and others "just" cite other sources for the exciting stuff. I know, it would probably affect your choices, but based on the list above, **what are the things you'd like to read about the most?**

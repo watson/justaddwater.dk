@@ -26,8 +26,5 @@ I'm working hard to memorize all his great points that can help me as inspiratio
 
 Read more and download the full report from his article "[IA Summit: Best Practices in Form Design](http://www.lukew.com/ff/entry.asp?502)" (Luke Wroblewski, March 26, 2007)
 
-- \
 - [Sensible Forms: A Form Usability Checklist](/2005/12/23/sensible-forms-a-form-usability-checklist/ "Permanent Link: Sensible Forms: A Form Usability Checklist")
-  \
 - [How to indicate required or optional form fields](/2006/03/29/how-to-indicate-required-or-optional-form-fields/ "Permanent Link to How to indicate required or optional form fields")
-  \

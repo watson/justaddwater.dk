@@ -22,6 +22,8 @@ Lad os lige  spole noget tid tilbage. Danske bank proklamerede at man ville inv
 
 [![](/wp-content/uploads/2011/04/danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic.jpg "danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic")](/wp-content/uploads/2011/04/danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic.jpg)
 
+*Fra danske banks website... men uden link til uddybning af konkrete tiltag*
+
 Jeg benytter mest netbanken til betaling af regninger. Udbakken er en feature, som opvejer en væsentlig ulempe ved Nem-Id sikkerheden: Jeg slipper for den irriterende Nem-Id kode ved hver transaktion. I stedet kan jeg bruge udbakken, og betale alle regninger i een samlet transaktion, så jeg kun skal bruge Nem-Id koden en gang for alle betalinger.
 
 Som ofte før, sættes sikkerhed i modsætning til brugervenlighed: Der er den ulempe ved udbakken at brugeren selv skal huske at tømme den. Og i tilfældet med Danske Bank, er udbakken vildt let at overse.

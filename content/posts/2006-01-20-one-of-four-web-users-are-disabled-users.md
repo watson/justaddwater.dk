@@ -14,31 +14,19 @@ But how about users with a technical disability: Wireless devices, slow internet
 
 25% of all web users have some kind of accessibility problem. That is a claim from the Danish Center for Accesibility. Here is my translation:
 
-> Acessibility on the internet affects many different user groups. An accessible website pays attention to users that for instance:\
+> Acessibility on the internet affects many different user groups. An accessible website pays attention to users that for instance:
 >
-> - \
 > - Uses earlier **versions of a browser or uses another browser** than the website is tested with.
->   \
 > - Has a **slow internet connection** or has a smal screen
->   \
 > - Uses new technical platforms for instance **mobile and wireless devices**
->   \
 > - Has **age related functional disabilities** and has difficulties seeing, hearing, or has difficulties using a mouse
->   \
 > - Is **color blind**
->   \
 > - Is **blind** and therefore needs assistive technology for reading aloud (such as a screenreader).
->   \
 > - Is **visually impaired** and therefore has a need to enlarge text without loosing track of things
->   \
 > - Is **motor impaired** and therefore has difficulties using mouse and keyboard
->   \
 > - Is **hearing impaired or deaf** and therefore has dificulties understanding digitized sound and speech if there is no text version available
->   \
 > - Has cognitive functional disabilities and have **problems with complexity and information overload.**
->   \
 >
-> \
 > **Up to 25% of all webusers are affected by accessibility problems**.
 
 Source: Danish Center for Accessibility, 2004. For those of you fluent in Danish I have included a [copy of the original article](/hidden-pages/accessibility-background-danish-center-for-accessibility/ "Accessibility background article - Danish Center for Accessibility").
@@ -83,4 +71,4 @@ The other user group is a particular blind user: Google. Google knows only of th
 
 I really recommend that you check out the [presentation mp3](http://we05.com/podcast/mp3/we05-15-jeffrey-veen2.mp3 "Jeff Veen on Web Essentials '05: Designing for Web 2.0 (mp3 file)") and [pdf slides](http://adaptivepath.com/events/workshops/we05/veen-web2.pdf "Jeff Veen on Web Essentials '05: Designing for Web 2.0 (pdf slides)"). He's really a great speaker that gets his message out.
 
-> \
+>

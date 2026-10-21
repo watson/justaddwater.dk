@@ -21,17 +21,11 @@ Visits and Pageviews, January 2006 - *Source: Google Analytics*
 
 One post in particular has drawn a lot of attention. Part of this is of cause because of its provocative claim that a quarter of all web users are disabled. We have gotten a lot of feedback on this and many people feel that the use of the word "disabled" is to much. That besides we should not ignore the fact that the story has many interesting points that we should keep in mind when designing and developing new websites. Anyway... less talk more numbers:
 
-1.  \
-2.  [One of four web users are disabled users](/2006/01/20/one-of-four-web-users-are-disabled-users/) (238 visitors)
-    \
-3.  [AJAX performance stats, ROI, and business value](/2006/01/14/ajax-performance-stats-roi-and-business-value/) (217 visitors)
-    \
-4.  [Live search explained](/2006/01/26/live-search-explained/) (160 visitors)
-    \
-5.  [Windows Vista setting new standards for Find-as-You-Type searching](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/) (109 visitors)
-    \
-6.  [Google Analytics trick: How to view referring URLs](/2006/01/08/google-analytics-trick-how-to-view-referring-urls/) (69 visitors)
-    
+1.  [One of four web users are disabled users](/2006/01/20/one-of-four-web-users-are-disabled-users/) (238 visitors)
+2.  [AJAX performance stats, ROI, and business value](/2006/01/14/ajax-performance-stats-roi-and-business-value/) (217 visitors)
+3.  [Live search explained](/2006/01/26/live-search-explained/) (160 visitors)
+4.  [Windows Vista setting new standards for Find-as-You-Type searching](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/) (109 visitors)
+5.  [Google Analytics trick: How to view referring URLs](/2006/01/08/google-analytics-trick-how-to-view-referring-urls/) (69 visitors)
 
 *Source: Measure Map*
 
@@ -45,48 +39,13 @@ Browser Versions, January 2006 - *Source: Google Analytics*
 
 ### Statistical numbers
 
-
-
-
-Total visits:
-
-
-1,563
-
-
-
-
-Total unique visitors:
-
-
-1,185 (2.78% returning)
-
-
-
-
-Average visits per day:
-
-
-50.42
-
-
-
-
-Average pageviews per visit:
-
-
-1.79
-
-
-
-
-Dropout percentage on the front page:
-
-
-45.88%
-
-
-
+|                                       |                         |
+|---------------------------------------|-------------------------|
+| Total visits:                         | 1,563                   |
+| Total unique visitors:                | 1,185 (2.78% returning) |
+| Average visits per day:               | 50.42                   |
+| Average pageviews per visit:          | 1.79                    |
+| Dropout percentage on the front page: | 45.88%                  |
 
 ### RSS/Atom
 

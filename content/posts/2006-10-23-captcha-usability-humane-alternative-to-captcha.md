@@ -48,12 +48,7 @@ Last week we had 1,334 spam comments that were all caught by the Akismet plugin 
 
 Related reading:
 
-- \
 - [Blog usability: Avoid spam comments](/2006/06/24/blog-usability-avoid-spam-comments/ "Permanent Link: Blog usability: Avoid spam comments")
-  \
 - [Blog usability: Avoid spam comments (part 2)](/2006/06/28/blog-usability-avoid-spam-comments-part-2/ "Permanent Link: Blog usability: Avoid spam comments (part 2)")
-  \
 - [Captcha usability revisited: Google inaccessible to blind people](/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-people/ "Permanent Link: Captcha usability revisited: Google inaccessible to blind people")
-  \
 - Microsoft ASP.NET AJAX controls Toolkit: [NoBot example](http://ajax.asp.net/ajaxtoolkit/NoBot/NoBot.aspx)
-  \

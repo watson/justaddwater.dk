@@ -16,7 +16,6 @@ Mojiti's ability to add comments to video content has impressed me. I must say t
 
 Here are the quotes pulled out for the video "Web 2.0 ... The Machine is Us/ing Us" at the point where he's referring to the 2005 article We are the web. Here is the transcript of the text bits that are pulled from the article to create new sentences:
 
-> \
 > We are the web
 >
 > When we post and then tag pictures\

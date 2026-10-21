@@ -10,7 +10,7 @@ tags: []
 
 E-Week has notes from "Google's Bosworth" (which must be [Adam Bosworth](http://en.wikipedia.org/wiki/Adam_Bosworth), formerly employed at Microsoft and working on the IE4 team).
 
-Below some notable quotes on AJAX. I really like his style a lot. Also, I can recommend [his talk from 2005 on high performance systems](http://www.itconversations.com/shows/detail571.html "ITConversations: Adam Bosworth - <br>
+Below some notable quotes on AJAX. I really like his style a lot. Also, I can recommend [his talk from 2005 on high performance systems](http://www.itconversations.com/shows/detail571.html "ITConversations: Adam Bosworth -<br>
 Database Requirements in the Age of Scalable Services") (via IT conversations), where he mentions that one Google blog has experienced up to 120,000 hits per second.
 
 > A good tool should be transparent, should execute actions in less than half a second and should involve interactive bottom-up learning, "because you change your mind as you go," he said.

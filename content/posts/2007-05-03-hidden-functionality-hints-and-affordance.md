@@ -12,13 +12,9 @@ Many of today have extremely advanced features and functionality. But the trend 
 
 A usable website (or application) is:
 
-- \
 - easy to use
-  \
 - easy to learn
-  \
 - hard to make errors in
-  
 
 Jakob Nielsen wrote about how hiding functionality is actually good for usability. The principle is called **progressive disclosure**, and presumes that you hide stuff that you don't use often, which makes it easier to find stuff that you use all the time.
 
@@ -70,15 +66,8 @@ Tomorrow, I'll dig into more examples about affordances of autocomplete text box
 
 ### More related info:
 
-
-- \
 - Justaddwater.dk: Affordance in autocomplete fields (will be published tomorrow)
-  \
 - Jakob Nielsen: Progressive Disclosure
-  \
 - Google search on [definition of affordance](http://www.google.com/search?q=define%3Aaffordance): [Wikipedia:Affordance](http://en.wikipedia.org/wiki/Affordance), [HCI dictionary: affordance](http://ei.cs.vt.edu/~cs5714/glossary.html)
-  \
 - Andy Ruthledge: [No instruction necessary part 1](http://www.andyrutledge.com/no-instruction-necessary-part1.php) (about affordance)
-  \
 - Interaction design encyclopedia: [Affordances](http://www.interaction-design.org/encyclopedia/affordances.html)
-  \

@@ -33,7 +33,7 @@
   "url": "http://justaddwater.dk/",
   "date": "2007-05-07 09:44:30",
   "type": "",
-  "html": "Reply from PowerCmd. I'm impressed to have an answer within minutes!\n\n> Hi Jesper,\n>\n> Thanks a lot for you reporting the defect. Once I will be working on this defect in 3 hours, and will let you know the result as soon as possible.\n>\n> BTW: I found some visitors from your blog and planed to contact you and resolve your issues that you put in the blog. But currently I am busy with the release of the new version. I hope I can resolve it before announcing\\\n> the release of version 1.3.\n>\n> Thanks a lot.\\\n> Paul\\"
+  "html": "Reply from PowerCmd. I'm impressed to have an answer within minutes!\n\n> Hi Jesper,\n>\n> Thanks a lot for you reporting the defect. Once I will be working on this defect in 3 hours, and will let you know the result as soon as possible.\n>\n> BTW: I found some visitors from your blog and planed to contact you and resolve your issues that you put in the blog. But currently I am busy with the release of the new version. I hope I can resolve it before announcing\\\n> the release of version 1.3.\n>\n> Thanks a lot.\\\n> Paul"
  },
  {
   "id": 141693,
@@ -78,7 +78,7 @@
   "url": "http://justaddwater.dk/",
   "date": "2007-06-04 20:27:05",
   "type": "",
-  "html": "Another thing that I discovered in PowerCmd: Ruby's command-line interpreter irb can't run.\n\nI described it in the [PowerCmd support forum](http://groups.google.com/group/powercmd/browse_thread/thread/7a9645a0cd1b27aa \" <br>\n\").\n\nNot able to run irb means also that \"ruby script\\console\" does not run"
+  "html": "Another thing that I discovered in PowerCmd: Ruby's command-line interpreter irb can't run.\n\nI described it in the [PowerCmd support forum](http://groups.google.com/group/powercmd/browse_thread/thread/7a9645a0cd1b27aa \"<br>\n\").\n\nNot able to run irb means also that \"ruby script\\console\" does not run"
  },
  {
   "id": 192196,

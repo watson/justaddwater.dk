@@ -41,7 +41,6 @@ One of the nice changes for this release is that you can now set your localized 
 
 ### Full changelog:
 
-
 > \* --- release 0.9 (2008-01-13) ---\
 > \* Possible to set language in environment.rb: L10N_LANG = :de\
 > \* UTF-8 database charset configuration is default in Rails 1.2+ and 2.0, so not needed in plugin more.\
@@ -61,16 +60,9 @@ One of the nice changes for this release is that you can now set your localized 
 > \* Fixed rake task for generating rdoc in UTF-8 format\
 > \* Added Norwegian (thanks Fredrik Bach)
 
-
 ### More info:
 
-
-- \
 - Justaddwater: [Ruby on Rails plugin: Localize your Rails app](/2006/08/24/ruby-on-rails-plugin-localize-your-rails-app/ "Permanent Link to Ruby on Rails plugin: Localize your Rails app") (Aug 2006)
-  \
 - Rubyforge [Localization Simplified homepage](http://rubyforge.org/projects/l10n-simplified/) ([download release 0.9](http://rubyforge.org/frs/?group_id=2074&release_id=18106))
-  \
 - Rails Wiki: [InternationalizationComparison](http://wiki.rubyonrails.com/rails/pages/InternationalizationComparison)
-  \
 - Agilewebdevelopment plugin page: [L10N-Simplified](http://agilewebdevelopment.com/plugins/localization_simplified) (remember to vote)
-  \

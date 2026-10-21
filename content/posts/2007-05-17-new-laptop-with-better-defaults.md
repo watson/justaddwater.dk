@@ -11,34 +11,21 @@ tags: []
 ***Update: CPU fan speed can be controlled. See updated notes below...(2007-11-06)***\
 I got a new laptop from work last week. Swapped the old Dell D600 in for a sparkling new (IBM) Lenovo Thinkpad T60p. I really like the new one. Things I have noted for now:
 
-- \
 - Much brighter and better screen
-  \
 - Lovely keyboard which is a pleasure to use
-  \
 - Funky gestures for the Touchpad
-  \
 - ~~CPU fan always running~~
-  
-
 
 ### Lovely Keyboard ... but...
 
 In general, the keyboard is really a pleasure to use. The keys have perfect weight and just right feedback. It makes a tiny clicking sound but not too clicky like the old Dell. In general the keys are good positioned and not too close (although there is an inch of unused space on each side of the keyboard. This space had been better used if it were used to put more space between essential groups of characters. (some of the buttons I hit Here are some of the buttons I hit in error occationally (which indicates that keys are too tight in that area):
 
-1.  \
-2.  I hit Fn when I want to hit CTRL
-    \
-3.  I turn on keyboard light when I want to page back between tabs in Firefox (variant of \#1)
-    \
-4.  I hit F3 when I want to hit F2 (to rename a file)
-    \
-5.  I hit F1 when I want to hit Esc
-    \
-6.  I hit the windows button when I want to hit CTRL
-    \
-7.  I hit the "page back" button when I want to hit arrow left
-    
+1.  I hit Fn when I want to hit CTRL
+2.  I turn on keyboard light when I want to page back between tabs in Firefox (variant of \#1)
+3.  I hit F3 when I want to hit F2 (to rename a file)
+4.  I hit F1 when I want to hit Esc
+5.  I hit the windows button when I want to hit CTRL
+6.  I hit the "page back" button when I want to hit arrow left
 
 These are sorted from my memory of, which buttons I mistakenly press most often. Some of these errors can be solved with a keyboard customization program that is preinstalled with the computer. Screenshot below shows that I was able to adjust sensitivity of F1, back and forward buttons (all of which I use very rarely).
 
@@ -60,15 +47,10 @@ If you don't believe me, try this with your left hand: Pressing Shift with your 
 
 Here are some of the keyboard shortcuts I'm used to but are difficult (or non-productive) to use on my Lenovo keyboard:
 
-1.  \
-2.  CTRL + Shift + Arrow keys (selecting text in chunks of words)
-    \
-3.  CTRL + Shift + Esc (open task manager)
-    \
-4.  CTRL + Shift + F (find in files in some editors)
-    \
-5.  CTRL + Shift + T (intelligent file open in my favorite editor)
-    
+1.  CTRL + Shift + Arrow keys (selecting text in chunks of words)
+2.  CTRL + Shift + Esc (open task manager)
+3.  CTRL + Shift + F (find in files in some editors)
+4.  CTRL + Shift + T (intelligent file open in my favorite editor)
 
 Because of the awkward placement of CTRL, I'm learning to use the right CTRL when pressing PgUp or PgDn — I use that a lot in Firefox. (For some reason, CTRL + Shift + S and CTRL + Shift + P works out OK because its some of the keys where I can use a more natural hand position to hit the keys).
 

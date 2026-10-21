@@ -33,8 +33,5 @@ Often on a daily basis, I have to deal with productivity issues that often slow 
 
 More info
 
-- \
 - Agile Project Planning: [High Cost of management indecision](http://www.extremeplanner.com/blog/2007/06/high-cost-of-management-indecision.html "Agile Project Planning:  High cost of management indecision")
-  \
 - Agile Project Planning: [Software projects that offer no short-term wins can be depressing](http://www.extremeplanner.com/blog/2007/03/small-wins-agile-psychology.html "Agile Project Planning:  Small Wins: Agile Psychology")
-  \

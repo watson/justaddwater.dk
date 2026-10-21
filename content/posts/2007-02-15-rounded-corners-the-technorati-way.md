@@ -19,24 +19,22 @@ I remember Eric Meyer mentioned this solution back at a workshop in 2005 (before
 HTML for the box:
 
 ``` html
-
-
-  ..
-  
+<div class="bloginfo-summary boxc">
+  <h2>..</h2>
+  <ul>
+    <li>..</li>
     ..
-    ..
-  
-  
-  
-  
-  
+  </ul>
+  <b class="cn tr"></b>
+  <b class="cn br"></b>
+  <b class="cn tl"></b>
+  <b class="cn bl"></b>
+</div>
 ```
-
 
 The HTML is then styled with the following CSS:
 
 ``` css
-
 div.bloginfo-summary {background:
   url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;
   float:left;margin-bottom:20px;padding:10px;width:690px}
@@ -60,7 +58,6 @@ div.bloginfo-summary {background:
        font-size: 1px;
       }
 ```
-
 
 So, graphically displayed, the `<b>` elements are actually positioned in each corner with no content:
 

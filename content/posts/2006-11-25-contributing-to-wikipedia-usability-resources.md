@@ -37,12 +37,7 @@ PS. I have to remember to ask Frank in the future when Google can't help me. Fra
 
 More info:
 
-- \
 - Justaddwater: [Who invented the spacer.gif?](/2006/03/03/who-invented-the-spacergif/)
-  \
 - Wikipedia: [Spacer GIF](http://en.wikipedia.org/wiki/Spacer_GIF)
-  \
 - Wikipedia: [Progressive Disclosure](http://en.wikipedia.org/wiki/Progressive_disclosure)
-  \
 - Frank Spillers: [Progressive Disclosure](http://experiencedynamics.blogs.com/site_search_usability/2004/03/progressive_dis.html)
-  \

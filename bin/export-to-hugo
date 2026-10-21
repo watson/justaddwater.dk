@@ -14,35 +14,75 @@ os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 SRC = "export/justaddwater.sanitized.xml"
 W = "{http://wordpress.org/export/1.2/}"; C = "{http://purl.org/rss/1.0/modules/content/}"
 BLOCK = r"(?:table|thead|tbody|tfoot|tr|td|th|div|dl|dt|dd|ul|ol|li|pre|form|blockquote|h[1-6]|hr|p|figure|object|embed|script|style|iframe)"
+ONLY = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else None
 LIMIT = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else None
 
 def shortcodes(t):
     t = re.sub(r"\[tags[^\]]*\].*?\[/?tags\]", "", t, flags=re.S)
-    t = re.sub(r"\[code(?:\s+lang(?:uage)?=\"?(\w+)\"?)?\](.*?)\[/code\]",
-               lambda m: '<pre><code%s>%s</code></pre>' % (' class="language-%s"' % m.group(1) if m.group(1) else "", m.group(2)),
-               t, flags=re.S)
+    def code(m):
+        body = m.group(2).strip("\n").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        return '<pre><code%s>%s</code></pre>' % (' class="language-%s"' % m.group(1) if m.group(1) else "", body)
+    t = re.sub(r"\[code(?:\s+lang(?:uage)?=\"?(\w+)\"?)?\](.*?)\[/code\]", code, t, flags=re.S)
+    t = re.sub(r'\[caption[^\]]*?caption="([^"]*)"[^\]]*\](.*?)\[/caption\]',
+               lambda m: "<p>%s</p>\n\n<p><em>%s</em></p>" % (m.group(2).strip(), m.group(1)), t, flags=re.S)
     t = re.sub(r"\[/?caption[^\]]*\]", "", t)
+    # embeds pandoc would drop: gist scripts and iframes become plain links
+    t = re.sub(r'<script[^>]*src="https?://gist\.github\.com/(\w+)\.js"[^>]*>\s*</script>',
+               r'<p><a href="https://gist.github.com/\1">View gist \1 on GitHub</a></p>', t, flags=re.I)
+    t = re.sub(r'<iframe[^>]*src="([^"]+)"[^>]*>.*?</iframe>',
+               r'<p><a href="\1">Embedded content: \1</a></p>', t, flags=re.I | re.S)
     return t
 
+CONTAINER = r"(?:table|dl|ul|ol|pre|form|blockquote|div|figure|object|script|style|iframe|p|h[1-6])"
+TAG = re.compile(r"<(/?)(%s)\b[^>]*?(/?)>" % CONTAINER, re.I)
+RECURSE = ("blockquote", "div")
+
+def autop_text(t):
+    out = []
+    for para in re.split(r"\n\s*\n", t):
+        para = para.strip()
+        if not para: continue
+        if re.match(r"</?%s[\s>/]" % BLOCK, para, re.I):
+            out.append(para)
+        else:
+            out.append("<p>%s</p>" % re.sub(r"[ \t]*\n[ \t]*", "<br>\n", para))
+    return out
+
+def next_opener(t, pos):
+    for m in TAG.finditer(t, pos):
+        if not m.group(1) and not m.group(3): return m
+
 def wpautop(t):
-    """Minimal WordPress autop: blank-line paragraphs, single newlines -> <br>."""
+    """Minimal WordPress autop: text outside block containers becomes <p> (blank-line separated,
+    single newlines -> <br>); block containers (lists, tables, pre...) are kept verbatim so no
+    stray <br> is injected next to or inside them. blockquote/div are processed recursively."""
     t = t.replace("\r\n", "\n").strip()
-    parts, buf, out = re.split(r"(<pre.*?</pre>)", t, flags=re.S), [], []
-    for part in parts:
-        if part.startswith("<pre"):
-            out.append(part); continue
-        for para in re.split(r"\n\s*\n", part):
-            para = para.strip()
-            if not para: continue
-            if re.match(r"<%s[\s>]" % BLOCK, para, re.I) or re.match(r"</%s>" % BLOCK, para, re.I):
-                out.append(para)
-            else:
-                out.append("<p>%s</p>" % para.replace("\n", "<br>\n"))
-    return "\n\n".join(out)
+    out, pos = [], 0
+    while True:
+        m = next_opener(t, pos)
+        if not m:
+            out += autop_text(t[pos:]); break
+        out += autop_text(t[pos:m.start()])
+        name = m.group(2).lower(); depth = 1; end = None
+        for mm in TAG.finditer(t, m.end()):
+            if mm.group(2).lower() != name or mm.group(3): continue
+            depth += -1 if mm.group(1) else 1
+            if depth == 0: end = mm; break
+        if end is None:
+            out.append(t[m.start():]); break
+        if name in RECURSE:
+            out.append(t[m.start():m.end()] + "\n\n" + wpautop(t[m.end():end.start()]) + "\n\n" + t[end.start():end.end()])
+        else:
+            out.append(t[m.start():end.end()])
+        pos = end.end()
+    return "\n\n".join(o for o in out if o)
 
 def to_md(html):
     html = wpautop(shortcodes(html))
     html = re.sub(r'(href|src)="https?://(?:www\.)?justaddwater\.dk(/[^"]*)"', r'\1="\2"', html)
+    # explicit <br> hugging block boundaries only produces stray `\\` after conversion
+    html = re.sub(r"(?:<br\s*/?>(?:\s|&nbsp;|\xa0)*)+(?=</(?:li|p|td|th|ul|ol|div|blockquote)>|<(?:ul|ol|blockquote|table|p|div)[\s>])", "", html, flags=re.I)
+    html = re.sub(r"(<(?:li|ul|ol|td|th)(?:\s[^>]*)?>)\s*(?:<br\s*/?>\s*)+", r"\1", html, flags=re.I)
     r = subprocess.run(["pandoc", "-f", "html", "-t", "gfm-raw_html", "--wrap=none"],
                        input=html, capture_output=True, text=True)
     md = r.stdout if r.returncode == 0 else html
@@ -61,6 +101,7 @@ for it in chan.findall("item"):
     ptype = it.findtext(W + "post_type")
     if ptype not in ("post", "page"): continue
     if LIMIT and n >= LIMIT: break
+    if ONLY and it.findtext(W + "post_name") != ONLY: continue
     slug = unquote(it.findtext(W + "post_name") or "") or "post-%s" % it.findtext(W + "post_id")
     date = (it.findtext(W + "post_date") or "")
     path = unquote(urlparse(it.findtext("link") or "").path) or "/%s/" % slug
@@ -75,7 +116,7 @@ for it in chan.findall("item"):
     coms = []
     for c in it.findall(W + "comment"):
         coms.append({"id": int(c.findtext(W + "comment_id")), "parent": int(c.findtext(W + "comment_parent") or 0),
-                     "author": c.findtext(W + "comment_author"), "url": c.findtext(W + "comment_author_url") or "",
+                     "author": unescape(c.findtext(W + "comment_author") or ""), "url": unescape(c.findtext(W + "comment_author_url") or ""),
                      "date": c.findtext(W + "comment_date"), "type": c.findtext(W + "comment_type") or "",
                      "html": to_md(c.findtext(W + "comment_content") or "")})
     if coms: write("data/comments/%s.json" % slug, json.dumps(coms, ensure_ascii=False, indent=1)); ncom += len(coms)

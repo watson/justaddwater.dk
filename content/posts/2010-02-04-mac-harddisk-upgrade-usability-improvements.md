@@ -20,17 +20,11 @@ I took out the old disk, inserted the new one, and booted the machine. After 1-2
 
 Several things could have helped me here.
 
-- \
 - Show a helpful message that boot disk is not found (it may have crashed or have been replaced)
-  \
 - Show a note that to select a boot menu, restart the computer while pressing and holding the 'C' key.
-  \
 - Detect that a new harddisk (other than the one used on last successful boot) is inserted, and show a message helpful for explaining harddisk upgrade steps.
-  \
 - Tell me that I need to insert the Mac OS X disk in order to restore the system, restore backups, or install.
-  \
 - After loading the Mac OS install menu from the Mac OS X disk, there is one big primary action: Install new OS on this computer. I rushed and pressed, but should have looked for the secondary options in the dropdown menus. An easy improvement is to add smaller, visually less dominant, but visible  secondary options ("format new hard drive", "restore system from backup").
-  
 
 Many of these points are pretty obvious when i write it now, but I *know* each one of them could have saved me brain cycles and time in the harddisk swap process.
 
@@ -42,10 +36,6 @@ By the way, It took roughly 3 hours to read 120GB from the TimeCapsule and every
 
 Photos and more info from:[](http://njr.sabi.net/2009/01/15/restoring-a-hard-drive-from-time-machine/)
 
-- \
 - njr 3.0:  [Restoring a hard drive from Time Machine](http://njr.sabi.net/2009/01/15/restoring-a-hard-drive-from-time-machine/)
-  \
 - James Duncan Davidson: [Restoring from Time Machine](http://blog.duncandavidson.com/2008/01/restoring-from-time-machine.html)
-  \
 - Legit Storage Reviews: [Intel X25-M 160GB 34nm MLC G2 SSD Benchmark Review](http://www.legitreviews.com/article/1022/1/)
-  \

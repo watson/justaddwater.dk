@@ -10,19 +10,12 @@ tags: []
 
 [JavaOne](http://java.sun.com/javaone/sf/ "JavaOne 2006 Conference Homepage") is the biggest Java convention in the world held once a year in USA. Five of my colleagues and me from Capgemini have taken the long trip from Denmark to San Francisco in California (19 hours!). My plan is to give you daily updates on all the interesting sessions I’m attending. I’m especially looking forward to hearing the following:
 
-- \
 - [Beyond AJAX: Asynchronous JavaScript ™ Technology and XML Native Processing](https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=279401&ilocation_id=124-1&ilanguage=english)
-  \
 - [Corporate Cola: Visualizing Your Email](https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=277639&ilocation_id=124-1&ilanguage=english)
-  \
 - [Stronger Than AJAX: Swing in a Server-Side Web Architecture](https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=278170&ilocation_id=124-1&ilanguage=english)
-  \
 - [Extreme Web Caching](https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=277251&ilocation_id=124-1&ilanguage=english)
-  \
 - [Java™ Technology, AJAX, Web 2.0 and SOA](https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=277372&ilocation_id=124-1&ilanguage=english)
-  \
 - [Evolving JavaServer™ Faces Technology: AJAX Done Right](https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=278161&ilocation_id=124-1&ilanguage=english)
-  
 
 I've put [my whole session schedule](/wp-content/uploads/2006/05/schedule.html "JavaOne 2006 Session Schedule for Thomas Watson Steen") online, but keep in mind that this is just resevations I made from home, so I might skip some of them or join other sessions.
 

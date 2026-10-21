@@ -24,18 +24,17 @@ as your costumer?
 
 ### Validation
 
-Which bring me to the second issue on my I-hate-stupid-form-designers list - wrong validation: \<rant\>I've seen a few forms where the developer though he had all the facts on valid characters in a domain-name (or the whole e-mail address for that fact). I don't want a form telling me that my e-mail address isn't valid because it doesn't like the hyphens in my domain name!\</rant\>
+Which bring me to the second issue on my I-hate-stupid-form-designers list - wrong validation:\
+\<rant\>I've seen a few forms where the developer though he had all the facts on valid characters in a domain-name (or the whole e-mail address for that fact). I don't want a form telling me that my e-mail address isn't valid because it doesn't like the hyphens in my domain name!\</rant\>
 
 ### Borders (not the graphical, but the physical ones)
 
-Besides all the great points that this article makes, there is one that it misses completely (and I'm probably gonna get some bad comments on this one): **USA ≠ The Internet**
+Besides all the great points that this article makes, there is one that it misses completely (and I'm probably gonna get some bad comments on this one):\
+**USA ≠ The Internet**
 
 As a non-US citizen I can't make this point often enough. Some US websites whose audience extends the physical borders of USA forget that it can be very difficult for a user that doesn't live inside the US to fill out the required choose-your-state select-box. Either provide the user with a country select-box and use some JavaScript to make the state select-box dimmed when the user chooses another country than USA or provide a "I live outside the USA" option as part of the state select-box (I personally like the first option).
 
 The article also mentions asking for the user's telephone number (e.g. 800 555-1212) and that one possible option is to split the telephone number input into three fields. But what about me? Danish telephone numbers is just 8 plain digits following each other without any fancy spaces or hyphens. Of cause I would probably also like to provide a county code (+45 for Denmark), but I've seen countless examples of websites that either:
 
-- \
 - Does not allow for a + (plus) in the telephone number and gives me an error when I try to submit (I can fix this by writing 0045 instead).
-  \
 - Strips the + of the beginning of the telephone number just before it saves it into its internal database without giving me the chance to change the + to 00 (two zeros). This in turn leaves owners of the website with an invalid telephone number.
-  \

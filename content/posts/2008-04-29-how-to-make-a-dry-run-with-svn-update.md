@@ -14,7 +14,18 @@ I asked at the office today if anyone could figure out a method for doing a dry-
 
 My colleague Mads came up with this:
 
-> `jesper:test_project jesper$ svn merge --dry-run -r BASE:HEAD . U app/helpers/application_helper.rb U app/controllers/reports_controller.rb A app/views/layouts/formula.html.erb U app/views/overview/index.html.erb U app/views/overview/_sidebar.html.erb U app/views/reports/index.html.erb A app/views/reports/_sidebar.html.erb U app/views/reports/new.html.erb U app/views/reports/start.html.erb C log/development.log U public/stylesheets/app.css `
+> `jesper:test_project jesper$ svn merge --dry-run -r BASE:HEAD .`\
+> `U app/helpers/application_helper.rb`\
+> `U app/controllers/reports_controller.rb`\
+> `A app/views/layouts/formula.html.erb`\
+> `U app/views/overview/index.html.erb`\
+> `U app/views/overview/_sidebar.html.erb`\
+> `U app/views/reports/index.html.erb`\
+> `A app/views/reports/_sidebar.html.erb`\
+> `U app/views/reports/new.html.erb`\
+> `U app/views/reports/start.html.erb`\
+> `C log/development.log`\
+> `U public/stylesheets/app.css`
 
 Brilliant! Now I can see which files will conflict or update before I pull newest version from repository. Now added as an alias:
 

@@ -39,7 +39,8 @@ So, we need to take our own medicine. These questionnaires would never slip thro
 
 ### Test tasks
 
-Example: "Go to www.nokia.co.uk and find the phone with FM radio that suits you best." (in the Danish version there is a spelling error which is a minor flaw). Problem. The task is closed: You make them pretend that they are interested in a FM radio.
+Example: "Go to www.nokia.co.uk and find the phone with FM radio that suits you best." (in the Danish version there is a spelling error which is a minor flaw).\
+Problem. The task is closed: You make them pretend that they are interested in a FM radio.
 
 Resolution: Make the task more open and motivative: "Here are 250 USD. Go out and find the mobile phone that is best for you".
 

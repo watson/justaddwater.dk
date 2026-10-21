@@ -18,21 +18,17 @@ In my opinion, spam comments in that amount makes all comments unusable. Current
 
 ## What we have done
 
-
 ### 1. Use Akismet for wordpress
 
 [Akismet](http://akismet.com/ "Akismet home page") is a plugin for the blog software justaddwater.dk runs on. The plugin checks all comments and trackbacks collaboratively on a lot of blogs. If the comment is already known as spam, it's never published. Here's what other people are saying about it:
 
-> Before Akismet I was spending more time deleting spam than creating content. Now I can focus on actually blogging!\
+> Before Akismet I was spending more time deleting spam than creating content. Now I can focus on actually blogging!
 >
 > — [Sarah King](http://sarahk.pcpropertymanager.com/blog/)
 >
-> \
-> I think Akismet is the best automated spam killer that actually gets better as it learns from the whole community marking new spam comments as spam. It just WORKS.\
+> I think Akismet is the best automated spam killer that actually gets better as it learns from the whole community marking new spam comments as spam. It just WORKS.
 >
 > — [Vinny Carpenter](http://www.j2eegeek.com/blog/)
->
-> 
 
 As i mentioned yesterday, an occational spam comment slips through the Akismet filter. Then we mark it as spam, and this way Akismet learns from us so that other users can benefit from this.
 
@@ -61,6 +57,7 @@ Recently, Thomas and I met with François Nonnenmacher, a French Capgemini emplo
 A variation of this would be to use DOM scripting to change the URL the form posts to via JavaScript. Example:
 
 ``` html
+<form id="postform" method="post" action="illegal.url">
 ```
 
 And then via DOM scripting change form.action to the proper URL (`wp-comments-post.php`).

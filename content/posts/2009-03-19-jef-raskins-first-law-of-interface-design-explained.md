@@ -40,17 +40,11 @@ Not really perfect to change to "7" if I meant "7.5" or "7.25". So there is stil
 
 The worst kind of Interface Law violations are the ones that:
 
-- \
 - says "username too short" and deletes the username completely
-  \
 - says "error in your phone number" and deletes all the other fields so that you have to type everything again
-  \
 - says "credit card information invalid. type again" and then deletes all entered credit card information
-  \
 - says "wrong license code" and then deletes the license code field(s)
-  \
 - says "incorrect captcha" and resets other fields I entered
-  
 
 All these examples fail in user experience because they do not take into account that you most of the time want to correct an accidental typo. The last thing you want is to re-type all the other fields, numbers, characters that were actually correct.
 
@@ -58,9 +52,7 @@ All these examples fail in user experience because they do not take into account
 
 I think this one is ok if it:
 
-- \
 - says "passwords don't match" and deletes both passwords -- passwords are not shown on screen and system does not know if you made a typo in first field or second field
-  
 
 Thanks to Mathias Müller-Prove for giving me the correct quotation. Read more in his short memorial of Jef Raskin "[In Memoriam: Jef Raskin -- User Experience Newsletter \#5, March 2005](http://www.mprove.de/script/05/uxf/newsletter05.html)"
 

@@ -14,11 +14,8 @@ The HTML guide is a really useful tool for every public authority that must deli
 
 As a help for my own work back then, I created [virk_dk_htmlsnippets](http://github.com/jesperronn/virk_dk_htmlsnippets/tree/master):
 
-> \
->
 > ## Snippets available
 >
-> \
 > `skel`(tab) -- creates HTML skeleton in blank file. Adds correct doctype, head, body and container divs required for the virk.dk html to show correctly.
 >
 > `fieldset`(tab) Groups of form elements. Use where you would have used ordinary fieldsets. See HTML guide » [Form grupper (fieldsets)](http://xmltools2.oio.dk/virk/htmlguide/form-fieldset.html)
@@ -53,14 +50,9 @@ In Denmark there are only a few major public portals: Virk.dk for businesses, an
 
 Imagine how the public authorities would benefit from shared HTML markup:
 
-- \
 - Develop only one component with the wanted functionality.
-  \
 - Easier "mashup" and reuse of data for presentation on multiple portals
-  \
 - Lower learning curve for developers
-  \
 - More development accelerators like these snippets would emerge
-  
 
 Next time I get to do work for that project, I would probably also create a Ruby on Rails form builder that automagically would generate the right HTML.

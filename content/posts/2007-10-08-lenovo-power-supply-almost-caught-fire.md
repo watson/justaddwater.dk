@@ -18,21 +18,14 @@ I have mentioned before usability issues of my Lenovo Thinkpad T60p computer. Us
 >
 > For some strange reason, the power supply is working again the day after.
 >
-> Technical details from the power supply and PC\
+> Technical details from the power supply and PC
 >
-> - \
 > - Lenovo AC Adapter 90W 20V rev H
->   \
 > - Serial number: 11S92P1107Z1ZD2L73W8P6
->   \
 > - P/N 92P1108
->   \
 > - PA-1900-08I
->   \
 > - (used for my Lenovo Thinkpad T60p widescreen type "8742-CTO", S/N "L3-A8843 07/04", Product id "8742Y18")
->   \
 >
-> \
 > Question for Lenovo:
 >
 > How can you convince me that it's safe to use the power supply and put it back in the wood shelf in my home office?
@@ -49,8 +42,5 @@ To everybody with a similar power supply: **Unplug the power supply when unatten
 
 Related info:
 
-- \
 - [Lenovo Problem: No Wireless Reconnect After Standby](/2007/07/25/lenovo-problem-no-wireless-reconnect-after-standby/ "Permanent Link to Lenovo Problem: No Wireless Reconnect After Standby") (Jul 25)
-  \
 - [New Laptop With Better Defaults](/2007/05/17/new-laptop-with-better-defaults/ "Permanent Link to New Laptop With Better Defaults") (May 17)[ ](/2007/05/17/new-laptop-with-better-defaults/ "Permanent Link to New Laptop With Better Defaults")
-  \

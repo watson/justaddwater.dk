@@ -10,13 +10,9 @@ tags: ["editor", "ide", "intellij"]
 
 For work, I use IntelliJ IDEA, when working in Java world. For my current client, there is a quota on my user directory, which means I have to move IDEA system files to another folders.
 
-1.  \
-2.  Locate the file `idea.properties` in your IntelliJ Idea\bin folder
-    \
-3.  Edit `idea.config.path`
-    \
-4.  Restart
-    
+1.  Locate the file `idea.properties` in your IntelliJ Idea\bin folder
+2.  Edit `idea.config.path`
+3.  Restart
 
 I changed it from
 

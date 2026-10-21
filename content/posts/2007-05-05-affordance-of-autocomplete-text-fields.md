@@ -60,16 +60,9 @@ Please post your comments about good and bad examples, as I desperately need mor
 
 Related info:
 
-- \
 - IxDA Discuss: [Affordance on autocomplete input boxes](http://lists.interactiondesigners.com/htdig.cgi/discuss-interactiondesigners.com/2006-July/010573.html)
-  \
 - Justaddwater.dk: [Hidden Functionality — Hints And Affordance](/2007/05/03/hidden-functionality-hints-and-affordance/ "Justaddwater.dk: Hidden Functionality — Hints And Affordance")
-  \
 - Justaddwater.dk: [Live search explained](/2006/01/26/live-search-explained/ "Justaddwater.dk: Live search explained (2006-01-26)")
-  \
 - Wikipedia: [Hidden Find](http://en.wikipedia.org/wiki/Incremental_find)
-  \
 - Bill Scott: [D](/wp-admin/%20Distracting%20or%20Narrowing:%20Looking%20a%20Little%20More%20At%20Live%20Search)istracting or Narrowing: Looking a Little More At Live Search[D](/wp-admin/%20Distracting%20or%20Narrowing:%20Looking%20a%20Little%20More%20At%20Live%20Search)
-  \
 - Yahoo! Design Pattern Library: [Autocomplete pattern](http://developer.yahoo.com/ypatterns/pattern.php?pattern=autocomplete "Yahoo design pattern library: Autocomplete pattern")
-  \

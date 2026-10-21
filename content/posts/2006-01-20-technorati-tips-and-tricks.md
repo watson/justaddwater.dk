@@ -16,30 +16,19 @@ Technorati then uses these tags to index your post in different categories on te
 
 If you write a story about Technorati Tags (like this one) you have a choice between using several tags:
 
-- \
 - technorati
-  \
 - technorati tags
-  \
 - technoratitags
-  \
 - tags
-  
 
 You could of cause use all of them, but besides the hassle of always having to think of all the combinations a user might use, I don't think this is a very "nice" solution - you could call it a mild version of tag spamming.
 
 Instead you can just use one tag: "**technorati tags**". Technorati will then automatically use any combination of these words - except directly changing the order of the words of cause. So using just that tag will make your post appear on the following URLs:
 
-- \
 - [http://technorati.com/tags/technorati](http://technorati.com/tags/technorati "Technorati Tag: technorati")
-  \
 - [http://technorati.com/tags/technorati+tags](http://technorati.com/tags/technorati+tags "Technorati Tag: technorati tags")
-  \
 - [http://technorati.com/tags/technoratitags](http://technorati.com/tags/technoratitags "Technorati Tag: technoratitags")
-  \
 - [http://technorati.com/tags/tags](http://technorati.com/tags/tags "Technorati Tag: tags")
-  
-
 
 ### Tip 2: Technorati is not case sensitive
 
@@ -51,13 +40,9 @@ All of the popular blogging tools use categories to group their posts. Technorat
 
 So if you post a story using the Technorati Tags "A" and "B" and post it in a category called "C", the story will appear in all of these:
 
-- \
 - http://technorati.com/tags/A
-  \
 - http://technorati.com/tags/B
-  \
 - http://technorati.com/tags/C
-  
 
 But I would of cause argue that it is more reader friendly if you print **all** the Technorati Tags you want your post to appear under. This way your readers can click on the tags to see other blogs blogging about these topics.
 

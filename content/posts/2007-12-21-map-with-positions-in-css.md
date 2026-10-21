@@ -10,11 +10,8 @@ tags: []
 
 These days I'm working on the HTML and CSS for this map, but I want to hear your opinions as what to recommend from a usability point of view:
 
-1.  \
-2.  The top map where the cities are placed on the map directly (it's a HTML list)
-    \
-3.  The bottom map where the list is to the right of the map, but each city name contains a reference placed on the correct position on the map.
-    
+1.  The top map where the cities are placed on the map directly (it's a HTML list)
+2.  The bottom map where the list is to the right of the map, but each city name contains a reference placed on the correct position on the map.
 
 [![justaddwater-map-example-denmark.png](/wp-content/uploads/2007/12/justaddwater-map-example-denmark.png)](/wp-content/uploads/2007/12/map-example-denmark-v002.html "map-example-denmark-v002.html")
 

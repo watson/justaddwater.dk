@@ -16,7 +16,6 @@ Highlights that I am looking forward to:
 
 ### Dan Webb, Unobtrusive Ajax with Rails
 
-
 Accessible websites are the weak point of virtually every web framework. Rails is one of the better web frameworks with respect to accessibility, but there is still plenty of room for improvement.
 
 Unfortunately at presented at the same time as Soren Burkhart, Revolutionizing the Airline Industry with Rails. I've written previously about [the business case for Rails](/2006/05/16/rails-enterprise-business-perspective/ "Justaddwater.dk: Ruby on Rails for the enterprise: Business perspective"), so this will be a tough one to decide what to see.
@@ -32,7 +31,6 @@ Security and Rails: I'm looking forward to more here, although I've read the sec
 
 ### 
 
-
 ### Till Vollmer, Localisation of Rails applications
 
 As I pointed out while working on my own [Localization plugin](/2006/08/24/ruby-on-rails-plugin-localize-your-rails-app/ "Justaddwater.dk: Ruby on Rails plugin: Localize your Rails app"), there are plenty of loose ends in Rails that could make localization much easier with Rails.
@@ -41,7 +39,6 @@ As I’ve written in the [Rails Core group](http://groups.google.com/group/rubyo
 
 
 ### 
-
 
 ### Jeremy Voorhis, Agile Project Management With Rake And Capistrano
 

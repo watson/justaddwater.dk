@@ -57,12 +57,7 @@ Source: [Lenovo ThinkPad T Series homepage](http://www.pc.ibm.com/europe/thinkpa
 
 Previous info[](/2007/05/17/new-laptop-with-better-defaults/ "Permanent Link to New Laptop With Better Defaults")
 
-- \
 - [New Laptop With Better Defaults](/2007/05/17/new-laptop-with-better-defaults/ "Permanent Link to New Laptop With Better Defaults") (May 2007) -- there is a section about "fan always running"
-  \
 - [Lenovo Problem: No Wireless Reconnect After Standby](/2007/07/25/lenovo-problem-no-wireless-reconnect-after-standby/ "Permanent Link to Lenovo Problem: No Wireless Reconnect After Standby") (July 2007)
-  \
 - [Lenovo Power Supply Almost Caught Fire](/2007/10/08/lenovo-power-supply-almost-caught-fire/ "Permanent Link to Lenovo Power Supply Almost Caught Fire") (October 2007)
-  \
 - [TPfancontrol on SourceForge](http://sourceforge.net/projects/tp4xfancontrol/) [(found via this forum "Lenovo T60 fan constantly running")](http://forum.notebookreview.com/showthread.php?p=2638398 "Notebook Review.com: T60 Fan constantly running")
-  \

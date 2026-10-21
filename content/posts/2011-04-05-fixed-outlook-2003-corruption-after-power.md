@@ -17,7 +17,8 @@ I followed advice from a [forum thread, that recommended to run "outlook.exe /re
 
 Then, from the command line, i tried all relevant flags found on "[outlook tips: using command line](http://www.outlook-tips.net/howto/commandlines.htm)".
 
-> ` C:\Program Files\Microsoft Office\Office11>outlook /resetnavpane `
+> \
+> C:\Program Files\Microsoft Office\Office11\>outlook /resetnavpane
 >
 > C:\Program Files\Microsoft Office\Office11\>outlook /safe
 >
@@ -31,6 +32,7 @@ At the end it turned out, that none of the above worked.. Until I shut down Micr
 
 Now, this worked like a charm:
 
-> ` C:\Program Files\Microsoft Office\Office11>outlook.exe /resetfolders `
+> \
+> `C:\Program Files\Microsoft Office\Office11>outlook.exe /resetfolders`
 
 Lesson learned: Remember to shut down Microsoft office communicator, before trying to repair outlook

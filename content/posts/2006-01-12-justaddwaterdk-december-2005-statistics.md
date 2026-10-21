@@ -16,7 +16,6 @@ We still get about a quarter of our hits from news feed readers (RSS, Atom, etc.
 
 > On-top of that I would imagine that news aggregators checks for updates every x minutes - even if there is none - so that adds to the total as well.
 
-
 ### Browser Versions
 
 Our users are almost split 50/50 when it comes to the choice between Internet Explorer from Microsoft or the open source Firefox browser from Mozilla. Besides those two only Safari by Apple (= Mac users) is worth noticing:\
@@ -25,48 +24,13 @@ Browser Versions, December 2005 - *Source: Google Analytics*
 
 ### And now some numbers...
 
-
-
-
-Total visits:
-
-
-496
-
-
-
-
-Total unique visitors:
-
-
-353 (8.78% returning)
-
-
-
-
-Average visits per day:
-
-
-13.42
-
-
-
-
-Average pageviews per visit:
-
-
-2.44
-
-
-
-
-Dropout procentage on the front page:
-
-
-30.26%
-
-
-
+|                                       |                       |
+|---------------------------------------|-----------------------|
+| Total visits:                         | 496                   |
+| Total unique visitors:                | 353 (8.78% returning) |
+| Average visits per day:               | 13.42                 |
+| Average pageviews per visit:          | 2.44                  |
+| Dropout procentage on the front page: | 30.26%                |
 
 ### We span the globe even more
 

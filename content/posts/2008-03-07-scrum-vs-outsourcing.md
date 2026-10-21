@@ -14,23 +14,10 @@ More from Jeff Sutherland (the video presentation i posted about yesterday). Thi
 
 (example starts around 42 minutes into the presentation)
 
-> \
->
-> - \
 > - Outsource \$2million development
->   \
-> - Outsourcing costs \$1.6M\
->   (industry data show 20% cost savings on average)
->   \
-> - Alternative: Introduce Scrum locally\
->   (240% improvement)
->   \
-> - Local Scrum costs \$0.83M\
->   (which yields a 59% cost reduction)
->   \
->
-> 
-
+> - Outsourcing costs \$1.6M (industry data show 20% cost savings on average)
+> - Alternative: Introduce Scrum locally (240% improvement)
+> - Local Scrum costs \$0.83M (which yields a 59% cost reduction)
 
 > Every company I introduced Scrum in (even one with 600 developers) more than doubled productivity. In fact, I don't even view that as very good.
 >
@@ -39,7 +26,6 @@ More from Jeff Sutherland (the video presentation i posted about yesterday). Thi
 > Why would anybody do that?
 >
 > **You would always wanna introduce good agility locally first**, and then go and insist that the Indian teams be agile -- and that's what \[xx\] is doing -- they are converting all their Indian operation -- which is growing bigger than their US operation -- to Scrum.
-
 
 > 
 

@@ -12,41 +12,27 @@ Jesper's notes from Jesse James Garrett’s event "[The elements of User Experie
 
 [![Jesse Games Garrett in action, Copenhagen, May 31, 2006](/wp-content/uploads/2006/05/jjg-7697-thumb.jpg)](/notes-elements-of-user-experience/jesse-games-garrett-in-action-copenhagen-may-31-2006/ "Jesse Games Garrett in action, Copenhagen, May 31, 2006")
 
-
 Click image to see full-size version
 
 Compares User Experience to the experience at going to the movies. Worst movie experience ever. "I cannot walk out of a movie". Why are we still seeing bad movies?
 
-- \
 - Lots of experience
-  \
 - Bad experience acting
-  \
 - Takes a lot of skills and practice to get every detail right
-  
 
 People talk alot about bad movie experience. But if they have a bad experience at a website, they don't talk about it. **They blame themseves**.
 
-- \
 - "I probably overlooked the right choice"
-  \
 - "I guess I'm not smart enough to use this"
-  
 
 Success metrics:
 
-- \
 - The only way to know if changing your site has made a difference
-  \
 - Closely tied to site objectives
-  
 
 Show of hands: Who's conducting user research in their company:
 
-- \
 - Almost noone (unless a few consultants in the crowd)
-  
-
 
 ### Personas
 
@@ -62,35 +48,22 @@ One danger: Inventing the personas characters instead of base them on research. 
 
 Functional specifications:
 
-- \
 - What are the features/functions that users need to fulfill their goals
-  \
 - Focus on that it does
-  \
 - not "how it works"
-  \
 - Not technical document
-  
 
 Content requirements
 
-- \
 - Who's responsible
-  \
 - Define elements according to their purpose (user goals). NOT "video streaming", etc.
-  
 
 Documentation
 
-- \
 - Problem with how organisations use them
-  \
 - "waste of time"
-  \
 - No one reads them
-  \
 - Never up-to-date
-  
 
 If you lock people in your organisation into a room, then "off course its a waste of time", etc...
 
@@ -158,73 +131,45 @@ Comparison Apple search results with IBM. Very different although they have almo
 
 **Answering objections**
 
-- \
-- "Our market research tells us everything we need to know about our users"\
-  -- market research are not aimed at user \##adfærd##
-  \
-- "We'll follow this list of guidelines from the internet"\
-  -- no, we need to be specific
-  
+- "Our market research tells us everything we need to know about our users" -- market research are not aimed at user \##adfærd##
+- "We'll follow this list of guidelines from the internet" -- no, we need to be specific
 
 The value of user research: We're continuous surprised.
 
 jjg: "No one would ever suggest improvising a bridge, improvising a hotel. But we see that constantly on the web."
 
-- \
 - We'll fix it in QA. (but that's probably too late)
-  
 
 **Bad signs**
 
-- \
 - Design by default (usually engineers)
-  \
 - Design by mimicry. "remember the plague by tab navigation"
-  \
 - Design by fiat: It's going to be purple, because I like purple.
-  
 
 The Marathon and the Sprint
 
 Sprint is a short race:
 
-- \
 - strategy: get a quick start
-  \
 - burn energy as quickly as possible
-  
 
 Marathon is a logn race
 
-- \
 - Pace yourself
-  \
 - Choose when to burn energy
-  
-
 
 > Ask yourself Which race are you trying to run?
 
-
-- \
 - If you try to run a sprint as a marathon, you'll finish last
-  \
 - If you try to run a marathon as a sprint, you'll never finish
-  
-
 
 ### The visual vocabulary
 
 Architecture diagrams
 
-- \
 - Effectively communicating the big experience
-  \
 - One context for all the design desicions we make
-  \
-- The "trophy deliverable": The one thing, the client is most likely to print out large scale and point to on the wall:\
-  "This is what we're building"
-  
+- The "trophy deliverable": The one thing, the client is most likely to print out large scale and point to on the wall: "This is what we're building"
 
 jjg: A document that's not getting used, is a waste of time. I always deliver my documents electronically so that they're easier to copy from and use.
 
@@ -234,13 +179,8 @@ The vocabulary are standard shapes to express common concepts.
 
 > jjg:"people make fun of me because when we go into a meeting room I always take the seat closest to the whiteboard"
 
-
-- \
 - Tool agnostic (works even in powerpoint)
-  \
 - Whiteboard-compatible (so quick sketching of shapes are easily distinct)
-  
-
 
 ![](http://www.jjg.net/ia/visvocab/images/fig10.gif)\
 **Figure 10:** An example use of a decision point in a login sequence
@@ -255,11 +195,8 @@ The map only addresses the user experience.
 
 Example: 1990 Borland Quattro (Lotus 1-2-3 compatibility mode) . Click on a switch and application reconfigured itself
 
-- \
 - Lotus suited Borland over menu stucture
-  \
 - Deadlocked 4-4 in Supreme Court
-  
 
 Other example: Apple paid Amazon to use the 1-click in their Apple Store (or was it ITunes).
 
@@ -285,13 +222,9 @@ No section breaks, no headings. You just flip the page and you're on to somethin
 
 Technology definition:
 
-- \
 - Tech: "skill or method"
-  \
 - Nology: "Knowledge or study"
-  \
 - **Technology = knowhow** (ideas, methods)
-  
 
 The adoption Curve by Geffrey Moore (crossing the chasm)
 
@@ -303,22 +236,15 @@ Jurassic park movie poster "something has survived": Jeff Bezos and Jakob Nielse
 
 > **Amazon defies conventional Wisdom**
 
-
 ### Relentless algorithmic architectures
 
 Metrics, metrics, metrics.
 
-- \
 - People who bought this also bought...
-  \
 - The page you made...
-  \
 - Your store...
-  \
 - Your recommendations...
-  \
 - Explore similar items...
-  
 
 This is only the beginning of algorihtmic architecture. We will see systems that create algorithmic architecture.
 
@@ -328,23 +254,15 @@ The modern webdesigner: Mister Magoo
 
 "Jakob Nielsen sells canes to the blind". We need better. We need technology that make us able to see. Like the guy in Startrek.
 
-- \
 - real data,
-  \
 - better data about actual user behaviour,
-  \
 - we need the interfaces we build to tell us more about what real users experience with real website.
-  
 
 Amazon algorithms have different tags according to which algorithms are used to get you to the item.
 
-- \
 - ref=sr_2_2
-  \
 - ref=sr_1_1
-  \
 - Able to track which features drive traffic, revenue.
-  
 
 Baseball statistics
 
@@ -356,13 +274,9 @@ On web, the data is pretty simple.
 
 Adaption curve: Hackers and hobbyists.
 
-- \
 - All this is non-commercial
-  \
 - ecosystems between hackers and hobbyists
-  \
 - rapid iteration
-  
 
 Side project: Flickr, del.icio.us =\> deploying code 3-4 times a day, constantly monitoring feedback.
 

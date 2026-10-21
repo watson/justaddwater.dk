@@ -22,24 +22,14 @@ Popular topics: [Usability](/category/usability/), [blog usability](/category/bl
 
 Popular posts (just to pick a few):
 
-- \
 - [Live search explained](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained")
-  \
 - [AJAX businesscase](/2006/02/08/ajax-businesscase/ "Permanent Link: AJAX businesscase: Reduce development costs and increase usability")
-  \
 - [How to indicate required or optional form fields](/2006/03/29/how-to-indicate-required-or-optional-form-fields/ "Permanent Link: How to indicate required or optional form fields")
-  \
 - [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link: Ruby on Rails as rapid prototyping tool")
-  \
 - [25% of all web users are disabled](/2006/01/20/one-of-four-web-users-are-disabled-users/ "Permanent Link: 25% of all web users are disabled")
-  \
 - [Definition of User Experience Revisited](/2006/06/21/user-experience-revisited/ "Permanent Link: Definition of User Experience Revisited")
-  \
 - [New Google layout more usable](/2006/03/28/new-google-layout-more-usable/ "Permanent Link: New Google layout more usable")
-  \
 - [Mullet Layout: A user-friendly front page](/2006/03/12/mullet-layout-a-user-friendly-front-page/ "Permanent Link: Mullet Layout: A user-friendly front page")
-  
-
 
 ### Jesper Rønn-Jensen
 
@@ -48,7 +38,6 @@ Popular posts (just to pick a few):
 Jesper is passionate about his work, and seldom misses a chance to share knowledge on web development issues.
 
 View [Jesper's LinkedIn profile](http://www.linkedin.com/in/jesper) for more info and details on his professional skills.
-
 
 ### Thomas Watson Steen
 

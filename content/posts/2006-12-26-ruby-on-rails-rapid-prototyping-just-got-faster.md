@@ -18,15 +18,8 @@ Earlier I wrote how we use [Ruby on Rails as rapid prototyping tool](/2006/04/12
 
 And further down in the [release announcement](http://hobotek.net/blog/2006/12/22/hobo-released/ "The Hobo Blog: Hobo Released!"):
 
-> \
->
-> - \
 > - Hobo extends Rails is a number of ways, to let you build full blown web applications very quickly and easily.
->   \
 > - Hobo lets you add dynamic Ajax interfaces to your application with no extra programming.
->   \
->
-> 
 
 But the best part (I think) is the better support for Ajax user interface development, as is mentioned briefly:
 
@@ -38,12 +31,7 @@ Please do note that the team mentions that they don't consider the release (0.4)
 
 Other mentions:
 
-- \
 - Pune Ruby: [Play with Hobo](http://www.puneruby.com/blog/?p=107 "Pune Ruby: Play with Hobo")
-  \
 - MucoSoft: [Hobo, Ruby on much more simple Rails](http://www.mucosoft.net/2006/12/25/hobo-ruby-on-much-more-simple-rails/ "MucoSoft: Hobo, Ruby on much more simple Rails")
-  \
 - Red Ferret: [Hobo - the ultra fast web app builder for Rails](http://www.redferret.net/?p=8060 "Red Ferret: Hobo - the ultra fast web app builder for Rails")
-  \
 - Justaddwater.dk: [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Justaddwater.dk: Ruby on Rails as rapid prototyping tool (April 2006)")
-  \

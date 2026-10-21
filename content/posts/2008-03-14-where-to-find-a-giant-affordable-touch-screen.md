@@ -26,4 +26,4 @@ PS. We were actually talking about using a regular projector and a Nintendo Wee 
 
 **UPDATE:** This is the kind of interaction i am looking for (video via [ReadWriteWeb](http://www.readwriteweb.com/archives/user_interfaces_information_overload.php))
 
-Does anybody know if it's possible outside a lab?\
+Does anybody know if it's possible outside a lab?

@@ -13,8 +13,7 @@ I have for long been struggling with an internal legacy application that wraps t
 Problem: An inline "reverse" framebuster script that makes sure that everything is nicely(?) wrapped in the frameset. As you see it's included inline in the HTML.
 
 ``` javascript
-
-
+<script Language="Javascript">
   url = "application_url";
   if (parent.frames[0]) {
     if (parent.frames[0].name != 'FrameMain') {
@@ -23,6 +22,7 @@ Problem: An inline "reverse" framebuster script that makes sure that everything 
   }else{
     document.location.replace(url);
   }
+</script>
 ```
 
 One thing is I never understood the thing about putting everything in a frameset. In this case, I have not been able to change the code. But as I have to use the application every now and then, the big question is:
@@ -52,6 +52,4 @@ I did not think this was possible until I got this answer from "esquifit" in the
 
 Find the entire discussion here:
 
-- \
 - Greasemonkey users group: "[How to ignore framebuster script](http://groups.google.com/group/greasemonkey-users/browse_thread/thread/42a64be1aa31e1d8/76df7564697e076a#76df7564697e076a)"
-  \

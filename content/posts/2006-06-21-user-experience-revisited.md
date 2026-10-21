@@ -19,7 +19,6 @@ Thomas Baekdal on [The Battle Between Usability and User-Experience](http://www.
 >
 > Why, for instance, does a Audi S6 give you a much better user-experience than a Ford Focus? I mean, in terms of usability they are pretty much the same.
 
-
 ### UXP for the development team
 
 Jesse's conference was about "defining the user experience". User experience, the way he defined it that day, was focused on **how teams organize to provide web applications with high user experience.**
@@ -28,17 +27,11 @@ Jesse's conference was about "defining the user experience". User experience, th
 
 He went though the five planes of user experience (simplified below):
 
-1.  \
-2.  user needs/objectives
-    \
-3.  Functional
-    \
-4.  interaction design
-    \
-5.  interface/information design
-    \
-6.  visual design
-    
+1.  user needs/objectives
+2.  Functional
+3.  interaction design
+4.  interface/information design
+5.  visual design
 
 Focus was on how to do it - not from the end-users perspective, but from the perspective of the web development team.
 
@@ -47,7 +40,6 @@ Focus was on how to do it - not from the end-users perspective, but from the per
 Mike Kuniavsky from his [profile page](http://www.amazon.com/gp/pdp/profile/A245U65JGR1ZN8/ "Mike Kuniavsky profile page (amazon.com)") on Amazon:
 
 > No single accepted definition of the user experience exists (Jesper Rønn-Jensen does a good job of describing the problem [in his blog](http://www.amazon.com/gp/redirect.html/ref=cm_plog_item_link/103-8118521-0557450?%5Fencoding=UTF8&location=http%3A%2F%2Fjustaddwater.dk%2F2006%2F01%2F15%2Fuser-experience-clear-and-easy-to-use-definition-needed%2F&token=FFAB9CA427DE4BE3E613D2624286A6F357FFEBF4)).
-
 
 > \[...\]
 >
@@ -63,42 +55,29 @@ Mike's got a point: I like the tight coupling between user experience and the or
 
 That's why I really like Thomas Baekdal's ending notes in his discussion: "Make it easy to be happy":
 
-> \
->
 > #### Make it easy to be happy
 >
-> \
 > It is far from easy to create a great product on demand, but it is possible.
 >
 > First of all, do not focus on usability or user-experience. Do not directly try to achieve to create synergies. Do not try to create a great product. None of these things will get you any closer.
 >
-> Focus on **making it easy to be happy**, and usability, user-experience and greatness will come all by itself.\
+> Focus on **making it easy to be happy**, and usability, user-experience and greatness will come all by itself.
 >
-> - \
 > - Instead of making a product management web application, make it **easy** to **finish** **great** projects.
->   \
 > - Instead of making usable instant messaging, make it **easy** to have **interesting** **conversations**.
->   \
 > - Instead of making a powerful web writer, make it **easy** to write **exciting** **stories**.
->   \
 >
-> \
 > The result is that you use usability to take away all the things that distracts you from happiness, and you use the elements of user-experience to empower what people can do**... and now you got a great product**.
 
 I really like this approach to user experience. Not specific for web development teams and experts. Very pragmatic and very easy-to-understand.
 
 Finally, revisiting the diagram by Bryce Glass ([soldierant](http://soldierant.net/)) and Frank Spillers.
 
-> [](http://www.flickr.com/photos/bryce/106972762/ "Big picture on Flickr.com")\
+> [](http://www.flickr.com/photos/bryce/106972762/ "Big picture on Flickr.com")
 >
 > [![User experience diagram](http://static.flickr.com/37/106972762_7fbced62e7.jpg)](http://www.flickr.com/photos/bryce/106972762/ "Big picture on Flickr.com")
->
-> 
-
-
 
 > Click image for big version on Flickr. My previous post: "[User Experience Diagram](/2006/03/06/user-experience-diagram/ "Permanent Link: User Experience Diagram")"
-
 
 Your web application should hopefully help users get "a positive experience" as stated on the diagram. Compare this to Baekdal's philosophy, which is much more focused on how to get there:
 

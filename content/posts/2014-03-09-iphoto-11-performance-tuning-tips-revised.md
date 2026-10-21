@@ -16,13 +16,9 @@ Here are the adjusted tip, which works for me.
 
 This [Apple support  thread](https://discussions.apple.com/thread/3012995?start=60&tstart=0) mentioned 3 tips:
 
-1.  \
-2.  Upgrade RAM
-    \
-3.  Turn off visual bling in overview pages
-    \
-4.  Vacuum iPhoto database file 
-    
+1.  Upgrade RAM
+2.  Turn off visual bling in overview pages
+3.  Vacuum iPhoto database file 
 
 Could not do anything with tip 1 today (and I presume I cannot update the RAM on this 2012 macbook air)
 

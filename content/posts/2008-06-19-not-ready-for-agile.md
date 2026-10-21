@@ -19,10 +19,6 @@ Go to Andy's site to read the full 5 point list.
 
 Related articles:
 
-- \
 - /\ndy: [Stage 0: Not Ready For Agile](http://blog.toolshed.com/2008/06/stage-0-not-rea.html)
-  \
 - Justaddwater.dk: [Video: Agile and Scrum Tuning by Jeff Sutherland](/2008/03/06/video-agile-and-scrum-tuning-by-jeff-sutherland/) (March 2008)
-  \
 - Justaddwater.dk: [Great Quotes For The Agile Project Wall](/2008/02/24/great-quotes-for-the-agile-project-wall/) (February 2008)
-  \

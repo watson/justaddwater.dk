@@ -48,7 +48,8 @@ Since we started tracking with Google Analytics we've had about 25,000 visitors,
 
 #### Browser Versions
 
-![Browser Versions, Year 1](/wp-content/uploads/2006/10/jaw-analytics_browsers_year1.png) *Browser Versions, Year 1 - Source: Google Analytics*
+![Browser Versions, Year 1](/wp-content/uploads/2006/10/jaw-analytics_browsers_year1.png)\
+*Browser Versions, Year 1 - Source: Google Analytics*
 
 As the graph clearly shows, over half of our audience is using Mozilla Firefox (56.45%). Next comes Internet Explorer by Microsoft with 29.39%, Safari by Apple with 6.60% and Opera with 4.57%. The long tail includes Camillo, "Mozilla Compatible Agent", Konqueror, Netscape (still alive and kicking), Galeon, gzip, HTC-8100 and WebSpear.
 

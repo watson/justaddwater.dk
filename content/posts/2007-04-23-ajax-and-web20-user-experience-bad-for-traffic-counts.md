@@ -20,11 +20,9 @@ Now, the February numbers are somehow modified to adjust for this new situation,
 
 > The problem, of course, is that MySpace is a pageview factory, while Yahoo is trying to improve the user experience through the use of ajax, which reduces the number of pageviews per user. Stat companies rarely admit their stats are wrong, but ComScore had the guts to change direction: we got a press release to say they’ve created a new “Visits” metric for measuring user engagement.
 >
-> They’re now measuring the “average visits per visitor” and unique visitors. They’ve also been fairly apologetic to Yahoo, emphasizing the effect that ajax had on Yahoo’s rank in particular. And the change in positions is pretty startling for the month of February 2007: Yahoo comes first using both visit-based metrics, while Fox/MySpace drops to 6th place in uniques during February 2007. It comes in 7th for average visits per visitor.\
+> They’re now measuring the “average visits per visitor” and unique visitors. They’ve also been fairly apologetic to Yahoo, emphasizing the effect that ajax had on Yahoo’s rank in particular. And the change in positions is pretty startling for the month of February 2007: Yahoo comes first using both visit-based metrics, while Fox/MySpace drops to 6th place in uniques during February 2007. It comes in 7th for average visits per visitor.
 >
 > ![](http://www.mashable.com/images/comscoreshotnew.PNG)
->
-> 
 
 An interesting lesson here, I think:
 
@@ -32,12 +30,7 @@ User experience is a unique measurement, not related to any traffic measurement.
 
 More info:
 
-- \
 - USA Today: [ComScore: MySpace tops Yahoo in November](http://www.usatoday.com/tech/news/2006-12-13-yahoo-myspace_x.htm)
-  \
 - The Next Net: [Page Inflation at MySpace?](http://blogs.business2.com/business2blog/2006/04/page_inflation_.html)
-  \
 - Mashable: [MySpace vs Yahoo - ComScore Backs down](http://mashable.com/2007/03/14/myspace-yahoo-comscore/)
-  \
 - Justaddwater.dk: [Definition of User Experience Revisited](../2006/06/21/user-experience-revisited/ "Permanent Link: Definition of User Experience Revisited")
-  \

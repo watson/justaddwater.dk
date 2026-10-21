@@ -12,22 +12,11 @@ Webstandards evangelist Molly Holzschlag wrote a brisk [open letter to the Disne
 
 Her points are (in a reduced form):
 
-> \
->
-> - \
-> - Performance will become slower. Due to the overblown markup and inclusion of massive JavaScripts within each individual document, your site will slow down considerably.\
->   I feel really sorry for your potential customers at large, and even more so for those who are on dialup. I really do.
->   \
+> - Performance will become slower. Due to the overblown markup and inclusion of massive JavaScripts within each individual document, your site will slow down considerably. I feel really sorry for your potential customers at large, and even more so for those who are on dialup. I really do.
 > - Your site will become significantly more difficult to manage. Want to change something in the visual presentation of the site? You now have to change it in every single document. So, instead of opening a style sheet, making a change in less than a minute, and having that change automatically distributed to all pages linked to that style sheet, you will have to search and replace. That adds a margin for critical errors, which can in turn make changes even more complicated.
->   \
 > - Your site will become more expensive to maintain. Because of the document management issue, money and time will be spent every time a change is required. Your bandwidth costs are going to skyrocket, particularly now as we approach the holiday season as your traffic is likely to increase…
->   \
 > - The site may experience a drop in search rankings across all engines. Even if that doesn’t happen, apparently, according to Google, you are selling a product called spacer gif…
->   \
 > - The site is unusable for any blind person who might like to visit…
->   \
->
-> 
 
 However, my favorite quote from her rant is:
 

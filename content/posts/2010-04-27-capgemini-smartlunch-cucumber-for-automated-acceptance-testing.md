@@ -12,8 +12,5 @@ Today I did an internal presentation on how we used Cucumber as testing framewor
 
 The presentation was held in our usual Capgemini SmartLunch format: People can eat and learn in their lunchbreak. External visitors are welcome. Duration 30-45 minutes including questions.
 
-- \
 - [pres 2010-04-27-cucumber](/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.pdf) (573KB pdf format)
-  \
 - [pres 2010-04-27-cucumber.key](/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.key_.zip) (782KB keynote format)
-  \

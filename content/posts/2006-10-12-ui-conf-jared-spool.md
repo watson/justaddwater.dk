@@ -79,7 +79,10 @@ Users have no clue to what to answer at the given time. These are the kind of in
 
 ### 3D manipulation in Word
 
-screenshot where Jared opened every toolbar in word possible. "I'm so impressed of how small the paper is" Points out the toolbar for "3D manipulation". [![microsoft word toolbars of Jared spool](/wp-content/uploads/2006/10/spool-word-toolbars.thumbnail.png)](/2006/10/12/ui-conf-jared-spool/microsoft-word-toolbars-of-jared-spool/ "microsoft word toolbars of Jared spool")
+screenshot where Jared opened every toolbar in word possible.\
+"I'm so impressed of how small the paper is"\
+Points out the toolbar for "3D manipulation".\
+[![microsoft word toolbars of Jared spool](/wp-content/uploads/2006/10/spool-word-toolbars.thumbnail.png)](/2006/10/12/ui-conf-jared-spool/microsoft-word-toolbars-of-jared-spool/ "microsoft word toolbars of Jared spool")
 
 Wants help to close all those darn toolbars. Hello Mr. paperclip.\
 It looks like you need help. There is a bullet point called "I need help" :)
@@ -136,6 +139,10 @@ Small additives makes application intuitive. "Exploratory discoverabilities"
 
 ### How to make design intuitive
 
-\* Intuitive is personal to the user \* Based on their current knowledge and the required target knowledge \* Intuitive happens when the gap is minimized \* Just because something seems intuitive to you doesn’t mean it will seem intuitive to your user \* Study your users to discover what is intuitive to them
+\* Intuitive is personal to the user\
+\* Based on their current knowledge and the required target knowledge\
+\* Intuitive happens when the gap is minimized\
+\* Just because something seems intuitive to you doesn’t mean it will seem intuitive to your user\
+\* Study your users to discover what is intuitive to them
 
 *\[My live notes from UI Conf. [All UI Conf notes](/category/eventsseminars/ui11/). Expect updates of thes rough notes, with references, images, etc. within the first few days – this footnote will stay, though. Feel free to add comments, links to similar notes, presentations, correct quotes and add where appropriate. thanks! Also I post my [pictures on Flickr](http://flickr.com/photos/jesper/sets/72157594320346883/) tagged [uiconf](http://flickr.com/photos/tags/uiconf/)\]*

@@ -12,13 +12,9 @@ I had to repair a flawed Subversion repository recently (not all files were comm
 
 Then, I got a zip file from the machine where it was working. Problem: It contained .svn folders from the other developer. So to merge these i did the following workflow:
 
-1.  \
-2.  Delete all .svn folders from other developer's zip
-    \
-3.  Move other developers folder over on top of my local install.
-    \
-4.  Commit all missing files
-    
+1.  Delete all .svn folders from other developer's zip
+2.  Move other developers folder over on top of my local install.
+3.  Commit all missing files
 
 Of course this will only work if there are no .svn folders in other developer's file, because then svn authentication, paths, etc. will be messed up, and commit will fail.
 

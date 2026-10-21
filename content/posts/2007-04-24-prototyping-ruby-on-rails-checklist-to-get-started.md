@@ -18,28 +18,15 @@ Some of the activities below are done only once on the current machine, some of 
 
 This is for my Windows XP laptop:
 
-- \
 - Subversion repository up and running (so you can immediately add the project).
-  \
 - I do this by installing [TortoiseSVN](http://subversion.tigris.org/servlets/ProjectDocumentList?folderID=91 "TortoiseSVN Download Windows Binaries") and following this explanation in "[how to create a temporary local Subversion repository](/2007/04/26/howto-create-a-temporary-local-subversion-repository/ "Permanent Link to Howto Create a Temporary Local Subversion Repository")".
-  \
 - Add subversion users and authorization for the current project
-  \
 - Download latest version of Ruby on Rails (i tend to use latest stable, but latest from trunk would be OK as long as all tests pass). See section on Ruby gems and plugins
-  \
 - Download and prepare editor (currently I use [e-texteditor](http://www.e-texteditor.com/). As a sidenote, [Aptana released a beta version with rails support](http://radrails.org/download_rails_rdt.php) the other day but it didn't work for me out of the box, so I stick to e-texteditor.)
-  \
 - Let E-texteditor do the Cygwin install (this way, rails bundles work without extra effort).
-  \
-- Then run cygwin install manually to add the following packets:\
-  subversion, curl, wget, openssh, and I need some text browsers as well for testing pupose (Links and Lynx).\
-  The cygwin install file is in "C:\Program Files\e\support\bin"
-  \
+- Then run cygwin install manually to add the following packets: subversion, curl, wget, openssh, and I need some text browsers as well for testing pupose (Links and Lynx). The cygwin install file is in "C:\Program Files\e\support\bin"
 - Check that your database drivers work and are running the basic operations. I prefer SQLite as it's faster to run from my laptop computer and tests are running faster.
-  \
 - I prefer a good diff tool like [ExamDiff Pro](http://www.prestosoft.com/ps.asp?page=edp_examdiffpro "Prestosoft ExamDiff Pro") (which tells me the exact parts of lines that are changed), although the built-in diff tool in TortoiseSVN is decent.
-  
-
 
 ### Ruby gems and Rails plugins
 

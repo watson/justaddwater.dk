@@ -36,5 +36,4 @@ Scrum video presentation from Jeff Sutherland (speech from December 2006 but hig
 >
 > But give us the kind structure that Toyota has where people are empowered but there is a structure there that allows scalability."
 
-
 > What we see is that scrum is really infinitely scalable. \[...\] It's actually linearly scalable. IE if you double the number of people you actually double the output of software. It's the only process that has actually documented this with good data.

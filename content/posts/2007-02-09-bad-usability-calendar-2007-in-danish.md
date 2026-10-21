@@ -24,14 +24,7 @@ This year's version contains advice regarding AJAX, overwhelming use of graphics
 
 Related articles:
 
-
-Thomas Baekdal: [Bad Usability Calendar - in Danish](http://www.baekdal.com/notes/work/bad-usability-2007/)
-
-
-Netlife Research: [Bad Usability Calendar 2007 is here!](http://www.iallenkelhet.no/bad-usability-calendar-2007-is-here)
-
-
-Justadddwater.dk: [Bad Usability Calendar 2007 Finally Ready](/2007/01/27/bad-usability-calendar-2007-finally-ready/ "Justaddwater.dk: Bad Usability Calendar 2007 Finally Ready")
-
-
-Justaddwater.dk: [Bad Usability Calendar (2006)](/2006/10/16/bad-usability-calendar/ "Justaddwater.dk: Bad Usability Calendar 2006")
+- Thomas Baekdal: [Bad Usability Calendar - in Danish](http://www.baekdal.com/notes/work/bad-usability-2007/)
+- Netlife Research: [Bad Usability Calendar 2007 is here!](http://www.iallenkelhet.no/bad-usability-calendar-2007-is-here)
+- Justadddwater.dk: [Bad Usability Calendar 2007 Finally Ready](/2007/01/27/bad-usability-calendar-2007-finally-ready/ "Justaddwater.dk: Bad Usability Calendar 2007 Finally Ready")
+- Justaddwater.dk: [Bad Usability Calendar (2006)](/2006/10/16/bad-usability-calendar/ "Justaddwater.dk: Bad Usability Calendar 2006")

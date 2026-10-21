@@ -26,24 +26,16 @@ So, the employee clicks link to edit user \#1, then back and continue to \#2 etc
 
 To edit one object at a time has some advantages:
 
-- \
 - Very low development costs: ASP.NET framework out-of-the-box
-  \
 - Data is saved while editing one user at a time.
-  \
 - Focus on one object at a time: You can only edit one and only continue when that single object is edited and has no errors.
-  
 
 On the same time it is also annoying for users in certain situations if they're not allowed to continue until all errors are solved and all required data is filled in.
 
 I see two big disadvantage in this model:
 
-- \
-- It requires a lot of clicks. Click to edit user \#1, back to link page, click to edit user#2, etc. This is so-called "[pogosticking](/2006/02/05/pogosticking-and-why-it-should-be-avoided/ "Justaddwater.dk:     Pogosticking and why it should be avoided")".\
-  Extra clicks yields extra time and thus ... lower performance (XX todo: usability)
-  \
+- It requires a lot of clicks. Click to edit user \#1, back to link page, click to edit user#2, etc. This is so-called "[pogosticking](/2006/02/05/pogosticking-and-why-it-should-be-avoided/ "Justaddwater.dk:     Pogosticking and why it should be avoided")". Extra clicks yields extra time and thus ... lower performance (XX todo: usability)
 - Only to be able to edit one user at a time could be annoying under some conditions. It's like an Excel spreadsheet where you can only edit one row at a time — It will work, but could be cumbersome when editing in a particular column.
-  
 
 So besides the expected extra time consumption, the real problem here is when data is entered in a non-linear way. To stay in the Excel example, if we decide to organize by rows, then what will happen if the user wants to edit columns: It will be absolutely cumbersome.
 
@@ -56,13 +48,9 @@ In this scenario, we decided to support easier editing of all objects at a time.
 
 Some advantages of this screen layout:
 
-- \
 - Significantly faster task completion (faster to fill out the form)
-  \
 - Less [pogosticking](/2006/02/05/pogosticking-and-why-it-should-be-avoided/ "Justaddwater.dk:     Pogosticking and why it should be avoided") and therefore less back-and-forth navigation
-  \
 - Easier to edit non-linear: In a prefilled form, it will be easy to edit just a few fields.
-  
 
 **All in all: Easier to use, less navigation and faster completion of the form**.\
 In the usability tests I've participated in, users always make errors, typos, misconceptions, etc. The real timesaver in this example are the AJAX field validations.
@@ -75,13 +63,9 @@ For validations on the page, we wanted the application to validate each input fi
 
 This way, we give the user **feedback as soon as possible without interrupting users work**.
 
-- \
 - Unobtrusive error messages (users decide when to correct the error)
-  \
 - Error messages occur where errors occur
-  \
 - Preserves the benefits from multiple edit
-  
 
 Also, in this way, we do all validations server-side. Here, fields appear to be validated client-side, but behind the scenes, field data is sent to the webserver. This means that no JavaScript validations have to be coded (which I usually see as a time-consuming task).
 
@@ -91,12 +75,8 @@ For security reasons, we always have to code server-side validations. In this wa
 
 The reasons we choose AJAX validations for this particular project are:
 
-- \
 - **Lower development costs**: Only server-side validations had to be coded. These validations can then be executed client-side via the AJAX framework. Depending on browser compatibility, we have probably saved 20-40% of the time it took writing the server-side validations.
-  \
 - **Faster user interface**: No unnessecary navigation back-and-forth to fill out data on multiple objects.
-  \
 - **Unobtrusive error handling**: Errors can be corrected immediately and in an un-obtrusive way: The user can continue typing in other fields or correct errors as they happen. Compare this to the old variant, where an alertbox is triggered. Alertboxes say "correct me NOW before you do anything else".
-  
 
 These are the details I can share with you, and it certainly does not fulfill the wishes of Andre Charland, Ebusiness-Apps who's [Looking for More AJAX Case Studies](http://blogs.ebusiness-apps.com/andre/?p=81 "Permanent Link: Looking for More AJAX Case Studies").

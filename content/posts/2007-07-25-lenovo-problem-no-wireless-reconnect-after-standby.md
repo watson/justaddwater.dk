@@ -24,10 +24,6 @@ Guide: [lenovo-wireless-problems-after-standby.pdf](/wp-content/uploads/2007/07/
 
 More info:
 
-- \
 - Justaddwater: [New Laptop With Better Defaults](/2007/05/17/new-laptop-with-better-defaults/ "Permanent Link to New Laptop With Better Defaults") (May 17 2007)
-  \
 - Mr. Hyams: [ThinkPadT60wifi.pdf](http://blog.st-agnes.org/cs/blogs/the_cave/attachment/34.ashx) (815Kb PDF)
-  \
 - Notebook Review Forum: [T60 wireless problems](http://forum.notebookreview.com/showthread.php?t=78005)
-  \

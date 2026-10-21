@@ -25,7 +25,11 @@ Wall-Mart went head to head with Netflix and lost. They are now linking to Netfl
 
 ### Collaborative filtering
 
-Example with 5 users 1. Look for people with similar habits 2. Choose the best fiter. In this case, user 3 3. Find differences in best filter 4. Those difference become best filter
+Example with 5 users\
+1\. Look for people with similar habits\
+2\. Choose the best fiter. In this case, user 3\
+3\. Find differences in best filter\
+4\. Those difference become best filter
 
 Netflix recommendation engine contest\
 \* Giving a huuuge user database\
@@ -34,7 +38,8 @@ Netflix recommendation engine contest\
 
 ### Implicit or Explicit behavior
 
-Implicit data: Not a rating. Example: LastFM where user don't rate, but just watching what what music you play.
+Implicit data: Not a rating.\
+Example: LastFM where user don't rate, but just watching what what music you play.
 
 Implicit is everything behavioral data.
 

@@ -15,10 +15,7 @@ After [a tip from Ars Technica](http://arstechnica.com/news.ars/post/20060326-64
 
 As far as I can see the only difference is that they now display their categories (Images, Groups, News etc.) vertically to the left of the search results instead of horizontally above the search field. According to Ars Technica this gives two usability enhancements:
 
-1.  \
-2.  More search results will be displayed above the fold because their categories now don't take up the space.
-    \
-3.  The user can see a graph next to each category giving a visual representation of how successful the search query was under the given category.
-    
+1.  More search results will be displayed above the fold because their categories now don't take up the space.
+2.  The user can see a graph next to each category giving a visual representation of how successful the search query was under the given category.
 
 Is this a good improvement? I'll have to play around with it for a while... but feel free to express your view in a comment :)

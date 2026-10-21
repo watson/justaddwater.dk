@@ -16,15 +16,10 @@ I plan to post my notes here on the blog, but don't expect them to be as extensi
 
 It was a tough dilemma to choose between the various tracks on the conference. Here is my selections:
 
-- \
 - Monday: Bill Scott & David Malouf: [Designing Powerful Web Applications using AJAX and RIAs](http://www.uie.com/events/uiconf/2006/sessions/malouf/)
-  \
 - Tuesday: [Featured Talks Day](http://www.uie.com/events/uiconf/2006/tuesday/)
-  \
 - Wednesday: Luke Wroblewski: Site Seeing: [Communicating Successfully with Visual Design](http://www.uie.com/events/uiconf/2006/sessions/wroblewski/)
-  \
 - Thursday: Jared Spool & Josh Porter: [New Perspectives in User Experience Design](http://www.uie.com/events/uiconf/2006/sessions/spool_porter/)
-  
 
 It's a hard dilemma to choose between tracks, especially at this conference. For example, I chose Luke Wroblewski over Jeff Patton's "[Bringing User-Centered Design Practices into Agile Development Projects](http://www.uie.com/events/uiconf/2006/sessions/patton/)" . Also, Rolf Molich's sessions were already filled up, so my options were narrowed down. I saw Rolf last year at "Usability Dagene" ([my notes](/2005/11/24/usabilitydagene-tuesday2/)), and he is always interesting and insightful.
 

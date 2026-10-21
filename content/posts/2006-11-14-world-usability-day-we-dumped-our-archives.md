@@ -31,13 +31,9 @@ Then ask you self this: **When does a post expire and move into the archive?**
 
 The list of reasons for not creating archives is long. But since we have previously touched upon this subject, I will just give you a couple of links on the subject:
 
-- \
 - [Mullet-style blog layout and complete archive page](/2006/01/09/mullet-style-blog-layout-and-complete-archive-page/)
-  \
 - [Pogosticking and why it should be avoided](/2006/02/05/pogosticking-and-why-it-should-be-avoided/)
-  \
 - [Blog usability: Pogosticking revisited](/2006/06/12/pogosticking-revisited/)
-  
 
 ### Can it be even more user friendly?
 

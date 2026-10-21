@@ -10,21 +10,18 @@ tags: []
 
 Asa Raskin has made a really useful example of how to implement undo easily in user interfaces. Here's the example file (linked directly to a page at his company Humanized). Try deleting some items and then press undo.
 
+[Embedded content: http://humanized.com/weblog/images/resources/undo/todo.html](http://humanized.com/weblog/images/resources/undo/todo.html)
+
 Note how there is no confirmation when you delete and the items can come back pressing undo.
 
 I really like this approach, and have long been pushing for a similar approach in projects I have worked with recently.
 
 Now, there is a constant resistance (usually from a technical perspective), when discussing undo. And in the project I have worked in, none of them eventually decided to have undo. Here are the reasons I have heard from customers deciding not to implement undo:
 
-1.  \
-2.  Afraid of high technical costs
-    \
-3.  Prioritized new functionality higher than undo
-    \
-4.  Did not acknowledge the importance of undo from a user perspective
-    \
-5.  Did not acknowledge the annoyance of having to confirm the action over and over
-    
+1.  Afraid of high technical costs
+2.  Prioritized new functionality higher than undo
+3.  Did not acknowledge the importance of undo from a user perspective
+4.  Did not acknowledge the annoyance of having to confirm the action over and over
 
 In case you missed the A List Apart article by Asa, go read his brilliant "Never use a warning when you mean undo". I could not agree more.
 

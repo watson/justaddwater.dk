@@ -12,26 +12,14 @@ Michael Heilemann wrote a rant on Billetlugen, a Danish company that sells ticke
 
 We were on holiday in Italy but as my wife is a big Madonna fan, I called in vain to buy tickets. Here's my experience:
 
-1.  \
-2.  Called the number, from my cell phone, phone responded "network busy" (the busy network must have been at Billetlugen).
-    \
-3.  Tried again as soon as possible (usually every 10 seconds for the next 3 hours).
-    \
-4.  Eventually I got through and was presented with this menu:\
-    - \
+1.  Called the number, from my cell phone, phone responded "network busy" (the busy network must have been at Billetlugen).
+2.  Tried again as soon as possible (usually every 10 seconds for the next 3 hours).
+3.  Eventually I got through and was presented with this menu:
     - Press 1 for purchase of Madonna tickets
-      \
     - Press 2 for purchase of other tickets
-      \
     - Press 3 for other
-      
-
-    \
-    \
-5.  I pressed 1 and got the message **"there are currently no available salespersons. Try again later". Then, the line was disconnected!** DISCONNECTED????
-    \
-6.  I simply couldn't believe that this was intentionally implemented in their system, so I stubbornly called up again until I got through. It happened all three times I got through to Billetlugen.
-    
+4.  I pressed 1 and got the message **"there are currently no available salespersons. Try again later". Then, the line was disconnected!** DISCONNECTED????
+5.  I simply couldn't believe that this was intentionally implemented in their system, so I stubbornly called up again until I got through. It happened all three times I got through to Billetlugen.
 
 I have never heard of broken queue system this way. It's the worst user experience I ever had. They bloody disconected just when I thought i got through the bottleneck.
 

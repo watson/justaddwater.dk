@@ -2,7 +2,7 @@
  {
   "id": 389590,
   "parent": 0,
-  "author": "WebWord &raquo; Blog Archive &raquo; Usability of Pagination Links",
+  "author": "WebWord » Blog Archive » Usability of Pagination Links",
   "url": "http://www.webword.com/wp/2008/01/14/usability-of-pagination-links/",
   "date": "2008-01-14 14:48:23",
   "type": "pingback",
@@ -15,7 +15,7 @@
   "url": "http://justaddwater.dk/",
   "date": "2008-01-07 11:26:57",
   "type": "",
-  "html": "@Joe\n\nI understand why you frown at that guideline. I think it's important that pagination is always **secondary functionality** compared to the actual content.\n\nYes, normally underlines indicate that there is content or functionality behind a given text and it's convenient that you don't have to discover by moving your mouse around on the screen.\n\nBut I would argue -- the same way with menus -- that this is secondary functionality. If you don't instantly discover the pagination, **so what**! The default sorting of the paginated list should be good enough for most people.\n\nI would personally prefer that the actual content steal attention -- not subsidiary links etc. Of course, it's a tradeoff, and it depends on your actual data. But in general I think you sould\n\n1.  \\\n2.  Start with no pagination (nothing to steal attention from the content)\n    \\\n3.  If in some cases people need pagination to navigate the results, provide the pagination as visually subtle as possible\n    \n\nTurn this around: You would never start with pagination links that are visual dominant for the content on the page. That would signal that you are on the wrong page."
+  "html": "@Joe\n\nI understand why you frown at that guideline. I think it's important that pagination is always **secondary functionality** compared to the actual content.\n\nYes, normally underlines indicate that there is content or functionality behind a given text and it's convenient that you don't have to discover by moving your mouse around on the screen.\n\nBut I would argue -- the same way with menus -- that this is secondary functionality. If you don't instantly discover the pagination, **so what**! The default sorting of the paginated list should be good enough for most people.\n\nI would personally prefer that the actual content steal attention -- not subsidiary links etc. Of course, it's a tradeoff, and it depends on your actual data. But in general I think you sould\n\n1.  Start with no pagination (nothing to steal attention from the content)\n2.  If in some cases people need pagination to navigate the results, provide the pagination as visually subtle as possible\n\nTurn this around: You would never start with pagination links that are visual dominant for the content on the page. That would signal that you are on the wrong page."
  },
  {
   "id": 388249,
@@ -51,7 +51,7 @@
   "url": "http://justaddwater.dk/",
   "date": "2008-01-04 09:42:50",
   "type": "",
-  "html": "@Tobias and @Geoff: I agree with you that the ability to reverse sort can be important. But my point is, that you really shouldn't consider adding a \"Last\" link unless you are in that situation.\n\nBut note that \"reverse order\" will suddenly add even more controls to the pagination. The flaw about that is that more controls will grab attention away from the stuff that acts value on the page. (this is a classical issue that I regularly encounter in advanced searches... for instance Danish book stores and libraries).\n\nMy advice here is that you have to be careful with how many controls you add. Because controls to less important features are irrelevant. The primary focus is on the data. Maybe you forget (as the designer of the page) to focus on the most important job:\n\nPrioritize content. Ask for instance:\n\n- \\\n- What will be the default search order?\n  \\\n- How often is the backwards search used?\n  \\\n- How many people will never use the last page?\n  \\\n- How many people will need to reverse search results to work effectively?\n\nAnd as Geoff mentions, this does not go for generic search results that are sorted by relevance.\n\nTo be a little controversial: If you have to sort by relevancy, ask yourself which other controls you can remove? The pagination, perhaps?"
+  "html": "@Tobias and @Geoff: I agree with you that the ability to reverse sort can be important. But my point is, that you really shouldn't consider adding a \"Last\" link unless you are in that situation.\n\nBut note that \"reverse order\" will suddenly add even more controls to the pagination. The flaw about that is that more controls will grab attention away from the stuff that acts value on the page. (this is a classical issue that I regularly encounter in advanced searches... for instance Danish book stores and libraries).\n\nMy advice here is that you have to be careful with how many controls you add. Because controls to less important features are irrelevant. The primary focus is on the data. Maybe you forget (as the designer of the page) to focus on the most important job:\n\nPrioritize content. Ask for instance:\n\n- What will be the default search order?\n- How often is the backwards search used?\n- How many people will never use the last page?\n- How many people will need to reverse search results to work effectively?\n\nAnd as Geoff mentions, this does not go for generic search results that are sorted by relevance.\n\nTo be a little controversial: If you have to sort by relevancy, ask yourself which other controls you can remove? The pagination, perhaps?"
  },
  {
   "id": 387549,
@@ -110,7 +110,7 @@
  {
   "id": 399264,
   "parent": 0,
-  "author": "Mind Gravy &raquo; Blog Archive &raquo; links for 2008-02-29",
+  "author": "Mind Gravy » Blog Archive » links for 2008-02-29",
   "url": "http://www.mindgravy.net/index.php/2008/02/29/links-for-2008-02-29/",
   "date": "2008-02-29 13:35:08",
   "type": "pingback",
@@ -245,7 +245,7 @@
  {
   "id": 512859,
   "parent": 0,
-  "author": "Frank-ly &raquo; Gevonden: veel resultaten",
+  "author": "Frank-ly » Gevonden: veel resultaten",
   "url": "http://www.frank-ly.nl/gevonden-veel-resultaten",
   "date": "2011-03-04 17:06:49",
   "type": "pingback",

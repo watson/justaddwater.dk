@@ -14,15 +14,10 @@ UX Magazine reports that MTV drops their Flash based website in favor of a commo
 
 Some of the reasons for the change are listed in the MTV blog post describing the changes. Just to list some of them:
 
-- \
 - It's faster
-  \
 - Simplified navigation
-  \
 - Better search
-  \
 - No autoplaying video
-  
 
 Besides from that, there are 463 comments on the post at the moment, which shows that there still is a strong and opinionated discussion about Webstandards vs Flash.\
 From a usability point of view, this really is an interesting discussion. In my opinion, it's very interesting to see that **MTV actually bypasses the frontal no-brain discussion of webstandards vs. Flash. Instead, they address the rationale behind the decision: Make website faster, make content easier to find, search engine friendly, unobtrusive content.**
@@ -33,14 +28,8 @@ It's encouraging to see that MTV is interested in taking this dialog with the us
 
 More info:
 
-- \
 - UX Magazine: [MTV drops Flash in a flash!](http://www.uxmag.com/short-news/254/mtv-drops-flash-in-a-flash)
-  \
 - MTV Blog: [The New HTML MTV](http://www.mtvlabs.tv/2007/04/new-html-mtvcom.html)
-  \
 - [justaddwater.dk \| Microsoft’s Commitment to Web Standards](/2007/01/19/microsofts-commitment-to-web-standards/)[](/2006/06/29/webstandards-case-study/)
-  \
 - [justaddwater.dk \| Why Web Standards Matter (Case Study)](/2006/06/29/webstandards-case-study/)[](/2005/11/28/disney-moved-away-from-webstandards/)
-  \
 - [justaddwater.dk \| Disney Store moved away from webstandards](/2005/11/28/disney-moved-away-from-webstandards/)
-  \

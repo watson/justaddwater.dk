@@ -34,7 +34,8 @@ So, visual design draws your eye to what's important and tells a little story ab
 
 #### how we use the web
 
-What we design for: read read read read read ... pause for reflection
+What we design for:\
+read read read read read ... pause for reflection
 
 What people do:\
 scan for something vaguely relevant... click! and then back if not relevant.
@@ -107,7 +108,8 @@ Recently i had to design for an organization with only 256 colors. "IT will not 
 
 ### Exercise
 
-\[following here was an excercise redesigning an interface\] [![Our exercise team](http://static.flickr.com/104/267100630_8f8db50d4d_m.jpg)](http://www.flickr.com/photos/jesper/267100630/ "Photo Sharing")
+\[following here was an excercise redesigning an interface\]\
+[![Our exercise team](http://static.flickr.com/104/267100630_8f8db50d4d_m.jpg)](http://www.flickr.com/photos/jesper/267100630/ "Photo Sharing")
 
 Verizon example:
 
@@ -162,7 +164,9 @@ After lunch: Other exercise to evaluate either two email applications or two cur
 
 ### Visual personality
 
-Diamonds shopping. De Beers diamond shopping \* oversized images \* lots of whitespace
+Diamonds shopping. De Beers diamond shopping\
+\* oversized images\
+\* lots of whitespace
 
 Then over to "[buyarock.com](http://buyarock.com/)"\
 \* retro\
@@ -220,7 +224,15 @@ A example: sending your dog to camp\
 
 ### Final exercise: cut from magazines
 
-\[Jesper's note: in fact this could be a very good team building exercise for your project team\] Cut/rip out of magazines. Look for \* images \* fonts \* colors \* words \* textures \* symbols \* etc...
+\[Jesper's note: in fact this could be a very good team building exercise for your project team\]\
+Cut/rip out of magazines. Look for\
+\* images\
+\* fonts\
+\* colors\
+\* words\
+\* textures\
+\* symbols\
+\* etc...
 
 Four groups of teams either describing\
 \* rugby website\
@@ -234,7 +246,8 @@ Four groups of teams either describing\
 
 ### Final Q&A
 
-Q techniques for more effective web design A articles of using small multiples, and the table design
+Q techniques for more effective web design\
+A articles of using small multiples, and the table design
 
 Q Craigslist, myspace\
 A not a desussion about what is good looking, but what is working. Get job done in an effective manner.\

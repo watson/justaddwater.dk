@@ -19,11 +19,7 @@ Unfortunately this did not work. Still an OutOfMemoryError on the Hudson slave. 
 So appending memory params to the `hudson-slave.xml`. Locate the xml section `service=>arguments`. Add the following code.\
 From:
 
-> \
->
 > \<executable\>C:\Program Files\Java\jre6\bin\java.exe\</executable\>
->
-> \
 >
 > \<arguments\>\
 > -Xrs -jar "%BASE%\slave.jar"\
@@ -32,11 +28,7 @@ From:
 
 To:
 
-> \
->
 > \<executable\>C:\Program Files\Java\jre6\bin\java.exe\</executable\>
->
-> \
 >
 > \<arguments\>\
 > **-Xmx512m -XX:MaxPermSize=256m**\

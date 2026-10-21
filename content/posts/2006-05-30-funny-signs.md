@@ -14,13 +14,9 @@ Sometimes I run into a sign that I just don't understand or sometimes they are j
 
 It all starts out very informative:
 
-1.  \
-2.  In case of fire
-    \
-3.  Do not use elevator
-    \
-4.  Use the stairs
-    
+1.  In case of fire
+2.  Do not use elevator
+3.  Use the stairs
 
 But if we look at the stairs-graphics in the bottom-right corner we see two men running very confused in opposite directions - one running up and another running down the stairs ;)
 

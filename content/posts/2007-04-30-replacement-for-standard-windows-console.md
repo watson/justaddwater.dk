@@ -10,11 +10,8 @@ tags: []
 
 The standard windows command window (console) sucks for several usability reasons:
 
-- \
 - Standard windows keyboard shortcuts don't work. It's not possible to copy/paste without using a special menu.
-  \
 - This special menu is best accessible with the mouse (or a long range of shortcuts)
-  
 
 Compare how it should be
 
@@ -46,11 +43,6 @@ I'm sure that these features will help me speed up development further (if imple
 
 More info:
 
-- \
-- [PowerCmd homepage\
-  ](http://www.powercmd.com/)
-  \
+- [PowerCmd homepage](http://www.powercmd.com/)
 - [Console 2](http://sourceforge.net/projects/console/) on SourceForge
-  \
 - [Microsoft Powershell](http://www.microsoft.com/windowsserver2003/technologies/management/powershell/default.mspx) (and [team blog](http://blogs.msdn.com/powershell/ "Microsoft blog: Powershell"), found via [John Ericsson](http://john.se/blog/2006/07/01/searching-for-a-good-replacement-for-the-old-console-in-windows/ "John's Blog: Searching for a good replacement for the old console in Windows"))
-  \

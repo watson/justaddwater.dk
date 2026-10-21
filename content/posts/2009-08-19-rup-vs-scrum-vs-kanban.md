@@ -14,15 +14,11 @@ For a presentation tomorrow, [my colleague Mads](http://www.upperbound.net/ "Mad
 
 RUP is pretty prescriptive – it has over 30 roles, over 20 activities, and over 70 artifacts. You aren’t supposed to use all of that though, you are supposed to select a suitable subset for your project. This seems to be hard in practice.
 
-
 “Hmmmm... will we need Configuration audit findings artifacts? Will we need a Change control manager role? Not sure, so better keep these in just for in case.” This may be one of the reasons why RUP implementations typically end up quite heavy-weight compared to Agile methods such as Scrum and XP.
-
 
 XP (eXtreme programming) is pretty prescriptive compared to Scrum. It includes most of Scrum + a bunch of fairly specific engineering practices such as test-driven development and pair programming.
 
-
 Scrum is less prescriptive than XP, since it doesn’t prescribe any specific engineering practices. Scrum is more prescriptive than Kanban though, since it prescribes things such as iterations and cross- functional teams.
-
 
 The main difference between Scrum and RUP is that in RUP you get too much, and you are supposed to remove the stuff you don’t need. In Scrum you get too little, and you are supposed to add the stuff that is missing.
 

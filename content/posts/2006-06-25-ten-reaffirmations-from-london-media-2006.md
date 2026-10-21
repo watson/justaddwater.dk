@@ -23,7 +23,6 @@ The web was born to help the community, and was evolved by the work and generous
 > I have learnt so much from the web design community so surely I have an obligation to give back to it.\
 > -- [Eric Meyer](http://www.meyerweb.com)
 
-
 ### The web is about people and passion
 
 Listening to all the speakers, the web is about people and passion. Passion and emotion were some of the most repeated words in all sessions.
@@ -38,7 +37,6 @@ And as Andy Clarke points out [in his blog](http://www.stuffandnonsense.co.uk/ar
 > On a more personal note I was left humbled by the passion of almost everybody I spoke with. While conferences like @media provide a focus for ideas, it's in the day-to-day life of a designer or developer where the real hard work takes place. There seemed to be no lack of passion or excitement about design, standards or accessibility and still a great deal to talk about.\
 > -- Andy Clarke
 
-
 ### The community is your best teacher. Play, learn and share
 
 "Do we need a formal structure, such as qualifications or a professional body, to identify the understanding of abilities of web designers?". The panelists agreed on having a formal qualification could be, even, a drawback.
@@ -49,7 +47,6 @@ Courses and certifications do not guarantee quality on web design because most o
 
 > "Most of the training materials on web design I see on Universities and Companies are from the last century"\
 > -- Eric Meyer
-
 
 ### Usability is getting more diluted on the design process
 
@@ -95,20 +92,12 @@ Keep on evolving and growing the web takes so much effort. This could not be pos
 
 While all official materials -presentations, podcasts and all that stuff- are being processed by the Vivabit team, these are links to materials taken from the sessions and speakers:
 
-- \
 - [Good Design vs. Great Design](http://www.hicksdesign.co.uk/file_download/22) (4.1 MB zipped PDF) by [Jon Hicks](http://www.hicksdesign.co.uk), [Veerle Peters](http://veerle.duoh.com/) and [Cameron Moll](http://www.cameronmoll.com)
-  \
 - [Bulletproof web design](http://simplebits.com/publications/speak/atmedia/bpwd-atmedia2006.pdf) (20 MB PDF) by [Dan Cederholm](http://www.simplebits.com)
-  \
 - Yahoo! vs. Yahoo! by [Nate Koechley](http://nate.koechley.com/blog)
-  \
 - [Designing for the Next Generation of Web Applications](http://www.veen.com/nextgen.pdf) (18 MB PDF) by [Jeff Veen](http://www.veen.com/jeff)
-  \
 - [Microformats. Evolving the Web](http://tantek.com/presentations/2006/06/microformats-evolution/) (HTML format) by [Tantek Çelik](http://www.tantek.com/)
-  \
 - [Transcending CSS: The Fine Art Of Web Design](http://www.stuffandnonsense.co.uk/downloads/transcendingcss.pdf) (50 MB PDF) by [Andy Clarke](http://www.stuffandnonsense.co.uk/)
-  \
 - [Fine Typography on the Web](http://www.mezzoblue.com/presentations/2005/wdw/type/) (HTML format) by [Dave Shea](http://www.mezzoblue.com/)
-  
 
 Luis Villa works in Spain at [The Cocktail](http://www.the-cocktail.com/), User Experience Consulting Company, owner of [La Coctelera](http://www.lacoctelera.com), biggest blogging platform in spanish language and fully developed on [Ruby On Rails](http://www.rubyonrails.org/). He's one of the founders of [alzado.org](http://www.alzado.org/), and he'll speak at [Fundamentos Web 2006](http://www.fundamentosweb.org/2006/index.html.en) International Conference. You can learn more about him in his personal blog [grancomo.com](/http:www.grancomo.com/) (Spanish).

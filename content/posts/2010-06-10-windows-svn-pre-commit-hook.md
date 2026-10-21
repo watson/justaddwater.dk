@@ -15,3 +15,5 @@ I wanted to set up the pre-commit hook so that commits with empty comment are au
 All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal).
 
 Here is a the pre-commit hook rewritten as a windows .bat file.
+
+[View gist 432704 on GitHub](https://gist.github.com/432704)

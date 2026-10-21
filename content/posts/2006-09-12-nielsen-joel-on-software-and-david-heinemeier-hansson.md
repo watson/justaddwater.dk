@@ -42,7 +42,8 @@ Jakob Nielsen puts the discussion above in perspective. I really enjoy David's r
 
 ### Ruby on Rails for enterprise use
 
-The point David touches here is whether you could consider an "Immature" technology in the enterprise. Joel and David seem to disagree on this point. And Joel seems to disagree with himself. For the case of Ruby on Rails considered immature for the enterprise, i strongly disagree. As I wrote [previously](/2006/04/12/rails-prototyping/ "Permanent Link: Ruby on Rails as rapid prototyping tool"), Ruby on Rails has proven to deliver:
+The point David touches here is whether you could consider an "Immature" technology in the enterprise. Joel and David seem to disagree on this point. And Joel seems to disagree with himself. For the case of Ruby on Rails considered immature for the enterprise, i strongly disagree.\
+As I wrote [previously](/2006/04/12/rails-prototyping/ "Permanent Link: Ruby on Rails as rapid prototyping tool"), Ruby on Rails has proven to deliver:
 
 - Very high fidelity prototypes that can use real data. The high fidelity give much better findings in usability testing.
 - Consistent productivity gains compared to any other prototyping tool.
@@ -53,12 +54,7 @@ This is not only about prototypes: Massive productivity gains between 2 and 20 t
 
 Further reading:
 
-- \
 - DHH: [Fear, Uncertain, and Doubt by Joel Spolsky](http://www.loudthinking.com/arc/000596.html "Permanent link")
-  \
 - Joel Spolsky: [Language Wars](http://www.joelonsoftware.com/items/2006/09/01.html "Joel on Software: Language Wars")
-  \
 - Justaddwater: [Ruby on Rails for the enterprise: Business perspective](/2006/05/16/rails-enterprise-business-perspective/ "Permanent Link to Ruby on Rails for the enterprise: Business perspective")
-  \
 - Justaddwater: [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link to Ruby on Rails as rapid prototyping tool")
-  \

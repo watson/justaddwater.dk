@@ -80,12 +80,8 @@ Mads and I decided to add a few quotes of our own on the list -- basically to pr
 
 More info:
 
-- \
 - Justaddwater: [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link: Ruby on Rails as rapid prototyping tool") (April 2006)
-  \
 - Justaddwater: [Selling Ruby, Rails, and Agile Project Management](/2008/02/02/selling-ruby-rails-and-agile-project-management/ "Permanent Link: Selling Ruby, Rails, and Agile Project Management") (February 3rd)
-  \
 - Justaddwater: [Danish Newspaper Interview: Capgemini on Rails](/2007/02/13/danish-newspaper-interview-capgemini-on-rails/ "Permanent Link: Danish Newspaper Interview: Capgemini on Rails") (February 2007)
-  
 
 Feel free to add any quote you think should be added to this list.

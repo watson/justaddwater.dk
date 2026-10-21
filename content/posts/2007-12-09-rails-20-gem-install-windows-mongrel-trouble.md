@@ -32,12 +32,9 @@ gave me rubygems 0.9.5 but caused mongrel to stop working. I described the detai
 
 [Luis Lavena](http://www.workingwithrails.com/person/4626-luis-lavena) was great help to me explaining what was going on and how to get pass the problems. Here is what i had to do:
 
-1.  
+1.  No rubygems 0.9.5 install. Wait for the sequel. If you already did install it, follow Luis' advice in the forum thread.
 
-2.  No rubygems 0.9.5 install. Wait for the sequel. If you already did install it, follow Luis' advice in the forum thread.
-    
-
-3.  Check your current rubygems version:
+2.  Check your current rubygems version:
 
     ``` ruby
     C:\> gem environment
@@ -50,18 +47,18 @@ gave me rubygems 0.9.5 but caused mongrel to stop working. I described the detai
     - http://gems.rubyforge.org
     ```
 
-4.  Get ready for Rails 2.0 but start with rubygems 0.9.4. Now, here `gem update --system` gets you 0.9.5, so in stead do as Luis Lavena suggested (steps 4-5)
+3.  Get ready for Rails 2.0 but start with rubygems 0.9.4. Now, here `gem update --system` gets you 0.9.5, so in stead do as Luis Lavena suggested (steps 4-5)
 
-5.  Download the zip file with [rubygems 0.9.4 from rubyforge](http://rubyforge.org/frs/?group_id=126&release_id=11889) ([direct link](http://rubyforge.org/frs/download.php/20990/rubygems-0.9.4.zip))
+4.  Download the zip file with [rubygems 0.9.4 from rubyforge](http://rubyforge.org/frs/?group_id=126&release_id=11889) ([direct link](http://rubyforge.org/frs/download.php/20990/rubygems-0.9.4.zip))
 
-6. ``` ruby
-   C:\> unzip -q rubygems-0.9.4.zip
+5. ``` ruby
+   C:\&gt; unzip -q rubygems-0.9.4.zip
    C:\> cd rubygems-0.9.4
    C:\> ruby setup.rb config
    C:\> ruby setup.rb install
    ```
 
-7. ``` ruby
+6. ``` ruby
    C:\> gem environment
    RubyGems Environment:
    - VERSION: 0.9.4 (0.9.4)
@@ -72,7 +69,7 @@ gave me rubygems 0.9.5 but caused mongrel to stop working. I described the detai
    - http://gems.rubyforge.org
    ```
 
-8. ``` ruby
+7. ``` ruby
    gem update rails -y
    ```
 
@@ -80,12 +77,7 @@ Now everything works as expected. I will eagerly wait for the sequel to rubygems
 
 Related info:
 
-- \
 - Rails weblog: [Rails 2.0: It's done!](http://weblog.rubyonrails.com/2007/12/7/rails-2-0-it-s-done) (comments 48, 51, 62, 70, 86, 87, 106, 128)
-  \
 - Ruby Mongrel forum: "[Mongrel crash on win32](http://www.ruby-forum.com/topic/133033)"
-  \
 - Riding Rails: [Trouble installing new gems?](http://weblog.rubyonrails.org/2007/12/19/trouble-installing-new-gems) (December 19)
-  \
 - [Latest RubyGems and Rails is a deadly combo](http://blog.mmediasys.com/2007/12/19/latest-rubygems-and-rails-is-a-deadly-combo/ "Enlace Permanente a Latest RubyGems and Rails is a deadly combo") (December 19)
-  \

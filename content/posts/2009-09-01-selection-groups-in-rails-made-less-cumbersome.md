@@ -13,3 +13,5 @@ I made this addition today after (once again) struggling with option groups for 
 My solution: create a new tag for FormOptionsHelper: grouped_select
 
 <http://gist.github.com/179075>
+
+[View gist 179083 on GitHub](https://gist.github.com/179083)

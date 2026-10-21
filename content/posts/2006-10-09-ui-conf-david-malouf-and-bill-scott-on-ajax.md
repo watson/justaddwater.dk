@@ -334,7 +334,8 @@ Pain.
 
 ### The shift \[from PIA to RIA\]
 
-PIA = Page-based Internet Application (or Poor Internet Application) RIA = Rich Internet Application
+PIA = Page-based Internet Application (or Poor Internet Application)\
+RIA = Rich Internet Application
 
 Assumption\
 \* All interaction is course-grained at page level\
@@ -481,7 +482,8 @@ So this is our problem: We have got all these risks that may affect return of th
 
 ### Let's look at the opportunity
 
-\* all released features is \$300 K \* 25% features might earn us \$120K
+\* all released features is \$300 K\
+\* 25% features might earn us \$120K
 
 Business cases go from annual release go semi-annual to quarterly\
 Even with the added cost of 100 K per release, were earning more money and have an annual busines casse.\
@@ -510,7 +512,9 @@ Agile
 
 ### Common things that go wrong with agile projects
 
-1\. planning and releasing smaller releases often results in unusable releases 2. no one really understood where the value came from in the first place 3. keeping design simple now and worrying about usability later
+1\. planning and releasing smaller releases often results in unusable releases\
+2\. no one really understood where the value came from in the first place\
+3\. keeping design simple now and worrying about usability later
 
 Why prioritization go wrong is when noone really understands the value of the customers
 
@@ -531,7 +535,11 @@ Conversation with stakeholder:\
 
 ### Adding User Experience people
 
-At least They don't use UML, so that's a big advantage. Top mistakes: 1. "reasonable" research period usually too long =\> Truth is: Often a small amount of research yields preliminary designs. Also known as assumptions =\> Engaged in research often means disconnected with rest of team
+At least They don't use UML, so that's a big advantage.\
+Top mistakes:\
+1\. "reasonable" research period usually too long\
+=\> Truth is: Often a small amount of research yields preliminary designs. Also known as assumptions\
+=\> Engaged in research often means disconnected with rest of team
 
 2\. Desing solution is too large\
 =\> the "ideal" solution is often so big that it has to be broken down to match releases\
@@ -553,7 +561,10 @@ UXP people might translate to\
 
 ### User story
 
-User story \* able to write on a 3x5 card \* reminder for a conversation \* wikipedia is dead wrong
+User story\
+\* able to write on a 3x5 card\
+\* reminder for a conversation\
+\* wikipedia is dead wrong
 
 write user stories using this simple template (credited to Rachel Davies in Cohn’s [User Stories Applied](http://www.amazon.com/User-Stories-Applied-Development-Addison-Wesley/dp/0321205685/sr=8-1/qid=1160507778/ref=pd_bbs_1/104-1764610-2554333?ie=UTF8))
 
@@ -567,7 +578,9 @@ so that I can \[purchase it quickly, leave, and continue with my day.
 
 ### The car metaphor
 
-Agile question: Which feature do you want us to build first: The tires or the breaks? All features are equally important =\> adjust scale: Kia, Toyota, Mercedes-Benz
+Agile question: Which feature do you want us to build first: The tires or the breaks?\
+All features are equally important\
+=\> adjust scale: Kia, Toyota, Mercedes-Benz
 
 "The simplest thing that could possibly work"
 

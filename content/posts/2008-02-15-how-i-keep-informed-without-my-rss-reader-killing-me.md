@@ -36,8 +36,5 @@ The tip works like this for me: I spend less time navigating in my reader, and t
 
 More info:
 
-- \
 - Peter Krantz: [Self imposed RSS reading ban](http://www.peterkrantz.com/2007/rss-reading-ban/)
-  \
 - Lars Pind: [coaching](http://pinds.com/coaching)
-  \

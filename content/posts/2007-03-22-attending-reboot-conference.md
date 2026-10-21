@@ -24,10 +24,6 @@ See you soon!
 
 More info
 
-- \
 - [Reboot website](http://reboot.dk/)
-  \
 -  Jakob Skjerning: "[reboot 9.0 is coming](http://mentalized.net/journal/2007/03/16/reboot_90_is_coming/)"
-  \
 - Justaddwater.dk: "[reboot8 roundup](/2006/06/06/reboot8-roundup/ "Permanent Link to reboot8 roundup")"
-  \

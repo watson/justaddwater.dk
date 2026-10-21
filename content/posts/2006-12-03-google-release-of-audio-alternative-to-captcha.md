@@ -20,10 +20,7 @@ Original Google CAPTCHA as described in [Captcha usability revisited: Google ina
 
 **More info:**
 
-Google blog: [Audio captchas when visual images are unusable](http://googleblog.blogspot.com/2006/11/audio-captchas-when-visual-images-are.html)
-
-Justaddwater.dk: [Captcha usability revisited: Google inaccessible to blind people](/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-people/ "Justaddwater.dk: Captcha usability revisited: Google inaccessible to blind people")
-
-Justaddwater.dk: [CAPTCHA usability: Humane alternative to CAPTCHA](/2006/10/23/captcha-usability-humane-alternative-to-captcha/ "justaddwater: CAPTCHA usability: Humane alternative to CAPTCHA")
-
-Petition online: [Google Word Verification Accessibility](http://www.petitiononline.com/captcha/)
+- Google blog: [Audio captchas when visual images are unusable](http://googleblog.blogspot.com/2006/11/audio-captchas-when-visual-images-are.html)
+- Justaddwater.dk: [Captcha usability revisited: Google inaccessible to blind people](/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-people/ "Justaddwater.dk: Captcha usability revisited: Google inaccessible to blind people")
+- Justaddwater.dk: [CAPTCHA usability: Humane alternative to CAPTCHA](/2006/10/23/captcha-usability-humane-alternative-to-captcha/ "justaddwater: CAPTCHA usability: Humane alternative to CAPTCHA")
+- Petition online: [Google Word Verification Accessibility](http://www.petitiononline.com/captcha/)

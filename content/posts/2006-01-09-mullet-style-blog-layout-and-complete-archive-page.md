@@ -22,7 +22,6 @@ Five months ago, Jonathan Boutelle wrote about what he calls the "[mullet-style 
 >
 > I call it the [Mullet](http://en.wikipedia.org/wiki/Mullet_%28haircut%29) for the obvious reason that it is much longer in the back (bottom of the page) than you would expect.
 
-
 ### Complete archive page — remove monthly folders for increased user experience
 
 Also, while you're there, check out Jonathan's recent article "[Blog Layout: The Long-Tail Archive (or: Monthly Archives Considered Harmful)](http://www.jonathanboutelle.com/mt/archives/2006/01/blog_layout_the.html)". He argues that a one-page complete archive is superior to an archive based in monthly folders.
@@ -49,26 +48,15 @@ Jonathan also refers to Luke Wroblewski and Jed Wood that has some exellent roun
 >
 > Effective ways to filter blog archives and contextual links included\
 > with blog posts can go a long way toward exposing valuable content to\
-> readers. Archives can be accessed by:\
+> readers. Archives can be accessed by:
 >
-> - \
 > - Headline (title)
->   \
 > - Subject (tags and/or categories)
->   \
 > - Time (time, day, month, year)
->   \
 > - Author (of post, of comments)
->   \
 > - Format (links, reviews, articles)
->   \
 > - Popularity (incoming links, comments, trackbacks, traffic, ratings)
->   \
 > - Editorial Selection
->   \
 > - Continuum (how an idea develops over time)
->   \
->
-> 
 
 blogging, usability, mullet, jonathan boutelle, mullet style layout, long tail, long tail archive, lukew, luke wroblewski, jed wood

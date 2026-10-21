@@ -20,12 +20,7 @@ Great work, Wordpress developers!
 
 More info:
 
-- \
 - Wordpress blog: [Wordpress 2.3](http://wordpress.org/development/2007/09/wordpress-23/)
-  \
 - Wikipedia: [Link rot](http://en.wikipedia.org/wiki/Link_rot)
-  \
 - Jakob Nielsen: [Fighting Linkrot](http://www.useit.com/alertbox/980614.html) (1998)
-  \
 - John Rhodes (Webword): [Web sites that heal](http://www.webword.com/moving/healing.html) (2002)
-  \

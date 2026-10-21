@@ -12,11 +12,8 @@ I figured the original bookmarklet toolbox needed an update (i have updated and 
 
 For example I added "quirks or !quirks" to determine whether a page runs standards mode or quirks mode. It pops up an alert that displays rendering mode for each frame.
 
-- \
 - "Document mode: CSS1 Compat" is standards mode
-  \
 - "Document mode: Back compat" is quirksmode
-  
 
 I forget where I found the code (please notify me and I'll give you credit).I also modified [Steve Chipman's excellent "PageInfo"](http://slayeroffice.com/?c=/content/tools/pagenfo.html) so that its usable with frames. If frames are found it asks you to enter a frame number (index from document.frames\[x\])
 

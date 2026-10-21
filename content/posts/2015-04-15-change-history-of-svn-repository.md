@@ -12,11 +12,8 @@ Somebody asked me if it's possible to change history of an SVN repository like y
 
 The easiest parts to change are:
 
-- \
 - commit date
-  \
 - commit log message
-  
 
 With this, you can easily modify time stamps if, for instance, your svn server clock is wrong.
 

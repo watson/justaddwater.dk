@@ -25,19 +25,11 @@ The top left section "Welcome to Wordpress" contains a brief overview for the mo
 
 ### What I think should improve
 
-
-1.  \
-2.  **Incoming links should show ALL incoming links.** The dashboard already has a box labeled "incoming links", but it doesn't show any referring URLs. Referring URLs (or link referrals) are registered by a browser as the page that link to the current page. In my opinion, referring URLs are of great value, as we want to know who link to us and how users get to know our website. I recently wrote that even in [Google Analytics this feature is hard to find](/2006/01/08/google-analytics-trick-how-to-view-referring-urls/ "Google Analytics trick: How to view referring URLs").\
-    "Incoming links" should show both trackbacks AND referring URLs. Most browsers send information as HTTP header "Referer" when they request the page.
-    \
-3.  **Add recent searches to activity list**. What are people searching for on my blog. Luckily we have a web-server access log that can tell me, but it requires digging and parsing a file on a regular basis. The dashboard has information recent trackback links and comments. It would be appropriate to add a list with recent searches.
-    \
-4.  **Update the Dashboard when something interesting happens.** Ajax calls to the web server could keep "Latest Activity" up-to-date whenever a comment is posted, searches and trackbacks are performed. Also the display could update when my partner posts a new article on the site.
-    \
-5.  **Clean up the dashboard. Remove things that are not relevant to me.** In particular, i think "Other Wordpress News" are too dominant (although placed in the bottom below the fold). Only a few of the news are directly Wordpress related. Other Wordpress News could easily be replaced by a link to planet.wordpress.org (from which the news are taken). After all, this will lead to faster response times, and will probably make the Dashboard more relevant to users like myself that wonders what on earth "Owen Winkler: I didn't do it" has to do with my blog.
-    \
-6.  **Add latest drafts to Dashboard**. Maybe it's just me. Usually I'm working on 2-3 stories that I save as drafts. I think that these should be on the dashboard as well.
-    
+1.  **Incoming links should show ALL incoming links.** The dashboard already has a box labeled "incoming links", but it doesn't show any referring URLs. Referring URLs (or link referrals) are registered by a browser as the page that link to the current page. In my opinion, referring URLs are of great value, as we want to know who link to us and how users get to know our website. I recently wrote that even in [Google Analytics this feature is hard to find](/2006/01/08/google-analytics-trick-how-to-view-referring-urls/ "Google Analytics trick: How to view referring URLs"). "Incoming links" should show both trackbacks AND referring URLs. Most browsers send information as HTTP header "Referer" when they request the page.
+2.  **Add recent searches to activity list**. What are people searching for on my blog. Luckily we have a web-server access log that can tell me, but it requires digging and parsing a file on a regular basis. The dashboard has information recent trackback links and comments. It would be appropriate to add a list with recent searches.
+3.  **Update the Dashboard when something interesting happens.** Ajax calls to the web server could keep "Latest Activity" up-to-date whenever a comment is posted, searches and trackbacks are performed. Also the display could update when my partner posts a new article on the site.
+4.  **Clean up the dashboard. Remove things that are not relevant to me.** In particular, i think "Other Wordpress News" are too dominant (although placed in the bottom below the fold). Only a few of the news are directly Wordpress related. Other Wordpress News could easily be replaced by a link to planet.wordpress.org (from which the news are taken). After all, this will lead to faster response times, and will probably make the Dashboard more relevant to users like myself that wonders what on earth "Owen Winkler: I didn't do it" has to do with my blog.
+5.  **Add latest drafts to Dashboard**. Maybe it's just me. Usually I'm working on 2-3 stories that I save as drafts. I think that these should be on the dashboard as well.
 
 Here's a quick mockup of the changes i propose.
 

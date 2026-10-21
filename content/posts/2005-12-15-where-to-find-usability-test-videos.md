@@ -27,7 +27,8 @@ Where are the videos that lay the ground for research made by [Nielsen](http://w
 
 ### Why usability videos are hard to find
 
-Confidentiality agreements must be part of the explanation. On a recent project we did some user tests and the users signed agreements that we would record a videotape only to help our research. We also promised that we would not make video clips public (in order to protect the privacy of the users). I've been to a few Nielsen Norman seminars. Each of them has had videoclips documenting (or rather as examples of) research findings. I guess Nielsen Norman won't share videos, because they want us to attend their seminars.
+Confidentiality agreements must be part of the explanation. On a recent project we did some user tests and the users signed agreements that we would record a videotape only to help our research. We also promised that we would not make video clips public (in order to protect the privacy of the users).\
+I've been to a few Nielsen Norman seminars. Each of them has had videoclips documenting (or rather as examples of) research findings. I guess Nielsen Norman won't share videos, because they want us to attend their seminars.
 
 ### Share usability videos, not just your findings
 

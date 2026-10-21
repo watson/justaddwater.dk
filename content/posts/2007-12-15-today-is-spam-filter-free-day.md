@@ -18,18 +18,11 @@ In the next couple of minutes, we'll remove our barricades, turn the other cheek
 
 Final remarks:
 
-1.  \
-2.  If you post any legit comment on our blog within the next 24 hours we'll try not to delete it when we do our manual spam-cleanup - but let me just apologize up front if we do.
-    \
-3.  If you subscribe to our comment-feed, you might notice more comments then usual ;)
-    
+1.  If you post any legit comment on our blog within the next 24 hours we'll try not to delete it when we do our manual spam-cleanup - but let me just apologize up front if we do.
+2.  If you subscribe to our comment-feed, you might notice more comments then usual ;)
 
 Related reading:
 
-- \
 - [Announcement: Spam Filter Free Day](/2007/11/27/announcement-spam-filter-free-day/)
-  \
 - [Letting Spam In For A Day Questions and Answers](/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/)
-  \
 - [Spam Comments Dropped 95% Overnight](/2007/12/04/spam-comments-dropped-95-overnight/)
-  \

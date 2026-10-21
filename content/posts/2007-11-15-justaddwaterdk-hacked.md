@@ -28,11 +28,8 @@ For more information on how we store user information see our [Privacy Policy](/
 
 The versions of WordPress affected by this security issue are:
 
-- \
 - The entire version 2.1.x branch
-  \
 - In the 2.0.x branch, every version below 2.0.11 is affected
-  
 
 If you are still running WordPress version 2.1.x we urge you to quickly upgrade to a newer version (2.2 or above). If you are running the older 2.0.x branch you can upgrade to version 2.0.11.
 
@@ -66,7 +63,7 @@ Notice how the user-agent changes all the time. This could be different scripts 
 
 Then came 10 calls to upload.php, the script used to upload pictures etc. to posts:
 
-    "POST /wp-admin/upload.php?style=inline&tab=upload&post_id=-1 HTTP/1.0" 200 1150 "http://justaddwater.dk/upload.php?style=inline&tab=upload&post_id=-1" "Opera"
+    "POST /wp-admin/upload.php?style=inline&amp;tab=upload&amp;post_id=-1 HTTP/1.0" 200 1150 "http://justaddwater.dk/upload.php?style=inline&amp;tab=upload&amp;post_id=-1" "Opera"
 
 My guess is that he used these calls to upload the backdoor script to /tmp. Why he needed 10 I don't know.
 

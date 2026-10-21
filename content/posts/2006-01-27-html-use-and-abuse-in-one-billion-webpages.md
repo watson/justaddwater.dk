@@ -10,11 +10,9 @@ tags: []
 
 Google posted a very interesting study with regards to web standards. As new browsers get better and better support for web standards, our awareness is raised to make sure web applications also support the future browsers (such as Internet Explorer 7.
 
-> **How do developers use HTML?** - 20/Jan/2006\
+> **How do developers use HTML?** - 20/Jan/2006
 >
 > As part of our work with the [WHAT working group](http://www.whatwg.org/), who are writing proposals for a new version of HTML, we have done some research into what aspects of HTML authors are using today. We took a sample of slightly over a **billion** documents, and looked at what elements were used on the most pages, what class names were used on the most pages, and so forth. [The results are quite interesting](http://code.google.com/webstats/index.html)!
->
-> 
 
 I think the study underplays their focus on webstandards. It's not really explicitly mentioned. But I guess this is to make the study interesting for the big part of web developers that (still) don't care about webstandards.
 

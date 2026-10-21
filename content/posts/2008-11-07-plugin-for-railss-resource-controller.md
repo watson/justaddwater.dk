@@ -12,7 +12,8 @@ If you're using Resource Controller for Ruby on Rails, you may want to look atth
 
 From the readme file:
 
-> ResouceControllerRespondTo ==========================
+> ResouceControllerRespondTo\
+> ==========================
 >
 > Extends ResourceController plugin for Rails to make it respond_to .xml and .json formats
 >

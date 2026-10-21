@@ -12,4 +12,6 @@ I have recently discovered an alcoholic in my family. And in order to deal with 
 
 The angle for this blog, however, is that i wrote this small script to remove scrollbars and remove menu when printing page. The script works on the Danish pages <http://al-anon.dk/>
 
+[View gist 227952 on GitHub](https://gist.github.com/227952)
+
 I have published a few notes via [my Facebook Status](http://www.facebook.com/jesperronn) about the incident (in Danish).

@@ -22,14 +22,9 @@ I have one suggestion: How about declaring spam-filter free day one day a year. 
 
 The purpose of Spam Filter Free day is to
 
-
-put focus on how much energy, computer power, network traffic, and manual work is wasted by the completely irrelevant comments
-
-
-put focus on spam filters and their current effectiveness
-
-
-We remove the filter a saturday, where traffic is usually lower (so the annoyance for the end-users will be as little as possible)
+- put focus on how much energy, computer power, network traffic, and manual work is wasted by the completely irrelevant comments
+- put focus on spam filters and their current effectiveness
+- We remove the filter a saturday, where traffic is usually lower (so the annoyance for the end-users will be as little as possible)
 
 For this to work we have to:
 
@@ -44,10 +39,6 @@ Join us if you like, and drop a comment about it here :) And if you do drop a co
 
 Related articles:
 
-- \
 - [100,000 Blog Spam Comments](/2007/02/06/100000-blog-spam-comments/) (Feb 26th)
-  \
 - [Blog Usability: Spam Comments Irritate Subscribers](/2007/04/02/spam-blog-posted-182-articles-in-one-day/) (April 2nd)
-  \
 - [Spam Commenters Are Wasting Brainpower](/2007/09/06/spam-commenters-are-wasting-brainpower/) (September 9th)
-  \

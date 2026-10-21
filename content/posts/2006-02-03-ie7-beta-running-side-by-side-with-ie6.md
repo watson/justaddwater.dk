@@ -14,23 +14,14 @@ In the comments of "[Multiple versions of IE in one Windows PC](/2006/01/25/mult
 
 Jon Galloway has the solution: Run IE7 as standalone and keep IE6 as the default browser. I have tried it out for a couple of days and could not get it to work until he posted a followup, [IE7 Standalone Launch Script](http://weblogs.asp.net/jgalloway/archive/2005/12/28/434132.aspx "Jon Galloway: IE7 Standalone Launch Script"):
 
-> **How to use the IE7 Launch Script**:\
+> **How to use the IE7 Launch Script**:
 >
-> 1.  \
-> 2.  If you already have IE7 set up for standalone mode, skip to step 4.
->     \
-> 3.  Download the [IE7 Beta Install from MSDN](http://www.microsoft.com/windows/ie/ie7/ie7betaredirect.mspx "Microsoft.com: Download Internet Explorer 7 beta"). \[...\]
->     \
-> 4.  Open the install file with a decompression program like [WinRAR](http://www.rarlab.com/download.htm) (yep, it's an EXE, but it's a self extracting EXE) and extract them to a folder. \[...\]
->     \
-> 5.  Copy the text below to notepad and save it as **IE7.bat** in the same folder you're setting up the standalone IE7 copy.
->     \
-> 6.  When you want to run IE7, double click **IE7.bat** - it pops up a DOS window that will hang around as long as IE7 is running so it can clean up after it (by deleting that pesky registry key) when you close IE7. Don't close the DOS window down or your pancreas will implode.
->     \
-> 7.  When you're done with IE7, just shut it down. The DOS window will clean up that pesky registry key and delete the standalone files, then disappear. If you shut IE7 down and the DOS window hangs around, just close it and run it again.
->     \
->
-> 
+> 1.  If you already have IE7 set up for standalone mode, skip to step 4.
+> 2.  Download the [IE7 Beta Install from MSDN](http://www.microsoft.com/windows/ie/ie7/ie7betaredirect.mspx "Microsoft.com: Download Internet Explorer 7 beta"). \[...\]
+> 3.  Open the install file with a decompression program like [WinRAR](http://www.rarlab.com/download.htm) (yep, it's an EXE, but it's a self extracting EXE) and extract them to a folder. \[...\]
+> 4.  Copy the text below to notepad and save it as **IE7.bat** in the same folder you're setting up the standalone IE7 copy.
+> 5.  When you want to run IE7, double click **IE7.bat** - it pops up a DOS window that will hang around as long as IE7 is running so it can clean up after it (by deleting that pesky registry key) when you close IE7. Don't close the DOS window down or your pancreas will implode.
+> 6.  When you're done with IE7, just shut it down. The DOS window will clean up that pesky registry key and delete the standalone files, then disappear. If you shut IE7 down and the DOS window hangs around, just close it and run it again.
 
 Here is the script that should be saved as IE7.bat:
 

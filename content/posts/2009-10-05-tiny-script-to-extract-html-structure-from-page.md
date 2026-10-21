@@ -14,6 +14,8 @@ To follow the Don't Repeat Yourself principle, I created a script to make it a o
 
 Feel free to use and modify the code (which i put on GitHub so you can fork and pull from it): <http://gist.github.com/199558>
 
+[View gist 199558 on GitHub](https://gist.github.com/199558)
+
 I created the script because I wanted to extract headings from a recent article. You could also use it for creating table of contents or similar.
 
 ## Usage examples

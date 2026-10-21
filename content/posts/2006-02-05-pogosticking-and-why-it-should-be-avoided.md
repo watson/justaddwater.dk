@@ -10,13 +10,9 @@ tags: []
 
 Pogosticking is best explained with examples:
 
-- \
 - On a search results page it would be to go back and forth between the search results.
-  \
 - In an archive it would be to go back and forth between monthly archive pages to find the right content.
-  \
 - On a gallery page it would be to go back and forth between the products (usually because the wrong information is available on the gallery page)
-  
 
 In my wording, pogosticking is: **Unnecessary navigation and extra clicks that occurs because pages do not match the information users need to find what they are looking for**.
 
@@ -60,10 +56,7 @@ I previously referred to this in a post about [mullet style blog design and long
 
 If your pages encourage pogosticking, it's usually an indication that you have the wrong information on your page. The simple solution is (of course) to work with your content:
 
-- \
 - Top page must give users the information that makes it able for them to choose the right sub-page.
-  \
 - This results in less cumbersome user experience: Users get to the right content right away.
-  
 
 Other info: [Ask Jeeves says goodbye to pogosticking](http://www.weboptimiser.com/search_engine_marketing_news/2872435.html "Weboptimizer.com: Ask Jeeves says goodbye to pogo-sticking")

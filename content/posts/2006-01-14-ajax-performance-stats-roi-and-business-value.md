@@ -10,11 +10,9 @@ tags: []
 
 How do you build a system that can deliver and update content to 100,000 people simultaneously? Via [Ajaxian.com](http://ajaxian.com/?p=735 "Ajax Reduces Load on MacRumors.com Servers") I saw this article from MacRumors on what traffic they got when Steve Jobs delivered his keynote on MacWorld a few days ago.
 
-> On January 10th, 2006, [MacRumors.com](http://www.macrumors.com/) successfully delivered live updates of the Macworld San Francisco Keynote speech to over 100,000 people simultaneously using the latest web technologies.\
+> On January 10th, 2006, [MacRumors.com](http://www.macrumors.com/) successfully delivered live updates of the Macworld San Francisco Keynote speech to over 100,000 people simultaneously using the latest web technologies.
 >
 > *"By far the best mac keynote coverage I have ever seen. No constant page refreshing. No 'page will update every three minutes' even though they never do. I just let the page update every minute like it was supposed to. It was actually weird to get coverage without some sort of connection failure." - MacRumors member, war*
->
-> 
 
 The live coverage web solution is basically a transscript updated frequently during the keynote. One article is about the [traffic they experienced](http://www.macrumors.com/events/mwsf2006-stats.php "MacRumors.com's Webcast Stats during the Macworld San Francisco 2006 Keynote"):
 
@@ -24,44 +22,12 @@ The live coverage web solution is basically a transscript updated frequently dur
 
 With peak loads that reaches insane levels of almost 4,000 hits per second:
 
-> \
->
-> \
->
-> \
->
-> Hits/second ⁽²⁾
-
-
-3,812
-
-
-
-
-IRC users
-
-
-6,079
-
-
-
-
-Simultaneous visitors
-
-
-109,000
-
-
-
-
-Bandwidth ⁽³⁾
-
-
-approx. 77Mbit/sec
-
-
-
-
+> |                       |                    |
+> |-----------------------|--------------------|
+> | Hits/second ⁽²⁾       | 3,812              |
+> | IRC users             | 6,079              |
+> | Simultaneous visitors | 109,000            |
+> | Bandwidth ⁽³⁾         | approx. 77Mbit/sec |
 
 [![MacWorld keynote hits graph (from macrumors.com)](/wp-content/uploads/2006/01/hits-20060110.gif)](http://www.macrumors.com/events/mwsf2006-stats.php "MacWorld keynote hits graph (from macrumors.com)")
 
@@ -73,7 +39,6 @@ They also posted an article about [how they built the system](http://www.macrumo
 >
 > Even with all this simplification the sheer number of visitors can still take the server down. To provide the best coverage during live events an improved system is required.
 
-
 > As this system is retaining the normal layout of the site, all the necessary objects (CSS, images & Javascript) also need to be loaded. This increases the load placed on the web servers considerably in comparison to the old system, which only had a single text file to display. Even with the ability to use multiple servers, the web server software needs to be improved.
 >
 > By using [PHP](http://www.php.net/) to generate the necessary HTML & XML files every ten seconds, rather than each time the file is requested, it is possible to use small & simple web servers to deliver the public site, without the overhead of database usage. Two web server software packages are employed - [lighttpd](http://www.lighttpd.net/) and [thttpd](http://www.acme.com/software/thttpd/) - with [Apache](http://httpd.apache.org/) still being used for the administration interface.
@@ -84,48 +49,9 @@ They also posted an article about [how they built the system](http://www.macrumo
 
 This reminds me of Ajaxinfo (the guys behind [AJAX usability metrics](http://blogs.ebusiness-apps.com/andre/?p=52)), **[AJAX ROI faceoff](http://www.ajaxinfo.com/default~viewart~18.htm),** where a traditional webapp is compared to an AJAX webapp. For the visually oriented, there is a video comparing the two applications at the end of the article.
 
-> Recently on Developer.com, I looked at ways for developers to [communicate the value of Ajax](http://www.developer.com/xml/article.php/3554271) in dollars and cents. Arguing for or against a technology usually creates some stress for developers, who tend to speak a different language from business decision makers.\
+> Recently on Developer.com, I looked at ways for developers to [communicate the value of Ajax](http://www.developer.com/xml/article.php/3554271) in dollars and cents. Arguing for or against a technology usually creates some stress for developers, who tend to speak a different language from business decision makers.
 >
-> \
->
-> \
->
-> **Developers talk about**\
->
-> \
->
-> - \
-> - Usability
->   \
-> - Bandwidth
->   \
-> - Ramp-up
->   \
-> - Cost of Ownership
->   \
->
-> \
->
-> 
-
-
-**Managers talk about**
-
-
-- \
-- Efficiency
-  \
-- Transaction costs
-  \
-- Training costs
-  \
-- Return on Investment (ROI)
-  
-
-
-
-
-
+> [TABLE]
 
 Right at the point. Performance website or not, the metrics he mentions above are almost like something Jakob Nielsen could have done. Conclusions:
 
@@ -134,7 +60,6 @@ Right at the point. Performance website or not, the metrics he mentions above ar
 > A representative test case showed that a business can save between 500 and 2,800 man hours per year on a 10-step hypothetical process, saving roughly 4 seconds per step (a between 30% and 70% reduction in labor costs).
 >
 > Although the benefits of improved application architecture extend beyond mere time savings, when included in the decision making process, an ROI approach such as this can help make a solid business case for Ajax.
-
 
 ![Total time taken (AJAX vs traditional webapp)](/wp-content/uploads/2006/01/totaltimetaken.gif)![Total bytes transferred (AJAX vs traditional webapp)](/wp-content/uploads/2006/01/bytestransferred.gif)
 

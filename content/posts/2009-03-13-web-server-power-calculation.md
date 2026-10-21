@@ -20,15 +20,10 @@ Servers: Old HP desktop workstations from 2003. By the time they were state-of-t
 
 The other day I brought our power meter measurement tool from home. Here are the measurements for one machine:
 
-- \
 - Starting up: 137 Watts
-  \
 - Running 0.01-5% load: 100 Watts
-  \
 - Powered off: 26 Watts
-  \
 - (Danish voltage is 230 Volts)
-  
 
 With a cost of power in Denmark at 1.60 Danish Crowns (ex. vat) and an assumption of two machines running 24-7 this will give a cost of 1.400 Danish Crowns (DKK) per machine per year.
 

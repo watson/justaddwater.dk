@@ -12,38 +12,26 @@ Today, ten months ago, Thomas and I started Justaddwater.dk. Our purpose then wa
 
 Here is our new and revised blog purpose:
 
-> \
->
 > ## About justaddwater.dk
 >
-> \
 > Justaddwater.dk is mostly about usability, accessibility, web standards, and the technologies that drive and power the web. Expect to find articles from our daily work with web development and usability issues, and also occasionally a post or two on other topics.
 >
 > Popular topics: [Usability](/category/usability/), [blog usability](/category/blogging/), [wordpress plugins](/wordpress-plugins/), [ruby on rails](/category/ruby-on-rails/), [prototyping](/category/prototyping/), [web standards](/category/webstandards/), [AJAX](/category/ajax/) (web 2.0).
 >
 > Popular posts (just to pick a few): [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained")
 >
-> [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained") [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained") [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained")\
+> [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained") [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained") [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained")
 >
-> - [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained")\
+> - [](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained")
 > - [Live search explained](/2006/01/26/live-search-explained/ "Permanent Link: Live search explained")
->   \
 > - [AJAX businesscase](/2006/02/08/ajax-businesscase/ "Permanent Link: AJAX businesscase: Reduce development costs and increase usability")
->   \
 > - [How to indicate required or optional form fields](/2006/03/29/how-to-indicate-required-or-optional-form-fields/ "Permanent Link: How to indicate required or optional form fields")
->   \
 > - [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/ "Permanent Link: Ruby on Rails as rapid prototyping tool")
->   \
 > - [25% of all web users are disabled](/2006/01/20/one-of-four-web-users-are-disabled-users/ "Permanent Link: 25% of all web users are disabled")
->   \
 > - [Definition of User Experience Revisited](/2006/06/21/user-experience-revisited/ "Permanent Link: Definition of User Experience Revisited")
->   \
 > - [New Google layout more usable](/2006/03/28/new-google-layout-more-usable/ "Permanent Link: New Google layout more usable")
->   \
 > - [Mullet Layout: A user-friendly front page](/2006/03/12/mullet-layout-a-user-friendly-front-page/ "Permanent Link: Mullet Layout: A user-friendly front page")
->   \
 >
-> \
 > (From our updated [about-page](/about-the-authors).)
 
 Initially we wanted to start the blog to raise awareness internally in Capgemini on usability, and communicate usability with our colleagues. The corporate existing channels were not appropriate for us, because we estimated that we had a too small audience to get momentum behind an internal website/newsletter/blog/whatever.
@@ -55,7 +43,6 @@ And then, justaddwater.dk was born. Thomas wrote this as our [first guideline fo
 After blogging for a while, we started to get feedback from people we never dreamt of. The style of the blog encourages dialog and we were thrilled to see comments and feedback from Jakob Nielsen, Jared Spool, Eric Reiss, John Rhodes, Joe Clark, Jonathan Boutelle, and many others.
 
 [![IMG_7921_crop](http://static.flickr.com/63/165588134_b909304062_m.jpg)](http://www.flickr.com/photos/jesper/165588134/ "Photo Sharing")
-
 
 Books by authors that read justaddwater.dk: [Jakob Nielsen](http://www.useit.com/jakob/), [Jared Spool](http://www.uie.com/brainsparks/author/jared/), [Steve Krug](http://www.sensible.com/about.html), [Eric Reiss](http://www.fatdux.com/who/eric-reiss.html), [John Rhodes](http://webword.com), [Mike Kuniavski](http://www.amazon.com/gp/product/1558609237/ref=ase_orangecone-20/103-6147560-2043036?s=books&v=glance&n=283155&tagActionCode=orangecone-20), [Joe Clark](http://joeclark.org/), [Thomas Snitker](http://snitker.com)
 

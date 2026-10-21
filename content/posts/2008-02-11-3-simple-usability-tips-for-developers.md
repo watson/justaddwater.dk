@@ -42,14 +42,8 @@ Forget using words such as affordance, error-rate, click-through-rate, task-effi
 
 More info:
 
-- \
 - Wikipedia: [Usability](http://en.wikipedia.org/wiki/Usability)
-  \
 - Justaddwater: [Undo — Not Confirmation — End of Discussion](/2007/09/27/undo-not-confirmation-end-of-discussion/ "Permanent Link: Undo — Not Confirmation — End of Discussion") (Sep 2007)
-  \
 - Justaddwater: [Save Button Usability Issues](/2006/11/27/save-button-usability-issues/ "Permanent Link: Save Button Usability Issues") (Nov. 2006)
-  \
 - 37Signals: [Google's Gmail Undo](http://www.37signals.com/svn/archives2/googles_gmail_undo.php) (Sep 2005)
-  \
 - Wikipedia: [Liquid Paper](http://en.wikipedia.org/wiki/Liquid_Paper)
-  \

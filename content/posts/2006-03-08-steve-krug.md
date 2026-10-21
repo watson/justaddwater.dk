@@ -19,25 +19,15 @@ I'm actually thrilled about this, because that means that we get some attention 
 I'm interested in hearing more about the Boston Meeting, and will be very excited to hear from you, how our website was used and what points Steve Krug made about it.\
 Also, It's been mentioned on
 
-- \
 - [Webword.com](http://www.webword.com/2006/01/21/25-of-all-web-users-are-disabled/ "Webword: 25% of all users are disabled")
-  \
 - [Accessify.com](http://accessify.com/2006/02/timely-reminder.php "Accessify.com: A timely Reminder")
-  \
 - [Gadgetizer](http://www.gadgetizer.com/2006/02/13/25percent-web-users-diasabled/)
-  \
 - [Ivo Gomez](http://www.ivogomes.com/blog/25-dos-utilizadores-web-sao-deficientes/) (in Portugese)
-  \
 - [Netlash](http://www.netlash.com/log/een_op_vier_webgebruikers_is_gehandicapt) (in Dutch — almost a complete translation)
-  \
 - [BlindSurfer blogt](http://www.blindsurfer.be/blog/?p=20) (Flemish)
-  \
 - [Usernomics.com](http://www.usernomics.com/news/2006/01/one-of-four-web-users-are-disabled.html)
-  \
 - [Mark Vanderbeeken](http://blog.vanderbeeken.com/2006/01/_one_of_four_we.html)
-  \
 - [Spin Group Resources](http://www.spingroup.com/htmdocs/resources/article.php?parent=5&catcode=8)
-  
 
 (actually our statistics software registered 102 links used)
 

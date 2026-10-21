@@ -43,7 +43,6 @@ Git pull dean master will work. but "git pull" gives the following message:
 >
 > See git-config(1) for details.
 
-
 ## Solution to get the shorthand "git pull" to work:
 
 Add the following section to \[project_dir\]/.git/config

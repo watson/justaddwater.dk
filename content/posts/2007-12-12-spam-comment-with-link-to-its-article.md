@@ -14,22 +14,14 @@ We got this spam comment yesterday with link to the article itself: It points to
 
 Some questions pop up instantly:
 
-- \
 - Will marking this as spam give our Justaddwater blog bad karma in Akismet?
-  \
 - Why would spammers do this? What are they trying to achieve?
-  \
 - Has this anything to do with our declared spam filter free day on December 15?
-  
 
 For now, we blocked the comment but didn't mark it as spam... Perhaps it would be most appropriate to delete the justaddwater URL, and then mark as spam? What do you think?
 
 Related articles:
 
-- \
 - [Spam Comments Dropped 95% Overnight](/2007/12/04/spam-comments-dropped-95-overnight/)
-  \
 - [Letting Spam In For A Day Questions and Answers](/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/)
-  \
 - [Announcement: Spam Filter Free Day](/2007/11/27/announcement-spam-filter-free-day/)
-  \

@@ -20,6 +20,11 @@ And here i am stuck??? I can only edit the settings. How do I use it, how do I a
 
 **UPDATE 2 days later:** I got a good explanation from ZYB support on how to get it working:
 
-> To start the sync, please go as follows:1 \* Menu \* Control panel \* Phone \* Sync \* Choose ZYB
+> To start the sync, please go as follows:1\
+> \* Menu\
+> \* Control panel\
+> \* Phone\
+> \* Sync\
+> \* Choose ZYB
 
 This works perfectly as long as you remember that the default sync profile is "Nokia PC Suite". Thus, the step to "choose ZYB" is very important

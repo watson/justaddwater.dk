@@ -14,53 +14,17 @@ If you want to attend the event, you can find more details (in Danish) in [the p
 In case you missed it, I'm also talking [this friday at an afternoon event with Thomas Snitker](/2006/05/10/speaking-on-usability-and-rapid-prototyping/ "justaddwater.dk: Speaking on usability and rapid prototyping") and [June 1 or 2 on reboot8](/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/ "Justaddwater.dk: Speaking at reboot8 about Rails and rapid prototyping").\
 From the program (Danish):
 
-> **Weblogs - spild af tid - eller ingen tid at spilde?**\
+> **Weblogs - spild af tid - eller ingen tid at spilde?**
 >
-> \
+> |  |  |  |
+> |----|----|----|
+> | Flere og flere virksomheder bruger weblogs (blogs). Hvilke formål har virksomhederne med at bruge blogs og hvordan ser de første resultater ud? Er corporate blogs for vindere eller tabere? IT-Branchen har bedt en ekspert og tre virksomheder, der aktivt bruger blogs, give deres bud. Presse og andre interesserede er velkomne. |  |  |
+> |  |  |  |
+> | **Dato:** |  | 13\. juni 9:00 - 11:00 |
+> |  |  |  |
+> | **Sted:** |  | Børsbygningen, Biblioteket |
+> |  |  |  |
+> | **Adresse:** |  | Slotsholmsgade, 1217 København K. |
+> |  |  |  |
 >
-> \
->
-> Flere og flere virksomheder bruger weblogs (blogs). Hvilke formål har virksomhederne med at bruge blogs og hvordan ser de første resultater ud? Er corporate blogs for vindere eller tabere? IT-Branchen har bedt en ekspert og tre virksomheder, der aktivt bruger blogs, give deres bud. Presse og andre interesserede er velkomne.
-
-
-
-
-
-
-
-**Dato:**
-
-
-
-13\. juni 9:00 - 11:00
-
-
-
-
-
-
-
-**Sted:**
-
-
-
-Børsbygningen, Biblioteket
-
-
-
-
-
-
-
-**Adresse:**
-
-
-
-Slotsholmsgade, 1217 København K.
-
-
-
-
-
-
-Case: Capgemini om erfaringer med bloggen justaddwater.dk om usability og web-standarder
+> Case: Capgemini om erfaringer med bloggen justaddwater.dk om usability og web-standarder

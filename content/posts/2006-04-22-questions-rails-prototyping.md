@@ -43,16 +43,7 @@ Rails have some sweet spots other than protyping, which I have focused on here. 
 
 Related reading - [A Designer's Guide to Prototyping Ajax](http://particletree.com/features/a-designers-guide-to-prototyping-ajax/) pointed me to these good resources:
 
-> \
->
-> - \
 > - [Getting Creative With Specs: Usable Software Specifications](http://www.boxesandarrows.com/view/getting_creative_with_specs_usable_software_specifications) · An effective, usable spec serves two main purposes: First, it elicits feedback early, which helps to avoid problems and misunderstandings later on. Second, an effective spec ensures the software stays in line with the designer’s intentions.
->   \
 > - [HTML Wireframes and Prototypes: All Gain and No Pain](http://www.boxesandarrows.com/view/html_wireframes_and_prototypes_all_gain_and_no_pain) · A great introduction to wireframes and a list of benefits they provide to the workflow process.
->   \
 > - [How do we do HTML wireframes?](http://atomiq.org/archives/2005/09/how_do_we_do_html_wireframes.html "How do we do HTML wireframes?") · An outline of a conversation between a few intelligent and experienced developers on their wireframing tools and methods.
->   \
 > - [Prototype Techniques in the Web Design Workflow](http://www.molly.com/2005/08/23/protoype-techniques-in-the-web-design-workflow/ "Prototype Techniques in the Web Design Workflow") · Molly briefly goes over a number links to various techniques that can be used to build wireframes and prototypes.
->   \
->
-> \

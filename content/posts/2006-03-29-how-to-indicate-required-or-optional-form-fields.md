@@ -16,23 +16,16 @@ The short answer is: **It depends on the graphical design as long as you remembe
 
 I would like to say that there is generally two ways of showing required and optional fields:
 
-1.  \
-2.  Grouping required and optional fields in different groups (fieldsets)
-    \
-3.  Indicating next to each field or label if this field is required or not
-    
+1.  Grouping required and optional fields in different groups (fieldsets)
+2.  Indicating next to each field or label if this field is required or not
 
 There can be many design reasons why one of the above ways can't be used in a given situation. So I will not say that one should always be used instead of another (even though design should never out-rule usability!), but there is still drawbacks and benefits with both versions.
 
 The general rule should of cause be that whatever version is used, disabled users should have just as fair a chance as normal users to see which fields that are required and which that isn't. This is a highly difficult subject with lots of ifs, buts' and maybes and you have to take the different groups of people into account:
 
-1.  \
-2.  People using a screen reader (mostly blind people)
-    \
-3.  People using a magnifying glass (electronic or IRL)
-    \
-4.  Non-disabled people (the rest of us)
-    
+1.  People using a screen reader (mostly blind people)
+2.  People using a magnifying glass (electronic or IRL)
+3.  Non-disabled people (the rest of us)
 
 On this subject I find the guide "[Required Form Fields](http://simplyaccessible.org/examples/required-form-fields "Simply Accessible: Required Form Fields")" from Simply Accessible very useful. Remark: If you use the trick with showing the asterisk to the right of the field even though it is physically located inside the label, you just have to remember that this doesn't help people that depend on a magnifying glass, since they won’t necessarily see what's located all the way to the right.
 
@@ -42,19 +35,11 @@ Another point could be that if you use actual words like "required" or "optional
 
 Many popular websites take this approach. Of a few can be mentioned:
 
-- \
-- [The New York Times](http://www.nytimes.com/gst/regi.html "The New York Times: Free Registration")\
-  [![The New York Times - Grouping required and optional fields into groups](/wp-content/uploads/2006/03/nytimes-grouping-fields.thumbnail.png "The New York Times - Grouping required and optional fields into groups")](/wp-content/uploads/2006/03/nytimes-grouping-fields.png "The New York Times - Grouping required and optional fields into groups")\
-  Click on thumbnail to see larger image
-  \
+- [The New York Times](http://www.nytimes.com/gst/regi.html "The New York Times: Free Registration") [![The New York Times - Grouping required and optional fields into groups](/wp-content/uploads/2006/03/nytimes-grouping-fields.thumbnail.png "The New York Times - Grouping required and optional fields into groups")](/wp-content/uploads/2006/03/nytimes-grouping-fields.png "The New York Times - Grouping required and optional fields into groups") Click on thumbnail to see larger image
 - [All phpBB forums](http://www.phpbb.com/phpBB/profile.php?mode=register&agreed=true "phpBB.com: Register")
-  \
 - [LinkedIn](https://www.linkedin.com/register "LinkedIn: Join LinkedIn")
-  \
 - [Basecamp](https://secure.basecamphq.com/signup/Free "Basecamp: Sign up") by 37signals
-  \
 - [Freshmeat](http://freshmeat.net/register/ "freshmeat.net: User Registration")
-  
 
 Some even have different pages for each group of fields creating a wizard like effect ([Amazon](https://www.amazon.com/gp/flex/sign-in/select.html/103-6445861-7965411?%5Fencoding=UTF8&protocol=https "Amazon: Sign In/Up") for one)
 
@@ -62,43 +47,9 @@ Some even have different pages for each group of fields creating a wizard like e
 
 This category is a bit more diverse. You can imagine an endless amount of different ways to indicate that a specific field is required, or you can turn the tables around and indicate that a field is optional. There generally is 3 popular ways of doing this:
 
-1.  
-
-2.  Asterisk next to either label or field marking the field as required:
-
-    [Yahoo](https://edit.yahoo.com/config/eval_register "Yahoo! Registration")\
-    ![Yahoo! Registration - Asterisk before label](/wp-content/uploads/2006/03/yahoo-form-asterisk-before-label.png)
-
-    [IBM](https://www-132.ibm.com/webapp/wcs/stores/servlet/UserRegistrationForm "IBM: Create an account")\
-    ![IBM Create Account - Asterisk before label](/wp-content/uploads/2006/03/ibm-form-asterisk-before-label.png)
-
-    [The Washington Post](http://www.washingtonpost.com/ac2/wp-dyn?node=admin/registration/register&destination=register&nextstep=gather&application=reg30-globalnav "The Washington Post: Register")\
-    ![The Washington Post Register - Asterisk before label](/wp-content/uploads/2006/03/washingtonpost-form-asterisk-before-label.png)
-
-    [Spread Firefox](http://www.spreadfirefox.com/user/register "Spread Firefox: Register")\
-    ![Spread Firefox Create Account - Asterisk after label](/wp-content/uploads/2006/03/spreadfirefox-form-asterisk-after-label.png)
-
-    
-
-3.  Bold label marking the field as required:
-
-    [Technorati](http://technorati.com/signup/ "Technorati: Sign Up")\
-    ![Technorati - Bold is required](/wp-content/uploads/2006/03/bold-is-required2.png)
-
-    
-
-4.  The word "optional" or "required" in brackets next to either the field or the label:
-
-    [Bugzilla](https://bugzilla.mozilla.org/createaccount.cgi "Bugzilla: Create account")\
-    ![Bugzilla Create Account - The word optional after the field](/wp-content/uploads/2006/03/bugzilla-form-optional-after-field.png)\
-    Here all labels are bold and does not mean that the field is required!
-
-    [Wikipedia](http://en.wikipedia.org/w/index.php?title=Special:Userlogin&type=signup&returnto=Main_Page "Wikipedia: Create account")\
-    ![Wikipedia Create Account - The word optional after label](/wp-content/uploads/2006/03/wikipedia-form-optional-word-after-label.png)\
-    Here the asterisk actually means something else than "required"!
-
-    
-
+1.  Asterisk next to either label or field marking the field as required: [Yahoo](https://edit.yahoo.com/config/eval_register "Yahoo! Registration") ![Yahoo! Registration - Asterisk before label](/wp-content/uploads/2006/03/yahoo-form-asterisk-before-label.png) [IBM](https://www-132.ibm.com/webapp/wcs/stores/servlet/UserRegistrationForm "IBM: Create an account") ![IBM Create Account - Asterisk before label](/wp-content/uploads/2006/03/ibm-form-asterisk-before-label.png) [The Washington Post](http://www.washingtonpost.com/ac2/wp-dyn?node=admin/registration/register&destination=register&nextstep=gather&application=reg30-globalnav "The Washington Post: Register") ![The Washington Post Register - Asterisk before label](/wp-content/uploads/2006/03/washingtonpost-form-asterisk-before-label.png) [Spread Firefox](http://www.spreadfirefox.com/user/register "Spread Firefox: Register") ![Spread Firefox Create Account - Asterisk after label](/wp-content/uploads/2006/03/spreadfirefox-form-asterisk-after-label.png)
+2.  Bold label marking the field as required: [Technorati](http://technorati.com/signup/ "Technorati: Sign Up") ![Technorati - Bold is required](/wp-content/uploads/2006/03/bold-is-required2.png)
+3.  The word "optional" or "required" in brackets next to either the field or the label: [Bugzilla](https://bugzilla.mozilla.org/createaccount.cgi "Bugzilla: Create account") ![Bugzilla Create Account - The word optional after the field](/wp-content/uploads/2006/03/bugzilla-form-optional-after-field.png) Here all labels are bold and does not mean that the field is required! [Wikipedia](http://en.wikipedia.org/w/index.php?title=Special:Userlogin&type=signup&returnto=Main_Page "Wikipedia: Create account") ![Wikipedia Create Account - The word optional after label](/wp-content/uploads/2006/03/wikipedia-form-optional-word-after-label.png) Here the asterisk actually means something else than "required"!
 
 ### Conclusion
 

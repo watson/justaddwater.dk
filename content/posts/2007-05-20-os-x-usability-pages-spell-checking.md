@@ -40,16 +40,10 @@ But as you might see there is no option with which I can change the current lang
 
 What you have to do is "basically":
 
-1.  \
-2.  Select all your text (![Apple key](/wp-content/uploads/2007/05/applemenuicon.gif)+a)
-    \
-3.  Click the Inspector icon
-    \
-4.  Click the big "T" icon
-    \
-5.  Click "More" pane
-    \
-6.  Click the "Language" select-box and select your language
-    
+1.  Select all your text (![Apple key](/wp-content/uploads/2007/05/applemenuicon.gif)+a)
+2.  Click the Inspector icon
+3.  Click the big "T" icon
+4.  Click "More" pane
+5.  Click the "Language" select-box and select your language
 
 I'll spare you all the screen shots, but for a detailed explanation (with all the screen shots) go visit iUseApple.com and see the blog post "[How To Change Language In Pages](http://iuseapple.com/blog/apple-how-to/beginner-os-x/2006/10/24/how-to-change-language-in-pages/)".

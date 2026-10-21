@@ -14,19 +14,12 @@ Monday to Tuesday is the Danish usability conference "[Usability dagene 2005](ht
 According to the program, Jacob will talk about\
 **Usability Why & How**
 
-- \
 - User behavior on the Web
-  \
 - High-end users vs. less experienced users
-  \
 - Websites vs. Intranets, Web-based applications vs. ephemeral applications
-  \
 - Information foraging
-  \
 - Content usability, how to write for online
-  \
 - Usability metrics, ROI
-  
 
 I always enjoy Jakob because he's very enthusiastic and has good examples that I usually can apply to my own situation.
 

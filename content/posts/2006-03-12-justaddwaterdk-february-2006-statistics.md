@@ -20,17 +20,11 @@ On Wednesday the 8th of February Jesper published [a story](/2006/02/08/ajax-bus
 
 The number one story in January must see it self reduced to a 3rd place this month. This month the two top stories have one thing in common: AJAX. In both cases mainly because the stories quickly was picked up by [Ajaxian](http://ajaxian.com/). Here is the list:
 
-1.  \
-2.  [AJAX businesscase: Reduce development costs and increase usability](/2006/02/08/ajax-businesscase/) (1152 visitors)
-    \
-3.  [AJAX performance stats, ROI, and business value](/2006/01/14/ajax-performance-stats-roi-and-business-value/) (699 visitors)
-    \
-4.  [One of four web users are disabled users](/2006/01/20/one-of-four-web-users-are-disabled-users/) (329 visitors)
-    \
-5.  [Live search explained](/2006/01/26/live-search-explained/) (285 visitors)
-    \
-6.  [IE7 beta running side by side with IE6](/2006/02/03/ie7-beta-running-side-by-side-with-ie6/) (177 visitors)
-    
+1.  [AJAX businesscase: Reduce development costs and increase usability](/2006/02/08/ajax-businesscase/) (1152 visitors)
+2.  [AJAX performance stats, ROI, and business value](/2006/01/14/ajax-performance-stats-roi-and-business-value/) (699 visitors)
+3.  [One of four web users are disabled users](/2006/01/20/one-of-four-web-users-are-disabled-users/) (329 visitors)
+4.  [Live search explained](/2006/01/26/live-search-explained/) (285 visitors)
+5.  [IE7 beta running side by side with IE6](/2006/02/03/ie7-beta-running-side-by-side-with-ie6/) (177 visitors)
 
 *Source: Measure Map*
 
@@ -44,48 +38,13 @@ Browser Versions, February 2006 - *Source: Google Analytics*
 
 ### Statistical numbers
 
-
-
-
-Total visits:
-
-
-3,092
-
-
-
-
-Total unique visitors:
-
-
-2,585
-
-
-
-
-Average visits per day:
-
-
-110.43
-
-
-
-
-Average pageviews per visit:
-
-
-1.77
-
-
-
-
-Dropout percentage on the front page:
-
-
-50.74%
-
-
-
+|                                       |        |
+|---------------------------------------|--------|
+| Total visits:                         | 3,092  |
+| Total unique visitors:                | 2,585  |
+| Average visits per day:               | 110.43 |
+| Average pageviews per visit:          | 1.77   |
+| Dropout percentage on the front page: | 50.74% |
 
 ### Other graphs
 

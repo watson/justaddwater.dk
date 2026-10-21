@@ -27,14 +27,9 @@ I've just recently discovered the value of RSS feeds through the web service [Ne
 
 Some interesting data from the podcast:
 
-- \
 - 31% of all people on the web use RSS whether they know it or not
-  \
 - 227 mill active users (october 2005)
-  \
 - Alert available via RSS, SMS text message, or Instant message
-  \
 - New RSS service from Yahoo! every month this year
-  
 
 Technorati tags: [usability](http://technorati.com/tag/usability) [rss](http://technorati.com/tag/rss) [yahoo](http://technorati.com/tag/yahoo) [alerts](http://technorati.com/tag/alerts) [mail](http://technorati.com/tag/mail) [webmail](http://technorati.com/tag/webmail)

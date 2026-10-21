@@ -30,31 +30,16 @@ Let me wrap this up by saying: Great writeup. Essential links. The best thing th
 
 Read more:
 
-- \
-- **Cameron Moll: [Skinning MS Sharepoint with standards](http://cameronmoll.com/archives/2007/05/skinning_ms_sharepoint_with_st/)** (found via [UIE BrainSparks](http://www.uie.com/brainsparks/2007/06/01/sharing-sharepoint/))**\
-  (includes the following links below)**
-  \
+- **Cameron Moll: [Skinning MS Sharepoint with standards](http://cameronmoll.com/archives/2007/05/skinning_ms_sharepoint_with_st/)** (found via [UIE BrainSparks](http://www.uie.com/brainsparks/2007/06/01/sharing-sharepoint/)) **(includes the following links below)**
 - [CSS Reference Chart](http://www.heathersolomon.com/content/sp07cssreference.htm)
-  \
 - [Guide to making SharePoint XHTML Compliant](http://blogs.provoke.co.nz/Zac/Lists/Posts/Post.aspx?ID=5)
-  \
 - [How to: Create a Minimal Master Page](http://msdn2.microsoft.com/en-us/library/aa660698.aspx) (good luck viewing any MSDN stuff in FF Mac)
-  \
 - [Overriding core.css with multiple stylesheets](http://heathersolomon.com/blog/archive/2006/10/27/sp07cssoptions.aspx) (see also [comment by Dan](http://heathersolomon.com/blog/archive/2006/10/27/sp07cssoptions.aspx#Comments_ascx_CommentList_ctl04_NameLink))
-  \
 - [Customizing the Content Query Web Part and Custom Item Styles](http://www.heathersolomon.com/blog/articles/customitemstyle.aspx)
-  \
 - [How to: Customize the Display of Quick Launch](http://msdn2.microsoft.com/en-us/library/ms466994.aspx) (MSDN)
-  \
 - [Customizing and Branding SharePoint Sites (Part 2 of 3): Extending Web Content Management](http://msdn2.microsoft.com/en-us/library/aa830815.aspx) (MSDN)
-  \
 - [SharePoint Designer video tutorials](http://office.microsoft.com/en-us/help/HA102199841033.aspx)
-  \
 - [Heather Solomon: SharePoint Articles](http://www.heathersolomon.com/blog/articles/sp2007.aspx)
-  \
 - [Sharepoint Scotland: SharePoint Customization](http://www.sharepointscotland.com/sharepoint_customisation.htm)
-  \
 - [mossmarks’ del.icio.us bookmarks](http://del.icio.us/mossmarks)
-  \
 - [Sharepoint Buzz: Master Page Links](http://www.sharepointbuzz.com/index.php/2007/02/25/master-page-of-master-page-links/)
-  \

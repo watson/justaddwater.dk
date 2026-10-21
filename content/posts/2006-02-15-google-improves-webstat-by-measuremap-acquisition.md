@@ -20,23 +20,15 @@ Previously, I have complained about lacking features of Google Analytics, when [
 
 But there's surprisingly little details about what will happen. A number of questions arise in my head:
 
-- \
 - Will Google improve Google Analytics by adding features from Measure Map?
-  \
 - Will Measure Map and Google Analytics co-exist as different products aimed at two different target groups: Bloggers vs. commercial sites?
-  \
 - How can Jeff claim (in the email) that Adaptive Path continues in the same spirit, and on the other hand say that he's now a Google Employee? (“I wonder if wearing [this](http://www.googlestore.com/product.asp?code=GO0113) is too much for my first day at Google?”)
-  \
 - How will Adaptive Path spend the money earned? I kind of think these guys are not just retiring. There might be something else on their radar?
-  
 
 And of course the obvious:
 
-- \
 - How long will Measure Map stay in closed alpha-testing?
-  \
 - When is it ready for beta, or even ready for public launch?
-  
 
 Also, I think it's worth noting that it's only 3 months since Google Analytics launched. At that time, attention was drawn at whether MeasureMap had a market when Google Analytics were free. Techcrunch [Google Analytics Swings at Measure Map](http://www.techcrunch.com/2005/11/14/google-analytics-swings-at-measure-map/ "Techcrunch: Google Analytics Swings at Measure Map (by Michael Arrington)") is a good example.
 
@@ -44,10 +36,6 @@ It seems a very smart move for both companies. So I guess the old saying goes: *
 
 More info:
 
-- \
 - Google Blog: [Here comes Measure Map](http://googleblog.blogspot.com/2006/02/here-comes-measure-map.html "Official Google Blog: Here Comes Measure Map")
-  \
 - Adaptive Path: [Measure Map Goes to Google](http://adaptivepath.com/team/news/2006_02.php#000578 "Adaptive Path news: Measure Map Goes to Google")
-  \
 - Techcrunch: [Google Buys MeasureMap](http://www.techcrunch.com/2006/02/14/google-buys-measuremap/ "Techcrunch: Google Buys MeasureMap (by Michael Arrington)")
-  \

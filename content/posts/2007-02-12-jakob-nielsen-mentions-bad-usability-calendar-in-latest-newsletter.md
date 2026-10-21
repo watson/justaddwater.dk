@@ -17,7 +17,8 @@ More info:
 - Justadddwater.dk: [Bad Usability Calendar 2007 Finally Ready](/2007/01/27/bad-usability-calendar-2007-finally-ready/ "Justaddwater.dk: Bad Usability Calendar 2007 Finally Ready")
 - Justaddwater.dk: [Bad Usability Calendar (2006)](/2006/10/16/bad-usability-calendar/ "Justaddwater.dk: Bad Usability Calendar 2006")
 
-> Jakob Nielsen's Alertbox for February 12 is now online at: \> http://www.useit.com/alertbox/government-nonprofit.html
+> Jakob Nielsen's Alertbox for February 12 is now online at:\
+> \> http://www.useit.com/alertbox/government-nonprofit.html
 >
 > Summary:\
 > Although the gains don't fall into traditional profit columns, there are clear arguments for improving usability of non-commercial websites and intranets. In one example, a state agency could get an ROI of 22,000% by fixing a basic usability problem.

@@ -18,15 +18,10 @@ For a while it was the same with the Analytics account for this blog. But now af
 
 When viewing the fist page of the reports area 4 nice Executive graphs are shown:
 
-- \
 - **Visits and Pageviews** - A linier graph showing unique visitors and page views over a 7 day period
-  \
 - **Visits by New and Returning** - The percentage of new vs. returning visitors
-  \
 - **Geo Map Overlay** - Not a graph but a world map showing where your visitors come from
-  \
 - **Visits by Source** - The domain from where your visitors are referred
-  
 
 The Visits by Source show a list of the top 6 referring domains. Here I found a minor usability issue if the referring domains are too long. See the example below from the domain [www.skolehjemsamtaler.dk](http://www.skolehjemsamtaler.dk/) where the domain "standard.skolekom" is shown in 3rd position. As we all know there is no such thing as a .skolekom [TLD](http://en.wikipedia.org/wiki/Top-level_domain) and when looking in the HTML source I can of cause see the it should say "standard.skolekom.emu.dk". The box where it is showing the domain is just not wide enough to show the whole name.
 

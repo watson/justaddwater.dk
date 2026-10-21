@@ -36,10 +36,7 @@ So here is a school example on how to get the feedback out back to the audience.
 
 I would like to know more about this redesign:
 
-- \
 - How big a percentage is getting the redesigned version?
-  \
 - How many of the visitors actually go to the "quick tour" page I show above?
-  
 
 Learn more at http://www.amazon.com/gp/events/gno/103-8005038-4005464

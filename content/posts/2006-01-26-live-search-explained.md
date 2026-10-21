@@ -24,15 +24,10 @@ That concludes that users are likely to refine results when searching. Refining 
 
 The user experience is very different that traditional search: Here you type, hesitate, and get results. This has some benefits:
 
-- \
 - Relevant alternatives are presented as you type, so the best match can be picked immediately.
-  \
 - Its easy to refine your search: Just continue typing
-  \
 - If the search typed is too narrow its easy to press backspace and remove characters.
-  \
 - In the better implementations (like Google Suggest above), the best match is highlighted in the input field. In this way, the user can press "enter" and immediately go to the content page. Traditional search involves an extra click on the results page.
-  
 
 **Live search can be a big time saver for a user**, especially considering that at 49% of all searches will be refined. Furthermore, misspellings can be corrected immediately (there is no need to wait until the results show up.
 
@@ -62,18 +57,11 @@ Christopher Allen wrote [Google Suggest Dissected](http://www.lifewithalacrity.c
 There are clear indications that autocomplete save time, reduces errors and form resubmissions. The missing point right now is probably some real usability data to back it up. Recently, uxmatters had a good article on traditional search forms (evaluating ebay, amazon, flickr and more). Findings are available in the article "[Evaluating the Usability of Search Forms](http://dev.uxmatters.com/MT/archives/000068.php "Evaluating the Usability of Search Forms Using Eyetracking: A Practical Approach")". And this type of findings is needed to back up my assumptions with user test data.\
 Examples
 
-- \
 - [Windows Vista](http://www.microsoft.com/windowsvista/features/default.mspx "Microsoft.com: Windows Vista User Experience") has [live search is deeply integrated](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/ "Justaddwater.dk: Windows Vista setting new standards for Find-as-You-Type searching"),
-  \
 - [Apple's Spotlight](http://www.apple.com/macosx/features/spotlight/ "Apple.com: Mac OS X - Spotlight (find as you type)") user interface from OS X
-  \
 - [MSN Desktop Search](http://toolbar.msn.com/tour_desktop/start.aspx "Microsoft.com: MSN Search Toolbar Tour")
-  \
 - [Google Suggest](http://www.google.com/webhp?hl=en&complete=1 "Google labs: Google suggest")
-  \
 - [Google GMail](http://mail.google.com "Google GMail") autocompletes contacts
-  \
 - [Kayak.com](http://kayak.com "Kayak.com travel booking") autocompletes to and from locations
-  
 
 [](http://www.madmanweb.com/links/archives/000459.html) [](http://www.madmanweb.com/links/archives/000459.html)

@@ -16,8 +16,5 @@ Very nice to see that the calendar actually is released under a Creative Commons
 
 Related posts:
 
-- \
 - [Bad Usability Calendar](/2006/10/16/bad-usability-calendar/ "Permanent Link: Bad Usability Calendar") (2006)
-  \
 - [Bad Usability Calendar 2007 open for proposals](/2006/11/10/bad-usability-calendar-2007-open-for-proposals/ "Permanent Link: Bad Usability Calendar 2007 open for proposals")
-  \

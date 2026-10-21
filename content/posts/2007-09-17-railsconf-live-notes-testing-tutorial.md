@@ -14,9 +14,7 @@ Below are the live notes, I wrote with Mads Buus (we wrote the notes collaborati
 
 [![IMG_3392_crop](http://farm2.static.flickr.com/1342/1395418767_1d23095952_m.jpg)](http://www.flickr.com/photos/jesper/1395418767/)
 
-
 [![IMG_3397](http://farm2.static.flickr.com/1411/1396313456_e999c55dfe_m.jpg)](http://www.flickr.com/photos/jesper/1396313456/)
-
 
  
 
@@ -224,12 +222,8 @@ RSpec generators (general opinion) they are probably too long
 
 Windows shortcuts for E-texteditor
 
-- \
 - CTRL+R run test file we're working in.
-  \
 - CTRL+Shift+R run test in focus
-  \
 - deft + tab "def test\_ ... end"
-  
 
 Idea for "deft" shortcut: replace all spaces as-you-type with underscores

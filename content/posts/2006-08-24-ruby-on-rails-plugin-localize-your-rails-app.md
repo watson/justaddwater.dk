@@ -18,21 +18,13 @@ I gave a short plugin demo at our recent Copenhagen Rails Meetup. [Olle](http://
 
 **Currently supported languages:**
 
-- \
 - Danish
-  \
 - Dutch (thanks Jeroen Houben)
-  \
 - German
-  \
 - Spanish (thanks [Luis Villa](http://grancomo.com))
-  \
 - Swedish (thanks [Olle Jonsson](http://olle.ter.dk/blog/))
-  \
 - Swedish Chef
-  \
 - Pirate Talk (thanks Tobias Michaelsen)
-  
 
 ![screenshot-localization-simplified-sweedish-chef.png](/wp-content/uploads/2006/08/screenshot-localization-simplified-sweedish-chef.png)\
 The main reason why I wanted to support Swedish chef and Pirate talk is that I want to remind myself to have fun while coding. And of course it's a plus that [International Talk like a Pirate day](http://www.google.com/search?q=International%20Talk%20like%20a%20Pirate) is coming up at Sept. 19, arrrh!
@@ -41,19 +33,12 @@ The main reason why I wanted to support Swedish chef and Pirate talk is that I w
 
 This plugin modifies the following most used helpers for Rails
 
-- \
 - Localized errors and error headings
-  \
 - Localized monthnames on date_select etc. (changing the order of Y-M-D, where Rails allows)
-  \
 - Localized distance_of_time_in_words
-  \
 - Localized to_currency (but not changing the order of unit/currency)
-  \
 - Simple pluralization also available in the lang-file (but currently only used for pluralizing "error"=\>"errors" in local language)
-  \
 - Uses standard Rails methods. In this way, there is no tedious rewrite of localization functions in your view files
-  
 
 There are some FIXME's in the code and any help on the plugin is appreciated.
 

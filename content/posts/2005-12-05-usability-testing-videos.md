@@ -21,11 +21,8 @@ In my job, I have witnessed the same experience: Recently I helped a customer in
 
 When the prototype was ready, we tested. The test showed us some things (which i can not mention here) we had taken for granted. "They can figure this out". "The users already know this". We presented this for the decision makers as a plain paper report. On that background **management decided to continue with no changes**. It seemed that our paper argument was not strong enough. At a later user test we videotaped everything. Management never saw it, because of two reasons. Two reasons which I think are some of the biggest mistakes:
 
-1.  \
-2.  **Management never showed up at the usertest**. We had sent them invites stressing the value of a usertest.
-    \
-3.  **Management did not want to see video clips afterwards**. We wanted to make a small 2 minute video with the worst findings in the test, but they never allowed time to edit that video.
-    
+1.  **Management never showed up at the usertest**. We had sent them invites stressing the value of a usertest.
+2.  **Management did not want to see video clips afterwards**. We wanted to make a small 2 minute video with the worst findings in the test, but they never allowed time to edit that video.
 
 I learned something from this. I guess that next time I'll not ask permission to edit video — I'll assume that it's part of the usertest.
 

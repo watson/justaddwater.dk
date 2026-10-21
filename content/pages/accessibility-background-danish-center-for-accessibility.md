@@ -18,20 +18,12 @@ The article does not seem to answer exactly where the data comes from, what rese
 
 The following metadata is available on the article:
 
-- \
 - Created 2004-05-28
-  \
 - Modified 2004-07-28
-  \
 - This copy is made 2006-01-18
-  \
 - Language: Danish
-  \
 - URL of original document: [www.dcft.dk/it/artikler/universel](http://www.dcft.dk/it/artikler/universel) ([print version](http://www.dcft.dk/it/artikler/universel/document_print))
-  \
-- Screenshot of original article available\
-  [![Screenshot of this article from the originating website www.dcft.dc](/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png)](/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png "Screenshot of this article from the originating website www.dcft.dc")
-  
+- Screenshot of original article available [![Screenshot of this article from the originating website www.dcft.dc](/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png)](/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png "Screenshot of this article from the originating website www.dcft.dc")
 
 Please comment on this if you have any similar data, if you know more about this data, or if you'd translate this page from Danish into other languages.
 
@@ -45,31 +37,18 @@ Tilgængelighed er et spørgsmål om at give flest mulige mennesker i flest muli
 
 Tilgængelighed på nettet berører mange forskellige brugergrupper. En tilgængelig hjemmeside tager hensyn til brugere, der f.eks.:
 
-- \
 - Anvender tidlige versioner af en browser eller anvender en andenbrowser end den, som siden er testet på.
-  \
 - Anvender en langsom Internetforbindelse eller har en lille skærm.
-  \
 - Anvender nye teknologiske platforme som f.eks. mobile og trådløse enheder.
-  \
 - Har aldersbetingede funktionsnedsættelser og f.eks. svært ved at se, høre tydeligt eller har svært ved at bruge en mus.
-  \
 - Er farveblinde.
-  \
 - Er blinde og derfor har behov for at få teksten læst op af talesyntese.
-  \
 - Er ordblinde eller på anden måde har svært ved at læse en tekst.
-  \
 - Er svagsynede og har behov for at forstørre informationen, uden at overblikket mistes.
-  \
 - Er bevægehandicappede og derfor har svært ved at eller ikke kan anvende tastatur eller mus.
-  \
 - Er hørehandicappede.
-  \
 - Er døve og har har derfor svært ved at opfatte digitaliseret lyd og tale, hvis disse ikke samtidig er gengivet på en tekstlig form.
-  \
 - Har kognitive funktionsnedsættelser og har problemer med stor kompleksitet og informationstæthed.
-  
 
 Op mod 1/4 af alle internetbrugere påvirkes af tilgængelighedsproblemer.
 
@@ -85,124 +64,17 @@ Der findes ingen samlede statistikker over antallet af handicappede mennesker i 
 
 ### Tilgængelighed og handicaps
 
-
-
-
-
-Handicapgruppe
-
-
-
-
-Estimeret antal
-
-
-
-
-Af populationen
-
-
-
-
-
-Synshandicappede (blinde og svagsynede)
-
-
-51.000
-
-
-1,0 %
-
-
-
-
-Døve
-
-
-4.000
-
-
-0,1%
-
-
-
-
-Døvblinde
-
-
-1.250
-
-
-0,02%
-
-
-
-
-Personer med motoriske funktionsnedsættelser
-
-
-26.360
-
-
-0,5%
-
-
-
-
-Personer med kognitive funktionsnedsættelser
-
-
-75.000
-
-
-1.5%
-
-
-
-
-Personer med mere end én funktionsnedsættelse (hjerneskadede, multihandicappede, mennesker med cerebral parese, mennesker med dissemineret sklerose og mennesker med forskellig syndromer)
-
-
-7.000
-
-
-0,1%
-
-
-
-
-Ordblinde/dyslektikere
-
-
-200.000
-
-
-3,9%
-
-
-
-
-Personer med nedsat læse- og skrivefunktion
-
-
-612.000
-
-
-12 %
-
-
-
-
-Samlet population
-
-
-5.100.000
-
-
-100,0%
-
-
-
+| Handicapgruppe | Estimeret antal | Af populationen |
+|----|----|----|
+| Synshandicappede (blinde og svagsynede) | 51.000 | 1,0 % |
+| Døve | 4.000 | 0,1% |
+| Døvblinde | 1.250 | 0,02% |
+| Personer med motoriske funktionsnedsættelser | 26.360 | 0,5% |
+| Personer med kognitive funktionsnedsættelser | 75.000 | 1.5% |
+| Personer med mere end én funktionsnedsættelse (hjerneskadede, multihandicappede, mennesker med cerebral parese, mennesker med dissemineret sklerose og mennesker med forskellig syndromer) | 7.000 | 0,1% |
+| Ordblinde/dyslektikere | 200.000 | 3,9% |
+| Personer med nedsat læse- og skrivefunktion | 612.000 | 12 % |
+| Samlet population | 5.100.000 | 100,0% |
 
 ## Relevante links
 

@@ -101,4 +101,4 @@ Jakob Nielsen: "[The power of default values](http://www.useit.com/alertbox/defa
 9.  1%
 10. 4%
 
-Regardless of the accurate numbers, it does not alter the conclusions that users focus on first results. Furthermore, there is nothing in the materials that backs up my theory that people narrow their search until what they look for are in the top results. Please let me know if you are aware of any numbers that can confirm that.\
+Regardless of the accurate numbers, it does not alter the conclusions that users focus on first results. Furthermore, there is nothing in the materials that backs up my theory that people narrow their search until what they look for are in the top results. Please let me know if you are aware of any numbers that can confirm that.

@@ -9,3 +9,5 @@ tags: []
 ---
 
 I wanted a way to see if somebody had entered "illegal" data into loaded fixtures. So I wrote this simple rake task. It's also useful to run as you add more validations to your files.
+
+[View gist 297427 on GitHub](https://gist.github.com/297427)

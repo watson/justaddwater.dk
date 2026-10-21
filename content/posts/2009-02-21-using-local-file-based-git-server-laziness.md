@@ -10,20 +10,14 @@ tags: ["Code", "git", "ssh", "svn", "Web Development"]
 
 My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup:
 
-1.  \
-2.  Each developer's machine has it's own Git repository.
-    \
-3.  On my machine I had an extra 'master' repository that other developers could push into.
-    \
-4.  In the example below the local developer repos is called 'local' and the master is called 'remote'
-    \
-5.  The master repository could be on a network drive as well.
-    
+1.  Each developer's machine has it's own Git repository.
+2.  On my machine I had an extra 'master' repository that other developers could push into.
+3.  In the example below the local developer repos is called 'local' and the master is called 'remote'
+4.  The master repository could be on a network drive as well.
 
 Developer's workflow: Push changes to 'remote':
 
 ``` bash
-
 cd local #developer's local repository
 git pull ../remote master #get the latest code from 'remote' repository
 git push ../remote master #push the recent commits from here to the 'remote' folder
@@ -34,7 +28,6 @@ git push ../remote master #push the recent commits from here to the 'remote' fol
 In stead of using a path in "git pull ../remote master", it's even easier to add the path just like you would do on GitHub or similar:
 
 ``` bash
-
 git remote add origin ../remote/ #one time for all
 git pull origin master # pull from the 'remote' directory
 git push origin master #push recent commits from here to the 'remote' folder
@@ -45,14 +38,12 @@ git push origin master #push recent commits from here to the 'remote' folder
 It's real easy to make a remote backup copy of your Git repository even if you have not set up a git server. Here is an example of how I did it on a server where I have SSH access to:
 
 ``` bash
-
 git remote add origin ssh://jesper@myserver.com/~/project.git/
 ```
 
 Setup the repository on the remote server:
 
 ``` bash
-
 $ ssh jesper@myserver.com
 Welcome to myserver.com!
 $ mkdir project.git && cd project.git/

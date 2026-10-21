@@ -14,13 +14,9 @@ tags: []
 
 Jakob Nielsen does provide us with some interesting statistics. The general Web 2.0 website can normally divide its users into three categories:
 
-1.  \
-2.  1% of your users regually contributes
-    \
-3.  9% of your users occasionally contributes
-    \
-4.  90% of your users almost never contributes
-    
+1.  1% of your users regually contributes
+2.  9% of your users occasionally contributes
+3.  90% of your users almost never contributes
 
 What can we use these numbers for? Well, we can try to actually use good business practices and focus on the largest user group. As a techie I have a tendency to focus on the fun/interesting parts of a website - but these are the parts that usually only the first procentage of the users use!
 

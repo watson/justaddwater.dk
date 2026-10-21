@@ -13,3 +13,5 @@ I created a list of snippets that I loaded into my IntelliJ editor, which I find
 Snippet 1: Live template to bootstrap a class to use UI binder logic. Very useful when converting existing (pre gwt 2.0) Java classes to UI binder pattern, which gives better separation of logic and view.
 
 Snippet 2: Create new UiBinder.ui.xml file. Intellij has support for creating entire new java class + uibinder file. That is useful for new classes, but most often I find myself converting an existing class, and needed this shortcut for that.
+
+[View gist 612402 on GitHub](https://gist.github.com/612402)

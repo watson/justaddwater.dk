@@ -12,18 +12,11 @@ Firebug keeps surprising me. I've recently been working on code for several web 
 
 Before you start, [get Firebug](http://www.getfirebug.com/) for Firefox (if you haven't got it already).
 
-1.  \
-2.  Press F12 and the Firebug window appears below in the browser window
-    \
-3.  Start the HTML inspector and mouse over any element, you want to learn about.\
-    [![firebug-css-tip-start-html-inspector-thumb.png](/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector-thumb.png)](/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector.png "firebug-css-tip-start-html-inspector.png")
-    \
-4.  Now, you can see the HTML, the hierachy,and the CSS rules. For me it has been very useful, that overridden CSS rules are marked with strikethrough text. That's a very handy information when CSS specificity plays in with a trick or two.
-    \
-5.  Press escape to stop inspector mode, and move mouse down to CSS rules.
-    \
-6.  Mouse over the CSS rules reveal a small icon to toggle the line. See screenshot animation below.
-    
+1.  Press F12 and the Firebug window appears below in the browser window
+2.  Start the HTML inspector and mouse over any element, you want to learn about. [![firebug-css-tip-start-html-inspector-thumb.png](/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector-thumb.png)](/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector.png "firebug-css-tip-start-html-inspector.png")
+3.  Now, you can see the HTML, the hierachy,and the CSS rules. For me it has been very useful, that overridden CSS rules are marked with strikethrough text. That's a very handy information when CSS specificity plays in with a trick or two.
+4.  Press escape to stop inspector mode, and move mouse down to CSS rules.
+5.  Mouse over the CSS rules reveal a small icon to toggle the line. See screenshot animation below.
 
 ![firebug-css-bugfix-toggle.gif](/wp-content/uploads/2007/04/firebug-css-bugfix-toggle.gif)
 
@@ -31,8 +24,5 @@ This trick will probably completely replace my use of "edit CSS" in [Webdevelope
 
 Related info:
 
-- \
 - Justaddwater: [Web developer’s collection of browser tool](/2005/11/30/web-developers-collection-of-browser-tools/ "Permanent Link: Web developer’s collection of browser tools") (November 2005)
-  \
 - [Firebug keyboard shortcuts](http://www.getfirebug.com/keyboard.html)
-  \

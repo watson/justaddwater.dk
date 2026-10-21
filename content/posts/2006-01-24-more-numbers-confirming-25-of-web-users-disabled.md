@@ -14,127 +14,23 @@ More numbers show up that back up my claim that [25% of your users are disabled]
 
 I had a chat today with a former employe of Danish Center for Accessibility, and he pointed me to Tiresias, an organisation that has collected statistics from Europe. I was told Tiresias is known for it's conservative estimates and high credibility. From [Tiresias Demographics of Impairments](http://www.tiresias.org/guidelines/demographics.htm "Tiresias - Guidelines (Demographics of Impairments)"):
 
-
-
-**User group with problems using\
-ICT** (Information and Communications Technology)
-
-
-**Percentage of population in Europe**
-
-
-
-
-[Wheelchair](http://www.tiresias.org/guidelines/wheelchairs.htm) user
-
-
-0.4
-
-
-
-
-Cannot walk without aid
-
-
-5
-
-
-
-
-Cannot use fingers
-
-
-0.1
-
-
-
-
-Cannot use one arm
-
-
-0.1
-
-
-
-
-Reduced strength
-
-
-2.8
-
-
-
-
-Reduced coordination
-
-
-1.4
-
-
-
-
-Speech impaired
-
-
-0.25
-
-
-
-
-Language impaired
-
-
-0.6
-
-
-
-
-Dyslexic
-
-
-1
-
-
-
-
-Intellectually impaired
-
-
-3
-
-
-
-
-Deaf
-
-
-0.1
-
-
-
-
-Hard of hearing
-
-
-6
-
-
-
-
-Blind
-
-
-0.4
-
-
-
-
-Low vision
-
-
-1.5
-
-
+|  |  |
+|----|----|
+| **User group with problems using ICT** (Information and Communications Technology) | **Percentage of population in Europe** |
+| [Wheelchair](http://www.tiresias.org/guidelines/wheelchairs.htm) user | 0.4 |
+| Cannot walk without aid | 5 |
+| Cannot use fingers | 0.1 |
+| Cannot use one arm | 0.1 |
+| Reduced strength | 2.8 |
+| Reduced coordination | 1.4 |
+| Speech impaired | 0.25 |
+| Language impaired | 0.6 |
+| Dyslexic | 1 |
+| Intellectually impaired | 3 |
+| Deaf | 0.1 |
+| Hard of hearing | 6 |
+| Blind | 0.4 |
+| Low vision | 1.5 |
 
 As you see, still no technical disability mentioned here. A quick roundup of the numbers: Pretty much the same mentioned in my previous article. The numbers above add up to 22.65%, but you **can't really add them up since some people have more than one disability**.
 

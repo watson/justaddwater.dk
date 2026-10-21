@@ -23,7 +23,6 @@ In Ruby on Rails, I did that by customizing the columns I wanted to view.
 In the model I add a new method `self.`**`simple_content_columns`**:
 
 ``` ruby
-
 def self.simple_content_columns
   column_names = %w{company_number name address}
   columns = []
@@ -37,22 +36,20 @@ end
 Then in the list view I change from "model.content_columns" to "model.simple_content_columns" in the file: file "\_list.rhtml":
 
 ``` ruby
-
-
-  
+<table>
+  <tr>
   < % for column in Company.simple_content_columns %>
-    < %= column.human_name %>
+    <th>< %= column.human_name %></th>
+  < % end %>
+  </tr>
+  
+< % for company in @companies %>
+  <tr>
+  < % for column in Company.simple_content_columns %>
+    <td>< %=h company.send(column.name) %></td>
+  < % end %>
+[...]
 ```
-
-\< % end %\>
-
-\< % for company in @companies %\>
-
-\< % for column in Company.simple_content_columns %\>
-
-\< %=h company.send(column.name) %\>
-
-\< % end %\> \[...\]
 
 The only thing I modified in the view file was to replace `Company.content_columns` with `Company.`**`simple_`**`content_columns`.
 

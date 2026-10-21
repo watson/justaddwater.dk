@@ -16,7 +16,6 @@ For weeks I had been looking forward to presenting [my talk on rapid prototyping
 
 ![IMG_7746_crop.jpg](/wp-content/uploads/2006/06/IMG_7746_crop.jpg)
 
-
 Jesper presenting at reboot8
 
 Here is some of the feedback I got. I decided to shamelessly to put the kind comments here, so if I have a bad day, I can get back to this post and read all your kind comments :-)
@@ -24,18 +23,14 @@ Here is some of the feedback I got. I decided to shamelessly to put the kind com
 > Thanks a lot, I really enjoyed the demo! This should be required reading for any web development team.\
 > Source: [Jeppe Kruse](/2006/06/01/my-talk-at-reboot8-prototyping/#comment-4228)
 
-
 > Good to see clueful work in a big consulting firm…nice presentation.\
 > Source: [Guy Dickinson](/2006/06/01/my-talk-at-reboot8-prototyping/#comment-4323)
-
 
 > If I had the money I would hire you.\
 > [Eric Reiss](http://www.e-reiss.com/About%20us/About%20Eric%20Reiss.aspx "Eric Reiss: e-reiss.com") told me after the presentation
 
-
 > After my first attendance last year I knew what to expect somehow and what this will be all about. So this year I did have expectations - the biggest one to be motivated and inspired. This really did happen. The talks from Bill Laio, [Ben Hammersley](http://www.benhammersley.com/) and [Jesper Rønn-Jensen](//) were really good and did inspire me again.\
 > Source: [Michael Hartmann (designitsimple.de)](http://www.designitsimple.de/wordpress/2006/06/1st-day-of-reboot8/)
-
 
 > Prototyping is way important, not only in software engineering, also with organisations. You definitely should understand why, [read here](http://www.shamiro.ch/ct.ashx?id=c574ed95-d344-4caa-976f-6142082a0f8d&url=http%3a%2f%2fjustaddwater.dk%2f2006%2f06%2f01%2fmy-talk-at-reboot8-prototyping%2f) \[link to justaddwater.dk\].\
 > Source: [Benjamin J. J. Voigt](http://www.shamiro.ch/My+Reboot+Pics++Forward+And+Backward+Looking.aspx)
@@ -58,7 +53,6 @@ I saw [Doc Searls](http://doc.weblogs.com/whoIsDoc) in the audience just before 
 
 [![Photo of Thomas Watson by Doc Searls](http://static.flickr.com/60/159026990_fbeb57b4fc_m.jpg)](http://flickr.com/photos/docsearls/159026990/)\
 Thomas Watson Steen (photo by Doc Searls)
-
 
 ### Ruby on Rails meeting
 

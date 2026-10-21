@@ -12,13 +12,9 @@ I gladly admit that I'm a usability geek, which means that sometimes, the most i
 
 Our new dvd recorder at home is not very intuitive to use so normally I control it when our kid wants to see something on it. Today I forgot to set the timer, and called to ask my wife do it. While she was frustrated on the trouble I had to put her through, i focused on some useful usability observations:
 
-1.  \
-2.  My phone registered the call duration at 9 minutes and 33 seconds for talking her through how to create a timer on the dvd (including the 45 seconds startup time).
-    \
-3.  I had a chance to confirm the usability issues I have seen and [written about earlier](/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/ "Previous article: DVD harddisk recorder makes my thumbs hurt") (and want to write more about).
-    \
-4.  I regretted that I did not record the call, so that I could have been able to use it later.
-    
+1.  My phone registered the call duration at 9 minutes and 33 seconds for talking her through how to create a timer on the dvd (including the 45 seconds startup time).
+2.  I had a chance to confirm the usability issues I have seen and [written about earlier](/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/ "Previous article: DVD harddisk recorder makes my thumbs hurt") (and want to write more about).
+3.  I regretted that I did not record the call, so that I could have been able to use it later.
 
 Another example:
 
@@ -28,6 +24,4 @@ I'm active in our [Copenhagen Ruby](http://copenhagenrb.dk/) user group. The mee
 
 Earlier article:
 
-- \
 - [DVD Harddisk Recorder Makes My Thumbs Hurt](/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/ "Permanent Link to DVD Harddisk Recorder Makes My Thumbs Hurt")
-  \

@@ -34,22 +34,14 @@ It's pretty neat if you ask me - Simple HTML list with a little CSS magic :)
 
 In a couple of related articles we have written about what there can be done to improve the usability of blogs:
 
-- \
 - [Weblog usability followup](/2006/01/17/weblog-usability-followup/)
-  \
 - [Blog Usability Improvements](/2006/01/18/blog-usability-improvements/)
-  \
 - [Blog usability improvements: What we’ll change to make this blog better](/2006/01/19/blog-usability-improvements-what-well-change-to-make-this-blog-better/)
-  
 
 We will implement these improvements during the next couple of months and will post about our findings along the way...
 
 *UPDATE: I thought that I would add some links to other bloggers that have written about and implemented this new trend:*
 
-- \
 - [Jonathan Boutelles](http://www.jonathanboutelle.com/) who have also written [a series of posts about the Mullet layout](http://www.jonathanboutelle.com/mt/archives/mullet_blog_layout/index.html)
-  \
 - [Kapil Mohan](http://www.kapilmohan.com/) in the post "[Mullet](http://www.kapilmohan.com/2006/01/22/mulleted/ "Kapil Mohan: Mullet")" (and here is [his code for WordPress](http://www.kapilmohan.com/2006/01/22/mullet-code-for-wordpress/ "Kapil Mohan: Mullet code for WordPress"))
-  \
 - [Jeroen Coumans](http://www.jeroencoumans.nl/journal/) in the post "[Design and usability updates](http://www.jeroencoumans.nl/journal/design-and-usability-updates "Jeroen Coumans: Design and usability updates")"
-  \

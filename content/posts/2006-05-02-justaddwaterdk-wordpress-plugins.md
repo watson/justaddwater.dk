@@ -12,10 +12,7 @@ I've created a bunch of WordPress plugins for our justaddwater.dk blog. In the s
 
 Currently two plugins are available:
 
-- \
 - **JAW Duplicate Widgets** - Enables the duplication of a sidebar widget to be used more then once.
-  \
 - **JAW Popular Posts Widget** - Shows the most popular posts in the sidebar of the blog.
-  
 
 [Continue to the plugins download page »](/wordpress-plugins/ "WordPress Plugins")

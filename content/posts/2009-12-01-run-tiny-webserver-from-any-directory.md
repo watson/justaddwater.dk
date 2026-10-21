@@ -12,6 +12,8 @@ There are alternatives to [Resolve Symlinks When Copying Files With Rsync .](../
 
 How about firing up a (tiny) webserver that starts up quickly. Yehuda Katz suggested this some years ago:
 
+[View gist 246571 on GitHub](https://gist.github.com/246571)
+
 Just drop this file in any directory, run the script, and it serves the files. I use this frequently for instance when I need to browser test static files on different virtual machines. (I modified the script shebang to work on my Mac).
 
 I prefer to use this server.rb script in stead of accessing the files from a shared folder from the virtual machine. It's faster to write the address for `http://172.16.244.1:2000/accordion.html` than for `\\.host\Shared Folders\jesper On My Mac\src\htmlguide\accordion.html` – and easier to remember.

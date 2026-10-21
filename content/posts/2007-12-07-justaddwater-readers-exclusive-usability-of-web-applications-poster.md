@@ -20,10 +20,6 @@ What do you think of his new poster?
 
 Related info:
 
-- \
 - Justaddwater: [Definition of User Experience Revisited](/2006/06/21/user-experience-revisited/)
-  \
 - Experience Dynamics: [Importance of User Experience](http://www.experiencedynamics.com/science_of_usability/usability_posters/user_experience/) (purchase page)
-  \
 - Experience Dynamics: [Importance of User Experience, Danish poster](http://www.experiencedynamics.com/science_of_usability/usability_posters/user_experience/translations/index.php?language=dk)
-  \

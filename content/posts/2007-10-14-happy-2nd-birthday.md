@@ -26,25 +26,13 @@ Put on top of that an average of 400 visitors per day coming to our site from ot
 
 ### Top posts
 
-
-1.  \
-2.  [Funny Signs](/2006/05/30/funny-signs/)
-    \
-3.  [Design for Browser Size — Not Screen Size](/2006/08/17/design-for-browser-size-not-screen-size/)
-    \
-4.  [More visual HTML jokes](/2007/01/05/more-visual-html-jokes/)
-    \
-5.  [How to indicate required or optional form fields](/2006/03/29/how-to-indicate-required-or-optional-form-fields/)
-    \
-6.  [Live search explained](/2006/01/26/live-search-explained/)
-    \
-7.  [Bad Usability Calendar](/2006/10/16/bad-usability-calendar/)
-    \
-8.  [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/)
-    \
-9.  [Lenovo Problem: No Wireless Reconnect After Standby](/2007/07/25/lenovo-problem-no-wireless-reconnect-after-standby/)
-    \
-10. [The IE PNG fix vs. Accessibility](/2006/11/06/the-ie-png-fix-vs-accessibility/)
-    \
-11. [Replacement for Standard Windows Console](/2007/04/30/replacement-for-standard-windows-console/)
-    \
+1.  [Funny Signs](/2006/05/30/funny-signs/)
+2.  [Design for Browser Size — Not Screen Size](/2006/08/17/design-for-browser-size-not-screen-size/)
+3.  [More visual HTML jokes](/2007/01/05/more-visual-html-jokes/)
+4.  [How to indicate required or optional form fields](/2006/03/29/how-to-indicate-required-or-optional-form-fields/)
+5.  [Live search explained](/2006/01/26/live-search-explained/)
+6.  [Bad Usability Calendar](/2006/10/16/bad-usability-calendar/)
+7.  [Ruby on Rails as rapid prototyping tool](/2006/04/12/rails-prototyping/)
+8.  [Lenovo Problem: No Wireless Reconnect After Standby](/2007/07/25/lenovo-problem-no-wireless-reconnect-after-standby/)
+9.  [The IE PNG fix vs. Accessibility](/2006/11/06/the-ie-png-fix-vs-accessibility/)
+10. [Replacement for Standard Windows Console](/2007/04/30/replacement-for-standard-windows-console/)

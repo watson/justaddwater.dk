@@ -12,19 +12,12 @@ This is Jesper's notes from Danish Conference Usability Dagene, November 21-22, 
 
 Also, we feel that they can be used as background information for the blog posts on Usability Dagene:
 
-- \
 - [On our way to Danish usability conference](/2005/11/18/danish-usability-conference/ "Permanent Link to On our way to Danish usability conference")
-  \
 - [“Usability dagene 05″ day 1 roundup](/2005/11/21/usabilitydagene-monday/ "Permanent Link to “Usability dagene 05″ day 1 roundup")
-  \
 - [“Usability dagene 05″ day 2 roundup part 1](/2005/11/22/usabilitydagene-tuesday1/ "Permanent Link to “Usability dagene 05″ day 2 roundup part 1")
-  \
 - [“Usability dagene 05″ day 2 roundup part 2](/2005/11/24/usabilitydagene-tuesday2/ "Permanent Link to “Usability dagene 05″ day 2 roundup part 2")
-  
-
 
 ------------------------------------------------------------------------
-
 
 ### Jakob Nielsen
 
@@ -32,39 +25,24 @@ Samme fejl 5 uger siden / 5 år side. Dokumenteret
 
 Brugeren er ikke designer: Postulat eller data: "Jeg ville have set det hvis det havde set sådan ud"
 
-- \
 - Conversion rate 1.1% -\> 3.4%
-  \
 - % krav om personlig information
-  \
 - \+ nyttig funktionalitet
-  \
 - = 3 gange så stor nytte af reklame budget
-  
 
 Successrate
 
-- \
 - Site specific: 66%
-  \
 - Web-wide: 60%
-  \
 - ex. information om en truet dyreart, eller find billig flybillet til Mexico
-  
 
 First action
 
-- \
 - 88% søgemaskine
-  \
 - other sites visited: 3.2 (0.4 revisits)
-  \
 - First page: Homepage 40% (35sec novice, 25sec expert)
-  \
 - First page: Interior page 60% (60sec novice, 45sec expert)
-  \
 - 2-4 minutes per website - så er de væk!
-  
 
 1997-\>2005 på 8 år er vi gået fra 40%-\>60% (eller 66%). Jespers tilføjelse: 16 gange mere information.\
 Brugertest eller følge dine anbefalinger.
@@ -73,19 +51,13 @@ Sharepoint eller SAP: "alle produkterne har den svaghed"
 
 Hvad ellers påvirker subjektiv tilfredshed?
 
-- \
 - emotionel design (rund/behageligt). Don Norman
-  
 
 Poynter institute: [poynterextra.org/eyetrack2004](http://poynterextra.org/eyetrack2004/ "Poynter institute: Eyetrack III"). Key findings:
 
-- \
 - 2 første ord i overskrift
-  \
 - bannerblindhed
-  \
 - Gammel pointe: Scan læs scan. De har dobbelt så meget i hovedet
-  
 
 Videoklip med yngre/børn: "more pictures". "Text is boring"
 
@@ -93,13 +65,9 @@ Videoklip med yngre/børn: "more pictures". "Text is boring"
 
 Fjerne funktioner.
 
-- \
 - Hvor mange går til et websted for at gennemføre et halvt skema og komme tilbage igen næste dag.
-  \
 - Forhindre fejl ved at fjerne funktioner.
-  \
 - Livet er for kort til knapper du ikke forstår
-  
 
 Fordobling af forbbedring. Fordoble gennemførelse. Eksempel Tokyo Plakater i subway er med fotomodeller. Internet: Involvering, interaktivt. Det involverer mig. Video med sjovt eksempel: Der var brugt hvid hudfarve og japansk kvinde undrer sig over at man ser det med hvidt ansigt og ikke hudfarve.\
 5 brugere -\> typisk 50-100 brugere
@@ -115,27 +83,18 @@ No usability work:
 
 Conservative:
 
-- \
 - other findings may lead to remove or not build wrong features
-  \
 - No usability leads to demand for correcting mistakes
-  \
 - Wrong investments without usability
-  
-
 
 ### Tangora, Martin
 
 AJAX admin interface for CMS editing\
 Før:
 
-- \
 - browser reloads forstyrrer, mister fokus
-  \
 - tager lang tid
-  \
 - skifter tilstand -\> skift i kontekst
-  
 
 AJAX = hastighed, rigdom, flow i interface
 
@@ -157,27 +116,17 @@ Website handelen: 65% uden katalog i hånden. 35% bruger nettet til at bestille 
 
 14 ind- og udbetalingssystemer.
 
-- \
 - Vil bibeholde effektivitet i kunde rådgivningsværktøjer
-  \
 - Kan tage et par år at lære alle koder der skal bruges.
-  \
 - Tilgængelig via tastaturet. Ex. dropdown med mus.
-  
 
 5 metoder til usability arbejde
 
-- \
 - in situ (i rådgiverens kontekst)
-  \
 - behovsanalyse
-  \
 - korte interviews, og diskussion af sideskitser ½ time
-  \
 - forståelsestest
-  \
 - navigationstest. Klikbar demo
-  
 
 Insirationskort: Eksempel kontaktoplysninger. Pluk ud og vis, hvad der er relevant.
 
@@ -187,9 +136,7 @@ Er det brugervenligt. Svarer til at spørge en politiker om han går ind for dem
 
 Husmetaforen holder ikke.
 
-- \
 - man byder ikke velkommen i en brochure
-  
 
 3 millioner unikke kunder. 60.000 i forbruger forum.
 
@@ -214,13 +161,9 @@ Usability roadmap.
 [![Beer Mat Usability Roadmap - Bogo Vatovec](/wp-content/thumb-Beermatroadmap2.jpg)](/wp-content/Beermatroadmap2.jpg)\
 *According to Eric Reiss this beer mat roadmap is the work of Bogo Vatovec.*
 
-1.  \
-2.  Nobody talks about usablility
-    \
-3.  Everybody talks about usablility
-    \
-4.  Nobody talks about usablility
-    
+1.  Nobody talks about usablility
+2.  Everybody talks about usablility
+3.  Nobody talks about usablility
 
 "Hvor er det godt at vi har elektronisk tekstbehandling i vores virksomhed?" Vi kunne ikke drømme om at gøre det uden.
 
@@ -232,12 +175,9 @@ Napoleon: Frygt og selv-interesse.
 
 Værdi er subjektiv, er emotionel
 
-- \
 - Værdi er ej ROI
-  \
 - Kan ej bruge ROI før projektet er i gang
-  \
-- \
+- 
 - 
 
 Hakkekniv, kiks, champignong, voodo-dukke, bøger af Nielsen, Krug, Snitker, Trabant, FLScmidt brochure 1997. Flygel.
@@ -250,19 +190,12 @@ Sitemap for 1. generation website:
 
 o
 
-- \
 - Trend \#1: Sites bliver mere fokuserede.
-  \
 - Trend \#2: Search er blevet modent navigationsværktøj (dog ikke site search). Ex. Eli Lilly "Humulin"
-  \
 - Trend \#3: Vi ved ikke hvordan vores produkt bliver brugt. Web2.0 (remix). Foto af omvendt båd på Islands Brygge
-  \
 - Trend \#4: Customisation er død. My Lundbech, My CNN
-  \
 - Trend \#5: Startpunkt. Hilton, uklar. Carnival Cruises, klar
-  \
 - Trend \#6: Med tiden bliver vi overflødige: Fotografer, skrivestuer, chauffør, benzinservice.
-  
 
 Mit spørgsmål (ikke stillet). Hvis customisation is dead. Hvad så med my.yahoo.com, google.com/ig, mns/start.com, netvibes.com
 
@@ -272,46 +205,30 @@ User productivity afdeling
 
 Interne applikationer - ALDRIG haft fokus på usability
 
-- \
 - powerpoint tool drag and drop
-  \
 - analytikere laver skærmbilleder
-  \
 - uddannelse af organisation: basis, specialist, expert
-  
 
 User productivity fortæller om service + koncept. Tager kontakt til analytiker + projektleder.
 
 120 forskellige applikationer
 
-- \
 - Tage højde for nordiske forskelle
-  \
 - Uddanne i stedet for at hyre eksternt
-  \
 - hvor mange værktøjer er webbaseret / mainframe ? ukendt.
-  
 
 Udfordringer i Nordea
 
-- \
 - "Vi plejer"
-  \
 - "Vi skal tænke nordisk, men vores er jo det bedste, så..."
-  \
 - Guidelines = Billedbog = billede + 2 linier tekst
-  
 
 Min baby - kan ikke se fejl. Har du teenagere i huset, har du også udfordringer.
 
 Eksisterende projekter udfordring:
 
-- \
 - På et-eller-andet tidspunkt SKAL de bare gøre det. Nu får de mulighed for at lægge det ind i planen.
-  \
 - Investerer i usability på web og intranet, hvorfor så ikke også i applikationer.
-  
-
 
 ### Max Christensen, Ingelise Gruppen
 
@@ -321,11 +238,8 @@ Isabella smith 2002
 
 Ingelisegruppen
 
-- \
 - katalog -\> magasin
-  \
 - nyhedsbrev for dem der gerne vil forstyrres
-  
 
 McDonald's: Det hele klares på 5 minutter incl. fordøjelse af maden.
 
@@ -335,13 +249,9 @@ Sammenhæng mellem magasin og web
 
 Leonardo DiCaprio kan strikke
 
-- \
 - Salget steg 15-20%
-  \
 - Nyhedsbreve åbnes af 60%, klik fra 50%
-  \
 - Stort salg af gamle varer og tilbehør
-  
 
 Isabella Smith sælger bedre når båndet på forsiden er rødt i stedet for andre farver
 
@@ -389,15 +299,10 @@ Scandlines. 5 Måneder antal betalinger steget 91%
 
 Et lag ovenpå
 
-- \
 - kommerciel interesse ligger over
-  \
 - brugervenlighed
-  \
 - design
-  \
 - teknik
-  
 
 Konklusion: redesign forside, købsflow
 
@@ -405,13 +310,9 @@ Ikke mange der tænker/arbejde med behov
 
 Trends:
 
-- \
 - Vejen ned til hjemmesiden
-  \
 - samarbejdsaftaler
-  \
 - Hele værdikæden
-  
 
 E-Handel
 
@@ -436,25 +337,17 @@ Forskel på at købe og at bruge.
 Adgangskode farverne på firmaet: R\*\*B\*\*H\*\*\*\
 Han lægger vægt på ydmyghed overfor faget:
 
-- \
 - enkelthed ex. nykredit
-  \
 - overskuelig
-  \
 - tal brugerens sprog. HS læger, sygeplejesker taler dansk
-  
 
 Felthjælp - og værst af alt: Fejlmeddelelser
 
 1982 Ben Schneiderman 2 sider
 
-- \
 - Lære af gode websider
-  \
 - Må jeg se det arbejde der er lavet tidligere i firmaet?
-  \
 - Sammenligning af usability test
-  
 
 Sammenligning af usability test: Svært at kommunikere resultater så der sker afgørende ændringer i brugergrænsefladen.
 
@@ -466,13 +359,9 @@ Arbejde på det sproglige område.
 
 Tendens i specialisering: Dobbelte eksperter
 
-- \
 - Bogføring usability
-  \
 - Rejsesystemer og usability
-  \
 - Medicin og usability (Rolf Molich selv)
-  
 
 Børn, unge, ældre, handicappede.
 

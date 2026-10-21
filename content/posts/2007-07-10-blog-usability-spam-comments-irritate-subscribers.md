@@ -34,7 +34,6 @@ As a consequence, Thomas and I will now look for ways to tightening things furth
 
 ## Possible solutions
 
-
 ### Moderate all comments
 
 We have previously talked about holding back all comments for moderation (or at least comments from unknown email adresses). This is very easy to do — just flip a switch in a Wordpress administration module. One disadvantage with this solution: It adds a time-delay to the blog, and we feel that a blog should be immediate, and a discussion should take place without us acting as gatekeepers for the discussion.
@@ -59,12 +58,8 @@ Eventually we will probably turn on comment moderation, as it is the only 100% g
 
 More info
 
-- \
 - Justaddwater.dk: [100,000 Blog Spam Comments](/2007/02/06/100000-blog-spam-comments/ "Permanent Link: 100,000 Blog Spam Comments"), February 6, 2007
-  \
 - Justaddwater.dk: [Blog Usability: Avoid Spam Comments (Part 2)](/2006/06/28/blog-usability-avoid-spam-comments-part-2/ "Permanent Link: Blog Usability: Avoid Spam Comments (Part 2)"), June 2006
-  \
 - Justaddwater.dk: [Blog Usability: Avoid Spam Comments](/2006/06/24/blog-usability-avoid-spam-comments/ "Permanent Link: Blog Usability: Avoid Spam Comments"), June 2006
-  
 
 PS. We have previously claimed that we [won't use CAPTCHAs](/2006/06/28/blog-usability-avoid-spam-comments-part-2/#comment-7617) or [encode comment form with JavaScript](/2006/06/24/blog-usability-avoid-spam-comments/#comment-7654), and for now, we will stand by that decision, in order to avoid usability and accessibility issues.

@@ -20,9 +20,7 @@ Many of the pragmatic tips are ubuquitous in Ruby on Rails and well known becaus
 
 Bonus link: Jeff Atwoods article about the [Department of Redundancy Department](http://www.codinghorror.com/blog/archives/001136.html):
 
-> I have an awfully hard time defending the unnecessarily verbose way objects were typically declared in C# and Java.\
->
-> \
+> I have an awfully hard time defending the unnecessarily verbose way objects were typically declared in C# and Java.
 >
 > BufferedReader br = new BufferedReader (new FileReader(name));\
 >

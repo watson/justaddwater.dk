@@ -10,13 +10,17 @@ tags: []
 
 Just a quick note on Google and their Analytics tool. I've just recieved a service announcement from Google Analytics. They here - among other things - state the current information on the most common questions they are receiving. One of them is:
 
-> The 'Check Status' button is being reworked to check for properly installed tracking code. This should be fixed by the end of November.
+> The 'Check Status' button is being reworked to check for\
+> properly installed tracking code. This should be fixed by the\
+> end of November.
 
 This should fix the problem I pointed out in [an ealier post](/2005/11/21/google-analytics-vs-usability/) - So it appears that I'm not the only one that have complained about this ;)
 
 They also wrote that:
 
-> The '+Add Profile' link has been temporarily removed until we increase capacity. We'll alert all current users when the feature is restored.
+> The '+Add Profile' link has been temporarily removed until\
+> we increase capacity. We'll alert all current users when the\
+> feature is restored.
 >
 > While we increase capacity, you may see longer than normal\
 > delays in data showing up in your reports. All data continues\

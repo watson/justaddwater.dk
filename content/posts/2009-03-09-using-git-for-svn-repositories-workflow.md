@@ -33,7 +33,7 @@ git checkout -b local/RELEASE-0.12 RELEASE-0.12 #will connect with a remote svn 
 
 git svn dcommit --dry-run # -n will show which svn branch you will commit into:
 
-#=> Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...
+#=&gt; Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...
 
 git svn rebase # pull changes from svn repository
 
@@ -96,7 +96,6 @@ Last Changed Date: 2009-03-07 03:52:37 +0100 (Sat, 07 Mar 2009)
 Use `git branch -a` to see all remote branches:
 
 ``` bash
-
 git branch -a
 
 * master
@@ -200,7 +199,7 @@ Assume your change now is applied to the branch '0.11-stable'.
 ``` bash
 git checkout master
 git log --1
-#=> shows log of your latest commit
+#=&gt; shows log of your latest commit
 #To apply these changes to Trunk, now you should change branch and merge:
 
 git checkout local/0.11-stable
@@ -211,4 +210,6 @@ git svn dcommit #to commit the merged changes into the svn repository
 
 ### Related posts:
 
-\* [Using Local File-based Git — Server Laziness](/2009/02/21/using-local-file-based-git-server-laziness/ "justaddwater.dk | Using Local File-based Git — Server Laziness") (Feb 21st) \* [Git Side Benefit: Reducing Disk Usage](/2009/01/17/git-side-benefit-reducing-disk-usage/ "justaddwater.dk | Git Side Benefit: Reducing Disk Usage") (Jan 17th) \* Dr Nic's Gitify command: [Going offline without your favourite Subversion repository?](http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/) (Nov 2007)
+\* [Using Local File-based Git — Server Laziness](/2009/02/21/using-local-file-based-git-server-laziness/ "justaddwater.dk | Using Local File-based Git — Server Laziness") (Feb 21st)\
+\* [Git Side Benefit: Reducing Disk Usage](/2009/01/17/git-side-benefit-reducing-disk-usage/ "justaddwater.dk | Git Side Benefit: Reducing Disk Usage") (Jan 17th)\
+\* Dr Nic's Gitify command: [Going offline without your favourite Subversion repository?](http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/) (Nov 2007)
