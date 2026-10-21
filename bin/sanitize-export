@@ -1,0 +1,43 @@
+#!/usr/bin/env python3 -I
+"""Make a commit-safe copy of the WordPress export.
+
+Keeps published content and approved comments; strips commenter emails/IPs,
+author emails, and anything draft/private/pending/trashed.
+Usage: bin/sanitize-export [raw.xml] [out.xml]
+"""
+import os, re, sys
+import xml.etree.ElementTree as ET
+
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+src = sys.argv[1] if len(sys.argv) > 1 else "export/raw-justaddwater.xml"
+dst = sys.argv[2] if len(sys.argv) > 2 else "export/justaddwater.sanitized.xml"
+
+WP = "http://wordpress.org/export/1.2/"
+def q(t): return "{%s}%s" % (WP, t)
+for m in re.finditer(r'xmlns:(\w+)="([^"]+)"', open(src, encoding="utf8").read(4000)):
+    ET.register_namespace(m.group(1), m.group(2))
+
+tree = ET.parse(src); chan = tree.getroot().find("channel")
+kept = dropped = ccount = cdrop = 0
+for item in list(chan.findall("item")):
+    status = item.findtext(q("status"))
+    ptype = item.findtext(q("post_type"))
+    if status not in ("publish", "inherit") or ptype in ("revision", "nav_menu_item"):
+        chan.remove(item); dropped += 1; continue
+    kept += 1
+    for pm in list(item.findall(q("postmeta"))):  # subscriber email lists
+        if pm.findtext(q("meta_key")) == "_sg_subscribe-to-comments": item.remove(pm)
+    for c in list(item.findall(q("comment"))):
+        if c.findtext(q("comment_approved")) != "1":
+            item.remove(c); cdrop += 1; continue
+        ccount += 1
+        for m in c.findall(q("commentmeta")): c.remove(m)  # akismet history etc. carries emails/IPs
+        for tag in ("comment_author_email", "comment_author_IP"):
+            e = c.find(q(tag))
+            if e is not None: e.text = ""
+for a in chan.findall(q("author")):
+    for tag in ("author_email",):
+        e = a.find(q(tag))
+        if e is not None: e.text = ""
+tree.write(dst, encoding="utf-8", xml_declaration=True)
+print("items kept %d, dropped %d; comments kept %d, dropped %d -> %s" % (kept, dropped, ccount, cdrop, dst))
