@@ -1,0 +1,47 @@
+[
+ {
+  "id": 2057,
+  "parent": 0,
+  "author": "Matkalla",
+  "url": "http://www.matkalla.org/blog/archives/2006/03/001330.html",
+  "date": "2006-03-28 13:03:00",
+  "type": "trackback",
+  "html": "**Google uudistuu?...**\n\n..."
+ },
+ {
+  "id": 2061,
+  "parent": 0,
+  "author": "Hemanshu",
+  "url": "http://hnarsana.com",
+  "date": "2006-03-28 18:42:59",
+  "type": "",
+  "html": "I agree with point 1, but 2 really doesn't make much sense to me from a usability perspective. Why?\n\nBecause then you are giving the user more than one ways to do the task (in this case, it's searching). This could be good or bad, but when the task is so focused as it is, why distract the user with bars on the left. If the user wanted to look under images, he could/would go there anyways.\n\nAnd one of the fundamental reasons that Google is popular is because it's fast, and simple/direct. Now they are changing that with more features and pot-pourri."
+ },
+ {
+  "id": 2082,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-03-31 16:47:20",
+  "type": "",
+  "html": "After I have used it for now 4 days, I must say that it has not helped me in my searching.\n\nThe first point with more results being above the fold is of cause correct, but seriously... we are talking maybe 1 or 2 lines of text here - Not something that enhances my overall user experience.\n\nThe second point with the graphs helping me to see how successful my query is in other areas (news, images etc.) hasn't helped one bid either. As Hemanshu pointed out, I would have clicked on \"images\" anyway if I wanted an image - not because I could see I high match-rate on a graph.\n\nBottom line is that my eyes tend to look at this new left column before looking at the search results, which in turn takes time from my actual goal which is finding the best result in the main area. And because this new left column isn't adding any real value I would suggest to Google that it isn't implemented - or at lest is optional (opt-in)."
+ },
+ {
+  "id": 2350,
+  "parent": 0,
+  "author": "justaddwater.dk | Justaddwater.dk March 2006 Statistics",
+  "url": "http://justaddwater.dk/2006/04/22/justaddwaterdk-march-2006-statistics/",
+  "date": "2006-04-22 15:25:26",
+  "type": "pingback",
+  "html": "\\[...\\] New Google layout more usable (182 visitors) \\[...\\]"
+ },
+ {
+  "id": 10158,
+  "parent": 0,
+  "author": "justaddwater.dk | Time to revise our blog purpose",
+  "url": "http://justaddwater.dk/2006/08/14/blog-purpose/",
+  "date": "2006-08-14 23:10:46",
+  "type": "pingback",
+  "html": "\\[...\\] New Google layout more usable \\[...\\]"
+ }
+]

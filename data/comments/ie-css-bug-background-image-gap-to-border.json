@@ -1,0 +1,119 @@
+[
+ {
+  "id": 455047,
+  "parent": 0,
+  "author": "Søren Thuesen",
+  "url": "http://www.seemyvest.com",
+  "date": "2008-11-05 20:48:52",
+  "type": "",
+  "html": "Actually this is not really a CSS bug, rather an UI 'feature' in Internet Explorer. Buttons are designed to appear in two states; active or inactive. Any focus to an element within a form results in the form becoming active, hence changing behavior/appearance on the submit button. While reading this your search form should be inactive, whereas writing a search word in the text field will activate it.\n\nThe only solution, as far as I know, is to wrap your button in an inline element, say SPAN, only to add the border and at the same time remove the border on your button element. Removing border from your button element eliminates the two-state-behavior - or at least the visual indication.\n\nI do know the solution is far from optimal - do let me know if you come up with something clever, now at least you know there is an explanation to the phenomenon."
+ },
+ {
+  "id": 455020,
+  "parent": 0,
+  "author": "Phil Nash",
+  "url": "http://www.unintentionallyblank.co.uk",
+  "date": "2008-11-05 13:41:11",
+  "type": "",
+  "html": "I'll have a look at the buttons in a bit, when I get time, but just in case this helps, you can see the answers on Experts-Exchange by scrolling right to the bottom of the page. They just make it look like you have to sign up!"
+ },
+ {
+  "id": 455028,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-11-05 16:31:43",
+  "type": "",
+  "html": "Thanks for the tip, Phil. However I see no answers when scrolling down. Perhaps the issue is never answered?"
+ },
+ {
+  "id": 455679,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2008-11-11 00:37:56",
+  "type": "",
+  "html": "Jesper, You can \"only\" see the answer (on Expert Exchange) when following a link from Google (they check the referer)... so the simple way to see the answer is to search for \"IE7 form input buttons go 3D when styled with background image\" on Google, and clikc the link there.\n\n...or you can read below\n\n--- from Expert Exchange ---\n\nHi I've searched high and low for an answer to this and I mean high and low! - I understand exactly what your problem is and the only solution I have found is to:\n\n1\\) Set your background color to be the same as the border your want (remember it shouldnt matter what the background color is as it will be filled ENTIRELY by gradient image) - so for yourself it would be:\n\n.yellowButton {\\\nheight: 20px;\\\nbackground-image: url(/images/ui/test_bkg.jpg);\\\nbackground-color: \\#EFAC2B;\\\nborder: 1px solid \\#EFAC2B;\\\ncolor: \\#CA5200;\\\nfont-weight: bold;\\\ncursor: pointer;\\\n}\n\n1\\) Include conditional styles for IE that effectively make the border transparent- you can do this either by including a conditional stylesheet () or by using the CSS hack for IE6 (\\* html) and IE7 (\\*+html)\n\ne.g.\n\n\\*+html .yellowButton, \\* html .yellowButton\\\n{\\\nborder:1px transparent solid !important;\\\n}\n\nDo not set the border width to 0px, just change the color to transparent.\n\nI'm not sure how clear I have been but this has sorted the problem for me - any questions let me know."
+ },
+ {
+  "id": 460156,
+  "parent": 0,
+  "author": "Filip Mares",
+  "url": "http://www.filip-mares.co.uk/",
+  "date": "2008-12-18 12:21:06",
+  "type": "",
+  "html": "Hi Jesper,\n\nI've just found the same problem that you mentioned here.\\\nTried all ways to fix that with no success to solve this bug.\\\nFinally I've used the same 1px transparent border trick, but not really happy with this solution.\\\nI'll let you know if my investigation would bring some better fix.\n\nCheers,\\\nFilip"
+ },
+ {
+  "id": 455186,
+  "parent": 0,
+  "author": "Simon B.",
+  "url": "http://209.85.135.104/search?q=cache:dEZfYPlI5xkJ:www.experts-exchange.com/Web_Development/Web_Languages-Standards/CSS/Q_23641611.html+http://www.experts-exchange.com/Web_Development/Web_Languages-Sta",
+  "date": "2008-11-06 09:34:49",
+  "type": "",
+  "html": "EE recently changed back to the old times way, hiding the answers for most browsers. The trick is to appear as \"googlebot\" or just plainly open the google cached version of the page.\n\nI had a look, and the solution there seems to involve settings background colour = document background, which might not be your favourite option? Also something about avoiding 0px borders, instead using 1px transparent border -- and THAT sure sounds like something I've read about before, but can't find where."
+ },
+ {
+  "id": 455053,
+  "parent": 0,
+  "author": "Søren Thuesen",
+  "url": "http://www.seemyvest.com",
+  "date": "2008-11-05 22:22:27",
+  "type": "",
+  "html": "Unfortunately I don't really have any source to this, except from having had the same concerns in the past.\n\nI went to MSDN to see if Microsoft had any info on this and surprisingly enough they do - Not sure if they realize what frustrating impact their implementation has on styling, but it does though explain/confirm the theory.\n\n> If the INPUT type=submit element is part of a FORM element, it appears as a button with a dark border, which indicates the user can press ENTER to submit the form.\n\n<http://msdn.microsoft.com/en-us/library/ms535840(VS.85).aspx>\n\nLike you I'm strongly opposed to do workarounds involving additional markup, in this case just to please a specific browser and I can easily imagine the massive volume of CSS the background-only method would require - gone is the beauty of easy maintenance, scalable layout (relative sizes) and auto width buttons.\n\nI wonder if there would be any chance of manipulating states through Javascript or alternatively just write up an unobtrusive function to simply inject the additionally required elements in Internet Explorer."
+ },
+ {
+  "id": 455054,
+  "parent": 0,
+  "author": "Søren Thuesen",
+  "url": "http://www.seemyvest.com",
+  "date": "2008-11-05 22:30:06",
+  "type": "",
+  "html": "(Ups messed up with the BLOCKQUOTE there - would you do me a favor and close it? and delete this... thx - uhh the link seems messed as well, any chance you can change that to a link-text instead? .. thx again)"
+ },
+ {
+  "id": 455049,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-11-05 21:14:11",
+  "type": "",
+  "html": "@Søren, this is exciting news. Pls. enlighten me with links to your sources...\n\nPersonally I don't like workarounds that involve extra HTML elements. I wonder if I could include a background-image with the border drawn onto it. Then entirely removing the 1px border in CSS.\n\nProblem about that would be that the border would be missing on at least one of the sides.\n\nThat could be solved be solved too, i guess. For buttons varying in withs, using \"sliding doors\" technique -- but that's back to extra HTML elements.\n\nFor buttons with fixed widths, we could create sets of background-images. But that would be repeated for 2-3 different widths for the solution. Also, the buttons have both normal, hover, active and disabled states each with different background-images.\n\nTo add further complexity, we have visual different buttons for primary, secondary and tertiary actions (different background images).\n\nSo the number of CSS rules would quickly add up.\n\nBack to what you noted: the UI 'feature'. Please post any references that you can think of."
+ },
+ {
+  "id": 456250,
+  "parent": 0,
+  "author": "Allan",
+  "url": "http://savemyfinance.com",
+  "date": "2008-11-14 20:12:57",
+  "type": "",
+  "html": "could you please provide css code ??\\\ni think you have a mistake in you code.\n\n--\\\nAllan"
+ },
+ {
+  "id": 487813,
+  "parent": 0,
+  "author": "Sophia",
+  "url": "",
+  "date": "2009-07-24 03:53:30",
+  "type": "",
+  "html": "THANKYOU (+ to @Søren Thuesen). I have been trying to figure out how to deal with this exact problem for a couple of hours.\n\n\"The only solution, as far as I know, is to wrap your button in an inline element, say SPAN, only to add the border and at the same time remove the border on your button element. Removing border from your button element eliminates the two-state-behavior – or at least the visual indication.\"\n\nWorks like a charm for me.\\\n...love the banner img btw, lol..."
+ },
+ {
+  "id": 488924,
+  "parent": 0,
+  "author": "Perdele tapet",
+  "url": "http://www.eclaude.ro/",
+  "date": "2009-09-06 20:26:42",
+  "type": "",
+  "html": "or like this for rounded corners buttons: [Button](#)\n\na.but {\\\nbackground:transparent url(yourbuttonleftmargin.gif) no-repeat left top;\\\ncolor: yourcolor;\\\nwhite-space:nowrap;\\\n}\n\na.but span {\\\nbackground:transparent url(yourbuttonrightmargin) no-repeat right top;\\\npadding: yourpadding;"
+ },
+ {
+  "id": 498880,
+  "parent": 0,
+  "author": "Seemly",
+  "url": "http://www.seemly.co.uk",
+  "date": "2010-08-18 20:51:36",
+  "type": "",
+  "html": "I always thought that internet explorer has issues displaying background images on input buttons anyway, so I have always used button/input type=\"image\".\n\nOther browsers tend to show background on input buttons as intended, but as usual, it's IE giving the headaches. =(\n\nChris"
+ }
+]

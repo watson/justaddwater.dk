@@ -1,0 +1,20 @@
+[
+ {
+  "id": 18,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-11-30 14:37:31",
+  "type": "",
+  "html": "Just saw this comment in [Mollys blog](http://www.molly.com/2005/11/03/an-open-letter-to-disney-store-uk/)\\\n[Daniel (www.danielsjourney.com) says:](http://www.molly.com/2005/11/03/an-open-letter-to-disney-store-uk/#comment-16206)\n\n> It’s easy to create standards compliant sites in .net, just stay away from the Microsoft methodology of use.\n>\n> What’s the point then?! Might as well use Notepad and a reasonable language. The use of .NET ARE in the predefined controls, etc., which create the crap markup. But as for the .NET IDE, I can’t even cut and paste into it’s HTML view without it creating font tags out the wazoo.\n\nThis is similar to the experiences here in my blog post. Also I can confirm that .NET alters the HTML when you cut and paste. For instance, it sometimes add name and id attributes to form elements and tables"
+ },
+ {
+  "id": 433902,
+  "parent": 0,
+  "author": "dotnet coder",
+  "url": "http://dotnet.pro",
+  "date": "2008-08-04 22:31:43",
+  "type": "",
+  "html": "Hello.\n\nIn their original out-of-the-box format Microsoft's ASP.NET HtmlControls and WebControls do not produce XHTML compliant code. But Microsoft has thoughtfully (and thankfully) allowed developers to extend the controls to add user-defined custom functionality."
+ }
+]

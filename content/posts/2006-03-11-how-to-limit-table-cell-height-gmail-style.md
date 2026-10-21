@@ -1,0 +1,81 @@
+---
+title: "How to limit table cell height (GMail style)"
+date: "2006-03-11T17:49:01"
+slug: "how-to-limit-table-cell-height-gmail-style"
+url: "/2006/03/11/how-to-limit-table-cell-height-gmail-style/"
+wp_id: 176
+categories: ["Code", "CSS", "Web Standards"]
+tags: []
+---
+
+I just sent this to the [CSS-D discussion list](http://archivist.incutio.com/viewlist/css-discuss/71697 "CSS-D: How to limit table cell height (GMail style)")
+
+> Hope you can help me with this. I want to limit a table cell height to only one line of text. My example below does not work - any height on td is simply ignored if content is long.
+>
+> Problem here (according to for instance [http://annevankesteren.nl/2004/01/css-tables](http://annevankesteren.nl/2004/01/css-tables) ) is that CSS specification requires table cell to expand to a minimum height of the containing content.
+>
+> So my question is: How is this solved in for instance GMail where content i only one line high (and additional overflowing content is hidden). Please share your thoughts on this, and if you could point me to any information on how to solve this.
+>
+>     < !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+>
+>
+>
+>
+>     table{
+>     width:300px;
+>     border:1px dashed red;
+>     }
+>     td{
+>     vertical-align: top;
+>     background-color: #dfc;
+>     height: 10px; /* table cell does not obey this height */
+>     }
+>
+>
+>
+>
+>     I want table row to be the height of 1 text line.
+>
+>
+>     1. start cell not much content
+
+2\. second cell has insanely long content that I know will always wrap
+
+Any help appreciated,\
+Jesper
+
+--\
+Jesper Rønn-Jensen\
+Capgemini Danmark A/S\
+[http://justaddwater.dk/](/) (weblog)
+
+
+
+[Example page - not working](/wp-content/uploads/2006/03/fixed-table-cells-notworking.html)
+
+
+I'll post the results here as I find out how Google GMail does the trick. Please share any tricks that you know of here. Oh, for your information, solution must work in Internet Explorer...
+
+
+*UPDATE: Now working!* Thanks to the information at [BlakeMS blog](http://www.blakems.com/archives/000077.html "BlakeMS.com: Using text-overflow"), I now got it working (no Javascript necessary).
+
+
+> \
+>
+> Now this works the same with table cells. See below and note that you must set table to have the table-layout: fixed property for it to work.
+>
+>     .tbl {
+>         table-layout:fixed;
+>         border-top: 5px solid #333;
+>         border-collapse: collapse;
+>         background: #fff;
+>          }
+>     .tbl td {
+>         border-bottom: 1px dashed #333;
+>         padding: 2px 5px;
+>         text-overflow:ellipsis;
+>         overflow:hidden;
+>         white-space:nowrap;
+>      } 
+
+Note that he also adds `white-space:nowrap`. Otherwise it won't work. [Example page - working](/wp-content/uploads/2006/03/fixed-table-cells-working.html)

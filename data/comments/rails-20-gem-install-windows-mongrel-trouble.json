@@ -1,0 +1,155 @@
+[
+ {
+  "id": 383173,
+  "parent": 0,
+  "author": "inasacu",
+  "url": "http://www.haypista.com",
+  "date": "2007-12-15 15:33:23",
+  "type": "",
+  "html": "hi,\n\ntried what you suggested and it worked...\n\nthanks..."
+ },
+ {
+  "id": 381708,
+  "parent": 0,
+  "author": "Thorsten",
+  "url": "",
+  "date": "2007-12-10 02:37:02",
+  "type": "",
+  "html": "Thanks for this, it helped me to get monrel 1.1.1 running on Windows.\n\nI managed to install it while still having gems 0.9.2 installe, but it didn't start properly. I switched back to 1.0.1 which ran fine for me, and it worked.\n\nThen i installed Gems 0.9.5 and Rails 2.0, and was stuck with an out-of-date mongrel\n\nYour post helped me to get everything up-to-date (well except for gem itself :-P)"
+ },
+ {
+  "id": 381832,
+  "parent": 0,
+  "author": "Ray Case",
+  "url": "",
+  "date": "2007-12-10 21:10:53",
+  "type": "",
+  "html": "Thanks, Jesper. After doing the \"gem update –system\" my mongrel server was shot.\n\nFollowing steps 4,5,6 and 7 above restored my Mongrel server.\n\nHowever, on window\\$, I had to use **gem update rails** instead of **gem update rails -y** because the -y failed.\n\nThanks again,\\\nRay"
+ },
+ {
+  "id": 381852,
+  "parent": 0,
+  "author": "Marius Popescu",
+  "url": "http://de-amicis.com/",
+  "date": "2007-12-10 23:25:21",
+  "type": "",
+  "html": "Thanks very much!\\\nI saw yesterday night on a personal site (running on windows) that the mongrels are doing something weird: continuously starting and stopping the ruby instances :) Happily, this morning I saw your post and save it for tonight, when I fixed it in 5 minutes:) Nice, mongrels, nice ...\n\nTak,\\\nMarius"
+ },
+ {
+  "id": 382382,
+  "parent": 0,
+  "author": "hari",
+  "url": "http://lifepatterns.wordpress.com",
+  "date": "2007-12-13 23:56:39",
+  "type": "",
+  "html": "Thanks for this info!"
+ },
+ {
+  "id": 384980,
+  "parent": 0,
+  "author": "Luis Lavena",
+  "url": "http://blog.mmediasys.com",
+  "date": "2007-12-21 19:55:25",
+  "type": "",
+  "html": "@Chris: you're doing it wrong and getting things wrong.\n\nA. 'ruby' is a pure-ruby platform, used by gems that don't need or provide specific functionality for each platform, or just ships pre-built extensions for them.\n\nB. When Jesper suggest you try installing mongrel_service by its filename, he meant: donwload the .gem file from rubyforge and \\*then\\* try to install it locally.\n\nC. installing mongrel_service with 1.0.0 installed shows some problems, not because rubygems, but due how dependencies to win32-service are indicated in mongrel_service gem. so:\n\n1\\. downgrade to 0.9.4, following indications posted in this thread my me (in ruby-forum).\n\n2\\. install mongrel, mongrel_service.\n\n3\\. upgrade (gem system --upgrade)\n\n4\\. install rails 2.0.2 gem\n\n5\\. follow the rename of the mongrel_service-0.3.3-mswin32 folder indicated in my previous blog post.\n\n6\\. you're done.\n\nI'll try to solve mongrel_service issues this weekend. So few days before christmas is a nightmare here at office. Please excuse the troubles.\n\nHTH,\n\nLuis"
+ },
+ {
+  "id": 384919,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2007-12-21 11:09:18",
+  "type": "",
+  "html": "I apologize if you get this message twice: I submitted a comment, but don't see it on this page...\n\nAnyway, I tried getting mongrel_service via the file name, like you suggested, with and without sources, but I get the same error message each time:\n\nc:\\ruby\\>gem install mongrel_service-0.3.3-mswin32.gem\\\nUpdating metadata for 19 gems from http://gems.rubyforge.org\\\n...................\\\ncomplete\\\nERROR: could not find mongrel_service-0.3.3-mswin32.gem locally or in a repository\n\nc:\\ruby\\>gem install mongrel_service-0.3.3-mswin32.gem --source http://gems.rubyonrails.org\\\nERROR: could not find mongrel_service-0.3.3-mswin32.gem locally or in a repository\n\nc:\\ruby\\>gem install mongrel_service-0.3.3-mswin32.gem --source http://gems.rubyforge.org\\\nBulk updating Gem source index for: http://gems.rubyforge.org\\\nERROR: could not find mongrel_service-0.3.3-mswin32.gem locally or in a repository\n\nAs you can see below, I have the latest RubyGems version, but I'm wondering why I have \"ruby\" as one of the RubyGems platforms (I'm running on Windows)...\n\nc:\\ruby\\>gem env\\\nRubyGems Environment:\\\n\\- RUBYGEMS VERSION: 1.0.0 (1.0.0)\\\n\\- RUBY VERSION: 1.8.6 (2007-09-24 patchlevel 111) \\[i386-mswin32\\]\\\n\\- INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8\\\n\\- RUBY EXECUTABLE: c:/ruby/bin/ruby.exe\\\n\\- RUBYGEMS PLATFORMS:\\\n\\- ruby\\\n\\- x86-mswin32-60\\\n\\- GEM PATHS:\\\n\\- c:/ruby/lib/ruby/gems/1.8\\\n\\- GEM CONFIGURATION:\\\n\\- :update_sources =\\> true\\\n\\- :verbose =\\> true\\\n\\- :benchmark =\\> false\\\n\\- :backtrace =\\> false\\\n\\- :bulk_threshold =\\> 1000\\\n\\- REMOTE SOURCES:\\\n\\- http://gems.rubyforge.org"
+ },
+ {
+  "id": 384917,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2007-12-21 11:01:51",
+  "type": "",
+  "html": "Hi Jesper,\n\nBeing in the same time zone really helps...\n\nI tried your solution (how do you find out the name of the latest gems?), first without --source, then with two potential sources, but I still get the same error message:\n\nc:\\ruby\\>gem install mongrel_service-0.3.3-mswin32.gem\\\nUpdating metadata for 19 gems from http://gems.rubyforge.org\\\n...................\\\ncomplete\\\nERROR: could not find mongrel_service-0.3.3-mswin32.gem locally or in a repository\n\nc:\\ruby\\>gem install mongrel_service-0.3.3-mswin32.gem --source http://gems.rubyonrails.org\\\nERROR: could not find mongrel_service-0.3.3-mswin32.gem locally or in a repository\n\nc:\\ruby\\>gem install mongrel_service-0.3.3-mswin32.gem --source http://gems.rubyforge.org\\\nBulk updating Gem source index for: http://gems.rubyforge.org\\\nERROR: could not find mongrel_service-0.3.3-mswin32.gem locally or in a repository\n\nMy Ruby environment is:\n\nc:\\ruby\\>gem env\\\nRubyGems Environment:\\\n\\- RUBYGEMS VERSION: 1.0.0 (1.0.0)\\\n\\- RUBY VERSION: 1.8.6 (2007-09-24 patchlevel 111) \\[i386-mswin32\\]\\\n\\- INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8\\\n\\- RUBY EXECUTABLE: c:/ruby/bin/ruby.exe\\\n\\- RUBYGEMS PLATFORMS:\\\n\\- ruby\\\n\\- x86-mswin32-60\\\n\\- GEM PATHS:\\\n\\- c:/ruby/lib/ruby/gems/1.8\\\n\\- GEM CONFIGURATION:\\\n\\- :update_sources =\\> true\\\n\\- :verbose =\\> true\\\n\\- :benchmark =\\> false\\\n\\- :backtrace =\\> false\\\n\\- :bulk_threshold =\\> 1000\\\n\\- REMOTE SOURCES:\\\n\\- http://gems.rubyforge.org\n\nI wonder if the \"ruby\" platform is screwing things up (do you confirm that it shouldn't be there since I'm on Windows?)."
+ },
+ {
+  "id": 384901,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-21 09:33:55",
+  "type": "",
+  "html": "@Chris: Perhaps you should try manually downloading the gem from rubyforge. Put it into any directory and start a dos prompt. Then type\n\ngem install mongrel_service-0.3.3-mswin32.gem\n\nI did that for installing rails 2.0.2 with rubygems 0.9.4 (which had similar problems: it showed an error message 404 download error).\n\nPS. I assume you ran \"gem -v\" or \"gem environment\" to confirm you are now on rubygems 1.0?"
+ },
+ {
+  "id": 384894,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2007-12-21 08:08:05",
+  "type": "",
+  "html": "Thanks guys for all this info.\n\nMy problem is not getting the platform selection menu on \"gem install mongrel\" and \"gem install mongrel_service\", the second printing an error message. Since I don't even get mongrel_service, I can't apply Luis's fix (I completely removed my previous ruby directory for a clean install, during the process of figuring out my upgrade problems).\n\nI guess I'll wait for the bug fixes before I continue with the upgrade.\n\nBest regards,\n\nChris."
+ },
+ {
+  "id": 384409,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-19 10:33:27",
+  "type": "",
+  "html": "I sent an email to Eric Hodel, prompting for a bugfix release that will fix this. Here's the reply:\n\n> Eric Hodel to me 12:56 AM (9 hours ago)\n>\n> On Dec 18, 2007, at 05:13 AM, Jesper Rønn-Jensen wrote:\n>\n> \\> Hi eric,\\\n> \\> I wanted to post this comment on your rubygems 0.9.5 blog post http://blog.segment7.net/articles/2007/11/19/rubygems-0-9-5\\\n> \\> There seems to be a problem posting the comment.\\\n> \\> it gave me this error:\\\n> \\> \"Article points to an item that is no longer available for interaction\"\n>\n> We should have RubyGems 1.0 out in the next couple days with the various fixes.\\"
+ },
+ {
+  "id": 384834,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-20 20:56:12",
+  "type": "",
+  "html": "@Chris, my upgrade revealed no problems. I don't have mongrel_service installed. But the new rubygems 1.0 just upgraded my ordinary mongrel from 1.1.1 to 1.1.2\n\n@Luis: thanks a lot for taking your time to investigate and post workarounds"
+ },
+ {
+  "id": 384835,
+  "parent": 0,
+  "author": "justaddwater.dk | Rubygems: Rails 2.0, Mongrel, Windows, solved",
+  "url": "http://justaddwater.dk/2007/12/20/rubygems-rails-20-mongrel-windows-solved/",
+  "date": "2007-12-20 21:13:44",
+  "type": "pingback",
+  "html": "\\[...\\] is the time to revoke the install warning Rails 2.0, gem install, Windows =\\> Mongrel Trouble I wrote about December 9th as Rails 2.0 was \\[...\\]"
+ },
+ {
+  "id": 384831,
+  "parent": 0,
+  "author": "Luis Lavena",
+  "url": "http://blog.mmediasys.com",
+  "date": "2007-12-20 20:20:38",
+  "type": "",
+  "html": "Guys, I've updated my post related to RubyGems and @mongrel_service@ with instructions to workaround the issues:\n\nhttp://blog.mmediasys.com/2007/12/19/latest-rubygems-and-rails-is-a-deadly-combo\n\nHTH,\n\nLuis"
+ },
+ {
+  "id": 384825,
+  "parent": 0,
+  "author": "Luis Lavena",
+  "url": "http://blog.mmediasys.com",
+  "date": "2007-12-20 19:44:22",
+  "type": "",
+  "html": "@Chris: what error are you getting with mongrel_service? is doing mongrel_rails or when running the service?"
+ },
+ {
+  "id": 384804,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2007-12-20 16:30:43",
+  "type": "",
+  "html": "RubyGems 1.0.0 is out, but I still get the same error with Mongrel_Service. And reverting back to 0.9.4 prevents me from getting Rails (somehow). Is the bug not fixed, or am I encountering a new problem?"
+ },
+ {
+  "id": 384987,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2007-12-21 20:50:14",
+  "type": "",
+  "html": "Thanks for being so patient Luis.\n\nI'm off to a well deserved vacation... so I'll follow your instructions when I get back. In the mean time have a Happy Holiday,\n\nChris."
+ }
+]

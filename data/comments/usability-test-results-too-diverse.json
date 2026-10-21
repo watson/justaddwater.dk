@@ -1,0 +1,29 @@
+[
+ {
+  "id": 86065,
+  "parent": 0,
+  "author": "Daniel Szuc",
+  "url": "http://www.apogeehk.com",
+  "date": "2007-02-18 04:26:10",
+  "type": "",
+  "html": "Evaluate with key flows and iterate. Its impossible to evaluate everything, but you can determine the parts of the product that will determine its success. For example, if people are not registering to use your product - this may have to be addressed before looking at other functions."
+ },
+ {
+  "id": 87545,
+  "parent": 0,
+  "author": "Brian",
+  "url": "",
+  "date": "2007-02-20 02:21:49",
+  "type": "",
+  "html": "\"Many of the usability problems we have seen should have not occurred on the website in the first place\" Agreed completely. Usability test your prototypes and you could probably just get by with 5 people. iRise, Axure, Lucid Spec, and GUI Design Gallery are some great higher fidelity prototyping tools out there.\n\nMost of my 30 or so usability test have had 3-6 people. The one that had 12 ended up seeing the same usability problems after about 5 people (this had a diverse user group too)."
+ },
+ {
+  "id": 93242,
+  "parent": 0,
+  "author": "sloan",
+  "url": "",
+  "date": "2007-02-28 06:56:03",
+  "type": "",
+  "html": "It always depends on the project. Sometimes 5 people is all you need because it isn't a critical application roll out anyway. What I find really effective as an additional kind of testing is having the application reviewed by another designer that is not part of the project and given only the context a user would have. As you design your system, you come to accept some weird business rules or get too close, having another designer go through it can help you challenge yourself on those points."
+ }
+]

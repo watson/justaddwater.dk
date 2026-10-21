@@ -1,0 +1,659 @@
+[
+ {
+  "id": 376736,
+  "parent": 0,
+  "author": "Mike Cherim",
+  "url": "http://green-beast.com",
+  "date": "2007-11-27 21:32:21",
+  "type": "",
+  "html": "Hehe, good luck with that. You're going to prove that spam sucks."
+ },
+ {
+  "id": 376165,
+  "parent": 0,
+  "author": "mailand",
+  "url": "http://blogoff.dk",
+  "date": "2007-11-27 11:49:40",
+  "type": "",
+  "html": "Interesting experiment - i'm looking forward to a complete time wasted calculation in minutes and an \"Akismet saves me x.xxx DKK a day\" post :-)\n\nI'm sorry for not joining you in the experiment although my spam amount is much lower.\n\nI hope you'll publish all the different numbers involved - time spent deleting, visits in period, spam post etc. - for further interesting calculations.\n\nAndreas"
+ },
+ {
+  "id": 376219,
+  "parent": 0,
+  "author": "Phil",
+  "url": "http://www.unintentionallyblank.co.uk",
+  "date": "2007-11-27 12:49:31",
+  "type": "",
+  "html": "You're crazy, just plain crazy!\n\nI wouldn't do this and I get merely 100s of spam a day, not thousands, and I'm only going to hit 20,000 spam by the end of this week!\n\nI do look forward to your analysis of what happened though. Hope you don't have to spend too long clearing up!"
+ },
+ {
+  "id": 376204,
+  "parent": 0,
+  "author": "mailand",
+  "url": "http://blogoff.dk",
+  "date": "2007-11-27 12:33:05",
+  "type": "",
+  "html": "Akismet has caught 23,057 spam for you since you first installed it.\n\nPathetic :-)"
+ },
+ {
+  "id": 376196,
+  "parent": 0,
+  "author": "Russell",
+  "url": "http://www.spoiledmilk.dk",
+  "date": "2007-11-27 12:21:25",
+  "type": "",
+  "html": "We are catching you :)\n\n\"Akismet has caught 47,529 spam for you since you first installed it.\""
+ },
+ {
+  "id": 379507,
+  "parent": 0,
+  "author": "JMorris",
+  "url": "http://jmorris.name",
+  "date": "2007-11-29 04:54:43",
+  "type": "",
+  "html": "Hmmm... Interesting experiment.\n\nPardon me if I misinterpreted your post, but it read as though you were going to allow automatic approval of comments. If this is the case, do you intend to put into effect some sort of indexing block in place so that search engines don't pick up the comments and display them in your SERPs? If I misinterpreted and you are going to manually approve comments, then please disregard that question.\n\nI'm curious also as to how much time you are investing in comment moderation with your current measures in place. Currently, I'm only using Simple Trackback Validation and JS SpamBlock and I manually approve all first posts by a any author. All subsequent posts that don't have more than *X* links in the body are automatically approved. I'm spending less than an hour a week moderating comments. I too have a \"do follow\" blog and advertise that fact.\n\nMy experience, thus far, is that I spend even less time moderating comments than I did when I ran Bad Behavior + Akismet. I'm not saying that Bad Behavior and Akismet are ineffective. Obviously they are effective. Most of the spam I get is of the automated variety, therefore, JS SpamBlock has been highly effective for me.\n\nHave you tried other measures than what you have listed in this post?"
+ },
+ {
+  "id": 379357,
+  "parent": 0,
+  "author": "Michael Clark",
+  "url": "http://www.planetmike.com",
+  "date": "2007-11-29 02:08:09",
+  "type": "",
+  "html": "I'm curious: on December 16th, after you reactivate all of your systems, are you going to submit to Akismet the spam that accumulated on the 15th? And are you using a \"professional\" Akismet account, or a free one?\n\nI might take part just to see what happens."
+ },
+ {
+  "id": 378981,
+  "parent": 0,
+  "author": "Letting Spam In For a Day? &laquo; Akismet",
+  "url": "http://blog.akismet.com/2007/11/28/letting-spam-in-for-a-day/",
+  "date": "2007-11-28 19:26:50",
+  "type": "pingback",
+  "html": "\\[...\\] November 28th, 2007 Jesper Rønn-Jensen is planning to remove all spam protection from his blog on December 15. It’s easy to forget just how much anti-spam solutions help bloggers. It’s not just \\[...\\]"
+ },
+ {
+  "id": 379006,
+  "parent": 0,
+  "author": "LLBB &raquo; Spam Filter Free Day?",
+  "url": "http://www.livibetter.com/blog/2007/11/29/spam-filter-free-day/",
+  "date": "2007-11-28 19:56:31",
+  "type": "pingback",
+  "html": "\\[...\\] This sounds interesting. Currently, I use Akismet + comment approval + .htaccess blocking. I will try to turn off Akismet and remove blocking in .htaccess, but I won’t let comment shows up without my approval. I can also test how good Akismet can re-check comments if they are spams or not. Category: Announcement, Blogging World, Net Kingdom \\| Tags: Akismet, spam \\[...\\]"
+ },
+ {
+  "id": 379317,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-11-29 01:21:10",
+  "type": "",
+  "html": "BTW: Just out of curiosity – how much time do you spend on handling spam emails now? That is, the time it takes to look through the spam being filtered + the time spend deleting spam that missed the filter, Whitelisting and blacklisting people etc.?"
+ },
+ {
+  "id": 379315,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-11-29 01:17:49",
+  "type": "",
+  "html": "Interesting experiment, but I must say that I am chocked by the 2000-3000 comments spam figure. I get about 1-4 spam comments per month, none of which is automatic (all from people who manually write a comment to get their website known).\n\nI also get about about 10 attempted spams per day - most of which is spammer trying to post content to known wordpress files, but since I am not using wordpress, all of these attempts ends up on my 404 page.\n\n...and about 4 hacking attempts, where a person have tried accessing varies DLL files, admin interface or cgi entry points (none of which I use either, so I am no risk there either).\n\nWhat you get is a spam comment every 30 seconds! You are literally under attack...\n\nI don't understand why you don't try to mask your comment form, or prevent the spammers from running their scripts."
+ },
+ {
+  "id": 379012,
+  "parent": 0,
+  "author": "Binh Nguyen",
+  "url": "http://binh.name",
+  "date": "2007-11-28 20:01:10",
+  "type": "",
+  "html": "Really wish you good luck. 3000 spam is a lot and since you declare it ahead, you may expect more.\n\nHow about a bigger challenge? Keep everything else active and shut down only the spam protection. I will subscribe to your comments.\n\nMy idea? To not only see how much YOU pain but I, as a reader pain. How about that?"
+ },
+ {
+  "id": 379020,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-11-28 20:13:54",
+  "type": "",
+  "html": "Binh, thanks a lot.\\\nWe hope that you as a reader suffer as little as possible. That's why we will disable email notifications for readers that decide to subscribe via email.\n\nBut probably the comment RSS Feed will be the \"worst\" thing to subscribe to.\n\nFrankly the thought above to keep comments for moderation is even better. But now when Thomas and I have declared to keep our guards down, we will stick to it :)"
+ },
+ {
+  "id": 380651,
+  "parent": 0,
+  "author": "Dean",
+  "url": "",
+  "date": "2007-12-02 12:17:29",
+  "type": "",
+  "html": "This whole thing is a bad idea, and encouraging others to join is irresponsible. According to http://www.myipneighbors.com/ there are at least 25 other sites on your server, that will potentially suffer from your experiment. Once botnets discover that they can get comments through on your site, they will hammer your server, possibly even for a while after you re-instate your defenses, and the other sites on your server could could suffer extremely slow access times or be unreachable."
+ },
+ {
+  "id": 380648,
+  "parent": 0,
+  "author": "Spam Filter Free Day - Doe Niet Zo Moeilijk!",
+  "url": "http://doenietzomoeilijk.nl/archief/spam-filter-free-day/",
+  "date": "2007-12-02 11:56:16",
+  "type": "pingback",
+  "html": "\\[...\\] Maar goed, wat doe je dan als beetje weblogger zijnde? I have one suggestion: How about declaring spam-filter free day one day a year. What about December 15th, which is available according to wikipedia?– Announcement: Spam Filter Free Day \\[...\\]"
+ },
+ {
+  "id": 379056,
+  "parent": 0,
+  "author": "Mike LAw",
+  "url": "http://lawvibe.com",
+  "date": "2007-11-28 20:55:38",
+  "type": "",
+  "html": "Spam sucks - don't know what I'd do without akismet."
+ },
+ {
+  "id": 380563,
+  "parent": 0,
+  "author": "Deactivate Your Spam Shields For One Day ? &laquo; planetOzh",
+  "url": "http://planetozh.com/blog/2007/12/deactivate-your-spam-shields-for-one-day/",
+  "date": "2007-12-01 21:35:50",
+  "type": "pingback",
+  "html": "\\[...\\] Some dude is going to deactivate his spam protection (Akismet) for one day, on December 15th, and the idea is actually starting to spread. \\[...\\]"
+ },
+ {
+  "id": 379130,
+  "parent": 0,
+  "author": "Ulysses Ronquillo",
+  "url": "http://ulyssesonline.com",
+  "date": "2007-11-28 21:56:04",
+  "type": "",
+  "html": "Jesper,\n\nYou are nuts. I might join you, but let me think about it. I don't want to spend the whole day deleting spam. Maybe, a quick database backup and restore as if December 15 never happened. That might do the trick.\n\nUlysses"
+ },
+ {
+  "id": 380497,
+  "parent": 0,
+  "author": "theba.hu",
+  "url": "http://theba.hu/2007/12/01/egy-nap-spam-vedelem-nelkul/",
+  "date": "2007-12-01 13:52:13",
+  "type": "trackback",
+  "html": "**Egy nap Spam-védelem nélkül...**\n\nI’ll join to this initiative. On December 15th. Spammers, take your  weapons and let’s fight! :o)\\\n—\\\nÚgy döntöttem, hogy csatlakozom a kezdeményezéshez. Ez a blog egy napon keresztül Spam-védelem nélkül fog üzemelni, decembe..."
+ },
+ {
+  "id": 380076,
+  "parent": 0,
+  "author": "Spam Filter Free Day: Turn Off Akismet for One Day",
+  "url": "http://www.quickonlinetips.com/archives/2007/11/spam-filter-free-day-turn-off-akismet-for-one-day/",
+  "date": "2007-11-29 15:14:19",
+  "type": "pingback",
+  "html": "\\[...\\] Rønn-Jensen is removing all spam protection from his blog on December 15 to highlight how much energy, computer power, network traffic, and \\[...\\]"
+ },
+ {
+  "id": 380463,
+  "parent": 0,
+  "author": "iLEMONed CN &raquo; Blog Archive &raquo; 又一个裸跑日",
+  "url": "http://cn.ilemoned.com/archives/spam-filter-free-day",
+  "date": "2007-12-01 08:26:11",
+  "type": "pingback",
+  "html": "\\[...\\] 而我现在说的此裸跑非彼裸跑。一个很无聊的家伙，决定于12月15日，把自己blog的所有防spam插件停用。他的目的是想看看防spam插件如Akismet，一天能为自己省下多少麻烦。他也坦言这是一个自杀式任务，所以我不认为有很多人会参与他的行动。Lorelle尽管帮他宣传了一下，却也表明自己决不会干这种傻事。 \\[...\\]"
+ },
+ {
+  "id": 380417,
+  "parent": 0,
+  "author": "Pointless Rambler",
+  "url": "http://pointlessramblings.com/",
+  "date": "2007-11-30 21:51:40",
+  "type": "",
+  "html": "Here's a suggestion - is people backup their database on the 14th, then don't post on the 15th, they can restore the spam - free version from before the 15th ;)"
+ },
+ {
+  "id": 380404,
+  "parent": 0,
+  "author": "No Akismet for a Day?",
+  "url": "http://www.bloggingpro.com/archives/2007/11/30/no-akismet-for-a-day/",
+  "date": "2007-11-30 20:09:22",
+  "type": "pingback",
+  "html": "\\[...\\] am wondering if a proposed idea is any good or not, as an announcement on JustAddWater.dk has been growing in power on the web. The idea: turn off Akismet for a day. The idea is to be \\[...\\]"
+ },
+ {
+  "id": 380023,
+  "parent": 0,
+  "author": "Viper007Bond",
+  "url": "http://www.viper007bond.com/",
+  "date": "2007-11-29 14:18:35",
+  "type": "",
+  "html": "You're nuts... :\\|"
+ },
+ {
+  "id": 379592,
+  "parent": 0,
+  "author": "BoltClock",
+  "url": "http://blog.NOVALISTIC.com",
+  "date": "2007-11-29 06:16:10",
+  "type": "",
+  "html": "My blog is still pretty young so I haven't yet received any more than 20 spam comments a day, but I'll take part! :)"
+ },
+ {
+  "id": 380374,
+  "parent": 0,
+  "author": "Spam Filter Free Day : Everybody Knows",
+  "url": "http://everybody-knows.com/2007/11/30/spam-filter-free-day/",
+  "date": "2007-11-30 15:36:25",
+  "type": "pingback",
+  "html": "\\[...\\] have seen referenced on a couple of other blogs. Jesper Rønn-Jensen on justaddwater.dk is going to turn off all comment spam protection on his blog on December 15 to highlight how much anti spam solutions help bloggers and to higlight \\[...\\]"
+ },
+ {
+  "id": 380359,
+  "parent": 0,
+  "author": "wp-fun &raquo; Blog Archive &raquo; Spamery of the highest order",
+  "url": "http://www.wp-fun.co.uk/2007/11/30/spamery-of-the-highest-order/",
+  "date": "2007-11-30 13:37:32",
+  "type": "pingback",
+  "html": "\\[...\\] of people are talking about turning off Akismet for a day to see how much work it actually does. I think that’s \\[...\\]"
+ },
+ {
+  "id": 379631,
+  "parent": 0,
+  "author": "WordPress Wednesday News: Will You Turn Off Akismet? WordPress 2.4 Delayed, and More WordPress News : The Blog Herald",
+  "url": "http://www.blogherald.com/2007/11/29/wordpress-wednesday-news-will-you-turn-off-akismet-wordpress-24-delayed-and-more-wordpress-news/",
+  "date": "2007-11-29 07:27:47",
+  "type": "pingback",
+  "html": "\\[...\\] also adds that Jesper Rønn-Jensen is turning off all comment spam protection on December 15 to experience what it is really like to go without Akismet for just 24 hours. Mark invites you to \\[...\\]"
+ },
+ {
+  "id": 380300,
+  "parent": 0,
+  "author": "Angsuman Chakraborty",
+  "url": "http://blog.taragana.com",
+  "date": "2007-11-30 10:56:17",
+  "type": "",
+  "html": "BTW: Looking at my spam stats makes me scared at how much cleaning I will have to do afterwards. Here it goes so far:\\\n\"845848 spam comments were blocked by Angsuman's Comment Guard plugin in 316 days 16 hours 1 minutes. 99.456% of the comments received during this time were spam.\""
+ },
+ {
+  "id": 380298,
+  "parent": 0,
+  "author": "Angsuman Chakraborty",
+  "url": "http://blog.taragana.com",
+  "date": "2007-11-30 10:52:52",
+  "type": "",
+  "html": "Nice idea. It will lead more people to appreciate how much spam we get in a day and how much time it will take to simply moderate spam without all these anti-spam plugins."
+ },
+ {
+  "id": 379949,
+  "parent": 0,
+  "author": "Elliot",
+  "url": "http://www.intelliot.com",
+  "date": "2007-11-29 13:14:23",
+  "type": "",
+  "html": "It would be interesting if spammers set up their spambots to do some extra spamming on December 15th."
+ },
+ {
+  "id": 380957,
+  "parent": 0,
+  "author": "Team Murder &raquo; You Just Add Lye&#8230;",
+  "url": "http://www.teammurder.com/?p=1817",
+  "date": "2007-12-05 12:20:00",
+  "type": "pingback",
+  "html": "\\[...\\] as curious as the next about what the tabulated results will be for Spam Filter Free Day but I’d really rather see the evidence gathered in a less painful way. Mainly because it \\[...\\]"
+ },
+ {
+  "id": 380248,
+  "parent": 0,
+  "author": "macdo",
+  "url": "http://blog.ourcq.org",
+  "date": "2007-11-30 09:00:02",
+  "type": "",
+  "html": "\"This blog is protected by Dave's Spam Karma 2: 75273 Spams eaten and counting...\"\\\nand\\\n\"Akismet has caught 95,405 spam for you since you first installed it.\"\\\n(presumably my spam total is not an addition of the two...)\\\nI'm not sorry I 'm not joining you, come December 15th ;-)"
+ },
+ {
+  "id": 380233,
+  "parent": 0,
+  "author": "robinadr &nbsp;&sect;&nbsp; Spam Filter-Free Day",
+  "url": "http://robinadr.com/2007/11/spam_filter-free_day",
+  "date": "2007-11-30 08:19:47",
+  "type": "pingback",
+  "html": "\\[...\\] stumbled upon through the Akismet blog, Jesper Rønn-Jensen is planning to completely disable his spam filters on December 15. While that may sound a bit crazy, it’s an interesting experiment to see just \\[...\\]"
+ },
+ {
+  "id": 379900,
+  "parent": 0,
+  "author": "Are You Willing To Go Naked For One Day For Akismet? &laquo; Lorelle on WordPress",
+  "url": "http://lorelle.wordpress.com/2007/11/29/are-you-willing-to-go-naked-for-one-day-for-akismet/",
+  "date": "2007-11-29 12:22:35",
+  "type": "pingback",
+  "html": "\\[...\\] No, it isn’t time for CSS Naked Day. Mark on Akismet was intrigued by the announcement by Jesper Rønn-Jensen to turn off all comment spam protection on December 15, and now challenges all Akismet users to turn off Akismet for a day. It’s easy to forget just \\[...\\]"
+ },
+ {
+  "id": 380915,
+  "parent": 0,
+  "author": "Spam Filter Free Day at ephemeral",
+  "url": "http://munchicken.10500bc.org/index.php/2007/12/04/spam-filter-free-day/",
+  "date": "2007-12-04 21:35:24",
+  "type": "pingback",
+  "html": "\\[...\\] 15th has been declared “Spam Filter Free Day“.  (i will participate, if i can \\[...\\]"
+ },
+ {
+  "id": 380904,
+  "parent": 0,
+  "author": "Um dia sem anti-spam no seu blog | Neto Cury Blog",
+  "url": "http://netocury.com/archives/um-dia-sem-anti-spam/",
+  "date": "2007-12-04 19:22:03",
+  "type": "pingback",
+  "html": "\\[...\\] um maluco na internet com uma idéia suicida (blogueiramente \\[...\\]"
+ },
+ {
+  "id": 379711,
+  "parent": 0,
+  "author": "n-blue",
+  "url": "http://n-blue.nblogz.net",
+  "date": "2007-11-29 08:48:28",
+  "type": "",
+  "html": "By this experiment you may conduct another thing in summary for fail possitive spam cupture."
+ },
+ {
+  "id": 380193,
+  "parent": 0,
+  "author": "A Naked WordPress : WP Thoughts",
+  "url": "http://wpthoughts.com/30/naked-wordpress/",
+  "date": "2007-11-30 04:14:46",
+  "type": "pingback",
+  "html": "\\[...\\] wondering how many of you are willing to make the move that Jesper Rønn-Jensen will be making on December 15. I have thought about doing so for the day, \\[...\\]"
+ },
+ {
+  "id": 380754,
+  "parent": 0,
+  "author": "wisselend tij",
+  "url": "http://wisselendtij.nl/getijde/index.php/458/",
+  "date": "2007-12-03 08:53:42",
+  "type": "pingback",
+  "html": "\\[...\\] Announcement: Spam Filter Free Day wat een volslagen belachelijk idee! aan de andere kant: dit log draait al maanden zonder spamfilter, nu jij weer Jesper \\[...\\]"
+ },
+ {
+  "id": 379876,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-11-29 11:52:29",
+  "type": "",
+  "html": "I've just added an Akismet counter to our front page (see the right column) that shows how much spam Akismet have caught so far :)"
+ },
+ {
+  "id": 380879,
+  "parent": 0,
+  "author": "justaddwater.dk | Spam Comments Dropped 95% Overnight",
+  "url": "http://justaddwater.dk/2007/12/04/spam-comments-dropped-95-overnight/",
+  "date": "2007-12-04 13:26:58",
+  "type": "pingback",
+  "html": "\\[...\\] no secret that we will kepp this blog spam filter free on December 15th. For some strange reason we only had 127 spam comments in the last 27 hours. This \\[...\\]"
+ },
+ {
+  "id": 380165,
+  "parent": 0,
+  "author": "Nanashi-Inc.net &raquo; Blog Archive &raquo; December 15th - Spam Free for All",
+  "url": "http://nanashi-inc.net/weblog/2007/december-15th-spam-free-for-all/",
+  "date": "2007-11-30 00:32:24",
+  "type": "pingback",
+  "html": "\\[...\\] Jesper Rønn-Jensen of justaddwater.dk publicly announced recently that on December 15th he would be turning off all spam filtering devices. The point? To really get a chance to see just how much time and effort our spam-catching programs save us. You really can’t have a true appreciation for something until it’s gone or you see first hand what it really does for you, I’ll readily admit and agree to that, but I’m not sure I’m ready to let the spammers in. \\[...\\]"
+ },
+ {
+  "id": 380701,
+  "parent": 0,
+  "author": "Dean",
+  "url": "",
+  "date": "2007-12-02 22:24:16",
+  "type": "",
+  "html": "Thomas,\n\nIt's completely automated...we're not talking about manual spammers here anyway...we're talking about botnets. Trust me, they do check, and I can show you stat upon stat that demonstrates how when they find one successful avenue of getting links through, they pursue it and get links to various sites. Obviously their first choice is a link without nofollow, but they'll take anything they can get because it still gets their product in front of people who click the links. By opening up spam on your site, you can potentially bring neighboring sites on the same server to a grinding halt, in extreme cases. It would be one thing if you had a dedicated server, but with a shared host you have the potential to damage other businesses whose sites are on your server. That's a very irresponsible thing to encourage others to do. This experiment is a very bad idea."
+ },
+ {
+  "id": 380139,
+  "parent": 0,
+  "author": "Letting Spam Loose For A Day &raquo; Jeffro2pt0.com",
+  "url": "http://www.jeffro2pt0.com/letting-spam-loose-for-a-day/",
+  "date": "2007-11-29 21:18:58",
+  "type": "pingback",
+  "html": "\\[...\\] be turning off Akismet. Ok, not really. But Jesper Rønn-Jensen has decided to do it. He calls it, Spam Filter Free day where he will disable the Akismet anti spam tool on his blog for 24 hours to figure out, just how \\[...\\]"
+ },
+ {
+  "id": 380135,
+  "parent": 0,
+  "author": "How Do You Stop Spam On Your Blog?",
+  "url": "http://www.netmarketingchaos.com/blogging/how-do-you-stop-spam-on-your-blog.html",
+  "date": "2007-11-29 20:31:44",
+  "type": "pingback",
+  "html": "\\[...\\] seems a blogger named Jesper Rønn-Jensen is going to turn off all spam protection on his site for the day on December \\[...\\]"
+ },
+ {
+  "id": 380781,
+  "parent": 0,
+  "author": "the gookins dot net &raquo; spamfest",
+  "url": "http://www.thegookins.net/?p=884",
+  "date": "2007-12-03 16:11:14",
+  "type": "pingback",
+  "html": "\\[...\\] Akismet has a post about a blog that will be going protection-free for 24 hours on December 15th, just as a reminder of how important spam protection is. And they want you to join them. \\[...\\]"
+ },
+ {
+  "id": 380680,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-02 17:41:20",
+  "type": "",
+  "html": "Hi Dean\n\nI don't think that the spammers actually check to see if their spam comments gets through - that would mean extra work and usage of their own bandwidth. If they in deed did this why are they then still spamming? And again, if they on the 15th suddenly see that their spam gets through, it would be very easy for them to also see that there is a rel=\"nofollow\" attached to all their links.\n\nPersonally I don't think that we will see an increase in spamming activity. If spammers read this, they will also read that we will apply the rel=\"nofollow\" at the same time. Which by the way, I suggest everybody should do if they plan to follow suit (WordPress uses rel=\"nofollow\" by default unless you have a plugin that disables it)."
+ },
+ {
+  "id": 380114,
+  "parent": 0,
+  "author": "Runes blogg &raquo; Blog Arkiv &raquo; Sett spammen fri&#8230;",
+  "url": "http://bloggs.be/rune/2007/11/29/sett-spammen-fri/",
+  "date": "2007-11-29 16:58:28",
+  "type": "pingback",
+  "html": "\\[...\\] den 15 desember i år. Dette i seg selv er jo ikke noe store saker, men han skriver om det i bloggen sin - og når du annonserer dette i en engelsk språklig blogg som daglig mottar mellom \\[...\\]"
+ },
+ {
+  "id": 379803,
+  "parent": 0,
+  "author": "justaddwater.dk | Letting Spam In For A Day Questions and Answers",
+  "url": "http://justaddwater.dk/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/",
+  "date": "2007-11-29 10:33:13",
+  "type": "pingback",
+  "html": "\\[...\\] that our spam experiment scheduled for December 15th got mentioned by the Akismet Blog, Blogherald, and many other \\[...\\]"
+ },
+ {
+  "id": 383642,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-16 02:26:34",
+  "type": "",
+  "html": "Short update: I spent a total of 2 hours deleting 1111 spam comments, re-activating Akismet etc., and re-finding the 6 valid comments and trackbacks recieved during the last 24 hours. More info in separate post later."
+ },
+ {
+  "id": 381116,
+  "parent": 0,
+  "author": "Päev ilma spämmifiltrita &raquo; Aarne bloog",
+  "url": "http://toompark.pri.ee/aarne/index.php/paev-ilma-spammifiltrita/",
+  "date": "2007-12-06 07:18:57",
+  "type": "pingback",
+  "html": "\\[...\\] Rønn-Jensen ja Thomas Watson on oma blogis justaddwater.dk välja tulnud huvitava ideega: nad keeravad üheks päevaks, 15. detsembril, oma blogi \\[...\\]"
+ },
+ {
+  "id": 381158,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-06 10:25:12",
+  "type": "",
+  "html": "Aarne blog above pointed me to [Comment timeout](http://jamesmckay.net/code/comment-timeout/) plugin, where you can choose to close comments on old posts -- or even better -- hold comments on old posts for moderation.\n\nThat's a super tip! and I'm sure we will seriously consider that for our setup here at www.justaddwater.dk"
+ },
+ {
+  "id": 381216,
+  "parent": 0,
+  "author": "jez",
+  "url": "http://www.h4x3d.com",
+  "date": "2007-12-06 16:06:54",
+  "type": "",
+  "html": "just saw my akisment score passed 127.000 spam comments. what the hell :)"
+ },
+ {
+  "id": 382511,
+  "parent": 0,
+  "author": "justaddwater.dk | Today is Spam Filter Free Day",
+  "url": "http://justaddwater.dk/2007/12/15/today-is-spam-filter-free-day/",
+  "date": "2007-12-15 00:29:39",
+  "type": "pingback",
+  "html": "\\[...\\] When we announced the Spam Filter Free Day 18 days ago, we didn’t think that it would draw so much attention. But the amount of comments and buzz around the blogosphere have been really overwhelming. Most notably is that we caught the attention of the comment-spam fighting company of all times: Akismet. \\[...\\]"
+ },
+ {
+  "id": 382498,
+  "parent": 0,
+  "author": "Billiges Angebot &amp; Tests &raquo; Are You Willing To Go Naked For One Day For Akismet?",
+  "url": "http://billigesangebot.com/are-you-willing-to-go-naked-for-one-day-for-akismet/",
+  "date": "2007-12-14 21:45:43",
+  "type": "pingback",
+  "html": "\\[...\\] No, it isn’t time for CSS Naked Day. Mark on Akismet was intrigued by the announcement by Jesper Rønn-Jensen to turn off all comment spam protection on December 15, and now challenges all Akismet users to turn off Akismet for a day. It’s easy to forget just \\[...\\]"
+ },
+ {
+  "id": 384652,
+  "parent": 0,
+  "author": "WordPress Wednesday News: Akismet Day, Two Million Bloggers, Plugin Security Warnings, And WordPress is the Best CMS : The Blog Herald",
+  "url": "http://www.blogherald.com/2007/12/19/wordpress-wednesday-news-akismet-day-two-million-bloggers-plugin-security-warnings-and-wordpress-is-the-best-cms/",
+  "date": "2007-12-20 05:15:00",
+  "type": "pingback",
+  "html": "\\[...\\] Day Lessons Learned: When Jesper Rønn-Jensen announced he was turning off Akismet for the day, many thought it was an outrageous thing to do, but now the results are in and Jepser shares the \\[...\\]"
+ },
+ {
+  "id": 393482,
+  "parent": 0,
+  "author": "Ditching anti-spam solutions for a day ~ BoltPress",
+  "url": "http://blog.NOVALISTIC.com/past/2007/11/ditching-anti-spam-solutions-for-a-day/",
+  "date": "2008-02-04 09:35:02",
+  "type": "pingback",
+  "html": "\\[...\\] catch: Jesper Rønn-Jensen is disabling all spam filters for a day on December 15, to see how much time actually is wasted sorting out spam comments, and how Akismet \\[...\\]"
+ },
+ {
+  "id": 405006,
+  "parent": 0,
+  "author": "meme",
+  "url": "http://www.estetiks.com/meme.html",
+  "date": "2008-03-30 10:22:32",
+  "type": "",
+  "html": "Everybody should fight with spam. A useless effort."
+ },
+ {
+  "id": 402620,
+  "parent": 0,
+  "author": "Akismet Spam Protection : Update Time | STCFX - Web Everything",
+  "url": "http://www.stcfx.com/2008/03/16/akismet-spam-protection-update-time/",
+  "date": "2008-03-17 00:47:42",
+  "type": "pingback",
+  "html": "\\[...\\] see an experiment conducted by JustAddWater where they turned off their spam filter for a day. The results will amaze you! Related PostsWordPress Week: AkismetWordPress 2.3 Disable NoFollowPR Update October \\[...\\]"
+ },
+ {
+  "id": 402462,
+  "parent": 0,
+  "author": "close protection",
+  "url": "http://www.closeprotectionworld.co.uk",
+  "date": "2008-03-15 19:19:26",
+  "type": "",
+  "html": "I take it the spam day has been and gone. how did it go?"
+ },
+ {
+  "id": 402466,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-03-15 19:31:33",
+  "type": "",
+  "html": "@close protection: take a look at \"Cleanup Time — Spam Filter Free Day\" december 18th 2007:\\\nhttp://justaddwater.dk/2007/12/18/cleanup-time-spam-filter-free-day/"
+ },
+ {
+  "id": 403711,
+  "parent": 0,
+  "author": "close protection",
+  "url": "http://www.max-security.com/",
+  "date": "2008-03-23 10:28:57",
+  "type": "",
+  "html": "I’ve just added an Akismet counter to our front page (see the right column) that shows how much spam Akismet have caught so far :)"
+ },
+ {
+  "id": 410443,
+  "parent": 0,
+  "author": "Rafael Franco",
+  "url": "http://mega-bonus-unicard.zip.net/",
+  "date": "2008-04-14 03:24:24",
+  "type": "",
+  "html": "Currently, I’m only using Simple Trackback Validation at my blog [Mega Bonus](http://mega-bonus-unicard.zip.net/) and I manually approve posts by authors."
+ },
+ {
+  "id": 422586,
+  "parent": 0,
+  "author": "pokeren",
+  "url": "http://pokeren.blogeiland.nl/",
+  "date": "2008-06-07 12:12:00",
+  "type": "",
+  "html": "I’ve just added an Akismet counter to our front page (see the right column) that shows how much spam Akismet have caught so far :)"
+ },
+ {
+  "id": 435404,
+  "parent": 0,
+  "author": "SEO Zombie",
+  "url": "http://seozombie.com/how-to-get-links-with-article-marketing/",
+  "date": "2008-08-13 16:34:23",
+  "type": "",
+  "html": "I never thought about the pure about of energy and resources wasted by spammers, comment spam only being one part of the whole spam arena. I cannot imagine the pure volume of spam generated every day.\n\nMy main blog doesn't get much spam and my filters do a really good job of catching it, so I don't waste much time managing it."
+ },
+ {
+  "id": 424391,
+  "parent": 0,
+  "author": "Evelyn Bates from Compare NYC Accommodation",
+  "url": "http://hotelnewyorks.com",
+  "date": "2008-06-17 23:38:20",
+  "type": "",
+  "html": "oh, darn... missed the spam filter free day!!!\n\nso what are you're conclusions?"
+ },
+ {
+  "id": 424397,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-06-18 00:00:59",
+  "type": "",
+  "html": "@evelyn,\n\n> take a look at “Cleanup Time — Spam Filter Free Day” december 18th 2007:\\\n> \\\n> [http://justaddwater.dk/2007/12/18/cleanup-time-spam-filter-free-day/](/2007/12/18/cleanup-time-spam-filter-free-day/)"
+ },
+ {
+  "id": 425446,
+  "parent": 0,
+  "author": "Marc minellis",
+  "url": "http://www.arabfilms.org",
+  "date": "2008-06-22 03:15:32",
+  "type": "",
+  "html": "so how was the spam free day? and will it come back?regards from germany"
+ },
+ {
+  "id": 441135,
+  "parent": 0,
+  "author": "BandwidthTest",
+  "url": "http://www.bandwidthtest.co.uk/",
+  "date": "2008-09-03 09:15:05",
+  "type": "",
+  "html": "WITH great interest I was reading your post and at every instant I was remembering my experience which where just likely to be same. I must say that I am chocked by the 2000-3000 comments spam figure. I get about 3-5 spam comments per month, none of which is automatic (all from people who manually write a comment to get their website known).\n\nFrankly to say I was unkown about your suggestion but as I read I was feeling somebody else has told me same but who? Than I got that My neibour with whom some time before freely I ask about this matter and he said same. But sorry to myself I ignore him and now I get its brief explanation.... Thx."
+ },
+ {
+  "id": 448700,
+  "parent": 0,
+  "author": "koby vyzel",
+  "url": "http://metaimage.co.cc",
+  "date": "2008-09-25 07:11:47",
+  "type": "",
+  "html": "i've made some seo to a place that runs spamming robots, and i was shocked by their sophistication. the robots used to go through the post and compose a relevant comment, and they got response from people...\n\nin addition for spamming in order to promote their websites, i think pr is also a very important parameter, people love the link juice.. but i guess when google 4 example'll find a better formula, everything'll be different."
+ },
+ {
+  "id": 455365,
+  "parent": 0,
+  "author": "Erik",
+  "url": "http://www.applied-visions.at",
+  "date": "2008-11-07 13:21:33",
+  "type": "",
+  "html": "Well on the one side I happy that I am not the only one who has to fight with spam (email Spam) and on the other side it scary me how this could happen. Without spam filter it would not be possible to do some work."
+ },
+ {
+  "id": 478135,
+  "parent": 0,
+  "author": "john",
+  "url": "",
+  "date": "2009-03-15 16:45:55",
+  "type": "",
+  "html": "Try AntiSpam, a ultra light spam filter\n\nCreated entirely in assembly language (yes, only 88Kb!)\n\nProtect unlimited number of pop3 email addresses (gmail mail included)\n\nScan the mail header AND also a number of lines from the mail body\n\nCan check all hosts found in the mail header against DNSBL (\"Real-time Blackhole List\")\n\nAlert on receiving any new message or only when receiving a good message plus many other features...\n\nhome.deds.nl/~antispam/\n\nAntiSpam uses UIDL extensively. This key feature is not present in many spam filters, wich can lead to wrong inbox operations with them!"
+ }
+]

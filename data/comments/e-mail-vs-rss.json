@@ -1,0 +1,47 @@
+[
+ {
+  "id": 2097,
+  "parent": 0,
+  "author": "Shannon Whitley",
+  "url": "http://www.feedlinx.com",
+  "date": "2006-04-05 00:32:02",
+  "type": "",
+  "html": "You could also offer folks the ability to subscribe to your RSS feed via email. Please take a look at Feedlinx (http://www.feedlinx.com). You'll put the power of scheduling emails in the hands of your readers.\n\nThis is a sample link that would allow your readers to automatically subscribe to your RSS feed:\n\nhttp://www.feedlinx.com/feedlinx/default.aspx?href=http://justaddwater.dk/feed/&type=3\n\nYou can also place a subscription box on your home page using javascript and your readers woudn't have to leave your site."
+ },
+ {
+  "id": 2102,
+  "parent": 0,
+  "author": "Trine-Maria",
+  "url": "http://www.hovedetpaablogggen.dk",
+  "date": "2006-04-05 12:36:43",
+  "type": "",
+  "html": "First I would like to thank you for a really brillant blog about usablity issues.\n\nI am at the moment following a small weblog usability research project at University of Copenhagen, where one of the goals is to figure out how trained users and new users think about RSS-feeds on weblogs.\n\nMy guess is that one of the hurdles is that RSS-icons and formats come in so many forms and colors and wordings. See an example here: http://www.cadenhead.org/workbench/news/2872/support-common-feed-icon\n\nThere are even places on the net, where you can create your own col RSS-icon :-) This means that it is difficult for new users (who are not obsessed with blogging or RSS) to identify the feed in a new page/ visiting a new blog.\n\nAt the same time it is not allways easy to \"grap\" a new feed (I guess because the standards are not the same in any RSS-provider?) - so I really like the \"Subscribe with bloglines\" icon that I get on some blogs - but on the other hand - maybe that just makes the user experience more confusing to new users?\n\nI know that there is an effort going on, to introduce ONE common RSS-feed 8you probably allready know this) to help solve the problem - http://www.feedicons.com/ and I like the idea - what do you think about it?"
+ },
+ {
+  "id": 2103,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-04-05 14:53:13",
+  "type": "",
+  "html": "Thanks for the tip Shannon. Unfortunately this requires the user to register on a 3rd party website with yet another username and password to remember. I'm afraid this would scare a lot of users away simply because of the long and complicated process. Registering for a newsletter should be a simple process where you simply type in your e-mail address and click a \"subscribe\" button."
+ },
+ {
+  "id": 2106,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-04-05 23:09:43",
+  "type": "",
+  "html": "Nice to hear from you Trine. About the feed icon being non standard it is at least nice to see that Microsoft have adopted the orange icon from Firefox (and now Feedicons):\\\nhttp://blogs.msdn.com/michael_affronti/archive/2005/12/15/504316.aspx\n\n\\- But yes, I think that it's a great idea with a standard feed icon (and yes I know that we haven’t got it on justaddwater.dk yet... but it's coming :)\n\nI'm using Mozilla Thunderbird as my news aggregator and Mozilla Firefox as my browser. Firefox automatically detects syndicated feeds and gives me the option to add the feed to my bookmarks as a \"live bookmark\". But there is no way of \"extracting\" the feed URL or transferring it to Thunderbird. So it is back to the good old \"View Source\" option.\n\nThe blog usability research project sounds very interesting - something that I would very much like to hear more about since we our self’s at justaddwater.dk currently are undergoing and testing some changes also to make blogs more usable. You can see a list of our current ideas at http://wa7son.tadalist.com/lists/public/194116, or see our blog post where we talk about the changes: http://justaddwater.dk/2006/01/19/blog-usability-improvements-what-well-change-to-make-this-blog-better/"
+ },
+ {
+  "id": 458369,
+  "parent": 0,
+  "author": "Construction Scheduling Software - Shawn",
+  "url": "http://www.headsuptech.com/",
+  "date": "2008-12-05 20:41:01",
+  "type": "",
+  "html": "We have tried the email newsletters--we do a construction scheduling newsletter, but even though they are opt-in, the recipient's spam catcher doesn't let almost half of our newsletters in. We know this because we do HTML newsletters and embed an image in them (our logo). I can then count how many times the logo loads off the web server. It loads maybe 20 to 40 times for every 100 email newsletters sent. For this reason, we will probably start doing RSS."
+ }
+]

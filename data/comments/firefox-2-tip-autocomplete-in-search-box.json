@@ -1,0 +1,29 @@
+[
+ {
+  "id": 21956,
+  "parent": 0,
+  "author": "Preben Carlsen",
+  "url": "http://www.overvejelser.dk",
+  "date": "2006-10-30 12:19:12",
+  "type": "",
+  "html": "Also works with currencies:\n\n123 DKK in USD\n\nresults\n\n123 Danish kroner = 20.9522187 U.S. dollars"
+ },
+ {
+  "id": 22259,
+  "parent": 0,
+  "author": "Ron Derksen",
+  "url": "",
+  "date": "2006-10-31 11:17:33",
+  "type": "",
+  "html": "Sadly, the currency conversion only works to US Dollars, and not to Euros."
+ },
+ {
+  "id": 22403,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-10-31 21:42:00",
+  "type": "",
+  "html": "As far as I can see, it works great with Euros. Try for example \"[123 DKK in EUR](http://www.google.com/search?q=123+DKK+in+EUR)\".\n\nBut for some reason I do not see the auto complete working with currency conversion directly in the browser :("
+ }
+]

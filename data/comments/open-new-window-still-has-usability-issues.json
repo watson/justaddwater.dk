@@ -1,0 +1,200 @@
+[
+ {
+  "id": 172028,
+  "parent": 0,
+  "author": "michael",
+  "url": "",
+  "date": "2007-06-14 18:34:14",
+  "type": "",
+  "html": "On a slightly different browser/new window/usability note...\\\nWhy is it that CTRL+T opens a new tab, yet CTRL+W CLOSES a tab instead of opening a window? I have to CTRL+N to open a new window, which isn't all that easy with one hand. Dumb."
+ },
+ {
+  "id": 171402,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-06-14 09:42:23",
+  "type": "",
+  "html": "@zuschlag: Thanks for your enlightening comment. I have to disagree with your point that lightbox windows are useless.\n\nI agree that they are not always used the \"right way™\", and I agree that there may be usability issues with the Thickbox examples you refer to.\n\nHowever, lightbox can be pretty darn useful in web applications, especially in the area where web apps meet desktop apps. In my opinion, A lightbox is definitely better to use than a popup window where the popup can \"disappear\" for the inexperienced user (behind the primary window).\n\nLightboxes have to be executed perfectly to work: For instance, pressing Escape must close it, and entering information in a dialog and pressing Enter must also close it and return to the updated main page. I'm not sure if Thickbox respect these conventions out of the box.\n\nYou also write that you are confused with a lightbox that is replaced by another lightbox (and when it's closed, the first lightbox replaces the second). Well, this is exactly what I would expect as default behaviour -- not from a technical perspective, but from a user's perspectiv.\n\nThis way, it reflects the way modal dialogs work for instance in desktop applications. Print a document, choose advanced print settings, and the other modal dialog is \"in control\" and later gives control back to the first dialog.\n\nIt's also a good way to keep consistent data in the application.\n\nI think that it's very interesting that you did not understand it that way. Which means that lightbox functionality will probably require extra user testing if it's decided to use lightboxes in an application. (Sorry for using you as an example of a \"dumb user\", zuschlag)\n\nFurthermore, I don't really see any decent alternatives to using the lightbox: Popups are not modal and tend to dissapear from the user. Making less advanced apps could be an alternative -- but in my experience it's hard to implement in enterprise corporations where I hear a lot of arguments like: \"but our company is special\", \"we are different\", etc.\n\nAny other alternatives that you would suggest?"
+ },
+ {
+  "id": 170991,
+  "parent": 0,
+  "author": "Ryan Roberts",
+  "url": "http://www.ryanroberts.us",
+  "date": "2007-06-13 21:55:55",
+  "type": "",
+  "html": "I strongly agree with the arguments made for not using pop up windows for linked content. I would even argue that it not only creates confusion for novice Web users but most Web users, at least initially. There have been countless times I've clicked the back button multiple times before I realized that the stinking site had forced me into a new window.\n\nThe ironic thing is that webmaster use the pop up window to keep their users on their own sites. But when the user who's been forced into a new window tries to use the back button to return to the original site's content they are unable to because the back button gets reset."
+ },
+ {
+  "id": 170930,
+  "parent": 0,
+  "author": "Making JavaScript transparent &laquo; Archive &laquo; The Doctor What",
+  "url": "http://docwhat.gerf.org/2006/11/href-friendly-popups/",
+  "date": "2007-06-13 19:20:14",
+  "type": "pingback",
+  "html": "\\[...\\] JustAddWater: Open New Window Still Has Usability Issues \\[...\\]"
+ },
+ {
+  "id": 170626,
+  "parent": 0,
+  "author": "Ron Derksen",
+  "url": "",
+  "date": "2007-06-13 12:42:39",
+  "type": "",
+  "html": "And if you do need to use a popup window, make the href of the link element point to the same url as that of the popup. This allows people to actually open the link in a different tab. Just stop the javascript onclick event from bubbling up by either adding \"return false\" at the end of the onclick handler, or use Event.cancelDefault()."
+ },
+ {
+  "id": 170631,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-06-13 12:53:33",
+  "type": "",
+  "html": "@Ron: Good point. Thanks for adding this. I have deliberately refrained from writing specific howto and technical implementations. But you are absolutely right: Use JavaScript cleverly and unobtrusively if you use it."
+ },
+ {
+  "id": 170669,
+  "parent": 0,
+  "author": "Michael Zuschlag",
+  "url": "http://www.zuschlogin.com",
+  "date": "2007-06-13 14:33:26",
+  "type": "",
+  "html": "Lightbox. Huh. What is it good for? It seems to me the whole idea behind a dialog-type window is to allow the user to view and maybe manipulate (if modeless) the primary content while working in the dialog. At least as illustrated in the Thickbox demos, its weird form of modality prevents the latter, and the lack of movability and resizability severely limits the former (and what’s with the darkening of the primary content?). Then there’s its rather bizarre behavior that makes interaction clumsy, like try the Inline Content demo. Click a link inside the Thickbox and the \\*primary\\* is replaced by the new content (yow!). Click Back and the original content reloads with the Thickbox closed (double yow!). There’s a definite learning curve to this thing. So what’s the advantage over opening a new window or simply loading new content in the same window? The only thing I can think of is to serve as a sort of balloon help or tool tip feature. New ideas are great, but they have to have some practical advantage to justify themselves."
+ },
+ {
+  "id": 180618,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://germworks.net",
+  "date": "2007-06-20 09:14:21",
+  "type": "",
+  "html": "I personally think you should only open in new window for pdf's, word doco's and other stuff like that. Would be the only time I actually agree with Jakob Nielson...\n\nI also agree that while this has been a topic that web designers have agreed on (one of the few), most executives and other 'big wigs' who make web decisions do not know this simple fact.."
+ },
+ {
+  "id": 184479,
+  "parent": 0,
+  "author": "Arjun",
+  "url": "",
+  "date": "2007-06-22 19:00:15",
+  "type": "",
+  "html": "Jesper, what are your thoughts on opening new windows from a heavy-weight map page? IE visit a Virtual Earth or Google Maps based mashup. If one were clicking through to detailed pages from a map page, could it be more effective to launch in a new window? That way you avoid the reload time when clicking \"back\" to the map page."
+ },
+ {
+  "id": 220464,
+  "parent": 0,
+  "author": "Los textos de qweos.net&raquo; Blog Archive &raquo; No abra enlaces externos en páginas nuevas",
+  "url": "http://qweos.net/blog/2005/12/15/no-abra-enlaces-externos-en-paginas-nuevas/",
+  "date": "2007-07-24 13:45:53",
+  "type": "pingback",
+  "html": "\\[...\\] Open New Window Still Has Usability Issues en justaddwater.dk \\[...\\]"
+ },
+ {
+  "id": 211083,
+  "parent": 0,
+  "author": "sasa_eh",
+  "url": "http://www.sasaeh.com",
+  "date": "2007-07-13 15:10:38",
+  "type": "",
+  "html": "I agree with Michael.\\\nThat kind of scripts add new complexity to the user interaction from my point of view.\\\nHow do I close that funny window? How can I go back to the previous image?\n\nI agree taht they are far more visual than a popup, but, do they really solve the pop-up problem? Give them more control to the user?\n\nMost of them act like a modal window.\n\nAs everything, there are situations where you can (must) use lightbox scripts, other where you can (must) use pop-up windows, and, surely, in most of the cases you can avoid using both.\n\nRegards"
+ },
+ {
+  "id": 211854,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://germworks.net",
+  "date": "2007-07-14 02:14:12",
+  "type": "",
+  "html": "Hears an article I actually wrote about this and some other incidents of web design usability and accessibility..\n\nhttp://germworks.net/blog/2007/07/02/usability-and-accessibility-the-foreign-legion-of-web-design/"
+ },
+ {
+  "id": 228241,
+  "parent": 0,
+  "author": "B Merrell",
+  "url": "",
+  "date": "2007-08-06 20:42:30",
+  "type": "",
+  "html": "Can somebody speak to the concern of web designers to link externally with new windows? Does the practice really preserve traffic by keeping people on a site?"
+ },
+ {
+  "id": 228407,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://germworks.net",
+  "date": "2007-08-07 03:09:51",
+  "type": "",
+  "html": "@ B Merrell - what do you mean by your comments??"
+ },
+ {
+  "id": 228901,
+  "parent": 0,
+  "author": "B Merrell",
+  "url": "",
+  "date": "2007-08-07 23:01:12",
+  "type": "",
+  "html": "I'm sorry. I'm simply asking if it's reasonable to use new windows as a strategy for keeping traffic on a site. By making all external links open in a new window, for example."
+ },
+ {
+  "id": 229002,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://germworks.net",
+  "date": "2007-08-08 03:20:57",
+  "type": "",
+  "html": "Ok, personally I do not agree with that at all.\\\nThe only time you should open something in a new window would be a pdf and even then I would not agree with that.\n\nEverything should stay in the one window, let the user (not us) decide when/ how/ if they open in a new window.\\\nRead some more hear: http://germworks.net/blog/2007/07/02/usability-and-accessibility-the-foreign-legion-of-web-design/"
+ },
+ {
+  "id": 229307,
+  "parent": 0,
+  "author": "B Merrell",
+  "url": "",
+  "date": "2007-08-08 18:26:45",
+  "type": "",
+  "html": "Oh, I see. So while it keeps traffic on the site if they keep the window open, it keeps them off the site if they're trying to go \"back\" to it. That's the reasoning I was looking for. Thank you."
+ },
+ {
+  "id": 274622,
+  "parent": 0,
+  "author": "laurie",
+  "url": "",
+  "date": "2007-09-28 19:36:06",
+  "type": "",
+  "html": "Question for you all -\\\nis there ever a reason for using a pop-up window? I saw earlier that pop-ups would work for opening a pdf or word doc - but what about blogs?\n\nI was thinking that the user would want to remain in the blog while opening links in another window - but my co-worker strongly disagrees for much of the reasons highlighted above.\n\nI welcome a weight in here. Thanks!"
+ },
+ {
+  "id": 386177,
+  "parent": 0,
+  "author": "Danni",
+  "url": "",
+  "date": "2007-12-27 12:21:22",
+  "type": "",
+  "html": "An interesting discussion. IMO, opening certain links in a new window or tab IS necessary in some cases.\n\nAs always in ID, target audience (skills), context and business goals play a role. For example, you want to link to a different (partner) site but want your users to easily switch or return to your site when done there. Then in this case you would want to open a new window, so users can 'find' back your site easily. (Unfortunately, accessibility and performance aren't factors often considered.)\n\nQuestion - Is there a way to open a link in a new tab (FF and IE7) instead of a new window? And have this tab appear on top, instead of loading 'in the background'. I think this would solve the taskbar cluttering problem, and the user will be more likely to see that a new window has opened, and also see the refering site.\n\nDon't expect users to know the keyboard shortcuts for openening a link in a new window/tab!"
+ },
+ {
+  "id": 452002,
+  "parent": 0,
+  "author": "Zopim Blog &raquo; Blog Archive &raquo; Inline Chat Windows - Why Popup Chat Windows just don&#8217;t cut it",
+  "url": "http://blog.zopim.com/?p=219",
+  "date": "2008-10-14 19:19:35",
+  "type": "pingback",
+  "html": "\\[...\\] fact is popup browser windows has usability issues and is considered by many to be a clumsy interface that will gradually be phased out. Google led \\[...\\]"
+ },
+ {
+  "id": 488325,
+  "parent": 0,
+  "author": "Birgitte Stær",
+  "url": "",
+  "date": "2009-08-14 19:58:46",
+  "type": "",
+  "html": "I came across this discussion looking for information on how I can make a www-hyperlink open in a new window/\\_blank from an uploaded pdf.\\\nIf the source-pdf is a bit heavy reloading it using the arrow is definately a problem. At the same time it is not possible to use the shift-command or rightclick to open the link in a new window from a pdf.\n\nAs long as links to the internet open from a pdf viewed in Acrobat or Reader the link will naturally open in the browser and therefore in a 'new window', which leaves the pdf itself open in the background. But if the pdf is uploaded to a server, links will not open in new windows. You will have to go back to the pdf using the arrow in the browser.\n\nI recently uploaded a somewhat heavy pdf (9Mb) with many links in it. It loads quite slowly and that means a major problem concerning the links. Every time a link has been visited and you return to the pdf the pdf loads again. It takes way too much time.\\\nIt seems I have to tell people to download the pdf to their harddisc before visiting the links and that is not the most elegant or disirable solution.\n\nMaybe in this forum you have a tip to solving this?\\\nI produce the links in the InDesign-document or Acrobat which don´t seem to have any options for the links to open in new windows, and to my knowledge I have no access to the underlying scripts."
+ },
+ {
+  "id": 496140,
+  "parent": 0,
+  "author": "Should you or should you not have links open in a new window/tab? | Web Development Blog",
+  "url": "http://www.heidicool.com/blog/2008/10/28/should-you-or-should-you-not-have-links-open-in-a-new-windowtab/",
+  "date": "2010-05-14 21:43:45",
+  "type": "pingback",
+  "html": "\\[...\\] Open New Window Still Has Usability Issues \\[...\\]"
+ }
+]

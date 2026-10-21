@@ -1,0 +1,101 @@
+[
+ {
+  "id": 129,
+  "parent": 0,
+  "author": "Consuelo Puchades",
+  "url": "",
+  "date": "2006-01-31 11:28:57",
+  "type": "",
+  "html": "Really interesting! It is sometimes difficult to mix accesibility and security, at least this is the excuse that techies often use in projects.\n\nWe had some problems with pinpad access to sign in banking transactions. Changing it was considered bad for security, and though they are working in a solution which increase security, it has not been implemented yet."
+ },
+ {
+  "id": 6702,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog usability: Avoid spam comments",
+  "url": "http://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/",
+  "date": "2006-06-25 00:07:16",
+  "type": "pingback",
+  "html": "\\[...\\] A non-machine readable image or similar. We probably won’t use that, because most implementations have accessibility issues to disabled users. See our ealier “Captcha usability revisited: Google inaccessible to blind people” \\[...\\]"
+ },
+ {
+  "id": 8354,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-07-12 09:15:07",
+  "type": "",
+  "html": "Accessibilityblog has a rant \"[Circus of CAPTCHA's](http://www.accessibilityblog.com/2006/06/29/circus-of-captchas/), where Matt rants Yahoo!, Digg and MySpace because they provide no alternative to the graphic captchas. There is a very interesting comment that caught my eye:\n\n> There’s absolutely no reason why CAPTCHAs have to be graphic-based, except that it’s easy. Asking the user a simple question based on the content of the site (”What is the name of this blog?”) or something that requires them to interpret a question (”What do the letters B, L, O and G spell?”) will usually do the trick. If everyone has unique questions on their own blogs, it’d make it very difficult for spammers to collect and submit the right answers automatically.\n\n(comment by Kirsten, \"[Crows to burnaby](http://www.crowstoburnaby.com/))"
+ },
+ {
+  "id": 20241,
+  "parent": 0,
+  "author": "justaddwater.dk | CAPTCHA usability: Humane alternative to CAPTCHA",
+  "url": "http://justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/",
+  "date": "2006-10-23 15:25:29",
+  "type": "pingback",
+  "html": "\\[...\\] So, much of this is learning from usability: Stop hurting the users! There are so many problems with traditional CAPTCHAs described already by me, Roger Johannson, Peter Krantz, Michael Mahemoff, Bob Easton, Christian Heilmann. \\[...\\]"
+ },
+ {
+  "id": 34839,
+  "parent": 0,
+  "author": "justaddwater.dk | Google Release of Audio Alternative to CAPTCHA",
+  "url": "http://justaddwater.dk/2006/12/03/google-release-of-audio-alternative-to-captcha/",
+  "date": "2006-12-03 21:47:30",
+  "type": "pingback",
+  "html": "\\[...\\] Interesting that they changed the meaning of the wheelchair icon. Back in January when I wrote about Google being inaccessible to blind people, the wheelchair just symbolized a popup version of the same image. Original Google CAPTCHA as described in Captcha usability revisited: Google inaccessible to blind people \\[...\\]"
+ },
+ {
+  "id": 244489,
+  "parent": 0,
+  "author": "15 minutter &raquo; Blog Archive &raquo; Debat på Dagbladet information - kun for seende",
+  "url": "http://15minutter.net/2007/08/30/debat-pa-dagbladet-information-kun-for-seende/",
+  "date": "2007-08-30 12:18:55",
+  "type": "pingback",
+  "html": "\\[...\\] at bruge captcha-metoden til at stoppe en overflod af spam på sitet. Men som Jesper Rønn-Jensen tidligere har påpeget, så kan den slags desværre ikke bruges af \\[...\\]"
+ },
+ {
+  "id": 439577,
+  "parent": 0,
+  "author": "Voos Baratos",
+  "url": "http://sovoosbaratos.com",
+  "date": "2008-08-31 23:26:39",
+  "type": "",
+  "html": "Its a very important point you bring up. I have never seen a blind person use a computer before and I think it is great that these issues get attention."
+ },
+ {
+  "id": 438742,
+  "parent": 0,
+  "author": "Como Emagrecer Rapido",
+  "url": "http://comoemagrecerrapido.com",
+  "date": "2008-08-28 03:36:12",
+  "type": "",
+  "html": "Man! Spammers make up some difficult problems! I think a sound captcha would be easier to \"crack\" than an image one."
+ },
+ {
+  "id": 441599,
+  "parent": 0,
+  "author": "Cartao de Credito",
+  "url": "http://ocartaodecredito.com",
+  "date": "2008-09-03 21:41:20",
+  "type": "",
+  "html": "That is a good point that you bring up! I think google should make this better!"
+ },
+ {
+  "id": 442523,
+  "parent": 0,
+  "author": "Algarve in Portugal",
+  "url": "http://algarveinportugal.org",
+  "date": "2008-09-04 21:48:13",
+  "type": "",
+  "html": "I agree with you on this, but sometimes it is hard to balance things out. If you make it too easy then someone can program something to break captchas, if you make it to hard its inaccessible to some people!"
+ },
+ {
+  "id": 444703,
+  "parent": 0,
+  "author": "Ken Moses",
+  "url": "",
+  "date": "2008-09-09 21:59:43",
+  "type": "",
+  "html": "Captchas do not work for people with impaired vision on public-access (library) computers which have the sound permanently disabled. And they are too often used to block access for new users who want to ask questions that are not covered by FAQs. It's especially frustrating when the telephone numbers do nothing but refer to a web site. Dial-up users are also stymied by the endless load times of overly-bloated web pages. It goes on..."
+ }
+]

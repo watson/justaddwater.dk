@@ -1,0 +1,137 @@
+[
+ {
+  "id": 6787,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-25 15:03:47",
+  "type": "",
+  "html": "Unbelievable, but this comment actually slipped through just a few moments ago:\\\n![spam comment](/wp-content/uploads/2006/06/screenshot-wordpress-spam-got-through.png)"
+ },
+ {
+  "id": 6793,
+  "parent": 0,
+  "author": "padawan",
+  "url": "http://padawan.info/",
+  "date": "2006-06-25 16:00:08",
+  "type": "",
+  "html": "Actually I'm using a combination of both renaming the comment script and the same javascript trick that you also mention. Not a single automated comment spam in two years and that without any anti-spam plugin! (Though I can't say the same about TrackBacks unfortunately, which will remain disabled until I switch to either MT 3.3 or DotClear 2 which have anti-spam filters for TBs).\n\n(and thks for the mention ;-))"
+ },
+ {
+  "id": 6911,
+  "parent": 0,
+  "author": "Pål Heick",
+  "url": "http://blog.heick.nu",
+  "date": "2006-06-26 13:53:26",
+  "type": "",
+  "html": "I've been using [spam karma](http://unknowngenius.com/blog/wordpress/spam-karma/) in combination with Akismet for the past few weeks. Result: 2400 spam comments and trackbacks stopped.\\\nSpam Karma runs a lot of different filters on posted comments and can be tweaked and tuned to be super agressive or mellow and friendly towards new comments - and it also catches trackback spam :-)"
+ },
+ {
+  "id": 6913,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-26 14:12:30",
+  "type": "",
+  "html": "Pål,\\\nI know Spam Karma from Webword, where one of my comments got caught in the spamfilter. So I really don't want to use it when comments like my own are marked as spam.\n\nThe workaround for me was to email John at Webword. He did some detective work and found the comment. Then he re-posted it in his own name but was only able to post a text-only version of my comment: The links I initially posted were gone.\n\nI have no problem that comments are held for moderation, but when they're automatically (and wrongly) marked as spam, it's a problem.\n\nSo I'd prefer to avoid Spam Karma (because it's too agressive)."
+ },
+ {
+  "id": 6943,
+  "parent": 0,
+  "author": "Olle Jonsson",
+  "url": "http://blog.olle.ter.dk",
+  "date": "2006-06-26 19:02:20",
+  "type": "",
+  "html": "Another thing about CAPTCHA: manually entered spam can get through.\n\nThere might be a reality behind the weak defense speech in wiki-spammers' CSS-hidden comments: \"We are delicate, we don't destroy your content. Hungry children to feed.\" And, that reality might put our content at spam-risk.\n\nThat annoyance couldn't happen with Akismet, or other pattern-matching solutions.\n\nWikipedia's meta-wikipedia pages on antispam are instructive in this regard. That's where I got the notion of manually entered spam. http://meta.wikimedia.org/wiki/Spam"
+ },
+ {
+  "id": 7388,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog usability: Avoid spam comments (part 2)",
+  "url": "http://justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+  "date": "2006-06-28 19:26:28",
+  "type": "pingback",
+  "html": "\\[...\\] In our previous article Blog usability: Avoid spam comments we discussed the two ways we currently where fighting spam comments on our blog: \\[...\\]"
+ },
+ {
+  "id": 7609,
+  "parent": 0,
+  "author": "Emil Virkki",
+  "url": "http://www.ruusu.net/",
+  "date": "2006-06-30 11:56:02",
+  "type": "",
+  "html": "Isn't encoding forms with JS a usability problem for users of mobile browsers and people who have disabled JavaScript?"
+ },
+ {
+  "id": 7654,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-07-01 23:36:06",
+  "type": "",
+  "html": "Emil,\\\nI agree with you that JavaScript encoding is a big accessibility problem. The\\\nreason why it's listed under \"what we might do\" is because we might do it if we can't stop spam comments in other ways.\n\nBut for now, spam comments seem to have stopped, as we introduced a new trick Thomas wrote about recently: \"[Avoid Spam Comments part 2](/2006/06/28/blog-usability-avoid-spam-comments-part-2/)\".\n\nOne more thing, I think that **the JavaScript trick could be done in a way that makes comments accessible and unobtrusive**:\n\nImagine that the form-tag action contains the \"usual\" URL: wp-post-comment.php (URL must not be illegal). Then, via JavaScript we rewrite URL to some other URL. This URL can receive comments with no further ado.\n\nBUT if on the other hand, JavaScript is turned off, the original URL is posted to. I would then suggest a \\<noscript\\> element with a hidden field. The field should behave as a non-image CAPTCHA with a label like: \"add two and three and write result here:\"\n\nThe comment-receiving script on the original URL is then programmed so that comments are rejected without the text-based CAPTCHA (or held for moderation).\n\nThe method with the hidden field has similarities with [Sam Ruby's original example](http://www.intertwingly.net/blog/2006/05/30/Captcha-this), where he uses JavaScript to fill out a hidden field.\n\nYou should decide for yourself which methods are necessary in your blog. For us, (so far), CAPTCHA and JavaScript has not been necessary."
+ },
+ {
+  "id": 20177,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-10-23 10:23:58",
+  "type": "",
+  "html": "HashCash plugin for wordpress may also be able to help:\n\n[HashCash wordpress plugin](http://www.elliottback.com/wp/archives/2005/10/23/wordpress-hashcash-30-beta/) by Elliott Back\n\n> Every four hours, your blog picks a random large number (close to 32 bits). Whenever a visitor visits your permalink pages, an ajax call is made which retrieves some javascript. This javascript first decrypts itself, then executes itself again to retrieve the secret value, which it sets in the form. If a comment does not have this value, it is rejected. If a comment is rejected more than four times, the user is blocked for a specified period of time."
+ },
+ {
+  "id": 20242,
+  "parent": 0,
+  "author": "justaddwater.dk | CAPTCHA usability: Humane alternative to CAPTCHA",
+  "url": "http://justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/",
+  "date": "2006-10-23 15:30:31",
+  "type": "pingback",
+  "html": "\\[...\\] Blog usability: Avoid spam comments \\[...\\]"
+ },
+ {
+  "id": 21527,
+  "parent": 0,
+  "author": "Elena",
+  "url": "http://www.clubdutyfree.com",
+  "date": "2006-10-28 17:51:15",
+  "type": "",
+  "html": "Most popular CAPTCHA types alredy recognize by spammers. I hate spammers. Every day i get a 50-120 letters to e-mail and over 100 comments into blog. It's crazy! Spam filters is not best way..."
+ },
+ {
+  "id": 78338,
+  "parent": 0,
+  "author": "justaddwater.dk | 100,000 Blog Spam Comments",
+  "url": "http://justaddwater.dk/2007/02/06/100000-blog-spam-comments/",
+  "date": "2007-02-06 12:45:26",
+  "type": "pingback",
+  "html": "\\[...\\] We have for example been blocking certain keywords that we found where common in spam that slipped through Akismet, or we have been changing the standard WordPress URL for posting comments. Finally we have incorporated a little htaccess hack that validates the posters referral URL. This should of cause be our own domain justaddwater.dk, but many spammers actually put some garbage into this header field - and we can then easily block it directly in the Apache web server before it even reaches WordPress. \\[...\\]"
+ },
+ {
+  "id": 119317,
+  "parent": 0,
+  "author": "justaddwater.dk | Spam Blog Posted 182 Articles in One Day",
+  "url": "http://justaddwater.dk/2007/04/02/spam-blog-posted-182-articles-in-one-day/",
+  "date": "2007-04-02 02:34:54",
+  "type": "pingback",
+  "html": "\\[...\\] we have written about our spam comment countermeasures in “how to avoid spam comments” (part 1, part 2), and the last 2 months since we passed 100,000 spam comments, we have had another 57,000 \\[...\\]"
+ },
+ {
+  "id": 279512,
+  "parent": 0,
+  "author": "Christy",
+  "url": "http://www.anti-spam-info.com",
+  "date": "2007-10-03 11:54:42",
+  "type": "",
+  "html": "Spam Filtering may reduce the number of spam for a short while but you cant say that it is an ultimate solution to Spamming. The reason is that the Spammers are aware of these filtering techniques whether it is Filtering with CAPTCHA or some other. There are many websites available that are providing the information on Anti-Spamming Solutions but most of this information is either irrelevant or not useful. I have recently visited a website\\\nhttp://www.anti-spam-info.com\\\nand i found it much reliable for the anti spamming."
+ },
+ {
+  "id": 452646,
+  "parent": 0,
+  "author": "Redstar aka John",
+  "url": "",
+  "date": "2008-10-18 21:14:17",
+  "type": "",
+  "html": "I came here because I was looking for some info about comment spam. I dont have a problem with the spam bots, but some guy started to implant commentspam by hand.\n\nIntresting solution you used here at that time.."
+ }
+]

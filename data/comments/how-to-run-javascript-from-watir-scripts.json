@@ -1,0 +1,11 @@
+[
+ {
+  "id": 387238,
+  "parent": 0,
+  "author": "Fabienphilipp",
+  "url": "",
+  "date": "2008-01-02 19:41:06",
+  "type": "",
+  "html": "Dear Sir,\n\nI used a call javascript function from Watir script so as to go to the superior page.\\\nwin = \\$ie.frame(\"home\").document.parentWindow\\\nwin.gotoSeq('next')\\\nHowever \\$ie rest on the old page. Must update on \\$ie through hwnd for example?\n\nYours faithfully,\n\nFabien."
+ }
+]

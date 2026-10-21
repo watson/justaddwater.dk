@@ -1,0 +1,38 @@
+[
+ {
+  "id": 233781,
+  "parent": 0,
+  "author": "Thomas Kragh",
+  "url": "http://www.nykredit.dk",
+  "date": "2007-08-16 12:14:12",
+  "type": "",
+  "html": "Hi Jesper\n\nThanks for your comments - and I agree that the search-function can be improved, which is in the pipeline. And you are right - usability is of course very important for us\n\nBy the way: congrats on a great blog. Very interesting and easy-to-read at the same time - not that often found !\n\nFor our danish readers (and maybe some customers):\\\nForklaring på hvorfor Jesper bliver logget af:\\\nSøgefunktionen på Nykredit.dk/Privat (som Jesper har brugt i eksemplet ovenfor) er ikke i samme sikkerhedsområde som netbanken (https). Derfor skal brugeren blive logget af (Der er i øvrigt indlagt et delay på nogle sekunder, hvis bruger fejlagtigt kommer til at surfe væk dvs. at logon fastholdes kortvarigt)\\\nMen der er en søgefunktion indenfor Netbanken/Mitnykredit som Jesper kan bruge. Det ligger under hjælpe-ikonet. Her kan der søges uden at blive logget af.\\\nEn anden løsning for Jesper er, at se under Bankkonti, klikke på I-ikonet. Her står hans SWIFT og IBAN nr.\n\nRegards/Venlig hilsen Thomas Kragh, Internetchef Nykredit"
+ },
+ {
+  "id": 238869,
+  "parent": 0,
+  "author": "Mads Sørensen",
+  "url": "",
+  "date": "2007-08-23 12:06:19",
+  "type": "",
+  "html": "@Thomas Kragh\n\nKan I ikke bare gennemtvinge HTTPS på hele Nykredits website, så snart brugeren er logget på netbanken?"
+ },
+ {
+  "id": 239076,
+  "parent": 0,
+  "author": "Jon Cram",
+  "url": "http://webignition.net",
+  "date": "2007-08-23 22:04:21",
+  "type": "",
+  "html": "Out of interest, what extension/add-on for Firefox are you using such that a summary of HTML errors and warnings is displayed at the bottom-right of your browser?\n\nI use the web developer extension and this gives me similar functionality in the top right below the search input, but doesn't specify the number of errors.\n\nAnd, of course, thanks once more for another insightful posting."
+ },
+ {
+  "id": 413906,
+  "parent": 0,
+  "author": "Banker",
+  "url": "http://www.banktransfers.co.uk/Bart_simpson.aspx",
+  "date": "2008-04-25 13:21:35",
+  "type": "",
+  "html": "Just beware of Phishing screen, which looks exactly same as your net banking login , rest are technical problems which could be solved anytime\\\n-Regards"
+ }
+]

@@ -1,0 +1,74 @@
+[
+ {
+  "id": 32810,
+  "parent": 0,
+  "author": "Jens Meiert",
+  "url": "http://meiert.com/",
+  "date": "2006-11-28 00:05:04",
+  "type": "",
+  "html": "IntelliJ IDEA \\[1\\] \"auto-saves\" files for years now, and it's a shame (and characteristic for our industry ...) that it has not been broadly adopted yet. Really a shame. (And this auto-save is definitely one of the reasons why most people just love IDEA. Manually saving files is absolutely unnecessary, it's an application task; it must protect our work.)\n\n\\[1\\] http://www.jetbrains.com/idea/"
+ },
+ {
+  "id": 32944,
+  "parent": 0,
+  "author": "Taras Brizitsky",
+  "url": "http://yesnocancel.wordpress.com",
+  "date": "2006-11-28 10:47:34",
+  "type": "",
+  "html": "A complete lack of \"Save\" button raises some fundamental questions:\\\n\\* File naming. At present time we still have a file system visible to the end user (hello to a good old Palm) and there's a need for meaningful file names unless we completely deal with metadata which is another thing... Possible solution: save file once and then auto-save to it.\\\n\\* Having a need for draft/document division. I.e. if I just type few words to keep for a couple of minutes I won't necessarily need them in the future. Without \"save\" we may end up dividing text processors to \"notepads\" and \"more serious\" solutions.\\\n\\* Undos. I.e. the \"endless editing\" paradigm may need to envolve having a big enough (ideally - endless) number of undos even if you have saved the doc. I.e. you may open the document and undo the previous action.\n\nI'd say there're much more questions on this topic but the direction towards \"no need to hit Save unless it's really needful\" is visibleindeed."
+ },
+ {
+  "id": 32954,
+  "parent": 0,
+  "author": "Håkan Reis",
+  "url": "http://blog.reis.se",
+  "date": "2006-11-28 11:25:44",
+  "type": "",
+  "html": "Every time I start a new project I always try to press this issue. Developers that whip up a fast interface just to see things happen always place that pesky save button there. Mostly it's not needed when you dig deeper.\n\nAs for Taras comment on filename. You wouldn't want to start the application, you start by creating your document. Naming will come natural that way. But i agree and have came across the problem regarding draft/document version."
+ },
+ {
+  "id": 32956,
+  "parent": 0,
+  "author": "Taras Brizitsky",
+  "url": "http://yesnocancel.wordpress.com",
+  "date": "2006-11-28 11:34:08",
+  "type": "",
+  "html": "Greets, Håkan.\\\nUnfortunately many people prefer Program\\>Document, not Document\\>Program approach of launching applications.\\\nAnd yes, it's easy to find applications where a lack of \"Save\" is painless but in some cases getting completely rid of it requires changing a mechanism of document management.\n\nPossible solution for a draft: a kind of Accept/decline changes question on initial saving although this is not the best possible idea too..."
+ },
+ {
+  "id": 53414,
+  "parent": 0,
+  "author": "Martin Gjesdal",
+  "url": "http://www.coretrek.no",
+  "date": "2007-01-04 11:13:46",
+  "type": "",
+  "html": "I think a \"Save\" button is in place just to comfort the user. Sometimes you need to press a save button to get a confirmation that you have actually saved. With GMail, there's both autosave and a save button. The save button is merely to let me know it's really saved. I do not think users are ready for a non save button world."
+ },
+ {
+  "id": 244060,
+  "parent": 0,
+  "author": "Barry O'Leary",
+  "url": "http://potifaroptusnet.com.au",
+  "date": "2007-08-30 02:25:29",
+  "type": "",
+  "html": "Where oh where is the save button, anyway? -B.O'L."
+ },
+ {
+  "id": 427849,
+  "parent": 0,
+  "author": "Brad Morgan",
+  "url": "http://www.audiobooksbay.com/",
+  "date": "2008-07-03 07:24:53",
+  "type": "",
+  "html": "I agree with Martin that the Save button is a comfort to the user, it would be a hard sell to take it out at most of my client sites. For networked applications you also need to consider network performance, do you really want to send data to the database every time the user enters a field? In some systems you also need to consider the \"logical unit of work\". A user may want an all or nothing result when saving certain types of data like that found in a master detail relationship, or the implicit save in a Pay Now button. Having said all that, there certainly are some applications where auto save makes alot of sense as some of the ones mentioned above. Still, considering all the different kinds of applications out there I don't see the Save button disappearing completely."
+ },
+ {
+  "id": 490663,
+  "parent": 0,
+  "author": "John Kruse",
+  "url": "",
+  "date": "2009-11-05 17:22:05",
+  "type": "",
+  "html": "Jef Raskin, in The Humane Interface, argued strongly against save buttons. There's an interesting discussion of his approach at http://www.greenspun.com/bboard/q-and-a-fetch-msg.tcl?msg_id=005Leg"
+ }
+]

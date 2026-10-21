@@ -1,0 +1,65 @@
+[
+ {
+  "id": 380995,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-05 22:17:47",
+  "type": "",
+  "html": "Still, the number keeps low: Now 229 spam comments in the last 60 hours -- only 3 spam comments per hour on average -- or 72 per day.\n\nAnd only 229-127 = 102 spam comments since I published this post yesterday, 30.6 hours ago.\n\nI really wonder what's going on?"
+ },
+ {
+  "id": 380881,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-04 13:33:22",
+  "type": "",
+  "html": "After Thomas added the Akismet counter to the frontpage anyone can follow our spam count publically. Currently 513,000 (which is roughly 12,000 in the last 7 days including the last day with only 127 spam comments)"
+ },
+ {
+  "id": 383643,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-16 02:26:55",
+  "type": "",
+  "html": "Spam Filter Free Day, short update: I spent a total of 2 hours deleting 1111 spam comments, re-activating Akismet etc., and re-finding the 6 valid comments and trackbacks recieved during the last 24 hours. More info in separate post later."
+ },
+ {
+  "id": 382101,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-12 09:47:00",
+  "type": "",
+  "html": "We have recieved a total of 1317 spam comments the last nine days ... roughly 146 each day on average. So the spam count is a little up ... but not that much.\n\n115 the last 24 hours."
+ },
+ {
+  "id": 382132,
+  "parent": 0,
+  "author": "justaddwater.dk | Spam Comment With Link To Its Article",
+  "url": "http://justaddwater.dk/2007/12/12/spam-comment-with-link-to-its-article/",
+  "date": "2007-12-12 13:51:57",
+  "type": "pingback",
+  "html": "\\[...\\] Spam Comments Dropped 95% Overnight \\[...\\]"
+ },
+ {
+  "id": 382468,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-14 17:07:13",
+  "type": "",
+  "html": "Now it's up to 1670 since this post. Since last time 1670-1317= 353 spam comments in the last 38 hours which translates to\n\n222 the last 24 hours"
+ },
+ {
+  "id": 384203,
+  "parent": 0,
+  "author": "justaddwater.dk | Cleanup Time &#8212; Spam Filter Free Day",
+  "url": "http://justaddwater.dk/2007/12/18/cleanup-time-spam-filter-free-day/",
+  "date": "2007-12-18 10:56:02",
+  "type": "pingback",
+  "html": "\\[...\\] posts newer than 11 days are hit by spam comments. 2 comments on “Spam Comments Dropped 95% Overnight” from December \\[...\\]"
+ }
+]

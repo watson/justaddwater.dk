@@ -1,0 +1,47 @@
+[
+ {
+  "id": 502328,
+  "parent": 0,
+  "author": "Ignore Git files that already exist in the repository &laquo; Blog",
+  "url": "http://cbanta.wordpress.com/2010/11/10/ignore-git-files-that-already-exist-in-the-repository/",
+  "date": "2010-11-11 05:19:07",
+  "type": "pingback",
+  "html": "\\[...\\] I made changes to some config files for dev purposes. And I didn’t want to commit that back into git. The problem is that .gitignore and .git/info/exclude don’t work on a file already in the repository. So after googling a bit, I found a way to do this here: http://justaddwater.dk/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/ \\[...\\]"
+ },
+ {
+  "id": 541841,
+  "parent": 0,
+  "author": "roger",
+  "url": "http://choirarrangements.freeldssheetmusic.org",
+  "date": "2011-09-19 17:00:14",
+  "type": "",
+  "html": "for followers:\n\n\\$ git update-index --assume-unchanged source_code/PushSource.vxcproj\\\nfatal: Unable to mark file source_code/PushSource.vxcproj\n\nmeant \"that file doesn't exist\""
+ },
+ {
+  "id": 574561,
+  "parent": 0,
+  "author": "Martin",
+  "url": "",
+  "date": "2011-12-22 04:54:03",
+  "type": "",
+  "html": "EduBoris, if the file is not being tracked by git yet, just add it on .gitignore file. Thanks for this tip!"
+ },
+ {
+  "id": 565865,
+  "parent": 0,
+  "author": "EduBoris",
+  "url": "http://eduboris.blogspot.com",
+  "date": "2011-12-01 22:01:30",
+  "type": "",
+  "html": "Perfect!\n\nWorked well for existing files, is it possible for newly created files not yet in the repo... and not required (such as cache files)?\n\nThank you for the tip :)"
+ },
+ {
+  "id": 617926,
+  "parent": 0,
+  "author": "Chris Burbridge",
+  "url": "http://chrisburbridge.com",
+  "date": "2012-06-14 22:53:04",
+  "type": "",
+  "html": "Thanks! Just what I was looking for."
+ }
+]

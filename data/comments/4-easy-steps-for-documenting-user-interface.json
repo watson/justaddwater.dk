@@ -1,0 +1,65 @@
+[
+ {
+  "id": 30856,
+  "parent": 0,
+  "author": "Rasmus Knippel",
+  "url": "http://www.knippel.org",
+  "date": "2006-11-22 12:47:48",
+  "type": "",
+  "html": "As I was the asking party I just want to add a couple of lines.\n\nThe problem is, as noted above, that some of the GUI is interacting with various services and systems. What I need is a way to “anchor” a GUI in such a way that I can identify which GUI’s potentially will be affected of a change in the backend services (URL is not an option).\n\nLooking forward to you input.."
+ },
+ {
+  "id": 30869,
+  "parent": 0,
+  "author": "Preben Carlsen",
+  "url": "http://www.overvejelser.dk",
+  "date": "2006-11-22 13:25:14",
+  "type": "",
+  "html": "Depending on the complexity of the GUI, I sometimes uses the model suggested by Jesper, sometimes uses QuickTime to demonstrate and thereby reduces a potential big number of screenshots."
+ },
+ {
+  "id": 30930,
+  "parent": 0,
+  "author": "Percy",
+  "url": "http://wiredal.wordpress.com/",
+  "date": "2006-11-22 17:30:10",
+  "type": "",
+  "html": "This is a neat way to do the documentation. I wish I'd known about it when I used to do UI evaluations of a product. It seems to be that you're really cutting it down to the essentials and in doing so you could even find problems that might have been overlooked earlier. Even if you don't, it's a nice way to handle the documentation."
+ },
+ {
+  "id": 30950,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2006-11-22 18:21:38",
+  "type": "",
+  "html": "Jesper, that is good advice - and a very simply method. I use the method of \"whatever-I-can-think-of-documentation\", which is not very good. Maybe I should give your approach a go.\n\nRasmus, A good way to see the relation between interface elements and interactions is to make a mind map. Most of the system that I make is modular; meaning the same interaction and interface elements is used in many different scenarios and systems (with an added bonus of creating cross-system consistency).\n\nCombining Jespers' method with a mind map could really be interesting."
+ },
+ {
+  "id": 32442,
+  "parent": 0,
+  "author": "WebWord &raquo; Blog Archive &raquo; 4 easy steps for documenting user interface",
+  "url": "http://www.webword.com/wp/2006/11/26/4-easy-steps-for-documenting-user-interface/",
+  "date": "2006-11-26 16:48:05",
+  "type": "pingback",
+  "html": "\\[...\\] Short, simple, easy…  \\[...\\]"
+ },
+ {
+  "id": 65498,
+  "parent": 0,
+  "author": "fsbrainstorm v4.0 &raquo; Blog Archive &raquo; 4 Easy Steps for Documenting User Interfaces",
+  "url": "http://www.fsbrainstorm.com/?p=361",
+  "date": "2007-01-22 01:12:12",
+  "type": "pingback",
+  "html": "\\[...\\] Here are 4 easy steps for documenting user interfaces from justaddwater.dk. In short: \\[...\\]"
+ },
+ {
+  "id": 230550,
+  "parent": 0,
+  "author": "1001 Lists To Read Before You Die | Terabell - technology, law, programming and a laugh",
+  "url": "http://blog.terabell.com/27/lists/1001-lists-to-read-before-you-die/",
+  "date": "2007-08-11 11:40:05",
+  "type": "pingback",
+  "html": "\\[...\\] \\[...\\]"
+ }
+]

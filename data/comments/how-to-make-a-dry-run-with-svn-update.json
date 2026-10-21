@@ -1,0 +1,110 @@
+[
+ {
+  "id": 415190,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-05-01 19:46:12",
+  "type": "",
+  "html": "Another nice one:\n\n`` alias svnupall='for DIR in `find . -maxdepth 2 -type d -name \".svn\" | cut -d / -f 2`; do echo \"$DIR: \";svn update ./$DIR; done'' ``\n\nThis one updates all my svn projects in my code projects dir.\\\nFrom http://codesnippets.joyent.com/posts/show/368"
+ },
+ {
+  "id": 421842,
+  "parent": 0,
+  "author": "mehryar",
+  "url": "http://www.mehryar.com",
+  "date": "2008-06-03 02:15:30",
+  "type": "",
+  "html": "svn status -u\n\nwill also do a dry update run"
+ },
+ {
+  "id": 420839,
+  "parent": 0,
+  "author": "Rasterbator",
+  "url": "http://www.ronyasoft.com/products/proposter/download.html",
+  "date": "2008-05-28 15:05:26",
+  "type": "",
+  "html": "Is that works? Anyway, i will copy down and have a try on it\\\nThank you"
+ },
+ {
+  "id": 435066,
+  "parent": 0,
+  "author": "EmbeddedLinuxGuy",
+  "url": "http://LinuxIsFun.com",
+  "date": "2008-08-11 20:36:58",
+  "type": "",
+  "html": "This doesn't work perfectly for me on very old checkouts. I get false conflicts and \"Skipping\" messages, similar to symptoms in this forum post:\n\nhttp://translocator.ws/2005/10/12/svn-update-dry-run\n\n\\[jesse@sente\\]~/svn/rex\\> svn merge --dry-run -r BASE:HEAD .\\\nSkipped missing target: 'www/html/HP/Traffic_Users_Guide.pdf'\\\nSkipped 'www/html/js/traffic-class.js'\\\nC www/cgi-bin/queries\\\n\\[jesse@sente\\]~/svn/rex/www/cgi-bin\\>svn status queries\\\n\\[jesse@sente\\]~/svn/rex/www/cgi-bin\\>svn diff queries\\\n\\[jesse@sente\\]~/svn/rex/www/cgi-bin\\>svn status -u queries\\\n\\* 44231 queries\n\nSee also"
+ },
+ {
+  "id": 431761,
+  "parent": 0,
+  "author": "chebbers",
+  "url": "",
+  "date": "2008-07-23 18:43:12",
+  "type": "",
+  "html": "\"svn status -u\" won't show files that will become conflicted"
+ },
+ {
+  "id": 484053,
+  "parent": 0,
+  "author": "Dan",
+  "url": "http://www.yourversion.com",
+  "date": "2009-04-17 07:07:08",
+  "type": "",
+  "html": "thanks for your great post, Jesper! this is a very handy trick to know...will save me lots of time."
+ },
+ {
+  "id": 489176,
+  "parent": 0,
+  "author": "Subversion update dry-run .. | itech9",
+  "url": "http://itech9.com/wp/?p=105",
+  "date": "2009-09-16 21:50:26",
+  "type": "pingback",
+  "html": "\\[...\\] From http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/ \\[...\\]"
+ },
+ {
+  "id": 495378,
+  "parent": 0,
+  "author": "Weekly Digest for April 23rd &#8211; BorkWeb",
+  "url": "http://borkweb.com/story/weekly-digest-for-april-23rd",
+  "date": "2010-04-23 10:09:17",
+  "type": "pingback",
+  "html": "\\[...\\] Shared justaddwater.dk \\| How to make a dry-run with svn update. \\[...\\]"
+ },
+ {
+  "id": 501840,
+  "parent": 0,
+  "author": "svn 指令 &laquo; 阿喵就像家",
+  "url": "http://mlwmlw.no-ip.org/2010/10/svn-%e6%8c%87%e4%bb%a4/",
+  "date": "2010-10-30 10:13:53",
+  "type": "pingback",
+  "html": "\\[...\\] http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/ \\[...\\]"
+ },
+ {
+  "id": 513724,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2011-03-09 22:17:24",
+  "type": "",
+  "html": "@Markus, yeah unfortunately wordpress tries to clever-change all quotes and double dashes.\n\nIt is really really a wrong default and very annoying.\n\nBTW, you can avoid the double dashes by using the single letter equivalents \"-n\" for dry-run and \"-r\" for revision. But it then becomes less intuitive and a bit harder to learn:\n\nThen the expression becomes:\n\n> svn merge –n –r BASE:HEAD ."
+ },
+ {
+  "id": 513653,
+  "parent": 0,
+  "author": "Markus Hedlund",
+  "url": "http://markushedlund.com",
+  "date": "2011-03-09 10:09:42",
+  "type": "",
+  "html": "That line didn't work with SVN 1.6.16. Had to change it to:\n\nsvn merge --dry-run --revision BASE:HEAD ."
+ },
+ {
+  "id": 513654,
+  "parent": 0,
+  "author": "Markus Hedlund",
+  "url": "http://markushedlund.com",
+  "date": "2011-03-09 10:10:37",
+  "type": "",
+  "html": "That should be\n\nsvn merge --dry-run --revision BASE:HEAD .\n\nwith two \"-\" before \"dry-run\" and \"revision\"."
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "id": 27720,
+  "parent": 0,
+  "author": "Mathias",
+  "url": "http://willerup.com",
+  "date": "2006-11-15 21:09:42",
+  "type": "",
+  "html": "Guilty! (Being responsible for the \"Want to make IMDb my homepage?\" on imdb.com). Put there in the mid nineties and still surviving to this day. Why? Because total novices to the internet do often end on imdb as the first \"wow\" place and they think it's really cool that you can \"add it as you homepage\". Btw, we never measured any of this.\n\nMathias\\\nB&O IdeaLab"
+ },
+ {
+  "id": 27992,
+  "parent": 0,
+  "author": "Percy",
+  "url": "http://allaboutusers.wordpress.com/",
+  "date": "2006-11-16 09:47:53",
+  "type": "",
+  "html": "I don't mind if a blogger posts a couple of links but the icons bother me, especially when they are over-used. By the way, I don't know if you're aware, but your feed post shows up with an 'Email this', 'Digg this' and 'Add to del.icio.us' at the bottom. I think there's a setting in Feedburner which you can use to turn that off."
+ },
+ {
+  "id": 27997,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-16 09:57:45",
+  "type": "",
+  "html": "Percy,\\\nThanks for noting. That's actually a bit embarrassing that feed icons show up.\n\nThis morning, I saw that [Dalager](http://dalager.com) and [Baekdal](http://baekdal.com) have also noted that. Here's the screenshot that Dalager sent:\n\n![Feedburner feed icons](/wp-content/uploads/2006/11/feedburner-feed-icons1.png)\n\nWe'll look into feedburner to find that setting. But also, we may reflect a little more about it: Maybe two small text-based links are OK, but the full row of attention-dragging icons is wrong."
+ }
+]

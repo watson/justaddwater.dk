@@ -1,0 +1,47 @@
+[
+ {
+  "id": 387104,
+  "parent": 0,
+  "author": "Arjan",
+  "url": "http://arjaneising.nl",
+  "date": "2008-01-01 21:51:43",
+  "type": "",
+  "html": "Nice, so basically it does the same as any server-side HTML stripping function, but then in your HTML editor? Weird that this isn't a standard feature within an HTML editor...\n\nBy the way, it is better to wrap code in both a `pre` and `code` element, like this: `<pre><code>[the code]</code></pre>`. In the next version of HTML, HTML5, there will e an element named `blockcode` to do this job. There are also small JavaScripts that can syntaxhighlight the code, if you use a `class`-name to indicate the language."
+ },
+ {
+  "id": 387236,
+  "parent": 0,
+  "author": "Geoff",
+  "url": "",
+  "date": "2008-01-02 19:18:41",
+  "type": "",
+  "html": "@Arjan Like TextMate, the e application basically provides you with a the editor (along with a few basic services); most of the power and flexibility comes from the bundles, which you can (as this command illustrates) customize to your heart's content."
+ },
+ {
+  "id": 435233,
+  "parent": 0,
+  "author": "Trevor",
+  "url": "",
+  "date": "2008-08-12 23:10:27",
+  "type": "",
+  "html": "Where do I get entities.txt? It's required by the code, but I don't have it."
+ },
+ {
+  "id": 432158,
+  "parent": 0,
+  "author": "Katu",
+  "url": "",
+  "date": "2008-07-25 22:37:35",
+  "type": "",
+  "html": "Great blog love the kid Facepalming in your Logo! I am gonna post this site over programminghelp.com. Thanks man!"
+ },
+ {
+  "id": 492953,
+  "parent": 0,
+  "author": "John",
+  "url": "http://supergeekery.com",
+  "date": "2010-02-17 23:31:33",
+  "type": "",
+  "html": "I'm new at TextMate, but this command sounds perfect. I'm having the same issue as Trevor. I get the error:\n\n/tmp/temp_textmate.Ife6jm:6:in \\`initialize': No such file or directory - /entities.txt (Errno::ENOENT)\\\nfrom /tmp/temp_textmate.Ife6jm:6:in \\`open'\\\nfrom /tmp/temp_textmate.Ife6jm:6\n\nIt seems to want a file called \"entities.txt\"."
+ }
+]

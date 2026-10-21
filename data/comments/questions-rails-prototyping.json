@@ -1,0 +1,20 @@
+[
+ {
+  "id": 2382,
+  "parent": 0,
+  "author": "Luis Villa",
+  "url": "http://www.grancomo.com/",
+  "date": "2006-04-24 17:41:03",
+  "type": "",
+  "html": "Hi Jesper... I agree with your points... I was playing the devil's advocate... ;-) But I insist... what's left for RoR to jump in the main scene? Could it be possible going live with the RoR prototype finished version instead of jumping from RoR to Java?\n\nWhat do developers think? Are you sure is just for prototyping? ;-)"
+ },
+ {
+  "id": 2383,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-04-24 20:18:27",
+  "type": "",
+  "html": "Hi Luis\n\nNice to see that you are still following our blog. Jesper is enjoying a nice long vacation in Italy, so I'm gonna answer instead :)\n\n> \\[...\\] But I insist… what’s left for RoR to jump in the main scene?\\[...\\]\n\nNothing technical - Maybe only a bid of costumer lobbying – that’s it. We are in Capgemini definitely looking to use Ruby on Rails in production and not only for prototyping. I know for a fact that one of our prototypes is going to be in production as soon as it has been polished. I'm sure we are gonna write more about that as the project develops :)\n\n> \\[...\\] What do developers think? Are you sure is just for prototyping? ;-)\n\nAs a developer I'm very exited about RoR, both for prototyping but certainly also for production. It's not that much RoR but the framework (and to some extend the power of the Ruby language) that excites me. But I'm sure that another framework could be built in another language giving the developer the same benefits. Just as long as it was a language as powerful as Ruby.\n\nOur goal is to tell our managers, our sales people and our costumers about the power of RoR. This can't always be done in one strike. We think that the easies way to do this is to first show how easy it is to build prototypes and bring down the documentation costs. If we do this well (and it certainly looks like that we are), then we will very quickly get peoples attention and they will be asking for more. Then we can start using Ruby on Rails from start till finish :)"
+ }
+]

@@ -1,0 +1,47 @@
+[
+ {
+  "id": 382327,
+  "parent": 0,
+  "author": "Damien Le Berrigaud",
+  "url": "http://www.webdrivenblog.com/",
+  "date": "2007-12-13 15:50:22",
+  "type": "",
+  "html": "Well, a simple \"solution\" is to have a sticky in each forum giving a list of rules to follow on the forum: good behaviour, no insults...\n\nThat would simply give a way for moderator to tell people they are not respecting the rules and they should change the way they behave. If it is written in a sticky it is much more convincing.\n\nI guess all those people also know they bought existing features not promises of features right? :)"
+ },
+ {
+  "id": 382348,
+  "parent": 0,
+  "author": "Geoff",
+  "url": "",
+  "date": "2007-12-13 19:44:19",
+  "type": "",
+  "html": "Yes, it's tough. I mostly resist jumping in but sometimes can't help myself. Seems to me most asshats burn out pretty quickly and can be safely ignored. Posting a calm and reasoned response will often highlight that they're being a jerk, and almost everyone reading will catch on.\n\nThis is not to say the gripes are illegitimate, but there are ways to say things without being obnoxious.\n\nSome takes on this from a customer service angle:\\\nhttp://www.joelonsoftware.com/articles/customerservice.html\\\nhttp://www.carsonified.com/web-apps/how-to-deal-with-abusive-customers\n\nMan, there's another blog post I totally want to link to but can't Google it up. I'll post later if I can find it."
+ },
+ {
+  "id": 382349,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-12-13 19:49:21",
+  "type": "",
+  "html": "I not in favor of rules - I think they would make people even more annoyed than before.\n\nI would do two things:\n\n1: Catch the problem early. The person above is angry about a bug that has been a problem for a very long time. They obviously failed to not only fix the bug, but also address the issue when it was first reported. A simple thing could be to say \"We know this is a problem to some people, but unfortunately there is a number of other things we want to fix first\". Be firm, but in a humble way.\n\n2: It is not a problem that a single person is posting an angry message, it is much more damaging when a lot of forum participants is fighting each other. They should have stopped the discussion immediately."
+ },
+ {
+  "id": 382352,
+  "parent": 0,
+  "author": "Geoff",
+  "url": "",
+  "date": "2007-12-13 19:59:48",
+  "type": "",
+  "html": "Ah! Here it is:\n\nhttp://urltea.com/2cye\n\nLet me refresh your memory of what, exactly, the deal is.\n\nLet me state this very clearly: We at Delicious Monster are making you the following proposition. We agree to provide you with a piece of software. We will also provide you with support for that software, within our abilities. We do not promise the software is free of bugs, nor do we promise it is suitable for your purpose.\n\nIndeed, I promise you that the program does have bugs and will not meet your exact needs, just like every other program ever written, including software you write yourself to meet your exact needs without bugs.\n\nHowever, because we are in no way dishonest, we will provide you with a free demo so that you can determine for yourself if the program is good enough to warrant your giving us \\$40. This deal does not include any additional rights, products, or services, even those implied by us.\n\nThe list of things the deal does not include begins with the right to abuse me in your support email, even once.\n\nI do not make this statement as a representative of Delicious Monster. Indeed, I do not represent Delicious Monster in any way whatsoever, except insofar as I am employed by them. Rather, I speak only as a sane individual who did not make his first retail transaction yesterday.\n\nThat is because this deal, or some variant thereof, is the basic proposition made by any business. With the possible exception of businesses specifically aimed at accepting your abuse as a service, abuse is never part of the deal. If you are abusing the employee of a company, you are not a customer. You are an asshole, and I for one am intolerant of assholes."
+ },
+ {
+  "id": 382355,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-12-13 20:33:24",
+  "type": "",
+  "html": "He he - brilliant!"
+ }
+]

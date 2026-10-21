@@ -1,0 +1,83 @@
+[
+ {
+  "id": 144025,
+  "parent": 0,
+  "author": "Ruby on Rails Examples",
+  "url": "http://www.rubyonrailsexamples.com/",
+  "date": "2007-05-11 05:46:59",
+  "type": "",
+  "html": "Nice and useful list."
+ },
+ {
+  "id": 144692,
+  "parent": 0,
+  "author": "dalager",
+  "url": "http://dalager.com",
+  "date": "2007-05-12 12:58:15",
+  "type": "",
+  "html": "In order to localize active scaffold, go for http://code.google.com/p/activescaffoldlocalize/\\\nI just attached a danish translation to [issue 3](http://code.google.com/p/activescaffoldlocalize/issues/detail?id=3&can=2&q=) (not in trunk yet)"
+ },
+ {
+  "id": 145460,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-13 22:08:16",
+  "type": "",
+  "html": "If you're planning a cygwin-only installation, then Pluit has a trick to \"unset RUBYOPT\" environment variable before running rubygem's setup file.\n\nhttp://www.pluitsolutions.com/2006/03/30/install-ruby-on-rails-ror-on-cygwin/\n\nVery useful for me."
+ },
+ {
+  "id": 228148,
+  "parent": 0,
+  "author": "Andy Waite",
+  "url": "http://www.andywaite.com",
+  "date": "2007-08-06 17:37:34",
+  "type": "",
+  "html": "I've written a little on the possiblity of using Markdown to create forms for rapid prototyping: http://www.andywaite.com/2007/8/5/markdown-for-forms"
+ },
+ {
+  "id": 229384,
+  "parent": 0,
+  "author": "Tobias",
+  "url": "",
+  "date": "2007-08-08 22:50:39",
+  "type": "",
+  "html": "I had some problems with using the SQL Server adapter, due to DBI not being installed as default with cygwin ruby, so I had to install it manually.\n\nSome instructions here:\\\nhttp://www.kitebird.com/articles/ruby-dbi.html\\\nhttp://wiki.rubyonrails.org/rails/pages/SQL+Server"
+ },
+ {
+  "id": 234496,
+  "parent": 0,
+  "author": "Tobias",
+  "url": "",
+  "date": "2007-08-17 13:12:36",
+  "type": "",
+  "html": "Additional: I found out that ODBC is not supported in the standard installation of Cygwin and Ruby. I had to install FreeTDS and the ruby-odbc and ruby-dbi, following these directions:\n\nhttp://www.haidongji.com/2006/08/31/connecting-to-sql-server-from-unix-or-linux-with-freetds/\n\nand then\n\nhttp://wiki.rubyonrails.org/rails/pages/HowtoConnectToMicrosoftSQLServerFromRailsOnLinux"
+ },
+ {
+  "id": 358560,
+  "parent": 0,
+  "author": "justaddwater.dk | Ruby on Rails Checklist Now Public Available",
+  "url": "http://justaddwater.dk/2007/05/11/ruby-on-rails-checklist-now-public-available/",
+  "date": "2007-11-18 17:31:07",
+  "type": "pingback",
+  "html": "\\[...\\] Today I’ve removed password protection on the article “Prototyping Ruby on Rails Checklist to Get Started“. \\[...\\]"
+ },
+ {
+  "id": 359348,
+  "parent": 0,
+  "author": "King of flowers",
+  "url": "http://www.floristone.com",
+  "date": "2007-11-18 22:06:24",
+  "type": "",
+  "html": "Very cool check list. If I were to give advice, I would say add more gems :), mongrel and rails are just basics.\n\nThanks\\\nDavid"
+ },
+ {
+  "id": 376223,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-11-27 12:56:26",
+  "type": "",
+  "html": "For some reason I had to reinstall my ruby lib and now my gem list looks like this:\n\ngem install rcov ruby-debug sqlite3-ruby mysql watir rake hpricot cheat hoe rails piston\n\nand then of course mongrel"
+ }
+]

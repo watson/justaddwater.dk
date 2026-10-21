@@ -1,0 +1,47 @@
+[
+ {
+  "id": 27,
+  "parent": 0,
+  "author": "Piotr",
+  "url": "http://www.Deducta.dk",
+  "date": "2005-12-05 16:25:18",
+  "type": "",
+  "html": "Another angle on the subject and a little O/T:\n\nThe best site in the world would not need a in-site search engine cause everyone would find what they need right away.\n\nWhen you look at the userbility view of things, a search engine should in theory only be used when you dont want your users to find stuff throu the navigation.\\\nAnd when looking appart fron VERY BIG sites, when do you do that? Besides.. even on very big sites.. what people search for is the \"not-deep-down\" things, but still basics like contact, adress, products etc.\n\nThe point is ... In-site search engine usage ofte indicates the lack of userfriendlyness of the site, why people tend to \"run home to mama\" and use the search engine.\\\nImproving the in-site search engine is solving the symptoms, not the illnes.\n\nAt least that’s my 2 cents....\n\nBut yea, you are right, the in site search engines are pretty bad. For many reasons, mostly because Google or MSN can be improved in one single point, and can do ROI.\\\nAn in-site search engine can not prove its ROI that easy. You can’t sell banner space on your in-site search engine ... if you could would you? So what is the point in making it good? It doesn’t sell your products - alt least not directly - and it doesn’t make more ppl come to the site? At least that’s what ppl tend to think.\\\nThis in terms means that you are not motivated to improve it. Unless you have a high standard for your site or other independent reasons come in to play.\n\nSome times search engines are so bad, I use Google to search on some sites. The syntax is btw, \"site:www.yoursite.com Keyword1 keyword2 etc.\" in Google....\n\nBut again.. It should not be necessary."
+ },
+ {
+  "id": 30,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-06 09:45:42",
+  "type": "",
+  "html": "Jared Spool has just published an update to the article you're referring: \"[Our Current Thinking on Search](http://www.uie.com/brainsparks/2005/12/05/our-current-thinking-on-search/)\n\n> Our current thinking hasn’t changed much since 1997. Local Search is only necessary if you can’t make the investment in ensuring the right links are on the right pages. Some local search can be very inexpensive (such as tying google.com search into your site as we’ve done on uie.com), so it may be the more cost-effective investment. (Warning: Google works because of some parlor tricks that only succeed because the Internet has billion of links. Networks removed from the Internet, such as an intranet, don’t work so well with Google.)\n>\n> We still recommend our clients solve findability issues with better links, not better Search. Better Search will always be fixing the symptoms, not the problem, and is unlikely to ever reach desired goals of success."
+ },
+ {
+  "id": 31,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-06 09:58:30",
+  "type": "",
+  "html": "Thomas. Very good and indepth article. Just to add a comment about Google PageRank: Brin and Page described their original thoughts in their final thesis (I think) from Stanford.\n\nFrom [The Anatomy of a Search Engine](http://www-db.stanford.edu/~backrub/google.html) section 4.5.1\n\n> In order to rank a document with a single word query, Google looks at that document’s hit list for that word. Google considers each hit to be one of several different types (title, anchor, URL, plain text large font, plain text small font, ...), each of which has its own type-weight. The type-weights make up a vector indexed by type. Google counts the number of hits of each type in the hit list. Then every count is converted into a count-weight. Count-weights increase linearly with counts at first but quickly taper off so that more than a certain count will not help. We take the dot product of the vector of count-weights with the vector of type-weights to compute an IR score for the document. Finally, the IR score is combined with PageRank to give a final rank to the document."
+ },
+ {
+  "id": 41,
+  "parent": 0,
+  "author": "Avi Rappoport",
+  "url": "http://www.searchtools.com",
+  "date": "2005-12-15 16:41:46",
+  "type": "",
+  "html": "While many sites are still in the stone age of site search (e.g. Excite for Webservers or Microsoft Index Server), many others have made significant advances over the last few years. Web SEO has encouraged them to put in unique and descriptive title tags, finally. Most site search offers better relevance including additional weighting for phrase matches and title matches, match terms in context and so on. It's getting harder and harder for me to find \"bad examples\" to use in my talks, so I take that as a very good sign.\n\nFinally, I believe that any site with an a large number of pages -- such as a corporate site with products, information and support, or an offroad vehicle parts store -- should provide a search option. I find that some people just don't process links on pages and prefer to search, other people want to skip multiple levels of navigation and go straight to a known item, and yet other people are trying to understand the scope of the site and what content it covers.\n\nImproving search is great. Insulting search is not necessary."
+ },
+ {
+  "id": 35829,
+  "parent": 0,
+  "author": "justaddwater.dk | Live search explained",
+  "url": "http://justaddwater.dk/2006/01/26/live-search-explained/",
+  "date": "2006-12-06 22:43:22",
+  "type": "pingback",
+  "html": "\\[...\\] Problems here involve that people often misspells words. Google registered 593 ways of spelling Britney Spears, and a study (that we mentioned earlier) showed that 3% of all searches are misspelled. (I wonder if that number has raised since 1997). Jakob Nielsen found that only 51% find what they’re looking for in the first search. \\[...\\]"
+ }
+]

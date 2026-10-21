@@ -1,0 +1,20 @@
+[
+ {
+  "id": 658527,
+  "parent": 0,
+  "author": "Jakob S",
+  "url": "http://mentalized.net",
+  "date": "2015-12-13 21:31:54",
+  "type": "",
+  "html": "I'd argue the first, naive implementation is the optimal one. Sure, option C might be clever, but I couldn't tell you what it does without running the code in my head. Clever is rarely a quality to aim for: https://medium.com/@mikesherov/writing-clear-code-not-clever-code-d6b90353a3c5#.rkedlie16 ;)\n\nIf you don't like the return statements you could go for a case statement instead:\n\ndef sum_up_case(existing)\\\ncase existing\\\nwhen 0\\\n2\\\nwhen 1\\\n1\\\nelse\\\n0\\\nend\\\nend\n\nor potentially a lookup table if the above is too verbose:\n\ndef sum_up_lookup(existing)\\\n{\\\n0 =\\> 2,\\\n1 =\\> 1\\\n}.fetch(existing, 0)\\\nend"
+ },
+ {
+  "id": 658554,
+  "parent": 0,
+  "author": "Jesper",
+  "url": "http://minimarketing.dk/",
+  "date": "2015-12-25 16:46:09",
+  "type": "",
+  "html": "I gonna pass this link to my colleague, who strugles with sort of same problem"
+ }
+]

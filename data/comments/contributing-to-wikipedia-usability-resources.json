@@ -1,0 +1,38 @@
+[
+ {
+  "id": 32095,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-25 14:42:12",
+  "type": "",
+  "html": "By the way, finding the right page explaining how to make citations took me longer time than expected. I eventually ended at [Wikipedia Citation templates](http://en.wikipedia.org/wiki/Wikipedia:Template_messages/Sources_of_articles/Generic_citations) where I found a usable explanation."
+ },
+ {
+  "id": 32119,
+  "parent": 0,
+  "author": "Matthew Oliphant",
+  "url": "http://usabilityworks.org",
+  "date": "2006-11-25 16:22:15",
+  "type": "",
+  "html": "And who was the last person to comment on Frank's article? Small world. :)"
+ },
+ {
+  "id": 32160,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-25 20:28:40",
+  "type": "",
+  "html": "Matthew: I guess you always want the last say :)"
+ },
+ {
+  "id": 32387,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-26 13:35:26",
+  "type": "",
+  "html": "Amazing how fast it goes, but a wikipedia user called [Fred Bradstadt](http://en.wikipedia.org/wiki/User:Fred_Bradstadt) has already edited my added citations in wikipedia to follow a format that looks much smarter.\n\nNew link syntax:\\\n`<ref name=\"Nielsen 2002\">{{cite web`\\\n`| last = Nielsen`\\\n`| first = Jakob`\\\n`| authorlink = Jakob Nielsen`\\\n`| title = Interview – Jakob Nielsen, Ph.D.`\\\n`| publisher = Sitepoint`\\\n`| date = 2002-11-06`\\\n`| url = http://...`\\\n`| accessdate = 2006-11-24}}</ref>`\n\nAnd in the bottom section added a `references` tag that holds all:\n\n`==References==`\\\n`<references/>`"
+ }
+]

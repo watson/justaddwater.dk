@@ -1,0 +1,65 @@
+[
+ {
+  "id": 51,
+  "parent": 0,
+  "author": "Brian Crescimanno",
+  "url": "http://www.alistapart.com/articles/sensibleforms/",
+  "date": "2005-12-23 18:05:35",
+  "type": "",
+  "html": "Hi Thomas!\n\nThanks so much for tanking the time to add your thoughts here. I do, however, think you misunderstood my point about telephone number entries. My intent was to show that using the 3 separate fields was a \\*bad\\* option and that one should do the validation on the back end. I didn't explicitly state how this would positively affect international users, but I'm realizing now as I'm getting many comments on it that I should have been more clear.\n\nYou are absolutely right; and there are a lot of issues with US-centric websites out there which (unfortunatley) make a less pleasant experience for our overseas friends. I think the subject just might be large enough for another article. :)"
+ },
+ {
+  "id": 2039,
+  "parent": 0,
+  "author": "Kimberly",
+  "url": "",
+  "date": "2006-03-22 22:05:50",
+  "type": "",
+  "html": "I have a question about the required field and using an asterick. I found some recommendations to place the asterick after the label or after the field which I found counter-intuitive. I'd like to see the askterick appear before the label so that a user isn't forced to read every label or field and can simply look for the askterick. What do you think?"
+ },
+ {
+  "id": 2063,
+  "parent": 0,
+  "author": "justaddwater.dk | How to indicate required or optional form fields",
+  "url": "http://justaddwater.dk/2006/03/29/how-to-indicate-required-or-optional-form-fields/",
+  "date": "2006-03-29 17:50:45",
+  "type": "pingback",
+  "html": "\\[...\\] I got a question from Kimberly, one of our reader, in the Sensible Forms: A Form Usability Checklist post where she asks where the best place to display the asterisk indicating a required field in af form is: \\[…\\] I’d like to see the askterick appear before the label so that a user isn’t forced to read every label or field and can simply look for the askterick. What do you think? \\[...\\]"
+ },
+ {
+  "id": 138460,
+  "parent": 0,
+  "author": "Gregers",
+  "url": "http://www.gregersboye.dk",
+  "date": "2007-04-30 22:40:04",
+  "type": "",
+  "html": "Regarding the discussion on where to place the \"required\"-asterisk:\\\nI personally like to see it to the right of the field, this way it doesn't blend in with the text, but stands out from the field, this is particularly clear if the designer has made the effort of making the fields end at the same place."
+ },
+ {
+  "id": 194437,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-06-29 12:01:00",
+  "type": "",
+  "html": "Hey Rey\n\nRegarding asterisks, see my post: [How to indicate required or optional form fields](/2006/03/29/how-to-indicate-required-or-optional-form-fields/)."
+ },
+ {
+  "id": 193157,
+  "parent": 0,
+  "author": "Rey Mendoza,Jr.",
+  "url": "http://reymendozablogspot.com",
+  "date": "2007-06-28 12:22:04",
+  "type": "",
+  "html": "Does the asterisk need to be another color which? usability principles may seem to agree with it but there are users who are color blind.\n\nMaybe a legend will help? But if I have to make a legend to have that simple character to be understood, am I not defeating the purpose of the asterisk as a tool to make completion of forms faster? I mean if it's not that intuitive, it may not be serving it's purpose."
+ },
+ {
+  "id": 380991,
+  "parent": 0,
+  "author": "rascunho &raquo; Blog Archive &raquo; links for 2007-12-05",
+  "url": "http://blog.bruno.locaweb.com.br/2007/12/05/links-for-2007-12-05/",
+  "date": "2007-12-05 21:42:01",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk \\| Sensible Forms: A Form Usability Checklist I heard via WebWord that A List Apart had an interesting article on form usability. It is a very good article that’s definitely worth a read. Below is just my comment to the article and my own thoughts on the subject form usability. (tags: justaddwater.dk 2007 mes11 dia5 at_tecp forms validation blog_post form_design usability checklist) \\[...\\]"
+ }
+]

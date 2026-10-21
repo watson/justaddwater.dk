@@ -1,0 +1,137 @@
+[
+ {
+  "id": 311282,
+  "parent": 0,
+  "author": "amf | ref &raquo; Setting Up Subversion Externals With TortoiseSVN",
+  "url": "http://ref.amfdesigner.com/2007/10/23/setting-up-subversion-externals-with-tortoisesvn/",
+  "date": "2007-10-23 19:18:50",
+  "type": "pingback",
+  "html": "\\[...\\] Link \\[...\\]"
+ },
+ {
+  "id": 401716,
+  "parent": 0,
+  "author": "Kumana",
+  "url": "http://www.elinx.ca",
+  "date": "2008-03-11 23:40:52",
+  "type": "",
+  "html": "Thank you. I was looking for it and you have explained it in a very simple way."
+ },
+ {
+  "id": 419618,
+  "parent": 0,
+  "author": "Satya",
+  "url": "",
+  "date": "2008-05-21 18:17:27",
+  "type": "",
+  "html": "Right to the point, with out un-necessary details.\n\nThank's"
+ },
+ {
+  "id": 433133,
+  "parent": 0,
+  "author": "Steve Forbes",
+  "url": "http://www.wageeasy.com.au",
+  "date": "2008-07-31 05:39:36",
+  "type": "",
+  "html": "Hi Jesper, thanks for this tip .. I had been trying to edit some existing svn:externals and not having any luck via the svn propset or propedit commands. Using your tip and TortoiseSVN worked perfectly first time. Mange tak, Steve"
+ },
+ {
+  "id": 448315,
+  "parent": 0,
+  "author": "Peter",
+  "url": "",
+  "date": "2008-09-22 08:42:29",
+  "type": "",
+  "html": "Thanks for the tip. Had similar setup in CVS, and this was first site I found - straight to the point and easy to follow."
+ },
+ {
+  "id": 459700,
+  "parent": 0,
+  "author": "Ray",
+  "url": "",
+  "date": "2008-12-16 03:04:43",
+  "type": "",
+  "html": "Just as a side note - issues with errors using \"svn propedit\" is related to the SVN_EDITOR environment variable not being set. On \\*nix you'd use something like \"export SVN_EDITOR=vim\" & on Windows you create a Environment variable pointing SVN_EDITOR to notepad or whatever.\n\nI'd still way prefer TSVN though :)"
+ },
+ {
+  "id": 455857,
+  "parent": 0,
+  "author": "SVN Externals for CSE Repo using TortoiseSVN",
+  "url": "http://blog.project-eid.org/articles/svn-externals-using-tortoisesvn/",
+  "date": "2008-11-12 17:36:50",
+  "type": "pingback",
+  "html": "\\[...\\] though this can be done with any SVN client (including the geekey command line client). Thanks to this and this, now things are working \\[...\\]"
+ },
+ {
+  "id": 476375,
+  "parent": 0,
+  "author": "Osdalme",
+  "url": "",
+  "date": "2009-03-07 21:32:53",
+  "type": "",
+  "html": "How can I use TortoiseSVN to manage svn:externals only for one file?, not for the complete folder.\\\nFor example:\\\nExternal file: http://server/svn/project/trunk/scripts/functions.js\\\nBranch file: \\MyProject\\scripts\\functions.js"
+ },
+ {
+  "id": 486548,
+  "parent": 0,
+  "author": "Setting Up Subversion Externals With TortoiseSVN &laquo; Devmanic &#8211; Software Development Mania",
+  "url": "http://devmanic.wordpress.com/2009/05/19/setting-up-subversion-externals-with-tortoisesvn/",
+  "date": "2009-05-20 00:34:58",
+  "type": "pingback",
+  "html": "\\[...\\] via justaddwater.dk \\| Setting Up Subversion Externals With TortoiseSVN. \\[...\\]"
+ },
+ {
+  "id": 491123,
+  "parent": 0,
+  "author": "Marc",
+  "url": "",
+  "date": "2009-11-24 18:17:44",
+  "type": "",
+  "html": "Here's a quote from the TSVN doc:\n\n'URLs must be properly escaped or they will not work, e.g. you must replace each space with %20'\n\nI hope it helps!"
+ },
+ {
+  "id": 478795,
+  "parent": 0,
+  "author": "FeLiZk &raquo; Blog Archive &raquo; SVN Externals",
+  "url": "http://felizk.dk/?p=194",
+  "date": "2009-03-18 23:55:28",
+  "type": "pingback",
+  "html": "\\[...\\] Ligesom ignore, som jeg ofte bruger til at undgå at committe bin og obj mapper, så er externals en egenskab på en SVN mappe. Det er temmelig simpelt at bruge og proceduren er beskrevet fantastisk for TortoiseSVN på bloggen justaddwater.dk af Jesper Rønn-Jensen. \\[...\\]"
+ },
+ {
+  "id": 490121,
+  "parent": 0,
+  "author": "Wayne",
+  "url": "",
+  "date": "2009-10-16 07:11:15",
+  "type": "",
+  "html": "Just what I was looking for. I tried and failed to get the ^/ etc. features to work but a direct link does the trick fine. Thanks Jesper for taking the trouble to document this."
+ },
+ {
+  "id": 490131,
+  "parent": 0,
+  "author": "Edward Cieslik",
+  "url": "",
+  "date": "2009-10-16 13:17:24",
+  "type": "",
+  "html": "Hello Jesper.\n\nI think you could clarify this a little more:\n\n1\\. Right click on the project folder \\[in which you want to create the externals folder\\] etc.\n\n2\\. Now add the property to the dialog. Press add and fill in the following:\\\nProperty name: “svn:externals”/\\\n\\[The following lines take the following form:\\\nnameOfFolderYouWantToCreate \\[space\\] urlOfSourceFolder\\]\\\ne.g.\\\ncss http://project_name/master/css\\\nimages http://project_name/master/images\n\nI found your advice difficult to understand for someone who has never done anything with externals before.\n\nThanks."
+ },
+ {
+  "id": 490624,
+  "parent": 0,
+  "author": "Andy",
+  "url": "",
+  "date": "2009-11-03 13:18:33",
+  "type": "",
+  "html": "Hi,\n\nHow do I go about adding externals with a space in the directory name? Is this possible?\n\ne.g. http://myproject//myFolder/test folder\n\nthanks\n\nAndy"
+ },
+ {
+  "id": 549526,
+  "parent": 0,
+  "author": "Ryan",
+  "url": "http://www.nutt.net",
+  "date": "2011-10-23 16:12:24",
+  "type": "",
+  "html": "Thanks for this. I was trying to move some folders from a working folder into a new repository and then bring them back in as an external. This post made it much easier than what I was trying to do."
+ }
+]

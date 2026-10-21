@@ -1,0 +1,56 @@
+[
+ {
+  "id": 162671,
+  "parent": 0,
+  "author": "Kanwal",
+  "url": "http://www.sharepointbuzz.com",
+  "date": "2007-06-05 07:08:40",
+  "type": "",
+  "html": "Jesper thank you for linking to SharePoint Buzz. I do hope that you found the page useful"
+ },
+ {
+  "id": 234521,
+  "parent": 0,
+  "author": "erugalatha",
+  "url": "http://none",
+  "date": "2007-08-17 15:39:58",
+  "type": "",
+  "html": "Hi Jesper,\n\nI agree ... I'm currently fighting with trying to customise the CSS for \"My Sites\" to make them look the same as the look & feel that I have already applied to the Portal ... absolute nightmare!\n\nWe should have to spend hours fighting with something that should be relatively simple to achieve - yet because of bad defaults ootb we waste time that could otherwise be better spent on other parts of a sharepoint rollout."
+ },
+ {
+  "id": 422616,
+  "parent": 0,
+  "author": "Enterprise 2.0 &ndash; Midori + Sharepoint | DavidCrow.ca",
+  "url": "http://davidcrow.ca/article/6763/enterprise-20-midori-sharepoint",
+  "date": "2008-06-07 21:09:50",
+  "type": "pingback",
+  "html": "\\[...\\] SharePoint meets Web Standards This entry was written by davidcrow, posted on June 7, 2008 at 3:02 pm, filed under Articles, Canada, Entrepreneurship, Innovation and tagged Edmonton, eneterprise2.0, midori, nform, sharepoint, socialpoint. Bookmark the permalink. Follow any comments here with the RSS feed for this post. Post a comment or leave a trackback: Trackback URL. « Anniversaries \\[...\\]"
+ },
+ {
+  "id": 422618,
+  "parent": 0,
+  "author": "Canadian User Experience : Enterprise 2.0 – Midori + Sharepoint",
+  "url": "http://blogs.msdn.com/canux/archive/2008/06/07/enterprise-2-0-midori-sharepoint.aspx",
+  "date": "2008-06-07 21:18:26",
+  "type": "pingback",
+  "html": "\\[...\\] SharePoint meets Web Standards Posted: Saturday, June 07, 2008 3:02 PM by davidcrow \\[...\\]"
+ },
+ {
+  "id": 437721,
+  "parent": 0,
+  "author": "Tom",
+  "url": "http://www.whatissharepoint.info",
+  "date": "2008-08-23 10:14:32",
+  "type": "",
+  "html": "If you are having trouble grasping the power and feature of sharepoint check out [Project Manager Reference](http://www.whatissharepoint.info)\n\nIt is a just released book by a guy named Dux. I just bought it and it has cleared up a lot of issues I have had. THis guy knows his stuff. If you get it, post back and let me know if it helped you too.\n\nSharepoint was too bloated for me and I had a terrible time with CSS, but he laid it all out for me, so I don't think i will get fired yet. HAHA"
+ },
+ {
+  "id": 449585,
+  "parent": 0,
+  "author": "Andreas Warberg",
+  "url": "",
+  "date": "2008-10-01 16:25:20",
+  "type": "",
+  "html": "My company pushed out a sharepoint solution over the summer.\\\nAs a user, I am not impressed for a number of reasons:\n\n\\- a typical workflow involves more steps than previously\\\n\\- there are few or no keyboard shortcuts\\\n\\- there are multiple ways of doing the same thing\\\n\\- steps, which should be mandatory (eg. check-out), can be skipped by unknowing users (=\\> non-intuitive interface, which requires more training)\\\n\\- many features require Internet Explorer, which has upset myself and many of my colleagues. The rendered layout changes from browser to browser.\\\n\\- it is SLOW requiring 3-6 seconds just to open the front page (in a preloaded browser), depending on time-of-day\n\nOn the positive side we now have a single \"repository\" for documents rather than having them scattered all over branch office servers. Also, version control is a good idea although it is not nearly as well integrated as eg. Subversion with Tortoisesvn. The search capabilities are not google quality by far, but I am often able to find what I need.\n\nThe sharepoint portal project is still in progress so hopefully some of the issues will be solved. However, as Jesper writes, sharepoint is basically a MS product and most updates/remedies should and will come from Microsoft. Knowing Microsofts strategy of vendor lock-in I doubt a number of the issues will ever be fixed."
+ }
+]

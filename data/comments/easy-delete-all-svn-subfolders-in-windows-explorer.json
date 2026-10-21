@@ -1,0 +1,38 @@
+[
+ {
+  "id": 517097,
+  "parent": 0,
+  "author": "Niels Peter Strandberg",
+  "url": "",
+  "date": "2011-04-06 11:03:12",
+  "type": "",
+  "html": "In Mac OS X you can use the following Bash command:\n\nfind . -name .svn -print0 \\| xargs -0 rm -rf\n\nI have not tried it in Cygwin, but it should work :-)\n\n/Niels Peter"
+ },
+ {
+  "id": 513373,
+  "parent": 0,
+  "author": "Lois Extra",
+  "url": "",
+  "date": "2011-03-07 19:17:15",
+  "type": "",
+  "html": "Thanks for actually providing the \"delete_svn_subfolders.reg\" file itself. It's so nice when someone else has already dealt with the same problem, had done the legwork to fix it, and then provided the solution free of charge to others so we don't have to reinvent the wheel.. Yes, than you to Sanil S. and to you!\n\nCheers,\n\nLois"
+ },
+ {
+  "id": 531813,
+  "parent": 0,
+  "author": "Review Guy",
+  "url": "",
+  "date": "2011-07-28 05:57:28",
+  "type": "",
+  "html": "Omg this finally solved my problem. I was freaking tired of using the Cmd prompt, this is so much easier. Thanks for the script man, super helpful. By the way I have just upgraded my mac to lion, and I think it's pretty awesome, I was wondering what you guys thought of it, or are you all windows guys?"
+ },
+ {
+  "id": 513796,
+  "parent": 0,
+  "author": "Product Authentication",
+  "url": "http://www.adnas.com",
+  "date": "2011-03-10 09:27:00",
+  "type": "",
+  "html": "I only delete files using command prompt but it is time consuming and I need to know where is the file situated in the directory. I find your tips on deleting .svn files on Windows operating system easy to follow. I won't be bothered anymore on locating and typing files on command prompt and deleting it one by one."
+ }
+]

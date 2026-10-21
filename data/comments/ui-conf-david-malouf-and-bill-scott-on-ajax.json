@@ -1,0 +1,47 @@
+[
+ {
+  "id": 17841,
+  "parent": 0,
+  "author": "Matthew Oliphant",
+  "url": "http://usabilityworks.org",
+  "date": "2006-10-09 18:11:15",
+  "type": "",
+  "html": "Thanks for liveblogging. Even though I am only 17 miles away, just didn't make it this year."
+ },
+ {
+  "id": 17895,
+  "parent": 0,
+  "author": "Cliff",
+  "url": "http://www.editgrid.com",
+  "date": "2006-10-10 04:41:41",
+  "type": "",
+  "html": "Woo, very comprehensive cotent. I am Cliff, from [EditGrid](http://www.editgrid.com) development team. Can I invite you to evaluate my application, so that I can have a better idea to improve my apps?\n\nIf you are kind to help, please drop me an email at cliff(\\_at\\_)editgrid(\\_dot\\_)com. Best Rgds,"
+ },
+ {
+  "id": 17982,
+  "parent": 0,
+  "author": "Dave",
+  "url": "http://synapticburn.com",
+  "date": "2006-10-10 23:23:34",
+  "type": "",
+  "html": "Hi Jesper,\\\nThese are great notes. I'm going to point to them from my blog where I put the presentation, which for my slides is here: http://synapticburn.com/comments.php?id=181_0_1_0_C"
+ },
+ {
+  "id": 22991,
+  "parent": 0,
+  "author": "nowuseit.com | links for 2006-10-30",
+  "url": "http://nowuseit.com/blog/2006/10/30/links-for-2006-10-30/",
+  "date": "2006-11-02 20:58:57",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk \\| UI Conf: David Malouf and Bill Scott on AJAX David Malouf and Bill Scott: Designing Powerful Web Apps with Ajax (tags: design Prototyping sketching wireframes) \\[...\\]"
+ },
+ {
+  "id": 425990,
+  "parent": 0,
+  "author": "גיקים, פודקאסט מספר 14 - &#8220;עמוד הוא מטאפורה לרגע של הקשר רציף&#8221; / גיקים - פודקאסט שבועי",
+  "url": "http://geekim.net/podcast/geekim-podcast-014/",
+  "date": "2008-06-24 18:02:11",
+  "type": "pingback",
+  "html": "\\[...\\] אפשר לראות לכמה אנשים בארה\"ב קוראים Caleb. \"עמוד הוא מטאפורה לרגע של הקשר רציף\". חוץ מאג'קס, יש את XAML וגם WPF/E של מיקרוסופט, יש את Apollo ו- \\[...\\]"
+ }
+]

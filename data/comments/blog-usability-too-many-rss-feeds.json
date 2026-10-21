@@ -1,0 +1,56 @@
+[
+ {
+  "id": 4973,
+  "parent": 0,
+  "author": "Jack Brewster",
+  "url": "http://www.newsgator.com",
+  "date": "2006-06-15 01:27:09",
+  "type": "",
+  "html": "Have you considered adding permanent redirects for the other feed URLs? This is fairly common and most popular readers (including NewsGator's products) will update themselves when a redirect is detected.\n\nJack Brewster\\\nTechnical Support\\\nNewsGator Technologies"
+ },
+ {
+  "id": 5010,
+  "parent": 0,
+  "author": "Piotr Narloch",
+  "url": "http://-",
+  "date": "2006-06-15 10:24:47",
+  "type": "",
+  "html": "Just a couple of thoughts:\n\nThe world would be a better place if people could just agree to a format on everything....\n\nIt’s precisely the same as Betamax/Vhs or Pal/NTSC/SECAM...\n\nI think the reason for having the feed in multiple formats is originated in the idea, that if you only have one feed format, you will loose the users that don’t use that exact format.\\\nPersonally - i don’t think that is a wrong thought.\\\nI think it’s maybe naive to think that the same feed from the same website, in a different format, will contain different information. The information is generated in one source(the website editor), and therefore that source defines what information comes out. The format is just a media… it can not be expected to differentiate the content.\n\nI must agree thou, that it should be stated clearly that the different formatted feeds contain the same content. Just as its made clear to those of us, that when we download a dataset, its the same dataset we get in PDF, CSV and lets say Excel.\n\nEven other issue with RSS as a concept - i have found - is the fact that you really need to take the text & content writing of the titles seriously. RSS titles are challenging, because you normally have extremely few words available on the readers page to present your topic. Often is something like 20-30 chars to present the news in an understandable, appetizing and factual form.\\\nSomewhat a challenge, when potentially having an extremely broad audience, requiring a general communication form.\n\nAnother whole different issue is all this \"Content feeds\", and \"Content duplication\" idea that everybody is getting. How many times - not in rss only but in general - have you been looking for information on some specialized topic, and found the same info copied from page to page to page.. Makes the 2nd opinion kind of difficult..\n\nPersonally i have never been keen on RSS, as i simply have preferred to get my news when i wanted it, on a webpage like Jylandsposten og ComeOn, or in my mailbox as a newsletter...\n\nWith the new Google personalized Frontpage(not to advertise for Google), i have decided to give it a chance...\n\nBy the way:\\\nI wonder what the Click rates are on RSS feeds? Does anyone know any source of statistics on RSS feeds?"
+ },
+ {
+  "id": 5025,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-15 14:38:13",
+  "type": "",
+  "html": "Hi Jack\n\nYes we've thought about it. As you say many feed readers will detect the change and update them self's accordingly, but I'm not sure how many and which that don't. So before taking the drastic step and actually shutting down a feed, I prefer to first know a bid more about which (if any) readers that don’t support it."
+ },
+ {
+  "id": 5130,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-16 10:10:09",
+  "type": "",
+  "html": "Hi Piotr\n\nWe havent done any thorough analysis of the clickrates, but currently about half of our hits comes from feed readers."
+ },
+ {
+  "id": 5982,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-21 23:59:17",
+  "type": "",
+  "html": "I just see that Jeremy Zawodny has done the same thing today: http://jeremy.zawodny.com/blog/archives/006935.html"
+ },
+ {
+  "id": 419442,
+  "parent": 0,
+  "author": "Webpage Design",
+  "url": "http://www.capita.com/services/web-applications.aspx",
+  "date": "2008-05-21 01:16:24",
+  "type": "",
+  "html": "We're trying to decide which method to use here. This looks like a good approach..."
+ }
+]

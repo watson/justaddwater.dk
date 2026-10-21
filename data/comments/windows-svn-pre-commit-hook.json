@@ -1,0 +1,20 @@
+[
+ {
+  "id": 502222,
+  "parent": 0,
+  "author": "ocpjp",
+  "url": "",
+  "date": "2010-11-08 17:30:59",
+  "type": "",
+  "html": "Below is a section of my pre-hook. It only assigns the first word to the log message and not the entire log. Any idea what is wrong?\n\nrem Subversion sends through the path to the repository and transaction id\\\nset REPOS=%1\\\nset TXN=%2\\\nfor /f \"tokens=\\* delims= \" %%a in ('svnlook log %REPOS% -t %TXN%') do (set LogMessage=%%a)"
+ },
+ {
+  "id": 510249,
+  "parent": 0,
+  "author": "Ray",
+  "url": "http://www.reviewmaze.com",
+  "date": "2011-02-05 20:04:47",
+  "type": "",
+  "html": "@ocpjp\n\nDoesn't you practically override the log message with each iteration of your loop so at the end you only have one word?"
+ }
+]

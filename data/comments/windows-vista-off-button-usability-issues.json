@@ -1,0 +1,83 @@
+[
+ {
+  "id": 32505,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-26 20:41:43",
+  "type": "",
+  "html": "Moshe Lettvin's blog post has more inside details as he was in the team that designed the button and got caught up in bureaucracy. Moshe Lettvin: [The Windows Shutdown Crapfest](http://www.drizzle.com/~lettvin/2006/11/windows-shutdown-crapfest.html)\n\n> So that nets us a conservative estimate of 24 people involved in this feature. Also each team of 8 was separated by 6 layers of management from the leads, so let's add them in too, giving us 24 + (6 \\* 3) + 1 (the shared manager) 43 total people with a voice in this feature. Twenty-four of them were connected sorta closely to the code, and of those twenty four there were exactly zero with final say in how the feature worked. Somewhere in those other 17 was somebody who did have final say but who that was I have no idea since when I left the team -- after a year -- there was still no decision about exactly how this feature would work.\n>\n> By the way \"feature\" is much too strong a word; a better description would be \"menu\". Really. By the time I left the team the total code that I'd written for this \"feature\" was a couple hundred lines, tops.\n>\n> But here's how the design process worked: approximately every 4 weeks, at our weekly meeting, our PM would say, \"the shell team disagrees with how this looks/feels/works\" and/or \"the kernel team has decided to include/not include some functionality which lets us/prevents us from doing this particular thing\". And then in our weekly meeting we'd spent approximately 90 minutes discussing how our feature -- er, menu -- should look based on this \"new\" information. Then at our next weekly meeting we'd spend another 90 minutes arguing about the design, then at the next weekly meeting we'd do the same, and at the next weekly meeting we'd agree on something... just in time to get some other missing piece of information from the shell or kernel team, and start the whole process again."
+ },
+ {
+  "id": 32642,
+  "parent": 0,
+  "author": "Håkan Reis",
+  "url": "http://blog.reis.se",
+  "date": "2006-11-27 08:20:38",
+  "type": "",
+  "html": "And yet they are actually so close to what you want in this issue. Looking at the buttons I see three of them:\n\n\\- the off icon, default set to sleep mode\\\n\\- the lock button that just locks the machine.\\\n\\- the little arrow that takes you to the 7-item menu.\n\nSo to your solution, just remove the arrow with the submenu and you would get exactly what you want.\n\nThe problem for MS? You would get a multitude of angry bloggers, probably including Joel, that would rant about MS hiding the 7 items; \"where are my restart I had from XP?\"\n\nCheers"
+ },
+ {
+  "id": 40879,
+  "parent": 0,
+  "author": "Ist Vista nur ein Rip? - XHTMLforum",
+  "url": "http://xhtmlforum.de/43483-ist-vista-nur-ein-rip.html#post318190",
+  "date": "2006-12-17 12:03:20",
+  "type": "pingback",
+  "html": "\\[...\\] Vielen neuen Features von Windows Vista sind verbl"
+ },
+ {
+  "id": 42761,
+  "parent": 0,
+  "author": "Andreas Reichhardt",
+  "url": "",
+  "date": "2006-12-20 14:10:02",
+  "type": "",
+  "html": "Well Roger,\n\nthank you for your article. I think you're right in reminding, that too much choices will be counterproductive.\n\nOn the other hand, the GUI looks quite good for me.\\\nIt offers the three aforementionend options: Shut Down, Lock and \"Lets look whats behind that arrow.\"\n\nThe first two options are definite, the third looks consciously indefinite.\\\nI assume that the team was thinking about the Users who are supposed to love Options without waiting for automatic hibernation / shutdown / whatever.\\\nMaybe this option shall give the (un-)skilled user a comfortable feeling of control ( one of the aims of GUI Design?) ( see also H°akans Post.)\n\nSo, in fact, you've got only two choices on a normal day and some more when focussing on special goals.\n\nTaking this for granted for the moment, two mistakes will be left then: Why do they repeat the Shutdown / Lock? It is unnecessary, therefore disturbing."
+ },
+ {
+  "id": 83864,
+  "parent": 0,
+  "author": "Bucfan",
+  "url": "",
+  "date": "2007-02-15 02:58:55",
+  "type": "",
+  "html": "I would like to see an easier way to 'switch users'. XP made it so easy. Now you have to go through that ridiculous menu or hit \"Windows + L\" and then click on Switch User. I just wish there was an easier way to do this like it use to be. Maybe they will give an update to give you more options on how to customize things like that. But I doubt it. We will probably have to rely on third part software which sucks."
+ },
+ {
+  "id": 219997,
+  "parent": 0,
+  "author": "Alejandro",
+  "url": "",
+  "date": "2007-07-23 23:52:45",
+  "type": "",
+  "html": "I think the awnser would not be removing choice, it would be to allow the desitions to last so you don't need to do them every time. By this i mean the two buttons should be customizable. i for instance would much rather prefere to have a switch user and a turn of than a lock and sleep buttons, and wouldn't mind to search for those on the rare ocations that i need them.\\\nChoice is a good thing. but onces you have made your choice, nobody likes to repeat themselves"
+ },
+ {
+  "id": 220505,
+  "parent": 0,
+  "author": "Håkan Reis",
+  "url": "http://blog.reis.se",
+  "date": "2007-07-24 15:11:36",
+  "type": "",
+  "html": "The power button is customizable. However its not obvious, there should be an easy way to customize the button but at least it's an option. The setting can be reach at advanced power options, here is a link that explains how:\n\nhttp://winhowto.blogspot.com/2007/03/how-to-change-power-button-in-vista-to.html\n\nBut unfotunately, you won't get all the slections here :("
+ },
+ {
+  "id": 213016,
+  "parent": 0,
+  "author": "Foo",
+  "url": "",
+  "date": "2007-07-14 23:55:21",
+  "type": "",
+  "html": "The restart option may be redundant for Windows-only users, but those of us who dual-boot (an increasing segment now that Apple officially supports it) actually rather appreciate not having to go through the extra step of reaching down to the power button to get back into our preferred OS.\n\nJoel made the same mistake, of course. Sleep mode is no good; I want to shut down Windows fully because I WANT TO USE SOMETHING ELSE."
+ },
+ {
+  "id": 501324,
+  "parent": 0,
+  "author": "UX Designer&#8217;s Quick Reference | butlerhouse",
+  "url": "http://www.butlerhouse.net/rick-butler/blog/ux-designers-quick-reference.html",
+  "date": "2010-10-18 01:17:24",
+  "type": "pingback",
+  "html": "\\[...\\] Windows Vista Off Button Usability Issues – Jesper Ronn-Jensen \\[...\\]"
+ }
+]

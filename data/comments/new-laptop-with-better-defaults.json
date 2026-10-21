@@ -1,0 +1,182 @@
+[
+ {
+  "id": 148052,
+  "parent": 0,
+  "author": "Mailand",
+  "url": "http://blogoff.dk",
+  "date": "2007-05-18 10:58:40",
+  "type": "",
+  "html": "Hehe. When will Lenovo learn and move that Fn button :-) Such a shame when when the laptops are so nice. Did yours also come with a ton of random pre-installed programs - like Picasa, Google Desktop and several others?"
+ },
+ {
+  "id": 147503,
+  "parent": 0,
+  "author": "Tobias",
+  "url": "",
+  "date": "2007-05-17 13:24:09",
+  "type": "",
+  "html": "Actually, if you change your Windows layout to 'Classic' instead of XP it still has the issue with the 1-pixel space around the Start button.\n\nSince most of the functions performed by the Fn-key seems to be independent of the OS (like turning on the keyboard light), I think that it will be difficult to change the configuration."
+ },
+ {
+  "id": 147183,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-05-17 01:21:28",
+  "type": "",
+  "html": "Jesper, I got a T60 (not a P model), and I also always hit Fn when I want to hit CTRL - very annoying. And no, I do not have a solution and I do not think they will change it. This has been the standard keyboard setup on IBM computers for a very long time (at least the last 8 years).\n\nAnother thing; IBM (Lenovo) installs an insane amount of tools - none of them is needed. I formatted the machine, installed Vista and not a single IBM/Lenovo tool. Now my machine works much better (and considerably faster).\n\n(Note: Do not tell our IT department this... they often call me a rebel for running non-standard configurations - but hey, I want to be able to work efficiently :o))\n\nAs for the Fan. Mine is actually somewhat quiet - it only runs occasionally. I am not sure if this is an added problem with your P model (it got a bigger graphic card, thus probably needs more cooling) - or if Vista just handles it better.\n\nI also had an extreme amount of Blue-screens when I got my computer - almost to the point where I wanted to trash my computer (I actually did one day, only to pick it out of the trash can an hour later - hey, I got angry after losing 5 hours of work). I think the problem is with some of that IBM/Lenovo junk, because I have not experiences a single blue-screen after reinstalling it."
+ },
+ {
+  "id": 147167,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-17 00:42:17",
+  "type": "",
+  "html": "Yeah, i know the update is 2 days before posting this... The article has been in writing for a week now :)"
+ },
+ {
+  "id": 151360,
+  "parent": 0,
+  "author": "Mailand",
+  "url": "http://blogoff.dk",
+  "date": "2007-05-22 10:34:35",
+  "type": "",
+  "html": "Ahh. That - I had the same issue. If I turned off wireless anytime during a session and turned it back on it only stayed on for about 5 min and then turned off again. The only work-around was turning WIFI on and shutting the computer completely down before the WIFI turned itself off again."
+ },
+ {
+  "id": 151349,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-22 10:20:32",
+  "type": "",
+  "html": "More trouble with wireless connections. For a couple of times, I was able to loose the wireless network in this way:\n\nTrouble with the wireless finder. When i use the Lenovo software to power off, then power on the wireless, then it's suddenly not able to find any wireless networks.. :(\\\n![thinkpad-wireless-destroy-connection.png](/wp-content/uploads/2007/05/thinkpad-wireless-destroy-connection.png)\n\nAnd also, it works much slower. Before a network power off, discovery of wireless networks is less than a second. Afterwards it's up to like 10 seconds. Very peculiar. The workaround: Restart computer to be able to use wireless."
+ },
+ {
+  "id": 153293,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-24 22:22:08",
+  "type": "",
+  "html": "I have also uninstalled:\n\nThinkpad zoom magnifier\\\nThinkpad power manager (both an English and a Danish version)\\\nThinkpad presentation director"
+ },
+ {
+  "id": 153292,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-24 22:21:43",
+  "type": "",
+  "html": "Google Talk stopped crashing after uninstalling \"Thinkvantage Access Connections\". (and now I don't have to remove one of the annoying folders in \"My documents\" that I mentioned in the comment above).\n\nThat's what I call a win-win situation.\n\nJust don't understand why the install a program like this to begin with..."
+ },
+ {
+  "id": 153629,
+  "parent": 0,
+  "author": "Mailand",
+  "url": "http://blogoff.dk",
+  "date": "2007-05-25 09:10:15",
+  "type": "",
+  "html": "Sounds like you're slowly getting a clean install... :-)"
+ },
+ {
+  "id": 152358,
+  "parent": 0,
+  "author": "Thomas Visby Snitker",
+  "url": "http://www.snitker.com",
+  "date": "2007-05-23 15:23:57",
+  "type": "",
+  "html": "I share your pain. I've had a T43p for a year now. Couldn't get the damned Bluetooth to work. It took devine intervention (Mr Troels Fibæk Bertel, my CTO) to press the Access IBM-button and turn Bluetooth on (same screen as illustrated above). That was NOT an obvious spot..."
+ },
+ {
+  "id": 152380,
+  "parent": 0,
+  "author": "Carsten Feilberg",
+  "url": "",
+  "date": "2007-05-23 16:22:08",
+  "type": "",
+  "html": "It took me a few days to grow so annoyed of the Fn and Ctrl-placement that I have now remapped the keyboard swapping the capslock and left ctrl key. This is a much more logical layout, as the mere size of the keys now resembles the usage. Also - this is how old terminal keyboards where configured, and after a couple of hours I got the old habit back.. like riding a bike ;-)\n\nThe link to how it's done:\\\nhttp://www.microsoft.com/whdc/device/input/w2kscan-map.mspx\n\nJust do exactly as it says, and it's pretty harmless, except for a couple of boots."
+ },
+ {
+  "id": 152491,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-23 21:11:04",
+  "type": "",
+  "html": "More issues:\n\nAt login after reboot, the machine hangs in an extra dialog \"Starting Access Connection\" (can't remember the exact phrase). It's annoying that it actually delays start and restart of my machine with 30-some seconds. Where do I turn it off?\n\nAt every startup, there is suddenly two folders in \"My Documents\": One called \"Access Connections\" and another called \"Bluetooth Exchange Folder\".\n\nI deleted the folders first time I saw them. But they keep coming back. Dear foreign unknown folders: **Please stay away from \"My Documents\". There is a reason why it's called \"My Documents\": The folder is mine. MINE. Not Lenovo's! So get out of there you annoying trespassers!**"
+ },
+ {
+  "id": 156563,
+  "parent": 0,
+  "author": "Klavs Birk",
+  "url": "",
+  "date": "2007-05-29 15:34:52",
+  "type": "",
+  "html": "Another thing about that pesky zoom utility, it seems it leaves footprints all over the disk after an uninstall, so I suggest doing a complete search on your C: drive for anything matching the filter \"TpScrex\".\n\nThen delete everything it finds."
+ },
+ {
+  "id": 156529,
+  "parent": 0,
+  "author": "Klavs Birk",
+  "url": "",
+  "date": "2007-05-29 15:07:03",
+  "type": "",
+  "html": "Heya,\n\nI had some problems with my new Thinkpad T60p as well.\\\nI'm a Java developer, and I use Eclipse (www.eclipse.org) a lot.\n\nIn Eclipse, the shortcut for auto-completing code, is Ctrl+Space.\n\nOn a thinkpad, the shortcut for re-arranging all the icons on your desktop, and setting screen resolution to 320\\*200, is FN+Space.\n\nThe FN, and Ctrl key is right next to each other.\n\nThanks to you, I found out that the process TpScrex.exe, or \"Thinkpad FullScreen Magnifier\" was the guilty process of rearranging all my icons, and a simple \"kill\" command was enough, along with an uninstall of that \"#%%\"#%¤#\"%¤#&#\"# (insert cursewords here) application."
+ },
+ {
+  "id": 218569,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-07-21 20:36:29",
+  "type": "",
+  "html": "Just found \"[KeyTweak](http://webpages.charter.net/krumsick/)\", that might be for some help here. Able to remap your keyboard. Will try this out and give you an update on whether it can help me to unarm the \"fn\" key.\n\n(via gtaz in the [e-texteditor forum](http://www.e-texteditor.com/forum/viewtopic.php?t=633))"
+ },
+ {
+  "id": 222631,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-07-27 10:19:54",
+  "type": "",
+  "html": "One more observation: After uninstalling many of the standard lenovo programs, the machine is running considerably cooler now. Compare these temperatures around the 30's with the ones up in the article. Approx. 10 degrees lower.\n\n[![speedfan-cpu-harddisk-temperature-lower.png](/wp-content/uploads/2007/07/speedfan-cpu-harddisk-temperature-lower.png)](/wp-content/uploads/2007/07/speedfan-cpu-harddisk-temperature-lower.png \"speedfan-cpu-harddisk-temperature-lower.png\")\n\nI believe that the most important difference is that I uninstalled many of the ThinkVantage programs one by one."
+ },
+ {
+  "id": 222628,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-07-27 10:15:01",
+  "type": "",
+  "html": "The CPU Fan speed still annoys me: I can see the processors are in the 30 degrees celsius area, but still, the fans just runs away.\n\nHere is some info I found from a guy that [installed linux on a T60p](http://www.kraus.tk/installnotes/T60/ThinkPad-T60.htm):\n\n> Fan\n>\n> One of the major problems of the T60 is a thermal issue. The procesor is quit cool (about 50 degree celsius) and also battery (about 50 degree C) and harddisk (about 40 degree C) are absolutely fine. BUT the powerful graphiccard is a problem. In idle-mode it gets quit hot, round about 75 degree C. Playing some minutes doom3 or UT2004 brings it up to 86-87 degree. Thats still no problem for that card, it get trouble when it get hotter than 110 degrees. BUT your fan of the T60 has to cool the card all the time. also in idle mode. So it's always running. It is not too loud, but good hearable. And always running parts of a computer are fragile....\n>\n> I got some mails from users that with ibm-acpi you can control the fan. That is correct. And with a current version and forcing module-load with experimental=1 you can switch on/off the fan (no more detailed control is possible right now). BUT I do not recommend to switch the fan off, becaus your graphiccard simply needs it, ALL the time ! You risk your hardware when switching it of. Keep that in your mind."
+ },
+ {
+  "id": 249550,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-09-05 21:02:01",
+  "type": "",
+  "html": "I have been using [KeyTweak](http://webpages.charter.net/krumsick/) for a while and am very fond of it. I am using it for the following adjustments:\n\n\\* disable CAPS Lock\\\n\\* Disable www-forward and www-back next to the arrow keys\n\n[![keytweak-cropout-overview.png](/wp-content/uploads/2007/09/keytweak-cropout-overview.png)](/wp-content/uploads/2007/09/keytweak.png \"keytweak.png\")"
+ },
+ {
+  "id": 358563,
+  "parent": 0,
+  "author": "justaddwater.dk | Lenovo Problem: No Wireless Reconnect After Standby",
+  "url": "http://justaddwater.dk/2007/07/25/lenovo-problem-no-wireless-reconnect-after-standby/",
+  "date": "2007-11-18 17:31:37",
+  "type": "pingback",
+  "html": "\\[...\\] wrote about issues with my Lenovo T60p laptop recently, and have made a guide to eliminate one of the most annoying problems I ever had with a \\[...\\]"
+ },
+ {
+  "id": 395990,
+  "parent": 0,
+  "author": "Zar",
+  "url": "",
+  "date": "2008-02-14 14:48:23",
+  "type": "",
+  "html": "Obviously Fn and Ctrl keys can not be swapped by Windows and there is no new BIOS from Lenovo that can do this. Anyone tried the hard way - to open the keyboard and swap the wires below the keys or something like that?"
+ }
+]

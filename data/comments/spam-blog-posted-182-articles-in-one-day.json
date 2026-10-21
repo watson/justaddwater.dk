@@ -1,0 +1,38 @@
+[
+ {
+  "id": 119326,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-04-02 02:42:21",
+  "type": "",
+  "html": "After a little investigation, I found the IP number for the trackback comment:\n\ninternetutilityblogs.info/google-gives-you-free-internet\\\nIP: 75.126.199.186"
+ },
+ {
+  "id": 120138,
+  "parent": 0,
+  "author": "Phil",
+  "url": "http://www.unintentionallyblank.co.uk",
+  "date": "2007-04-02 18:02:37",
+  "type": "",
+  "html": "I keep getting trackbacks from a site with the more than ironic name Copyright Answers. All they are doing is taking an excerpt of my posts and linking back to the site... and the same for countless other sites. It is annoying, but Akismet has got their number already and I can just lap up a bit of extra technorati juice for it, so there's nothing really worth doing."
+ },
+ {
+  "id": 376128,
+  "parent": 0,
+  "author": "justaddwater.dk | Spam Commenters Are Wasting Brainpower",
+  "url": "http://justaddwater.dk/2007/09/06/spam-commenters-are-wasting-brainpower/",
+  "date": "2007-11-27 11:19:08",
+  "type": "pingback",
+  "html": "\\[...\\] Spam Blog Posted 182 Articles in One Day \\[...\\]"
+ },
+ {
+  "id": 379067,
+  "parent": 0,
+  "author": "justaddwater.dk | Announcement: Spam Filter Free Day",
+  "url": "http://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/",
+  "date": "2007-11-28 21:04:43",
+  "type": "pingback",
+  "html": "\\[...\\] Blog Usability: Spam Comments Irritate Subscribers (April 2nd) \\[...\\]"
+ }
+]

@@ -1,0 +1,83 @@
+[
+ {
+  "id": 73,
+  "parent": 0,
+  "author": "Derek Rogerson",
+  "url": "http://derekrogerson.com/",
+  "date": "2006-01-15 11:04:38",
+  "type": "",
+  "html": "Popular conceptions of User Experience are always involved with trying to prove something. It is a hopelessly paranoid way of looking at something. Forget all that. User Experience is just simply \\*the practice of appreciation\\*. It is the quality of the \\*value already present\\* (and it is always fundamentally complete rather than engaged in a process towards completion). Forget about what the above definitions would have you believe (and totalizing words like \"modular\" \"elements\" \"facets\" \"factors\" and \"the overall\") -- that's all bunk and proselytizing from consultants and marketers!"
+ },
+ {
+  "id": 74,
+  "parent": 0,
+  "author": "John S. Rhodes",
+  "url": "http://webword.com",
+  "date": "2006-01-15 14:41:27",
+  "type": "",
+  "html": "Nice review. Unfortunately I've been grappling with a similar problem with \"usability\" for years. There aren't any elevator speeches available. Tough to get it right. Very annoying."
+ },
+ {
+  "id": 77,
+  "parent": 0,
+  "author": "Poul Steen",
+  "url": "",
+  "date": "2006-01-15 23:24:23",
+  "type": "",
+  "html": "Very nice review. You need, however, to make clear to yourself why you are interested in the \"user experience\". Whether you are interested because you are about to make a web site that is to be \"intuitive\" or whether you want to make a banking trading application for traders where the success criteria is functionality, speed, and logical consistency, rather than intuitiveness.\n\nAlso, the problem with defining a concept like \"user experience\" is that the \"user\" is not well defined. We are all users, but we will have different experiences with the same application or web site.\n\nTherefore, although it is always nice to be able to find a common denominator to what is \"user experience\", it becomes interesting only when looking into the concrete problem space to determine how to make the best user experience for this specific types of users in this specific context."
+ },
+ {
+  "id": 110,
+  "parent": 0,
+  "author": "Thomas Visby Snitker",
+  "url": "http://www.snitker.com",
+  "date": "2006-01-25 21:42:22",
+  "type": "",
+  "html": "Thanks for the pointers, Jesper.\\\nJust a pointer for you related to the above mentioned JJ Garrett's book \"Elements of the user experience\"- http://jjg.net and the blog at http://blog.jjg.net/\\\nIn short, he approaches the (web) user experience as the result of two different systems; the web as software and the web as hypertext.\\\n(Maybe that's why it is so hard to get it right in terms of designing good web interfaces and web experiences!)\\\nHis model is available on http://www.jjg.net/elements/pdf/elements.pdf\\\nAnd do read the book - it is excellent (and short too :-)\\\ncheers\\\nThomas"
+ },
+ {
+  "id": 1880,
+  "parent": 0,
+  "author": "justaddwater.dk | User Experience Diagram",
+  "url": "http://justaddwater.dk/2006/03/06/user-experience-diagram/",
+  "date": "2006-03-06 11:23:52",
+  "type": "pingback",
+  "html": "\\[...\\] I really like the visualization and I think it relates with some of the issues in my January 15 post “User Experience. Clear and easy-to-use definition needed“. \\[...\\]"
+ },
+ {
+  "id": 4145,
+  "parent": 0,
+  "author": "justaddwater.dk | Elements of User Experience, my notes",
+  "url": "http://justaddwater.dk/2006/05/31/user-experience-notes/",
+  "date": "2006-05-31 10:00:56",
+  "type": "pingback",
+  "html": "\\[...\\] User experience is on of those really fuzzy buzzwords, and I’ve previously searched for a clear definition and found a good diagram. I expect that we have a conversation about that. \\[...\\]"
+ },
+ {
+  "id": 12566,
+  "parent": 0,
+  "author": "Patrizia from Design for U &amp; I in Melbourne Australia",
+  "url": "",
+  "date": "2006-09-09 11:40:19",
+  "type": "",
+  "html": "Jesse James Garrett's definition of the user experience is how the product behaves and is used in the real world. This definition is preceded by a hilarious string of events that describe why Jesse didn't get to work on time, all because of a series of interactions with products that had flaws in its design. He then goes on to explain that user experience is not about how a product works on the inside (although that sometimes has a lot of influence) but how it works on the outside, where a person comes into contact with it and has to work with it.\n\nJesse's book The Elements of User Experience then explains with concise clarity what it takes to create a user-centred design for the Web. Definitely worth a read."
+ },
+ {
+  "id": 12578,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-09-09 13:36:43",
+  "type": "",
+  "html": "Patrizia, thanks for the insight from Jesse's book. You might also take a look at my [notes from Jesse's talk](/2006/05/31/user-experience-notes/) in May and the updated \"[Definition of User Experience Revisited](/2006/06/21/user-experience-revisited/)\""
+ },
+ {
+  "id": 35834,
+  "parent": 0,
+  "author": "justaddwater.dk | Definition of User Experience Revisited",
+  "url": "http://justaddwater.dk/2006/06/21/user-experience-revisited/",
+  "date": "2006-12-06 22:50:24",
+  "type": "pingback",
+  "html": "\\[...\\] Since last time I wrote on the various definitions of user experience, Bryce Glass, Mike Kuniavsky and Thomas Baekdal have made excellent points on the subject of providing a single, clear understandable definition of user experience. \\[...\\]"
+ }
+]

@@ -1,0 +1,83 @@
+[
+ {
+  "id": 143444,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://www.germworks.net",
+  "date": "2007-05-10 08:30:58",
+  "type": "",
+  "html": "Yeah this little handy tool has saved me I dont know how many hours of fiddling around and guess work, it does have a bit of a deap learning curve though which would be my only thing against the tool...."
+ },
+ {
+  "id": 403468,
+  "parent": 0,
+  "author": "Bubbila",
+  "url": "http://www.bubbila.com/frameit/",
+  "date": "2008-03-21 17:29:00",
+  "type": "",
+  "html": "Sweet tutorial, just what I have been looking for."
+ },
+ {
+  "id": 429211,
+  "parent": 0,
+  "author": "Alice",
+  "url": "http://www.alice.bo.it",
+  "date": "2008-07-09 21:03:49",
+  "type": "",
+  "html": "I just love Firebug, any web developer/designer must have it! There is a similar product that runs on IE, it might help as well if you need to debug IE specific css weirdness, but the IE plugin is nothing closer to Firebug. I \\<3 Firebug!"
+ },
+ {
+  "id": 458427,
+  "parent": 0,
+  "author": "Nadz",
+  "url": "http://www.outperformingyourself.com/",
+  "date": "2008-12-06 19:32:53",
+  "type": "",
+  "html": "This is great advice. I tend to use Firefox Extension - Aadvark to point out CSS elements. But now with your advice, I can actually see the code!\n\nThanks a lot!"
+ },
+ {
+  "id": 484151,
+  "parent": 0,
+  "author": "WEB 3.0 &raquo; Blog Archive &raquo; ¿Así que querías saber de CSS?",
+  "url": "http://web-3.es/2009/04/%c2%bfasi-que-querias-saber-de-css/",
+  "date": "2009-04-18 03:15:24",
+  "type": "pingback",
+  "html": "\\[...\\] Debugging CSS: My Best Productivity Tip Ever - Jesper Ronn-Jensen \\[...\\]"
+ },
+ {
+  "id": 492057,
+  "parent": 0,
+  "author": "Find hurtigere fejl i din CSS kode | CHEW.dk",
+  "url": "http://chew.dk/2010/01/fa-styr-pa-din-css-kode/",
+  "date": "2010-01-07 19:09:57",
+  "type": "pingback",
+  "html": "\\[...\\] http://justaddwater.dk/2007/04/30/debugging-css-my-best-productivity-tip-ever/ Skrevet af Mads Konradsen   @   7 January 2010 0 kommentarer Tags : CSS , \\[...\\]"
+ },
+ {
+  "id": 531659,
+  "parent": 0,
+  "author": "Wyrdbeard",
+  "url": "",
+  "date": "2011-07-26 15:00:09",
+  "type": "",
+  "html": "Excellent run-through. Many thanks."
+ },
+ {
+  "id": 521976,
+  "parent": 0,
+  "author": "marx",
+  "url": "",
+  "date": "2011-05-07 15:01:06",
+  "type": "",
+  "html": "This is my first time I heard about fire bug- at first a little confused following your steps, it took me almost a day before I get it! But it really works, I'm have it! Thanks a lot for this post. I look forward to reading your another post!"
+ },
+ {
+  "id": 547740,
+  "parent": 0,
+  "author": "Cascading Style Sheets Reference Links | kabayview.com",
+  "url": "http://www.kabayview.com/css/cascading-style-sheets-reference-links",
+  "date": "2011-10-10 15:08:24",
+  "type": "pingback",
+  "html": "\\[...\\] Debugging CSS: My Best Productivity Tip Ever – Jesper Ronn-Jensen \\[...\\]"
+ }
+]

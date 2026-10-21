@@ -1,0 +1,200 @@
+[
+ {
+  "id": 2064,
+  "parent": 0,
+  "author": "Brian Crescimanno",
+  "url": "http://ds.phorce.com",
+  "date": "2006-03-29 18:56:03",
+  "type": "",
+  "html": "Nice follow-up to my initial article and I thank you for pointing me to it.\n\nA couple of comments:\n\nI completely agree with the statement to never use bold fields and especially the concept of grouping your required elements together. It almost always makes far more sense to group required fields--the marketing departments are the ones who will complain. Keeping the optional fields separated makes it easier for users to avoid filling them out.\n\nAvoiding using the asterisk is a good suggestion as well--one that I'm definitely coming around to. Obviously, design issues sometimes mandate that it is used over a \"required\" tag.\n\nAgain, I'll point out that I don't like using the color red to indicate a required field (though it is becoming common practice). Everywhere else you look, red is generally indicative of an error. People already make a strong correlation between the color red and a problem to be corrected. I think its unfortunate that this bad practice has become commonplace.\n\nAs far as the placement of the \"required\" label--you're spot on. Unless design issues \\*absolutely\\* force you to move it to the opposite side, always include it with the label.\n\nNice write-up here, I like the direction."
+ },
+ {
+  "id": 2065,
+  "parent": 0,
+  "author": "ds.phorce.com &raquo; Blog Archive &raquo; Interesting Follow Up",
+  "url": "http://ds.phorce.com/2006/03/29/interesting-follow-up",
+  "date": "2006-03-29 19:01:28",
+  "type": "pingback",
+  "html": "\\[...\\] Thomas Watson has written an interesting follow-up to my article published in A List Apart.  While I still disgaree with the red color being used to indicate required fields, the post provides some sound advice.  I’ve also added some comments of my own. \\[...\\]"
+ },
+ {
+  "id": 2067,
+  "parent": 0,
+  "author": "Hemanshu",
+  "url": "http://hnarsana.com",
+  "date": "2006-03-29 19:37:13",
+  "type": "",
+  "html": "I shall post an elaborate comment on this post on my blog tomorrow morning (it's late in the night right now), but I did have a quick opinion.\n\nHow about also adding a color-based indicator to indicate required fields? It needn't be red or a stark color, but a subtle background color for those field rows (or input boxes) could also help increase the awareness of those fields having the significance of being required? This would also solve the problem for weak sighted users as well.\n\nMore on this later on my blog."
+ },
+ {
+  "id": 2068,
+  "parent": 0,
+  "author": "Brian Crescimanno",
+  "url": "http://ds.phorce.com",
+  "date": "2006-03-29 19:52:21",
+  "type": "",
+  "html": "Hemanshu,\n\nThis is a cool idea for input boxes--but it really doesn't communicate the real message. \"Why is the box a different color?\" is likely a more common response than \"oh, this box is shaded so it is...required?\"\n\nMore important, however, is the issue of required fields which are not some form of text-input box. Also, if the color is subtle, low-sight users may not notice the difference anyway. And screen readers don't much care what color the text boxes are, so it doesn't help them either.\n\nHands down, the best way to maintain accessibility is to flat out state that the field is required."
+ },
+ {
+  "id": 2070,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-03-29 22:17:55",
+  "type": "",
+  "html": "Brian,\n\nYou are right about that the red color might lead some users to wrongly think of an error. Didn't think of that when I wrote the article - even though you so clearly pointed it out in your article on A List Apart ;)\n\n... maybe I should update the post with this point."
+ },
+ {
+  "id": 2074,
+  "parent": 0,
+  "author": "Hem",
+  "url": "http://hnarsana.com",
+  "date": "2006-03-30 07:32:27",
+  "type": "",
+  "html": "The sleep did me in, as the comment was half baked.\n\nThe idea was to have differently colored filed backgrounds in addition to the asteriks positioning as mentioned in simpleaccessible.org link in the post, where it's physically placed after the box, but the screen reader gets around to reading it right after the filed label.\n\nThis way it benefits all three kinds of users. As for the subtle color, I simply meant not using a harsh color (bright red or pink of blue \\*grin\\*), but by subtle I don't mean that the gradient is so low that it is missed."
+ },
+ {
+  "id": 2075,
+  "parent": 0,
+  "author": "Hemanshu",
+  "url": "http://hnarsana.com",
+  "date": "2006-03-30 07:33:01",
+  "type": "",
+  "html": "That was me, above :)"
+ },
+ {
+  "id": 2090,
+  "parent": 0,
+  "author": "David",
+  "url": "",
+  "date": "2006-04-03 11:16:42",
+  "type": "",
+  "html": "Another issue about using bold: A lot of bold fonts looks very similar to non-bold with cleartype and some other screen effects. Obviously this is an error desing but it happens."
+ },
+ {
+  "id": 3575,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-05-23 10:24:57",
+  "type": "",
+  "html": "Very insightful article and comments here. I'd just update with the screenshots from [Simplyaccessible](http://simplyaccessible.org/article/form-error-messages) you mention in your article, Thomas:\n\n![simplyaccessible: error messages](http://simplyaccessible.org/images/9.gif)\n\n![simplyaccessible: required field](http://simplyaccessible.org/images/4.gif)\n\nI think that also illustrates the importance of visualising multiple states. To indicate required form fields is one thing (and is mostly important before you enter in the fields). To indicate error messages happens when things have gone wrong, and that's another situation in another state.\n\nThe ideal form fields must support both situations."
+ },
+ {
+  "id": 3724,
+  "parent": 0,
+  "author": "D.zigns Design/Development &raquo; How to Show Whether Form Fields are Required",
+  "url": "http://blog.des-us.com/?p=70",
+  "date": "2006-05-25 06:14:19",
+  "type": "pingback",
+  "html": "\\[...\\] R/3 How to Show Whether Form Fields are Required Posted by Smiley Cat: Christian Watson's Web Design Blog on 8 Apr 2006 9:50 am. Filed under WebDevelopment. Just Add Water has a useful article on techniques to show whether form fields are required or optional. Personally, I tend to put an asterisk next to the label of the required field, or write (required) after the input box, depending on the layout of the form (although, on reading the artcicle, my second approach seems to be questionable). One good point is not to use bold to indicate required fields as this causes accessibility issues. \\[...\\]"
+ },
+ {
+  "id": 5869,
+  "parent": 0,
+  "author": "bart",
+  "url": "",
+  "date": "2006-06-21 13:59:20",
+  "type": "",
+  "html": "As you stated yourself, \"The color red has a special effect on the human brain so that it is noticed before other colors and given a stronger weight.\" In that case red color should be used to indicate any type of information that is important or crytical in completing a task. This includes errors, required fields, special instructions, etc."
+ },
+ {
+  "id": 10156,
+  "parent": 0,
+  "author": "justaddwater.dk | Time to revise our blog purpose",
+  "url": "http://justaddwater.dk/2006/08/14/blog-purpose/",
+  "date": "2006-08-14 23:10:10",
+  "type": "pingback",
+  "html": "\\[...\\] How to indicate required or optional form fields \\[...\\]"
+ },
+ {
+  "id": 228910,
+  "parent": 0,
+  "author": "Lori",
+  "url": "",
+  "date": "2007-08-07 23:53:48",
+  "type": "",
+  "html": "I found this article, and subsequent discussion, to be very helpful -- thanks to all who contributed!"
+ },
+ {
+  "id": 233851,
+  "parent": 0,
+  "author": "SR",
+  "url": "http://www.dev-exchange.com",
+  "date": "2007-08-16 16:30:52",
+  "type": "",
+  "html": "Thanks for this list. I have always hard time designing forms but this article is very useful to sort some of my issues."
+ },
+ {
+  "id": 358553,
+  "parent": 0,
+  "author": "justaddwater.dk | How To Align Labels On Form Fields",
+  "url": "http://justaddwater.dk/2007/04/20/how-to-align-labels-on-form-fields/",
+  "date": "2007-11-18 17:29:47",
+  "type": "pingback",
+  "html": "\\[...\\] How to indicate required or optional form fields \\[...\\]"
+ },
+ {
+  "id": 380989,
+  "parent": 0,
+  "author": "rascunho &raquo; Blog Archive &raquo; links for 2007-12-05",
+  "url": "http://blog.bruno.locaweb.com.br/2007/12/05/links-for-2007-12-05/",
+  "date": "2007-12-05 21:41:09",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk \\| How to indicate required or optional form fields I got a question from Kimberly, one of our reader, in the Sensible Forms: A Form Usability Checklist post where she asks where the best place to display the asterisk indicating a required field in af form is: (tags: justaddwater.dk 2007 mes11 dia5 at_tecp usability forms validation required_field form_design blog_post) \\[...\\]"
+ },
+ {
+  "id": 382034,
+  "parent": 0,
+  "author": "Opus",
+  "url": "",
+  "date": "2007-12-11 23:49:07",
+  "type": "",
+  "html": "Using an asterisk is fine for labels in a form. But what about headers in a table?\n\nSay you are filling in a table, but not all the columns are necessary. Do you put an asterisk in the required columns’ header?\n\nI don’t remember seeing this in any application or website. Should this be done?\n\nThanks."
+ },
+ {
+  "id": 391342,
+  "parent": 0,
+  "author": "Brandon",
+  "url": "",
+  "date": "2008-01-25 21:47:41",
+  "type": "",
+  "html": "I disagree with the comments regarding not using RED to indicate a required field. IMHO, using RED to indicated a required field is functionally similar to indicating a warning or an error.\n\nThe fact is, the form is telling the user to \"be WARNED\" that they MUST provide input in that field or an ERROR will occur; of course the error is usually very mild and would only result in the form not being able to be submitted until completed but it would still be an error.\n\nIn other words, in this context, the RED text is warning the user that they could generate an error."
+ },
+ {
+  "id": 398374,
+  "parent": 0,
+  "author": "Johnathen",
+  "url": "",
+  "date": "2008-02-25 21:30:30",
+  "type": "",
+  "html": "Are we usability gurus forgetting that about 15% of the population have some form of colour-blindness and don't see red the way you think? I encourage you to visit http://www.wellstyled.com/tools/colorscheme2/index-en.html and see just how different red looks to the different forms of colour-blindness. There are also online tools to show you what your images look like to colour-blind people. I strive to design sites that don't rely on colour to relay information to the user. IMHO the site should be equally usable in B&W and with all your CSS stripped away. Although, I mostly design sites used by government agencies and they have strict guidelines for accessibility."
+ },
+ {
+  "id": 423225,
+  "parent": 0,
+  "author": "Patrick",
+  "url": "",
+  "date": "2008-06-11 00:49:57",
+  "type": "",
+  "html": "I have to disagree with the ALA article on not using red because of its reserved use for errors. I think that is exactly why it is such an effective color for the required asterisk...it is showing that unless you enter information in this field you will generate an error. (I just looked up and see that Brandon wrote almost the same thing, oh well this is typed already).\n\nIt is important to note that a red asterisk is an asterisk first and red second....meaning that being colorblind does not prevent you from understanding this message."
+ },
+ {
+  "id": 488791,
+  "parent": 0,
+  "author": "jim voorhies",
+  "url": "",
+  "date": "2009-09-01 18:03:27",
+  "type": "",
+  "html": "We've seen recent studies (CXpartners) that seems to indicate users never look at the standard \\* indicates required fields text when they're fillling out forms. It's just a form and they fill it out, assuming you only ask for what you need. One thing I've seen that looks like a good option is having the text box initially contain the word Optional in gray if the field is optional."
+ },
+ {
+  "id": 501321,
+  "parent": 0,
+  "author": "UX Designer&#8217;s Quick Reference | butlerhouse",
+  "url": "http://www.butlerhouse.net/rick-butler/blog/ux-designers-quick-reference.html",
+  "date": "2010-10-18 01:07:11",
+  "type": "pingback",
+  "html": "\\[...\\] How to Indicate Required or Optional Form Fields – Thomas Watson Steen \\[...\\]"
+ }
+]

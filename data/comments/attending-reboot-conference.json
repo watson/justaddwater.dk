@@ -1,0 +1,20 @@
+[
+ {
+  "id": 116510,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-03-28 23:55:12",
+  "type": "",
+  "html": "Katharina Birkenbach wrote me to know more about my comment on the design of reboot.dk (she works on the site):\n\n> my name is katharina birkenbach and i just read on your blog your comment about reboot. and i must say i'm pretty curious about your reaction that the site is horrific (as i designed and built quite a\\\n> bit of it).\n>\n> don't get it wrong, i don't mean it cynical or so, i'm just really interested, because my aim is of course to make websites which people like and even more which they like to use.\n>\n> so is it the green? is it the allover layout? is it the editing/ the wording? is it the fact, that you don't get a 'finished' conference website with a list of speakers, etc.? is it too hard to edit your profile, make new things? is it the non hierarchical set up? is it even maybe the fact that it's another foaf environment? how would you prefer to get feedback when somebody accepted your 'friendrequest'? ...\n>\n> i would be really thankful for an answer!\n>\n> have a nice day,\\\n> katharina\n\nMy answer:\n\nHi Katharina.\\\nmy apologies for the late answer... Things are really busy for me at the moment. I'm glad you sent a note. Here are a few quick things that I find that affects the user experience in the wrong way:\n\n\\* friends list are hard to scan. The relations are put horisontally a long list. Example: http://www.reboot.dk/module/Contact/list/public?id=1028\\\nConsider making the lists vertical -- there's plenty of space for it.\n\n\\* Typhography: Contacts in capital letters make them hard to read. In my opinion, the text is generally a size too small, making it harder for me to read.\\\nThe italics on the proposals page (http://www.reboot.dk/listpublish-111-en.html) are also hard to read, and high contrast background photos make it worse.\n\n\\* the lightboxes: Nice idea, but two small things annoy me: the background-overlay is not dark enough. Consider making it darker to make it instantly obvious what is foreground and what is background. The other small thing in the lightbox for making relationship: The radiobuttons should use the element for the text besides them. That way, you could activate the radio button by clicking the entire word \"Friend\" which is bigger and easier to hit than the tiny radio button itself. This has been especially annoying for me when working on my laptop with no mouse and only a trackpad.... :(\n\nHaving said that, don't take my blog post as criticism for your work. I know that it's really hard work to get a site with this functionality up and running. Hope you can use these thoughts that I had in mind when writing that note in the blog post.\n\nBesides, If you don't mind, I'll post this reply and your questions in the comment track for the blog post.\\\nI'm looking forward to meet you at Reboot:)"
+ },
+ {
+  "id": 112886,
+  "parent": 0,
+  "author": "Marston A.",
+  "url": "http://www.marstononline.com/",
+  "date": "2007-03-23 10:02:21",
+  "type": "",
+  "html": "Hey Jesper,\n\nGood to hear you'll be there as well. I can't wait to meet all the great people again and have a nice tall Tilburg (and others :-) ). See you there!"
+ }
+]

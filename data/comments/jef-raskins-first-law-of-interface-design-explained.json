@@ -1,0 +1,110 @@
+[
+ {
+  "id": 484352,
+  "parent": 0,
+  "author": "Chris",
+  "url": "http://www.fordescortmk4.de",
+  "date": "2009-04-19 21:31:21",
+  "type": "",
+  "html": "\"says “credit card information invalid. type again” and then deletes all entered credit card information\"\n\nI hate this one most, because credit card information usually contains large numbers..."
+ },
+ {
+  "id": 484056,
+  "parent": 0,
+  "author": "Dan Olsen",
+  "url": "http://www.linkedin.com/in/danolsen98",
+  "date": "2009-04-17 07:43:53",
+  "type": "",
+  "html": "I have a UI Design Law that applies to redesigning existing functionality.\n\nMedical doctors are trained to follow the principle 'first, do no harm' (from the latin 'primum non nocere'):\\\nhttp://en.wikipedia.org/wiki/Primum_non_nocere\n\nThe basic idea is: while improving the patient's health is an important objective, not making the patient's health worse is even more important.\n\nWhile product redesigns are always started with the best intentions of making the product better, changes to existing functionality can often have negative side effects for users.\n\nSometimes, existing functionality is removed by accident without realizing it. Sometimes, the changes are made deliberately because the team thinks they know better, only to be set straight by the complaints of angry users. Sometimes, unexpected technical complexities and/or schedule pressures force a team to make a decision they know is suboptimal.\n\nThe costs of a redesign mistake goes up the more users you have. There have been several recent examples of popular products angering users with a redesign. Next time you see that happen, ask yourself whether or not the company was applying the concept of 'first, do no harm'."
+ },
+ {
+  "id": 484813,
+  "parent": 0,
+  "author": "Vituperative",
+  "url": "http://vituperativeone.blogspot.com/",
+  "date": "2009-04-24 22:43:01",
+  "type": "",
+  "html": "What's really shocking is how common this sin is among even high profile sites. I've aborted many signups because of it."
+ },
+ {
+  "id": 484858,
+  "parent": 0,
+  "author": "Jordan",
+  "url": "http://dismarks.com/",
+  "date": "2009-04-26 07:33:34",
+  "type": "",
+  "html": "I'm always curious if there's a logical reason why so many sites clear out my passwords when I fail the captcha or have some other reason why I have to re-enter my data."
+ },
+ {
+  "id": 480606,
+  "parent": 0,
+  "author": "Månhus &raquo; Länksprutning - 27 March 2009",
+  "url": "http://www.moonhouse.se/posts/lanksprutning-27-march-2009.dpg",
+  "date": "2009-03-27 08:00:45",
+  "type": "pingback",
+  "html": "\\[...\\] Jef Raskin’s First Law of Interface Design Explained \\[...\\]"
+ },
+ {
+  "id": 479187,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-03-20 15:28:53",
+  "type": "",
+  "html": "@Jeet:\n\n> forms resetting other fields when I entered an incorrect captcha which was difficult to start with\n\nGood example! I appended it to the list above!"
+ },
+ {
+  "id": 479183,
+  "parent": 0,
+  "author": "Jeet",
+  "url": "http://www.directoryroll.com",
+  "date": "2009-03-20 15:04:13",
+  "type": "",
+  "html": "@Jesper: Thanks for sharing the 'extra F' thing :)\n\nI see this kind of violation in lots of websites including one shopping cart where my cart becomes empty if I made an error in entering my credit card details.\n\nAnother one that I see very often is forms resetting other fields when I entered an incorrect captcha which was difficult to start with."
+ },
+ {
+  "id": 479008,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-03-19 15:03:38",
+  "type": "",
+  "html": "Actually I first thought that this was Asimov's original law. But few years ago Mathias Müller-Prove reminded me about the quotation in Jef Raskins book. He also pointed out that Jef Raskin actually changed his name from Jeff to Jef because he thought the second F was redundant :)"
+ },
+ {
+  "id": 491142,
+  "parent": 0,
+  "author": "Michael (Wireframe Tool Producer)",
+  "url": "https://pidoco.com",
+  "date": "2009-11-25 12:59:41",
+  "type": "",
+  "html": "Hi Jesper!\n\nYou are speaking from my heart with your gut wrenching examples. I work in usability for quite some time now and we even offer a wireframing and usability testing tool to held designers avoid that kind of stuff. But I never understand, that even so called \"usability professionals\" test the workflows and processes of their sites many times, but very often leave the error messages to the programmers.\n\nBut it's excatly when something goes wrong, that the user needs help from the system - he didn's do the mistake on purpose!\n\nCheers,\n\nMichael"
+ },
+ {
+  "id": 489102,
+  "parent": 0,
+  "author": "Mike B. Fisher",
+  "url": "http://completeusability.com",
+  "date": "2009-09-13 20:32:07",
+  "type": "",
+  "html": "Deleting a user's previously entered information is indeed a usability \"worst practice\". I've seen systems where users were required to enter many fields including serial numbers and other complex data - then had this information cleared upon triggering an error. Dan's reference to the Hippocratic oath is right on target."
+ },
+ {
+  "id": 494859,
+  "parent": 0,
+  "author": "Lead Management Software",
+  "url": "http://www.lead-solutions.com",
+  "date": "2010-04-10 23:05:19",
+  "type": "",
+  "html": "This is the sort of thing that makes people bounce - keep the information there an highlight it for goodness sake!"
+ },
+ {
+  "id": 495246,
+  "parent": 0,
+  "author": "mprove",
+  "url": "http://www.mprove.de",
+  "date": "2010-04-19 07:17:32",
+  "type": "",
+  "html": "There is another situation when the locus and focus of attention do not match (terms from The Humane Interface). You think you are there, start typing, but in fact you are not. And half a sentence is lost because the text cursor was not in the place you thought it was. My solution (or is this also taken from The Humane Interface?) would be to make the mouse cursor smart and temporarily store all the characters. During this time the chars follow the mouse. The next click to a text field would release the little guys to where they belong.\\\n-Matthias"
+ }
+]

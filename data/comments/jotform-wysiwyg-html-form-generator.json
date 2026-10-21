@@ -1,0 +1,29 @@
+[
+ {
+  "id": 1270,
+  "parent": 0,
+  "author": "Web Applications are the Future &raquo; Blog Archive &raquo; JotFrom Launch and First Impressions",
+  "url": "http://atank.interlogy.com/blog/?p=8",
+  "date": "2006-02-22 14:53:26",
+  "type": "pingback",
+  "html": "\\[...\\] JustAddWater - Instant Usability & Web Standards blog has a usability review, and calls JotForm “All updates appear instantly in the interface. It’s really nice done.” \\[...\\]"
+ },
+ {
+  "id": 2101,
+  "parent": 0,
+  "author": "Webmarketing 2.0",
+  "url": "http://www.sylvainbriant.com/webmarketing/2006/04/jotform.html",
+  "date": "2006-04-05 10:31:24",
+  "type": "trackback",
+  "html": "**JotForm...**\n\nJotForm est un outil tres intuitif et tres complet permettant de générer des formulaires. Vous vous inscrivez (bienque la démarche ne soit pas obligatoire) et vous modifiez le formulaire pour obtenir le résultat que vous souhaitez. Libre à vous de..."
+ },
+ {
+  "id": 5323,
+  "parent": 0,
+  "author": "Adrian",
+  "url": "http://www.theblueform.com",
+  "date": "2006-06-18 16:30:55",
+  "type": "",
+  "html": "There is a new online form builder / workflow application called [The Blue Form](http://www.theblueform.com).\\\nIt features a great AJAX style drag-and-drop form builder as well as the ability to assign approval workflows to the forms you create. It is more of a process automation solution aimed at medium sized companies, rather than just an online form builder."
+ }
+]

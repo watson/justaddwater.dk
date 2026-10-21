@@ -1,0 +1,11 @@
+[
+ {
+  "id": 428148,
+  "parent": 0,
+  "author": "Nii Amon",
+  "url": "",
+  "date": "2008-07-04 13:54:30",
+  "type": "",
+  "html": "Hi Jesper,\n\nFrom what you are saying, it seems I will be able to dynamically update the underlying HTML in a way that AJAX does not do. That is the code that renders the view will be changed and thus when refreshed will show the new changes I wrote into the change. Is this right?"
+ }
+]

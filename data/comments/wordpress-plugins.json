@@ -1,0 +1,1280 @@
+[
+ {
+  "id": 2726,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-05-03 11:12:02",
+  "type": "",
+  "html": "Hi MichaelH\n\nNice to hear that you like it :)\n\nActually Alex King has a page on his website dedicated to WordPress software:\\\nhttp://www.alexking.org/index.php?content=software/wordpress/content.php\n\nThe only problem is that the Popularity Contest plugin that currently is available from here is version 1.1 - And as far as I know this version of the plugin is not WordPress 2.x friendly :( - On this blog I'm currently using v1.2b (which still has some issues, but at least works)"
+ },
+ {
+  "id": 2712,
+  "parent": 0,
+  "author": "justaddwater.dk | Justaddwater.dk WordPress Plugins",
+  "url": "http://justaddwater.dk/2006/05/02/justaddwaterdk-wordpress-plugins/",
+  "date": "2006-05-02 23:39:54",
+  "type": "pingback",
+  "html": "\\[...\\] I’ve created a bunch of WordPress plugins for our justaddwater.dk blog. In the spirit of sharing I’ve made a couple of them available for download. My plan is to make all of them available as soon as they are ready for the public. I’ve created a page called “WordPress Plugins” under justaddwater.dk where you always can find and download our latest plugins. \\[...\\]"
+ },
+ {
+  "id": 2716,
+  "parent": 0,
+  "author": "MichaelH",
+  "url": "",
+  "date": "2006-05-03 01:46:37",
+  "type": "",
+  "html": "Nice job on the widgets.\n\nAlso, here's another link to Alex King's Populartiy Contest:\\\nhttp://www.alexking.org/blog/2005/05/23/popularity-contest/"
+ },
+ {
+  "id": 3707,
+  "parent": 0,
+  "author": "Johnny D",
+  "url": "http://www.johndoro.com",
+  "date": "2006-05-24 21:04:08",
+  "type": "",
+  "html": "Many thanks for the popular posts widget! Works like a charm, out of the box on my Wordpress 2.0.2 installation"
+ },
+ {
+  "id": 4893,
+  "parent": 0,
+  "author": "The Arrogance of Gods &raquo; Blog Archive &raquo; The Poor Mans Matrix",
+  "url": "http://mpm.org.au/mike/?p=6",
+  "date": "2006-06-13 21:26:15",
+  "type": "pingback",
+  "html": "\\[...\\] http://justaddwater.dk/wordpress-plugins/ Explore posts in the same categories: Uncategorized \\[...\\]"
+ },
+ {
+  "id": 4997,
+  "parent": 0,
+  "author": "Mike",
+  "url": "http://www.mpm.org.au/mike/",
+  "date": "2006-06-15 06:49:17",
+  "type": "",
+  "html": "Hi,\n\nWhen I duplicate a text widget I cannot edit it. Is there any way to do this? Or failing that how do I have more than 9 text widgets?"
+ },
+ {
+  "id": 5016,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-15 11:25:49",
+  "type": "",
+  "html": "Hi Mike\n\nThe duplication feature is meant to duplicate the widget as it is. This way changes in the \"master\" widget is reflected in all copies of it.\n\nIf you want to have multiple text or rss widgets with different content you are stuck with the out-of-the-box feature of the Sidebar Widgets plug-in to create more. But as you say this feature has a limit on a maximum of 9 each.\n\nThis limit is unfortunately hardcodet into the Sidebar Widgets plug-in. So you only have two options if you want more then 9 different text or rss widgets:\n\n1\\) Hack the plug-in your self (or get others to do it)\\\n2\\) File a bug report with Automattic and let them know what you want. Then wait for the next version of the plug-in to be released.\n\nIf this is a serious need of yours I can create a howto explaining how to hack the plug-in."
+ },
+ {
+  "id": 9167,
+  "parent": 0,
+  "author": "dave",
+  "url": "http://davereed.org",
+  "date": "2006-08-01 07:24:48",
+  "type": "",
+  "html": "Actually, I just realized that the duplicate widgets that are not appearing on the live sidebar are *third-party* widgets not packaged in the \"official\" widgets plugin. Is this a limitation of your plugin, or can this be added?"
+ },
+ {
+  "id": 9131,
+  "parent": 0,
+  "author": "ganges",
+  "url": "",
+  "date": "2006-07-31 14:21:23",
+  "type": "",
+  "html": "Thanks Thomas for Your really useful plugin. It works fine, but i am experiensing problems with duplicated \"Categories\" widget. When duplicated this widget simply dont appear in sodebar.\n\nI register multiple sidebars on my functions.php file, and Your plugin works fine with all of mine widgets, except Categories widget.\n\nAny thinks are welcome.\n\nThank You once more\n\nAnd i am WP 2.0.3 user."
+ },
+ {
+  "id": 9165,
+  "parent": 0,
+  "author": "dave",
+  "url": "http://davereed.org",
+  "date": "2006-08-01 07:18:45",
+  "type": "",
+  "html": "The duplicate widgets plugin is exactly what I needed, but it's not working for me. The duplicate widgets aren't displaying in the secondary sidebar. Help would be appreciated!"
+ },
+ {
+  "id": 10154,
+  "parent": 0,
+  "author": "justaddwater.dk | Time to revise our blog purpose",
+  "url": "http://justaddwater.dk/2006/08/14/blog-purpose/",
+  "date": "2006-08-14 23:09:28",
+  "type": "pingback",
+  "html": "\\[...\\] Popular topics: Usability, blog usability, wordpress plugins, ruby on rails, prototyping, web standards, AJAX (web 2.0). \\[...\\]"
+ },
+ {
+  "id": 10993,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-08-25 14:58:14",
+  "type": "",
+  "html": "Hi Dave\n\nSorry for the late reply - I've unfortunately been very busy lately.\n\nI'm using the plugin for a couple of my homemade widgets, so it should hopefully also work with other *thrid-party* widgets. As you can see I've duplicated both the \"Free Newsletter\" and \"Popular Articles Right Now\" widget with no problem.\n\nCan you tell me if you still have the problem and in that case which plugins are giving you trouble?"
+ },
+ {
+  "id": 11097,
+  "parent": 0,
+  "author": "Mike",
+  "url": "",
+  "date": "2006-08-26 18:56:00",
+  "type": "",
+  "html": "I'm using the JAW Popular Posts Widget. I believe you need to add the popularity function check on line 23 as well.\n\nif(function_exists(\"akpc_most_popular\"))\\\nakpc_most_popular(\\$items);\n\nThis issue being that if you add the widget to the sidebar and then you temporarily disabled Alex's Popularity Post plugin (during troubleshooting, etc.) you get an error in the sidebar that it can't find function akpc_most_popular.\n\nOther than that it is working great.\n\nMike"
+ },
+ {
+  "id": 14150,
+  "parent": 0,
+  "author": "Mike",
+  "url": "",
+  "date": "2006-09-17 16:09:46",
+  "type": "",
+  "html": "One additional fix to my above post:\n\nfunction load()\\\n{\\\nif ( function_exists('register_sidebar_widget') )\\\n{\\\nregister_widget_control(\\_\\_('Popular Posts'), array('JAWPopularPostsWidget', 'control'), 300, 120);\\\nif(function_exists(\"akpc_most_popular\"))\\\nregister_sidebar_widget(\\_\\_('Popular Posts'), array('JAWPopularPostsWidget', 'widget'));\\\n}\\\n}\n\nIf your plugin is enable but sidebar widgets get turned (like in troubleshooting) it will generate an error as register_widget_control won't exist.\n\nMike"
+ },
+ {
+  "id": 14588,
+  "parent": 0,
+  "author": "Véro",
+  "url": "",
+  "date": "2006-09-19 23:32:11",
+  "type": "",
+  "html": "Hello from brazil,\n\nWhere your downloadable plugin (JAW DUPLICATE WIDGET) ?\\\ntell me ok !\\\nVéro"
+ },
+ {
+  "id": 15701,
+  "parent": 0,
+  "author": "James",
+  "url": "http://www.friedbeef.com",
+  "date": "2006-09-25 13:33:50",
+  "type": "",
+  "html": "This one doesn't seem to duplicate very well....\\\nhttp://freepressblog.org/wordpress-plugins-2/wordpress-recent-comments-plugin-widget/"
+ },
+ {
+  "id": 15824,
+  "parent": 0,
+  "author": "Caio",
+  "url": "http://www.caiojames.com",
+  "date": "2006-09-25 22:59:16",
+  "type": "",
+  "html": "Looks like the download site crashed. Is it possible to provide another download location?"
+ },
+ {
+  "id": 15938,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-09-26 14:07:54",
+  "type": "",
+  "html": "**New version available!**\\\nI've created new versions of both plugins to accommodate for the resent problems pointed out by Mike.\n\n**To Véro and Caio:**\\\nYes the download site has been very unstable and now it seems to be completely down. I've now updated the links above so you can download them directly from this server."
+ },
+ {
+  "id": 15942,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-09-26 14:32:40",
+  "type": "",
+  "html": "**James:**\\\nI've just tried your widget and I can duplicate it and show the duplicate without a problem. Can you try to describe your problem in more detail?"
+ },
+ {
+  "id": 15953,
+  "parent": 0,
+  "author": "WordPress New Plugins &amp; Themes &raquo; Blog Archive &raquo; JAW Popular Posts Widget 1.0",
+  "url": "http://wpfeeds.jtgllc.com/?p=457",
+  "date": "2006-09-26 15:27:50",
+  "type": "pingback",
+  "html": "\\[...\\] \\[Download\\] \\[Plugin Page\\] \\[...\\]"
+ },
+ {
+  "id": 17769,
+  "parent": 0,
+  "author": "JAW Duplicate Widgets &middot; WordPress插件中文站",
+  "url": "http://www.wp-plugins.cn/2006/10/09/jaw-duplicate-widgets.html",
+  "date": "2006-10-09 04:40:49",
+  "type": "pingback",
+  "html": "\\[...\\] 插件页面：点击进入 \\[...\\]"
+ },
+ {
+  "id": 17771,
+  "parent": 0,
+  "author": "JAW Popular Posts Widget &middot; WordPress插件中文站",
+  "url": "http://www.wp-plugins.cn/2006/10/09/jaw-popular-posts-widget.html",
+  "date": "2006-10-09 04:50:15",
+  "type": "pingback",
+  "html": "\\[...\\] 插件页面：点击进入 \\[...\\]"
+ },
+ {
+  "id": 20794,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-10-26 00:01:29",
+  "type": "",
+  "html": "**New release**\n\nJAW Duplicate Widgets\\\nVersion 1.0.2\n\n*Changelog:*\\\nAdded some useful comments\\\nCleaned up some of the code\\\nFixed a bug related to duplicating the text and rss widget."
+ },
+ {
+  "id": 24088,
+  "parent": 0,
+  "author": "Michael",
+  "url": "http://thebalancedlifecoach.com",
+  "date": "2006-11-06 14:35:31",
+  "type": "",
+  "html": "Fantastic, easy-to-implement and -use plugin. Thank you very much!"
+ },
+ {
+  "id": 46231,
+  "parent": 0,
+  "author": "Neimple &raquo; Blog Archive &raquo; Releasing our first theme &#8220;Pearl&#8221;.",
+  "url": "http://neimple.com/wordpress/releasing-our-first-theme-pearl/",
+  "date": "2006-12-25 20:34:02",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets (Optional) ( Used for duplicating widgets. Very useful in this case.) \\[...\\]"
+ },
+ {
+  "id": 47938,
+  "parent": 0,
+  "author": "Pearl un theme oscuro para tu wordpress - aNieto2K",
+  "url": "http://www.anieto2k.com/2006/12/26/pearl-un-theme-oscuro-para-tu-wordpress/",
+  "date": "2006-12-27 00:00:27",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets (Opcional) ( Usado para los widgets duplicados) \\[...\\]"
+ },
+ {
+  "id": 47992,
+  "parent": 0,
+  "author": "BlogsYa &raquo; Pearl un theme oscuro para tu wordpress",
+  "url": "http://www.blogsya.net/2006/12/26/pearl-un-theme-oscuro-para-tu-wordpress/",
+  "date": "2006-12-27 00:29:50",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets (Opcional) ( Usado para los widgets duplicados) \\[...\\]"
+ },
+ {
+  "id": 59295,
+  "parent": 0,
+  "author": "Macuha.com - &raquo; Kukote&#8217;s New Home!",
+  "url": "http://www.macuha.com/2007/01/miscellaneous/kukotes-new-home/",
+  "date": "2007-01-12 07:53:19",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets - For duplicating widgets. \\[...\\]"
+ },
+ {
+  "id": 79941,
+  "parent": 0,
+  "author": "dewa",
+  "url": "",
+  "date": "2007-02-08 12:09:40",
+  "type": "",
+  "html": "the widget plugin works well in my site, but there is one problem that I haven't solved yet.\\\nwhen I tried to deactivate the widget pluggin, my site broke down. Now I can not access itu even the wp-admin sector can not be loaded.\\\nany suggestion? it is dangerous for new users"
+ },
+ {
+  "id": 79481,
+  "parent": 0,
+  "author": "rich",
+  "url": "http://www.lafferty.ca/",
+  "date": "2007-02-07 20:58:50",
+  "type": "",
+  "html": "I'm running into the problem reported above where some third-party widgets won't run as copies. The widget I'm having problems with right now is the Related Feeds widget:\n\nhttp://ketsugi.com/software/wordpress/feeds-widget-for-wordpress/\n\nagainst WP 2.1. I've put some debugging bits in the main loop in dynamic_sidebar in widgets.php, and when that happens, the duplicated widget does not appear in \\$registered_widgets at all.\n\nThe problem is in widgets.php's register_sidebar_widget. Unlike the working widgets \\*and\\* unlike the widgets which are actually not in use (RSS 9, for instance, if you don't have 9 RSS feeds), the registration fails because it doesn't match the condition at the end of that function:\n\nelseif ( is_callable(\\$output_callback) && ( !isset(\\$registered_widgets\\[\\$name\\]) \\|\\| !\\$register_widget_defaults) )\\\n\\$registered_widgets\\[\\$name\\] = \\$widget;\n\nSpecifically, is_callable(\"widget_feeds\") is failing, only for the copy, not for the original. I noticed that if I test if widget_feeds is callable on \\*every\\* widget registration, it only starts becoming callable after the master copy of the widget is registered.\n\nSo widgets that are not part of widgets.php only duplicate successfully when the original plugin has registered its widget; if the duplicate widget entry happens to be processed before the original it fails to register.\n\n(I'm still looking into workarounds, but I want to submit this comment before I accidentally close this tab, and in case a solution jumps out at you before it does me.)"
+ },
+ {
+  "id": 79502,
+  "parent": 0,
+  "author": "rich",
+  "url": "http://www.lafferty.ca/",
+  "date": "2007-02-07 21:29:16",
+  "type": "",
+  "html": "Ok, it's not just plugin load order, at least. Plugins load alphabetically and renaming widget-feeds.php to aaa-widget-feeds.php didn't reorder the registration of modules. Damn.\n\nAnd widget-feeds.php makes sure it doesn't load itself before widgets.php has loaded, by adding their init to the widgets_init action. If I change that so that they init during plugins_loaded, then that fixes the problem. (I suppose that reintroduces the potential for it to load before widgets.php, though.)\n\nA perfect solution would involve being able to specify plugin load order in WP, but the only way I can imagine fixing it in your plugin is to ensure that it loads after all of the plugins that are duplicated.\n\n(I suppose you could register your own functions which in turn call the functions of the duplicated modules, and then submit those functions when registering, and then worry about is_callable at display time instead of initial load, but ugh.)"
+ },
+ {
+  "id": 79509,
+  "parent": 0,
+  "author": "rich",
+  "url": "http://www.lafferty.ca/",
+  "date": "2007-02-07 21:39:31",
+  "type": "",
+  "html": "I just took a quick look and the majority of the widget plugins I have init themselves in plugins_loaded. So it must be safe to do so.\n\nSo, the workaround for modules that won't duplicate is to make sure they init after plugins load, not when widgets init. (For people stopping by, that means that if the module says\n\nadd_action('widgets_init', 'some_init_function_here');\n\nthey should say\n\nadd_action('plugins_loaded', 'some_init_function_here');\n\ninstead.)"
+ },
+ {
+  "id": 82011,
+  "parent": 0,
+  "author": "[blog.schreiter.info] - &raquo; Hello world!",
+  "url": "http://blog.schreiter.info/index.php/hello-world/",
+  "date": "2007-02-12 00:40:58",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets \\[...\\]"
+ },
+ {
+  "id": 83071,
+  "parent": 0,
+  "author": "to.rben",
+  "url": "",
+  "date": "2007-02-13 21:01:39",
+  "type": "",
+  "html": "Hi,\n\nnice work. However, there is a weird problem when used in conjunction with the GluedIdeas Subtle Theme: the comments sent to a post will appear for a different post.\n\nSee: http://support.gluedideas.com/viewtopic.php?id=382\n\nAny ideas?"
+ },
+ {
+  "id": 86506,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-02-18 17:37:31",
+  "type": "",
+  "html": "**Hi Rich:**\\\nThanks for the in-depth debugging - It's really appreciated!\n\nAs you, I cant see any other solution than the one you suggests in your last comment. I will be thinking about another solution, so that the plugin does not require other plugins to use the plugins_loaded hook."
+ },
+ {
+  "id": 86507,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-02-18 17:38:19",
+  "type": "",
+  "html": "**Hi Dewa:**\\\nI'm sorry. I'm not sure if you mean the \"JAW Duplicate Widgets\" plugin or \"JAW Popular Posts Widget\" plugin. Though I've tried to deactivate the plugins in different orders, but could not get it to break. Which version of the plugin are you using?\n\nIf everything fails and you have database access it is possible to deactivate all the plugins by editing the options table (wp_options - the wp prefix may differ in your setup), look for the 'active_plugins' record, then edit and clear the option_value under it. This will resest all plugins to inactive."
+ },
+ {
+  "id": 92661,
+  "parent": 0,
+  "author": "drivebyshooter.net &raquo; Blog Archive",
+  "url": "http://drivebyshooter.net/2007/02/27/505/",
+  "date": "2007-02-27 10:18:21",
+  "type": "pingback",
+  "html": "\\[...\\] widgets, including Alex King’s Popularity Contest (download here) and justaddwater.dk’s Popular Posts Widget. The former is a Wordpress plugin that “keeps a count of your post, category and archive \\[...\\]"
+ },
+ {
+  "id": 101295,
+  "parent": 0,
+  "author": "My WordPress plugins | rich text",
+  "url": "http://www.lafferty.ca/2007/03/10/my-wordpress-plugins/",
+  "date": "2007-03-11 01:53:54",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets: Lets me use one widget in more than one sidebar. I’ve changed the theme to use different sidebars on all of the different page types (front page, single post, archive, and static page), so if I want to put, say, categories or archives on all of them, I need this. \\[...\\]"
+ },
+ {
+  "id": 118496,
+  "parent": 0,
+  "author": "How to show your most popular posts in the sidebar at Randa Clay Design",
+  "url": "http://randaclay.com/archives/how-to-show-your-most-popular-posts-in-the-sidebar",
+  "date": "2007-03-31 21:55:43",
+  "type": "pingback",
+  "html": "\\[...\\] second piece, that makes it easy to display the most popular posts in the sidebar, is the JAW Popular Posts Widget . This one is pretty straightforward. You can specify the number of posts you want to display in \\[...\\]"
+ },
+ {
+  "id": 123607,
+  "parent": 0,
+  "author": "kikollan",
+  "url": "",
+  "date": "2007-04-09 23:44:09",
+  "type": "",
+  "html": "Nice work! I only have one question, which is the name of the duplicated widget? I need this info in order to change the style of each different widget. For example, I use:\n\n.widget_categories li {...}\n\nBut this CSS style is not applied to the copy... I need the name of the copy to write something like:\n\n.widget_categories_copy li {...}\n\nThanks in advance and congratulations,"
+ },
+ {
+  "id": 136172,
+  "parent": 0,
+  "author": "zasm.com &raquo; Blog Archive &raquo; Setting Up Multiple Wordpress Sidebars",
+  "url": "http://www.zasm.com/howtos/3/setting-up-multiple-wordpress-sidebars/",
+  "date": "2007-04-27 21:35:59",
+  "type": "pingback",
+  "html": "\\[...\\] to “re-use” widgets on multiple sidebars.   To overcome this, download and install the JAW DUPLICATE WIDGETS plugin.  Documentation is scare, but usage is intuitive.  Upload and activate the plugin.  Then, \\[...\\]"
+ },
+ {
+  "id": 135018,
+  "parent": 0,
+  "author": "技术文摘 &raquo; WordPress-plugins插件推荐",
+  "url": "http://www.dbvalue.com/tech/?p=5",
+  "date": "2007-04-26 13:35:16",
+  "type": "pingback",
+  "html": "\\[...\\] 插件页面：点击进入 \\[...\\]"
+ },
+ {
+  "id": 139685,
+  "parent": 0,
+  "author": "5 Ways to Make Your Site Stickier at News Partner",
+  "url": "http://newspartner.net/blog/5-ways-to-make-your-site-stickier/",
+  "date": "2007-05-03 07:21:11",
+  "type": "pingback",
+  "html": "\\[...\\] your past readers. For WordPress, I like Alex King’s Popularity Contest plugin paired with the JAW Popular Posts Widget, because you can not only get lots of stats about your posts in the reporting section, but you can \\[...\\]"
+ },
+ {
+  "id": 140921,
+  "parent": 0,
+  "author": "5 Ways to Make Your Site Stickier",
+  "url": "http://www.webcitynews.com/5-ways-to-make-your-site-stickier/",
+  "date": "2007-05-05 17:27:16",
+  "type": "pingback",
+  "html": "\\[...\\] your past readers. For WordPress, I like Alex King’s Popularity Contest plugin paired with the JAW Popular Posts Widget, because you can not only get lots of stats about your posts in the reporting section, but you can \\[...\\]"
+ },
+ {
+  "id": 146471,
+  "parent": 0,
+  "author": "Faculty Academy 2007 &raquo; Blog Archive &raquo; Taming WP Widgets",
+  "url": "http://facultyacademy.org/blog07/taming-wp-widgets/",
+  "date": "2007-05-15 18:20:43",
+  "type": "pingback",
+  "html": "\\[...\\] on different sidebar versions. Out of the box, widgets can only be placed on one sidebar. Enter a nifty plugin called JAW Duplicate Plugin, which allows me to duplicate widgets at will and place them on different sidebar \\[...\\]"
+ },
+ {
+  "id": 143044,
+  "parent": 0,
+  "author": "Taming WP Widgets at The Fish Wrapper",
+  "url": "http://www.marthaburtis.net/wrapping/2007/05/04/taming-wp-widgets/",
+  "date": "2007-05-09 14:35:35",
+  "type": "pingback",
+  "html": "\\[...\\] on different sidebar versions. Out of the box, widgets can only be placed on one sidebar. Enter a nifty plugin called JAW Duplicate Plugin, which allows me to duplicate widgets at will and place them on different sidebar \\[...\\]"
+ },
+ {
+  "id": 149694,
+  "parent": 0,
+  "author": "WP Plugins DB &raquo; Blog Archive &raquo; JAW Popular Posts Widget",
+  "url": "http://www.wp-plugins-db.org/plugin/jaw-popular-posts-widget/",
+  "date": "2007-05-20 10:53:32",
+  "type": "pingback",
+  "html": "\\[...\\] Visit \\[...\\]"
+ },
+ {
+  "id": 166937,
+  "parent": 0,
+  "author": "Ducked.nl &raquo; Ducked.nl Updates Juni 2007",
+  "url": "http://www.ducked.nl/site-updates/duckednl-updates-juni-2007/",
+  "date": "2007-06-09 17:12:35",
+  "type": "pingback",
+  "html": "\\[...\\] aka het meest populair zijn. Onderaan elke post wordt aangegeven hoe populair een Post is. New :  JAW Popular Posts, In samenwerking met de plugin zorgt deze widget voor het laten zien van de meest bekeken Posts op \\[...\\]"
+ },
+ {
+  "id": 164118,
+  "parent": 0,
+  "author": "Infotropism &#8211; Weaning yourself off LJ: Plugin-o-rama!",
+  "url": "http://infotrope.net/blog/2007/06/06/weaning-yourself-off-lj-plugin-o-rama/",
+  "date": "2007-06-06 15:12:11",
+  "type": "pingback",
+  "html": "\\[...\\] you want to include links to your most popular posts in your sidebar, you can also install the JAW Popular Posts Widget and configure it under “Presentation” -\\> \\[...\\]"
+ },
+ {
+  "id": 185008,
+  "parent": 0,
+  "author": "Stephen",
+  "url": "http://www.ponderplace.com",
+  "date": "2007-06-23 04:15:38",
+  "type": "",
+  "html": "I've implemented your JAW Popular Posts Widget plugin. Its just what I was looking for.\n\nI have a problem though.\n\nIt displays post \"A\" in slot \\#1 and slot \\#2, and also displays post \"B\" in slot \\#3 and slot \\#4.\n\nhmmm. this is odd, because when i expand it to show top 10 posts, it only does this on the first 4 entries (as described).\n\nAny ideas?\n\nSee it at http://www.ponderplace.com In the lower righthand section."
+ },
+ {
+  "id": 185931,
+  "parent": 0,
+  "author": "Stephen",
+  "url": "http://www.ponderplace.com",
+  "date": "2007-06-23 21:46:00",
+  "type": "",
+  "html": "Looks like the issue resolved itself. Everything looks great, thanks for the excellent widget/plugin. :)"
+ },
+ {
+  "id": 201929,
+  "parent": 0,
+  "author": "Stephen",
+  "url": "http://www.ponderplace.com",
+  "date": "2007-07-05 19:02:02",
+  "type": "",
+  "html": "Just as a follow up to my previous two comments. I've been watching the plugin for a while now. The issue where it shows the same article twice (slots 1/2 and 3/4) pops back every once in a while. I've not been able to figure out what causes it, but its there."
+ },
+ {
+  "id": 221878,
+  "parent": 0,
+  "author": "紫天Blog &raquo; WP插件集",
+  "url": "http://www.huavi.cn/bolg/?p=351",
+  "date": "2007-07-26 04:53:13",
+  "type": "pingback",
+  "html": "\\[...\\] 插件页面：点击进入 \\[...\\]"
+ },
+ {
+  "id": 216814,
+  "parent": 0,
+  "author": "Tom",
+  "url": "http://www.dvd-world.biz/filmblogg",
+  "date": "2007-07-19 10:23:37",
+  "type": "",
+  "html": "Gret plugin!\n\nQuestion about JAW Popular Posts Widget. I was wondering if it is possible to replace the most popular stats with monthly or weekly stats. If, how do i do this?"
+ },
+ {
+  "id": 222462,
+  "parent": 0,
+  "author": "34 Insanely Useful Wordpress Plugins for Admins",
+  "url": "http://www.cssgirl.com/resources/2007/07/26/34-insanely-useful-wordpress-plugins-for-admins/",
+  "date": "2007-07-27 03:30:10",
+  "type": "pingback",
+  "html": "\\[...\\] used to create a ‘popularity score’ for each post.” Also if you utilize widgets, check out this one by JAW that allows you to display a list of your most popular entries using Popularity Contest’s \\[...\\]"
+ },
+ {
+  "id": 233415,
+  "parent": 0,
+  "author": "Courtney Daryanani",
+  "url": "http://www.atticmedia.com",
+  "date": "2007-08-15 12:26:14",
+  "type": "",
+  "html": "Not sure if anyone is interested but I have got this plugin to work with WP 2.2.2.\n\nI simply replaced all instances of \\$registered_widgets in the jaw-duplicate-widgets.php with \\$wp_registered_widgets.\n\nFor the solution I looked in the widgets.php of wp-include folder and this is the global they are using now.\n\nWorking ok so far, please let me know if any issues.\n\nHTH"
+ },
+ {
+  "id": 236274,
+  "parent": 0,
+  "author": "Medical Transcriptionist",
+  "url": "http://mtherald.com/",
+  "date": "2007-08-20 09:34:38",
+  "type": "",
+  "html": "Heartfelt thanks to these two wonderful, excellent plugins. You could see them in action on my blog."
+ },
+ {
+  "id": 246498,
+  "parent": 0,
+  "author": "Kate Davis",
+  "url": "http://www.darktea.co.uk/blog",
+  "date": "2007-09-01 12:44:29",
+  "type": "",
+  "html": "I have the same problem on my site as Stephen. On the home page I get the most popular post listed 4 times and then the second most popular twice, however on individual posts pages it works fine, listing six different posts. Any suggestions?"
+ },
+ {
+  "id": 250568,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-09-06 19:02:36",
+  "type": "",
+  "html": "I've just released a new version of JAW Duplicate Widgets that incorporates Courtney Daryananis changes. So now the plugin should work with WordPress 2.2+.\n\nSorry for the slow release rate"
+ },
+ {
+  "id": 303300,
+  "parent": 0,
+  "author": "Lisa",
+  "url": "",
+  "date": "2007-10-18 17:36:15",
+  "type": "",
+  "html": "I too have the same issue with JAW Popular Post Widget that is mentioned by Kate and Stephen above. Popularity is reflected correctly in interior pages (articles, category archives, etc) but the same post is listed 2 or 3 times on the home page of the blog. Is there anything that can be done? This is a high profile site for Verizon and I would really like to be able to solve this issue for my client.\n\nthanks!\n\nblog is at http://www.2pointhome.com/families/ for reference."
+ },
+ {
+  "id": 299046,
+  "parent": 0,
+  "author": "Fnord. &raquo; Blog Archive &raquo; Fnord site updates",
+  "url": "http://www.phfactor.net/wp/2007/10/13/fnord-site-updates/",
+  "date": "2007-10-14 01:39:55",
+  "type": "pingback",
+  "html": "\\[...\\] added Wordpress plugins for automatically generating a sidebar of most-popular-posts. Should be interesting, might even be \\[...\\]"
+ },
+ {
+  "id": 377537,
+  "parent": 0,
+  "author": "FIKSZ :: K2 Webzine &raquo; Archív &raquo; links for 2007-11-28",
+  "url": "http://fiksz.klog.hu/306/links-for-2007-11-28/",
+  "date": "2007-11-28 07:25:07",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk \\| JAW Popular Posts Widget JAW Popular Posts Widget - a legnépszerűbb tartalmakat jelenííti meg az oldalsávon. Működéséhez szükséges Alex King ‘Popularity Contest’ plugin-je (tags: Hasznos Web:Angol Web:Alkalmazas Wordpress:Plugin) \\[...\\]"
+ },
+ {
+  "id": 380966,
+  "parent": 0,
+  "author": "Steven",
+  "url": "http://offers.clickcompare.info",
+  "date": "2007-12-05 14:27:55",
+  "type": "",
+  "html": "Just installed the rather handy JAW Popular Posts Widget., thanks. Is there anyway to include the post's star ratings too? Perhaps under the post titles? I've seen this done on another wordpress site but they may have customised the code and I'm no php programmer."
+ },
+ {
+  "id": 381668,
+  "parent": 0,
+  "author": "Francesco Scinico",
+  "url": "http://whatmattersinlife.com",
+  "date": "2007-12-09 22:04:57",
+  "type": "",
+  "html": "How can i remove pages from being shown in the widget? i just want to have posts listed. Thank you\\\nFrancesco"
+ },
+ {
+  "id": 391093,
+  "parent": 0,
+  "author": "WP Plugin Archive &raquo; JAW Duplicate Widgets",
+  "url": "http://www.wp-plugin-archive.de/2008/01/24/jaw-duplicate-widgets/",
+  "date": "2008-01-24 18:30:39",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets Plugin von Thomas Watson Steen für WordPress 2.2 oder höher ermöglicht es ein Widget \\[...\\]"
+ },
+ {
+  "id": 391094,
+  "parent": 0,
+  "author": "WP Plugin Archive &raquo; JAW Popular Posts Widget",
+  "url": "http://www.wp-plugin-archive.de/2008/01/24/jaw-popular-posts-widget/",
+  "date": "2008-01-24 18:35:37",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Popular Posts Widget Plugin von Thomas Watson Steen zeigt die populärsten Beiträge an. Das Widget greift dazu \\[...\\]"
+ },
+ {
+  "id": 388308,
+  "parent": 0,
+  "author": "Управление на джаджите в няколко странични колони в WP | Блогът на Гонзо",
+  "url": "http://greatgonzo.net/?p=9",
+  "date": "2008-01-07 18:17:20",
+  "type": "pingback",
+  "html": "\\[...\\] да имам една и съща джаджа? На помощ има добавката JAW Duplicate Widgets. С нейна помощ могат да се създават копия на избрани от \\[...\\]"
+ },
+ {
+  "id": 397394,
+  "parent": 0,
+  "author": "GJ Strengholt",
+  "url": "http://www.vpro.nl",
+  "date": "2008-02-20 14:04:48",
+  "type": "",
+  "html": "Hi, just wanted to brush up an issue mentioned earlier with the JAW Duplicate Widgets. When duplicating a widget the copy is tagged with class=\"archive_group jaw_is_duplicate\". The last bit \"jaw_is_duplicate\" is set for each copied widget regardless of its original. This poses a problem with styling since it is impossible to use various styles on one identical tag. In other words you tend to loose the original style for the widget and get a default.\n\nIs there a way to retain the original widget classification, like in this case class=\"archive_group widget_archives?"
+ },
+ {
+  "id": 397348,
+  "parent": 0,
+  "author": "Revenue2K",
+  "url": "http://solusikaya.com",
+  "date": "2008-02-20 10:05:57",
+  "type": "",
+  "html": "since widget already integrated with wordpress 2.3, i think we only need to install the popularity plugin by alex king."
+ },
+ {
+  "id": 398346,
+  "parent": 0,
+  "author": "Eule",
+  "url": "http://www.bubobubo.de/",
+  "date": "2008-02-25 17:14:17",
+  "type": "",
+  "html": "I like the dublicate widgets plugin. It's really annoying to not beeing able to use a widget more than once. Now that time's over thanks to you :-)"
+ },
+ {
+  "id": 405386,
+  "parent": 0,
+  "author": "Nicole",
+  "url": "http://www.womansportsblog.com",
+  "date": "2008-04-01 16:25:17",
+  "type": "",
+  "html": "Hi,\n\nI seem to be having a problem with the \"popular posts\" widget to display multiple popular posts. It only displays one at a time. Am I missing something? I thought looking at the code that the default is set to 5. It's rotating through posts, but only showing one at a time. Do I not have enough traffic yet for it to display 5?"
+ },
+ {
+  "id": 401690,
+  "parent": 0,
+  "author": "PHP Graphing Guy",
+  "url": "http://www.ebrueggeman.com",
+  "date": "2008-03-11 21:51:29",
+  "type": "",
+  "html": "Great stuff - question - the link back to wordpress only has a 2 year old version of the plugin. Where can I find the latest version?"
+ },
+ {
+  "id": 401151,
+  "parent": 0,
+  "author": "Samsul",
+  "url": "http://samsulhadi.com",
+  "date": "2008-03-09 17:51:40",
+  "type": "",
+  "html": "Thank you for creating the plugin, I am downloading it right now"
+ },
+ {
+  "id": 416553,
+  "parent": 0,
+  "author": "Annie Maloney",
+  "url": "http://www.anniemaloney.com",
+  "date": "2008-05-06 15:31:12",
+  "type": "",
+  "html": "Is there a way to remove pages from the widget? If I only want the posts listed how do I do that?"
+ },
+ {
+  "id": 419945,
+  "parent": 0,
+  "author": "30 Blog Design Tips Part 4 : Internet Business Blog by John Szram",
+  "url": "http://johnszram.com/30-blog-design-tips-part-4/",
+  "date": "2008-05-23 13:22:08",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Popular Posts Widget - Adds a sidebar widget that shows the most popular posts. Requires the Popularity Contest plugin. \\[...\\]"
+ },
+ {
+  "id": 420651,
+  "parent": 0,
+  "author": "plywoodindonesia",
+  "url": "http://www.plywoodindonesia.com",
+  "date": "2008-05-27 10:38:36",
+  "type": "",
+  "html": "When duplicating a widget the copy is tagged with class=”archive_group jaw_is_duplicate”. The last bit “jaw_is_duplicate” is set for each copied widget regardless of its original"
+ },
+ {
+  "id": 420773,
+  "parent": 0,
+  "author": "Multichart Review",
+  "url": "http://www.stocktradingsoftwarereviews.org/multichart-review/",
+  "date": "2008-05-28 02:00:08",
+  "type": "",
+  "html": "I find the biggest pain with widget plugins is that I always seem to find the ones that aren't compatable with my themes... I realize it's probally just becuse I tend to stick with my older themes... it's just such a pain to update"
+ },
+ {
+  "id": 421627,
+  "parent": 0,
+  "author": "Safety Harbor Real Estate",
+  "url": "http://www.safetyharborflrealestate.com",
+  "date": "2008-06-02 01:18:08",
+  "type": "",
+  "html": "I am looking for a widget or plugin that will allow me to display my personal real estate listings in some fashion on my website. If anyone can point me in that direction, I would appreciate it."
+ },
+ {
+  "id": 421628,
+  "parent": 0,
+  "author": "Safety Harbor Real Estate",
+  "url": "http://www.safetyharborflrealestate.com",
+  "date": "2008-06-02 01:18:34",
+  "type": "",
+  "html": "Oops, I meant to say blog, not website."
+ },
+ {
+  "id": 427369,
+  "parent": 0,
+  "author": "Fight A Speeding Ticket",
+  "url": "http://beatspeedingtickets.net",
+  "date": "2008-07-01 03:21:41",
+  "type": "",
+  "html": "I really like the popular posts widget. Thanks for sharing it, it will be very useful."
+ },
+ {
+  "id": 427346,
+  "parent": 0,
+  "author": "Ben - Health Hubber",
+  "url": "http://healthhubber.blogspot.com/",
+  "date": "2008-07-01 00:11:11",
+  "type": "",
+  "html": "I thought I knew a lot about wordpress plugins but I have never heard of these before. I also wondered why you couldn't have the same widget on two different sidebars. I'm so glad there are people like you to help us out."
+ },
+ {
+  "id": 433085,
+  "parent": 0,
+  "author": "Solskin",
+  "url": "http://solsk.in",
+  "date": "2008-07-30 20:06:31",
+  "type": "",
+  "html": "Is this list updated?"
+ },
+ {
+  "id": 426964,
+  "parent": 0,
+  "author": "Seamless Gutters",
+  "url": "http://kandkseamlessgutter.com/",
+  "date": "2008-06-29 06:24:43",
+  "type": "",
+  "html": "Believe it or not I have a website about gutters, well a blog actually. My son set it up for me. I am learning about blogging slowly. great job on the widgets info. I know my son set up some widgets on my blog."
+ },
+ {
+  "id": 426549,
+  "parent": 0,
+  "author": "Pat",
+  "url": "http://doggiewoggie.com/",
+  "date": "2008-06-27 03:48:45",
+  "type": "",
+  "html": "The Duplicate Widgets plugin solves a problem I keep running into with multiple sidebars. Thanks! I'm so glad I found your site. It will really come in handy. In the past, I just ended up not using widgets. This is much better."
+ },
+ {
+  "id": 434991,
+  "parent": 0,
+  "author": "Gaurav",
+  "url": "",
+  "date": "2008-08-11 08:24:13",
+  "type": "",
+  "html": "Well is it possible in nay way to activate a plugin without logging into your wordpress account ?"
+ },
+ {
+  "id": 436223,
+  "parent": 0,
+  "author": "Arther",
+  "url": "http://artherling.com",
+  "date": "2008-08-17 01:24:16",
+  "type": "",
+  "html": "Will these plugins work with the latest version of WP?"
+ },
+ {
+  "id": 434099,
+  "parent": 0,
+  "author": "Michelle",
+  "url": "http://www.articlecat.com/Article/Myrtle-Beach-Real-Estate-buying-your-first-home/118148",
+  "date": "2008-08-05 20:16:21",
+  "type": "",
+  "html": "Hi. I was wondering if these are updated plugins. I noticed that some of the comments date back a few years. How current is this information?"
+ },
+ {
+  "id": 433555,
+  "parent": 0,
+  "author": "Terry",
+  "url": "http://boatsonline.blogspot.com/",
+  "date": "2008-08-02 15:04:29",
+  "type": "",
+  "html": "Can't make it work on WP 2.6 . Am i missing something?"
+ },
+ {
+  "id": 430695,
+  "parent": 0,
+  "author": "Iren",
+  "url": "http://iren@fan.com",
+  "date": "2008-07-18 16:25:57",
+  "type": "",
+  "html": "aaaa ! This the great top list of WP PLugins ! THanks ! :)"
+ },
+ {
+  "id": 436566,
+  "parent": 0,
+  "author": "Strenho",
+  "url": "",
+  "date": "2008-08-18 12:52:17",
+  "type": "",
+  "html": "Hi, after my upgrade to WPMU 1.5/2.5 the duplicate widget no longer lists the available widgets, so there's nothing left to duplicate. Any chance of an upgrade/fix? Or should I tackle a setting in WPMU?"
+ },
+ {
+  "id": 436621,
+  "parent": 0,
+  "author": "Catherine",
+  "url": "http://catherineyoung.com",
+  "date": "2008-08-19 01:46:03",
+  "type": "",
+  "html": "To answer Guarav's question....I don;t think it is possible."
+ },
+ {
+  "id": 433786,
+  "parent": 0,
+  "author": "vipey",
+  "url": "http://www.vipey.com",
+  "date": "2008-08-04 00:34:06",
+  "type": "",
+  "html": "im running 2.6 and its working\n\nits only showing up 1 popular post though instead of several\n\nis this a bug?"
+ },
+ {
+  "id": 428281,
+  "parent": 0,
+  "author": "Best Pet Insurance",
+  "url": "http://www.healthforpet.com/best-pet-insurance/best-pet-insurance/",
+  "date": "2008-07-05 02:32:45",
+  "type": "",
+  "html": "From all the WP users seeking great plugins: Thanks Mate!"
+ },
+ {
+  "id": 436784,
+  "parent": 0,
+  "author": "video",
+  "url": "http://www.flashvideodownloader.org/",
+  "date": "2008-08-19 17:33:31",
+  "type": "",
+  "html": "very good plugin\\\nthanks"
+ },
+ {
+  "id": 434037,
+  "parent": 0,
+  "author": "Yamaha Majesty",
+  "url": "http://www.yamahamajesty.com/",
+  "date": "2008-08-05 13:54:04",
+  "type": "",
+  "html": "Jasper, another great post about Wordpress. Keep up the excellent job man. Thanks heaps"
+ },
+ {
+  "id": 428815,
+  "parent": 0,
+  "author": "Core Download",
+  "url": "http://www.coredownload.com",
+  "date": "2008-07-07 13:00:00",
+  "type": "",
+  "html": "Thanks mate, I will give them a try. I also bookmarked your site."
+ },
+ {
+  "id": 441617,
+  "parent": 0,
+  "author": "nouveautés et plugins utilisés | Phil's Photosblog",
+  "url": "http://phil.photosblog.free.fr/index.php/2008/blog-nouveautes-et-plugins-utilises/",
+  "date": "2008-09-03 21:59:38",
+  "type": "pingback",
+  "html": "\\[...\\] WP 2.5 Ayant eu du mal à insérer le code, j’ai trouvé un plugin qui va bien pour cela: JAW Popular Post Widget qui comme sont nom l’indique, créée directement le widget pour Popularity \\[...\\]"
+ },
+ {
+  "id": 449119,
+  "parent": 0,
+  "author": "The Indispensible Wordpress Plugins I Use | Web Copywriting Tips To Increase Online Conversion Rate",
+  "url": "http://www.salescopyquickfix.com/blog/the-indispensible-wordpress-plugins-i-use/",
+  "date": "2008-09-28 09:22:04",
+  "type": "pingback",
+  "html": "\\[...\\] 8. JAW Popular Posts \\[...\\]"
+ },
+ {
+  "id": 462605,
+  "parent": 0,
+  "author": "4webmasters &raquo; Top 1000 WordPress Plugin Authors",
+  "url": "http://4webmasters.nicuilie.eu/2008/12/top-1000-wordpress-plugin-authors/",
+  "date": "2008-12-31 02:53:14",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Popular Posts Widget \\[...\\]"
+ },
+ {
+  "id": 462660,
+  "parent": 0,
+  "author": "En.nicuilie.eu Blogs &raquo; Top 1000 WordPress Plugin Authors",
+  "url": "http://en.nicuilie.eu/blog/2008/31/top-1000-wordpress-plugin-authors/",
+  "date": "2008-12-31 09:00:27",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Popular Posts Widget \\[...\\]"
+ },
+ {
+  "id": 455038,
+  "parent": 0,
+  "author": "Wordpress Plugins Die Ik Momenteel Gebruik | Geldblogger - Geld Verdienen Door Te Bloggen",
+  "url": "http://www.geldblogger.nl/wordpress-plugins-die-ik-momenteel-gebruik/",
+  "date": "2008-11-05 18:27:37",
+  "type": "pingback",
+  "html": "\\[...\\] Deze plugin rankt je posts naar populariteit. Dus hoevaak ze bekeken zijn, aantal comments etc. De waardes die hiervoor belangrijk zijn kan je zelf instellen. Om deze plugin widgetized te maken heb je nog een aparte plugin beschikbaar, namelijk JAW Popular posts widget \\[...\\]"
+ },
+ {
+  "id": 453325,
+  "parent": 0,
+  "author": "Lo mejor de WordPress 2 son los widgets",
+  "url": "http://www.vidadigital.net/blog/2007/01/04/lo-mejor-de-wordpress-2-son-los-widgets/",
+  "date": "2008-10-22 11:31:24",
+  "type": "pingback",
+  "html": "\\[...\\] Popular Posts: Para mostrar las entradas más \\[...\\]"
+ },
+ {
+  "id": 453202,
+  "parent": 0,
+  "author": "Joe Hayes",
+  "url": "http://www.joehayes.org/",
+  "date": "2008-10-21 17:59:11",
+  "type": "",
+  "html": "I've used both of those plugins in the past and they worked great, very useful. Just wanted to say that. Thanks again."
+ },
+ {
+  "id": 452395,
+  "parent": 0,
+  "author": "Peter Latterkonsulent",
+  "url": "http://latterbooking.dk/",
+  "date": "2008-10-17 22:23:45",
+  "type": "",
+  "html": "Thanks for the duplicate widget plugin, it will make things more easier for me. Great work"
+ },
+ {
+  "id": 443758,
+  "parent": 0,
+  "author": "Houston, Texas",
+  "url": "http://houston1apartments.com/heightsapartments.php",
+  "date": "2008-09-06 18:07:24",
+  "type": "",
+  "html": "Wordpress is really the best blog out there. There are so many plug-ins that are helpful and the installation process is extremely user friendly. Normal people with no computer skills can even use this blog with ease. I am a big wordpress fan. Does anyone know where we can find the latest plug-ins for wordpress. Thanks again for the widget plug-ins!"
+ },
+ {
+  "id": 459021,
+  "parent": 0,
+  "author": "dirty blue widgets",
+  "url": "http://bloggingblindly.com",
+  "date": "2008-12-12 05:09:46",
+  "type": "",
+  "html": "Thanks a bunch for the widget downloads. There i an awesome theme I've been wanting to use with multiple sidebars, but I never have because I didn't know how to us ethe same plugin twice on oposite sidebars. Keep it up."
+ },
+ {
+  "id": 459022,
+  "parent": 0,
+  "author": "custom widgets",
+  "url": "http://wpwidget.com",
+  "date": "2008-12-12 05:13:58",
+  "type": "",
+  "html": "I checked out the duplicate widget plugin. I really like it guys. I know a guy who does a lot of programming for mr, and I was just talking to him about doing something like that. But I guess I don't have to now."
+ },
+ {
+  "id": 459900,
+  "parent": 0,
+  "author": "Clean Red Widgets",
+  "url": "http://www.salsaboy.net",
+  "date": "2008-12-17 02:08:42",
+  "type": "",
+  "html": "I just created a Wordpress site and I am exploring all the various available widgets for Wordpress that will help get good rankings in Google. If you know of any, I'd really appreciate if you could let me know. Best regards!"
+ },
+ {
+  "id": 458974,
+  "parent": 0,
+  "author": "dirty blue widgets",
+  "url": "http://bloggingblindly.com",
+  "date": "2008-12-11 18:59:40",
+  "type": "",
+  "html": "I was also wondering, what widget do you use to see how much spam has been caught?"
+ },
+ {
+  "id": 458973,
+  "parent": 0,
+  "author": "dirty blue widgets",
+  "url": "http://bloggingblindly.com",
+  "date": "2008-12-11 18:58:34",
+  "type": "",
+  "html": "Thanks a lot for the plugins. I am always looking for plugins to save time because time is money."
+ },
+ {
+  "id": 487582,
+  "parent": 0,
+  "author": "dofollow",
+  "url": "http://www.therss.net/seo/dofollow",
+  "date": "2009-07-18 00:01:06",
+  "type": "",
+  "html": "Thanks for the plugin. its powerfull. Because i'm wordpress freak.."
+ },
+ {
+  "id": 469449,
+  "parent": 0,
+  "author": "WordPress Widget List | WordPress Blog Design SEO - Customizations - Websites - Tutorials",
+  "url": "http://www.deauxmaingroup.com/wordpress-widget-list/",
+  "date": "2009-01-31 21:24:38",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets - allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 469252,
+  "parent": 0,
+  "author": "Gold Rates",
+  "url": "http://www.livegoldrates.com",
+  "date": "2009-01-30 21:52:40",
+  "type": "",
+  "html": "I am trying to find a plugin that will allow me to stream live gold rates across a header. Anyone have any ideas?"
+ },
+ {
+  "id": 486611,
+  "parent": 0,
+  "author": "DAFTAR WIDGET UNTUK WORDPRESS &laquo; Ilhensa&#8217;s Blog",
+  "url": "http://haltedunia.wordpress.com/2009/06/02/daftar-widget-untuk-wordpress/",
+  "date": "2009-06-02 08:24:39",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 487666,
+  "parent": 0,
+  "author": "Taha YELKENCİ",
+  "url": "http://tahayelkenci.com.tr",
+  "date": "2009-07-23 17:38:15",
+  "type": "",
+  "html": "good pLuging thanks.."
+ },
+ {
+  "id": 484851,
+  "parent": 0,
+  "author": "Lewis Litanzios",
+  "url": "http://www.ldexterldesign.co.uk/",
+  "date": "2009-04-26 00:26:42",
+  "type": "",
+  "html": "Hi mate,\n\nJAW Duplicate Widgets version 1.0.4 doesn't seem to work with v2.7 - have you achieved duplicate widgets in v.27 at all? If so can you steer me in the right direction?\n\nCheers mate!\\\nL"
+ },
+ {
+  "id": 488524,
+  "parent": 0,
+  "author": "justaddwater.dk | WordPress Plugins | WpMash - WordPress News",
+  "url": "http://wpmash.com/justaddwater-dk-wordpress-plugins/",
+  "date": "2009-08-23 14:52:11",
+  "type": "pingback",
+  "html": "\\[...\\] Link: justaddwater.dk \\| WordPress Plugins \\[...\\]"
+ },
+ {
+  "id": 487734,
+  "parent": 0,
+  "author": "GaDizayn",
+  "url": "http://www.gadizayn.com/",
+  "date": "2009-07-23 19:14:54",
+  "type": "",
+  "html": "On this page we can read about and download these plugins."
+ },
+ {
+  "id": 487735,
+  "parent": 0,
+  "author": "bedava film izle",
+  "url": "http://www.filmbak.com",
+  "date": "2009-07-23 19:15:06",
+  "type": "",
+  "html": "thank you for this good plugin"
+ },
+ {
+  "id": 487799,
+  "parent": 0,
+  "author": "Bodrum Otelleri",
+  "url": "http://www.bodrumtatilkoyleri.com",
+  "date": "2009-07-23 23:40:30",
+  "type": "",
+  "html": "Thank you for information\n\n[Bodrum Otelleri](http://www.bodrumtatilkoyleri.com)"
+ },
+ {
+  "id": 487729,
+  "parent": 0,
+  "author": "mehmet dalaman",
+  "url": "http://www.inoyun.com",
+  "date": "2009-07-23 19:06:27",
+  "type": "",
+  "html": "Looks like the download site crashed. Is it possible to provide another download location?"
+ },
+ {
+  "id": 487713,
+  "parent": 0,
+  "author": "ali",
+  "url": "http://www.atarioyunlari.net",
+  "date": "2009-07-23 18:49:01",
+  "type": "",
+  "html": "Many thanks."
+ },
+ {
+  "id": 487689,
+  "parent": 0,
+  "author": "Bizmut Blog",
+  "url": "http://www.bizmut.info",
+  "date": "2009-07-23 18:19:14",
+  "type": "",
+  "html": "thank you so much"
+ },
+ {
+  "id": 487691,
+  "parent": 0,
+  "author": "Eğlencenin Yeri",
+  "url": "http://www.eglenceninyeri.com",
+  "date": "2009-07-23 18:20:30",
+  "type": "",
+  "html": "thank you for this good plugin"
+ },
+ {
+  "id": 487674,
+  "parent": 0,
+  "author": "geyve",
+  "url": "http://geyve.org",
+  "date": "2009-07-23 17:44:04",
+  "type": "",
+  "html": "Very useful plugins, thanks."
+ },
+ {
+  "id": 488509,
+  "parent": 0,
+  "author": "Webkaynak",
+  "url": "http://www.kankalife.com",
+  "date": "2009-08-23 01:54:39",
+  "type": "",
+  "html": "Thanks very nice...\n\n[Webkaynak.biz](http://www.webkaynak.biz \"|Eğlence|Film|Video|Oyun|Bilgisayar|Program|Dini|Sözler|Fikralar|Egitim|Kültür|Sanat|Webmaster|Tema|Wallpaper|\")\n\n[Liseli porno](http://www.kankalife.com \"Porno izle - Sikis - Porno video izle - Liseli Porno - Sex\")\n\n[Filmkaynak.com](http://www.filmkaynak.com \"Online Film Keyfi!!\")"
+ },
+ {
+  "id": 490606,
+  "parent": 0,
+  "author": "30 Blog Design Tips Part 4",
+  "url": "http://www.johnszram.com/30-blog-design-tips-part-4/",
+  "date": "2009-11-03 00:22:28",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Popular Posts Widget – Adds a sidebar widget that shows the most popular posts. Requires the Popularity Contest plugin. \\[...\\]"
+ },
+ {
+  "id": 491550,
+  "parent": 0,
+  "author": "WordPress Duplicate Sidebar Widgets",
+  "url": "http://www.lancelhoff.com/wordpress-duplicate-sidebar-widgets/",
+  "date": "2009-12-14 04:42:18",
+  "type": "pingback",
+  "html": "\\[...\\] 2.3 and beyond (up to Wordpress 2.7). I am providing this fixed version of what was originally JAW Duplicate Widgets for others in hopes that I might help those who could not get the original authors version to work \\[...\\]"
+ },
+ {
+  "id": 495380,
+  "parent": 0,
+  "author": "Genesis",
+  "url": "",
+  "date": "2010-04-23 10:57:15",
+  "type": "",
+  "html": "Hello. JAW Duplicates widget is exactly what I need, unfortunately it doesn't seem to work with the \"Better Tag Cloud\" widget? It duplicates it, then I drag the copy in to the sidebar -- but when I go to my site, there's no change? Does it have anything to do with the fact there's no \"SAVE\" button after I move the copy of the widget in to the sidebar? I noticed the SAVE button is present on every other widget in the sidebar, but not this \"copied\" version."
+ },
+ {
+  "id": 490350,
+  "parent": 0,
+  "author": "DAFTAR WIDGET UNTUK WORDPRESS &laquo; TOMMY COMPUTERS BLOG",
+  "url": "http://tommycomputer.wordpress.com/2009/10/23/daftar-widget-untuk-wordpress/",
+  "date": "2009-10-23 13:42:52",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 498388,
+  "parent": 0,
+  "author": "DAFTAR WIDGET PADA WOEDPRESS &laquo; GALLERY88",
+  "url": "http://pcgallery.wordpress.com/2010/07/30/daftar-widget-pada-woedpress/",
+  "date": "2010-07-30 01:31:00",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 498500,
+  "parent": 0,
+  "author": "DAFTAR WIDGET DARI A-Z UNTUK WORDPRESS &laquo; WENDRY DESYA PUTRA",
+  "url": "http://wendrydesyaputra.wordpress.com/2010/08/02/daftar-widget-dari-a-z-untuk-wordpress/",
+  "date": "2010-08-02 09:18:45",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 498289,
+  "parent": 0,
+  "author": "Top WordPress Widget List | Wordpress and Search Engine Optimization",
+  "url": "http://www.pressalive.com/top-wordpress-widget-list/2010/07/26",
+  "date": "2010-07-26 07:09:00",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 509060,
+  "parent": 0,
+  "author": "Daftar Widget Untuk Wordpress &laquo; anzalas blog",
+  "url": "http://anzalarizqi.wordpress.com/2010/11/14/daftar-widget-untuk-wordpress/",
+  "date": "2011-01-26 10:26:16",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 508107,
+  "parent": 0,
+  "author": "JAW Duplicate Widgets | Web Design &amp; Development Tutorials. Word Press development.",
+  "url": "http://www.wdmac.com/jaw-duplicate-widgets",
+  "date": "2011-01-19 16:55:30",
+  "type": "pingback",
+  "html": "\\[...\\] In my case quite a few, indeed! Well don’t let this happen anymore, go to Thomas Watson Steen’s “Just ad water website” and grab your copy of the plugin! Get it from:  http://justaddwater.dk/wordpress-plugins/ \\[...\\]"
+ },
+ {
+  "id": 513958,
+  "parent": 0,
+  "author": "DAFTAR WIDGET UNTUK WORDPRESS &laquo; &quot;&#8230;..NEON&#8230;..&quot;",
+  "url": "http://neonone.wordpress.com/2011/03/11/daftar-widget-untuk-wordpress/",
+  "date": "2011-03-11 14:59:09",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 551569,
+  "parent": 0,
+  "author": "WIDGET UNTUK WORDPRESS | MARI USAHA MANDIRI",
+  "url": "http://mariusahamandiri.com/artikel-zeageat/widget-untuk-wordpress.html",
+  "date": "2011-11-02 10:46:59",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 651245,
+  "parent": 0,
+  "author": "How to show your most popular posts in the sidebar | Randa Clay Design",
+  "url": "http://randaclay.com/how-to/how-to-show-your-most-popular-posts-in-the-sidebar/",
+  "date": "2012-11-24 20:27:29",
+  "type": "pingback",
+  "html": "\\[...\\] second piece, that makes it easy to display the most popular posts in the sidebar, is the JAW Popular Posts Widget . This one is pretty straightforward. You can specify the number of posts you want to display in \\[...\\]"
+ },
+ {
+  "id": 652378,
+  "parent": 0,
+  "author": "WordPress House Of Cards | ErikJHeels.com",
+  "url": "http://www.erikjheels.com/783.html",
+  "date": "2013-03-21 21:50:29",
+  "type": "pingback",
+  "html": "\\[...\\] 10: Except now the JAW Popular Posts widget is busted. This is a known problem.  So I know which pages are the most popular.  I just can’t tell \\[...\\]"
+ },
+ {
+  "id": 653071,
+  "parent": 0,
+  "author": "WordPress Widgets: The Next Generation of WordPress Plugins &laquo; Lorelle on WordPress",
+  "url": "http://lorelle.wordpress.com/2007/02/13/wordpress-widgets-the-next-generation-of-wordpress-plugins/",
+  "date": "2013-06-11 22:37:41",
+  "type": "pingback",
+  "html": "\\[...\\] be featured only once on a WordPress blog’s sidebar. However, you can overrule that with the JAW Duplicate Widgets WordPress Plugin. It overrides the default action of most WordPress Widgets to prevent duplication, allowing you to \\[...\\]"
+ },
+ {
+  "id": 651950,
+  "parent": 0,
+  "author": "WordPress Plugins &laquo; lindra&quot;theroadbrothers&quot;",
+  "url": "http://lindratheroadbrothers.wordpress.com/2013/02/12/wordpress-plugins/",
+  "date": "2013-02-11 18:51:32",
+  "type": "pingback",
+  "html": "\\[...\\] JAW Duplicate Widgets – allows you to duplicate widgets in the same or different sidebar \\[...\\]"
+ },
+ {
+  "id": 657528,
+  "parent": 0,
+  "author": "WordPress Widgets: The Next Generation of WordPress Plugins &laquo; Lorelle on WordPress",
+  "url": "https://lorelle.wordpress.com/2007/02/13/wordpress-widgets-the-next-generation-of-wordpress-plugins/",
+  "date": "2015-01-11 03:50:06",
+  "type": "pingback",
+  "html": "\\[…\\] be featured only once on a WordPress blog’s sidebar. However, you can overrule that with the JAW Duplicate Widgets WordPress Plugin. It overrides the default action of most WordPress Widgets to prevent duplication, allowing you to \\[…\\]"
+ }
+]

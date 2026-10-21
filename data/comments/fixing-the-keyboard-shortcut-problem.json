@@ -1,0 +1,29 @@
+[
+ {
+  "id": 57,
+  "parent": 0,
+  "author": "Asgeir S. Nilsen",
+  "url": "http://www.asgeirnilsen.com/",
+  "date": "2006-01-09 20:49:18",
+  "type": "",
+  "html": "The Norwegian version of the Office suite also have C-B and C-F exchanged.\n\nI recall creating an Excel macro with the current version four years ago, where the entire macro language was translated (!!).\n\nIn addition, both the Debug() statement and Print() (as in put on paper) function calls were translated to SkrivUt(), making it impossible to print via a recorded macro!!\n\nThe solution? Use some wizardry to show the common print dialog box, and feeding it with an Enter key press..."
+ },
+ {
+  "id": 58,
+  "parent": 0,
+  "author": "Andy",
+  "url": "",
+  "date": "2006-01-09 20:49:47",
+  "type": "",
+  "html": "What's interesting to add is that the keyboard shortcuts of Dutch applications (such as Office and Windows) aren't translated. For example, \"bold\" is translated to \"vet\" in Dutch. However, the keyboard shortcuts is still ctrl+b."
+ },
+ {
+  "id": 490592,
+  "parent": 0,
+  "author": "Chaitanya Sagar Challa",
+  "url": "http://chaitanyasagar.com",
+  "date": "2009-11-01 20:02:31",
+  "type": "",
+  "html": "That was funny. Microsoft assigns Ctrl + any alphabet to a task. (do you know that even Ctrl+; is assigned to something?).\n\nThough I wish Microsoft has a 'keep English Shortcuts' option (or at least a plugin that does it), I am happy that I deal only with the English version. Frankly, shortcuts are a big part of why I spend money for MS Office though I wil be happier given my current financial position (I am an entrepreneur now) to switch to other options.\n\nChaitanya"
+ }
+]

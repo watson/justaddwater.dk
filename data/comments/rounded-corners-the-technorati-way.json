@@ -1,0 +1,119 @@
+[
+ {
+  "id": 84361,
+  "parent": 0,
+  "author": "Tantek",
+  "url": "http://tantek.com/",
+  "date": "2007-02-15 20:45:05",
+  "type": "",
+  "html": "The short answer is the B is dead.\n\nIt means nothing other than \"presentational fluff\". And thus we used to for exactly that, presentational fluff. Whereas using a span would imply zero/neutral semantics (or that the [semantics might be in the class attribute](http://microformats.org/wiki/semantic-class-names)), Eric and I wanted to actually imply \\*negative\\* semantics (that these tags are purely here for presentational reasons), and thus imminently ignorable by anyone parsing the document looking for semantics.\n\nAnother interpretation is that since B is dead, we have repurposed it to mean \"presentational Building block\", which, once again, for document semantics, can be ignored."
+ },
+ {
+  "id": 84201,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-02-15 15:53:00",
+  "type": "",
+  "html": "Sune.\\\nI must admit that I don't remember what reasons Eric Meyer gave for choosing the b-tag in this particular solution.\n\nHowever I'm absolutely confident that there is a valid reason because Eric had to report to Tantek Celik.\n\nIt really does not get more semantic than that :)"
+ },
+ {
+  "id": 84199,
+  "parent": 0,
+  "author": "Sune Jakobsen",
+  "url": "http://www.webtouch.dk",
+  "date": "2007-02-15 15:48:34",
+  "type": "",
+  "html": "I don't agree that it's the right solution to use \\<b\\> tags for this purpose. \\<b\\> tags are for bold content only (btw deprecated, use strong instead). It would make more sense to use a span tag instead, because they are intended for non semantic purposes only.\n\nKeep the web semantic :o)"
+ },
+ {
+  "id": 84447,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-02-15 23:54:15",
+  "type": "",
+  "html": "Thanks a lot for the elaboration, Tantek.\n\nYour explanation leads me to another question, though.\n\nUsing a \\<b\\>-tag means that you're stuck with XHTML 1.0 or lower. It must have been a tough decision to make. I mean, either use an older HTML standard or break validation and have pages with validation errors.\n\nWhat's the worst thing to do? **Break validation or use deprecated elements?**\n\nI think that's an interesting question seen in the perspective that Roger Johansson and Peter Paul Koch points out that the recent [Dutch accessibility law](http://www.456bereastreet.com/archive/200702/the_dutch_accessibility_law_is_awesome/ \"456 Berea St.: Dutch accessibility law is awesome\") actually forbids the use of deprecated elements on government sites.\n\nWhat are your opinions on this?"
+ },
+ {
+  "id": 84461,
+  "parent": 0,
+  "author": "Sune Jakobsen",
+  "url": "http://www.webtouch.dk",
+  "date": "2007-02-16 00:21:09",
+  "type": "",
+  "html": "Using the b-tag as a building block tag is a very nice idea, that i haven't thought of let us hope i will be a part of XHTML3.0 in the year. But until W3C defines a building block tag as a part of the standard I strongly recommend using the span tag, as i see no reason to invent a negative semantic tag, sorry!\n\nJesper -\\> The dutch law allows the use of validated HTML 4.01, so the b-tag is an option (i know it's a detail, but allow me to benefit from the hours i spend reading about it :o)"
+ },
+ {
+  "id": 84474,
+  "parent": 0,
+  "author": "Tantek",
+  "url": "http://tantek.com/",
+  "date": "2007-02-16 01:01:23",
+  "type": "",
+  "html": "Jesper,\n\nYou asserted \"you’re stuck with XHTML 1.0 or lower\" - that's kind of like saying \"you're stuck with everything that works well today\". What precisely is the real world problem you are pointing out?\n\nHow does using XHTML 1.0 break validation or use deprecated elements? W3C for some reason left the purely presentational B tag in XHTML 1.0 Strict *without deprecating it* (probably for political reasons, I'm guessing), so rather than complain about it being there and people misusing it, we declare a new use for it that makes much more sense. And it looks like Sune has answered the other question."
+ },
+ {
+  "id": 89202,
+  "parent": 0,
+  "author": "webtouch.dk &raquo; Runde hjørner - nu med kant",
+  "url": "http://webtouch.dk/runde-hj%c3%b8rner-nu-med-kant/",
+  "date": "2007-02-22 14:41:58",
+  "type": "pingback",
+  "html": "\\[...\\] en lille diskussion på justaddwater.dk, hvor jeg har tilladt mig at øffe lidt over man ikke bør bruge bold tags til design, så hænger \\[...\\]"
+ },
+ {
+  "id": 100334,
+  "parent": 0,
+  "author": "Jens Meiert",
+  "url": "http://meiert.com/en/",
+  "date": "2007-03-09 17:58:21",
+  "type": "",
+  "html": "As long as the affected boxes are not \"liquid\" (and I remember that Technorati uses boxes with fix width), you may simply want to use one image for the top section (including corner top-left and top-right) and one image for the bottom section. Both can likely be applied without any markup changes (!). For example: \"div\" with a bottom positioned background image and \"div hn\" with a background image for that boxes' heading.\n\nThat solution is pretty simple (compare it to the above \"+20 elements, +20 rules for a rounded corner\"), doesn't necessarily require extra-markup, and works pretty well most of the time (unless the rounded containers are very small and increased font size thus breaks them rather fast, and unless we're talking about completely liquid boxes).\n\nSo well, I highly respect Tantek's and Eric's expertise, but the above technique should not be used. It is general web dev \"bad practice\", and one of the drawbacks will definitely be the increased cost of a later redesign (since you decided to cover over with markup rubbish). Here, the cost of solution is definitely higher than the cost of the problem ..."
+ },
+ {
+  "id": 100337,
+  "parent": 0,
+  "author": "Jens Meiert",
+  "url": "http://meiert.com/en/",
+  "date": "2007-03-09 18:06:12",
+  "type": "",
+  "html": "Update: I forgot to mention that I even included [Eric's method](http://meiert.com/de/publications/books/3897214229/lib/code/abgerundete-ecken/) in my [book](http://meiert.com/de/publications/books/3897214229/), just to present it and to point out its problems. Take a look at the source code, that by the way (and of course intentionally) uses \"span\" elements. You surely don't want to do that, and you surely don't want to maintain that by no means."
+ },
+ {
+  "id": 98814,
+  "parent": 0,
+  "author": "Nikolaj",
+  "url": "",
+  "date": "2007-03-08 09:36:14",
+  "type": "",
+  "html": "Hi,\n\nI tried to use the technique described here to create rounded corners.\n\nI turned out that the code snippets are a bit incomplete, which made me seek the original technorati solution myself.\n\nOne of the more crucial findings was that the following css rule is missing in the snippets:\n\nb.cn {\\\nposition: absolute;\\\n...\\\n}"
+ },
+ {
+  "id": 98860,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-03-08 10:45:42",
+  "type": "",
+  "html": "@Nikolaj: Thanks a lot for reporting this. I have added the css rule and updated the post with an example page as well."
+ },
+ {
+  "id": 113052,
+  "parent": 0,
+  "author": "Nikolaj",
+  "url": "",
+  "date": "2007-03-23 15:46:05",
+  "type": "",
+  "html": "Actually your example is still a bit incomplete - at least in my IE6.\n\nTo repair you can append the following to the boxc b.cn rule:\n\nline-height: 1px;\\\nfont-size: 1px;\n\nRegards Nikolaj"
+ },
+ {
+  "id": 231408,
+  "parent": 0,
+  "author": "Thomas Cayne",
+  "url": "http://www.cayne.ws",
+  "date": "2007-08-12 05:25:29",
+  "type": "",
+  "html": "Thanks for your information on rounded corner boxes. I try to implement whatever I find to improve my learning curve. Like many people I want to get away from javascript and graphics as much as possible. However, I doubt anyone can. I found a website that lists as much rounded corner techniques as the author can. It's Smily Cat. I hope this helps. So far I have only tested a few of the websites listed.\n\nKeep up the good work."
+ }
+]

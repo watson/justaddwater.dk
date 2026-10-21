@@ -1,0 +1,47 @@
+[
+ {
+  "id": 477007,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-03-10 11:57:14",
+  "type": "",
+  "html": "BTW... IRC and the clients I briefly tried had a big barrier of getting started. So I ended up using the web-based client Mibbit, which I was able to use immediately\n\nwww.mibbit.com\n\n![](/wp-content/uploads/2009/03/mibbit-screenshot-freenode-textmate.png \"mibbit-screenshot-freenode-textmate\")"
+ },
+ {
+  "id": 485450,
+  "parent": 0,
+  "author": "Denny",
+  "url": "",
+  "date": "2009-05-06 20:15:36",
+  "type": "",
+  "html": "Thanks for this post. Setting the PATH in TM's preferences is easy enough, but I also don't understand why it's not reading my .bash_profile. The docs seem to indicate it should, and I actually had it working yesterday. But I came in this morning and TM wasn't seeing it anymore."
+ },
+ {
+  "id": 485715,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-05-09 22:15:22",
+  "type": "",
+  "html": "@Denny wrote:\n\n> I also don’t understand why it’s not reading my .bash_profile. The docs seem to indicate it should, and I actually had it working yesterday.\n\nAllan gave his version of a reply to your question\n\n> 12:53 allan: really, only shell and TextMate care about PATH so whether you set it locally for each of the two apps or globally makes little difference and in a shell context editing .profile is probably easier plus does not require re-login to have changes take effect also, in .profile you can have “code”. e.g. you can add to your PATH, conditionally set something etc. where environment.plist is 100% declarative\n\nBTW, you should definitely write on the IRC channel where you found it in the docs, and perhaps propose a better wording. Adressing the incorrect parts will eventually make this a better world :)"
+ },
+ {
+  "id": 484820,
+  "parent": 0,
+  "author": "Ami Mahloof",
+  "url": "",
+  "date": "2009-04-25 03:11:00",
+  "type": "",
+  "html": "Thank you so much!!!!!!!\n\nyou save my project so much time.... i was on the verge of uninstalling all my ruby gems and ruby and rails and textmate, since textmate was acting up i thought that bacause i changed my ruby path to /opt/local/bin it messsed up every thing\n\nI am so greatful!!! thank you again\n\nAmi"
+ },
+ {
+  "id": 477508,
+  "parent": 0,
+  "author": "Kichler Lighting",
+  "url": "http://www.littmanbros.com/kichler-lighting.html",
+  "date": "2009-03-13 04:23:18",
+  "type": "",
+  "html": "that is a weird issue. nice work figuring it out. i hope something crazy like that doesn't happen to me."
+ }
+]

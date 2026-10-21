@@ -1,0 +1,65 @@
+[
+ {
+  "id": 489653,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-10-02 20:13:03",
+  "type": "",
+  "html": "@Rafael: Thanks! The error occured because I scraped the headings and stripped all HTML tags. I have reinserted the ~~`del`~~ tag."
+ },
+ {
+  "id": 489644,
+  "parent": 0,
+  "author": "Rafael Montenegro",
+  "url": "",
+  "date": "2009-10-02 15:02:02",
+  "type": "",
+  "html": "Just to point a mistake:\\\n4\\. Most Users DO Scroll\n\nthanks"
+ },
+ {
+  "id": 489931,
+  "parent": 0,
+  "author": "SVnet",
+  "url": "http://www.softwarevenue.com",
+  "date": "2009-10-11 09:54:56",
+  "type": "",
+  "html": "I'm a regular reader of Smashing Magazine\\\nThey always post very interesting article including this one"
+ },
+ {
+  "id": 489687,
+  "parent": 0,
+  "author": "Max",
+  "url": "http://dlmax.org",
+  "date": "2009-10-03 19:59:19",
+  "type": "",
+  "html": "Hi Jesper...\\\nYour blog seems compromised...\\\nlook at the article page-source and search for bubble...\n\nGood luck!"
+ },
+ {
+  "id": 489722,
+  "parent": 0,
+  "author": "maca",
+  "url": "http://www.macaandina.net",
+  "date": "2009-10-04 22:24:08",
+  "type": "",
+  "html": "great post with very interesting tips.\\\nfor me \"simple is nice\"\n\nthank you for sharing"
+ },
+ {
+  "id": 489736,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-10-05 09:32:11",
+  "type": "",
+  "html": "@Max\\. Thanks for noticing. I'll give it a look!"
+ },
+ {
+  "id": 489745,
+  "parent": 0,
+  "author": "ZigPress",
+  "url": "http://www.zigpress.com/",
+  "date": "2009-10-05 12:53:24",
+  "type": "",
+  "html": "I often read Smashing Magazine but missed this one, so thanks for the summary article!\n\nI particularly agree with the scrolling issue - the days of having to have EVERYTHING important above the fold are long gone."
+ }
+]

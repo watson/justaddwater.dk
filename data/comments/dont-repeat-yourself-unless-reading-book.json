@@ -1,0 +1,47 @@
+[
+ {
+  "id": 426267,
+  "parent": 0,
+  "author": "ilyas",
+  "url": "http://www.alltaste.com/",
+  "date": "2008-06-25 22:01:34",
+  "type": "",
+  "html": "Yeah you said it right don\\`t repeat yourself or in other words Golden words should not be repeated."
+ },
+ {
+  "id": 430644,
+  "parent": 0,
+  "author": "Kaj",
+  "url": "",
+  "date": "2008-07-18 10:38:54",
+  "type": "",
+  "html": "IMyInterface x = new ImplementationClass();\n\nThats why it is repeated!!!!\n\nBut you could have a point that the languge should have a way to just say\\\nIMyClass = new ()\\\nif its just an instance of the same cla"
+ },
+ {
+  "id": 436733,
+  "parent": 0,
+  "author": "petering_sob",
+  "url": "",
+  "date": "2008-08-19 11:52:53",
+  "type": "",
+  "html": "C# actually introduced the \"var\" keyword in 3.0\n\nvar br = new BufferedReader(...);\n\nimplies that br is a BufferedReader\n\nTo elaborate on Kajs reply:\\\nwhen using inheritance, any superclass (including interface definitions) are valid members of the type of the subclass. Therefore it is necessary to be able to define the type of the object. This needs not be the case with ducktyped languages, which I suspect that ruby is (without bothering to read the spec)"
+ },
+ {
+  "id": 477382,
+  "parent": 0,
+  "author": "JayEB",
+  "url": "http://www.jayebarnett.com",
+  "date": "2009-03-12 07:25:35",
+  "type": "",
+  "html": "I love to read a book or even an article that has plenty of \"handles\" that I can take away. On your recommendation, i think I will have to run out and get this. There are some of these kinds of things that I have taken with me for my entire life."
+ },
+ {
+  "id": 490684,
+  "parent": 0,
+  "author": "James",
+  "url": "http://www.sanneo.co.uk",
+  "date": "2009-11-06 16:30:22",
+  "type": "",
+  "html": "I wish I'd known about the don't repeat yourself guideline before I started writing the ruby application I'm working on now. It really does pay to take a little more time to do something just once. Going back over code and changing things on 50 scripts can be a nightmare."
+ }
+]

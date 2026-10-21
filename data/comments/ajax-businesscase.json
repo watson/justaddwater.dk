@@ -1,0 +1,110 @@
+[
+ {
+  "id": 960,
+  "parent": 0,
+  "author": "Ajaxian &raquo; Ajax Case Study - Simple Validations Reduce Costs/Increase Usability",
+  "url": "http://ajaxian.com/archives/ajax-case-study-simple-validations-reduce-costsincrease-usability",
+  "date": "2006-02-08 21:33:45",
+  "type": "pingback",
+  "html": "\\[...\\] He mentions the two models that they looked at - the “Edit one object at a time” idea and the “Edit multiple objects at the same time” school of thought. For each, they give an example, including a sample screenshot of the method. \\[...\\]"
+ },
+ {
+  "id": 962,
+  "parent": 0,
+  "author": "yoink",
+  "url": "http://www.pointful.com",
+  "date": "2006-02-09 01:54:27",
+  "type": "",
+  "html": "What about bandwidth, and application 'chattyness'? Validating like this would increase the bandwidth requirements greatly, wouldn't it? Not to mention stress on the server, as you mention in the bank holiday example. I'm all for AJAX validation, but my approach is like this:\n\n1\\. Validate using javascript rules, such as fValidate, on the fly, for the fields that you can.\\\n2\\. Pre-submit of the form (when submit is clicked), use AJAX to validate fields on the server, (only fields that cannot be validated on the fly with javascript)\\\n3\\. If the validation passes, submit the form, otherwise highlight errors as you have done in your 2nd example.\n\nThis way you greatly cut down on chattyness. I have a library in which you can add both server-side and client-side validation rules, and they automatically decide if it can be done client-side, or via ajax server-side\n\n-- yoink"
+ },
+ {
+  "id": 1025,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-02-12 17:54:04",
+  "type": "",
+  "html": "With regards to the discussion to add JavaScript validations:\n\nI'd still consider avoiding clientside validations because development costs, and a standard javascript library for validations would keep development costs low. The standard library would also reduce browser issues with client-side code. (of course there could be browser issues with AJAX as well, but the more javascript, the more browser problems, and the higher development costs.)\n\nFurthermore, client-side validations — library or not — will result in validations two places: I must maintain validations both client-side and server-side. Increased maintanence costs.\n\nYou could say the arguments above are mostly related to cost or development time. And I think it's important also to address usability issues. As Yoink points out, network issues could result in slow responses rendering AJAX validations unusable. This could alter the equation.\n\nHowever, there is one very important issue: Using both client-side and AJAX validations, how would you ensure a consistent user interface? In my opinion, if you choose both validations, you could easily end up putting a lot of effort into **making the two types of validations work consistently**.\n\nWhich fields should be validated client-side? Which should validate server-side AJAX style? Which fields should use both validations? What should happen if a field validates OK in javascript, but then fails the AJAX validations? Any cross-field validations? What if an AJAX validation fails and then the user corrects the value but makes a typo? Next validation of the field might result in OK javascript validation, but failed AJAX validation. When exactly should the field change from OK to failed and what would you do to prevent the client-side validation, when the result really does not validate?\n\nAs you see, lots of considerations. and I haven't found a generic cross-browser framework that handles these considerations yet. (If you know of one, please let me know!)\n\nHaving said that, I'll give [fValidate](http://www.phil-taylor.com/fvalidate/) a closer look to see what it's capable of. Only one problem, though: I spend an hour googling for a download file of fValidate, but couldn't find it. It seems that the original URL is not working ([www.peterbailey.net](http://www.peterbailey.net/fValidate/)). Anybody knows a download link?"
+ },
+ {
+  "id": 1003,
+  "parent": 0,
+  "author": "Sid B. Dane",
+  "url": "http://www.xs4all.nl/~siddy/ria",
+  "date": "2006-02-10 10:35:14",
+  "type": "",
+  "html": "Consuelo, I think that the accessability issue is the same as in traditional/client side applications.\n\nAccessability support is mainly provided by OS's, and for a small part by the application itself.\n\nSo if accessability should be supported in a standard way, there should be a supporting application for all RIA platforms, like Ajax and Macromedia Flex, Microsoft Vista etc.\n\nHopefully this standard will develop...\n\nS!d"
+ },
+ {
+  "id": 1001,
+  "parent": 0,
+  "author": "Andre Charland",
+  "url": "http://blogs.ebusiness-apps.com",
+  "date": "2006-02-09 21:21:16",
+  "type": "",
+  "html": "Nice post Jeper. BTW I'm sure for an app like this bandwidth and servers aren't really that big of a cost factor."
+ },
+ {
+  "id": 1002,
+  "parent": 0,
+  "author": "Consuelo Puchades",
+  "url": "",
+  "date": "2006-02-10 10:21:05",
+  "type": "",
+  "html": "Jesper, have you experimented with ajax developement and accessibility? Will be both compatible or do you think we'll have to choose between them?"
+ },
+ {
+  "id": 1000,
+  "parent": 0,
+  "author": "Sid B. Dane",
+  "url": "http://www.xs4all.nl/~siddy/ria",
+  "date": "2006-02-09 14:53:33",
+  "type": "",
+  "html": "I agree with Yoink, but if you compare the solution of Jesper with their previous version, there is no more bandwidth usage than in their first version (with the page back-and-forth solution).\n\nSo it could be that it was a bit more cost efficient to develop only server-side validation via Ajax than use your three step validation (which is in my opinion technically the best one). The costs here are probably moved to the bandwidth and server usage for the validations which fail and could be done on the client.\n\nS!d"
+ },
+ {
+  "id": 1021,
+  "parent": 0,
+  "author": "mark",
+  "url": "",
+  "date": "2006-02-10 20:47:12",
+  "type": "",
+  "html": "http://www.ajaxfreaks.com/tutorials/3/0.php"
+ },
+ {
+  "id": 1018,
+  "parent": 0,
+  "author": "Consuelo Puchades",
+  "url": "",
+  "date": "2006-02-10 14:59:24",
+  "type": "",
+  "html": "But Sid, how can you mix w3c standars with javascript?"
+ },
+ {
+  "id": 1982,
+  "parent": 0,
+  "author": "justaddwater.dk | Justaddwater.dk February 2006 Statistics",
+  "url": "http://justaddwater.dk/2006/03/12/justaddwaterdk-february-2006-statistics/",
+  "date": "2006-03-12 17:58:48",
+  "type": "pingback",
+  "html": "\\[...\\] On Wednesday the 8th of February Jesper published a story he had been working on for quite some time. After quickly being picked up by the popular website Ajaxian, the 2 days that followed was the most visited days we have ever experienced, topping Thursday with 575 unique visitors (according to Measure Map) - thank you guys :) … These couple of days makes the rest of the graph seem like nothing: \\[...\\]"
+ },
+ {
+  "id": 3023,
+  "parent": 0,
+  "author": "justaddwater.dk | Elements of User Experience, Copenhagen, May 31st",
+  "url": "http://justaddwater.dk/2006/05/18/elements-of-user-experience-copenhagen-may-31st/",
+  "date": "2006-05-18 09:50:53",
+  "type": "pingback",
+  "html": "\\[...\\] You probably know that it was Jesse James Garrett who coined the term “AJAX”, which I think is a way to connect technology with valuable user experience. \\[...\\]"
+ },
+ {
+  "id": 434086,
+  "parent": 0,
+  "author": "Irish Gift Store",
+  "url": "http://www.traditionalirishgifts.com",
+  "date": "2008-08-05 18:56:07",
+  "type": "",
+  "html": "heres a link to the fValidate download http://www.phil-taylor.com/fvalidate/"
+ }
+]

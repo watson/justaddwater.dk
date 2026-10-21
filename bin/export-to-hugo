@@ -1,0 +1,81 @@
+#!/usr/bin/env python3 -I
+"""Convert the sanitized WordPress export into Hugo content (stdlib + pandoc).
+
+Writes: content/posts/<slug>.md, content/<page>.md, data/comments/<slug>.json.
+Permalinks are preserved via the `url` front-matter field.
+Usage: bin/export-to-hugo [--limit N]
+"""
+import json, os, re, subprocess, sys
+import xml.etree.ElementTree as ET
+from html import unescape
+from urllib.parse import urlparse
+
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+SRC = "export/justaddwater.sanitized.xml"
+W = "{http://wordpress.org/export/1.2/}"; C = "{http://purl.org/rss/1.0/modules/content/}"
+BLOCK = r"(?:table|thead|tbody|tfoot|tr|td|th|div|dl|dt|dd|ul|ol|li|pre|form|blockquote|h[1-6]|hr|p|figure|object|embed|script|style|iframe)"
+LIMIT = int(sys.argv[sys.argv.index("--limit") + 1]) if "--limit" in sys.argv else None
+
+def shortcodes(t):
+    t = re.sub(r"\[tags[^\]]*\].*?\[/tags\]", "", t, flags=re.S)
+    t = re.sub(r"\[code(?:\s+lang(?:uage)?=\"?\w+\"?)?\](.*?)\[/code\]",
+               lambda m: "<pre><code>%s</code></pre>" % m.group(1), t, flags=re.S)
+    t = re.sub(r"\[/?caption[^\]]*\]", "", t)
+    return t
+
+def wpautop(t):
+    """Minimal WordPress autop: blank-line paragraphs, single newlines -> <br>."""
+    t = t.replace("\r\n", "\n").strip()
+    parts, buf, out = re.split(r"(<pre.*?</pre>)", t, flags=re.S), [], []
+    for part in parts:
+        if part.startswith("<pre"):
+            out.append(part); continue
+        for para in re.split(r"\n\s*\n", part):
+            para = para.strip()
+            if not para: continue
+            if re.match(r"<%s[\s>]" % BLOCK, para, re.I) or re.match(r"</%s>" % BLOCK, para, re.I):
+                out.append(para)
+            else:
+                out.append("<p>%s</p>" % para.replace("\n", "<br>\n"))
+    return "\n\n".join(out)
+
+def to_md(html):
+    html = wpautop(shortcodes(html))
+    html = re.sub(r'(href|src)="https?://(?:www\.)?justaddwater\.dk(/[^"]*)"', r'\1="\2"', html)
+    r = subprocess.run(["pandoc", "-f", "html", "-t", "gfm-raw_html", "--wrap=none"],
+                       input=html, capture_output=True, text=True)
+    md = r.stdout if r.returncode == 0 else html
+    md = re.sub(r"(?m)^\\[ \t]*$\n?", "", md)      # lone hard breaks beside block elements
+    md = re.sub(r"\\\n(?=\n)", "\n", md)          # hard break at paragraph end
+    return md.strip()
+
+def fm(d): return "---\n" + "\n".join("%s: %s" % (k, json.dumps(v, ensure_ascii=False)) for k, v in d.items()) + "\n---\n\n"
+
+def write(path, text):
+    os.makedirs(os.path.dirname(path), exist_ok=True); open(path, "w", encoding="utf8").write(text)
+
+chan = ET.parse(SRC).getroot().find("channel")
+n = 0; ncom = 0; stats = {"post": 0, "page": 0}
+for it in chan.findall("item"):
+    ptype = it.findtext(W + "post_type")
+    if ptype not in ("post", "page"): continue
+    if LIMIT and n >= LIMIT: break
+    slug = it.findtext(W + "post_name") or "post-%s" % it.findtext(W + "post_id")
+    date = (it.findtext(W + "post_date") or "")
+    path = urlparse(it.findtext("link") or "").path or "/%s/" % slug
+    cats = [c.text for c in it.findall("category") if c.get("domain") == "category"]
+    tags = [c.text for c in it.findall("category") if c.get("domain") == "post_tag"]
+    meta = {"title": " ".join(unescape(it.findtext("title") or slug).split()), "date": date.replace(" ", "T"),
+            "slug": slug, "url": path, "wp_id": int(it.findtext(W + "post_id")),
+            "categories": cats, "tags": tags}
+    body = to_md(it.findtext(C + "encoded") or "")
+    base = "content/posts/%s-%s.md" % (date[:10], slug) if ptype == "post" else "content/pages/%s.md" % slug
+    write(base, fm(meta) + body + "\n"); stats[ptype] += 1; n += 1
+    coms = []
+    for c in it.findall(W + "comment"):
+        coms.append({"id": int(c.findtext(W + "comment_id")), "parent": int(c.findtext(W + "comment_parent") or 0),
+                     "author": c.findtext(W + "comment_author"), "url": c.findtext(W + "comment_author_url") or "",
+                     "date": c.findtext(W + "comment_date"), "type": c.findtext(W + "comment_type") or "",
+                     "html": to_md(c.findtext(W + "comment_content") or "")})
+    if coms: write("data/comments/%s.json" % slug, json.dumps(coms, ensure_ascii=False, indent=1)); ncom += len(coms)
+print("posts %d, pages %d, comments %d" % (stats["post"], stats["page"], ncom))

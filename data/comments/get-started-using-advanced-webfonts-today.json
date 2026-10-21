@@ -1,0 +1,56 @@
+[
+ {
+  "id": 595283,
+  "parent": 0,
+  "author": "Martin Stjernegaard",
+  "url": "http://www.starfarm.dk",
+  "date": "2012-03-14 14:54:47",
+  "type": "",
+  "html": "Hi Jesper\n\nI see that you've used the example from our site uxcampcph.org - thanks :)\n\nI have a few notes that is necessary to add and a quick useful one. We are using wordpress for our site and the use of Google Web Fonts is through a plugin called \"WP Google Fonts - http://wordpress.org/extend/plugins/wp-google-fonts/\". It's not developed by us so we can't really claim the credit for it :) Just wanted to point that out.\n\nOn a second note, we've experienced that the fonts doesn't render perfectly on PC's. On mac they render as they should but it looks a bit messy on PC's. This is worth considering before using Google Web Fonts.\n\nMaybe others have had the same issue with the rendering?"
+ },
+ {
+  "id": 595792,
+  "parent": 0,
+  "author": "Christian Turk",
+  "url": "http://www.enative.de",
+  "date": "2012-03-15 16:02:44",
+  "type": "",
+  "html": "Nice article! I use the Google Web Fonts too!\n\nBut there is a problem with the Internet Explorer lower than version 9. It is important too implement the font css before all the other stylesheets for proper work."
+ },
+ {
+  "id": 596012,
+  "parent": 0,
+  "author": "GADEL",
+  "url": "http://www.gadel.info",
+  "date": "2012-03-16 03:52:37",
+  "type": "",
+  "html": "Some of my hosted WordPress blogs use Web fonts. It makes reading and typography awesome."
+ },
+ {
+  "id": 616575,
+  "parent": 0,
+  "author": "Peter",
+  "url": "",
+  "date": "2012-05-11 15:21:46",
+  "type": "",
+  "html": "It works awesome in firefox & chrome but have some problems in IE if these are solved then nothing is best."
+ },
+ {
+  "id": 631020,
+  "parent": 0,
+  "author": "Alex Lambert",
+  "url": "http://www.highvis-workwear.co.uk",
+  "date": "2012-07-02 15:29:56",
+  "type": "",
+  "html": "Internet explorer not playing the game it seems, older versions below 9 anyway. apparently there is a shopping cart site based in australia that actually increases your bill when you come to check out if you use ie8 or below. This was specifically to re-coup the costs of the extra development taken so that the site would render correctly in IE 8 and below!\n\nI also think that the additional bandwidth consideration isn't that significant if using a great font adds to the overall design!"
+ },
+ {
+  "id": 624003,
+  "parent": 0,
+  "author": "Ben",
+  "url": "http://www.soundtrackman.com",
+  "date": "2012-06-20 21:13:24",
+  "type": "",
+  "html": "Brilliant! Beats tahoma and times new roman forever!"
+ }
+]

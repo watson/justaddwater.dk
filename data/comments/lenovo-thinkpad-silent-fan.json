@@ -1,0 +1,92 @@
+[
+ {
+  "id": 332262,
+  "parent": 0,
+  "author": "Lars Jacobsen",
+  "url": "http://www.jacjac.dk",
+  "date": "2007-11-07 18:12:54",
+  "type": "",
+  "html": "There will probably be some transfer of heat from one to the other - and if the cooling is inadequate the fan will run at all times. This was especially true of older notebooks running Pentium 4 cpu's that was not made for notebooks.\n\nHowever most moderns cpu's wont show any erratic behaviour but will instead lower their speeds (and thereby their generation of heat) - or simply shut of to protect themself.\n\nTo make a long story short: The graphics card i probably broken :-)\\\n(or the driver has problems, thats often the case with notebooks)"
+ },
+ {
+  "id": 331291,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-11-06 10:54:28",
+  "type": "",
+  "html": "@Lars: Good to know that the graphics chip can handle the hot temperatures. I heard the limit for this particular FireGL v5250 is around 120 degrees Celcius.\n\nThat would worry me a bit though: there is very little distance between the CPU and the GPU\n\nTake a look at the technical hardware maintenance manual. Page 83 shows that they almost touch corners.\n\nLenovo technical [hardware maintenance manual](http://www-307.ibm.com/pc/support/site.wss/document.do?lndocid=MIGR-66958) ([local copy of PDF](/wp-content/uploads/2007/11/lenovo-t60p-hardware-maintenance-manual-42t8137_01.pdf \"lenovo-t60p-hardware-maintenance-manual-42t8137_01.pdf\"), 3.89MB)"
+ },
+ {
+  "id": 331281,
+  "parent": 0,
+  "author": "Lars Jacobsen",
+  "url": "http://www.jacjac.dk",
+  "date": "2007-11-06 10:30:17",
+  "type": "",
+  "html": "While the cooling solution seems to be lacking in quality and your card seems to be acting strangely, I should point out that most GPUs are made to run at high temperatures. Most CPUs have a threshold where they stop functioning to protect them selves, but most GPSs that I have seen runs fine at 60+"
+ },
+ {
+  "id": 331264,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-11-06 09:42:40",
+  "type": "",
+  "html": "I forgot to mention: Graphics card for the T60p is ATI Mobility FireGL v5250 for the full model name"
+ },
+ {
+  "id": 358562,
+  "parent": 0,
+  "author": "justaddwater.dk | New Laptop With Better Defaults",
+  "url": "http://justaddwater.dk/2007/05/17/new-laptop-with-better-defaults/",
+  "date": "2007-11-18 17:31:22",
+  "type": "pingback",
+  "html": "\\[...\\] running hot. This is apparently a design issue because GPU is not cooled by the fan: See “Lenovo Thinkpad Silent Fan” (November \\[...\\]"
+ },
+ {
+  "id": 363752,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-11-20 19:49:46",
+  "type": "",
+  "html": "UPDATE: A technician has just replaced the graphics controller (and the entire motherboard). Since then, I have not had a single problem with external screens"
+ },
+ {
+  "id": 387436,
+  "parent": 0,
+  "author": "Silencer",
+  "url": "",
+  "date": "2008-01-03 10:07:21",
+  "type": "",
+  "html": "Yep, it looks like a major flaw. A guy on the forum investigated it and made a rather easy mod of the heatsink to cool GPU better: http://forum.thinkpads.com/viewtopic.php?p=372176"
+ },
+ {
+  "id": 387427,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-01-03 08:53:32",
+  "type": "",
+  "html": "@Silencer After the replacement, the GPU is still running hot, but now without any problems. The GPU temp is still around 70 degrees (normally cooled) but behaves perfectly. What is really interesting (as I note in the article) is that it looks like a design flaw, that the GPU heatsink is too small to pull the heat out of the GPU and out to the fan."
+ },
+ {
+  "id": 389931,
+  "parent": 0,
+  "author": "Mogens Nielsen",
+  "url": "",
+  "date": "2008-01-16 23:21:14",
+  "type": "",
+  "html": "Thanks for sharing your experiences on the T60."
+ },
+ {
+  "id": 418811,
+  "parent": 0,
+  "author": "T60p Heat Issues from GPU and CPU with external monitor &laquo; IT Tech Notes",
+  "url": "http://ittechnotes.wordpress.com/2008/05/17/t60p-heat-issues-from-gpu-and-cpu-with-external-monitor/",
+  "date": "2008-05-17 18:05:28",
+  "type": "pingback",
+  "html": "\\[...\\] but I didn’t realy find any posts indicating that it was Ubuntu.  Instead I found this post (http://justaddwater.dk/2007/11/06/lenovo-thinkpad-silent-fan/) talking about the ATI GPU causing issues.  There is another long discussion about T60p GPU heat \\[...\\]"
+ }
+]

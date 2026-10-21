@@ -1,0 +1,20 @@
+[
+ {
+  "id": 256169,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-09-14 09:15:33",
+  "type": "",
+  "html": "Jacob. The hidden features is an interesting topic. Affordance could be much better — and I think it's a thing Photoshop has in common with many web applications.\n\nAnd pressing Cmd+Enter (or windows CTRL+Enter) in a text field is a brilliant trick. I discovered it after 9½ years of Photoshop usage :)"
+ },
+ {
+  "id": 255903,
+  "parent": 0,
+  "author": "Jacob Hage",
+  "url": "http://www.jacobhage.dk",
+  "date": "2007-09-13 22:46:45",
+  "type": "",
+  "html": "Sweet!\n\nThat's the \"funny\" thing about Photoshop - it's loaded with hidden shortcuts!\n\nApplying it to a web form is an interesting idea, however, I think the combination of an input field and a shortcut key requires an unrealistically skilled user (referring to your last observation) :)\n\nPerhaps a contextual menu shown only when the field has focus is a better solution? (Almost like those date input fields where you pick a date from a popup calendar).\n\nBy the way, did you know that you can press Cmd+Enter in order to deselect the current text field? Normally you need to switch tool, when you are done using the text tool."
+ }
+]

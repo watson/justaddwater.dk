@@ -1,0 +1,47 @@
+[
+ {
+  "id": 194056,
+  "parent": 0,
+  "author": "Maxim Soloviev",
+  "url": "http://maxim.deast.info/",
+  "date": "2007-06-29 04:42:14",
+  "type": "",
+  "html": "After 2 weeks without internet you can write book online using ANY mobile browser :P"
+ },
+ {
+  "id": 193733,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-06-28 23:35:17",
+  "type": "",
+  "html": "FYI it took me approx. One hour to write this post. Not counting the half hour i lost by accidentally hitting the back button. This is definitely not very productive.\n\nSure, after nearly two weeks without internet, it's another story, and i am amazed that i actually have had patience for typing all this..."
+ },
+ {
+  "id": 196812,
+  "parent": 0,
+  "author": "kng",
+  "url": "",
+  "date": "2007-07-01 11:58:59",
+  "type": "",
+  "html": "In my opinion your criticism is somewhat unwarranted. By writing a blog post using your phone you are basically trying to accomplish something the platform does not afford. The small screen and ~12 key input are limiting factors inherently tied to the device. Would you normally write a \\>1000 character long text message?\n\nIn regard to the missing alert I guess it's a matter of Opera Mini not supporting Javascript. Desktop browsers with Javascript disabled would exhibit the same unfortunate behavior. Opera might implement a feature which detected extensive user input on a page and displayed a warning if the user tried to leave it without submitting. It would however be pretty far down on my todo list.\n\nWhile I haven’t tried using a Nokia 6233 the limited size of the input field does sound like a problem. As Java mobile applications such as Opera Mini is dependent on the phone implementation of input handling I doubt there's anything they can do about it. For your snippet library, consider adding , Jaiku. Leave Opera Mini to what it does well: Browsing and limited input."
+ },
+ {
+  "id": 196817,
+  "parent": 0,
+  "author": "kng",
+  "url": "",
+  "date": "2007-07-01 12:10:30",
+  "type": "",
+  "html": "Tags mangled my post :(. I'll try again:\n\nIn my opinion your criticism is somewhat unwarranted. By writing a blog post using your phone you are basically trying to accomplish something the platform does not afford. The small screen and ~12 key input are limiting factors inherently tied to the device. Would you normally write a \\>1000 character long text message?\n\nIn regard to the missing alert I guess it's a matter of Opera Mini not supporting Javascript. Desktop browsers with Javascript disabled would exhibit the same unfortunate behavior. Opera might implement a feature which detected extensive user input on a page and displayed a warning if the user tried to leave it without submitting. It would however be pretty far down on my todo list.\n\nWhile I haven't tried using a Nokia 6233 the limited size of the input field does sound like a problem. As Java mobile applications such as Opera Mini is dependent on the phone implementation of input handling I doubt there's anything they can do about it. For your snippet library, consider adding \\<p\\>, \\<a href=\" etc. to your T9 dictionary.\n\nThe next time you need to scratch your blogging itch on the road consider getting a device with a more extensive keyboard (iPhone, anyone?) or switching to a microblogging platform such as [Jaiku](http://jaiku.com/). Leave Opera Mini to what it does well: Browsing and limited input."
+ },
+ {
+  "id": 436707,
+  "parent": 0,
+  "author": "Ultra Reviewer",
+  "url": "http://ulrareview.net",
+  "date": "2008-08-19 09:46:41",
+  "type": "",
+  "html": "I had terrible expreince with opera, its very slow, hangs whenever it wants and completely makes other applications worthless."
+ }
+]

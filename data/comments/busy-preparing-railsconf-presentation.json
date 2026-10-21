@@ -1,0 +1,38 @@
+[
+ {
+  "id": 254332,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-09-11 14:44:02",
+  "type": "",
+  "html": "Wireds \"[How to rock the podium](http://howto.wired.com/wiredhowtos/index.cgi?page_name=rock_the_podium;action=display;category=Work)\" comes in just in time:\n\n> 1\\. Don’t read a speech. Write out bullet points on index cards and practice elaborating extemporaneously on each one. Focus on the transitions. Be sure to number your cards in case you drop them.\n>\n> 2\\. Videotape yourself practicing the presentation. Note awkward body language, stilted movements, and annoying verbal tics. OK. Now stop doing that.\n>\n> 3\\. Don’t read from PowerPoint slides like they’re cue cards. If you must use them, keep the text short (two words and a picture).\n>\n> 4\\. Don’t use the conference’s Net connection for your demo. It’s embarrassing to stand on stage whining, “Everyone please stop using the Net!” Turn your demo into screenshots or bring an EVDO card for your own high-speed connection.\n>\n> 5\\. Don’t rely on the event’s A/V setup, either. To play an audio clip, try holding your mike up to your laptop’s speaker.\n>\n> 6\\. Use your Q&A time wisely. Field the big-picture queries while you’re onstage and deal with the minutiae offline.\n\nNot sure we can do much about the annoying ticks of nervousness, though, but let's see after Tuesday"
+ },
+ {
+  "id": 358569,
+  "parent": 0,
+  "author": "justaddwater.dk | RailsConf Europe 2007 Recap",
+  "url": "http://justaddwater.dk/2007/09/22/railsconf-europe-2007-recap/",
+  "date": "2007-11-18 17:32:38",
+  "type": "pingback",
+  "html": "\\[...\\] Justaddwater.dk: Busy Preparing RailsConf Presentation \\[...\\]"
+ },
+ {
+  "id": 402106,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-03-14 11:33:47",
+  "type": "",
+  "html": "@arno thanks for letting us know. We recently changed the server setup. Now I have re-enabled the URL reform.quickanddirty.dk"
+ },
+ {
+  "id": 401979,
+  "parent": 0,
+  "author": "Arno Nyhm",
+  "url": "",
+  "date": "2008-03-14 00:20:58",
+  "type": "",
+  "html": "the reform website is gone? where i get the source code?"
+ }
+]

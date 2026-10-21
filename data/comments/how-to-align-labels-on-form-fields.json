@@ -1,0 +1,29 @@
+[
+ {
+  "id": 129310,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-04-20 23:24:00",
+  "type": "",
+  "html": "I have been having a some success with a different kind of layout - one where the label is inside the form field.\n\nI have used this layout for almost all my latest projects, and it seems, to me atleast, that it partly eliminates the problem of eye-fixation (people do not need to mentally connect a label with a form field).\n\nOne example of this is here:\\\nhttp://www.baekdal.com/web2rss/\n\nNote: I am not inventer of this concept, I just use it."
+ },
+ {
+  "id": 132640,
+  "parent": 0,
+  "author": "Iacovos Constantinou",
+  "url": "http://www.iacons.net",
+  "date": "2007-04-24 11:54:44",
+  "type": "",
+  "html": "It would be nice to have eye-tracking data for bottom aligned labels as well, like those which are used in [Wufoo forms](http://wufoo.com/examples/).\n\n@Thomas: your idea looks very good and it seems to be working very well for small forms. Obviously, the extended border aids they eye to match the label with the corresponding input. I was wondering if you have tried it with larger forms or with radio button groups as well..."
+ },
+ {
+  "id": 133252,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-04-24 21:31:35",
+  "type": "",
+  "html": "Iacovos, If you click on \"show advanced setting\" in the WEB2RSS example, you can how I handle checkboxes.\n\nand yes, I have tried with larger forms. It works quite well for mest things. The only problem is handling textareas because some tend to get confused about where the text \"area\" in the expanded field is."
+ }
+]

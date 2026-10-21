@@ -1,0 +1,155 @@
+[
+ {
+  "id": 56,
+  "parent": 0,
+  "author": "Jonathan Boutelle",
+  "url": "http://www.jonathanboutelle.com",
+  "date": "2006-01-09 20:39:26",
+  "type": "",
+  "html": "Hey Jesper,\n\nThese two layout styles are not very amenable to being packaged as plugins. They are essentially layout, so they are embedded in the template itself.\n\nYou basically do TWO loops instead of one for your main page. I'm not familiar with the coding details in wordpress but it should be dead easy to do something like the following:\n\nSimilarly, for the archive, you make a new template that does a loop like so.\n\nI'll cook up some sample code and shoot you a line when it's ready... it should be \\_really\\_ trivial (basically a couple of parameters on the WP_Query object)."
+ },
+ {
+  "id": 59,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-09 23:31:06",
+  "type": "",
+  "html": "Jonathan,\\\nThanks for your reply. Unfortunately, our blog ate the some of your comment. The code parts are missing. I'm a bit reserved about posting my email address here (I want mail from humans not spambots), so I'll send you a ping via my Gmail account."
+ },
+ {
+  "id": 60,
+  "parent": 0,
+  "author": "WebWord &raquo; Blog Archive &raquo; Different way to think about blog home page layout",
+  "url": "http://www.webword.com/2006/01/11/different-way-to-think-about-blog-home-page-layout/",
+  "date": "2006-01-12 02:59:04",
+  "type": "pingback",
+  "html": "\\[...\\] Mullet-style blog layout and complete archive page (Jesper Rønn-Jensen and Thomas Watson Steen) — “Very interesting from a usability perspective: The thought is to make more content available from the front page, by utilizing time as a filter: The older the article, the less content is available on the front page.” \\[...\\]"
+ },
+ {
+  "id": 61,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-12 09:41:33",
+  "type": "",
+  "html": "Hey John. Thanks for pointing to the article. According to Jonathan Boutelle, who coined the idea, the value to the user is less pogo-sticking (that is less searching for content). And also to make old content available and easier to find.\n\nAs I see it, that has a significant business value, although (like you I suppose) I'd love to see some data confirming it."
+ },
+ {
+  "id": 72,
+  "parent": 0,
+  "author": "James",
+  "url": "http://www.jamesmelzer.com",
+  "date": "2006-01-14 17:37:33",
+  "type": "",
+  "html": "You should look at [http://www.subtraction.com/](http://www.subtraction.com/), which uses precisely the scheme you describe."
+ },
+ {
+  "id": 81,
+  "parent": 0,
+  "author": "justaddwater.dk | Weblog usability followup",
+  "url": "http://justaddwater.dk/2006/01/17/weblog-usability-followup/",
+  "date": "2006-01-17 00:41:55",
+  "type": "pingback",
+  "html": "\\[...\\] In the previous “Mullet-style blog layout and complete archive page” we had a look on the Mullet-style blog page that makes more content available on the fronpage, and also argued for replacing monthly archives with a single archive page.Danish “brugervenligeblogs.dk” pointed me to a research document from July 2005: Blog Mainstream Market Penetration Likely Limited By Basic Usability Issues by Catalyst Group Design. The 19 page usability report is available as PDF (119KB). Highlights of the study include: \\[...\\]"
+ },
+ {
+  "id": 86,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog Usability Improvements",
+  "url": "http://justaddwater.dk/2006/01/18/blog-usability-improvements/",
+  "date": "2006-01-18 00:21:56",
+  "type": "pingback",
+  "html": "\\[...\\] Note: We have previously blogged about topics related to this in Mullet-style blog layout and complete archive page and Weblog usability followup. \\[...\\]"
+ },
+ {
+  "id": 91,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog usability improvements: What we&#8217;ll change to make this blog better",
+  "url": "http://justaddwater.dk/2006/01/19/blog-usability-improvements-what-well-change-to-make-this-blog-better/",
+  "date": "2006-01-19 11:35:40",
+  "type": "pingback",
+  "html": "\\[...\\] Create a single complete archive page and remove monthly archives \\[...\\]"
+ },
+ {
+  "id": 101,
+  "parent": 0,
+  "author": "Jonathan Boutelle",
+  "url": "http://www.kapilmohan.com/2006/01/22/mullet-code-for-wordpress/",
+  "date": "2006-01-23 07:20:39",
+  "type": "",
+  "html": "Kapil Mohan has just published the code for doing the mullet in wordpress ...\\\nI linked to it in my sig, the URL is\\\nhttp://www.kapilmohan.com/2006/01/22/mullet-code-for-wordpress/\n\n-Jonathan Boutelle"
+ },
+ {
+  "id": 678,
+  "parent": 0,
+  "author": "justaddwater.dk | Pogosticking and why it should be avoided",
+  "url": "http://justaddwater.dk/2006/02/05/pogosticking-and-why-it-should-be-avoided/",
+  "date": "2006-02-05 18:41:55",
+  "type": "pingback",
+  "html": "\\[...\\] I previously referred to this in a post about mullet style blog design and long archive pages, and this is actually something we’ll change on this blog. \\[...\\]"
+ },
+ {
+  "id": 1024,
+  "parent": 0,
+  "author": "Wan Zafran",
+  "url": "http://www.wanzafran.com",
+  "date": "2006-02-12 05:12:04",
+  "type": "",
+  "html": "I find this post to be quite interesting because the front page of my site is in that style. I find the mullet-style to be appealing because I want people to give focus (and read) my latest entry, however, they should know that there are previous entries which they might be interested to read too."
+ },
+ {
+  "id": 1984,
+  "parent": 0,
+  "author": "justaddwater.dk | Mullet Layout: A user-friendly front page",
+  "url": "http://justaddwater.dk/2006/03/12/mullet-layout-a-user-friendly-front-page/",
+  "date": "2006-03-12 22:41:54",
+  "type": "pingback",
+  "html": "\\[...\\] After reading Jonathan Boutelles “Mullet”-style blog layout article we our self’s started to wonder how to make the user experience better. So this is the first step: Mullet Layout on the front page. \\[...\\]"
+ },
+ {
+  "id": 27253,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog Usability: We dumped our archives",
+  "url": "http://justaddwater.dk/2006/11/14/world-usability-day-we-dumped-our-archives/",
+  "date": "2006-11-14 13:18:16",
+  "type": "pingback",
+  "html": "\\[...\\] Mullet-style blog layout and complete archive page \\[...\\]"
+ },
+ {
+  "id": 86384,
+  "parent": 0,
+  "author": "Svetlana",
+  "url": "http://ezxex.info/bar-stool",
+  "date": "2007-02-18 14:37:23",
+  "type": "",
+  "html": "I like it and the background and colors make it easy to read+"
+ },
+ {
+  "id": 384407,
+  "parent": 0,
+  "author": "joaedmonds",
+  "url": "",
+  "date": "2007-12-19 10:04:37",
+  "type": "",
+  "html": "Hey guys,\\\nI am only looking for\\\nThe best soft to PC-where to buy, join site & other tipe to do a home online business.\\\nWith best regards."
+ },
+ {
+  "id": 416094,
+  "parent": 0,
+  "author": "Bobrila",
+  "url": "http://link",
+  "date": "2008-05-05 04:48:47",
+  "type": "",
+  "html": "Most Interested facts about that you can read here:,"
+ },
+ {
+  "id": 457790,
+  "parent": 0,
+  "author": "Travel Blog",
+  "url": "http://blog.mrandmrssmith.com",
+  "date": "2008-11-28 13:36:56",
+  "type": "",
+  "html": "Interesting but what I would really love to know is how to make my standard wordpress search function work better - It tends to come up with all sorts of rubbish - does anyone know of a better search plugin?"
+ }
+]

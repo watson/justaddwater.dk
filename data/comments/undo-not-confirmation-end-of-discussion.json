@@ -1,0 +1,47 @@
+[
+ {
+  "id": 272569,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-09-27 09:40:52",
+  "type": "",
+  "html": "Interesting - nice find.\n\nMay I add a 5th point: Problems with handling Undo in the browsers memory.\n\nSure you can use AJAX to store previous \"states\", but that implementation is also slow because it requires a roundtrip to the server. The browser should be able to store the previous states in memory - which the browser does very poorly.\n\nAlso, how do you undo writing something, and then accidently hitting some key that either reloads the page or move to a different page altogether (in a web application).\n\nUndo is extremely important, but damn the browser is annoying :)"
+ },
+ {
+  "id": 275291,
+  "parent": 0,
+  "author": "Hannes",
+  "url": "http://uwr1.de/",
+  "date": "2007-09-29 17:24:48",
+  "type": "",
+  "html": "As Aza mentions in Part 1, the elements do not actually get deleted in the moment when the user clicks on the delete link but in an onUnload hook. IMHO the UX is even better when the elements do not get removed from the page, but grayed out/disabled and the delete link gets renamed to undelete. This enables the user to undo an arbitrary deletion instead of being forced to their inverse order."
+ },
+ {
+  "id": 395535,
+  "parent": 0,
+  "author": "pik",
+  "url": "",
+  "date": "2008-02-12 15:22:33",
+  "type": "",
+  "html": "Graphics are nice but isn't this a stateful utopia ? isn't the back button supposed to do the same work ?"
+ },
+ {
+  "id": 493282,
+  "parent": 0,
+  "author": "Mike",
+  "url": "http://felspar.com",
+  "date": "2010-03-02 09:20:45",
+  "type": "",
+  "html": "I agree with you 95% of the way, but there are cases where undo is not good enough.\n\nHere at felspar.com we've implemented a bulk emailer service, which we integrate with our bespoke system. One of our clients can potentially email around 150K customers with the click of a button. At that point, undo is not possible, as, once the email has been sent and received, it cannot be sucked out of the recipient machine by an undo operation. So, we have various test and preview screens before a final confirmation to send.\n\nIn a perfect world, perhaps email could be un-sent or corrected... and network connections would never go down after sending.. and people could un-read emails. etc. Unfortunately, we don't live there.\n\nMoral of the story: you often can't undo changes that have escaped into the big wide world. In thoses cases, make sure the users know exactly what they are doing."
+ },
+ {
+  "id": 533237,
+  "parent": 0,
+  "author": "Peter Bachmann",
+  "url": "",
+  "date": "2011-08-10 20:58:46",
+  "type": "",
+  "html": "\"Now, there is a constant resistance (usually from a technical perspective), when discussing undo. And in the project I have worked in, none of them eventually decided to have undo. Here are the reasons I have heard from customers deciding not to implement undo:\n\nDid not acknowledge the importance of undo from a user perspective\"\n\nAs a user who knows really next to nothing about technology and creating user interfaces (and here I am trying to learn for our next website rebuild...) having an easy to understand and run an \"undo\" function is critical.\n\nMake it work!\n\nHow many times have I needed this? How many times would I have appreciated this? It runs into 3 or 4 times a day. Multiply that by usage online and the programming convenience of having multiple \"are you sure\" nag screens vs. the\\\ntechnical cost of having an oh so easy undo action - and of course it has to be action dependent, I think people understand that even just intuitively - well, clearly the cost benefit is not even debatable. A pox on your clients who wussed out.\n\nI think people would take to this like ducks to water. This is proper user interface thinking. Speaking as a user we need much more of this going forward; rather than convenience and the fastest cheapest way to get it done in technology!"
+ }
+]

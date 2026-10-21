@@ -1,0 +1,65 @@
+[
+ {
+  "id": 384947,
+  "parent": 0,
+  "author": "Michael Zuschlag",
+  "url": "http://www.zuschlogin.com/",
+  "date": "2007-12-21 16:04:09",
+  "type": "",
+  "html": "Krantz is right –the best for usability depends on the task and user. What is this page used for? How geographically knowledgeable are your users? For example, are users looking for a convenient location to visit from their Danish home? Can the vast majority of your users locate their home on a national map? Here in the geographically-challenged US, I’d bet there is a substantial population of US web users that can’t.\n\nIf your users know their location on the map and are trying to get to the closest office, the map alone is best. Consider adding some major geographic references to the map as non-links to aid the user in locating his/her current location.\n\nIf users are trying to get to the closest office, but many can’t use a map effectively, then include the list in addition to the map. For a list of 10 items, organize and label the list into 3 or 4 major geographic references. For example, Gentofte could be listed under “Copenhagen Area.”\n\nIf users have been given a specific city name to get information about an office there, you don’t need a map at all, but just an alphabetical list of cities."
+ },
+ {
+  "id": 384913,
+  "parent": 0,
+  "author": "ahajduk",
+  "url": "http://aha.jduk.org",
+  "date": "2007-12-21 10:52:52",
+  "type": "",
+  "html": "Comment from a user, not usability specialist:)\n\nThe 2nd map is much better - I can hover over the list navigation and learn about location instantly. The 1st map offers me clickable locations, but then I have to \"travel\" with my mouse.\n\nI also agree with Jesper's point about foreigners - or about people that do not necessary know geography that well:) - the map and locations visualized are priceless - it gives you quick information that you can confront with your job expectations. The list itself won't do.\n\nAll in all: combination of the map and list navigation gets my vote:)"
+ },
+ {
+  "id": 384914,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-21 10:53:00",
+  "type": "",
+  "html": "I just found cause of IE6 bug: It's the [Guillotine bug](http://positioniseverything.net/explorer/guillotine.html).\n\n> This one results when that container element has links inside, following the float. When this happens and certain links are hovered, the auto-enclosing behavior is toggled or \"switched off\", causing the lower edge of the container box to suddenly jump up to the bottom of the non-floated content. Hovering other links restores the behavior. This interesting effect is of course called the IE/Win Guillotine Bug Those of you viewing in IE/Win may play around with the following live demos, and for a more complete explaination see the IE/Win Guillotine Bug demo page .\n\nMy fix: To wrap the elements next to the floated image into an element with the \"holly hack\" applied (height: 1%; to force hasLayout).\n\nCSS:\\\n.reca-map-w-hover-offices-container {\\\nheight: 1%; /\\* fixes IE6 guillotine bug \\*/\\\n}\n\nHTML:\n\n\\<div class=\"reca-map-w-hover-offices-container\"\\>\\\n  \\<h3\\>...\\</h3\\>\\\n  \\<ul\\>\\\n    \\<li\\>...\\</li\\>\\\n  \\</ul\\>\\\n\\</div\\>\n\nI will update the example pages later today"
+ },
+ {
+  "id": 384910,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-21 10:18:43",
+  "type": "",
+  "html": "Thanks for the input, Peter.\n\nIn this case, there will be a maximum of 10 offices (the number of Capgemini offices in Sweden).\n\nThe list you link to \"sverige.se is good inspiration. As a foreigner, though, it lacks important information. As the list on sverige.se is \"either/or\", i can not learn anything from it.\n\nAs a foreigner I have no idea where for instance Jämtlands Län is.\\\nWhen I look at a list like that, i want to learn about where each area is on the map. And that is why I wanted to try version number 2 on this page.\n\nThat way, somebody might be able to learn more about data -- or at least connect the map with the list."
+ },
+ {
+  "id": 384905,
+  "parent": 0,
+  "author": "Peter Krantz",
+  "url": "http://www.standards-schmandards.com",
+  "date": "2007-12-21 09:46:23",
+  "type": "",
+  "html": "The use case for your map may be different but, in the user testing of the swedish government portal sverige.se they found that a combination of [map and list](http://sverige.se/sverige/templates/CountyPage____3165.aspx) was required. Some users preferred clicking on the map, others liked the text based list approach.\n\nI guess it comes down to if you are looking for a specific city to work in. Is tha map needed at all then? How many cities will the list/map contain? Is the location of the cities common knowledge for the users?"
+ },
+ {
+  "id": 386293,
+  "parent": 0,
+  "author": "Ryan Roberts",
+  "url": "http://www.ryanroberts.us/usability/national-geographic-adventure-navigational-nuisance/",
+  "date": "2007-12-28 07:51:37",
+  "type": "",
+  "html": "As has been stated it is important to understand the users intent with this map. That said I think the second map is probably preferrable. Though I'd suggest two changes:\n\n1\\. When mousing over the map location the yellow mouse over in the list is distracting to the eye. It pulls my focus over to the list, but I'm trying to use the map. I'd just match the bold mouse over done on the map.\n\n2\\. The listing of cities next to the map needs to be labeled such that the user will understand this is a duplicate list of the cities shown on the map. Also the cities didn't seem to be in alphabetical order...though this point maybe due to my not understanding Danish (I assuming)."
+ },
+ {
+  "id": 425510,
+  "parent": 0,
+  "author": "Contratipo",
+  "url": "http://www.contratipo.com.br/?a=8956",
+  "date": "2008-06-22 07:58:09",
+  "type": "",
+  "html": "I think too that the best for usability depends on the task and user, but it very useful to me and i already applied the example.\n\nThank you!"
+ }
+]

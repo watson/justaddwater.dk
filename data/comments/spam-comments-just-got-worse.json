@@ -1,0 +1,65 @@
+[
+ {
+  "id": 6171,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2006-06-23 01:22:03",
+  "type": "",
+  "html": "A tip: Although it is still unproven, you might consider encoding the entire comment form (after changing the form names and target urls).\n\nOn my site I used \"Automatics\" advanced encoder to encode the comment form. The result is the same impenetrable anti-spam measure that you get when you use the same technology to encode an email addresses.\\\nhttp://automaticlabs.com/products/enkoderform\n\nSo far it has prevented any spam from being posted (but that tactic is only 2 months old, only time will tell if it is effective in the long run).\n\n(Example: Look at the source on any page on my site, that have comments enabled.)"
+ },
+ {
+  "id": 6225,
+  "parent": 0,
+  "author": "Bhooshan",
+  "url": "http://www.bhooshan.com",
+  "date": "2006-06-23 07:20:23",
+  "type": "",
+  "html": "The spam attack has increased manifolds on my website too. Till recently, I did not have a single spam comment until there was a huge deluge. Thankfully Akismet has worked wonderfully for me. Additionally, I have also enabled the option of moderating any comment which gets posted on my website (through WordPress settings). This, I believe, prevents any comment spam to pass through, if Akismet fails. Not sure about it, but it works for me . Cheers! :-)"
+ },
+ {
+  "id": 6249,
+  "parent": 0,
+  "author": "Kerry Dye",
+  "url": "http://www.challengebusiness.com",
+  "date": "2006-06-23 10:24:59",
+  "type": "",
+  "html": "Is something going on? We've had masses of email spam recently - in the last 7 days we've had 26000 incoming emails and 23500 were spam - that's 90% plus the little bit that the silter doesn't catch, but that's tiny in comparison.\n\nI can't believe that anyone without spam filtering on their email can even function, and it seems the same applies to blog comments."
+ },
+ {
+  "id": 6266,
+  "parent": 0,
+  "author": "Piotr Narloch",
+  "url": "http://-",
+  "date": "2006-06-23 12:56:43",
+  "type": "",
+  "html": "I have seen a great increese of spam articles on formus also. Some of the car-related formus i read have been virtualy floded by spam.."
+ },
+ {
+  "id": 6279,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-23 14:16:56",
+  "type": "",
+  "html": "If you look at the Akismet statistics you'll also notice a HUGE spam increase in the last month or so:\n\nhttp://akismet.com/stats/\n\nIt startet roughly around the 1st of May."
+ },
+ {
+  "id": 6700,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog usability: Avoid spam comments",
+  "url": "http://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/",
+  "date": "2006-06-25 00:05:39",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk Instant Usability & Web Standards “I would love to change the world,                but they won’t give me the source code.” « Spam comments just got worse \\[...\\]"
+ },
+ {
+  "id": 489819,
+  "parent": 0,
+  "author": "Jeff",
+  "url": "http://www.eriksbikeshop.com/",
+  "date": "2009-10-07 20:20:19",
+  "type": "",
+  "html": "I was amazed to see on the Akismet spam page, that more then 75% of all commetns left are spam, and that it blocks ~8mil a day. You think people would give up.."
+ }
+]

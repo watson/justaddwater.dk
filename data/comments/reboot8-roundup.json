@@ -1,0 +1,65 @@
+[
+ {
+  "id": 4465,
+  "parent": 0,
+  "author": "dalager",
+  "url": "http://dalager.com/weblog",
+  "date": "2006-06-06 15:59:39",
+  "type": "",
+  "html": "Nice meeting you too, Jesper :-)\\\nAnd we will indeed meet again!"
+ },
+ {
+  "id": 4482,
+  "parent": 0,
+  "author": "Björn",
+  "url": "http://twob.net",
+  "date": "2006-06-06 18:28:12",
+  "type": "",
+  "html": "Likeways, Jesper! See you at the rails meetup"
+ },
+ {
+  "id": 4489,
+  "parent": 0,
+  "author": "Olle Jonsson",
+  "url": "http://blog.olle.ter.dk",
+  "date": "2006-06-06 20:38:22",
+  "type": "",
+  "html": "Awesome roundup, Jesper. Thanks for posting Flickr images.\n\nNow we can all hi-five in the digital space, as well; I lost the opportunity to palm my business card to most of the great people I meet.\n\nIt'll be a great meetup. I'll endeavour to call out to the [Skåne Sjælland Ruby User Group](http://www.SSRUG.net), in case any Skåne Railsers feel like crossing the water for some geekery."
+ },
+ {
+  "id": 4490,
+  "parent": 0,
+  "author": "Olle Jonsson&#8217;s Morningstar &raquo; Ruby on Rails meetup in Copenhagen",
+  "url": "http://olle.ter.dk/blog/?p=268",
+  "date": "2006-06-06 20:46:37",
+  "type": "pingback",
+  "html": "\\[...\\] Danish Railser Jesper summed it up, and he and Jakob Skjerning (”aka Mentalized”, as the Danes will say, not believing you’ll understand the name) invite you to a Rails meetup in Copenhagen (an unspecified bar, as of now: you’ll know when it’s time). \\[...\\]"
+ },
+ {
+  "id": 4525,
+  "parent": 0,
+  "author": "Luis Villa",
+  "url": "http://www.revoluser.com/",
+  "date": "2006-06-07 09:02:47",
+  "type": "",
+  "html": "Nice to see everything went fine!!! :-)\\\nCongratulations for your presentation, and for showing that a big it company can act_as_agile ;-)"
+ },
+ {
+  "id": 4571,
+  "parent": 0,
+  "author": "Marston",
+  "url": "http://www.marstononline.com/",
+  "date": "2006-06-08 15:21:02",
+  "type": "",
+  "html": "Excellent presentation by the way. It was good to have a little Rails discussion go on as well, I really enjoyed Reboot. It looks like I'm real focused in those pics hah! ;-)"
+ },
+ {
+  "id": 112191,
+  "parent": 0,
+  "author": "justaddwater.dk | Attending Reboot Conference",
+  "url": "http://justaddwater.dk/2007/03/22/attending-reboot-conference/",
+  "date": "2007-03-22 16:12:13",
+  "type": "pingback",
+  "html": "\\[...\\] Justaddwater.dk: “reboot8 roundup“ \\[...\\]"
+ }
+]

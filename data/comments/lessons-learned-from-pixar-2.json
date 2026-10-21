@@ -1,0 +1,38 @@
+[
+ {
+  "id": 498188,
+  "parent": 0,
+  "author": "Purple Heart",
+  "url": "http://www.carshelpingveterans.org/",
+  "date": "2010-07-21 20:02:58",
+  "type": "",
+  "html": "A smart business man here. Succeeding in the business world is extremely hard. Succeeding in the business world for the long term is even more difficult. The competition will be watching you. If your company does not lead the way with innovations, the business will most likely fail. Lead, do not follow. You need good people. In addition, you need good ideas."
+ },
+ {
+  "id": 522343,
+  "parent": 0,
+  "author": "Ben",
+  "url": "",
+  "date": "2011-05-09 19:39:38",
+  "type": "",
+  "html": "I love this quote - \"If you give a good idea to a mediocre group, they’ll screw it up. If you give a mediocre idea to a good group, they’ll fix it. Or they’ll throw it away and come up with something else.\"\n\nPixar are an amazing company to look to for inspiration, not least the way they operate and combine so many different concepts into each one of their movies.\n\nTake Finding Nemo for example..."
+ },
+ {
+  "id": 542530,
+  "parent": 0,
+  "author": "Mark",
+  "url": "",
+  "date": "2011-09-21 14:34:35",
+  "type": "",
+  "html": "@ Purple Heart \"Succeeding in the business world is extremely hard...\" I gotta say I don't agree. It's amazing how easy success comes to some people. However I do agree with the sentiment that succeeding for the long term is harder. But I've seen a lot of folks do well and not because they are really creative or talented or great leaders. It's just cos they got lucky, but mainly they had the guts to go out and try."
+ },
+ {
+  "id": 599252,
+  "parent": 0,
+  "author": "Eric Davis",
+  "url": "http://www.chirkhr.com",
+  "date": "2012-03-23 19:25:44",
+  "type": "",
+  "html": "I can think of a many major crises I've been in that were the result of a bunch of minor issues piled up. Individually, each issue would have been something small and wouldn't have had much impact but once they all happened together, the crisis was born.\n\nFor example, I remember one: an SSL certificate expired (which wasn't caught), which caused the server to throw an error, which caused an automatic code updating system to crash because it got a partial update due to the SSL error, which then brought down a production site. If we fixed any of the minor issues, this wouldn't have accelerated into a crisis (renew certificate early, watch for ssl errors on server, make automatic code system rollback on errors, etc).\n\nDoing a 5 Whys analysis or a root cause analysis can sometimes help cleanup the aftermath, but that isn't a substitute for a great team with experience.\n\nBookmarked the video to watch later."
+ }
+]

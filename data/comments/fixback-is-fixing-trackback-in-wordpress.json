@@ -1,0 +1,110 @@
+[
+ {
+  "id": 36,
+  "parent": 0,
+  "author": "justaddwater.dk &raquo; Blog Archive &raquo; FixBack is Fixing Trackback in WordPress",
+  "url": "http://justaddwater.dk/2005/12/12/fixback-is-fixing-trackback-in-wordpress/",
+  "date": "2005-12-12 16:48:54",
+  "type": "pingback",
+  "html": "\\[...\\] I’ve been a bit irritated with WordPress for a while now (our blogging software for justaddwarer.dk). For some reason most of our trackbacks from other blogs seem to use ugly styled permalinks. With that I mean http://justaddwater.dk/?p=41 instead of the much nicer http://justaddwater.dk/2005/12/12/fixback-is-fixing-trackback-in-wordpress/. \\[...\\]"
+ },
+ {
+  "id": 37,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2005-12-12 16:52:02",
+  "type": "",
+  "html": "Hmmm weird... Did i just ping- or trackback my self by writing a link in cleartext in the post to the post it self???"
+ },
+ {
+  "id": 39,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-13 22:14:11",
+  "type": "",
+  "html": "It seems that the link to www.justaddwater.dk creates a circular trackback. Very funny!\n\nIt reminds me of a story: Once I had a boss that wanted to test the auto-reply of his email program. This was roughly 8 years ago, and email applications were still a bit rough on the edges.\n\nHe sent a mail to himself to test the auto-reply, and went on holidays. A few hours later, the data manager contacted him. He had 80.000 emails in his mailbox and that it filled up the harddisk. Hehe, so amazing that this email program actually was a real product:\n\nLotus Notes!"
+ },
+ {
+  "id": 401574,
+  "parent": 0,
+  "author": "WebDesignAssociates",
+  "url": "http://www.webdesignassociates.net",
+  "date": "2008-03-11 12:24:45",
+  "type": "",
+  "html": "I agree the content descriptive url is so much better. Not only for site optimization but for the simple convienience of the visitor."
+ },
+ {
+  "id": 403755,
+  "parent": 0,
+  "author": "Deepak",
+  "url": "http://skdeepak88.blogspot.com",
+  "date": "2008-03-23 19:45:44",
+  "type": "",
+  "html": "hi,\\\nI am in the process fo increasing my page rank. So please help me to give a link back. Please.. I will be great full to you If you giv me a link back.."
+ },
+ {
+  "id": 425788,
+  "parent": 0,
+  "author": "Wordpress Plugin",
+  "url": "http://chrishornak.com",
+  "date": "2008-06-23 15:55:48",
+  "type": "",
+  "html": "Thanks for FixBack! I have been having the some problem."
+ },
+ {
+  "id": 439402,
+  "parent": 0,
+  "author": "Water4Gas",
+  "url": "http://www.water4gas-reviews.com",
+  "date": "2008-08-31 13:58:00",
+  "type": "",
+  "html": "I had the same problem with my trackbacks. But I didn't use FixBack to solve it. However it is the best."
+ },
+ {
+  "id": 451881,
+  "parent": 0,
+  "author": "Helen",
+  "url": "http://spice.net.ua",
+  "date": "2008-10-14 00:32:23",
+  "type": "",
+  "html": "If you have a problem with WordPress. It is easy to handle if you have knowledge of php-code. If you do not know the code - you can turn to the php-programmer and he will help decide. If such a possibility does not - come to the aid of plug-ins. And they are many."
+ },
+ {
+  "id": 458945,
+  "parent": 0,
+  "author": "Leonardo Medina",
+  "url": "http://www.achando.net",
+  "date": "2008-12-11 13:04:30",
+  "type": "",
+  "html": "Perhaps I have already read about this plugin anywhere else and I had this in my database of plugins. I have plenty of all plugins in my system to install them later."
+ },
+ {
+  "id": 451837,
+  "parent": 0,
+  "author": "Steven@Whatistheprocedureforbuyinganewcar?",
+  "url": "",
+  "date": "2008-10-13 21:11:31",
+  "type": "",
+  "html": "Thanks for the info on the plugin.\n\nHopefully, I'll be able to learn how to use it properly. :)"
+ },
+ {
+  "id": 488072,
+  "parent": 0,
+  "author": "poker",
+  "url": "http://www.juegospokergratis.info/poker/",
+  "date": "2009-07-30 18:36:06",
+  "type": "",
+  "html": "Thank you for inform us, i have the same problem, i just dowloaded the plungin, and give it a try, hope its works."
+ },
+ {
+  "id": 487347,
+  "parent": 0,
+  "author": "Ricarrdo",
+  "url": "http://aupart.com",
+  "date": "2009-07-05 19:06:38",
+  "type": "",
+  "html": "once i've tried to install this plugin but something went wrong, don't know why. Maybe i should try once again, guess your post will help me"
+ }
+]

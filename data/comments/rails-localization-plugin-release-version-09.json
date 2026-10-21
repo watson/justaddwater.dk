@@ -1,0 +1,119 @@
+[
+ {
+  "id": 400506,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-03-05 16:36:36",
+  "type": "",
+  "html": "@Hans: No way to change files dynamically as of present.\n\nThe lang file is required into the code. If you were to change that, you should change the load structure.\n\nFirst, each lang-file should load it's own namespace. Then you should be able to select language on a per-request basis.\n\nYou are welcome to give it a try. If you find a way to do it, I'm open to putting it into the next version -- as long as it won't slow down the plugin exteremely"
+ },
+ {
+  "id": 400505,
+  "parent": 0,
+  "author": "Hans",
+  "url": "",
+  "date": "2008-03-05 16:24:14",
+  "type": "",
+  "html": "I am using localization_simplified and tries to combine it with the plugin Localization. They work very well together and result in both localization of application strings in the views and localization of inbuilt strings.\\\nHowever in order for the user to select language after login I would like to be able to set the language in localization_simplified from the controller. Is that possible ? Any thoughts on how that could be done ?"
+ },
+ {
+  "id": 420014,
+  "parent": 0,
+  "author": "lolo",
+  "url": "",
+  "date": "2008-05-23 23:06:24",
+  "type": "",
+  "html": "In Rails 2.1.0 RC1, I'm getting \"uninitialized constant Rails::Plugin::L10N_LANG (NameError)\". Setting the constant in environment.rb (or initializers/something.rb) doesn't help. This helps:\n\nL10N_LANG = :languagecode\n\n( = instead of \\|\\|= ) in init.rb"
+ },
+ {
+  "id": 420512,
+  "parent": 0,
+  "author": "Hasan Rahman",
+  "url": "http://www.rahman.dk",
+  "date": "2008-05-26 20:19:57",
+  "type": "",
+  "html": "Great plugin! Just what I needed, keep it up."
+ },
+ {
+  "id": 420708,
+  "parent": 0,
+  "author": "Hans",
+  "url": "",
+  "date": "2008-05-27 16:28:52",
+  "type": "",
+  "html": "Iolo is correct. Init file should be changed to L10N_LANG = :languagecode in order to work\n\nIt is a great plugin, but I have some problem with using it as in the error messages the variable or attribute names are not translated.\\\nI tried to do that by using my own version of full_messages incorporating localization translation method, but failed as I not know when and where you change from the original messsage to the translated\\\nAny idea how to separate out the name of the attributes"
+ },
+ {
+  "id": 420744,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-05-27 20:44:44",
+  "type": "",
+  "html": "@lolo and @Hans. I would gladly fix init.rb right away, but before I do, help me out with this:\n\nI really prefer if the plugin could be overwritten later with a recent version. And plugins work best if we can keep them pristine with no project specific changes. Therefore I wanted to be able to place the settings like L10N_LANG in more appropriate places.\n\nAny suggestions on how I could honor that principle and still make the code work 'out of the box'?"
+ },
+ {
+  "id": 420748,
+  "parent": 0,
+  "author": "Hans",
+  "url": "",
+  "date": "2008-05-27 21:22:47",
+  "type": "",
+  "html": "maybe you can solve it as in the localization plugin. They has an attribute in there localisation module named lang and you can set that attribute Localization.lang=:se in your controller. Maybe it could be possible to set LocalizationSimplified.l10n_lang in an controller.\\\nHow about my problem concerning translating the attribute names"
+ },
+ {
+  "id": 420755,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-05-27 22:48:23",
+  "type": "",
+  "html": "Hans, feel free to submit a patch for your suggestion -- currently i'm almost off on vacation (later this week). I'll gladly commit any patches I recieve Thursday at the latest.\n\nConcerning translation of attribute names, that feature is not implemented in LocalizationSimplified.In a previous project, I used Danish model + attribute names and added the proper pluralization rules in inflections.\n\nThat worked fine, so that's an option if you can live with translated model/attributes."
+ },
+ {
+  "id": 420850,
+  "parent": 0,
+  "author": "Hans",
+  "url": "",
+  "date": "2008-05-28 18:59:17",
+  "type": "",
+  "html": "I don't dare to use localized attribute names in the models as rails and ruby are based on English conventions. I therefore prefer another solution that performs the translation as the last step before displaying the word. However, this solution is more like a fix and there should be better solutions. Anyhow, here is my path, that works for me. More pathes may follow regarding the other parts of your plugin as date etc.\n\ndef error_messages_for(\\*params)\\\noptions = params.last.is_a?(Hash) ? params.pop.symbolize_keys : {}\\\nobjects = params.collect {\\|object_name\\| instance_variable_get(\"@#{object_name}\") }.compact\\\ncount = objects.inject(0) {\\|sum, object\\| sum + object.errors.count }\\\nunless count.zero?\\\nhtml = {}\\\n\\[:id, :class\\].each do \\|key\\|\\\nif options.include?(key)\\\nvalue = options\\[key\\]\\\nhtml\\[key\\] = value unless value.blank?\\\nelse\\\nhtml\\[key\\] = 'errorExplanation'\\\nend\\\nend\\\nmessages = ActiveRecord:: Errors.default_error_messages\\\nheader_message = format( messages\\[:error_header\\],\\\npluralize(count, messages\\[:error_translation\\]),\\\n(options\\[:object_name\\] \\|\\|\\\nparams.first).to_s.gsub(\"\\_\", \" \"))\\\nerror_messages = objects.map {\\|object\\| object.errors.full_messages.map {\\|msg\\| content_tag(:li, msg) } }\n\n\\# Patch do translate variablenames with localisation plugin\\\n\\# Own error messages (:message =\\> Example) had to be translated in the validation specification (:message =\\> \\_(Example))\\\n\\# error_messages_string=error_messages.join('%')\\\nerror_messages.each_index do \\|ix\\|\\\nerror_messages\\[ix\\].each_index do \\|jx\\|\\\nobjects.each do \\|object\\|\\\nobject.attributes.each_key do \\|attribute\\|\\\nvariable=attribute.humanize\\\ntranslated_variable=\\_(variable) \\#Translation method in Localization plugin\\\nerror_messages\\[ix\\]\\[jx\\]=error_messages\\[ix\\]\\[jx\\].gsub(variable,translated_variable)\\\nerror_messages\\[ix\\]\\[jx\\]= error_messages\\[ix\\]\\[jx\\].gsub('confirmation',\\_('confirmation')) \\#Fix to handle password confirmation, that not is an attribute ?\\\nend\\\nend\\\nend\\\nend\\\n\\# end patch\n\ncontent_tag(:div,\\\ncontent_tag(options\\[:header_tag\\] \\|\\| :h2, header_message) \\<\\<\\\ncontent_tag(:p, messages\\[:error_subheader\\]) \\<\\<\\\ncontent_tag(:ul, error_messages),\\\nhtml\\\n)\\\nelse\\\n''\\\nend\\\nend\\\nend"
+ },
+ {
+  "id": 421168,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-05-30 12:25:13",
+  "type": "",
+  "html": "@hans\n\ni have now added you on RubyForge as administrator (along with casperfabricius).\n\nYou don\\t have to add a patch... just apply it in the relevant file(s). Also, make sure to add the commit comment + date + author in the changelog file as well when you commit\n\nThanks a lot for putting effort into it :)"
+ },
+ {
+  "id": 421137,
+  "parent": 0,
+  "author": "Hans",
+  "url": "",
+  "date": "2008-05-30 09:52:12",
+  "type": "",
+  "html": "Hi !\\\nDo I just add my patch as a file or are there more formal ways to add the patch?\\\nMy Rubyforge user account is marmolin.\n\nI will now try to make it possible to change language dynamically, I do not really know how as I hope to find a solution that can work as an option, without changing your original plugin too much. I am just looking at rubys possibilities for dynamic compilation.\\\nDo you have any suggestions ?"
+ },
+ {
+  "id": 421056,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-05-30 01:16:34",
+  "type": "",
+  "html": "Hans. thanks a lot for the patch -- i'm very sorry i did not manage to commit your patch before my vacation.\n\nI will give you commit access to the repository and want you to commit this patch in (as i'm on my way on vacation). Unfortunately i do not know your Rubyforge user account name. Please send me.\n\nThis way you will also have access to commit in future patches. (this is actually the idea of Rubinius' Evan Phoenix and i am very inspired by opening up the code to everybody interesting to contributing :)"
+ },
+ {
+  "id": 487489,
+  "parent": 0,
+  "author": "Mosfet",
+  "url": "",
+  "date": "2009-07-13 20:06:01",
+  "type": "",
+  "html": "Webrick server can now launch, but an error occurs in an edit rendering:\n\nArgumentError in Opes#edit\n\nShowing app/views/opes/edit.html.erb where line \\#13 raised:\n\nwrong number of arguments (4 for 3)\\\nExtracted source (around line \\#13):\n\n10: Date de relevé\\\n11:\\\n12:\\\n13: Date de l'opération\\\n14: Montant\\\n15: Libellé\\\n16:\\\nRAILS_ROOT: /Users/admin/Documents/Rails/MyMoney\n\nApplication Trace \\| Framework Trace \\| Full Trace\\\n/Users/admin/Documents/Rails/MyMoney/vendor/rails/actionpack/lib/action_view/helpers/date_helper.rb:964:in \\`date_select'\\\n/Users/admin/Documents/Rails/MyMoney/vendor/rails/actionpack/lib/action_view/helpers/date_helper.rb:964:in \\`date_select'\\\n/Users/admin/Documents/Rails/MyMoney/app/views/opes/edit.html.erb:13:in \\`\\_run_erb_app47views47opes47edit46html46erb'\\\n/Users/admin/Documents/Rails/MyMoney/app/views/opes/edit.html.erb:12:in \\`\\_run_erb_app47views47opes47edit46html46erb'\n\nAny idea?"
+ }
+]

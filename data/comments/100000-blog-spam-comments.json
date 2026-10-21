@@ -1,0 +1,56 @@
+[
+ {
+  "id": 78349,
+  "parent": 0,
+  "author": "Håvard Pedersen",
+  "url": "http://hp.fuzzy76.net/",
+  "date": "2007-02-06 13:12:06",
+  "type": "",
+  "html": "I hope you are aware that the referrer field is optional and some privacy filters blocks it, so comments sent with no referrer field should be let through. I'm posting this without one, so I guess this serves as a test as well. :)"
+ },
+ {
+  "id": 78378,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-02-06 13:51:48",
+  "type": "",
+  "html": "Hi Håvard\n\nYes you are right.... and thanks for letting us know :)\n\nThough, now that I look closer at the htaccess filter, I see that I thought of this when I created it and also allowed refer fields that are empty:\\\n`<IfModule mod_rewrite.c>`\\\n`RewriteEngine on`\\\n`RewriteCond %{HTTP_REFERER} !^$`\\\n`RewriteCond %{HTTP_REFERER} !^http://(www\\.)?justaddwater.dk/.*$ [NC]`\\\n`RewriteRule jaw-comments-post.php$ - [F]`\\\n`</IfModule>`\n\nAnd as you can see, your comment got though correctly."
+ },
+ {
+  "id": 78602,
+  "parent": 0,
+  "author": "Emil Stenström",
+  "url": "http://friendlybit.com",
+  "date": "2007-02-06 20:01:37",
+  "type": "",
+  "html": "Interesting article. I'm using Spam Karma 2 instead but lately a few comments with just random letters in have gotten through. I think I'll try some of your ideas. Thanks for sharing."
+ },
+ {
+  "id": 119319,
+  "parent": 0,
+  "author": "justaddwater.dk | Spam Blog Posted 182 Articles in One Day",
+  "url": "http://justaddwater.dk/2007/04/02/spam-blog-posted-182-articles-in-one-day/",
+  "date": "2007-04-02 02:35:51",
+  "type": "pingback",
+  "html": "\\[...\\] in “how to avoid spam comments” (part 1, part 2), and the last 2 months since we passed 100,000 spam comments, we have had another 57,000 spam \\[...\\]"
+ },
+ {
+  "id": 376127,
+  "parent": 0,
+  "author": "justaddwater.dk | Announcement: Spam Filter Free Day",
+  "url": "http://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/",
+  "date": "2007-11-27 11:18:47",
+  "type": "pingback",
+  "html": "\\[...\\] 100,000 Blog Spam Comments (Feb 26th) \\[...\\]"
+ },
+ {
+  "id": 376129,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog Usability: Spam Comments Irritate Subscribers",
+  "url": "http://justaddwater.dk/2007/07/10/blog-usability-spam-comments-irritate-subscribers/",
+  "date": "2007-11-27 11:19:24",
+  "type": "pingback",
+  "html": "\\[...\\] 100,000 Blog Spam Comments, February 6, \\[...\\]"
+ }
+]

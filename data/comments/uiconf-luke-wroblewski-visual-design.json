@@ -1,0 +1,38 @@
+[
+ {
+  "id": 18057,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2006-10-11 16:41:19",
+  "type": "",
+  "html": "Good Notes:\n\n-- Recently i had to design for an organization with only 256 colors. “IT will not let them upgrade. It’s a security risk”\n\nFunny, I can see the security problems with seeing many colors :o)"
+ },
+ {
+  "id": 18061,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-10-11 17:47:49",
+  "type": "",
+  "html": "Thanks for the comment, Thomas.\\\nThe quote is taken out of a context: That some companies run old software on old computers, and IT management doesn't allow software upgrades. Because of security risks.\n\nI can only say, that you should have been here :)\n\nNow, back to live blogging"
+ },
+ {
+  "id": 18076,
+  "parent": 0,
+  "author": "Twenty Best Sites &raquo; Late breaking news",
+  "url": "http://20bestsites4.info/index.php/archives/271",
+  "date": "2006-10-11 20:13:33",
+  "type": "pingback",
+  "html": "\\[...\\] UI Conf: Luke Wroblewski on Visual \\<b\\>Design\\</b\\> in the Development Process \\[...\\]"
+ },
+ {
+  "id": 20140,
+  "parent": 0,
+  "author": "I Love User Experience",
+  "url": "http://www.iloveux.com/weblog/archives/2006/10/luke_wroblewskis_blog_function.html",
+  "date": "2006-10-23 05:59:33",
+  "type": "trackback",
+  "html": "**Luke Wroblewski's Blog: Functioning Form...**\n\nIf you have not had a chance to visit Luke Wroblewski's blog about interface design you should stop what you are doing right now and head over to Functioning Form. You'll literally spend hours reading this blog without stopping!......"
+ }
+]

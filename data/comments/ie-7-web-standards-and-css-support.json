@@ -1,0 +1,74 @@
+[
+ {
+  "id": 11227,
+  "parent": 0,
+  "author": "Rasmus",
+  "url": "",
+  "date": "2006-08-28 11:10:22",
+  "type": "",
+  "html": "Internet Explorer 7 Release Candidate 1 in standalone mode:\\\nhttp://tredosoft.com/IE7_standalone"
+ },
+ {
+  "id": 11228,
+  "parent": 0,
+  "author": "Rasmus",
+  "url": "",
+  "date": "2006-08-28 11:27:15",
+  "type": "",
+  "html": "Oh and by the way, you can get IE6 in standalone mode:\\\nhttp://browsers.evolt.org/?ie/32bit/standalone"
+ },
+ {
+  "id": 16206,
+  "parent": 0,
+  "author": "justaddwater.dk | All IE Browsers Standalone On Same PC",
+  "url": "http://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/",
+  "date": "2006-09-28 10:31:21",
+  "type": "pingback",
+  "html": "\\[...\\] Yousif Al Saif of Tredosoft is probably best known for the IE7 standalone browser installer that can run isolated on a Windows machine without disturbing the version already installed. I wrote about this in “IE7, web standards and css support“. \\[...\\]"
+ },
+ {
+  "id": 276416,
+  "parent": 0,
+  "author": "mediaVinci",
+  "url": "http://www.pixel-templates.com",
+  "date": "2007-10-01 15:58:52",
+  "type": "",
+  "html": "The web page below uses an iframe using a height with a 100% value. The web page renders fine in Mozilla Firefox, Apple Safari, Opera and many other browsers. IE7 is the only web browser that has severe difficulties in displaying the iFrame and its content correctly.\n\nhttp://www.history-of-aviation.com/poster/1919-1932/POSTER-C-BFW-U12-01/index.php\n\nThe web page was developed in compliance with css standards. It is a real pain to see that IE7 is still not following the css rules of web standards. I believe IE developers have still some work to do here.\n\nMy 2c,\n\nMarc Klein\\\nmediaVinci - The art of invention"
+ },
+ {
+  "id": 403856,
+  "parent": 0,
+  "author": "Bubbila",
+  "url": "http://www.bubbila.com/frameit/",
+  "date": "2008-03-24 13:55:31",
+  "type": "",
+  "html": "Sweet tutorial, just what I have been looking for.\\\nI have added you to Stumbleupon."
+ },
+ {
+  "id": 426187,
+  "parent": 0,
+  "author": "Umar",
+  "url": "",
+  "date": "2008-06-25 12:50:48",
+  "type": "",
+  "html": "i have dropdownlist in Asp.net 2.0 and i want to change its border.By defualt there is no such property to change the border for this control. i use css but the border visible in Fire Fox 3 not in Internet Explorer 7. Whereas IE7 supported the border-color property.Any advice regarding the issue is highly appriciated. Thanks in advance."
+ },
+ {
+  "id": 428780,
+  "parent": 0,
+  "author": "Roger",
+  "url": "",
+  "date": "2008-07-07 08:41:29",
+  "type": "",
+  "html": "Hi there, I noticed that you mentioned \"Select control: CSS style-able and not always on top \" is fixed in IE7, but the border-width and border-color still doesn't work for IE7, is there any way to get around that? Thanks."
+ },
+ {
+  "id": 484154,
+  "parent": 0,
+  "author": "WEB 3.0 &raquo; Blog Archive &raquo; ¿Así que querías saber (casi todo) de CSS?",
+  "url": "http://web-3.es/2009/04/%c2%bfasi-que-querias-saber-de-css/",
+  "date": "2009-04-18 03:35:51",
+  "type": "pingback",
+  "html": "\\[...\\] IE7, Web Standards and CSS Support - Jesper Ronn-Jensen \\[...\\]"
+ }
+]

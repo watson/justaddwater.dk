@@ -1,0 +1,29 @@
+[
+ {
+  "id": 143829,
+  "parent": 0,
+  "author": "What&#8217;s new with Google Analytics? &middot; The Google Maven",
+  "url": "http://www.thegooglemaven.com/2007/05/10/whats-new-with-google-analytics-2/",
+  "date": "2007-05-10 22:09:06",
+  "type": "pingback",
+  "html": "\\[...\\] Google Analytics Redesign — Flaw Slipped Through? \\[...\\]"
+ },
+ {
+  "id": 144726,
+  "parent": 0,
+  "author": "MN Web Development",
+  "url": "http://www.webcontempo.com",
+  "date": "2007-05-12 15:02:46",
+  "type": "",
+  "html": "Thanks for posting the update, I was reading this and thought for sure it would take awhile for them to fix it. Thanks again!"
+ },
+ {
+  "id": 143071,
+  "parent": 0,
+  "author": "Michael Harrison",
+  "url": "http://www.roirevolution.com/blog",
+  "date": "2007-05-09 16:09:11",
+  "type": "",
+  "html": "Hey Jesper. We've been using the new interface for a couple of months, and I can say that the new Referring Sites report is a little more intuitive than drilling down via the Analysis Options / Cross Segment icon. I've written a response to your article, complete with clumsily rendered screenshots. :) Check it out here:\n\nhttp://www.roirevolution.com/blog/2007/05/view_entire_referring_url_in_google_analytics_1.html\n\nAlso, if you want to consolidate the entire referral site and referral path, you can do it with filters. I've talked about that in the entry above, as well.\n\nWe love your blog here in Raleigh, btw. Keep up the great work, and don't hold back on the new GA interface when you finally get access. The more feedback, the better, right?"
+ }
+]

@@ -1,0 +1,74 @@
+[
+ {
+  "id": 88341,
+  "parent": 0,
+  "author": "Håvard Pedersen",
+  "url": "http://hp.fuzzy76.net/",
+  "date": "2007-02-21 09:42:23",
+  "type": "",
+  "html": "This has been irritating me for a long time, especially the blue menu list in the top left corner. Someone need to write a centralized mechanism for outputting these. Being able to custome these would've been nice."
+ },
+ {
+  "id": 88470,
+  "parent": 0,
+  "author": "Tore Vesterby",
+  "url": "http://15minutter.net",
+  "date": "2007-02-21 13:39:55",
+  "type": "",
+  "html": "Brilliant overview from Mr. McEvoy.\n\nAs to the inconsistencies, I suppose they code very much like the Feds do in [Snow Crash](http://en.wikipedia.org/wiki/Snow_crash \"Wikipedia reference to the book\"). In other words in small cells that have no idea what the other cells are doing. Quite like [other](http://ibm.com) [conglomerates](http://microsoft.com) across the Atlantic."
+ },
+ {
+  "id": 88710,
+  "parent": 0,
+  "author": "Emil Stenström",
+  "url": "http://friendlybit.com",
+  "date": "2007-02-21 20:13:35",
+  "type": "",
+  "html": "Hmm... You've started to copy people's posts a lot Jesper. That table probably took at lot of work to compile, and even though you link and quote people won't visit his site when you copy it like that. I say it's work a real visit."
+ },
+ {
+  "id": 88745,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-02-21 21:58:04",
+  "type": "",
+  "html": "Emil,\\\nI totally agree that Chris deserves credit for his relentless work, and I can follow your thought that he does not get the attention he deserves when people copy the entire content.\n\nYesterday, when I saw Chris' article, I knew immediately that I wanted to comment on it. And link to it. Also, fighting inconsistency is a subject I usually bring up on a daily basis in the projects I work on.\n\nI think it's important to understand how Justaddwater.dk started. Primarily, Thomas and I wanted to write stuff for ourselves to use. Next, we wanted to influence our co-workers indirectly. Third, we decided to do it in a format so that anybody -- just like you -- could add value to our notes.\n\nThat's why I primarily see the stuff I write (comment on, quote, copy, etc.) as a notebook for me.\n\nI remember as we started, Thomas and I decided not \"just to quote\" stuff. But actually (as a minimum) add our own thoughts to the content we linked to. When I'm looking back, I can see that recently, we're linking to more stuff without adding our own thoughts.\n\nThis still has a great value for me, as I can use it in my professional work, and I can refind the examples that make a difference.\n\nAnother alternative I tried -- but only for a very short period of time -- was to publish a post with only links to interesting content. Thomas and I quickly agreed that it was not the kind of content we want on this blog.\n\nFor now, I will resist the temptation to change or remove some of the quote in this blog post. But in the future, I'll definitely make sure to add more to quoted content.\n\nYou bring up another issue as well (formulated differently). Allow me to rephrase: When quoting, don't quote so much, so there is nothing left to learn from the link.\n\nThanks for keeping an eye out and raising the bar, Emil :)"
+ },
+ {
+  "id": 88758,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-02-21 22:21:06",
+  "type": "",
+  "html": "Emil: One more thing I almost forgot: Your site rocks! I really dig your good articles. Keep up the good work!"
+ },
+ {
+  "id": 88809,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-02-22 00:39:01",
+  "type": "",
+  "html": "I agree that Google could do a better job with consistency... but I think that the examples above are of minor importance.\n\nMuch more serious is the story that it tells of how Google works behind the scenes. It illustrates that Google often \"reinvents the wheel\" and work as seperate units - rather than for a common strategic goal.\n\nWorking like Google would be a disaster for most othe companies. But, since Google's revenue almost solely comes from advertising - and since they do so well - they probably do not experience the lack of efficiency of not working together. They have no ressource shortage in the form that they can easially add whatever ressources they need without any significant financial impact."
+ },
+ {
+  "id": 92908,
+  "parent": 0,
+  "author": "Emil Stenström",
+  "url": "http://friendlybit.com",
+  "date": "2007-02-27 19:53:55",
+  "type": "",
+  "html": "Jesper Rønn-Jensen: Thanks for your thorough answer! It makes me an even more dedicated reader.\n\nI do see what you mean and I somehow find it nice not to have to click around to find stuff. As you said it does feel a little bad though, the least we could do is give good articles our visits. \"More content than quotes\" is a good rule I think.\n\nAbout my site, I haven't posted for a while... I'm not sure that's any better than quoting too much :)"
+ },
+ {
+  "id": 131485,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-04-23 14:43:30",
+  "type": "",
+  "html": "Somewhat related article on \"4 Principles of Effective Navigation for the Web\", where some of the google menus are used as example.\n\nhttp://www.paradymesolutions.com/articles/4-principles-of-effective-navigation-for-the-web/"
+ }
+]

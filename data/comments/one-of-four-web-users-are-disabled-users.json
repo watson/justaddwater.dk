@@ -1,0 +1,362 @@
+[
+ {
+  "id": 97,
+  "parent": 0,
+  "author": "UXPlog",
+  "url": "http://weblogs.capgemini.com/uxplog/2006/01/one_of_four_web.php",
+  "date": "2006-01-20 23:42:05",
+  "type": "trackback",
+  "html": "**One of four web users are disabled**\n\nAs a followup on Luis' article \"banking accessibility, I thought I'd post my thoughts on a Danish study that counts 25% of all web users as having accessibility problems on your website. I posted it on Justaddwater.dk to make it..."
+ },
+ {
+  "id": 99,
+  "parent": 0,
+  "author": "WebWord &raquo; Blog Archive &raquo; 25% of all web users are disabled",
+  "url": "http://www.webword.com/2006/01/21/25-of-all-web-users-are-disabled/",
+  "date": "2006-01-21 17:38:42",
+  "type": "pingback",
+  "html": "\\[...\\] Read the posting: One of four web users are disabled users… \\[...\\]"
+ },
+ {
+  "id": 100,
+  "parent": 0,
+  "author": "Barry Welford",
+  "url": "http://www.strategicmarketingmontreal.ca/blogger.html",
+  "date": "2006-01-21 19:08:30",
+  "type": "",
+  "html": "I think you've got to say that much more than 25% of websites are handicapped or visibility-challenged. It's the websites that want to communicate. So it's not the web users who are disadvantaged but the websites.\n\nI think this is particularly true for websites designed only for Internet Explorer that break in Mozilla Firefox and other standards-compliant browsers. Depending on the market segment, more than 25% of visitors will be using Firefox, Opera or some similar browser and will not be able to appreciate the website. Ok they're deprived of the experience but the bigger loser is the website."
+ },
+ {
+  "id": 105,
+  "parent": 0,
+  "author": "at Putting people first",
+  "url": "http://www.experientia.com/blog/710/",
+  "date": "2006-01-23 21:34:27",
+  "type": "pingback",
+  "html": "\\[...\\] Read full post \\[...\\]"
+ },
+ {
+  "id": 107,
+  "parent": 0,
+  "author": "justaddwater.dk |",
+  "url": "http://justaddwater.dk/2006/01/24/107/",
+  "date": "2006-01-24 23:06:47",
+  "type": "pingback",
+  "html": "\\[...\\] More numbers show up that indicate back up my claim that 25% of your users are disabled. (”disabled” to me is physical as for instance a visual impairment, and technological as using a small screen or wireless device) \\[...\\]"
+ },
+ {
+  "id": 115,
+  "parent": 0,
+  "author": "peregrine",
+  "url": "",
+  "date": "2006-01-26 21:39:41",
+  "type": "",
+  "html": "Barry Welford's point is a very good one! Yes we must design websites with more than passing consideration for people with disabilities ... and we must recognize that failing to do so will cause the owner of the website to reach fewer people. To maximize the customer base, the principles of Universal Design and standards compliance should prevail.\n\nThose principles are evolving steadily, and should be settling down to some tried-and-true certainties just about any time now. Then we'll wait another 10 or 20 years for everyone to recognize the value of this standardization: \"Oh, you mean we'll communicate better if we learn to speak the same language?\""
+ },
+ {
+  "id": 116,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-26 21:58:47",
+  "type": "",
+  "html": "Barry and peregrine have a good point. Most websites are handicapped. I like the up-side-down view. This is actually very similar to the WASP initiative (promoting web standards). For now, I'll leave that angle up to you to pursue.\n\nMy point in this article is the other way around. I want to emphasize on the end users. A big part of them are disabled. Saying that websites that don't support them are handicapped; that's OK with me. Excellent point!"
+ },
+ {
+  "id": 117,
+  "parent": 0,
+  "author": "ivogomes.com &raquo; 25% dos utilizadores web são deficientes",
+  "url": "http://www.ivogomes.com/blog/25-dos-utilizadores-web-sao-deficientes/",
+  "date": "2006-01-30 15:37:20",
+  "type": "pingback",
+  "html": "\\[...\\] Para saberem mais, leiam este artigo onde os autores (Jesper Rønn-Jensen e Thomas Watson Steen) fazem referência também a artigos de Jakob Nielsen e Jeffrey Veen sobre a usabilidade e acessibilidade de dispositivos para pessoas com deficiências. \\[...\\]"
+ },
+ {
+  "id": 396,
+  "parent": 0,
+  "author": "Dan",
+  "url": "http://www.washington.edu/computing/atl/",
+  "date": "2006-02-02 20:14:17",
+  "type": "",
+  "html": "\"technical disability\" is perhaps a euphemism for \"poor usability\" -- I like the idea of referring to the site as disabled, rather than the user. I am frustrated daily in visiting sites that are designed for IE only. Think of the effort and thought that goes into a web site -- I bet the designer(s) would feel pretty silly knowing that work is going for naught much of the time. Why not spend that valuable time making sure the page works for the broadest swath of users, instead of fluffing it up with a bunch of eye candy that adds nothing to the content?"
+ },
+ {
+  "id": 398,
+  "parent": 0,
+  "author": "Juan Ulloa",
+  "url": "",
+  "date": "2006-02-02 22:36:27",
+  "type": "",
+  "html": "I would prefer not to refer to a user as being disabled simply because of their limiations of the technology they use to access the web. Like prior posters have mentioned, this is more of a limitation of the website rather than the user."
+ },
+ {
+  "id": 956,
+  "parent": 0,
+  "author": "justaddwater.dk | Justaddwater.dk January 2006 Statistics",
+  "url": "http://justaddwater.dk/2006/02/08/justaddwaterdk-january-2006-statistics/",
+  "date": "2006-02-08 14:05:55",
+  "type": "pingback",
+  "html": "\\[...\\] One of four web users are disabled users (238 visitors) \\[...\\]"
+ },
+ {
+  "id": 1027,
+  "parent": 0,
+  "author": "Usability: 25% Of Web Users Diasabled - Gadgetizer.com",
+  "url": "http://www.gadgetizer.com/2006/02/13/25percent-web-users-diasabled/",
+  "date": "2006-02-13 20:35:11",
+  "type": "pingback",
+  "html": "\\[...\\] \\[Sources: Justaddwater.dk, \\[...\\]"
+ },
+ {
+  "id": 1031,
+  "parent": 0,
+  "author": "Beyond Caffeine &raquo; Target Falls Short",
+  "url": "http://nicole.enrogue.com/?p=15",
+  "date": "2006-02-14 21:32:00",
+  "type": "pingback",
+  "html": "\\[...\\] Simple changes. Any web developer worth their salt could manage those changes quickly. Apparently Target either lacks those kinds of web developers, lacks motivation to please their customers, or blatantly has disregard for the 25% of all web users who are disabled. None of those are exactly what I would consider good options. \\[...\\]"
+ },
+ {
+  "id": 1223,
+  "parent": 0,
+  "author": "BlindSurfer blogt &raquo; Eén op vier internetters ondervindt toegankelijkheidsproblemen",
+  "url": "http://www.blindsurfer.be/blog/?p=20",
+  "date": "2006-02-20 11:42:05",
+  "type": "pingback",
+  "html": "\\[...\\] Volgens een Deense studie ondervindt één op vier internetgebruikers toegankelijkheidsproblemen op het internet. Niet enkel bezoekers met een functiebeperking (blind, slechtziend, kleurenblind, (al dan niet tijdelijk) fysiek beperkt, dyslectisch etc.) worden hiertoe gerekend, maar ook mensen met een ‘technische’ beperking (alternatieve user agents zoals PDA’s, GSM’s, oude of trage hard- en software. De cijfers lijken heel aannemelijk als je de samenvatting van de studie leest en je zou je zelfs de vraag kunnen stellen of het niet de websites zijn die kreupel zijn. \\[...\\]"
+ },
+ {
+  "id": 1962,
+  "parent": 0,
+  "author": "justaddwater.dk | 25% disabled web users picked up by Steve Krug",
+  "url": "http://justaddwater.dk/2006/03/08/steve-krug/",
+  "date": "2006-03-08 23:32:19",
+  "type": "pingback",
+  "html": "\\[...\\] Steve Krug refers to “25% of all web users are disabled“. Steve Krug. I’m amazed! \\[...\\]"
+ },
+ {
+  "id": 1983,
+  "parent": 0,
+  "author": "justaddwater.dk | Justaddwater.dk February 2006 Statistics",
+  "url": "http://justaddwater.dk/2006/03/12/justaddwaterdk-february-2006-statistics/",
+  "date": "2006-03-12 17:59:05",
+  "type": "pingback",
+  "html": "\\[...\\] One of four web users are disabled users (329 visitors) \\[...\\]"
+ },
+ {
+  "id": 2029,
+  "parent": 0,
+  "author": "Jacqui",
+  "url": "",
+  "date": "2006-03-20 20:05:38",
+  "type": "",
+  "html": "Disability Studies 101 (briefly):\\\nThere's a medical model of disability, which says that people (in this case, users) are made wrong. Disability rights activists hate that model. There's also a social model of disability, which states that structures, computers, society are made wrong. The statement you make here seems to show that you follow a medical model of disability, but I find it fascinating that some of your commenters see that there's really no need to make the separation between the users who own computers that can't cope with their blindness, say, and the users who own computers that can't deal with a site made for IE."
+ },
+ {
+  "id": 2149,
+  "parent": 0,
+  "author": "Formed Function &raquo; Blog Archive &raquo; 1 op de 4 gebruikers is gehandicapt",
+  "url": "http://www.themissinglink.nl/_blog_/?p=10",
+  "date": "2006-04-10 12:27:24",
+  "type": "pingback",
+  "html": "\\[...\\] http://justaddwater.dk/2006/01/20/one-of-four-web-users-are-disabled-users/ \\[...\\]"
+ },
+ {
+  "id": 3842,
+  "parent": 0,
+  "author": "Ricardo Augusto | &raquo; They don&#8217;t care if you&#8217;re disabled. Yes, they don&#8217;t care!",
+  "url": "http://www.ricardoaugusto.net/journal/2006/05/26/disabled-users/",
+  "date": "2006-05-27 02:09:23",
+  "type": "pingback",
+  "html": "\\[...\\] I honestly can’t understand this:Or this:No. I don’t. Nothing. Niecas. Nada. What’s that? O? o? 0? ()? L? I? \\|? 1? C? OMG!Okay! They show an alternative below this ugly picture: a handy link to hear the sound of the numbers. What if I don’t have an speaker system? What if I am deaf? What if I can’t install any media plugin to hear the sound?You may have seen these ugly ones around on the web. It’s a validation proccess to avoid automated scripts to corrupt their system, and whatever.The reason for their existance is to avoid spam bots, spiders, crawlers and many other trash. But I’m not a bot, I’m human (I wonder, sometimes). I may suffer of blindness, deafness. And they ask me to decrypt those strange characters in order to validate my login. They do this because of that 25% of disable users of the web they don’t care! It’s one in four users. It’s 1000 in 4000. A million in 4 millions. That’s a lot! And they don’t care!Come on! I want to login! Isn’t that enough that I choose their service? They want to prove I’m not blind? Or that I don’t have any other kind of necessity?I’m asking any expert on spam or programming here: does a spider-bot can recognize the shapes on this picture? I’m wondering if this extreme caution is because a very advanced and popular program that can recognize those characters, and do the mess they want, so the shapes need to be random and dizzy. Anyway, this isn’t a reason to avoid users to enter their e-mail, or chat rooms, or home banking.I wrote a e-mail to them. Asking why this should like that. Let’s see what they say. \\[...\\]"
+ },
+ {
+  "id": 12832,
+  "parent": 0,
+  "author": "dominik",
+  "url": "http://www.ekstenso.com/blog",
+  "date": "2006-09-10 23:21:30",
+  "type": "",
+  "html": "Hi Jesper, I have translated your article into polish. [It is published on my blog about accessibility.](http://www.ekstenso.com/blog/2006/09/09/25-niepelnosprawnych/)"
+ },
+ {
+  "id": 36213,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog Usability: Our Most Popular Content",
+  "url": "http://justaddwater.dk/2006/12/07/blog-usability-our-most-popular-content/",
+  "date": "2006-12-07 14:01:57",
+  "type": "pingback",
+  "html": "\\[...\\] 25% of all web users are disabled \\[...\\]"
+ },
+ {
+  "id": 127002,
+  "parent": 0,
+  "author": "Pela boa experiência do usuário portador de deficiência &raquo; Webinsider",
+  "url": "http://webinsider.uol.com.br/index.php/2007/04/16/pela-boa-experiencia-do-usuario-portador-de-deficiencia/",
+  "date": "2007-04-16 06:15:55",
+  "type": "pingback",
+  "html": "\\[...\\] na frente para atingir um público que pode chegar a 25% do total de usuários de internet, segundo pesquisa do Centro Dinamarquês para a \\[...\\]"
+ },
+ {
+  "id": 164717,
+  "parent": 0,
+  "author": "&raquo; Indicados da vez- Web Bem Feita - Usabilidade, Acessibilidade &#38; Afins",
+  "url": "http://webbemfeita.com/2007/06/07/indicados-da-vez/",
+  "date": "2007-06-07 06:55:44",
+  "type": "pingback",
+  "html": "\\[...\\] 25% of all web users are disabled \\[justaddwater\\] - Artigo em ingl"
+ },
+ {
+  "id": 367597,
+  "parent": 0,
+  "author": "Colors of Blogging &mdash; K|2",
+  "url": "http://knoizki.net/2007/11/23/colors-of-blogging/",
+  "date": "2007-11-22 21:56:35",
+  "type": "pingback",
+  "html": "\\[...\\] I got here, everyone loves black - so I kind of digging the fact that black is my favourite color. Did you know that approximately 25% of all internet users are blind, visually or physically impaired...? So why pick a color that can make your reader struggle to read? Ok, I am not young anymore, \\[...\\]"
+ },
+ {
+  "id": 403312,
+  "parent": 0,
+  "author": "Christopher Vigliotti&#8217;s Blog &raquo; Blog Archive &raquo; Accessible Video On The Web: Closed Captioning",
+  "url": "http://blog.hibiscusroto.com/?p=641",
+  "date": "2008-03-20 16:46:05",
+  "type": "pingback",
+  "html": "\\[...\\] you should care because you want your video to reach as wide an audience as possible. According to this post, an estimated 25% of all internet users are disabled. And if you are working on a project for the \\[...\\]"
+ },
+ {
+  "id": 429180,
+  "parent": 0,
+  "author": "Camp",
+  "url": "http://www.campingsplit.com",
+  "date": "2008-07-09 16:47:41",
+  "type": "",
+  "html": "As a handicapped person with limited eye sight usability is a key issue for me. Many sites don't care about these problems so my work on the internet is very limited. Rss feeds are really helpful, it's all organized and emphasis is on the information, not graphics that only make problems for me."
+ },
+ {
+  "id": 455387,
+  "parent": 0,
+  "author": "25% of all web users are disabled &laquo; blind dates",
+  "url": "http://blinddatesinmda.wordpress.com/2008/11/07/25-of-all-web-users-are-disabled/",
+  "date": "2008-11-07 20:55:51",
+  "type": "pingback",
+  "html": "\\[...\\] 25% of all web users are disabled Did you know that up to 25% of all visitors on your website have some kind of accessibility problem. Some of your users may be blind, deaf, dyslectic, has learning disabilities or motoric disabilities such as schlerosis, parkinson’s disease, etc. A so-called functional disability. http://justaddwater.dk/2006/01/20/one-of-four-web-users-are-disabled-users/ \\[...\\]"
+ },
+ {
+  "id": 468984,
+  "parent": 0,
+  "author": "Austin",
+  "url": "http://www.ggreen.com",
+  "date": "2009-01-28 20:46:29",
+  "type": "",
+  "html": "It is hard to remember, when building and designing pages and websites, how many issues there in trying to make your information as accessible as possible. Hopefully research like this will continue to be done!"
+ },
+ {
+  "id": 486747,
+  "parent": 0,
+  "author": "muffin9129",
+  "url": "http://productreviewsby.me/",
+  "date": "2009-06-15 19:33:21",
+  "type": "",
+  "html": "This is something that I had not considered, but I agree completely. Recently, I connected my computer to by television, and I was unable to 'see' a lot of text, sound and imagery on many sites. Of course this is a smaller issue, but I can just imagine how hard it is for people that have disabilities. What an interesting post, and something that needs to be addressed before technology completely takes over."
+ },
+ {
+  "id": 489203,
+  "parent": 0,
+  "author": "kpss",
+  "url": "http://www.kpsssinavi.net/",
+  "date": "2009-09-17 17:28:33",
+  "type": "",
+  "html": "I think you’ve got to say that much more than 25% of websites are handicapped or visibility-challenged. It’s the websites that want to communicate. So it’s not the web users who are disadvantaged but the websites."
+ },
+ {
+  "id": 488478,
+  "parent": 0,
+  "author": "can sıkıntısı",
+  "url": "http://www.40ayak.net",
+  "date": "2009-08-22 07:15:51",
+  "type": "",
+  "html": "Website business is not easy to do all the work and this work continues to webmasterlas."
+ },
+ {
+  "id": 488028,
+  "parent": 0,
+  "author": "kpss",
+  "url": "http://www.kpsscafe.com/",
+  "date": "2009-07-29 22:44:03",
+  "type": "",
+  "html": "I would prefer not to refer to a user as being disabled simply because of their limiations of the technology they use to access the web. Like prior posters have mentioned, this is more of a limitation of the website rather than the user."
+ },
+ {
+  "id": 486043,
+  "parent": 0,
+  "author": "Handicapped Equipment",
+  "url": "http://www.handicappedequipment.org",
+  "date": "2009-05-13 12:30:25",
+  "type": "",
+  "html": "The population of disabled users has probably increased a lot since this study came out. It still amazes me, how much of the websites leave out alt and title tags that are used to describe web images. Makes it very hard to navigate and get internet without these html tags."
+ },
+ {
+  "id": 481183,
+  "parent": 0,
+  "author": "Internet Strategist",
+  "url": "http://GrowMap.com/flash",
+  "date": "2009-03-31 01:56:36",
+  "type": "",
+  "html": "One other group of users who prefer not to visit Flash sites are those who are on Internet plans that charge by bandwidth used. We generally surf with Flash blocked. Landing on a page full of gray boxes with arrows and very little else is not likely to keep us on your site!\n\nIn some countries users pay by the minute or by bandwidth used. In rural areas sometimes the only high speed access available is satellite. When we go over our limits HughesNet DISABLES our Internet connection for 24 hours as a penalty! Talk about bad for business, income and productivity!\n\nI am publishing a post which I will link to this comment that offers more reasons why Flash is simply NOT a good way to build a Web site. If you already have a Flash site or really want one at the very least offer an html version too."
+ },
+ {
+  "id": 481223,
+  "parent": 0,
+  "author": "The Serious Drawbacks to Using FLASH for Web Design | GROWMAP.COM",
+  "url": "http://www.growmap.com/flash/",
+  "date": "2009-03-31 05:10:10",
+  "type": "pingback",
+  "html": "\\[...\\] 25% of All Web Users Are Disabled \\[...\\]"
+ },
+ {
+  "id": 486962,
+  "parent": 0,
+  "author": "BenFrank",
+  "url": "http://www.abroad-tv.com",
+  "date": "2009-06-18 14:01:47",
+  "type": "",
+  "html": "In my opinion 25% is too much.But if it is so serious mesures should be taken to make their access more easier.Thanks for the interesting post."
+ },
+ {
+  "id": 487605,
+  "parent": 0,
+  "author": "Siverek, Siverek Haber",
+  "url": "http://www.sivereknet.com",
+  "date": "2009-07-19 22:29:50",
+  "type": "",
+  "html": "This is something that I had not considered, but I agree completely. Recently, I connected my computer to by television, and I was unable to ’see’ a lot of text, sound and imagery on many sites. Of course this is a smaller issue, but I can just imagine how hard it is for people that have disabilities. What an interesting post, and something that needs to be addressed before technology completely takes over."
+ },
+ {
+  "id": 488553,
+  "parent": 0,
+  "author": "Brunson",
+  "url": "http://www.doyle-dolly-brunson.com/",
+  "date": "2009-08-24 19:29:22",
+  "type": "",
+  "html": "It is amazing that 25%, higher than I thought. Fortunately things will change rapidly with better Internet access, improved designs, and I even read that they now have devices helping blind people to use computers."
+ },
+ {
+  "id": 488600,
+  "parent": 0,
+  "author": "jassie_wu08",
+  "url": "http://www.simplydrinks.com.au/main.htm",
+  "date": "2009-08-26 14:08:40",
+  "type": "",
+  "html": "25% of all web users are disabled??..hmm hard to believe,.. well, why not, if there are devices now that can help disabled people to use computers. Interesting! I look forward to knowing these devices... it's good thing to know that every individual has the chance to explore the wonders in this age of computers.."
+ },
+ {
+  "id": 532679,
+  "parent": 0,
+  "author": "Slate Blank Re-Think Web Design | The Downsides of Flash",
+  "url": "http://slateblank.com/web-development/the-downsides-of-flash/",
+  "date": "2011-08-07 17:13:28",
+  "type": "pingback",
+  "html": "\\[...\\] recent version at that time, they may opt not to view your page. Also, people using older computers might not be able to update to a newer version of flash, meaning that they can never see your \\[...\\]"
+ }
+]

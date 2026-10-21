@@ -1,0 +1,38 @@
+[
+ {
+  "id": 83069,
+  "parent": 0,
+  "author": "Luis Villa",
+  "url": "http://www.grancomo.com/",
+  "date": "2007-02-13 21:01:10",
+  "type": "",
+  "html": "Hey! That's Great! Congratulations Jesper & Thomas! :-)"
+ },
+ {
+  "id": 83592,
+  "parent": 0,
+  "author": "Robert Bialek",
+  "url": "http://www.fairrates.dk",
+  "date": "2007-02-14 16:04:25",
+  "type": "",
+  "html": "I am happy that Rails is gaining in popularity :)\n\nWe have ourselves chosen to develop our P2P lending platform, FairRates.dk, in Rails. It turned out to be the right decision :)\n\nBecause Rails allows to create applications with very little code that is easy to glance, it facilitates agile approach, where one can continuously introduce new features and modifications. Similar flexibility with Java or .NET technologies would be much more expensive. Of course Rails also has some weaknesses, such as still poor tool-support for debugging. Those weaknesses, however, are minor compared to its strengths as simplicity, easiness of use, and good design.\n\nI hope that popularity of Rails will bring us more tools and make us even more productive."
+ },
+ {
+  "id": 84809,
+  "parent": 0,
+  "author": "FairRates.dk Blog",
+  "url": "http://nyheder.fairrates.dk/2007/02/16/popularitet-af-ruby-on-rails-vokser/",
+  "date": "2007-02-16 10:22:33",
+  "type": "trackback",
+  "html": "**Popularitet af Ruby on Rails vokser...**\n\nVi har udviklet FairRates.dk i Ruby on Rails frameworket, lavet af en dansker David Heinemeier Hannson.\\\nTil vores glæde, flere og flere udviklere begynder at interessere sig for Rails. For nyligt er der i Børsen udkommet et interview med Jesper and ..."
+ },
+ {
+  "id": 500232,
+  "parent": 0,
+  "author": "Big Companies Using Ruby on Rails &laquo; Philippine Ruby Users Group",
+  "url": "http://pinoyrb.org/rails/big-companies-using-ruby-on-rails",
+  "date": "2010-09-27 04:30:49",
+  "type": "pingback",
+  "html": "\\[...\\] CapGemini - Danish Newspaper Interview: Capgemini on Rails \\[...\\]"
+ }
+]

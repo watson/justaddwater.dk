@@ -1,0 +1,74 @@
+[
+ {
+  "id": 955,
+  "parent": 0,
+  "author": "justaddwater.dk | AJAX businesscase: Reduce development costs and increase usability",
+  "url": "http://justaddwater.dk/2006/02/08/ajax-businesscase/",
+  "date": "2006-02-08 12:07:39",
+  "type": "pingback",
+  "html": "\\[...\\] It requires a lot of clicks. Click to edit user \\#1, back to link page, click to edit user#2, etc. This is so-called “pogosticking“. Extra clicks yields extra time and thus … lower performance (XX todo: usability) \\[...\\]"
+ },
+ {
+  "id": 4820,
+  "parent": 0,
+  "author": "justaddwater.dk | Blog usability: Pogosticking revisited",
+  "url": "http://justaddwater.dk/2006/06/12/pogosticking-revisited/",
+  "date": "2006-06-12 15:55:38",
+  "type": "pingback",
+  "html": "\\[...\\] Earlier I wrote about Pogosticking and why it should be avoided. I mentioned that pogosticking is: Unnecessary navigation and extra clicks that occurs because pages do not match the information users need to find what they are looking for. \\[...\\]"
+ },
+ {
+  "id": 27245,
+  "parent": 0,
+  "author": "justaddwater.dk | World Usability Day: We dumped our archives",
+  "url": "http://justaddwater.dk/2006/11/14/world-usability-day-we-dumped-our-archives/",
+  "date": "2006-11-14 13:00:37",
+  "type": "pingback",
+  "html": "\\[...\\] Pogosticking and why it should be avoided \\[...\\]"
+ },
+ {
+  "id": 32524,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-26 21:47:04",
+  "type": "",
+  "html": "I'm adding links here to [Tales of Pogo Sticks, Bouncy SERPs and Sticky Pages](http://www.searchengineguide.com/hotchkiss/2006/0911_gh1.html) (via [Search marketing Gurus](http://www.searchmarketinggurus.com/search_marketing_gurus/2006/09/pogo_sticks_bou.html))."
+ },
+ {
+  "id": 80841,
+  "parent": 0,
+  "author": "&raquo; Blogged by Christian Watson - How to Write Good Section Overview Pages - My Webmaster News Blog",
+  "url": "http://mywebmasternewsblog.com/blogged-by-christian-watson-how-to-write-good-section-overview-pages/",
+  "date": "2007-02-09 19:35:43",
+  "type": "pingback",
+  "html": "\\[...\\] The combination of link plus summary works quite well in guiding users to where they want to go without the need for them to resort to pogosticking. \\[...\\]"
+ },
+ {
+  "id": 441608,
+  "parent": 0,
+  "author": "Cartao de Credito",
+  "url": "http://ocartaodecredito.com",
+  "date": "2008-09-03 21:49:32",
+  "type": "",
+  "html": "Very good point here! If you have a page selling or presenting a product this is very important to avoid, because visitors might close your window or hit the back button!"
+ },
+ {
+  "id": 442525,
+  "parent": 0,
+  "author": "Algarve in Portugal",
+  "url": "http://algarveinportugal.org",
+  "date": "2008-09-04 21:48:57",
+  "type": "",
+  "html": "Good points! It is a waist of time, bandwith and productivity!"
+ },
+ {
+  "id": 490771,
+  "parent": 0,
+  "author": "מילון מונחים שמיש &laquo; מידע שימושי",
+  "url": "http://usabilityinfo.wordpress.com/2009/11/10/glossary/",
+  "date": "2009-11-09 23:04:11",
+  "type": "pingback",
+  "html": "\\[...\\] מאמר קצר על פוגוסטיקינג ואיך אפשר למנוע אותו \\[...\\]"
+ }
+]

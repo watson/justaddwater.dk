@@ -1,0 +1,110 @@
+[
+ {
+  "id": 65,
+  "parent": 0,
+  "author": "Owen",
+  "url": "http://asymptomatic.net",
+  "date": "2006-01-13 00:41:39",
+  "type": "",
+  "html": "Ah, but if you clicked on the \"Owen Winkler: I didn't do it\" link, you could see whether it *is* related to your blog. ;)\n\nHaving one of the hnadful of WordPress-related-topics-only feeds on Planet WordPress, I'd like to think that my posts would be more read. But I'm willing to concede that maybe my feed isn't relevant for everyone.\n\nI've been thinking about doing something about the Dashboard situation over the past week. Maybe one of my yet-to-come posts that appears in your Dashboard will help you solve your problems.\n\n[Until then...](http://blog.taragana.com/index.php/archive/wordpress-15-hack-how-to-trim-the-fat-resource-hogging-admin-dashboard-version-2/) Even so, I hope you still stop by my site for a read now and then."
+ },
+ {
+  "id": 66,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-13 15:16:58",
+  "type": "",
+  "html": "Hey Owen. No pun intended. I merely chose your post because I could not get the connection between my Dashboard and your blog post article. Sometimes posts occur in a completely different context where the title must explain more about the content in the post.\n\nIn this instance, I have absolutely no clue what that title is doing on my Dashboard. I guess I should have picked on another of the posts, but my point is still that all of them should be removed as they are only occasionally relevant. And for sure, I'm not picking on you, I can assure you that!\n\nBy the way, I might want to check out your [Geo plugin](http://dev.wp-plugins.org/wiki/GeoPlugin) while we're at it."
+ },
+ {
+  "id": 67,
+  "parent": 0,
+  "author": "Jared Spool",
+  "url": "http://www.uie.com/brainsparks",
+  "date": "2006-01-13 19:05:39",
+  "type": "",
+  "html": "Jesper, you really want [MeasureMap](http://measuremap.com/). It does most of what you're asking for."
+ },
+ {
+  "id": 70,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-14 13:39:10",
+  "type": "",
+  "html": "Jared, I have an eye on MeasureMap, but unfortunately it's still in closed beta. Besides I would rather my existing product change than to experiment with a new one. My top priority is still that I think Google should change a few things in the tool (and I think there's room for it without really out-competing MeasureMap).\n\nAs a matter of fact, I wrote a post recently ([using Google Analytics to view referring URLs](/2006/01/08/google-analytics-trick-how-to-view-referring-urls/ \"Google Analytics trick: How to view referring URLs\")). That tells me that there is plenty of room to improve in some of the web-based statistics tools.\n\nWith regards to the Dashboard your point i valid and I would like to add that i expect Dashboard functionality and statistics functionality to converge in the future.\n\nFor instance, we see this in cars already. Some cars measure average fuel consumption, calculate miles left in tank, etc. (That's what they do in Denmark and the rest of Europe. What's it like in the US where fuel prices are roughly one third of Europe?)\\\nI probably go more into detail in a later post on what could improvee in Google Analytics."
+ },
+ {
+  "id": 78,
+  "parent": 0,
+  "author": "justaddwater.dk | Web Users Judge Sites Instantly",
+  "url": "http://justaddwater.dk/2006/01/16/web-users-judge-sites-instantly/",
+  "date": "2006-01-16 13:25:43",
+  "type": "pingback",
+  "html": "\\[...\\] We have in a previous post talked about this sort quick test before, usually referred to as a 5-second-usabilty-test (though this study shortens it even further). \\[...\\]"
+ },
+ {
+  "id": 82,
+  "parent": 0,
+  "author": "justaddwater.dk | Added MeasureMap web statistics",
+  "url": "http://justaddwater.dk/2006/01/17/added-measuremap-web-statistics/",
+  "date": "2006-01-17 16:43:20",
+  "type": "pingback",
+  "html": "\\[...\\] We just started using MeasureMap and have added it to this blog after Jared Spool recommended it in a comment. \\[...\\]"
+ },
+ {
+  "id": 83,
+  "parent": 0,
+  "author": "justaddwater.dk | Added MeasureMap web statistics",
+  "url": "http://justaddwater.dk/2006/01/17/added-measuremap-web-statistics/",
+  "date": "2006-01-17 16:43:20",
+  "type": "pingback",
+  "html": "\\[...\\] We just started using MeasureMap and have added it to this blog after Jared Spool recommended it in a comment. \\[...\\]"
+ },
+ {
+  "id": 1094,
+  "parent": 0,
+  "author": "justaddwater.dk | Google improves webstat by MeasureMap acquisition",
+  "url": "http://justaddwater.dk/2006/02/15/google-improves-webstat-by-measuremap-acquisition/",
+  "date": "2006-02-15 10:24:58",
+  "type": "pingback",
+  "html": "\\[...\\] Previously, I have complained about lacking features of Google Analytics, when Jared Spool suggested us to take a look on Measure Map. We’re using both Measure Map and Google Analytics on these pages, and it’s surprising how different they are. \\[...\\]"
+ },
+ {
+  "id": 8426,
+  "parent": 0,
+  "author": "Nitin Patel",
+  "url": "http://nitin.coolfreepage.com",
+  "date": "2006-07-13 17:48:15",
+  "type": "",
+  "html": "It seems also to work with the Sage plug-in for Firefox."
+ },
+ {
+  "id": 394487,
+  "parent": 0,
+  "author": "Jim Mirkalami",
+  "url": "http://www.google.ca",
+  "date": "2008-02-08 10:22:02",
+  "type": "",
+  "html": "I have been visiting this site a lot lately, so i thought it is a good idea to show my appreciation with a comment.\n\nThanks,\\\nJim Mirkalami"
+ },
+ {
+  "id": 407096,
+  "parent": 0,
+  "author": "Joe Cole",
+  "url": "http://www.thewebmasterresources.info",
+  "date": "2008-04-04 14:13:15",
+  "type": "",
+  "html": "I use Search Meter plugin to show the searching history. I think it's very usefull"
+ },
+ {
+  "id": 410408,
+  "parent": 0,
+  "author": "Hauttsaxycads",
+  "url": "http://torgexpert.com",
+  "date": "2008-04-14 00:52:52",
+  "type": "",
+  "html": "Бесплатно обучаю работе с аукцином eBay. Работа на дому.\\\nХотите зарабатывать по \\$2000 в мес. или даже \\$100 в день?\\\nУ Вас есть возможность это сделать.\\\nПредлагаем Вам бесплатную программу обучения торговли и заработка на\\\nаукционе eBay.\\\nСсылка для получения бесплатных книг с методами торговли:\\\nhttp://torgexpert.com/pr.htm"
+ }
+]

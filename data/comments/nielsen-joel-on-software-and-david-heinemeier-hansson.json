@@ -1,0 +1,20 @@
+[
+ {
+  "id": 14718,
+  "parent": 0,
+  "author": "Ed Syrett",
+  "url": "",
+  "date": "2006-09-20 15:47:18",
+  "type": "",
+  "html": "Just to add to the debate, there's another technology that needs to be considered - Flex 2.0 at the browser with a Rails web server, and XML going between the two.\n\nWe wanted platform-independent technology (so no C# then...) and we had Peter Cooper in to show us how to do Rails. But there seemed to be a significant amount of work to get a nice GUI, and in fact Rails didn't natively allow us to do what we want anyway. Essentially we want MDI in a browser. However, Flex 2.0 has recently appeared which allows us to do everything we want and more. Rails enables us to serve up XML with next to no code and Flex natively handles the XML. It all works really well.\n\nFinally, if it passes all of our tests (functional and loading etc) then I really don't see how \"maturity\" makes any difference.... if it works it works....."
+ },
+ {
+  "id": 15042,
+  "parent": 0,
+  "author": "Andre Charland",
+  "url": "http://blogs.nitobi.com/andre",
+  "date": "2006-09-22 07:06:00",
+  "type": "",
+  "html": "really enjoyed this post:) got good chuckle out of the David and Joel stuff. Especially Joel's points...ha the pot calling the kettle black. I digress...haha."
+ }
+]

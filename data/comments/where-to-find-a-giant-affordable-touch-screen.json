@@ -1,0 +1,155 @@
+[
+ {
+  "id": 405035,
+  "parent": 0,
+  "author": "Building a Wiimote glove for virtual card sorting - Peter Krantz",
+  "url": "http://www.peterkrantz.com/2008/wiimote-glove/",
+  "date": "2008-03-30 15:32:57",
+  "type": "pingback",
+  "html": "\\[...\\] but that will have to wait until tomorrow when I get back to work. It would also be nice to try the virtual scrum board that Jesper Rønn-Jensen and hos colleagues are working on. Updates will \\[...\\]"
+ },
+ {
+  "id": 402060,
+  "parent": 0,
+  "author": "Peter Krantz",
+  "url": "http://www.peterkrantz.com",
+  "date": "2008-03-14 07:38:27",
+  "type": "",
+  "html": "Great idea! I bought the parts for an interactive whiteboard this week. It should be fairly trivil if you have access to a high-res projector. For software see:\n\nhttp://www.wiimoteproject.com/\n\nI'll report back when I have made the IR glove I am planning to use."
+ },
+ {
+  "id": 402009,
+  "parent": 0,
+  "author": "Where to find a giant, affordable touch screen? &#8230;",
+  "url": "http://www.hoosgot.com/index.php/2008/03/13/where-to-find-a-giant-affordable-touch-screen/",
+  "date": "2008-03-14 02:58:40",
+  "type": "pingback",
+  "html": "\\[...\\] http://justaddwater.dk/2008/03/14/where-to-find-a-giant-affordable-touch-screen/ asks Hoosgot, \\[...\\]"
+ },
+ {
+  "id": 401990,
+  "parent": 0,
+  "author": "Emil Stenström",
+  "url": "http://friendlybit.com",
+  "date": "2008-03-14 01:15:14",
+  "type": "",
+  "html": "There actually is, but you have to built it yourself. [YouTube has the video howto](http://www.youtube.com/watch?v=5s5EvhHy7eQ).\n\nWe have a project planned here on the [Valtech office](http://www.valtech.se) to get a scrum board working together with it, so let me know if you manage before we do :)"
+ },
+ {
+  "id": 401988,
+  "parent": 0,
+  "author": "Pål",
+  "url": "http://blog.heick.nu",
+  "date": "2008-03-14 01:11:50",
+  "type": "",
+  "html": "Ok, so how about interactive whiteboards?\\\n\\- [iBoard](http://www.iboards.dk/Engelsk/funktioner.htm)\\\n\\- [SMART Board](http://www2.smarttech.com/st/en-US/Products/SMART+Boards/default.htm)\\\n...and there's even an [Interactive whiteboard](http://www.interactive-whiteboards.co.uk/whiteboards.htm)-store/thing."
+ },
+ {
+  "id": 403988,
+  "parent": 0,
+  "author": "Sune Edmund Pedersen",
+  "url": "http://www.SpatialEdit.com",
+  "date": "2008-03-25 14:13:43",
+  "type": "",
+  "html": "We are looking for a solution to the exact same thing. We are curently using analog technology, but are implementing GreenHopper (http://www.greenpeppersoftware.com/en/products/GreenHopper/) and it would be nice not to have a person operating the mouse during the daily standup meetings.\n\nI've seen several monitors, and a 42\" tochdisplay, 1360 x 768, costs in the US around 4,800\\$ - I don't know if that is affordable.\n\nThe come larger as well: http://www.ipdtaiwan.com/touch_view_71_ins.html\n\nKeep us updated if you find something..."
+ },
+ {
+  "id": 403819,
+  "parent": 0,
+  "author": "Terje",
+  "url": "",
+  "date": "2008-03-24 08:06:54",
+  "type": "",
+  "html": "Smartboard is sold in Norway for about 15k NOK, including projector.\\\nWe have them at work, I am a teacher, and they should be just right for you if you can have a projector running all day... Ours are about 70 \"..."
+ },
+ {
+  "id": 403744,
+  "parent": 0,
+  "author": "10 Blogs I Love at STCFX - Web Everything",
+  "url": "http://www.stcfx.com/2008/03/23/10-blogs-i-love/",
+  "date": "2008-03-23 17:24:32",
+  "type": "pingback",
+  "html": "\\[...\\] Recent Posts:Where to find a giant, affordable touch screen? The Design of Internal Enterprise Applications Internal Capgemini Scrum \\[...\\]"
+ },
+ {
+  "id": 402150,
+  "parent": 0,
+  "author": "Dave",
+  "url": "",
+  "date": "2008-03-14 15:59:28",
+  "type": "",
+  "html": "It sounds like you're not super excited about the Wiimote project, but here's some more info...\n\nI actually have setup a working \"touch\" screen using the wiimote method. Technically, it works, and is interesting. I could see it or a similar method working after adjustments are made to both the hardware and the software.\n\n\\- We built two IR light pens to use. The \\#1 problem of the entire project was placing the IR LED on the pen in such a way that it -always- has a clear line of sight to the Wiimote. Initially, we placed the IR LED facing the screen like the tip of a pen, which did not work. What did work was bending the connecting wires so that the LED stuck out and backwards to the right. It's difficult to describe what we did, but realize that any implementation will need planning and adjustment of the placement and direction of the IR LED.\\\n\\- The second major problem was that there were only two (plus one) 'commands': IR LED turns on at point X-Y and IR LED turns off at point X-Y (plus IR LED stays on and moves or \"click and drag\"). There is no \"hover\" or right click or simple way to switch to keyboard input. This limitation makes most existing applications and games not usable. In your implementation, you would somehow have to design around this, either through strong software (gestures? very strong usability and predictions of user goals would go a long way) or an actual addition to the hardware.\n\nThat said, the price is amazing for what you accomplish if you already have access to a computer and a large screen. I'm very surprised that there isn't a commercial implementation yet -- all you really need is a kit with well-designed IR pens, higher resolution IR camera, and a software CD."
+ },
+ {
+  "id": 402128,
+  "parent": 0,
+  "author": "Michael Kjeldsen",
+  "url": "http://www.firewerx.dk",
+  "date": "2008-03-14 13:43:12",
+  "type": "",
+  "html": "How about Microsoft Surface? It's approx. the right size, and close to touchscreen...:\\\nhttp://www.microsoft.com/surface/"
+ },
+ {
+  "id": 408438,
+  "parent": 0,
+  "author": "thomas",
+  "url": "",
+  "date": "2008-04-08 11:58:06",
+  "type": "",
+  "html": "... har nogle projekter med store-skærme ... prøv at tage kontakt til dem http://www.interactivespaces.net/"
+ },
+ {
+  "id": 411317,
+  "parent": 0,
+  "author": "Dmitri",
+  "url": "http://www.ronyasoft.com/",
+  "date": "2008-04-16 18:41:14",
+  "type": "",
+  "html": "I think the people above me have said it best with smartboard. I personally think it may be a bit overkill, but finding something prebuilt for what you are needing just wont happen. You are looking at some custom work there."
+ },
+ {
+  "id": 428137,
+  "parent": 0,
+  "author": "jim",
+  "url": "http://www.qlcsupplies.com",
+  "date": "2008-07-04 12:42:18",
+  "type": "",
+  "html": "Try here for your touch screen\\\nhttp://www.magictouch.com/\n\nHope this is helpful"
+ },
+ {
+  "id": 448708,
+  "parent": 0,
+  "author": "Sharley",
+  "url": "http://www.ecav.com.au/int_classroom.php",
+  "date": "2008-09-25 08:02:51",
+  "type": "",
+  "html": "interactive whiteboards can help out.. you can also build one yourself... http://www.youtube.com/watch?v=5s5EvhHy7eQ"
+ },
+ {
+  "id": 453431,
+  "parent": 0,
+  "author": "Chad",
+  "url": "http://www.musicedmagic.com",
+  "date": "2008-10-23 10:52:44",
+  "type": "",
+  "html": "I don't know what you consider affordable, but have you heard about or looked at the Mimio or the EBeam? Mimios are going for around \\$400 (which is far less than the \\$1400 plus for a real SmartBoard or ActivBoard.\n\nIf you want multitouch the only one I have seen that is in commercial production is a Hitachi product but it is also up there at around \\$1400 as well.\n\nI have been putting together a set of links and info about interactive white boards at http://www.musicedmagic.com/iwband. I am working on a major comparison article between five major manufacturers. Hope this helps..."
+ },
+ {
+  "id": 458112,
+  "parent": 0,
+  "author": "Daniel Terborn",
+  "url": "http://terborn.blogspot.com",
+  "date": "2008-12-02 15:20:55",
+  "type": "",
+  "html": "Hi Jesper (and Mads)! :-)\n\nSounds like a really fun project! The problem as I see it that any physical device will only work when you have a project with all team members gathered locally. The cool thing about a virtual dashboard (like the one I use: http://terborn.blogspot.com/2008/11/tfs-and-scrum.html) is that it is always available to all team members, no matter if they're working from home or from another country.\n\nOf course, it would be nice to add a flatscreen to the project room just to show the current status of the project, but direct modifications through that device wouldn't be necessary. :-)"
+ },
+ {
+  "id": 523863,
+  "parent": 0,
+  "author": "Aidan",
+  "url": "",
+  "date": "2011-05-24 03:28:47",
+  "type": "",
+  "html": "Hi,\n\nI bet that in ten years the solution stack will consist of....\n\n\\- a wall\\\n\\- backlog items printed on paper/written on post it notes\\\n\\- board marker pen\\\n\\- spreadsheet \\[soft copy of backlog and reports\\]\\\n\\- blue-tack /pins"
+ }
+]

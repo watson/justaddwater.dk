@@ -1,0 +1,119 @@
+[
+ {
+  "id": 484353,
+  "parent": 0,
+  "author": "Hannelore",
+  "url": "http://www.haushalt-wohnen.de",
+  "date": "2009-04-19 21:35:09",
+  "type": "",
+  "html": "I've never thought about the energy my power meter measurement tool could consume. I must have a look."
+ },
+ {
+  "id": 478518,
+  "parent": 0,
+  "author": "Nikolaj",
+  "url": "",
+  "date": "2009-03-17 20:53:10",
+  "type": "",
+  "html": "Hi Jesper,\n\nYou can go build it yourself, so you have he most comtrol over which part uses what amount of energy.\\\nThere are the 45W processors from AMD now, that will give you very good performance pr. watt.\\\nStay away from Atom for a while, since the Intel chipset is about 22W alone! (AnandTech compared Core2 Duo to Atom, and they are on par, since the chipset for Atom just consumes so much energy).\\\nMake sure your Power supplies are effective (80PLUS).\n\nSCSI disks use a lot of power, as mentioned by Flemming, SSD's uses almost no power compared to traditional harddrives, makes no noise, and generates very little heat.\\\nJust remember write speed = expensive (remember Intel is king here - read AnandTech and others).\n\nBoot from Flash memory if possible.\n\nYou don't say if disk capacity is a concern?\n\nLook at http://www.mini-itx.com, here you can find small and efficient equipment (and low power too).\n\nCheers."
+ },
+ {
+  "id": 478469,
+  "parent": 0,
+  "author": "Flemming",
+  "url": "",
+  "date": "2009-03-17 15:22:48",
+  "type": "",
+  "html": "Hi Jesper,\n\nPower consumption was also one of my main concerns, when I decided to invest in a new server.\\\nI decided to buy a mini-pc from AOpen (i965GMx-IF), with 4 GB of ram, an Intel T8300 @2.4 Ghz dual core processor and as storage a 128 GB SSD disk from OCZ. The overall power consumption is around 35W during normal use. The use of SSD disk makes is completely silent as well.\\\nIt generates no heat - so no cooling is required. It takes almost no place, so you do not need to put it in the cellar..\\\nBackup can be done using the fast gigabit network or an attached USB disk.\n\nI use it as mail server (Exchange 2007) , Database server (SQL 2008) + Reporting/Analysis/Integration services and Web server - all installed on Windows server 2008. Performance is brilliant - Starting up Visual Studio is a matter of 2-4 seconds.. SQL Server Management Studio the same..\n\nI could have saved DKK 1500 by only buying a 64 GB drive - since I am not using it for Virtualizing I have plenty of space on the disk.\\\nThe total was around DKK 7000.."
+ },
+ {
+  "id": 486598,
+  "parent": 0,
+  "author": "Cubic zirconia",
+  "url": "",
+  "date": "2009-05-20 11:16:02",
+  "type": "",
+  "html": "I think installing a good cooling systems makes sense as you still need multiple machines for a redundant fail-over setup. Especially all the machines are in basement, which will be a problem in hot weather. Sometimes those money have to pay for safty and stability. But it is totally worthy though. Correct me if I am wrong."
+ },
+ {
+  "id": 487299,
+  "parent": 0,
+  "author": "James",
+  "url": "http://www.redtantramassage.com",
+  "date": "2009-07-01 20:45:42",
+  "type": "",
+  "html": "Good calculation. I think more people are looking at that when comparing usage of cloud computing."
+ },
+ {
+  "id": 484804,
+  "parent": 0,
+  "author": "Roger",
+  "url": "http://www.a1qa.com",
+  "date": "2009-04-24 15:56:46",
+  "type": "",
+  "html": "Me too. I am much more concerned on the safety of the server and the preservation of all the data on it."
+ },
+ {
+  "id": 477578,
+  "parent": 0,
+  "author": "Jannik Anker",
+  "url": "http://jannikanker.dk/",
+  "date": "2009-03-13 14:01:28",
+  "type": "",
+  "html": "Hi Jesper,\n\nNice article! I am, however, quite a knitpicker and cannot resist to point out that it's not called Danish Crowns, but Danish Kroner. Danish Crown is, well, something completely different ;-)\n\n/Jannik"
+ },
+ {
+  "id": 477607,
+  "parent": 0,
+  "author": "John Campbell",
+  "url": "",
+  "date": "2009-03-13 18:58:53",
+  "type": "",
+  "html": "Your cooling estimate doesn't make sense. Why would it take 200W to transfer 100W of heat outdoors? Most air conditioners require 40W to cool 100W when it is 90F outside. Depending on the location, typical cooling costs are around 20% of total electricity use."
+ },
+ {
+  "id": 478099,
+  "parent": 0,
+  "author": "Magnetschmuck",
+  "url": "http://www.yinga-vital.de/",
+  "date": "2009-03-15 14:13:56",
+  "type": "",
+  "html": "I am using a power saver gadget for my server, but the power load is not that high. I think your server would require a power saver with higher wattage support. Mine has support for only 200 watts. maybe you can find something on web searches."
+ },
+ {
+  "id": 478298,
+  "parent": 0,
+  "author": "Simon B.",
+  "url": "",
+  "date": "2009-03-16 11:27:44",
+  "type": "",
+  "html": "Interesting article! A heads up: the first sentence of this post is strange.\n\nA bipolar power switch would remove the 26W used by the shut off computer. http://www.clasohlson.se/Product/Product.aspx?id=55373405\\\nhttp://www.clasohlson.se/Product/Product.aspx?id=40430888\n\nAbout cooling, your marginal cost should depend on the increase of friction in the fan motor + air friction from air inlet and outlet piping. Some years ago, having server cooling (\"HVAC\") use as much energy as the servers themselves was \"common practice\": http://www.energystar.gov/ia/products/downloads/koomeysummaryondatacenterpower.pdf"
+ },
+ {
+  "id": 487885,
+  "parent": 0,
+  "author": "Can",
+  "url": "http://www.mp3indirsek.tk",
+  "date": "2009-07-25 21:46:54",
+  "type": "",
+  "html": "Nice post.Thanks admin."
+ },
+ {
+  "id": 487888,
+  "parent": 0,
+  "author": "Sikiş",
+  "url": "http://www.naganigi.com",
+  "date": "2009-07-25 22:15:07",
+  "type": "",
+  "html": "I’ve never thought about the energy my power meter measurement tool could consume. I must have a look."
+ },
+ {
+  "id": 487871,
+  "parent": 0,
+  "author": "şehirler arası evden eve",
+  "url": "http://www.elmasnakliyat.com/",
+  "date": "2009-07-25 18:36:36",
+  "type": "",
+  "html": "SCSI disks use a lot of power, as mentioned by Flemming, SSD’s uses almost no power compared to traditional harddrives, makes no noise, and generates very little heat."
+ }
+]

@@ -1,0 +1,101 @@
+[
+ {
+  "id": 4930,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-14 12:20:15",
+  "type": "",
+  "html": "Hi Geoff. Thanks for making the comment about appending information to the presentation. However, I have decided not to append the presentation slides. with further points.\n\nThis is because I want the slides to be a support to the verbal presentation. If somebody decides to make a resume of the points, it's OK with me.\n\nAlso I understand that all the reboot presentations will eventually be available as audio and video files."
+ },
+ {
+  "id": 4226,
+  "parent": 0,
+  "author": "Robert Bialek",
+  "url": "",
+  "date": "2006-06-01 19:49:39",
+  "type": "",
+  "html": "Hi, I wanted to look at your presentation but the link is not working. Could you check it pls?\n\nThx\\\n++Robert"
+ },
+ {
+  "id": 4228,
+  "parent": 0,
+  "author": "Jeppe",
+  "url": "http://geppe.dk",
+  "date": "2006-06-01 20:33:29",
+  "type": "",
+  "html": "Thanks a lot, I really enjoyed the demo! This should be required reading for any web development team."
+ },
+ {
+  "id": 4241,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-02 01:40:57",
+  "type": "",
+  "html": "Robert, Link to powerpoint presentation is now working."
+ },
+ {
+  "id": 4243,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-02 01:49:43",
+  "type": "",
+  "html": "Jeppe,\\\nThanks for the kind words here and in your [blog post](http://geppe.dk/blog/index.php/site/comments/jesper_roenn_jensen_reboot_8/) (in danish)"
+ },
+ {
+  "id": 4323,
+  "parent": 0,
+  "author": "Guy Dickinson",
+  "url": "http://www.participo.com",
+  "date": "2006-06-03 08:33:14",
+  "type": "",
+  "html": "Good to see clueful work in a big consulting firm...nice presentation.\n\nHere you go - a [PDF version](http://www.participo.com/files/pres_2006-06-01_reboot.pdf)..."
+ },
+ {
+  "id": 4348,
+  "parent": 0,
+  "author": "Casper Fabricius",
+  "url": "http://casperfabricius.com",
+  "date": "2006-06-03 15:57:55",
+  "type": "",
+  "html": "Yeah, thanks for the demo at Reboot. For further reference, you can always use [PDF Creator](http://sourceforge.net/projects/pdfcreator/) to create a PDF - it's free, open source, and anything you can print you can get a PDF out of."
+ },
+ {
+  "id": 4463,
+  "parent": 0,
+  "author": "justaddwater.dk | reboot8 roundup",
+  "url": "http://justaddwater.dk/2006/06/06/reboot8-roundup/",
+  "date": "2006-06-06 15:28:28",
+  "type": "pingback",
+  "html": "\\[...\\] For weeks I had been looking forward to presenting my talk on rapid prototyping and do a demo of an application we did in Capgemini. It went fairly well. No technical flaws, I also got a little extra time so there was time for questions. Jesper presenting at reboot8 \\[...\\]"
+ },
+ {
+  "id": 4883,
+  "parent": 0,
+  "author": "Geoff Parker",
+  "url": "http://www.jerf.net/",
+  "date": "2006-06-13 19:39:51",
+  "type": "",
+  "html": "Hi Jesper,\n\nThanks for the great talk and for putting the presentation up.\n\nI think it would be worthwhile if you added a few points as callouts, notes or an extra slide to the legacy system shown on slide 18. These should list its shortcomings and problems. Also it would be useful to list the benefits (20 hours, 2 people, client joy!) of the new application on slide 21 in the same way.\n\nObviously these were points you made verbally (and very convincingly) to all of us at the actual talk at Reboot 8.\n\nMy concern is some people may miss out on the full context of the presentation and what you achieved if they are just downloading the visual part without also getting the points you talked about.\n\nThere is a lot of potential for driving adoption based on success stories like yours so it is important that people get a full understanding."
+ },
+ {
+  "id": 8316,
+  "parent": 0,
+  "author": "Sólo échale agua &bull; Grancomo",
+  "url": "http://www.grancomo.com/2006/07/09/solo-echale-agua/",
+  "date": "2006-07-10 16:25:52",
+  "type": "pingback",
+  "html": "\\[...\\] Jesper es un apasionado de la web bien hecha y ha logrado introducir Ruby On Rails como herramienta de prototipado, alqo que incluso ha llegado a presentar en el pasado reboot8 en Copenhague. \\[...\\]"
+ },
+ {
+  "id": 60887,
+  "parent": 0,
+  "author": "Geppe.dk &raquo; Blog Archive &raquo; Jesper Rønn-Jensen @ Reboot 8",
+  "url": "http://geppe.dk/jesper-r%c3%b8nn-jensen-reboot-8/",
+  "date": "2007-01-14 19:07:40",
+  "type": "pingback",
+  "html": "\\[...\\] Jesper Rønn-Jensens blog med link til præsentationen Bonus-artikel: Just Build It: HTML Prototyping and Agile Development \\[...\\]"
+ }
+]

@@ -1,0 +1,164 @@
+[
+ {
+  "id": 346056,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://germworks.net/blog/",
+  "date": "2007-11-15 02:07:45",
+  "type": "",
+  "html": "Im thinking that my GermWorks website has also been hacked as I now get an error message saying that the database is not connected :("
+ },
+ {
+  "id": 376096,
+  "parent": 0,
+  "author": "HeavyGod",
+  "url": "http://heavy-blog.com/",
+  "date": "2007-11-27 10:53:58",
+  "type": "",
+  "html": "Really good and really interesting post. I expect (and other readers maybe :)) new useful posts from you!\\\nGood luck and successes in blogging!"
+ },
+ {
+  "id": 379078,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-11-28 21:11:55",
+  "type": "",
+  "html": "The same thing happened to Al Gore recently. See The Register:\n\nhttp://www.theregister.co.uk/2007/11/27/climate_change_hack/\n\n(via http://photomatt.net/2007/11/27/al-gore-hacked/ )"
+ },
+ {
+  "id": 379804,
+  "parent": 0,
+  "author": "justaddwater.dk | Letting Spam In For A Day Questions and Answers",
+  "url": "http://justaddwater.dk/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/",
+  "date": "2007-11-29 10:34:21",
+  "type": "pingback",
+  "html": "\\[...\\] a big challenge. But we actually tried that recently when Justaddwater.dk got hacked. The hacker used a security hole in an old version of Wordpress and to upload his malicious code, \\[...\\]"
+ },
+ {
+  "id": 405091,
+  "parent": 0,
+  "author": "Wordpress 2.5 and Security - The Empty Way",
+  "url": "http://blog.emptyway.com/2008/03/30/wordpress-25-and-security/",
+  "date": "2008-03-30 22:08:33",
+  "type": "pingback",
+  "html": "\\[...\\] Justaddwater.dk hacked \\[...\\]"
+ },
+ {
+  "id": 399490,
+  "parent": 0,
+  "author": "Dmitriy Salko",
+  "url": "http://www.sakuraui.com",
+  "date": "2008-03-01 09:19:47",
+  "type": "",
+  "html": "Really very informative post, I am using older version of wordpress for my 3 blogs (linux,php and seo). I also need to upgrade my wordpress version to ensure the security of my blogs.\n\nThanks much for the great info..."
+ },
+ {
+  "id": 403760,
+  "parent": 0,
+  "author": "ViewMyUserAgent",
+  "url": "http://www.100tools.com",
+  "date": "2008-03-23 22:11:28",
+  "type": "",
+  "html": "Wow. I didn't even know flaws like this were possible in WorldPress.\n\nI'm not technical...what kind of background would someone need to detect this kind of intrusion? I'd like to have my site checked, but don't know where to look."
+ },
+ {
+  "id": 419555,
+  "parent": 0,
+  "author": "steve",
+  "url": "http://www.travelforumz.com/blog/",
+  "date": "2008-05-21 11:14:58",
+  "type": "",
+  "html": "Sorry about the intrusion, Thomas, and better luck with the site in the future. What I can add is to make a copy of the db as often as possible.. sites will always be cracked, so it is important to be able to restore. There is a plugin to send a backup of the db via email and worth looking into.\n\nOther than that, the debugging /hack tracing skills of yours are impressive. Thanks for the detailed explanation.\n\nsteve"
+ },
+ {
+  "id": 418474,
+  "parent": 0,
+  "author": "Hana &#38; Sarah&#8217;s blog &raquo; Wordpress blog hacked with admin-ajax.php vulnerability",
+  "url": "http://www.neox.net/w/2008/05/16/wordpress-blog-hacked-with-admin-ajaxphp-vulnerability/",
+  "date": "2008-05-16 06:36:09",
+  "type": "pingback",
+  "html": "\\[...\\] Justaddwater.dk hacked \\[...\\]"
+ },
+ {
+  "id": 420397,
+  "parent": 0,
+  "author": "Navier",
+  "url": "http://www.skoogo.com",
+  "date": "2008-05-26 00:43:20",
+  "type": "",
+  "html": "This is quite informative. I'm sorry about the hacking incident, I've personally gotten hacked by random people across the net multiple times in my forum . I used Vbulletin--I realize that I had to update almost immediately when Vbulletin came out.\n\nBut it's great that you can actually diagnose your hacked hole!"
+ },
+ {
+  "id": 423125,
+  "parent": 0,
+  "author": "IT Support Guy",
+  "url": "http://www.itsupportheroes.co.uk",
+  "date": "2008-06-10 10:44:36",
+  "type": "",
+  "html": "This shows the importance of regularly checking your logs for signs of suspicious activity against a baseline. I wish someone would release a simple hosted service (like statcounter) that would identify anomalies like this in realtime.\n\n-Kris"
+ },
+ {
+  "id": 434545,
+  "parent": 0,
+  "author": "pass over",
+  "url": "http://www.passoversite.org",
+  "date": "2008-08-08 18:06:39",
+  "type": "",
+  "html": "nice article, gonna try it ;)"
+ },
+ {
+  "id": 433839,
+  "parent": 0,
+  "author": "Utkusoft",
+  "url": "http://www.utkusoft.com",
+  "date": "2008-08-04 14:45:04",
+  "type": "",
+  "html": "I use wp versiyon 2.6.It seems very safe ;)"
+ },
+ {
+  "id": 432020,
+  "parent": 0,
+  "author": "Diluted Reality",
+  "url": "http://www.dilutedreality.com",
+  "date": "2008-07-25 02:59:44",
+  "type": "",
+  "html": "I use WP version 2.5 for my blog. Has anybody ever heard of this happening in this version? I see they just came out with a 2.6. I will upgrade immediately just in case. Thans for the info!"
+ },
+ {
+  "id": 464940,
+  "parent": 0,
+  "author": "linux consultant",
+  "url": "http://barrang.com.au/",
+  "date": "2009-01-10 04:56:07",
+  "type": "",
+  "html": "google and wordpress are getting better at stopping these crackers. the worst ones are where everyhting seems normal to you, but to google, there are 100 links to spam sites. wordpress are making it easier to upgrade, and google will attempt to notify you if they detect any malicious ocde."
+ },
+ {
+  "id": 465918,
+  "parent": 0,
+  "author": "Paul Bauer",
+  "url": "http://www.bauer-power.net",
+  "date": "2009-01-16 00:37:27",
+  "type": "",
+  "html": "Wow that sucks. Glad to know you were able to close the security hole though."
+ },
+ {
+  "id": 490280,
+  "parent": 0,
+  "author": "Riezky Maulana",
+  "url": "http://maulanariezky.info/",
+  "date": "2009-10-21 13:17:34",
+  "type": "",
+  "html": "Wordpress is new update available, in version 2.8.5 more security issue fixed..."
+ },
+ {
+  "id": 471840,
+  "parent": 0,
+  "author": "linux administrator",
+  "url": "http://www.msamir.net",
+  "date": "2009-02-10 02:49:22",
+  "type": "",
+  "html": "It is normal to find such this attacker. i think you must give care for the www apache server and also about the injections technice"
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "id": 653425,
+  "parent": 0,
+  "author": "Mitch",
+  "url": "",
+  "date": "2013-07-16 06:37:58",
+  "type": "",
+  "html": "This is great, and exactly what i am looking for,\\\ncould you please share the source files, the pngs of the flags and a html sample or something, that would be great.\\\nMany thanks."
+ },
+ {
+  "id": 653388,
+  "parent": 0,
+  "author": "HKGE",
+  "url": "http://www.powergenbatt.com/",
+  "date": "2013-07-11 22:38:50",
+  "type": "",
+  "html": "Two questions. First, how many flags were used? In e-commerce sites, where they use flags of the world, it seems like a couple of dozen flag, of the most populous countries, since they don't try to add a flag for every single nation. How many flags were you targeting? Second, reducing the number of HTTP requests is certainly good, but wouldn't the browser most likely cache the images anyway?"
+ },
+ {
+  "id": 653431,
+  "parent": 0,
+  "author": "James",
+  "url": "http://www.jobslash.com",
+  "date": "2013-07-16 15:13:32",
+  "type": "",
+  "html": "Good article ... The CSS sprite Generator is good, I should give it try for my project too, I'm using a flags for a Game website... Thanks man"
+ }
+]

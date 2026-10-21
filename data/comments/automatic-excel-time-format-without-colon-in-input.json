@@ -1,0 +1,38 @@
+[
+ {
+  "id": 507655,
+  "parent": 0,
+  "author": "tjensen",
+  "url": "",
+  "date": "2011-01-15 11:10:58",
+  "type": "",
+  "html": "what about a macro insert a \":\" with a simple substring right 2 chars replace.\\\nin global.dot works in every sheets no hidden collums etc"
+ },
+ {
+  "id": 510314,
+  "parent": 0,
+  "author": "Sandálias Personalizadas",
+  "url": "",
+  "date": "2011-02-06 14:34:42",
+  "type": "",
+  "html": "what about a macro insert a “:” with a simple substring right 2 chars replace.\\\nin global.dot works in every sheets no hidden collums etc.\\\nthanks!"
+ },
+ {
+  "id": 506543,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2011-01-06 12:33:50",
+  "type": "",
+  "html": "Updated the sum calculation. If it got to 24 hours it would continue from 00:00. The solution was to change the format of the sum field. New (custom) format \"\\[h\\]:mm\" solved the problem.\n\nI found the solution in this [Excel Dates and Times FAQ](http://www.contextures.com/xlfaqdat.html#FormatHour)"
+ },
+ {
+  "id": 509036,
+  "parent": 0,
+  "author": "Ronald",
+  "url": "",
+  "date": "2011-01-26 06:10:49",
+  "type": "",
+  "html": "Thanks for sharing this one this is very helpful especially to the people who are looking for this topic. This is very informative like this site I've discovered earlier http://www.judithbassler.com/blog/include-the-dates-and-times-in-excel.html"
+ }
+]

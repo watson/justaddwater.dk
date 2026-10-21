@@ -1,0 +1,38 @@
+[
+ {
+  "id": 2,
+  "parent": 0,
+  "author": "Innovation Itch",
+  "url": "http://blogs.accenture.nl/InnovationItch/archives/2005/11/references_from.php",
+  "date": "2005-11-11 14:14:00",
+  "type": "trackback",
+  "html": "**References from the blogosphere...**\n\nThe blogosphere is starting to pick-up references to the BlogPodium. An easy way to track a lot of the references is via a special feature from the Technorati blogsearchengine that shows references to a specific web address. Check here for..."
+ },
+ {
+  "id": 3,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-11-13 13:02:19",
+  "type": "",
+  "html": "Here's another angle on blogging. Aparently an advertising agency invented a fictive person and a blog to market Cillit Bang. This fictive person left comments in other peoples' blogs (to spread the word and make links).\n\nIn this example, the idea completely backfired. I'm totally overwhelmed by the amount of flames and negative feedback that the fictive person has created.\n\nI think this is a very profound look into the psychology of weblogs and the weblog community. Read more on Tom Coates' blog \"plasticbag\":\n\n[On Cillit Bang and a new low for marketers](http://www.plasticbag.org/archives/2005/09/on_cillit_bang_and_a_new_low_for_marketers.shtml)\\\n[An apology from the Cillit Bang team](http://www.plasticbag.org/archives/2005/10/an_apology_from_the_cillit_bang_team.shtml)\\\n[A few odd bits of detective work](http://www.plasticbag.org/archives/2005/10/a_few_odd_bits_of_detective_work.shtml)"
+ },
+ {
+  "id": 24,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-05 09:16:11",
+  "type": "",
+  "html": "Just a little piece of information: Robert Scoble mentions that Microsoft has over 2,000 bloggers. I think that's an amazing number!\n\nFrom [Are you an RSS addict?](http://scobleizer.wordpress.com/2005/12/03/are-you-an-rss-addict/)"
+ },
+ {
+  "id": 53,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-03 01:10:56",
+  "type": "",
+  "html": "From [The Long Tail](http://www.thelongtail.com/the_long_tail/2005/12/announcing_the_.html) is a link tracking Fortune 500 blogs:\n\n> In collaboration with Socialtext, we've created a wiki that tracks which of the Fortune 500 is blogging. We found that only ~~3~~ *4%* of the F500 are doing so. Check it out [here](http://www.socialtext.net/bizblogs)."
+ }
+]

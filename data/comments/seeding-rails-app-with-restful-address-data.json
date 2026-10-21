@@ -1,0 +1,11 @@
+[
+ {
+  "id": 517849,
+  "parent": 0,
+  "author": "Neeraj Dhiman",
+  "url": "http://www.facebook.com/pages/SEO-Technology/167646366610349",
+  "date": "2011-04-11 08:30:39",
+  "type": "",
+  "html": "Great stuff and thanks for doing all of this.\n\nQuick question...given that I'm already using Factories for my testing, what is the advantage of using seed_fu over a custom rake task using Factories? It seems like I'd be just re-creating my Factory code.\n\nNote that my comments relate to creating data for development and testing purposes - not seeding a database with static data (e.g. AK, AZ....).\n\nthanks again, great stuff"
+ }
+]

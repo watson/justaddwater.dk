@@ -1,0 +1,110 @@
+[
+ {
+  "id": 220480,
+  "parent": 0,
+  "author": "Stevie D",
+  "url": "",
+  "date": "2007-07-24 14:20:43",
+  "type": "",
+  "html": "Is it just me, or do the links on this very website here not change colour after being visited? I can't see any difference between fresh and visited links.\n\nDo as I say, not as I do :-("
+ },
+ {
+  "id": 220491,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-07-24 14:38:43",
+  "type": "",
+  "html": "Hehe, @Stevie you are absolutely right :)\n\nWe will change this as soon as we have the next working session on the website.\n\n(usually once or twice a year, we give the site an overhaul, upgrading software, making tweaks and addjustments)\n\nAs you probably know, Thomas and I have been too busy to get much material written. Hope you can bare with us :)"
+ },
+ {
+  "id": 220496,
+  "parent": 0,
+  "author": "Michael Zuschlag",
+  "url": "http://www.zuschlogin.com",
+  "date": "2007-07-24 14:55:17",
+  "type": "",
+  "html": "A fine guideline, and I’ve been meaning to modify my own WordPress CSS to comply. It’s especially important if you have more than one link to the same content. It’s a waste of time and annoying to click on a separate link and get the same content you covered earlier.\n\nHowever, precisely because relatively few sites currently follow this guideline, it has diminished value. If graphic designers don’t know this convention, then probably fewer users know it. How much good is it then? Then there’s the problem of the departure from standard colors on web sites today. If the user returns next week to a site and sees green and cyan links, which are the visited ones?"
+ },
+ {
+  "id": 220500,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-07-24 15:02:59",
+  "type": "",
+  "html": "@Michael,\\\nI have to disagree with you that fewer users than graphical designers know the convention: The designers I'm thinking of are often blinded by things that look good, simple and stunning.\n\nIn their opinion, different link colors look messy, cluttered. You imagine a white horse, but what you see is a zebra when random users click randomly around.\n\nThat's the designers i'm talking about: Occupied with other things than actual users would be. \"How the site looks\" vs. \"how do I find X?\""
+ },
+ {
+  "id": 220502,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-07-24 15:06:26",
+  "type": "",
+  "html": "Another example that comes to my mind is Amazon. Amazon uses special querystring on every link, allowing them to find out where users clicked on a page, if there are several links on the page to the same content.\n\nThey do it by making every link different, which in turn means that no links are visited before — even though they point to the same content.\n\nI'd like to see Jakob Nielsen make a business case analysis considering the value it gives Amazon to know what links the user clicks."
+ },
+ {
+  "id": 220887,
+  "parent": 0,
+  "author": "webtouch.dk &raquo; Linkfarver der skifter efter klik",
+  "url": "http://webtouch.dk/linkfarver-der-skifter-efter-klik/",
+  "date": "2007-07-25 02:38:49",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk har Jesper Rønn-Jensen skrevet en blog om linkfarver der bør skifte når brugeren har benyttet \\[...\\]"
+ },
+ {
+  "id": 221928,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://germworks.net",
+  "date": "2007-07-26 06:59:05",
+  "type": "",
+  "html": "Agree with you totally.\n\nHowever what are your views on menu links??\\\nI have seen many that do not use this method for the menu. I personally think they should also change."
+ },
+ {
+  "id": 222749,
+  "parent": 0,
+  "author": "Meryl",
+  "url": "http://www.meryl.net/blog/",
+  "date": "2007-07-27 14:53:15",
+  "type": "",
+  "html": "Also please consider dropping gray text -- it's very hard on the eyes when on a light or white background. It's a bad trend that has to stoppp."
+ },
+ {
+  "id": 222234,
+  "parent": 0,
+  "author": "Christian Watson",
+  "url": "http://www.smileycat.com",
+  "date": "2007-07-26 18:09:20",
+  "type": "",
+  "html": "I would suggest that menu links fit into the 'command-oriented functionality' category. They are likely to be used many times and so there is no value in making them change color.\n\nIn addition due to the fact that navigation bars usually have a colored background, there is no obvious default color for a visited menu link. Therefore, creating one that fitted in with your own site's color scheme would not be useful as visitors would not recognize it as a visited link."
+ },
+ {
+  "id": 428964,
+  "parent": 0,
+  "author": "Your User&#8217;s Experience. Who&#8217;s Watching?",
+  "url": "http://chamainc.com/blog/your-users-experience-whos-watching/",
+  "date": "2008-07-08 11:41:54",
+  "type": "pingback",
+  "html": "\\[...\\] there are bigger usability violations committed on the web. Picking on Tumblr just happened to be convenient at the time of writing. This \\[...\\]"
+ },
+ {
+  "id": 458051,
+  "parent": 0,
+  "author": "Aku",
+  "url": "http://tlehtinen.net",
+  "date": "2008-12-01 21:17:18",
+  "type": "",
+  "html": "I hate when links change color when they are visited. Especially when the colors are default and the web page is looking like rainbow when I have cliked enough links on it."
+ },
+ {
+  "id": 468442,
+  "parent": 0,
+  "author": "bob marvin",
+  "url": "http://www.bobmarvin.com",
+  "date": "2009-01-26 21:32:02",
+  "type": "",
+  "html": "My personal preference is to have the links change color. Also I think that visitors to websites are already conditioned to having the visited links change color."
+ }
+]

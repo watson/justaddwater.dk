@@ -1,0 +1,101 @@
+[
+ {
+  "id": 40397,
+  "parent": 0,
+  "author": "Michael",
+  "url": "",
+  "date": "2006-12-16 10:44:28",
+  "type": "",
+  "html": "Thanks Jesper. I'm the designer for Google Finance and the credit really should go to the engineers. :)"
+ },
+ {
+  "id": 40692,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-12-16 23:20:49",
+  "type": "",
+  "html": "Hi Michael.\\\nSend my regards to the entire team. I really mean that this is an inspiring way of making things simple. There has been so much discussion lately about simplicity vs complexity. Don Norman, Joel Spolsky, Matthew Oliphant, Thomas Baekdal all chip in to saying that simpler is not always better.\n\nI think you and your team deserve a price for making simplicity work. Well done job. And unlike other solutions yours is really well executed."
+ },
+ {
+  "id": 41940,
+  "parent": 0,
+  "author": "The Money Maker &raquo; Late breaking news",
+  "url": "http://blengbleng101.info/all-my-good-friends/late-breaking-news-18",
+  "date": "2006-12-19 08:23:34",
+  "type": "pingback",
+  "html": "\\[...\\] Simplest Import Data User Interface Ever \\[...\\]"
+ },
+ {
+  "id": 245350,
+  "parent": 0,
+  "author": "Deepak",
+  "url": "",
+  "date": "2007-08-31 08:08:37",
+  "type": "",
+  "html": "Hi i want to implement same technique ,can any body guide me?"
+ },
+ {
+  "id": 394875,
+  "parent": 0,
+  "author": "Rick",
+  "url": "",
+  "date": "2008-02-09 22:39:12",
+  "type": "",
+  "html": "I'm trying to use the import now and I'm not seeing what's so great about it.. it sill requires a lot of intervention, such as it doesn't seem to pick up the price paid or the date of the transaction. Concerning the date, why can't I add the date of the transaction in the preview screen? It looks like I'm going to have to add all the share prices then go back and add all the dates of the transactions? I don't see where I can enter transaction price either in the edit preview screen? I must be missing something, because it seems to fall short in the hype you seem to give this."
+ },
+ {
+  "id": 414480,
+  "parent": 0,
+  "author": "Glen",
+  "url": "http://www.ihatethetv.ocm",
+  "date": "2008-04-28 07:19:14",
+  "type": "",
+  "html": "Why doesn't this import support simple CSV or other delimited formats? Its really aggravating for me. I have some perl scripts I mess around with, and it would be very helpful for moving in and out of gfinance.\n\nIt seems to rely on some html markup that is copied and pasted from yahoo, etc. I haven't been able to get it to work at all with plain text.\n\nAlso, whens' there going to be a cpan api available? =) I am still having to use yahoo for perl...works fine, but could be better obviously.\n\nIt's great to see Google's employees interacting like this though.\n\nThanks,\\\nGlen"
+ },
+ {
+  "id": 427375,
+  "parent": 0,
+  "author": "Bridge Financing",
+  "url": "http://www.commercialloanweb.com",
+  "date": "2008-07-01 03:58:34",
+  "type": "",
+  "html": "I will still stay with Yahoo finance and clearstation. Goliath Google needs to stay within their realm."
+ },
+ {
+  "id": 454520,
+  "parent": 0,
+  "author": "Apurva",
+  "url": "",
+  "date": "2008-10-31 20:29:04",
+  "type": "",
+  "html": "someone please respond."
+ },
+ {
+  "id": 447818,
+  "parent": 0,
+  "author": "jay",
+  "url": "",
+  "date": "2008-09-17 20:17:29",
+  "type": "",
+  "html": "This does not work for me. I get: \"We could not import a portfolio\" I even tried importing from another google account as well as a yahoo one. Tried csv: NO...Tried fiddling with the csv in excel: NO.... Tried the instructions you gave above: NO.\\\nI don't understand what I'm doing wrong and there's no help on the google site nor a forum to search."
+ },
+ {
+  "id": 454519,
+  "parent": 0,
+  "author": "Apurva",
+  "url": "",
+  "date": "2008-10-31 20:28:45",
+  "type": "",
+  "html": "it just does not work. A csv file would be ideal, but to make this work there should atleast be a example or a sample portfolio paste that works. There is no help. It sucks for now."
+ },
+ {
+  "id": 488105,
+  "parent": 0,
+  "author": "Manoj Bhagat",
+  "url": "",
+  "date": "2009-08-01 09:36:45",
+  "type": "",
+  "html": "Thanks for your post\\\nBut I really do not understand, why Google doesn't provide simple CSV or Text data import. I manage my financial transactions with multiple brolers and usually have the data in Excel/CSV. I have synchronized the account manually many times but find it really difficult to maintain thereafter,,\\\nA CSV based import/export of transactions will be the best.\\\nI donno why designers at Google cant think of it\n\nManoj"
+ }
+]

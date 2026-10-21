@@ -1,0 +1,20 @@
+[
+ {
+  "id": 490244,
+  "parent": 0,
+  "author": "Frank Lynch",
+  "url": "http://www.webpagefx.com",
+  "date": "2009-10-20 15:02:25",
+  "type": "",
+  "html": "i think it would be better to create two different folder for codes and for stuffs (images and libraries), and then merge them to one, and then access it from server, that will be great idea to differ them."
+ },
+ {
+  "id": 593869,
+  "parent": 0,
+  "author": "James Dowling",
+  "url": "",
+  "date": "2012-03-09 04:18:13",
+  "type": "",
+  "html": "Hi Jesper,\n\nI found this post looking for the --copy-dirlinks flag. Unfortunately, whatever post-processor is being used on thsi blog is outputting non-ascii dashes and I ended up with the following output:\n\nrsync: -\\\\#342\\\\#200\\\\#223copy-dirlinks: unknown option\n\nPerhaps you could update this post to use ascii minus instead, so others don't run into this problem."
+ }
+]

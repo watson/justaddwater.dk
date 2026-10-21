@@ -1,0 +1,74 @@
+[
+ {
+  "id": 390834,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2008-01-23 01:29:00",
+  "type": "",
+  "html": "BTW: If you want to see a example of these interactive \"snippets\" I am talking about then here is a good example. Scott Adams (the creator of Dilbert) launch the dilbert widget today: http://widget.dilbert.com/"
+ },
+ {
+  "id": 390837,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2008-01-23 02:01:36",
+  "type": "",
+  "html": "Let's try that again without the typos (it is late)...\n\nA good example is the Dilbert interactive widget, which was launched earlier today: http://widget.dilbert.com/"
+ },
+ {
+  "id": 390831,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2008-01-23 01:14:21",
+  "type": "",
+  "html": "It is the kind of \"sharing\" features that you often see on blogs and social networks.\n\nThe real difference is that \"tell a friend\" is a \"PUSH\" concept. The recipient is not in control. Sharing concepts uses \"PULL\" - and allow people control what they want to see (and promote).\n\nE.g. on video sites you can \"download the video\", find a permalink (direct link), embed it on your blog (or anywhere else), add it to digg or stumpleupon, and lately there has been a rise in preview html snippets that allow you to embed a \"teaser\" instead of the full content. Nothing is pushed - everything is pulled if people decide to do so.\n\nAnother interesting development is the creation of social network applications targeted specific companies or campaigns (not in the of advertising - but interactive \"snippets\" that can be added to your social network page)."
+ },
+ {
+  "id": 390595,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2008-01-21 14:51:13",
+  "type": "",
+  "html": "BTW: Just a relevant side-note. \"Send to friend\" is legally considered spam if contains any kind of commercial or promotional information.\n\nIt is fully legal to e.g. send a job to a friend (using a \"tell a friend system\") if the email only contains the job in question. But it is considered spam if it also says \"Create your own resume for free\" or \"We are the biggest job site in Europe\" - or similar examples.\n\n\\+ in Scandinavia, it is illegal to store the emails provided for future reference or use (any kind of use).\n\nI am personally recommending companies not create \"tell a friend\" systems because it is a legal mine field - and instead use \"sharing\" concepts."
+ },
+ {
+  "id": 390596,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-01-21 14:53:13",
+  "type": "",
+  "html": "Thanks for your comment Thomas.\n\nWhat do you mean by \"sharing\" concepts?"
+ },
+ {
+  "id": 393288,
+  "parent": 0,
+  "author": "Morgan Roderick",
+  "url": "http://roderick.dk",
+  "date": "2008-02-03 13:26:34",
+  "type": "",
+  "html": "I've been thinking a lot about these \"tell a friend thingies\" lately ... just last week I had to fix a \"tell a friend\" thing on a clients site. The original implementer had not thought to build in any kind of spam protection, nor had the implementer of the component used for sending the e-mails.\n\nConsidering the securtiy holes you open up, the legal mine fields and the amount of man hours poured into creating tell a friend, is it even worth it?\n\nDo they get used all that much? Do they bring enough value to the sites audience to justify the cost?"
+ },
+ {
+  "id": 454639,
+  "parent": 0,
+  "author": "Corporate Gifts Srednarb",
+  "url": "http://www.promoitemscorpgifts.com",
+  "date": "2008-11-02 12:09:10",
+  "type": "",
+  "html": "\\- Anything that has a window that pops up in a new browser: I am not in favor of this. So many people do nto like popups. many browsers have popup blockers. And it can cause a simple mistake of one window covering the other and some users cannot see where the email-a-friend form is. Thus I do not like Manpower.se.\n\n\\- Forms that simulate a popup but are still on the same page using JavaScript/CSS techniques that gray out the background and highlight the form is best. It draws the attention to the form and you get more people to use the form after it is clicked. Thus I like jobzonen.dk."
+ },
+ {
+  "id": 474820,
+  "parent": 0,
+  "author": "Rob Wallace",
+  "url": "http://jugglesoft.com",
+  "date": "2009-02-25 14:07:43",
+  "type": "",
+  "html": "I am wondering how I can integrate \"send to a friend\" ionto my product which is a project management SaaS."
+ }
+]

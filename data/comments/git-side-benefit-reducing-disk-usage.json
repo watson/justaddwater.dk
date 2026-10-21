@@ -1,0 +1,47 @@
+[
+ {
+  "id": 468318,
+  "parent": 0,
+  "author": "Jeet",
+  "url": "http://www.getlinkspro.com",
+  "date": "2009-01-26 10:46:16",
+  "type": "",
+  "html": "I am not entirely sure about git reducing the disk usage, since it has to keep 'whole' copies of the commits, I am inclined to think that total size required by a well used git repository would be higher than svn/cvs repository that will only keep differences.\n\nMight try something locally before I can conclude.. but yeah, I have switched to git already :))"
+ },
+ {
+  "id": 494115,
+  "parent": 0,
+  "author": "Andrew",
+  "url": "",
+  "date": "2010-03-24 17:46:05",
+  "type": "",
+  "html": "See https://git.wiki.kernel.org/index.php/GitSvnComparison\\\nThey say there that GIT version of Mozilla repository is 420 MB instead of 12 GB in SVN.\\\nBut that's the remote repository, which does not really matter to me :-)\\\nWhat matters to me is that when I download it to my machine, with GIT I have to download the entire 420 MB :-( while with SVN only a snapshot of the latest sources.\\\nDistributed VCSs are good for large decentralized projects."
+ },
+ {
+  "id": 476803,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-03-09 10:08:35",
+  "type": "",
+  "html": "@Jeet i follow your thoughts but the repositories I tested with above actually shows a disk usage reduction.\n\nThe biggest SVN repository above had more than 16,000 commits and the Git version was 40% smaller even though it contained the entire project history.\n\nSo even though that the svn repositories here are only snapshots in time (the history remains on the server), there is a significant difference.\n\nBTW, the Git repos also only contains differences between each revision."
+ },
+ {
+  "id": 513664,
+  "parent": 0,
+  "author": "subbarao",
+  "url": "",
+  "date": "2011-03-09 12:54:32",
+  "type": "",
+  "html": "Hey guys, I want to know the exact procedure used by git to reduce disk usage i.e. the algorithm used by it to store changes. Any suggestions ???"
+ },
+ {
+  "id": 545542,
+  "parent": 0,
+  "author": "justaddwater.dk | Using Git for SVN Repositories Workflow",
+  "url": "http://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/",
+  "date": "2011-09-30 19:46:45",
+  "type": "pingback",
+  "html": "\\[...\\] the last months I have been using Git to work with my Subversion repositories. Besides from reducing disk usage, Git also makes my work slightly faster and independent of network access — I can make \\[...\\]"
+ }
+]

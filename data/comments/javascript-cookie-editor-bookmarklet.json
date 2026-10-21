@@ -1,0 +1,83 @@
+[
+ {
+  "id": 72576,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-01-29 23:58:03",
+  "type": "",
+  "html": "Hmm. Something went wrong as i posted. Probably because of single quotes or other \"dangerous\" signs in the bookmarklet.\n\nLooking through the source reveals some mysteries:\n\nFirst 3 single quotes are just fine. After that, every single quote is translated to &8216; and &8217;. The ending double-quote is then translated into &8221; which evenually breaks this post. I will reorder the post right now to it breaks less."
+ },
+ {
+  "id": 72601,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-01-30 00:17:02",
+  "type": "",
+  "html": "Original source file available here:\\\nhttp://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.js\n\nFile with link you can bookmark:\\\nhttp://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.html"
+ },
+ {
+  "id": 73315,
+  "parent": 0,
+  "author": "Arjan Eising",
+  "url": "http://arjaneising.nl",
+  "date": "2007-01-30 22:53:12",
+  "type": "",
+  "html": "Heey thanks! This bookmarklet just does what the Webdeveloper toolbar doesn't..."
+ },
+ {
+  "id": 73160,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-01-30 16:35:15",
+  "type": "",
+  "html": "With respect to opening a new window, I prefer a cookie viewer/editor to live in its own window. Changes in cookies will affect all windows/sessions to the given website, so that's why.\n\nAlso I like that I can reload the webpage and keep the cookie window open. Which again are arguments for a seperate window for the cookie editor."
+ },
+ {
+  "id": 73121,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-01-30 15:43:32",
+  "type": "",
+  "html": "Instead of opening a window, one way might to add a DIV on the page that includes the information (and is placed above whatever is on the page)."
+ },
+ {
+  "id": 72935,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-01-30 11:25:12",
+  "type": "",
+  "html": "Does not work in IE7. The pop-up blocker stops it from opening :)"
+ },
+ {
+  "id": 72990,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-01-30 12:38:10",
+  "type": "",
+  "html": "Thomas:\\\nI saw noticed the annoyance. And there should probably be an adjustment as to how the window is opened. Any ideas, suggestions, examples of what would work?\n\nQuick workaround is to \"temporarily allow popups from this site\" in the IE7 information bar."
+ },
+ {
+  "id": 85772,
+  "parent": 0,
+  "author": "Jim",
+  "url": "http://www.auldridges.com",
+  "date": "2007-02-17 18:49:51",
+  "type": "",
+  "html": "\"Please feel free to make suggestions\"\n\nI wrote a [JavaScript cookie handling library](http://jaaulde.com/test_bed/cookieLib/) that you could take a look at if you still felt your tool needed some corrections. While I don't see anyway to overcome the cross domain restrictions, I think you could easily modify the cookie expirations.\n\nJim"
+ },
+ {
+  "id": 425822,
+  "parent": 0,
+  "author": "Louis",
+  "url": "http://www.myictel.co.cc",
+  "date": "2008-06-23 20:33:51",
+  "type": "",
+  "html": "Hi Jesper\n\nThanks for your great Bookmarklet, I've been collecting some for a few years but your's is really useful.\n\nHere's a question I am hoping you (or one of your readers) might be able to assist with:\n\nI'm running a blog which links to a referral program which uses a cookie:\n\nhttp://www.ictel.co.za/11405\\\n(where 11405 is saved as the cookie called \"rewardcookie\")\n\ncheck it out with your cookie editor bookmarklet\n\nIs there a way for me to write this cookie while the user is reading my blog at wordpress or another blogging service (currently wordpress)\\\nbefore they visit www.ictel.co.za/11405 ?\n\nThe reason that I ask is that I have seen a few people contacting me through my blog saying that they joined my \"income network\" , but in fact they did not.\n\nThey read the blog and remembered the site ictel.co.za, and didn't click through directly from my blog, thus not writing the reward cookie (dispite my best efforts to make them do so...)\n\nIf I am able to push this rewardcookie from my different blogs about the service or possibly online adverts that would be great.\n\nDo you know if this is possible, and how this can be doen either in javascript or through a online ad?\n\nAny comments / or other methods as well as caveats about this approach will be much appreciated."
+ }
+]

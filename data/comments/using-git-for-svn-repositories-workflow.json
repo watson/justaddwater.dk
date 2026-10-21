@@ -1,0 +1,74 @@
+[
+ {
+  "id": 477014,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-03-10 12:56:27",
+  "type": "",
+  "html": "@Simon B. thanks for your comments\n\n--dry-run is with double dashes but Wordpress has decided to change it. Thomas and I might apply a patch but it's a very annoying default for Wordpress\n\nI changed the line to end with \"...back in your working directory\" -- nice catch!\n\nThe last step. I changed the wording so that the workflow implied I worked on Trunk and merged from trunk to branch. I think that makes it a little easier to understand.\n\nBesides, what I might wanted to do was creating a separate Git branch for a change -- say \"git checkout -b bug_35\"\n\nAnd then merge that branch into both trunk and the release branch."
+ },
+ {
+  "id": 477015,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-03-10 13:00:06",
+  "type": "",
+  "html": "This blog post also explains git/svn branch workflow pretty well:\\\n[Quick Start: using git (for Windows) with Google Code Project Hosting](http://ariya.blogspot.com/2008/04/quick-start-using-git-for-windows-with.html) by Ariya Hidayat"
+ },
+ {
+  "id": 476970,
+  "parent": 0,
+  "author": "Simon B.",
+  "url": "",
+  "date": "2009-03-10 08:08:12",
+  "type": "",
+  "html": "Excellent article! I'm bookmarking it :)\\\nSome corrections needed though: --dry-run is showing with only one leading dash, blamed be your blog editor?\n\n\\>The last line gets your dirty files back in your repository.\\\nIsn't that rather \"back in your working directory\"?\n\nAnd in the last step I'm confused. It seems you're taking news from the svn repo's 0.11 branch and putting them into the svn repo's Trunk branch, together with any local changes you've made? But following the flow of your example before that gives an impression your changes in the git repo are not related to the from-0.11-to-trunk merge, so they really should go as separate commits? Or dcommits... :)"
+ },
+ {
+  "id": 477297,
+  "parent": 0,
+  "author": "Jacob Andresen",
+  "url": "http://www.pedant.dk",
+  "date": "2009-03-11 20:43:13",
+  "type": "",
+  "html": "Cool article! I did not know that git could do this. Thanks :)"
+ },
+ {
+  "id": 486141,
+  "parent": 0,
+  "author": "Matthew",
+  "url": "",
+  "date": "2009-05-14 07:19:10",
+  "type": "",
+  "html": "git's decentralized features are ideal for someone leading up the kernel of Linux. With commit-ers to linux kernal's 22,000+ files from around the world, this makes the decentralized model of git the best fit. i.e. for Linus Torvalds Kernel group.\n\ngit implementation experience for the repository I administer has shown a full week needed for repository migration. The subversion repository(s) and all the right branches need to migrate into git. Then build scripts need factoring. The second week of migration is in progress but it looks like its pretty will complete.\n\nIn the vast majority of source code management configurations (including what I recently used successfully with svn), there needs to be a central server anyway. So what is gained by pushing the decentralized git to behave as a centralized server.\n\nTrue the merging algorithms are better with git, but that's a hard sell against the considerable costs. My git colleagues say I'm still in the anger stage of the svn grieving process: denial, anger, bargaining, acceptance."
+ },
+ {
+  "id": 487325,
+  "parent": 0,
+  "author": "stephen",
+  "url": "",
+  "date": "2009-07-03 08:42:03",
+  "type": "",
+  "html": "Im messing around with git and svn at the minute i have an empty trunk on my svn and then i branched it to make it\n\ntrunk\\\nbranches/sprint_1\n\nthen i cloned it in git svn with branches / tags / trunk\n\nand worked in my branches/sprint_1 then did dcommit now everything is in branches/sprint_1 on my svn as i expected but now i want to put that on the trunk, however svn head is point to branches/sprint_1\n\nwhen i do\\\ngit checkout master and then git merge sprint_1 the git svn info show the url has changed form /trunk to /branches/sprint_1\n\nany idea on how i get get /branches/sprint_1 onto the trunk when trunk is behind in the revision\n\ncheers"
+ },
+ {
+  "id": 488536,
+  "parent": 0,
+  "author": "benson margulies",
+  "url": "",
+  "date": "2009-08-24 02:10:20",
+  "type": "",
+  "html": "There seems to be a giant disagreement about the safety of the following workflow:\n\n1\\) git svn init with the full set of branch and tag args.\\\n2\\) git branch to create a local branch\\\n3\\) git checkout the local branch\\\n4\\) do work\\\n5\\) git checkout master\\\n6\\) git merge local branch\\\n7\\) git dcommit\n\nWhat's your belief?"
+ },
+ {
+  "id": 489925,
+  "parent": 0,
+  "author": "Erik Peterson",
+  "url": "",
+  "date": "2009-10-11 03:45:00",
+  "type": "",
+  "html": "@benson\\\nI use the same workflow you present and its worked well for me. Our svn repos don't have much branching. So I simply keep the svn trunk in sync with git master."
+ }
+]

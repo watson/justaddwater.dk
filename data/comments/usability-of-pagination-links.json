@@ -1,0 +1,263 @@
+[
+ {
+  "id": 389590,
+  "parent": 0,
+  "author": "WebWord &raquo; Blog Archive &raquo; Usability of Pagination Links",
+  "url": "http://www.webword.com/wp/2008/01/14/usability-of-pagination-links/",
+  "date": "2008-01-14 14:48:23",
+  "type": "pingback",
+  "html": "\\[...\\] Usability of Pagination Links \\[...\\]"
+ },
+ {
+  "id": 388251,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-01-07 11:26:57",
+  "type": "",
+  "html": "@Joe\n\nI understand why you frown at that guideline. I think it's important that pagination is always **secondary functionality** compared to the actual content.\n\nYes, normally underlines indicate that there is content or functionality behind a given text and it's convenient that you don't have to discover by moving your mouse around on the screen.\n\nBut I would argue -- the same way with menus -- that this is secondary functionality. If you don't instantly discover the pagination, **so what**! The default sorting of the paginated list should be good enough for most people.\n\nI would personally prefer that the actual content steal attention -- not subsidiary links etc. Of course, it's a tradeoff, and it depends on your actual data. But in general I think you sould\n\n1.  \\\n2.  Start with no pagination (nothing to steal attention from the content)\n    \\\n3.  If in some cases people need pagination to navigate the results, provide the pagination as visually subtle as possible\n    \n\nTurn this around: You would never start with pagination links that are visual dominant for the content on the page. That would signal that you are on the wrong page."
+ },
+ {
+  "id": 388249,
+  "parent": 0,
+  "author": "Joe",
+  "url": "",
+  "date": "2008-01-07 11:16:52",
+  "type": "",
+  "html": "Don’t use underlines ????????\\\nbut why?"
+ },
+ {
+  "id": 390459,
+  "parent": 0,
+  "author": "gmlk",
+  "url": "",
+  "date": "2008-01-20 17:21:02",
+  "type": "",
+  "html": "You may want to look at http://unspace.ca/discover/pageless"
+ },
+ {
+  "id": 387662,
+  "parent": 0,
+  "author": "The Usability of Pagination Links | Sideblog | Smashing Magazine",
+  "url": "http://www.smashingmagazine.com/2008/01/04/the-usability-of-pagination-links/",
+  "date": "2008-01-04 14:29:22",
+  "type": "pingback",
+  "html": "\\[...\\] usability of pagination links: Jesper Rønn-Jensen’s annotations. Consider “endless” scroll and avoid \\[...\\]"
+ },
+ {
+  "id": 387634,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-01-04 09:42:50",
+  "type": "",
+  "html": "@Tobias and @Geoff: I agree with you that the ability to reverse sort can be important. But my point is, that you really shouldn't consider adding a \"Last\" link unless you are in that situation.\n\nBut note that \"reverse order\" will suddenly add even more controls to the pagination. The flaw about that is that more controls will grab attention away from the stuff that acts value on the page. (this is a classical issue that I regularly encounter in advanced searches... for instance Danish book stores and libraries).\n\nMy advice here is that you have to be careful with how many controls you add. Because controls to less important features are irrelevant. The primary focus is on the data. Maybe you forget (as the designer of the page) to focus on the most important job:\n\nPrioritize content. Ask for instance:\n\n- \\\n- What will be the default search order?\n  \\\n- How often is the backwards search used?\n  \\\n- How many people will never use the last page?\n  \\\n- How many people will need to reverse search results to work effectively?\n\nAnd as Geoff mentions, this does not go for generic search results that are sorted by relevance.\n\nTo be a little controversial: If you have to sort by relevancy, ask yourself which other controls you can remove? The pagination, perhaps?"
+ },
+ {
+  "id": 387549,
+  "parent": 0,
+  "author": "Geoff",
+  "url": "",
+  "date": "2008-01-03 22:05:23",
+  "type": "",
+  "html": "Need to qualify: my comment above doesn't apply to Google results (or any other search by relevancy). Price, quantity on hand, age, size, alpha: those all need a reverse sort."
+ },
+ {
+  "id": 387547,
+  "parent": 0,
+  "author": "Geoff",
+  "url": "",
+  "date": "2008-01-03 21:56:11",
+  "type": "",
+  "html": "I agree with Tobias: being able to reverse the sort order is critical, and replaces the need for a Last button. Nice post."
+ },
+ {
+  "id": 390605,
+  "parent": 0,
+  "author": "Alexis Brion",
+  "url": "http://www.designvsart.com/blog/",
+  "date": "2008-01-21 16:17:02",
+  "type": "",
+  "html": "Great article. I do agree with not using the \"last\" link, it could finish up confusing users."
+ },
+ {
+  "id": 387499,
+  "parent": 0,
+  "author": "Jan",
+  "url": "",
+  "date": "2008-01-03 16:12:35",
+  "type": "",
+  "html": "Hi Jesper, like your Blog and I agree with your post. Just one thing for your non-german speaking readers: \"zurück\" and \"weiter\" mean \"backward\" and \"forward\" and function like one-step-backward/forward. They don't mean \"start/end\" or something... :)"
+ },
+ {
+  "id": 387495,
+  "parent": 0,
+  "author": "Tobias",
+  "url": "",
+  "date": "2008-01-03 15:46:53",
+  "type": "",
+  "html": "I guess it will mostly make sense to supply links to the end/all pages, if you have a result set that is sorted -- eg. alphabetically or by date. And even then, you would probably also supply an option to reverse the sorting or narrow the result set.\n\nOne thing I miss in the applications I have encountered that uses endless scroll, is a (better) indication that more data is being loaded when you reach the 'bottom'. While Google Reader does show a message with 'Loading more items...' it's hard to notice."
+ },
+ {
+  "id": 390477,
+  "parent": 0,
+  "author": "Foxinni - Wordpress Designer",
+  "url": "http://www.foxinni.com",
+  "date": "2008-01-20 20:54:15",
+  "type": "",
+  "html": "Looking at it from a google point of view.... Showing more that 3 or 4 on a \"text-based\" search would seem redundant. However, the image search is something that no mathematics \"easily\" can decipher relevancy to. There it comes quite handy to have many pages. Adding more keywords to an image search might just loose the result you were going for.\n\nIn both cases last results is unnecessary. I also agree wit not showing more than 1, 2, ... next \\>\\> If you are doing a generic search then page 15 (for example) won't be much of use. As a layout designer.. i believe that bringing content to a user is much more valuable that making them go look for it."
+ },
+ {
+  "id": 399264,
+  "parent": 0,
+  "author": "Mind Gravy &raquo; Blog Archive &raquo; links for 2008-02-29",
+  "url": "http://www.mindgravy.net/index.php/2008/02/29/links-for-2008-02-29/",
+  "date": "2008-02-29 13:35:08",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk \\| Usability of Pagination Links (tags: pagination) \\[...\\]"
+ },
+ {
+  "id": 411647,
+  "parent": 0,
+  "author": "Mary - custom web designer",
+  "url": "http://webdesign.verangomedia.com",
+  "date": "2008-04-18 09:00:35",
+  "type": "",
+  "html": "Using incrementally increasing numbers is also a Yahoo recommended design pattern. E.g.\n\n1, 2, 3, 4, 5, 10, 20, 30 , 100\n\nAlso, although not considered pagination directly, have an option to decide how many results per page to show makes life a lot easier.\n\nJoe, because: it is hard to read, it is assumed (in this rare case), and everyone is doing it. Do you need another reason?\n\nP.S. I wish Google would still let me look at result 20,000. I am so nerdy that way sometimes that I want to see the last result when I get tired of the top 100 results.\n\n[10 Top Reasons Why Jakob Nielsen’s USEIT.COM is NOT usable, nor intuitive](http://webdesign.verangomedia.com/10-top-reasons-why-jakob-nielsens-useitcom-is-not-usable-nor-intuitive/)"
+ },
+ {
+  "id": 414667,
+  "parent": 0,
+  "author": "hagoleshet",
+  "url": "http://www.notes.co.il/lea",
+  "date": "2008-04-29 14:31:11",
+  "type": "",
+  "html": "I know this all about human usability but there are other reasons to put last and/or more than 3 links.\\\nI'm referring to SEO considerations.\\\nOn indexing pages of all sorts (not search results pages) it is sometimes important to make it easy for spiders too to get to as many pages as possible so that they can be indexed."
+ },
+ {
+  "id": 423180,
+  "parent": 0,
+  "author": "Tomelloso",
+  "url": "http://www.tomelloso.com/",
+  "date": "2008-06-10 18:00:21",
+  "type": "",
+  "html": "“endless” scroll may be best option and look nice, I must use this in my next web project.\\\nUse more that 3 links like tell hagoleshet can be useful to help search spiders but actually think that for this is better and more important add the site to webmaster tools in searches."
+ },
+ {
+  "id": 425513,
+  "parent": 0,
+  "author": "Contratipo",
+  "url": "http://www.contratipo.com.br/?a=8956",
+  "date": "2008-06-22 08:03:42",
+  "type": "",
+  "html": "Great article!\\\nCongratulations Jesper!"
+ },
+ {
+  "id": 425117,
+  "parent": 0,
+  "author": "Watches Store",
+  "url": "http://www.watchesstore.co.uk/",
+  "date": "2008-06-20 21:41:35",
+  "type": "",
+  "html": "An excellent post, and one that many will have an opinion on. I suppose it comes down to what works best on your own site, rather than on others, and that means either split testing different methods, or testing each over a period of 2-3 months. On some of my sites 1,2,3 is is good enough, but on the forums I need to list to at least 6, and this has proven itself over the years with feedback."
+ },
+ {
+  "id": 460306,
+  "parent": 0,
+  "author": "Clean Red Widgets",
+  "url": "http://davespates.com",
+  "date": "2008-12-19 05:32:47",
+  "type": "",
+  "html": "That graph is very accurate compared to the way that I search for things also, if I cant find what I am searching for within the first ten results I will change up my wording for a new search. Images is a whole different thing though I will browse through search results forever until I find what I am looking for."
+ },
+ {
+  "id": 450816,
+  "parent": 0,
+  "author": "Diseño",
+  "url": "http://www.foxman.net/",
+  "date": "2008-10-08 17:19:12",
+  "type": "",
+  "html": "Really an useful post, now and thanks to this I plain better my site structure and I made a few days ago an experiment with different possibilities, one using \"endless scroll\" and other with pagination links. In a few weeks I will see results and comment here. Thanks for share."
+ },
+ {
+  "id": 462879,
+  "parent": 0,
+  "author": "newer phones",
+  "url": "http://www.newerphones.com",
+  "date": "2009-01-01 12:24:14",
+  "type": "",
+  "html": "\\[...\\] justaddwater.dk \\| Usability of Pagination Links (tags: pagination) \\[...\\]"
+ },
+ {
+  "id": 467003,
+  "parent": 0,
+  "author": "Francisco",
+  "url": "http://luxspes.blogspot.com/",
+  "date": "2009-01-19 17:57:41",
+  "type": "",
+  "html": "The sad thing is how this very good practices (for the web) have been migrated in to enterprise systems, for example, think of an inventory system for a state government, let say they have around 500,000 different things in inventory, and you search for anything that begins with \"a\", the result is going to be around 50,000... what is the advantage of pagination here? do we seriously thing that the user is going to spend 3 days reading page by page until he founds what he is looking for?\n\nI think pagination is one of those overused stuff that migrated from system that work with un-structured data (like Google) an in to systems that work with structured data (based on RDBMS) and that really do not make sense in the structured world, if you are getting more search result than you can read in under 1 o 2 minutes that that pretty much means that your search is not specific enough. Why bother implementing pagination then?. It seems to be a psychological thing we, as developers \"like\" the idea of offering \"freedom\" to the user, and the user likes that \"freedom\", if you remove the paginator they will complain because they do not see it, even if they always find the search results after the first page useless."
+ },
+ {
+  "id": 486450,
+  "parent": 0,
+  "author": "Cubic zirconia",
+  "url": "",
+  "date": "2009-05-18 15:20:58",
+  "type": "",
+  "html": "I agree to the reformulate \\#6. And that is also right users always focus on first results. But I doubt that the theory that people narrow their search until what they look for are in the top results. Actually the hypothesis are based on the premise that all user are search engine savvy and the serps always are the best possible results. I am afraid both are not sufficient enough. It is not so user-friendly way if treating users as robots. Googlebot can not replace human being when it comes to intuiton. Sometimes I search for somthing and use all keywords I could think of, but the top serps just did not show what I need. So I have to browse them page by page. I know this is crazy but I have no idea what else I can do at all."
+ },
+ {
+  "id": 474737,
+  "parent": 0,
+  "author": "Entaprise Entertainment",
+  "url": "http://www.entapriseentertainment.com/",
+  "date": "2009-02-25 01:31:12",
+  "type": "",
+  "html": "I think there should be a limit to this endless scroll idea. I love long pages, not having to click to the next page, but there should be a cap. It's freaking annoying to use a little scrollbar, being so sensitive. Therefore, I support Google's preference option to list 100 search results. It's much easier for me to find what I want if I have more options up front. Clicking to different pages of listings just discourages me."
+ },
+ {
+  "id": 483664,
+  "parent": 0,
+  "author": "Pagination Patterns and Losing Time in Facebook - eri on the interweb",
+  "url": "http://www.eriontheinterweb.com/2009/04/pagination-patterns-and-losing-time-in-facebook/",
+  "date": "2009-04-14 11:33:07",
+  "type": "pingback",
+  "html": "\\[...\\] For a more thorough discussion on pagination and pagination patterns see http://justaddwater.dk/2008/01/03/usability-of-pagination-links/ \\[...\\]"
+ },
+ {
+  "id": 493794,
+  "parent": 0,
+  "author": "claude",
+  "url": "",
+  "date": "2010-03-18 12:44:29",
+  "type": "",
+  "html": "What often annoys me in this context, is the limit how many products (or search engine results) will be displayed on one page.\n\nI clearly prefer one long page I can scroll through instead of using pagination. With on page I am able to search through the whole page for words I am lokking for, for example (text search). Furthermore I can visually scroll thorugh product lists and get an idea if there is something for me quickly.\n\nBest wishes,\\\nclaude"
+ },
+ {
+  "id": 508174,
+  "parent": 0,
+  "author": "Konversionsbooster Teil 5: Die Paginierung | Conversion Optimierung, Konversionsrate verbessern - KonversionsKRAFT",
+  "url": "http://www.konversionskraft.de/cro-serien/konversionsbooster-teil-5-die-paginierung.html",
+  "date": "2011-01-20 07:23:00",
+  "type": "pingback",
+  "html": "\\[...\\] Usability of Pagination Links – Jesper Rønn-Jensen Pagination Gallery: Examples And Good Practices – Smashing Magazine In search of the ultimate pagination – wolfslittlestore Infinite Scrolling Best Practices – UX Movement Über den Autor: Manuel Ressel ist Conversion Designer bei der Web Arts AG. Seine Leidenschaft gilt dem Thema der Emotionalisierung von Kauf-Prozessen in E-Commerce-Portalen. Folgen Sie ihm auf Twitter oder besuchen Sie seinen Blog Conversion Design. \\[...\\]"
+ },
+ {
+  "id": 512859,
+  "parent": 0,
+  "author": "Frank-ly &raquo; Gevonden: veel resultaten",
+  "url": "http://www.frank-ly.nl/gevonden-veel-resultaten",
+  "date": "2011-03-04 17:06:49",
+  "type": "pingback",
+  "html": "\\[...\\] is dan wel handiger dan weer door die 159 resultaten scrollen… Hoe je je resultaten op een gebruiksvriendelijke manier pagineert, is weer een verhaal apart…Wat te kiezen?Uit bovenstaande blijkt dat er wel redenen \\[...\\]"
+ },
+ {
+  "id": 555432,
+  "parent": 0,
+  "author": "Taj Moore",
+  "url": "http://placewise.com",
+  "date": "2011-11-10 19:33:29",
+  "type": "",
+  "html": "Do you have any recommendation or usability research around making the pagination left-, center-, or right-justified? Google, Yahoo, and Hulu all do it differently. Is one more usable than the other?"
+ }
+]

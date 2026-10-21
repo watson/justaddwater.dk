@@ -1,0 +1,56 @@
+[
+ {
+  "id": 8583,
+  "parent": 0,
+  "author": "Heiko",
+  "url": "",
+  "date": "2006-07-18 09:53:00",
+  "type": "",
+  "html": "Hi!\n\nSelenium is also easy and good.\\\nhttp://www.openqa.org/selenium/\n\n\\+\n\nhttp://jameleon.sourceforge.net/\n\nhttp://sahi.sourceforge.net/\n\nHeiko"
+ },
+ {
+  "id": 8741,
+  "parent": 0,
+  "author": "Tobias H. Michaelsen",
+  "url": "",
+  "date": "2006-07-22 21:14:03",
+  "type": "",
+  "html": "You should also check out Scott Hanselman's [WatirMaker](http://www.hanselman.com/blog/IntroducingWatirMakerRecordingForRubybasedWatir.aspx). It is a recording program for generating runy scripts for Watir automatically. It is written in C# and is Windows-only. But a [Ruby version](http://www.hanselman.com/blog/WatirMakerWrittenAgainInRuby.aspx \"Ruby version of WatirMaker\") has also been made."
+ },
+ {
+  "id": 8742,
+  "parent": 0,
+  "author": "Tobias H. Michaelsen",
+  "url": "",
+  "date": "2006-07-22 21:17:13",
+  "type": "",
+  "html": "\"runy script\" - argh! :) Should have been \"Ruby\""
+ },
+ {
+  "id": 8746,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-07-22 21:48:43",
+  "type": "",
+  "html": "Thanks for the comments.\n\nAfter spending some more time working with Watir, this is great news that you can record them. Thanks for letting me know, I'll look into that first thing Monday morning!"
+ },
+ {
+  "id": 9259,
+  "parent": 0,
+  "author": "Olle Jonsson",
+  "url": "http://blog.olle.ter.dk",
+  "date": "2006-08-03 13:42:20",
+  "type": "",
+  "html": "I found [an old post at my blog](http://olle.ter.dk/blog/?p=213 \"Watir, Ruby and more\"), almost a complete mirror of these sentiments.\n\nAs a lone consultant, I had to celebrate its genius alone. :-)"
+ },
+ {
+  "id": 363871,
+  "parent": 0,
+  "author": "justaddwater.dk | How to Run JavaScript From Watir Scripts",
+  "url": "http://justaddwater.dk/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+  "date": "2007-11-20 21:12:24",
+  "type": "pingback",
+  "html": "\\[...\\] What’s Watir? Read “Watir: Another sweetspot for Enterprise Ruby” \\[...\\]"
+ }
+]

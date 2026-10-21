@@ -1,0 +1,56 @@
+[
+ {
+  "id": 7044,
+  "parent": 0,
+  "author": "Thomas Bentzen",
+  "url": "",
+  "date": "2006-06-27 13:43:36",
+  "type": "",
+  "html": "Hi there.\n\nI unluckily will not be able to participate in the glorious event :-(\\\nHowever, I'll still make a few thoughts available for y'all to dis when I'm not there anyway.\n\nI agree with the considerations and expectations list, however in my opinion there is a little thing missing, the hosting. Currently one can only get serious Rails hosting at Textdrive. What can we do to promote Rails hosting? Can we use our positions to \"persuade\" some hosting companies to adopt Rails hosting?\n\nWith that said, I believe that the most important thing is to establish a local Rails group and to elevate communication among Rails interested in Denmark.\n\nHave a nice evening, and Jesper, Thomas and Jakob I'll leave it up to you to drink my share of beers :-)"
+ },
+ {
+  "id": 7097,
+  "parent": 0,
+  "author": "Niels Sandholt Busch",
+  "url": "",
+  "date": "2006-06-28 00:38:47",
+  "type": "",
+  "html": "In response to the hosting issue, I would say that Planet Argon (http://planetargon.com) is pretty serious about Rails hosting too."
+ },
+ {
+  "id": 7175,
+  "parent": 0,
+  "author": "Casper Fabricius",
+  "url": "http://casperfabricius.com",
+  "date": "2006-06-28 14:45:51",
+  "type": "",
+  "html": "Again, really sorry I can't be there and drink some free beer with you guys ;) Maybe you can use this blog I just wrote if you want discuss some the important stuff that came out of RailsConf:\\\nhttp://www.kraftvaerk.net/index.php?id=298"
+ },
+ {
+  "id": 7574,
+  "parent": 0,
+  "author": "Jakob S",
+  "url": "http://mentalized.net",
+  "date": "2006-06-29 14:48:21",
+  "type": "",
+  "html": "Casper, be happy that you aren't coming tonight. I think I might just have had to punch you out of pure jealousy for your trip to Railsconf. I'll have to settle for punching Jesper and Thomas, I guess, for their trip to the euro one.\n\nInteresting, Aarhus.rb, never heard of that before. Perhaps there are more Railsheads in Denmark than I thought."
+ },
+ {
+  "id": 7575,
+  "parent": 0,
+  "author": "Jakob S",
+  "url": "http://mentalized.net",
+  "date": "2006-06-29 14:50:59",
+  "type": "",
+  "html": "Which reminds me, do we need nametags tonight? :P"
+ },
+ {
+  "id": 9996,
+  "parent": 0,
+  "author": "Rails Meetup in Copenhagen",
+  "url": "http://nror.org/blog/articles/2006/06/27/rails-meetup-in-copenhagen",
+  "date": "2006-08-12 08:57:29",
+  "type": "pingback",
+  "html": "\\[...\\] This Thursday there is going to be a Rails Meetup in Copenhagen. They are going to have free beer! \\[...\\]"
+ }
+]

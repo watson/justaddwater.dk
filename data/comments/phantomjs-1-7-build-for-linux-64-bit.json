@@ -1,0 +1,38 @@
+[
+ {
+  "id": 651002,
+  "parent": 0,
+  "author": "venkat",
+  "url": "",
+  "date": "2012-10-08 12:11:24",
+  "type": "",
+  "html": "Phantom Js is a fantastic tool for automating tests, since it is a headless browser which we wrapped in our automation framework to run javascript based tests very fast and eas"
+ },
+ {
+  "id": 651010,
+  "parent": 0,
+  "author": "jijojohn",
+  "url": "http://www.cubiccodes.com",
+  "date": "2012-10-09 06:16:40",
+  "type": "",
+  "html": "Phantom js is a fantastic tool for automatic test,awesome..."
+ },
+ {
+  "id": 651023,
+  "parent": 0,
+  "author": "Darwin",
+  "url": "http://www.darwinconsultants.co.uk",
+  "date": "2012-10-10 17:17:53",
+  "type": "",
+  "html": "Good tool for testing. I need it for a different OS though"
+ },
+ {
+  "id": 651079,
+  "parent": 0,
+  "author": "David",
+  "url": "http://www.steamatic.ca",
+  "date": "2012-10-17 06:58:36",
+  "type": "",
+  "html": "Phantom Js is a superb tool and I use it for my automation tests.Also the javascript tests run very quickly.It is an optimal solution for headless website testing,screen capture,page automation and network automation.Thanks for sharing your article.it has been quiet helpful to me."
+ }
+]

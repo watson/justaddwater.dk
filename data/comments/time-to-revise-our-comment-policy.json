@@ -1,0 +1,164 @@
+[
+ {
+  "id": 462188,
+  "parent": 0,
+  "author": "Paul",
+  "url": "http://www.greenhometherapy.com/",
+  "date": "2008-12-28 21:17:26",
+  "type": "",
+  "html": "I'd have to disagree with Chicago Breast Cancer and I think to an extent, Google do too. I've seen plenty of dofollow and mayfollow blogs happily rank for years and keep good PR. However there is one blog called connorwilson.com, which was/is a notorious haunt for dofollow hawks and it seems to me its cost him two rungs on the PR-0-meter.\n\nThe people who go around commenting with names like \"Chicago Breast Cancer\" are obviously only doing so for the link juice and would not do so if you had nofollow (unless its a comment robot).\n\nHowever, I think its good that people like you are removing nofollow as I believe anyone who is engaged in real discussion on a blog deserves to be rewarded with link juice. I think anyone who is posting good comments is contributing to the value of the site and as such should be able to have their own little slice of the PR pie to take away :)\n\nIf you want to try and reduce dofollow spammers, I would recommend removing the \"powered by wordpress\" from your blog and also the\\\nin the head and at the generator in the WP feed. As their are dofollow finder scripts that use those to identify your blog as wordpress.\n\nAlso giving out your WP version number can be a security issue, as I can Google up some hacks for that particular version."
+ },
+ {
+  "id": 463571,
+  "parent": 0,
+  "author": "Sabac",
+  "url": "http://www.sabacautoclaves.com",
+  "date": "2009-01-04 16:08:54",
+  "type": "",
+  "html": "The big issue in my mind, why we make our blogs \"do follow\"? Perhaps the reason is to give some benefits to our fellow bloggers and loyal users. On my own network of blogs I generously give this benefit on valid comments, of course if a name would be used with keyword. Another way to reduce spam is to use some good commenting system like Disqus. I think it is very easy to identify spammers from such system(I am just discussing but not recommending anything)."
+ },
+ {
+  "id": 463517,
+  "parent": 0,
+  "author": "Realtrix - Tips &amp; Tricks",
+  "url": "",
+  "date": "2009-01-04 08:23:46",
+  "type": "",
+  "html": "Basically, the internet is one giant poll to Google, and each link counts as a vote. There are other factors that intefere, but we’ll keep it as is for simplicity’s sake. The more links you have, the more popular your site is - and that’s exactly what Google wants to find, the most popular/authorative sites on the web.\n\nThe NoFollow attribute tells Google, “Don’t count this link as a vote for this website”. Whilst Google might still crawl the website’s content, it definitely does not add any link-weight. Well done, you’ve now penalized both the legitimate commenters as well as the spammers. Makes sense.\n\nI’ve made one of my blogs into a dofollow blog and here are my results (in comparison to a number of other, more popular, nofollow blogs that I own):\n\n1\\. More comments.\\\n2\\. Discussion. Because my links were carrying link-juice, and I was only accepting good quality comments, I ended up with proper, meaningful discussion that was pertinent to the article. I’m sure many of you bloggers only get spam and scraper comments"
+ },
+ {
+  "id": 459963,
+  "parent": 0,
+  "author": "Dave",
+  "url": "",
+  "date": "2008-12-17 16:47:06",
+  "type": "",
+  "html": "As a reader, I strongly support you on this. It's overly kind of you to think only of whether the content of the comment has a positive effect on the conversation -- to me, a spam link/name has a negative effect that often outweighs any contribution the comment could make.\n\nI would strongly support you if you deleted/removed comments where the content seems positive but the name is obviously not a person's real name or online name or the URL is obviously not a person's personal site/blog/contact page."
+ },
+ {
+  "id": 460010,
+  "parent": 0,
+  "author": "Chicago breast cancer",
+  "url": "http://www.northshore.org/clinicalservices/cancer/cancerspecialties/breast/default.aspx",
+  "date": "2008-12-17 22:48:34",
+  "type": "",
+  "html": "I own multiple blogs, all of which are dofollow! It's not spam if it contributes to the conversation. Obviously if the post is a bot or someone who clearly is doing a job rather than actually adding their two-cents then yes, by all means, delete the post...otherwise I leave it. I have had ongoing conversations with people whose names resemble mine, they turned out to be pretty involved and sometimes very interesting. Regards!"
+ },
+ {
+  "id": 459946,
+  "parent": 0,
+  "author": "Simon B.",
+  "url": "",
+  "date": "2008-12-17 14:11:07",
+  "type": "",
+  "html": "Please do, and remove any comments that don't add value to your blog's readers. That includes this comment! :)"
+ },
+ {
+  "id": 459995,
+  "parent": 0,
+  "author": "Johnny",
+  "url": "http://johnnycosmo.com",
+  "date": "2008-12-17 21:19:49",
+  "type": "",
+  "html": "It is so difficult. I am a new blogger and English is not my mother tongue. I started my blog so I can write and practice. When I was learning, I read do-follow does better for getting comments. But if you say it's just the spam doorway, I'm glad you made the experience for us. It is regrettable that a few bad apples spoil a generous act for the others. But what else can you do?"
+ },
+ {
+  "id": 464527,
+  "parent": 0,
+  "author": "Perrow",
+  "url": "http://dofollow.radpixels.com/",
+  "date": "2009-01-08 08:05:02",
+  "type": "",
+  "html": "Thanks for the link ;)\n\nMy Do Follow Search engine was part experiment, part for fun. I'll be the first to agree that many, maybe most, maybe all, of that sites users will \"comment for the linkjuice\". To me the whole dofollow movement is about rewarding those that leave useful comments. As with most things you'll give people, they'll try to maximize their own benefit from it.\n\nPersonally I'll try to get as good a backlink as I can for my commenting effort. The blog owners are of course free to moderate as they please (btw as you already link to my search engine in your post I hope to get away with another link from this comment ;) ).\n\nIf you find that commenters from my search engine do spam your site then by all means send me an email and I'll remove your site."
+ },
+ {
+  "id": 465363,
+  "parent": 0,
+  "author": "Tim Penny",
+  "url": "http://www.timpenny.com",
+  "date": "2009-01-13 01:12:55",
+  "type": "",
+  "html": "I think as long as the comment adds relevant information to the conversation bloggers should approve the comment. You might try adding a captcha to filter the spam bots."
+ },
+ {
+  "id": 465516,
+  "parent": 0,
+  "author": "Vitalka",
+  "url": "http://www.joufair.com/ru",
+  "date": "2009-01-13 18:03:51",
+  "type": "",
+  "html": "It's a strange thing to listen that many useless comments appeared with your decision to change approval moderation. Maybe try to make some restriction and rewards system, like how much comments and reward points has a visitor? It's will blow away \"link-wanters\", as we call them in our country. Only people who really interested in your materials will remain your valued friends."
+ },
+ {
+  "id": 467548,
+  "parent": 0,
+  "author": "LocalSecurity",
+  "url": "",
+  "date": "2009-01-22 01:42:46",
+  "type": "",
+  "html": "Jesper I think what you decided is pretty much fair for those who really wants to continue discussing the topic of your blog and at the same time earning points from backlinks here. Thanks alot for clearing your policy on this."
+ },
+ {
+  "id": 475039,
+  "parent": 0,
+  "author": "kampanye",
+  "url": "http://paintforcash.com/kampanye-damai-pemilu-indonesia-2009/",
+  "date": "2009-02-26 19:18:09",
+  "type": "",
+  "html": "you apply a dofollow policy but still manage to have a PR5?? how the hell in the world you can do that?"
+ },
+ {
+  "id": 473089,
+  "parent": 0,
+  "author": "Victor",
+  "url": "http://die-dinge-die-ich-mag.net/",
+  "date": "2009-02-15 15:27:19",
+  "type": "",
+  "html": "It's good to have comment policy in every blog. This way commenting on the blog would be moderated, and it will also give guidelines for readers on how they will comment on a particular post. And it will also encourage readers to comment sensibly and on topic."
+ },
+ {
+  "id": 486583,
+  "parent": 0,
+  "author": "baba",
+  "url": "http://www.itsadate.ca/",
+  "date": "2009-05-20 08:45:24",
+  "type": "",
+  "html": "i have a lots of blogs. my procedure is that i accept all the comments but not every link. whenever i feel that this is spammer and his comments are relevent to discussion then his comment show without any link on it."
+ },
+ {
+  "id": 486608,
+  "parent": 0,
+  "author": "Comment Policy - PlanetMike's Technology Journal",
+  "url": "http://www.planetmike.com/2009/06/01/comment-policy/",
+  "date": "2009-06-01 13:59:44",
+  "type": "pingback",
+  "html": "\\[...\\] as those sites are just wanting link juice. And I don’t use nofollow.Jesper Rønn-Jensen at Time To Revise Our Comment Policy came up with five categories of comments. His categories of A, B, and E would be marked as spam on \\[...\\]"
+ },
+ {
+  "id": 488335,
+  "parent": 0,
+  "author": "louie jerome",
+  "url": "",
+  "date": "2009-08-15 17:28:41",
+  "type": "",
+  "html": "I accept more or less any (decent) comment on my blogs but when it is just pure spam and adds nothing to the blog at all, I delete."
+ },
+ {
+  "id": 486150,
+  "parent": 0,
+  "author": "Blogger Toraya",
+  "url": "http://www.bloggertoraya.com",
+  "date": "2009-05-14 09:40:14",
+  "type": "",
+  "html": "My Blog is Dofollow because i want to give my Visitor a Link Luv.. I hate spam but I also Love their Comment so i think it is not good reason to remove yyour do follow tags.."
+ },
+ {
+  "id": 478142,
+  "parent": 0,
+  "author": "Kai Lo",
+  "url": "http://www.blogaboutnothingatall.com",
+  "date": "2009-03-15 18:22:35",
+  "type": "",
+  "html": "This is why I stick to Nofollow policy. I want people to visit my site because of the contents, and not because they want to come to get some link juice. I want quality comments because I like responding back to quality comments. The worst comments are, \"Great post!! Here is my (link)\"\n\nWhen you take off nofollow tags, you have to expect spams Jesper. As long as you monitor what gets posted into the comments, you should be fine."
+ }
+]

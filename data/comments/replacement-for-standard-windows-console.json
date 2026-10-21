@@ -1,0 +1,128 @@
+[
+ {
+  "id": 138454,
+  "parent": 0,
+  "author": "Jake Cohen",
+  "url": "http://www.rafb.net/cohen/blog/",
+  "date": "2007-04-30 22:03:30",
+  "type": "",
+  "html": "I use Cygwin, and the console it comes with has the same problem. You don't get much control over which mouse button selects, extends, or pastes, either.\n\nOne good solution I've found to this is an extension to PuTTY that allows you to use it as a local Cygwin shell. This gives you access to your Cygwin shell (and by extension all of the stuff you can do in the Windows shell) but with the control over mouse and keyboard behavior that you get from PuTTY.\n\nIt can be found here: http://web.gccaz.edu/~medgar/puttycyg/\n\nHowever, it doesn't have tabs. There is another utility to get Tabs in PuTTY called, unsurpsingly, PuttyTabs, but I have not tried it."
+ },
+ {
+  "id": 145956,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-14 21:45:26",
+  "type": "",
+  "html": "To follow the discussion on autocompletion and window size mentioned in my previous comment, see the PowerCmd support forum:\\\n\\* [Tab completion usability thoughts](http://groups.google.com/group/powercmd/browse_thread/thread/98bcc50317537052)\\\n\\* [PowerCmd should remember window size and position](http://groups.google.com/group/powercmd/t/124c6c3e10084887)"
+ },
+ {
+  "id": 143306,
+  "parent": 0,
+  "author": "Paul",
+  "url": "",
+  "date": "2007-05-10 02:32:36",
+  "type": "",
+  "html": "Because \"rakefile\" is one of the file under \"actionmailer\", if you press \"ENTER\", I assume you are accepting the auto-completion. If you are going to finish the commands without accepting the autocompletion, you can press \"ESC\" and then \"ENTER\", or if you have parameters for \"rake\", you can simply press \"SPACE\" to stop autocompletion for \"rake\".\n\nIf \"rake test\" is you frequently used command, you can define it as a \"tool\" on quick launch bar, and use Ctrl+F1( or Ctrl+F2 ..., depending on the position in quick launch bar) to access it quickly.\n\nI hope it could be helpful."
+ },
+ {
+  "id": 141696,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-07 09:44:30",
+  "type": "",
+  "html": "Reply from PowerCmd. I'm impressed to have an answer within minutes!\n\n> Hi Jesper,\n>\n> Thanks a lot for you reporting the defect. Once I will be working on this defect in 3 hours, and will let you know the result as soon as possible.\n>\n> BTW: I found some visitors from your blog and planed to contact you and resolve your issues that you put in the blog. But currently I am busy with the release of the new version. I hope I can resolve it before announcing\\\n> the release of version 1.3.\n>\n> Thanks a lot.\\\n> Paul\\"
+ },
+ {
+  "id": 141693,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-07 09:37:08",
+  "type": "",
+  "html": "Screenshots that show the difference between powercmd and another console.\n\n[![console-difference-powercmd-without-unittesting-dots-thumbnail.png](/wp-content/uploads/2007/05/console-difference-powercmd-without-unittesting-dots.thumbnail.png)](/wp-content/uploads/2007/05/console-difference-powercmd-without-unittesting-dots.png \"console-difference-powercmd-without-unittesting-dots.png\")\n\n[![console-difference-console2-with-unittesting-dots-thumbnail.png](/wp-content/uploads/2007/05/console-difference-console2-with-unittesting-dots.thumbnail.png)](/wp-content/uploads/2007/05/console-difference-console2-with-unittesting-dots.png \"console-difference-console2-with-unittesting-dots.png\")\n\nNotice that the dots don't appear in PowerCmd but appear in a normal console window. Click on a screenshot to enlarge it."
+ },
+ {
+  "id": 141691,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-07 09:29:23",
+  "type": "",
+  "html": "After testing PowerCmd, i found out is has a problem with showing unittest output in Ruby . The small dots and failures don't show up in PowerCmd. Here is the mail I wrote to PowerCmd support. I'll post any answer I recieve as well.\n\n> Hi there.\\\n> I'm evaluating PowerCmd to find a replacement for the traditional windows command.\n>\n> There is one fatal flaw that keeps me from choosing PowerCmd: I'm having problems when running unit tests (it does not show the output of the running tests).\n>\n> Is this a bug in PowerCmd?\n>\n> Let me just explain how to replicate this. I'm developing in Ruby on Rails. Running the unit tests for the open-source code Ruby on Rails show the problem.\n>\n> Here is how it's done:\n>\n> 1\\) install svn.\\\n> 2\\) install ruby and rubygems\\\n> (there are probably also a few rubygems that are needed)\\\n> 3\\) As explained on http://dev.rubyonrails.org/ , check out source code \"trunk\".\\\n> 4\\) go into folder \"actionmailer\"\\\n> 5\\) run command \"rake test\"\n>\n> When run from an normal command window, there are small dots that appear for every unit test that is run. When run from PowerCmd, the dots don't show up.\n>\n> Even worse, if a test fails, the result is not shown.\n>\n> If there is an obvious workaround or setting I need to set? I'l like to know this before I blog about my experiences. (see the post at [Justaddwater](/2007/04/30/replacement-for-standard-windows-console/) )\n>\n> Please also let me know if you have planned any updates that can help me.\n>\n> /Jesper Rønn-Jensen"
+ },
+ {
+  "id": 141816,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-07 15:20:00",
+  "type": "",
+  "html": "Just got this reply, which means PowerCmd has fixed the bug for next version. I'm really impressed with this kind of customer support.\n\n> Hi Jesper,\n>\n> I think I am lucky to have your detailed steps to reproduce the defect. It has been fixed now.\n>\n> This defect has been there since the first version of PowerCmd. I greatly appreciate your help.\n>\n> Thanks,\n>\n> Paul"
+ },
+ {
+  "id": 142050,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-05-07 23:21:36",
+  "type": "",
+  "html": "Just received an update from Paul at PowerCmd, that they released an update that fixes the problem. And it does. This is great news, so I'm upgrading my trial to a paid version.\n\nMaybe I should also mention the minor things like\\\n\\* window should remeber with/height next time I open PowerCmd\\\n\\* change default setting for autocomplete away from automatic. it can be annoying when executing a command has the same name as the start of a file/folder in current directory.\n\nAn example of the latter is running the ruby command \"rake\" in directories that have a file called Rakefile (which is default). This way, autocomplete captures the ENTER key and autocompletes \"rake\" into \"rakefile\".\n\nVery annoying. So I hope these two things can also change soon."
+ },
+ {
+  "id": 162208,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-06-04 20:27:05",
+  "type": "",
+  "html": "Another thing that I discovered in PowerCmd: Ruby's command-line interpreter irb can't run.\n\nI described it in the [PowerCmd support forum](http://groups.google.com/group/powercmd/browse_thread/thread/7a9645a0cd1b27aa \" <br>\n\").\n\nNot able to run irb means also that \"ruby script\\console\" does not run"
+ },
+ {
+  "id": 192196,
+  "parent": 0,
+  "author": "Remplaza cmd, notepad y el explorador de window$",
+  "url": "http://erufenix.codesys.org/remplaza-cmd-notepad-y-el-explorador-de-window",
+  "date": "2007-06-27 20:25:18",
+  "type": "pingback",
+  "html": "\\[...\\] Estas dos funciones no las permite el cmd de wigbugs, pero una aplicaion gpl llamada console2 \\[...\\]"
+ },
+ {
+  "id": 358576,
+  "parent": 0,
+  "author": "justaddwater.dk | Happy 2nd birthday",
+  "url": "http://justaddwater.dk/2007/10/14/happy-2nd-birthday/",
+  "date": "2007-11-18 17:34:01",
+  "type": "pingback",
+  "html": "\\[...\\] Replacement for Standard Windows Console \\[...\\]"
+ },
+ {
+  "id": 418336,
+  "parent": 0,
+  "author": "Peter",
+  "url": "",
+  "date": "2008-05-15 17:05:08",
+  "type": "",
+  "html": "Thanks for the tip. Not open source, but I'm not opposed to \\*gasp\\* paying for software if it's quality software (seeing that I'm a programmer and all...) :)\n\nConsole2 just crapped out on me, and I'm a little frustrated. Think I'll live with powercmd for awhile and see how it fits into my life.\n\nI guess the primary question is whether it supports cygwin bash consoles.\n\nAbout to hit the \"help\" key and Google bookmark to find out... :-)\n\nThanks so much for writing this blog!"
+ },
+ {
+  "id": 458682,
+  "parent": 0,
+  "author": "Paulie",
+  "url": "http://plopcentral.com",
+  "date": "2008-12-09 15:20:55",
+  "type": "",
+  "html": "Did you ever have any luck with getting IRB (and therefore script/console) working?\n\nIt was a deal-breaker for me and I'm still hunting for something that's as usable as a Linux console on windows.\n\nP"
+ },
+ {
+  "id": 502458,
+  "parent": 0,
+  "author": "maniAC",
+  "url": "",
+  "date": "2010-11-14 17:16:30",
+  "type": "",
+  "html": "I did not test it (since I am just coming to a Windows machine after 3 years of OS X and trying to find some stuff, like a decent console, tha's how I came here), but there is also 'mintty' at http://code.google.com/p/mintty/ It uses the console code of PuTTY along with Win APIs in order to deliver a console replacement. I used to use Console2 a few years back and was very happy about it."
+ }
+]

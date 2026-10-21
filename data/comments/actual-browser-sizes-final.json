@@ -1,0 +1,47 @@
+[
+ {
+  "id": 22432,
+  "parent": 0,
+  "author": "Håkan Reis",
+  "url": "http://blog.reis.se",
+  "date": "2006-10-31 22:50:35",
+  "type": "",
+  "html": "I got similar results from my, highly un-scientific, research. It landed close to 800-900 witdth but around 900 height.\n\nOne question though, is the width from the fact that most sites are best viewed at 800 width or is it that it works out best at that resolution? Maybe with better flowing column layouts that adapt to wider viewing this would change.\n\nCurrently most sites are either unreadable at greater widths or they just show a big band of white space in full size."
+ },
+ {
+  "id": 25089,
+  "parent": 0,
+  "author": "justaddwater.dk | Design for Browser Size &mdash; Not Screen Size",
+  "url": "http://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/",
+  "date": "2006-11-08 23:14:40",
+  "type": "pingback",
+  "html": "\\[...\\] Update 2006-11-08: Baekdal has published numbers (hard evidence) on browser size. And a fun research video too. See “Actual Browser Sizes (final) \\[...\\]"
+ },
+ {
+  "id": 26826,
+  "parent": 0,
+  "author": "Usability á íslensku &raquo; Hversu stór má vefsíða vera?",
+  "url": "http://www.asgeir.se/?p=153",
+  "date": "2006-11-13 12:32:44",
+  "type": "pingback",
+  "html": "\\[...\\] Rannsóknin byggir á upplýsingum frá vefum tískufyrirtækja, 60% gesta voru frá Evrópu og 30% frá bandaríkjunum. Heimild: justaddwater.dk \\[...\\]"
+ },
+ {
+  "id": 300084,
+  "parent": 0,
+  "author": "KAVodov",
+  "url": "http://kavodov.ru/",
+  "date": "2007-10-16 11:03:14",
+  "type": "",
+  "html": "stast of different display resolutions (its global stats):\n\n1024x768 45.4%\n\n1280x1024 28.7%\n\n1280x800 8.4%\n\n800x600 5.0%\n\n1152x864 3.9%\n\n1440x900 2.1%\n\nother 1.8%\n\n1680x1050 1.4%\n\n1400x1050 0.9%\n\n240x320 0.7%\n\n1600x1200 0.7%\n\n1920x1200 0.3%\n\n640x480 0.1%"
+ },
+ {
+  "id": 414494,
+  "parent": 0,
+  "author": "Hur stor får en webbsida vara? | anvandbart.se",
+  "url": "http://www.anvandbart.se/hur-stor-far-en-webbsida-vara",
+  "date": "2008-04-28 09:45:11",
+  "type": "pingback",
+  "html": "\\[...\\] Via justaddwater.dk \\[...\\]"
+ }
+]

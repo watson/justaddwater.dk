@@ -1,0 +1,11 @@
+[
+ {
+  "id": 11223,
+  "parent": 0,
+  "author": "justaddwater.dk | IE 7, web standards and CSS support",
+  "url": "http://justaddwater.dk/2006/08/28/ie-7-web-standards-and-css-support/",
+  "date": "2006-08-28 09:29:34",
+  "type": "pingback",
+  "html": "\\[...\\] However, even IE7 web standards support is a giant improvement over IE6, there are still a long way to go before we can acheive that ultimate goal. According to Nate Koecheley of Yahoo!, there are currently over 10,000 different combinations browser versions and operating systems (see Golden nuggets for describing browser support). So there is still plenty of work for anybody who understands browser quirks, bugs, hacks and anomalies of different browsers on different platforms. \\[...\\]"
+ }
+]

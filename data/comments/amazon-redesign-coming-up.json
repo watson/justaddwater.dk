@@ -1,0 +1,65 @@
+[
+ {
+  "id": 332624,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2007-11-08 01:40:19",
+  "type": "",
+  "html": "I am not that excited by the new design - There are too many things, and not enough focus.\n\nWhat have happened - I think - is that they have listended too much to their powerusers (which are also most likely to provide feedback). The big problem with this group is that their usage patterns is very different from regular people who just wants to buy something.\n\nPowerusers trades control for simplicity. They would rather have drop-out menu's and other doo-hickeys, than simple pages that guides you to the content. Regular people wants just the opposite, they would rather have simple choices than control.\n\nThey seem to try to combine the two by adding a ton of visual effects. All in the best intentions I am sure, but it really prevents the natural \"flow\" of the site."
+ },
+ {
+  "id": 332143,
+  "parent": 0,
+  "author": "Russell",
+  "url": "http://www.spoiledmilk.dk",
+  "date": "2007-11-07 14:12:26",
+  "type": "",
+  "html": "Interestingly (even though it's not had the big interface update) the UK site has a different Christmas logo to the USA site:\n\nhttp://www.amazon.com\\\nhttp://www.amazon.co.uk\n\napparently the UK enjoys lanterns hanging under the rafters of its wooden chalets!"
+ },
+ {
+  "id": 333748,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://germworks.net/blog/",
+  "date": "2007-11-09 03:19:16",
+  "type": "",
+  "html": "Amazon is one the most ugliest websites around, lets hope the new designs will make it more prettier"
+ },
+ {
+  "id": 354053,
+  "parent": 0,
+  "author": "Alla Gringaus",
+  "url": "",
+  "date": "2007-11-17 02:54:54",
+  "type": "",
+  "html": "Horrible design - many rounded corners, loads too slow, too many ads on homepage, missing H1, H2 tags. They're crucial for the SEO. Amazon is not accessible, almost all of the images have no \"alt\" attribute, where others have ... empty \"\" value. Not good, pretty embarrassing actually. Amazon can not be visible to the blind."
+ },
+ {
+  "id": 405983,
+  "parent": 0,
+  "author": "Simon Bohlin",
+  "url": "",
+  "date": "2008-04-02 17:58:25",
+  "type": "",
+  "html": "I tried ordering Defensive Web Design through amazon, but ended up writing angry emails to them to get my account closed. I'd prefer not to deal with them again.\\\nMain problems: too many cluttered screens, wasting my and their time getting from \"book page\" to \"price+shipping to my pre-set 1-click adress\". Most of my 1-click order tried took several pages, and ended with \"Sorry, can't ship to Europe. Now we'll force you to click a small Delete button before you can get on with trying another one.\""
+ },
+ {
+  "id": 458566,
+  "parent": 0,
+  "author": "Chalet Girl",
+  "url": "http://www.chamonix.eu.com",
+  "date": "2008-12-08 14:24:49",
+  "type": "",
+  "html": "I cant recomend 'Dont make me think' highly enough. It's a brilliant read and really gets down to the nitty gritty of the web."
+ },
+ {
+  "id": 504258,
+  "parent": 0,
+  "author": "maurice",
+  "url": "http://www.kintek.com.au",
+  "date": "2010-12-13 10:57:49",
+  "type": "",
+  "html": "Hi Guys,\n\nGot a story you might be interested in. It's about the current state of Amazon.com's usability for international buyers, and a proposed redesign for their product pages. I won't waffle on so please take a look at the source if you're interested:\n\nRedesign:\\\nhttp://www.kintek.com.au/demo/amazon/index.html\n\nSource:\\\nhttp://www.kintek.com.au/web-design-blog/amazons-terrible-international-usability-and-a-proposed-redesign/\n\nRegards,\\\nMaurice Kindermann"
+ }
+]

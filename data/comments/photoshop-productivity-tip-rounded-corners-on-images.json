@@ -1,0 +1,74 @@
+[
+ {
+  "id": 224294,
+  "parent": 0,
+  "author": "Jermayn Parker",
+  "url": "http://germworks.net",
+  "date": "2007-07-30 08:06:49",
+  "type": "",
+  "html": "Good simple tip indeed"
+ },
+ {
+  "id": 224038,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-07-29 21:04:46",
+  "type": "",
+  "html": "BTW, check out Michaels new startup [Monovoce](http://www.monovoce.dk/), if you are interested in web design in the Copenhagen area. It's so new that we will have to wait till start of August for more details to appear on the website :)"
+ },
+ {
+  "id": 227242,
+  "parent": 0,
+  "author": "Michael Bernth",
+  "url": "http://www.monovoce.dk",
+  "date": "2007-08-04 16:21:33",
+  "type": "",
+  "html": "With the possibility to apply a layer mask to a folder you are able to do a lot of really nice things, and you don't have to limit yourself to simple shapes - try using alpha channels and the like. It is also possible to nest folders within folder, and thereby make some really advanced maskings. Have fun :)"
+ },
+ {
+  "id": 229932,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-08-10 10:44:42",
+  "type": "",
+  "html": "\"Scaling masked images\" in this 6 photoshop timesavers for webdesigners:\\\nhttp://f6design.com/journal/2007/08/05/6-photoshop-time-savers-for-web-designers/"
+ },
+ {
+  "id": 241919,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-08-27 13:36:54",
+  "type": "",
+  "html": "Another tip i have been looking for in a long type: Create paragraph-style type that you can change with and height of so the text re-wraps.\\\n**Just click and drag to mark the placeholder of your text.**\n\nI used to just click, which makes the text so-called \"point style\" which means that if you change with/height of box, the type x and y-size changes.\n\nI found this explanation deep in the help files of photoshop:\n\n> To enter paragraph type:\n>\n> 1\\. Do one of the following:\\\n> \\* (Photoshop) Select the Horizontal Type tool Horizontal Type tool or the Vertical Type tool Vertical Type tool .\\\n> \\* (ImageReady) Select the Type tool Horizontal Type tool .\n>\n> Note: To change between horizontal or vertical text in ImageReady, click the Change Text Orientation button in the tool options bar or choose Change Text Orientation from the Character palette menu.\\\n> 2\\. Do one of the following:\\\n> \\* Drag diagonally to define a bounding box for the type.\\\n> \\* Hold down Alt (Windows) or Option (Mac OS) as you click or drag to display the Paragraph Text Size dialog box. Enter values for Width and Height, and click OK."
+ },
+ {
+  "id": 271837,
+  "parent": 0,
+  "author": "Ingrid",
+  "url": "http://www.thegirlinthecafe.com",
+  "date": "2007-09-26 21:18:40",
+  "type": "",
+  "html": "Thanks for an easy to understand tutorial!"
+ },
+ {
+  "id": 374437,
+  "parent": 0,
+  "author": "Mohammed Rashad",
+  "url": "",
+  "date": "2007-11-26 19:59:57",
+  "type": "",
+  "html": "Very nice and easy tutorial. I just tried it and it successfully worked without any trouble. Thank you so much."
+ },
+ {
+  "id": 462993,
+  "parent": 0,
+  "author": "Free Joomla Templates",
+  "url": "http://www.prowebcreative.com",
+  "date": "2009-01-01 22:15:23",
+  "type": "",
+  "html": "This is a great tutorial. Thank you. Do you know how to round the big image? I have a 193x60 jpg image, and I want to round it. Can you help me please?"
+ }
+]

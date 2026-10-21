@@ -1,0 +1,101 @@
+[
+ {
+  "id": 40,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-15 22:18:07",
+  "type": "",
+  "html": "Short after I posted this, I found two more videos from eyetracking studies:\\\n[http://www.poynterextra.org/eyetrack2004/videos.htm](http://www.poynterextra.org/eyetrack2004/videos.htm)"
+ },
+ {
+  "id": 42,
+  "parent": 0,
+  "author": "Jakob Nielsen",
+  "url": "http://www.nngroup.com",
+  "date": "2005-12-16 06:59:12",
+  "type": "",
+  "html": "See also the 53 minutes of usability highlights video available through http://www.nngroup.com/reports/flash/video/"
+ },
+ {
+  "id": 43,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-16 11:12:33",
+  "type": "",
+  "html": "Jakob, glad you found our blog.\\\nThanks for pointing to that link. I'll persuade my boss to buy me the video material. Must be worth a lot more than the 124\\$. I really like that (for once) I can show it to my team, to developers, to managers."
+ },
+ {
+  "id": 44,
+  "parent": 0,
+  "author": "Jacob Strange (Jesper's boss)",
+  "url": "",
+  "date": "2005-12-16 12:26:02",
+  "type": "",
+  "html": "Permission to buy the video given;-)\\\n/Jacob Strange"
+ },
+ {
+  "id": 45,
+  "parent": 0,
+  "author": "Jared Spool",
+  "url": "http://www.uie.com/brainsparks",
+  "date": "2005-12-16 16:58:25",
+  "type": "",
+  "html": "We actually rarely make usability highlight videos for our clients. Even with the increases in technology, we've found it's not a cost effective mechanism to communicate what we learned. They take a tremendous amount of time to make, a long time to show, and the image quality is so poor you often can't see what is actually happening on the screen.\n\nInstead, we use slide montages in Powerpoint that we narrate. We've found that we can easily communicate the frustration from the session while, at the same time, see the details on the screen. Because the narration can take any track you want, you can focus on on the problems on a single screen for several minutes or you can just flash by it and move on.\n\nSo, that's why you don't see any videos from us. We haven't made a highlight video since 1998."
+ },
+ {
+  "id": 46,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-17 13:09:49",
+  "type": "",
+  "html": "Jared.\n\nI find it interesting that you prefer to use slide montages in Powerpoint. Do you have any examples publically available? I'd like to see an example because I still have the opinion that actual videos are better to make the point (when communicate reults to management, etc.\n\nPlease share any examples that you can!"
+ },
+ {
+  "id": 63,
+  "parent": 0,
+  "author": "justaddwater.dk | Justaddwater.dk December 2005 Statistics",
+  "url": "http://justaddwater.dk/2006/01/12/justaddwaterdk-december-2005-statistics/",
+  "date": "2006-01-12 17:12:16",
+  "type": "pingback",
+  "html": "\\[...\\] As you can see in the graph below certain days stand out from the crowd - especially Friday the 16th and Monday the 19th. This was due to our most prominent visitor to date: Jakob Nielsen. After he posted a comment in the “Where to find usability test videos” article our boss send out an internal e-mail to all in Capgemini Denmark referring to the article. \\[...\\]"
+ },
+ {
+  "id": 4925,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-06-14 10:28:46",
+  "type": "",
+  "html": "John S. Rhodes navigates through Digg.com using screen capture video. He discovers and discusses several usability issues that could be hindering Digg's profitability.\n\nYou can purchase the entire video report, 18 minutes long, for \\$5.\n\nhttp://uxreports.com/digg/\n\nJohn's Webword post about it:\\\nhttp://www.webword.com/2006/06/06/a-usability-review-of-diggcom/"
+ },
+ {
+  "id": 13474,
+  "parent": 0,
+  "author": "justaddwater.dk | Usability Study Video Highlights",
+  "url": "http://justaddwater.dk/2006/09/14/usability-study-video-highlights/",
+  "date": "2006-09-14 09:47:08",
+  "type": "pingback",
+  "html": "\\[...\\] When I originally wrote about usability videos, this was not the kind of videos I had in mind. But to be honest, I still want more videos to be available, so these edited “entertaining” short versions will be good too. \\[...\\]"
+ },
+ {
+  "id": 154245,
+  "parent": 0,
+  "author": "Walt",
+  "url": "",
+  "date": "2007-05-26 08:00:11",
+  "type": "",
+  "html": "www.usertesting.com has a usability test video of TripAdvisor."
+ },
+ {
+  "id": 541805,
+  "parent": 0,
+  "author": "Usability Testing",
+  "url": "http://usabilitytestb2b.wordpress.com/",
+  "date": "2011-09-19 14:41:04",
+  "type": "",
+  "html": "Thanks for this article. Every commercial website owner needs usability tests, because this is the only way to know your audience. If you know what they want, you sell more!"
+ }
+]

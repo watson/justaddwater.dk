@@ -1,0 +1,83 @@
+[
+ {
+  "id": 1656,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-03-03 07:49:08",
+  "type": "",
+  "html": "**David Siegel** just sent me an email:\n\n> yes, i did. i definitely invented it all by myself in my living room.\n>\n> but i also believe that at around the same time some other people invented it independently. but i think you can safely say that i was the one who told the most people about it.\n>\n> let me know if you know any good ajax people for my new company!\n>\n> what do you do at cap gemini?\n>\n> cheers,\n>\n> david"
+ },
+ {
+  "id": 1972,
+  "parent": 0,
+  "author": "Kerry Dye",
+  "url": "",
+  "date": "2006-03-09 17:36:19",
+  "type": "",
+  "html": "Ah, now that takes me back... 10 years ago and my first websites....\n\nBut if you think Netscape 3.0 is retro, I remember version 0.9 - it rocked!"
+ },
+ {
+  "id": 32093,
+  "parent": 0,
+  "author": "justaddwater.dk | Contributing to Wikipedia usability resources",
+  "url": "http://justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/",
+  "date": "2006-11-25 14:37:37",
+  "type": "pingback",
+  "html": "\\[...\\] Justaddwater: Who invented the spacer.gif? \\[...\\]"
+ },
+ {
+  "id": 77886,
+  "parent": 0,
+  "author": "joe kleinberg",
+  "url": "http://directaccess.tv",
+  "date": "2007-02-05 23:52:02",
+  "type": "",
+  "html": "Re: Who invented the spacer.gif?\n\nYour comment:\\\nI’m suddenly seriously interested in this of purely historical reasons. It’s amazing how much effort everybody put into aligning tables and serving up spacer.gif’s\n\nMy comment:\\\nNot to crash anyones party, but as far as I know, I actually came up with it first. I was working in San Francisco at Young and Rubicam, a major ad agency. I was part of a division called RPM,\n\nWe were in charge of designing for marketing and such. We had Chevron as a client, and they were going to launch an important campaign, it was a car character, like the cars from the Pixar movie last year. This was their new mascot.\n\nWe were designing a site for it. I had already gotten pretty good at HTML and worked out the spacer for my design problems, tables didn't work right, and so many things were not cross browser compatible.\n\nI named it spacer, just a quirky wording I thought appropriate, since it wasn't actually a space, and if I was doing a text string search, I wanted it to 1. stand out, and 2. not interfere with the word 'space' itself.\n\nHaving worked on minitel in France (1986-1988), I was already familiar with bending over backwards to pull of weird tricks. At that time, I would design a page, then using a hand written key, drawn on graph paper, I read out hexadecimal code that my friend transcribed on the PC, he would save the file, and voilla, a graphic page was created in code, when software was inefficient or unable to perform certain tasks.\n\nIn addition to the 'spacer.gif', I applied this concept in previous years in desktop publishing, think it was 1992. When 32 megabytes of RAM was allot, and I had a 100 megabyte hard disk.\n\nI created a graphic in Photoshop of the letters QC, and made it look like it was cast out of gold metal. It had a red background. At that time, I used Aldus Pagemaker for page layout. With so little RAM and disk space, I designed the letters to sit in the middle of a magazine cover.\n\nSo, I had some letters, with a red background, sitting on a big white background. I tried to match the CMYK values using a box created in Pagemaker, but since it was new technology at the time, when the proof print was made, the Pagemaker red did not exactly match the red from the image. I then created a 1 pixel red color in a Photoshop file, imported it into Pagemaker, and stretched it to the size of the page. Worked like a charm.\n\nSince you were looking to discover the history, for what it's worth, there it is.\n\njoe"
+ },
+ {
+  "id": 81865,
+  "parent": 0,
+  "author": "justaddwater.dk | Who Invented the Spacer.gif (Part 2)",
+  "url": "http://justaddwater.dk/2007/02/11/who-invented-the-spacergif-part-2/",
+  "date": "2007-02-11 19:48:58",
+  "type": "pingback",
+  "html": "\\[...\\] All of a sudden, Joe Kleinberg posted a comment on “Who invented the Spacer.gif“, with the claim that he actually invented the technique \\[before David Siegel\\]: Not to crash anyones party, but as far as I know, I actually came up with it first. I was working in San Francisco at Young and Rubicam, a major ad agency. I was part of a division called RPM, \\[...\\]"
+ },
+ {
+  "id": 381233,
+  "parent": 0,
+  "author": "justaddwater.dk | 1996 Humour Ahead: Spacer.gif, Table Layouts",
+  "url": "http://justaddwater.dk/2007/12/06/1996-humour-ahead-spacergif-table-layouts/",
+  "date": "2007-12-06 18:28:10",
+  "type": "pingback",
+  "html": "\\[...\\] Oh and by the way, did you know who invented the spacer.gif? \\[...\\]"
+ },
+ {
+  "id": 387327,
+  "parent": 0,
+  "author": "Urls Sinistras &raquo; Blog Archive &raquo; del.icio.us entre 19/12/2007 e 02/01/2008",
+  "url": "http://sinistras.aranha.com.br/2008/01/delicious-entre-19122007-e-02012008/",
+  "date": "2008-01-03 03:58:59",
+  "type": "pingback",
+  "html": "\\[...\\] Who invented the spacer.gif?David Siegel invented this technique and his book introduced me to it back in 1996-1997. \\[...\\]"
+ },
+ {
+  "id": 406293,
+  "parent": 0,
+  "author": "Rupert Breheny",
+  "url": "http://www.server-space.co.uk",
+  "date": "2008-04-03 00:12:26",
+  "type": "",
+  "html": "I'm Spartacus! And I also invented the spacer.gif. Actually I was calling mine transparent.gif at the time, tail end of 96, and using them below graphics for headings and between buttons and such like. Started using them in tables in 97 in a single line of one pixel high TD's. Does that mean I can sue Dreamweaver for their TABLE output?\n\nI guess necessity is the mother of invention, and there were all sorts of clever approaches back then. Biologists call it 'convergent evolution'. Now it's all just who invented the latest CSS hack! Guess things never really change after all!"
+ },
+ {
+  "id": 458335,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-12-05 10:21:46",
+  "type": "",
+  "html": "Heh, see also other\\\n[famous products invented by two different parties at same time](http://www.didyouknow.cd/products.htm) (via [Gerard Toonstra](http://radialmind.blogspot.com/2008/12/quantum-mechanics-and-consciousness.html))\n\n> \\\n> One hour before Alexander Graham Bell registered his patent for the telephone in 1876, Elisha Gray patented his design. After years of litigation, the patent went to Bell.\\"
+ }
+]

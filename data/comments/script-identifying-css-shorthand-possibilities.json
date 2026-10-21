@@ -1,0 +1,20 @@
+[
+ {
+  "id": 490449,
+  "parent": 0,
+  "author": "custom t-shirts",
+  "url": "http://www.teejunction.com.au",
+  "date": "2009-10-27 13:38:48",
+  "type": "",
+  "html": "Does truncating from 6 to 3 characters really save that much bandwidth?"
+ },
+ {
+  "id": 490316,
+  "parent": 0,
+  "author": "vim",
+  "url": "http://www.crearedesign.co.uk",
+  "date": "2009-10-22 17:29:09",
+  "type": "",
+  "html": "great tip, this sure does save a lot loading time, another great tip is grouping the h1 tags eg. h1,h2,h3 { font-size:1.4em; }"
+ }
+]

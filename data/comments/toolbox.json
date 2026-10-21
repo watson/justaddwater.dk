@@ -1,0 +1,29 @@
+[
+ {
+  "id": 15712,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-09-25 14:01:34",
+  "type": "",
+  "html": "Just wanted to add this very nice Firefox extension that I find very usefull:\\\nhttps://addons.mozilla.org/firefox/2104/\n\nCSSViewer, when enabled, gives you a mouseover feature that displays an info-box with the CSS styles that applies to the current element under the mouse."
+ },
+ {
+  "id": 101567,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-03-11 13:55:09",
+  "type": "",
+  "html": "For the next update I will also add this [bookmarklet to show quirksmode/standards mode](http://www.phpied.com/quirks-bookmarklet/) of the rendering engine."
+ },
+ {
+  "id": 114919,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-03-26 12:20:27",
+  "type": "",
+  "html": "I will also add Andy Budd's bookmarklet for adding a layout grid to the page body:\n\nhttp://www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/"
+ }
+]

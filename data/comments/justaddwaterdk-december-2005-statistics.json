@@ -1,0 +1,38 @@
+[
+ {
+  "id": 64,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-12 20:49:45",
+  "type": "",
+  "html": "Francois Nonnenmacher (Capgemini corporate webmaster) published his 2005 statistics recently. Just thought I'd post a link: http://padawan.info/weblog/some_statistics_for_this_blog_in_2005.html\n\n> The audience has been growing well month after month, the best one being December 2005 with 266,713 pages, 489,106 hits, 44,802 unique hosts, 212,312 visits and 4.7GB of data served (from my two blogs aggregated). My English blog home page currently runs at 1,698 views/day and the French home page at 1,984 views/day and both aggregated attract a daily average of 6,371 visits, 14,633 hits, 7,666 page views, 3,021 downloads (mainly RSS feeds which currently run at a daily 1,776 hits for the French posts, 884 hits for the English posts and 302 hits for the linksblog)."
+ },
+ {
+  "id": 80,
+  "parent": 0,
+  "author": "justaddwater.dk | Firefox keyboard secret shortcut to remove text from page",
+  "url": "http://justaddwater.dk/2006/01/16/firefox-keyboard-secret-shortcut-to-remove-text-from-page/",
+  "date": "2006-01-16 23:17:00",
+  "type": "pingback",
+  "html": "\\[...\\] Last month, Justaddwater users were split equally between Firefox and Internet Explorer, which means half of you can see this little odd behaviour. \\[...\\]"
+ },
+ {
+  "id": 87,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-01-18 00:52:01",
+  "type": "",
+  "html": "I just found this very interesting comment on a Slashdot article:\n\n> There's a [famous statistic on browser usage](http://www.w3schools.com/browsers/browsers_stats.asp) \\[w3schools.com\\] at w3schools.com, which is a decidedly pro-Microsoft site. They have Firefox at close to 25% in recent months, and they were quick to add a comment that this is probably not representative, because w3schools visitors are likely quite interested in the technology and likely to try out alternatives to the browser that comes installed with their operating system. Interesting, though, that most of those who do try it out seem to stick with it...\n\nSource: http://slashdot.org/comments.pl?sid=174253&cid=14494496 from the post [Firefox Usage Climbing In Europe](http://slashdot.org/article.pl?sid=06/01/17/2059216).\n\nWe must have some VERY technical users here at justaddwater.dk ;)"
+ },
+ {
+  "id": 96,
+  "parent": 0,
+  "author": "justaddwater.dk | Sharing data is the first step toward community",
+  "url": "http://justaddwater.dk/2006/01/20/sharing-data-is-the-first-step-toward-community/",
+  "date": "2006-01-20 15:08:06",
+  "type": "pingback",
+  "html": "\\[...\\] This is why we decided to use this blog to share data with you. Recently we’ve posted about our November and December 2005 visitor statistics. \\[...\\]"
+ }
+]

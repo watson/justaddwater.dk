@@ -1,0 +1,38 @@
+[
+ {
+  "id": 540467,
+  "parent": 0,
+  "author": "jquery zone",
+  "url": "http://jqueryzone.org",
+  "date": "2011-09-14 06:56:46",
+  "type": "",
+  "html": "for example if another command to restore files deleted, if you can share!"
+ },
+ {
+  "id": 543288,
+  "parent": 0,
+  "author": "M. Jewel",
+  "url": "",
+  "date": "2011-09-23 14:19:35",
+  "type": "",
+  "html": "Oh, it is really a right way to operate windows xp without any trouble. Thank you for giving the Windows CMD command line."
+ },
+ {
+  "id": 541948,
+  "parent": 0,
+  "author": "Torben",
+  "url": "http://www.meine-musikschule.com",
+  "date": "2011-09-19 23:33:17",
+  "type": "",
+  "html": "Hey Jesper,\n\nthanks a lot for this tip! I sometimes have trouble with the speed of my laptop if I watch longer youtube videos due to a high amount of temporary files. I'll try out if it works better when deleting all tmp files!\n\nGreetings from Copenhagen!"
+ },
+ {
+  "id": 542809,
+  "parent": 0,
+  "author": "David",
+  "url": "http://awayfromthecrowd.com",
+  "date": "2011-09-22 07:41:51",
+  "type": "",
+  "html": "I found this one for Vista:\\\nHere's How:\\\n1\\. Click on Start, type the following command in the search box, and then hit the Enter key.\\\n%temp%\\\nThis command will open the folder that Windows Vista has designated as the Temporary folder. These are folders and files that Windows needed at one time but are no longer useful. Everything in this folder is safe to delete.\n\n2\\. To remove individual folders or files, hold down your Ctrl key while left-clicking on each item you want delete. Release the Ctrl key when you're finished.\n\n3\\. To delete these items, hit your Delete key or click the Organize button on the toolbar menu, followed by the Delete option.\n\nYou will probably be prompted to confirm that you wish to Delete Multiple Items. Click on Yes to confirm.\n\n4\\. If you'd instead like to remove everything inside the Temp folder, click on the Organize button and then choose Select All from the menu.\n\nNote: If you're prompted that there are hidden files in this folder, just click on OK to bypass the message. A few hidden files hanging out in the Temp folder probably aren't important enough to worry about.\n\n5\\. Again, to delete these items, hit your Delete key or click the Organize button on the toolbar menu, followed by the Delete option.\n\nYou will probably be prompted again to confirm that you wish to Delete Multiple Items. Click on Yes to confirm.\n\n6\\. After all of the files have been deleted you can close the folder window and empty your Recycle Bin, permanently removing the files from your PC.\n\nThis came from:http://pcsupport.about.com/od/maintenance/ht/manualtempvista.htm"
+ }
+]

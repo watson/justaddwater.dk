@@ -1,0 +1,47 @@
+[
+ {
+  "id": 469768,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-02-02 13:26:09",
+  "type": "",
+  "html": "@prullenbak: Often I prefer the way you describe it. But it can backfire if for instance a confirmation box is required. In this case, you will end up clicking 3 are-you-sure-confirmations when deleting 3 rows.\n\nSo it really depends on the nature of the data. To take it even further, i'd like to combine your \"just delete\" description with [ability to undo deletions](/2007/09/27/undo-not-confirmation-end-of-discussion/). This would yield the smallest number of clicks and an ability to revert destructive actions."
+ },
+ {
+  "id": 469629,
+  "parent": 0,
+  "author": "prullenbak",
+  "url": "http://student.cmd.hro.nl/0774966/weblog/",
+  "date": "2009-02-01 23:42:13",
+  "type": "",
+  "html": "Better yet: make it so that a click on the \"delete\" link, deletes the message from the list without a page refresh. Make it dissapear visually, and move the item to the trash. (even that movement could be made visual with a little AJAX). I don't like the 'click-three times to delete something'-approach."
+ },
+ {
+  "id": 471426,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2009-02-07 22:27:11",
+  "type": "",
+  "html": "I share exactly your opinion, Jesper. No more questions but undo option (better: unlimited undo history)!\\\nThe \"Never Use a Warning When you Mean Undo\" article was imho one of the most important articles on ALA."
+ },
+ {
+  "id": 471767,
+  "parent": 0,
+  "author": "Wayne State Web Communications Blog &raquo; Blog Archive &raquo; [Friday Links] The Design and UI Edition",
+  "url": "http://wcs.wayne.edu/blog/2009/02/09/friday-links-the-design-and-ui-edition/",
+  "date": "2009-02-09 16:33:36",
+  "type": "pingback",
+  "html": "\\[...\\] Interaction Design Experiment: Delete Row \\[...\\]"
+ },
+ {
+  "id": 489103,
+  "parent": 0,
+  "author": "Mike B. Fisher",
+  "url": "http://completeusability.com",
+  "date": "2009-09-13 20:34:30",
+  "type": "",
+  "html": "I find that a lot of the Google products behave as though they were created by a group of very smart but slightly detached engineers. They're often very rich in features but lack the elegant simplicity that would make them easy to learn."
+ }
+]

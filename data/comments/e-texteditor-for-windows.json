@@ -1,0 +1,65 @@
+[
+ {
+  "id": 136757,
+  "parent": 0,
+  "author": "Håvard Pedersen",
+  "url": "http://hp.fuzzy76.net",
+  "date": "2007-04-28 11:26:06",
+  "type": "",
+  "html": "Personally, I use PSPad when I'm stuck in Windows. Is not as intuitive as I'd like, but it's extremely powerful and freeware. :)"
+ },
+ {
+  "id": 138426,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-04-30 20:26:24",
+  "type": "",
+  "html": "One thing that has bugged me was that in order to get my Ruby/Rails environment to work properly with Cygwin/E, i had to manually edit the system path:\n\nExcerpt of path not working:\\\nc:\\cygwin\\bin;c:\\ruby\\bin;\\\nExcerpt of path not working:\\\nc:\\ruby\\bin;c:\\cygwin\\bin;"
+ },
+ {
+  "id": 138457,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-04-30 22:17:33",
+  "type": "",
+  "html": "**Some extra trivia:**\n\nThe bundles that Jesper mentions are actually taken from TextMate. Most Ruby on Rails hacking takes places on this text editor, which unfortunately is only developed for OS X (mac). The creator of E-Texteditor of cause asked the creator of TextMate for permission, if he could use the same bundles (which by the way is open source).\n\nThe development of E-Texteditor is **very** fast. As far as I know bugs are dealt with rapidly and new patches released sometimes over night - which is why this new text editor has such a big following.\n\nThe main reason why E-Texteditor was created, was actually not to create a text editor, but to create a version control system for documents. It just evolved into a text editor by chance. **So E-Texteditor now actually has build in revision control!**"
+ },
+ {
+  "id": 229185,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-08-08 12:14:12",
+  "type": "",
+  "html": "E-Texteditor is now out of beta:\n\nhttp://justaddwater.dk/2007/08/08/powerful-text-editor-released/\n\nhttp://e-texteditor.com/blog/2007/e_v10_released"
+ },
+ {
+  "id": 382317,
+  "parent": 0,
+  "author": "justaddwater.dk | My First Rant Discussion &#8212; Ever",
+  "url": "http://justaddwater.dk/2007/12/13/my-first-rant-discussion-ever/",
+  "date": "2007-12-13 14:32:36",
+  "type": "pingback",
+  "html": "\\[...\\] E-Texteditor For Windows (April \\[...\\]"
+ },
+ {
+  "id": 382318,
+  "parent": 0,
+  "author": "justaddwater.dk | Powerful Text Editor Released",
+  "url": "http://justaddwater.dk/2007/08/08/powerful-text-editor-released/",
+  "date": "2007-12-13 14:33:30",
+  "type": "pingback",
+  "html": "\\[...\\] E-Texteditor For Windows (April \\[...\\]"
+ },
+ {
+  "id": 491712,
+  "parent": 0,
+  "author": "Console is not showing the menu bar or the toolbar! &laquo; b b b",
+  "url": "http://smnuman.wordpress.com/2009/12/23/console-is-not-showing-the-menu-bar-or-the-toolbar/",
+  "date": "2009-12-23 11:53:06",
+  "type": "pingback",
+  "html": "\\[...\\] for windows mode setting : add .rb files to RAILS \\[...\\]"
+ }
+]

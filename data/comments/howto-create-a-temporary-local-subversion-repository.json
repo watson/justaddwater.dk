@@ -1,0 +1,38 @@
+[
+ {
+  "id": 135409,
+  "parent": 0,
+  "author": "Russell Quinn",
+  "url": "http://www.spoiledmilk.dk",
+  "date": "2007-04-26 23:44:18",
+  "type": "",
+  "html": "I'd suggest setting up some hosting somewhere and having your repository in a remote location (you can do this over the discussed http protocol), then you don't have to worry about a volatile repository on your local machine (laptop?) or merging into the main one later."
+ },
+ {
+  "id": 135419,
+  "parent": 0,
+  "author": "Russell Quinn",
+  "url": "http://www.spoiledmilk.dk",
+  "date": "2007-04-27 00:08:10",
+  "type": "",
+  "html": "ahh, yes, in that case your not limited by technology but by other factors :("
+ },
+ {
+  "id": 135418,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-04-27 00:04:50",
+  "type": "",
+  "html": "Russel. Thanks for your suggestion. I actually already have access to a subversion server hosted at a remote location. The only thing is, that I often run into \"enterprisey\" rules about not putting business sensitive data on a foreign server outside corporate firewalls.\n\nMaybe it's just the clients that I work with..."
+ },
+ {
+  "id": 358555,
+  "parent": 0,
+  "author": "justaddwater.dk | Prototyping Ruby on Rails Checklist to Get Started",
+  "url": "http://justaddwater.dk/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/",
+  "date": "2007-11-18 17:30:04",
+  "type": "pingback",
+  "html": "\\[...\\] give me the source code.” « AJAX and Web2.0 User Experience Bad For Traffic Counts Howto Create a Temporary Local Subversion Repository \\[...\\]"
+ }
+]

@@ -1,0 +1,65 @@
+[
+ {
+  "id": 491481,
+  "parent": 0,
+  "author": "Joe Alba",
+  "url": "http://www.joealba.com/",
+  "date": "2009-12-08 18:58:01",
+  "type": "",
+  "html": "Great tip! I've been looking for this feature for a while now.\n\nBut for some reason, it isn't working for me. I followed the steps, but this service does not appear when I right-click a folder.\n\nI checked my ~/Library/Services folder, and the service I created was saved as 'Open in TextMate.workflow'\n\nGot any tips that could help me out? Does your service wind up with the .workflow extension also?\n\n(I'm running Snow Leopard -- upgraded from Leopard, not a fresh install.)"
+ },
+ {
+  "id": 491507,
+  "parent": 0,
+  "author": "Daniel",
+  "url": "http://blog.danielpietzsch.com",
+  "date": "2009-12-11 01:38:07",
+  "type": "",
+  "html": "Nice tip, but somehow the folder or file I selected in Finder appears twice in the Textmate drawer. Do you have the same problem?"
+ },
+ {
+  "id": 491591,
+  "parent": 491507,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-12-16 21:38:54",
+  "type": "",
+  "html": "@Daniel\\. Actually yes I have the same problem. Please let me know if you come up with a fix !"
+ },
+ {
+  "id": 505906,
+  "parent": 0,
+  "author": "Scott",
+  "url": "http://twitter.com/humantorch",
+  "date": "2011-01-03 11:10:19",
+  "type": "",
+  "html": "Thanks Adam, that solved the double-loading issue for me as well.\n\nAlso, for whatever reason, the workflow wasn't picking up my \\$PATH variable, so I actually had to enter:\n\n/usr/local/bin/mate \\$1\n\nas the shell script. Other than that, though, works like a charm!"
+ },
+ {
+  "id": 531548,
+  "parent": 0,
+  "author": "Henrique",
+  "url": "",
+  "date": "2011-07-25 16:23:03",
+  "type": "",
+  "html": "Great tip!\n\nUsing what Adam and Scott sad, but with the argument surrounded by double quotes avoiding problems with path that contain spaces.\n\n/usr/local/bin/mate \"\\$1\""
+ },
+ {
+  "id": 503678,
+  "parent": 0,
+  "author": "Adam",
+  "url": "",
+  "date": "2010-12-06 03:54:33",
+  "type": "",
+  "html": "To fix the \"double\" loading issue:\n\nIn the \"Run Shell Script\" Automator action, in the \"Pass Input\" drop down, change from \"to stdin\" to \"as arguments\"\n\nChange the script:\n\nFROM:\\\ncat \\| xargs mate\n\nTO:\\\nmate \\$1"
+ },
+ {
+  "id": 506860,
+  "parent": 0,
+  "author": "Open folder in Textmate | Elink Media",
+  "url": "http://blog.elinkmedia.net.au/2011/01/08/open-folder-in-textmate/",
+  "date": "2011-01-08 12:25:15",
+  "type": "pingback",
+  "html": "\\[...\\] http://justaddwater.dk/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/ Share this article \\[...\\]"
+ }
+]

@@ -1,0 +1,65 @@
+[
+ {
+  "id": 487589,
+  "parent": 0,
+  "author": "markus",
+  "url": "http://www.urcoolgames.com/",
+  "date": "2009-07-18 10:40:46",
+  "type": "",
+  "html": "i was having the problems related to the SVN & then i was trying to get the help of my coder but now i would like to show your post that guy!"
+ },
+ {
+  "id": 487412,
+  "parent": 0,
+  "author": "&nbsp; links for 2009-07-08&nbsp;by&nbsp;jonezy.org",
+  "url": "http://www.jonezy.org/blog/2009/07/08/links-for-2009-07-08/",
+  "date": "2009-07-09 02:11:38",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk \\| Importing Existing Git repository into SVN (tags: git sourcecontrol svn) \\[...\\]"
+ },
+ {
+  "id": 487451,
+  "parent": 0,
+  "author": "Paul Nathan",
+  "url": "http://www.getlinkspro.com",
+  "date": "2009-07-11 07:38:21",
+  "type": "",
+  "html": "Thanks jesper, for posting codes, i will also try em u\n\nI like the cool feature of SVN is the ability to branch (or take a copy of) your code - this allows you to keep, say, a development and a stable version. If you find a bug that needs patching in your production version, you can merge the change back in to the development branch thus avoiding regressions bugs. There are a number of version control systems out there, with subversion becoming one of the most popular in recent years. Recently though, git seems to be gaining some traction, especially amongst the Open Source community.\n\nThanks bro for sharing it"
+ },
+ {
+  "id": 487460,
+  "parent": 0,
+  "author": "Sachin Gupta",
+  "url": "http://www.skgtechnologies.com",
+  "date": "2009-07-11 13:57:32",
+  "type": "",
+  "html": "Why are people moving to stone age? I love Git and the fact that I can have my own local repository and versions before 'push'ing the changes to a common repository has made me a fan. I am glad these guys didn't want to move to cvs :D\n\nI have used 4 popular version management systems in last 10 years including cvs, svn, rational clear tool and git and except the cool GUI merging that cleartool had nothing will move me from git :D"
+ },
+ {
+  "id": 487476,
+  "parent": 0,
+  "author": "NesMedya Haber Video Oyun Seo Yarışması",
+  "url": "http://nesmedyahabervideoyunseoyarismasi.wordpress.com",
+  "date": "2009-07-13 08:29:52",
+  "type": "",
+  "html": "I like the cool feature of SVN is the ability to branch Open Source a development community."
+ },
+ {
+  "id": 529595,
+  "parent": 0,
+  "author": "Robert",
+  "url": "",
+  "date": "2011-07-10 04:56:54",
+  "type": "",
+  "html": "I'm staying with Git. Other than the ability to branch your code to keep multiple versions, I see little reason to move to SVN. Plus I've heard that converting your code can be a nightmare even with the Google guide."
+ },
+ {
+  "id": 532190,
+  "parent": 0,
+  "author": "Janelle Bailey",
+  "url": "",
+  "date": "2011-08-02 05:22:29",
+  "type": "",
+  "html": "\"Many of my colleagues know svn but are in general not (yet) ready jump over to using Git for bigger projects.\" I can relate to your colleagues. I also know svn but I admit that I do not use Git for bigger projects simply because I am not ready for it and I am not that familiar in using it."
+ }
+]

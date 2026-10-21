@@ -1,0 +1,110 @@
+[
+ {
+  "id": 24110,
+  "parent": 0,
+  "author": "rupux",
+  "url": "http://www.rupux.com.ar/blog",
+  "date": "2006-11-06 16:07:11",
+  "type": "",
+  "html": "well, thats the IE works, fix under fix..."
+ },
+ {
+  "id": 24115,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2006-11-06 16:46:21",
+  "type": "",
+  "html": "I can think of a fix as dirty as the whole png+ie thing:\\\nYou don't replace the image by just a span, but two nested spans. The inner is set to display:none; and contains the alt-text (this is what the screen-reader is supposed to show, if I remember correct). The screen-reader will ignore the display:none; the browser not.\\\nEveryone should be happy...\n\nMaybe it helps also to use just one span and put the images' alt in the title of the span."
+ },
+ {
+  "id": 24120,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2006-11-06 17:07:49",
+  "type": "",
+  "html": "Oh and there's another out-of-the-box-fix, IE7 from Dean Edwards: http://dean.edwards.name/IE7/\n\nAfaik his fix includes background-images which is a problem for the Bob Osola-fix..."
+ },
+ {
+  "id": 24156,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-06 19:22:42",
+  "type": "",
+  "html": "Hi Chris\n\nActually the Bob Osola fix does use a title attribute in the span element. It takes either the alt or the title attribute of the img element if they are used.\n\nI've updated the post with information on what exactly is translated from the original img element."
+ },
+ {
+  "id": 24159,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-06 19:34:19",
+  "type": "",
+  "html": "Very interesting with the IE7 library from Dean Edwards btw... I will definitely look into it :)"
+ },
+ {
+  "id": 24185,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2006-11-06 21:40:21",
+  "type": "",
+  "html": "Just a thought, In what cases do you need an image to display transparent - where it is not for layout purposes?\n\nThe reason I ask is that is that if it is only for layout purposes you will do well leaving it out of your HTML and put in into your stylesheet. Then you can make it transparent and no longer worry about accesibility."
+ },
+ {
+  "id": 24364,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2006-11-07 07:09:48",
+  "type": "",
+  "html": "Hi Thomas (B): One problem persists (either way), AlphaImageLoader does not background-repeat or background-position. Many images with transparency are used with repeat...\n\nHi Thomas (WS): I see ... Well these issues will be same with the IE7-script, I guess."
+ },
+ {
+  "id": 24438,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-07 11:17:03",
+  "type": "",
+  "html": "Hi Thomas (B)\n\n> Just a thought, In what cases do you need an image to display transparent - where it is not for layout purposes?\n\nYou are right... A regular photo would of cause not make use of alpha transparency, but a logo could (a photo would usually be JPEG anyway).\n\nAnother thing is if the image is linked. In that case I don't think it would be a good idea to apply it as a background via CSS. In that case you would need a bit of hacking to make it work (hacking != good).\n\nAnother thing is that many images are used to describe something and are actually very important to the context. I don't know exactly how screen readers interpret HTML (and that is partly why I have written this post), but I would imagine that if the screen reader can actually \"see\" that this is an image it would somehow notify the user (and of cause read its alt or title attribute). If instead it was replaced by a div or span element as Bob's hack does, the screen reader would then not recognize it as an image. I imagine it would still read the title attribute - but not inform the user that this was an image."
+ },
+ {
+  "id": 25088,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2006-11-08 23:11:25",
+  "type": "",
+  "html": "Thomas (lots of Thomas' here :o)),\n\nI understand what you are saying, and I do not disagree with you.\n\nI have been trying find an example I have (somewhere) where text is used instead images, but is still displayed using transparent PNG's in the browser (using CSS) - and one that is not a \"hack\". Unfortunately I cannot find it (I got it somewhere - I have used it a couple of years back)."
+ },
+ {
+  "id": 25407,
+  "parent": 0,
+  "author": "adrian kirsten",
+  "url": "http://www.heitamag.com",
+  "date": "2006-11-09 20:19:20",
+  "type": "",
+  "html": "is there no simple something i can just add into my site and it does all the transparencies without me having to identify each and every image? like i found this one a while ago, but it ignores my css images, which makes my site look awefull in IE. That site never went live because of that problem.\n\nIm a designer, not a coder. So for me it is kind of hard to do things like that. I just need something that works and is straightforward and simple to use.\n\nIs there something like that? Is there? \\*sniffle\\*"
+ },
+ {
+  "id": 25710,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-10 14:26:44",
+  "type": "",
+  "html": "Hi Adrian\n\nThere is a couple of different things you can do depending on the way you use PNG images.\n\nIf you are just using regular \\<img\\> elements, I suggest that you just follow method 2 on Bob Osolas website:\\\nhttp://homepage.ntlworld.com/bobosola/pnghowto.htm\n\nTo quote his page there is also fixes available if you use input image buttons or image maps:\n\n> There is also an [imagemap version](http://homepage.ntlworld.com/bobosola/imagemap.htm) if you want to use imagemaps and/or form input images and a [rollover version](http://homepage.ntlworld.com/bobosola/png_mouseover.htm) which enables the use of transparent PNGs in rollovers.\n\nIf you use any of the above I suggest that you read all the information available on his site - even though you are not a programmer ;) The main issue is that if you apply CSS styles directly to an \\<img\\> element these styles will no longer work since the \\<img\\> element is now changed to a \\<span\\> element - just remember to for example use a class named \"image\" instead.\n\nAs he mentions there are also other solutions that might suit you better through:\n\n> ## Other Solutions\n>\n> There are many other solutions to this problem - you may wish to check them out to see if they better fit your needs:\n>\n> [PNG Behavior - uses .htc file & 1px GIF](http://webfx.eae.net/dhtml/pngbehavior/pngbehavior.html)\\\n> [Youngpup - IE behavior & 1px GIF](http://youngpup.net/_ui_webapp/getFrames.asp?request=/snippets/sleight.xml)\\\n> [Lloyd Dalton - CSS only, no JS](http://www.daltonlp.com/daltonlp.cgi?item_type=1&item_id=217)\n>\n> Fred Boyle emailed me with a Flash solution. He says you can *\"simply import the PNG into Flash and use the generated Flash movie using the WMODE parameter set to \"transparent\". This works wonderfully!\"* . I am not a user of Flash so cannot comment on this approach but hopefully some may find it helpful."
+ },
+ {
+  "id": 48529,
+  "parent": 0,
+  "author": "Joseph Mathieu",
+  "url": "http://www.expertcs.com",
+  "date": "2006-12-27 19:09:42",
+  "type": "",
+  "html": "I used the png fix on my side navigation's background image... The fix prevents my navigation links to function. Is there a way around this problem?"
+ }
+]

@@ -1,0 +1,56 @@
+[
+ {
+  "id": 613,
+  "parent": 0,
+  "author": "justaddwater.dk | Multiple versions of IE in one Windows PC - Prepare for IE7",
+  "url": "http://justaddwater.dk/2006/01/25/multiple-versions-of-ie-in-one-windows-pc-prepare-for-ie7/",
+  "date": "2006-02-03 21:24:19",
+  "type": "pingback",
+  "html": "\\[...\\] UPDATE 2006-02-03: The method described below will sometimes not work. To run IE7 and IE6 side-by-side, see the new post “IE7 beta running side by side with IE6“. For older versions of IE, this still works and you could safely continue as described below, (but you should acknowledge that this is still “unsupported”, and is likely to make Internet Explorer less stable). \\[...\\]"
+ },
+ {
+  "id": 1019,
+  "parent": 0,
+  "author": "Leslie Franke &raquo; Blog Archive &raquo; Running IE 7 Beta 2 with IE 6 in Standalone Mode",
+  "url": "http://lesliefranke.com/2006/02/10/running-ie-7-beta-2-with-ie-6-in-standalone-mode/",
+  "date": "2006-02-10 15:48:54",
+  "type": "pingback",
+  "html": "\\[...\\] Thanks to Jon Galloway, we can now run IE7 in standalone mode while keeping IE6 as the main IE version. Run IE7 as standalone and keep IE6 as the default browser. Visit Jon’s web site for more information and the script necessary to accomplish this. Basically many of the non-browsing features do not work but it is quire handy to browse and test websites. In addition, justaddwater has reported that “If I start IE6 before IE7, I cannot use the address bar in IE6 (as this loads the page in Firefox which is my default browser). The workaround for me is to start IE7, and then start IE6. Now I can see a web page in IE7 and IE6 side-by side.” Remember this solution is unsupported and thus may cause problems, but many have reported it working so far. \\[...\\]"
+ },
+ {
+  "id": 16208,
+  "parent": 0,
+  "author": "justaddwater.dk | IE 7, web standards and CSS support",
+  "url": "http://justaddwater.dk/2006/08/28/ie-7-web-standards-and-css-support/",
+  "date": "2006-09-28 10:42:11",
+  "type": "pingback",
+  "html": "\\[...\\] I have previously written about how to run IE7 beta side by side with IE6. But according to Jon Galloway (inventor of the trick), this only works up to before IE7 Beta 3. But the good thing is that he is working on an update. \\[...\\]"
+ },
+ {
+  "id": 35832,
+  "parent": 0,
+  "author": "justaddwater.dk | All IE Browsers Standalone On Same PC",
+  "url": "http://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/",
+  "date": "2006-12-06 22:48:22",
+  "type": "pingback",
+  "html": "\\[...\\] Standalone versions of Internet Explorers have been available for a long time. (i blogged about it before back in January and February). The new and best thing is that it’s now dead simple and really really easy to use. \\[...\\]"
+ },
+ {
+  "id": 473530,
+  "parent": 0,
+  "author": "u2baby",
+  "url": "http://www.tips5.com",
+  "date": "2009-02-18 01:22:37",
+  "type": "",
+  "html": "I installed IE7 but a number of sites I need to access to pay bills don't support it. I was told that deleteing it will automatically revert me to IE6 but that didn't work. I used Add/Remove in the Control Panel but it didn't remove IE7. Any suggestions?\n\nThank you."
+ },
+ {
+  "id": 521575,
+  "parent": 0,
+  "author": "andy",
+  "url": "",
+  "date": "2011-05-04 22:41:58",
+  "type": "",
+  "html": "u2 baby stated\n\n\"I installed IE7 but a number of sites I need to access to pay bills don’t support it. I was told that deleteing it will automatically revert me to IE6 but that didn’t work. I used Add/Remove in the Control Panel but it didn’t remove IE7. Any suggestions?\"\n\nDid you get any suggestions?\n\nI had all sorts of problems with IE recently, so much so with it's slowness that I'm thinking seriously of Firefox."
+ }
+]

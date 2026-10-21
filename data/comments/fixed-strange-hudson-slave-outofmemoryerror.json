@@ -1,0 +1,20 @@
+[
+ {
+  "id": 502547,
+  "parent": 0,
+  "author": "Bon Giorno",
+  "url": "http://bongiornowebshop.nl",
+  "date": "2010-11-16 13:33:21",
+  "type": "",
+  "html": "Shouldnt u swap the the numbers like this -Xmx256m -XX:MaxPermSize=512m.\n\nHow can Xmx be larger then the max permission size?"
+ },
+ {
+  "id": 502423,
+  "parent": 0,
+  "author": "Carly",
+  "url": "http://www.msa-kbh.dk",
+  "date": "2010-11-14 01:01:05",
+  "type": "",
+  "html": "This took me a whole long week when I did it myself and corrected the error."
+ }
+]

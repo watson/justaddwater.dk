@@ -1,0 +1,29 @@
+[
+ {
+  "id": 416946,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-05-08 00:42:26",
+  "type": "",
+  "html": "Thanks a lot for noticing Jonas. In the case you liked the article, I must recommend our new Capgemini client magazine. It features a 3 page article on prototype driven development with Mads and me (photo above is from the magazine).\n\nFor now it's paper only, and I'm gladly sending anybody a copy. Please mail me your physical address for a copy. My gmail username is \"jesperrr\" (attention 3xR before the @-sign)"
+ },
+ {
+  "id": 416706,
+  "parent": 0,
+  "author": "Jonas Follesø",
+  "url": "http://jonas.follesoe.no",
+  "date": "2008-05-07 03:47:57",
+  "type": "",
+  "html": "First: congrats on a great article, just finished reading it. Well written and manages to communicate the essence of Rail to \"non-developers\" in a good and efficient way.\n\nSecond: Great to see a fellow Capgemini blogger, with some of the same interests (web front ends and usability). Personally I’m really into the Microsoft technology stack, currently focusing on Silverlight development. I work for Capgemini Norway, but am doing a one year transfer to the Capgemini Melbourne office.\n\nIt’s great to see that Capgemini is keeping up with latest market trends, and that a Scandinavian Capgemini hub is now offering Ruby services. I think Capgemini Oslo is in the process of looking into Ruby, Python and more agile development frameworks.\n\nPersonally I think the dynamic languages will continue to grow, and with Microsoft support through IronRuby and IronPython it’s probably going to become more feasible to get started with these languages at existing .NET based customers. The support for Ruby in Silverlight 2 opens up an interesting Ruby continuum, from Rails on the server to Silverlight on the front-end. The clean MVC separation, as well as good support for REST-services opens up some interesting RIA scenarios.\n\nI’ve added your blogg to my RSS reader, so I’ll keep an eye on what you’re up to in Denmark!\n\nCheers,\\\nJonas Follesø\\\nSenior Consultant Capgemini Trondheim\\\nMicrosoft Regional Director, Norway\\\nhttp://jonas.follesoe.no"
+ },
+ {
+  "id": 509778,
+  "parent": 0,
+  "author": "justaddwater.dk | Rapid Prototyping With a Piece of Wood",
+  "url": "http://justaddwater.dk/2010/11/22/rapid-prototyping-with-a-piece-of-wood/",
+  "date": "2011-01-31 20:25:17",
+  "type": "pingback",
+  "html": "\\[...\\] Capgemini website article: Prototyping and Ruby on Rails (apr 2008) \\[...\\]"
+ }
+]

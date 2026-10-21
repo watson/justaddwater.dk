@@ -1,0 +1,218 @@
+[
+ {
+  "id": 103,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-23 15:55:44",
+  "type": "",
+  "html": "Performancing.com blog just posted a similar article with a new one thats very good:\\\nhttp://performancing.com/node/920\n\n> Put up a \"Post not found\" error 404 page - if someone tries to visit a broken link on your blog does the visitor get a nice friendly message or \"error 404 file not found\"? Even better for you, do you provide handy links to your top content, a search form and some adsense ads? It is surprising the difference just this small thing can make to your blogs usefulness and bottom line!"
+ },
+ {
+  "id": 106,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-24 16:11:41",
+  "type": "",
+  "html": "Maybe we'll check out Advanced editing for Wordpress 2.0\" plugin\" (http://blog.labnotes.org/2005/12/26/advanced-editing-for-wordpress-20/).\n\nJust to see if that'll increase usability for writing posts."
+ },
+ {
+  "id": 614,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-02-04 12:12:40",
+  "type": "",
+  "html": "Wordpress 2.01 was released a few days ago. We might also upgrade as it fixes a few bugs.\\\nhttp://wordpress.org/development/2006/01/201-release/\\\nIn particular there has been one annoying bug around using images when posting. The editor always used thumbnail image dimensions when inserting a full-size image. This upgrade should apparently fix it so that I don't have to edit image dimensions manually. I'm looking forward to that!"
+ },
+ {
+  "id": 681,
+  "parent": 0,
+  "author": "justaddwater.dk | Pogosticking and why it should be avoided",
+  "url": "http://justaddwater.dk/2006/02/05/pogosticking-and-why-it-should-be-avoided/",
+  "date": "2006-02-05 18:42:38",
+  "type": "pingback",
+  "html": "\\[...\\] I previously referred to this in a post about mullet style blog design and long archive pages, and this is actually something we’ll change on this blog. \\[...\\]"
+ },
+ {
+  "id": 1096,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-02-16 09:45:07",
+  "type": "",
+  "html": "Mullet is implemented! Thomas put it up 10 hours ago. And I must say it looks beautiful. Also, Thomas did some very slick graphical work, oh, and upgraded to Wordpress 2.01 as well.\\\nWell done Thomas!"
+ },
+ {
+  "id": 2015,
+  "parent": 0,
+  "author": "justaddwater.dk | Mullet Layout: A user-friendly front page",
+  "url": "http://justaddwater.dk/2006/03/12/mullet-layout-a-user-friendly-front-page/",
+  "date": "2006-03-16 13:27:31",
+  "type": "pingback",
+  "html": "\\[...\\] Blog usability improvements: What we’ll change to make this blog better \\[...\\]"
+ },
+ {
+  "id": 425035,
+  "parent": 0,
+  "author": "The Optimist",
+  "url": "http://theoptimist.bloggerunleashed.com/",
+  "date": "2008-06-20 09:44:19",
+  "type": "",
+  "html": "Lol. Man I love your banner. The quote is just sick! Kinda feel like stealing it hehe. And your layout is not bad at all.\n\nSeriously want the source code :)"
+ },
+ {
+  "id": 433556,
+  "parent": 0,
+  "author": "KabonFootprint",
+  "url": "http://kabonfootprint.com/",
+  "date": "2008-08-02 15:24:21",
+  "type": "",
+  "html": "Also don't forget to add the Google xml Sitemap creator plugin. It will renew the xml sitemap file everytime you make a new post and them ping the search engines. The robots loves that...!"
+ },
+ {
+  "id": 428828,
+  "parent": 0,
+  "author": "Big Men Clothes",
+  "url": "http://www.bigmenslargeclothes.com",
+  "date": "2008-07-07 15:14:51",
+  "type": "",
+  "html": "Thats a pretty definitive list."
+ },
+ {
+  "id": 437343,
+  "parent": 0,
+  "author": "Web Template Fiend",
+  "url": "http://www.puresilva.com/",
+  "date": "2008-08-21 23:14:05",
+  "type": "",
+  "html": "Another one to the list: WP-Cache. For traffic spikes WP-Cache is your friend - Wordpress without caching leaves a huge footprint on the server - CPU usage through every last character on the page being rendered via database calls. WP-Cache takes a snapshot of the page, and so each page load is taken from a cache - easy on your server!"
+ },
+ {
+  "id": 431901,
+  "parent": 0,
+  "author": "irish gift store",
+  "url": "http://www.traditionalirishgifts.com",
+  "date": "2008-07-24 10:57:10",
+  "type": "",
+  "html": "Thanks for all that. You've given me more work to do now though!"
+ },
+ {
+  "id": 452052,
+  "parent": 0,
+  "author": "David",
+  "url": "http://davidlevitt.com",
+  "date": "2008-10-15 03:30:57",
+  "type": "",
+  "html": "THis is an interesting blog. I would like to make some money online so that I can help my family - so this is a good place to start. Thanks!"
+ },
+ {
+  "id": 459830,
+  "parent": 0,
+  "author": "Phil @ Site Rush",
+  "url": "http://thesiterusher.com",
+  "date": "2008-12-16 18:36:02",
+  "type": "",
+  "html": "Yea the Do Follow plugin is good to use. It's created hundreds of links to all my blogs all on autopilot. This is still a good list though.\n\nKeep up the quality posting !"
+ },
+ {
+  "id": 457963,
+  "parent": 0,
+  "author": "Max Roble",
+  "url": "http://moregain.com",
+  "date": "2008-11-29 23:46:16",
+  "type": "",
+  "html": "Blogging is fun, But when it makes you money it's every more FUN!!!\\\nDecide which small ad based revenue to run, (But be particularly carefull optimazing you blog just for sales or click). But rather do what you love and through in a few ads on the sides or content and forget them for while, they might as well suprise you - and off you go on holiday'."
+ },
+ {
+  "id": 462559,
+  "parent": 0,
+  "author": "Scott Roberts",
+  "url": "http://www.scottrobertsweb.com",
+  "date": "2008-12-30 22:03:45",
+  "type": "",
+  "html": "Don't forget a good SEO plugin tool, such as All-in-One.\n\nThe rest of the list looks great.:)"
+ },
+ {
+  "id": 458723,
+  "parent": 0,
+  "author": "Mike Rutkowski",
+  "url": "http://www.theonlinemlmblueprint.com",
+  "date": "2008-12-10 00:12:27",
+  "type": "",
+  "html": "Thanks for these great ideas!\n\nI've bookmarked, and added to my to-do list!\n\nI'm always amazed how much great and useful information is out there....\n\nMike\n\nPS - what about adding a Dofollow plugin, and graphic at bottom of posts encouraging comments? I have a dorky guy crying on mine, looking all pathetic & begging people not to leave before they comment..."
+ },
+ {
+  "id": 457474,
+  "parent": 0,
+  "author": "Clean Red Widgets",
+  "url": "http://albanyseo.com",
+  "date": "2008-11-26 03:28:11",
+  "type": "",
+  "html": "I agree on the WP-Cache recommendation, definitely makes a huge difference in page load speed."
+ },
+ {
+  "id": 470299,
+  "parent": 0,
+  "author": "Nadeesha Cabral",
+  "url": "",
+  "date": "2009-02-04 16:34:02",
+  "type": "",
+  "html": "These are some great usability tips here. I got some good tips for my blog as well. Especially the one about improving the “About the authors page”. That way, I believe you will be able to effectively engage with your readers.\n\nCheers."
+ },
+ {
+  "id": 468071,
+  "parent": 0,
+  "author": "Justin Briggs",
+  "url": "http://seozombie.com",
+  "date": "2009-01-25 04:50:30",
+  "type": "",
+  "html": "Wonderful list of improvements. So many simple changes can really turn your blog around."
+ },
+ {
+  "id": 467930,
+  "parent": 0,
+  "author": "Chris",
+  "url": "http://www.chrisaclark.com/",
+  "date": "2009-01-24 06:54:29",
+  "type": "",
+  "html": "Great list! Very comprehensive and useful. I especially like what you have said about the low hanging fruit. Good point and I have a lot to do with my blog now!\n\nThanks,\n\nChris"
+ },
+ {
+  "id": 469881,
+  "parent": 0,
+  "author": "wmturkiye",
+  "url": "http://wmturkiye.net",
+  "date": "2009-02-02 23:20:50",
+  "type": "",
+  "html": "I saw you mentioned AJAXed style commenting there. Although I’ve got nothing against AJAX, sometimes complex AJAX behave as weird elements. I prefer the dynamic php comment boxes like these against AJAX ones in my blogs.\n\nwmturkiye"
+ },
+ {
+  "id": 469118,
+  "parent": 0,
+  "author": "Ekince",
+  "url": "http://ekince.net",
+  "date": "2009-01-29 13:37:31",
+  "type": "",
+  "html": "Great list! Very comprehensive and useful. I especially like what you have said about the low hanging fruit. Good point and I have a lot to do with my blog now!"
+ },
+ {
+  "id": 469101,
+  "parent": 0,
+  "author": "bedava oyun oyna",
+  "url": "http://www.cooloyun.com",
+  "date": "2009-01-29 10:42:20",
+  "type": "",
+  "html": "I agree on the WP-Cache recommendation, definitely makes a huge difference in page load speed."
+ },
+ {
+  "id": 486347,
+  "parent": 0,
+  "author": "sports chat",
+  "url": "http://www.livebark.com",
+  "date": "2009-05-16 16:38:05",
+  "type": "",
+  "html": "Yes the \"About the authors\" are really important when writing blogs.\n\nIf the profile is missing, one would wonder why the author don't want his/her reader know about him/her. If she/he hiding something? Specially if the blog is very impressive... Just my thought."
+ }
+]

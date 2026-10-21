@@ -1,0 +1,47 @@
+[
+ {
+  "id": 9,
+  "parent": 0,
+  "author": "Piotr",
+  "url": "http://www.Deducta.dk",
+  "date": "2005-11-25 10:05:23",
+  "type": "",
+  "html": "Personaly, I think you need to look at availability before you look at usability.\n\nI think the biggest issue for corporate usage is:\n\n\"Personal information and other data we collect\\\nGoogle collects personal information when you register for a Google service or otherwise voluntarily provide such information. We may combine personal information collected from you with information from other Google services or third parties to provide a better user experience, including customizing content for you. \"\n\nFound on: http://www.google.com/intl/en/privacy.html\n\nThis brings up several issues.\\\nNow, what company would accept information regarding their users, first be sent \"our of the house\", and thereby out of their control. This for example clearly requires change in the companies Privacy Policy regarding the website. And for large scale high end companies, this might not be the best thing. Funny enough, these are normally the kind of company that actually ask other questions than the basic “how many users have we had on the website this month” and therefore require high end data mining tools like Webtrends, Clientstep or to some degree Urchin.\n\nSecond of all, any or all information regarding a websites users and their behavior on the tracked website, will be shared with who ever Google sees fit.\\\nThird - and I know this for a fact by experience - Google/urchin had declined to grant access, or in other way share the data collected on a urchin account with the customer in their raw form. This means that if you have been using Urchin for 2 years, and you are moving towards another Data mining tool, you are not able to \"take your data with you\".... In short, if you in, your in “for life”, unless you accept to either loose the data or have 2 systems..\n\nAnother interesting issue, software like Alexa, RedSherif and other spyware minded to track users across individual independent websites by 3rd parties has for the last many years been -if not banned then boycotted by companies - and first of all users. Politikken used it some years ago, but stopped, once awareness level among users rose.\\\nUrchin, implemented on a large scale, will enable Google to do exactly that. Google will be able to see You checking out www.xyz.com, after which you jump to www.abc.com and so on.. and if all the websites run Urchin, Google will be able to track you as a user across the board.\\\nThis information is immensely valuable, and enables whoever has it to profile in great detail who you are.\\\nBesides the fact of knowing exactly what you do and being able to share that information with whoever they see fit.\n\nI could go on, but this it the top of the iceberg. I would never professional recoment anyone to use Urchin, unless their privacy policy becomes as strict as any other hosted solution. This would in term prevent the ROI for Google so Im not sure its going to happen."
+ },
+ {
+  "id": 10,
+  "parent": 0,
+  "author": "Thomas Watson Steen",
+  "url": "",
+  "date": "2005-11-25 10:36:48",
+  "type": "",
+  "html": "Nice comment. You touch upon some very interesting points here. I guess we all have to remember that there is \"no such thing as a free lunch\".\n\nJust on the side node: I'm not sure if you saw the previous post by Jesper, but [he talks about their privacy policy](/2005/11/14/google-analytics/) - or actually the lack of it to be exact ;)"
+ },
+ {
+  "id": 11,
+  "parent": 0,
+  "author": "Piotr",
+  "url": "http://www.Deducta.dk",
+  "date": "2005-11-25 11:44:17",
+  "type": "",
+  "html": "Hey,\n\nThanx :) Im doing an internal briefing on thursday regarding Urchin all-in-all. What i wrote here are some of the thoughts behind it... there is actualy a lot more to be said, specialy when you start looking on the entire ROI scenario and the priority by which products are chosen by Medium og top lvl management..\n\nIm definetly going to mention the Privacy policy issue there... We spoke about it yesterday, and i remember that it was the same when i signed up. Beeing paranoid, you would think they did it on purpose, and therby, but im not realy sure of how it would be handled by law. As you mentioned - you actualy say yes to nothing, but on the other hand, the privacy policy is pretty clear once you look it up. Its full of holes, but still obvious...\n\nComputerworld has an exciting article on it too in Danish: http://www.computerworld.dk/debat/223 ( remember to read the article too on http://www.computerworld.dk/art/31309)\n\n\\- Piotr"
+ },
+ {
+  "id": 34,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-11 22:19:15",
+  "type": "",
+  "html": "Just in: Article about how Google will change web marketing via the analytics tool (in Danish): [Hvordan Google vil ændre fremtidens markedsføring](http://www.talefod.dk/Artikel_paa_www_tale.406+M53a5c0580cd.0.html)\\\nAf Kresten Bergsøe"
+ },
+ {
+  "id": 411417,
+  "parent": 0,
+  "author": "gaurav",
+  "url": "http://www.myfirstholiday.com/",
+  "date": "2008-04-17 07:02:49",
+  "type": "",
+  "html": "google anaylytics has announced new feature of Data Sharing.. is is safe to share your website data with google analytics.. please give us your valuable feedback.."
+ }
+]

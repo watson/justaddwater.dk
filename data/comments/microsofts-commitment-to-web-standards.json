@@ -1,0 +1,47 @@
+[
+ {
+  "id": 64436,
+  "parent": 0,
+  "author": "Mads",
+  "url": "",
+  "date": "2007-01-19 08:51:05",
+  "type": "",
+  "html": "I have always thought IE7 to be one step forward for Microsoft's commitment to web standards.\n\nThen I read this:\\\nhttp://www.sitepoint.com/blogs/2007/01/10/microsoft-breaks-html-email-rendering-in-outlook/\n\nThree words: One step back."
+ },
+ {
+  "id": 64530,
+  "parent": 0,
+  "author": "Hartvig",
+  "url": "http://hartvig.com",
+  "date": "2007-01-19 13:43:24",
+  "type": "",
+  "html": "I think the discussion is very relevant, but using the interview with Bill Gates is a silly. How could you except Bill Gates to know about html, css etc. He's the chairman of the board (yes, of the worlds biggest software company, but imagine how many technologies he should know of then!). Try to ask Steve Jobs about Web standards or Larry Eliasson about sql - I think it would be just as embarrasing.\n\nAnd MS Tools \\*is\\* much improved. Visual Studio 2003 was a catastrophe, but 2005 is a giant improvement. It actually generates proper code, uses code view as default (2003 used design view so a lot of people never looked at the code - yikes!) and it does generate valid xhtml out of the box. ASP.NET can even run in a mode where non compliant pages will return a server error, which is very neat for testing.\n\nAnd Microsoft does a lot to push this. Scott Guthrie (respossible for .net tools) and he's team is doing a lot to improve and just as much in listning to critisism through their blogs and improved controls etc. A huge problem is the developer legacy in the MS consultancy world. MS has actually changed a lot, but there's a huge bunch of MS consultants (I guess you can recognize some colleagues here) who used to do Visual Basic stuff and now does web apps. Some of them are writing books - and judging from that angle, boy, being a good software developer doesn't means understanding web standards.\n\nDon't mix this with IE team etc. I also think they're aware that IE7 wasn't good enough in some areas (and have been quite open about what they would support and not through blogs). They've also begun IE8 already, thank good.\n\nIt seems like the whole web standard movement are so focused on having an \"enemy\", that they don't see the shift that's actually happening inside Microsoft. Anyone who just follows a couple of MS blogs wouldn't doubt.\n\n(I'll cross post this one on 457 too - I actually started there :-))"
+ },
+ {
+  "id": 64533,
+  "parent": 0,
+  "author": "Hartvig",
+  "url": "http://hartvig.com",
+  "date": "2007-01-19 13:50:55",
+  "type": "",
+  "html": "@Mads: There's actually rumours that Microsoft was forced to remove IE as a default renderer, because of the anti-trust case:\\\nhttp://www.campaignmonitor.com/blog/archives/2007/01/microsoft_takes_email_design_b.html\n\nIn a year to come, this will probably hit Apple (forcing them to stop shipping iTunes with OSX) and make the iPod experience a bit more cluncky and the beautiful integration between iApps less integrated.\n\nAgain, everyone likes to see Microsoft as a stupid, cynical, fucked up company - but they've changed a lot the past years, and are one of the most open companies in the world. With a huge dominance they has to follow some rules that causes huge irritations for some of us. The html e-mail issue might be one of them :-("
+ },
+ {
+  "id": 358557,
+  "parent": 0,
+  "author": "justaddwater.dk | MTV Chooses Web Standards And Flunks Flash Website",
+  "url": "http://justaddwater.dk/2007/04/29/mtv-chooses-web-standards-and-flunks-flash-website/",
+  "date": "2007-11-18 17:30:20",
+  "type": "pingback",
+  "html": "\\[...\\] justaddwater.dk \\| Microsoft’s Commitment to Web Standards \\[...\\]"
+ },
+ {
+  "id": 468699,
+  "parent": 0,
+  "author": "Keep an Open Eye Eye, Sir &raquo; Chrome vs IE8",
+  "url": "http://www.theopensourcery.com/keepopen/?p=784",
+  "date": "2009-01-27 23:26:53",
+  "type": "pingback",
+  "html": "\\[...\\] this IE8 browser still hasnt made the grade”.And that would not be the worst of it. For Microsoft development tools and applications have an even worse record of Web standards support where proprietary extensions and exclusive Windows/Microsoft process/routines are the \\[...\\]"
+ }
+]

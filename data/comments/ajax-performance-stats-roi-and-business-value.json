@@ -1,0 +1,173 @@
+[
+ {
+  "id": 68,
+  "parent": 0,
+  "author": "Andre Charland",
+  "url": "http://blogs.ebusiness-apps.com/andre",
+  "date": "2006-01-14 01:22:05",
+  "type": "",
+  "html": "Great post Jesper! I'm glad to see the conversation around performance and usability metrics is evolving and going deeper! I think things will get exciting this year as more main stream developers and managers start grasping these concepts.\n\nI'd like to offer both you and Thomas free copies of our AJAX components and betas as our suite evolves in 2006. Please email me acharland \\[at\\] ebusinessapps \\[dot\\] com and I'll get them over to you.\n\nKeep up the great blog and be sure to let us know about your case studies!\n\nAndre."
+ },
+ {
+  "id": 71,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-14 14:14:56",
+  "type": "",
+  "html": "Andre,\\\nthanks for the flattering words. I'll send you a mail with contact details. Thomas and I would love to check out your suite (but of course we cannot guarantee to use it).\n\nI really hope your foresight comes true regarding more AJAX and usability metrics. Presently, I think that the material your company posted is very good and can probably serve as a template for anybody that want to document performance of AJAX applications.\n\nSo back to you: YOU keep up the good work!"
+ },
+ {
+  "id": 75,
+  "parent": 0,
+  "author": "WebWord &raquo; Blog Archive &raquo; AJAX performance stats, ROI, and business value",
+  "url": "http://www.webword.com/2006/01/15/ajax-performance-stats-roi-and-business-value/",
+  "date": "2006-01-15 15:11:45",
+  "type": "pingback",
+  "html": "\\[...\\] Is Ajax a smart move? (Source: JustAddWater.dk, Authos: Jesper Rønn-Jensen) — The benefits listed here are very similar to benefits when we’re arguing for web-standards: Reduced bandwith, training costs, cost of ownership, and increased return on investment. But for the time being I still believe that AJAX has increased learning costs for developers.” \\[...\\]"
+ },
+ {
+  "id": 76,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-15 22:38:24",
+  "type": "",
+  "html": "Just to clarify my opinion: I still AJAX is a smart move. There are significant productivity benefits (as documented) when *using* an AJAX application.\n\nMy point is that the development costs may be increased because of learning costs and that this extra cost should not be ignored."
+ },
+ {
+  "id": 453,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-02-03 11:40:21",
+  "type": "",
+  "html": "For the techies, there are some good hands-on tips from Alexander Kirk:\\\n10 Realistic Steps to a Faster Website\\\nhttp://alexander.kirk.at/2006/02/02/10-steps-to-a-faster-web-site/"
+ },
+ {
+  "id": 954,
+  "parent": 0,
+  "author": "justaddwater.dk | AJAX businesscase: Reduce development costs and increase usability",
+  "url": "http://justaddwater.dk/2006/02/08/ajax-businesscase/",
+  "date": "2006-02-08 12:07:22",
+  "type": "pingback",
+  "html": "\\[...\\] As a followup to my earlier post “AJAX performance stats, ROI, and business value“, I decided that I’d share with you some considerations on a recent project I was involved in. I can’t give you all the juicy details, and I might never be able to show you the final solution or tell, who the customer is. \\[...\\]"
+ },
+ {
+  "id": 959,
+  "parent": 0,
+  "author": "Ajaxian &raquo; Ajax Case Study - Simple Validations Reduce Costs/Increase Usability",
+  "url": "http://ajaxian.com/archives/ajax-case-study-simple-validations-reduce-costsincrease-usability",
+  "date": "2006-02-08 21:24:15",
+  "type": "pingback",
+  "html": "\\[...\\] In a follow-up to his previous post, Jesper Rønn-Jensen looks yet again at business uses of Ajax technologies - specifically a case study looking at one of his recent usability issues. \\[...\\]"
+ },
+ {
+  "id": 1020,
+  "parent": 0,
+  "author": "kai",
+  "url": "http://ramblings.nohype.de",
+  "date": "2006-02-10 15:51:31",
+  "type": "",
+  "html": "Thanks for giving such a detailed view on that matter.\\\nIt is always nice to have that kind of information in one place and your blog post provides a nive overview of the possibilites that lie ahead.\n\nI especially liked the fact that this high-performance system also stretched to the design of the webserver platform. I guess that AJAX saves enough bandwidth to increase the speed and application reaction for smaller sites and AJAX is a big step in the right direction. But it seems to me that also the combination of lighttpd and thttpd did a lot for the user experience in this scenario. And it's nice that you take it all into account.\n\nSo Jonathan is definitely right in pointing out that \"For covering live events that have a large audience, this makes a ton of sense\", but that this goes even beyond AJAX...\n\nJust my 2cents"
+ },
+ {
+  "id": 1225,
+  "parent": 0,
+  "author": "ntschutta.com",
+  "url": "http://ntschutta.com/jat/?p=86",
+  "date": "2006-02-21 04:01:21",
+  "type": "trackback",
+  "html": "**The Upside of Ajax**\n\nNear as I can tell, none of the major Ajax sites have referenced Tim Bray’s piece entitled The Real AJAX Upside. Tim hits on some of my company’s reasons for adding Ajax to our applications - it makes them perform better (or, more precise..."
+ },
+ {
+  "id": 33372,
+  "parent": 0,
+  "author": "justaddwater.dk | Happy Birthday Justaddwater :)",
+  "url": "http://justaddwater.dk/2006/10/14/happy-birthday/",
+  "date": "2006-11-29 15:40:16",
+  "type": "pingback",
+  "html": "\\[...\\] AJAX performance stats, ROI, and business value \\[...\\]"
+ },
+ {
+  "id": 416187,
+  "parent": 0,
+  "author": "amp",
+  "url": "http://www.intrasoft-spb.ru/en/index.html",
+  "date": "2008-05-05 11:39:44",
+  "type": "",
+  "html": "We came across serious performance problem in some of our projects. After reading this information we made design to rewrite some of functions with help of AJAX. Intermediate results show that “bottle-neck” almost disappear. Thanks a lot!"
+ },
+ {
+  "id": 457198,
+  "parent": 0,
+  "author": "Sanjeev",
+  "url": "http://business-glossary.com/",
+  "date": "2008-11-24 07:35:40",
+  "type": "",
+  "html": "The Microsoft AJAX Library 3.5 is a standalone collection of the standards-based JavaScript classes that are automatically included when using ASP.NET AJAX in ASP.NET 3.5 SP1. It is supported by the most popular browsers and can be used to build client-centric Web applications without using ASP.NET."
+ },
+ {
+  "id": 486442,
+  "parent": 0,
+  "author": "Tech Blog",
+  "url": "http://www.countlesswastedhours.com",
+  "date": "2009-05-18 13:49:59",
+  "type": "",
+  "html": "I had no idea that Ajax could produce such a reduction in bandwidth - gonna have to learn more about it for sure."
+ },
+ {
+  "id": 487536,
+  "parent": 0,
+  "author": "Toni",
+  "url": "http://www.gelsenpv.de",
+  "date": "2009-07-16 14:26:10",
+  "type": "",
+  "html": "Hey Jesper!\\\nThanks for this words. I never relized that it could produce such a reduction, too. Very interesting thou."
+ },
+ {
+  "id": 486298,
+  "parent": 0,
+  "author": "Just Pens",
+  "url": "http://www.just-pens.co.uk",
+  "date": "2009-05-15 12:01:42",
+  "type": "",
+  "html": "Wow. That is some traffic that was received there. Most servers would bottom out with that amount of load in such a short space of time. I think the technology that is available is improving drastically.\n\nI still see mixed opinions whether the internet is getting over stretched or not. Some say it's all speculation whilst other experts say there's a real possibility that the internet could bottom out due to excessive load."
+ },
+ {
+  "id": 487615,
+  "parent": 0,
+  "author": "namaste tshirt",
+  "url": "http://www.cafepress.com/iberikus/6341205",
+  "date": "2009-07-21 05:17:49",
+  "type": "",
+  "html": "I think everyone should go to college and get a degree and then spend six months as a bartender and six months as a cabdriver. Then they would really be educated."
+ },
+ {
+  "id": 487646,
+  "parent": 0,
+  "author": "Trend Scout",
+  "url": "http://everybodys-darling.com/",
+  "date": "2009-07-23 14:36:18",
+  "type": "",
+  "html": "Thanks for sharing this!\\\nI bookmarked this page because your post is knowledgeable."
+ },
+ {
+  "id": 488698,
+  "parent": 0,
+  "author": "Donnie",
+  "url": "http://publicdomainprogress.info",
+  "date": "2009-08-29 17:56:23",
+  "type": "",
+  "html": "Nice Info Jesper!\\\nYes, I believe it's totallly insane with almost 4,000 hits/second and still in the good performance ..\\\nseems this AJAX suits for many dev and mgrs."
+ },
+ {
+  "id": 488799,
+  "parent": 0,
+  "author": "adiw",
+  "url": "http://www.zoomprofit.info/",
+  "date": "2009-09-01 21:02:52",
+  "type": "",
+  "html": "I especially liked the fact that this high-performance system also stretched to the design of the webserver platform. I guess that AJAX saves enough bandwidth to increase the speed and application reaction for smaller sites and AJAX is a big step in the right direction. But it seems to me that also the combination of lighttpd and thttpd did a lot for the user experience in this scenario. And it’s nice that you take it all into account."
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "id": 424385,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2008-06-17 22:57:31",
+  "type": "",
+  "html": "Jesper, you should try regexboddy :)\\\nhttp://www.regexbuddy.com/"
+ },
+ {
+  "id": 424389,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-06-17 23:29:22",
+  "type": "",
+  "html": "@Thomas, I am glad you pointed that out. It comes down to usability :)\n\nActually i have a license for regexbuddy, acetext, Powergrep, and more of Jan Goyvaerts utilities.\n\nI was very fond of Powergrep especially because it had so good regex support. But I stopped using it -- as the usability geek I am -- primarily because of the following:\n\n1\\) the interface was cluttered and it became harder to use. I had repeatedly problems and wasted braincycles setting up simple things like which files to search in. The program had the unlucky ability always to present the wrong defaults when i used the program.\n\n2\\) the other thing that's important to me is I want the search to be reproducible by everybody in our project team. Even if I could save a search, i don't want it in a proprietary format.\n\nHaving said that, I used the Powergrep family of programs extensively for a period of time. Approximately 2 years ago. So things can have improved.\\\nHowever I remember the shift from version 3 to 4 when the interface got too complicated (at least to me)\n\nI want programs that get out of my way, and let me focus on solving my work. Powergrep required too many of my braincycles :)"
+ },
+ {
+  "id": 424399,
+  "parent": 0,
+  "author": "Thomas Baekdal",
+  "url": "http://www.baekdal.com",
+  "date": "2008-06-18 00:15:46",
+  "type": "",
+  "html": "He he - well, I pointed out RegExBoddy, primarely because I thought your command lines looked a tad too complex. I would have a hard time remembering what to write. I actually switched from a command like interface to RegExBoddy, because I thought it was more usable and easier to work with :)\n\nI guess then it is a matter of personal taste...\n\nBTW: All this remind of the age old quote by Jamie Zawinski\n\nSome people, when confronted with a problem, think\\\n“I know, I'll use regular expressions.” Now they have two problems."
+ }
+]

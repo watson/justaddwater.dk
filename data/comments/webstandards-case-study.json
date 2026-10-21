@@ -1,0 +1,74 @@
+[
+ {
+  "id": 7918,
+  "parent": 0,
+  "author": "&raquo; Technikwürze #28 &#8212; cne _LOG Archiv",
+  "url": "http://blog.calm-n-easy.de/archiv/technikwurze-28.html",
+  "date": "2006-07-03 12:13:52",
+  "type": "pingback",
+  "html": "\\[...\\] Jesper Rønn-Jensen: Why Web Standards Matter (Case Study) \\[...\\]"
+ },
+ {
+  "id": 8151,
+  "parent": 0,
+  "author": "Technikwürze - Design &#38; Webstandards Podcast &raquo; Blog Archiv &raquo; Technikwürze 28 - Surfen mit Candice besser?",
+  "url": "http://www.technikwuerze.de/podcast/technikwuerze28/",
+  "date": "2006-07-03 17:10:39",
+  "type": "pingback",
+  "html": "\\[...\\] Jesper Rønn-Jensen: Why Web Standards Matter \\[...\\]"
+ },
+ {
+  "id": 8190,
+  "parent": 0,
+  "author": "Mal Ross",
+  "url": "http://www.malross.co.uk/",
+  "date": "2006-07-04 13:01:11",
+  "type": "",
+  "html": "When I saw this topic's title, I was really looking forward to finding out once and for all why web standards matter. Alas, I really can't see what this case study has to do with web standards. It sounds as though the page could quite easily have been modified to continue to use tables AND adhere to web standards without having any positive impact on the performance.\n\nThe mere adherence to web standards does nothing to guarantee performance improvements. If you'd called the post \"Why writing minimal markup matters,\" then I'd say you've got a point. Please do point out why I'm wrong - I want to learn this stuff, but I'm struggling right now.\n\nThanks. :)"
+ },
+ {
+  "id": 8191,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-07-04 14:12:06",
+  "type": "",
+  "html": "Mal. Thanks for your comment. I think you have an important point here.\\\nAnd let me add that \"**Why writing minimal markup matters**\" is a brilliant headline. Wish I had thought of that when I wrote this!\n\nHowever, I still see that web standards play an important role, especially in this particular case study. It's true that we could follow standards AND still use tables and still have the performance issues.\n\nBut the point I'm trying to make is that web standards is the right place to start, if you experience rendering problems like we had. Standards define how browsers should work. If you use non-standards code, the browser vendors for themselves decise how things will work (and that can easily lead to rendering bugs and differences on different browsers)\n\nWith 10,000 different browser versions already existing today, I think the alternative is hard to manage: I have no chance in life to know all the browser oddities and behaviours if I for example put a \\<form\\> element directly inside a \\<table\\> element. Some browsers may neglect to know about the form? I don't know, because browser vendors can decide for themselves how they want it to work. It's unspecified.\n\nIn this particular case, we had 15,706 errors and warnings, and it was likely that some of them had an influence on the rendering engine that caused the bug we were chasing.\n\nIn my opinion, Web standards are the first step to code that's cleaner, better, slimmer, performs better, less susceptible to browser bugs. In your own words: Minimal markup.\n\nOne more reason why I start with webstandards: If you run into browser bugs, they're usually corrected with newer versions of the browsers. (I've previously reported about [a bug in IE](http://www.quirksmode.org/bugreports/archives/2004/12/IE_links_flicker_background_images_when_inside_pos.html \"Quirksmode bug report: Background image problems inside relative container\") and [another one in Firefox](http://visitjesper.homeip.net/test/cssfloatrighttable.html \"VisitJesper: Firefox bug: CSS float:right problem with tables\")).\n\nBrowsers are coded today with the purpose to support the web standards (no exception!). So if non-standard code works in browsers now, it may stop working the way you intended in later browser versions.\n\nAlso the case I'm describing here is what worked for us, and starting with eliminating the 15,706 errors and warnings was fairly easy. Besides from the performance issue, we got several further advantages, as I described in the article. Decide for yourself what works for you."
+ },
+ {
+  "id": 8564,
+  "parent": 0,
+  "author": "penk - Keep on rockin&#8217; in the free world &raquo; Blog Archive &raquo; 本日書籤",
+  "url": "http://penk.wordpress.com/2006/07/18/%e6%9c%ac%e6%97%a5%e6%9b%b8%e7%b1%a4-114/",
+  "date": "2006-07-17 20:03:20",
+  "type": "pingback",
+  "html": "\\[...\\] http://justaddwater.dk/2006/06/29/webstandards-case-study/ \\[...\\]"
+ },
+ {
+  "id": 14366,
+  "parent": 0,
+  "author": "justaddwater.dk | Toolbox &mdash; locating problems in HTML",
+  "url": "http://justaddwater.dk/2006/09/18/toolbox/",
+  "date": "2006-09-18 22:36:05",
+  "type": "pingback",
+  "html": "\\[...\\] I decided to make a little toolbox that’s easy to apply on web pages, when investigating problems with web pages. Basically, it’s the tools I used when investigating the case I described in “Why web standards matter (case study)” \\[...\\]"
+ },
+ {
+  "id": 14367,
+  "parent": 0,
+  "author": "justaddwater.dk | Technique &mdash; locating problems in HTML",
+  "url": "http://justaddwater.dk/2006/09/18/technique/",
+  "date": "2006-09-18 22:37:24",
+  "type": "pingback",
+  "html": "\\[...\\] The instance that sparked this is a particular case I described earlier in “Why web standards matter (case study)“, in which I used the following tools and investigation techniques. \\[...\\]"
+ },
+ {
+  "id": 83466,
+  "parent": 0,
+  "author": "chad lindstrom&#8217;s blog &raquo; Blog Archive &raquo; Inconsistent Interpretation with Web Development Best Practices",
+  "url": "http://blog.chadlindstrom.ca/archives/2007/02/inconsistent-interpretation-with-web-development-best-practices",
+  "date": "2007-02-14 10:58:23",
+  "type": "pingback",
+  "html": "\\[...\\] Why Web Standards Matter (Case Study) \\[...\\]"
+ }
+]

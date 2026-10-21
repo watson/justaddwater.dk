@@ -1,0 +1,227 @@
+[
+ {
+  "id": 10905,
+  "parent": 0,
+  "author": "Olle Jonsson&#8217;s Morningstar &raquo; Rails error messages - in your language",
+  "url": "http://olle.ter.dk/blog/?p=288",
+  "date": "2006-08-24 10:41:09",
+  "type": "pingback",
+  "html": "\\[...\\] Update: Jesper shows the plugin in action at his website. Take a look! \\[...\\]"
+ },
+ {
+  "id": 10909,
+  "parent": 0,
+  "author": "Kasper Weibel",
+  "url": "http://www.weibelmedia.dk/",
+  "date": "2006-08-24 12:06:45",
+  "type": "",
+  "html": "You have probably all heard about the new keyboard layout designed specifically for pirates. It's all R keys."
+ },
+ {
+  "id": 10910,
+  "parent": 0,
+  "author": "MIro",
+  "url": "http://www.misia.sk",
+  "date": "2006-08-24 13:24:03",
+  "type": "",
+  "html": "Cool stuff ! Only thing which i see as missing and really needed is to translate also column names, as I can see from example above \"First Name\" is not translated - too bad... Any plans to support that?"
+ },
+ {
+  "id": 10911,
+  "parent": 0,
+  "author": "MIro",
+  "url": "http://www.misia.sk",
+  "date": "2006-08-24 13:30:27",
+  "type": "",
+  "html": "I mean \"Last name\" of course... ;o)"
+ },
+ {
+  "id": 10930,
+  "parent": 0,
+  "author": "Edgar",
+  "url": "http://lacaraoscura.com",
+  "date": "2006-08-24 16:25:04",
+  "type": "",
+  "html": "Nice stuff.\n\nHow you compare your plugin with Ruby-GetText ?\n\nI ask 'cause, currently I'm localizating rubycorner.com using Ruby-GetText."
+ },
+ {
+  "id": 10989,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-08-25 14:21:38",
+  "type": "",
+  "html": "MIro: No plans on translating column names or model names. I'm afraid that this will bloat the code more and give difficult dependencies to Rails code. Some of the other l10n/i18n plugins support it, but it usually requires that you add plugin dependent methods in your views.\n\nIf you build a local website using english model and attribute names, one workaround could be to translate model to local language (although I know this is considered bad code style in most cases).\n\nI have no plans right now for adding translation of model names and attributes, but if somebody can show me how to do it without adding code in views and without giving too many dependencies, I might consider it.\n\nEdgar: For a comparison of the different localization plugins, see http://wiki.rubyonrails.org/rails/pages/InternationalizationComparison"
+ },
+ {
+  "id": 10999,
+  "parent": 0,
+  "author": "Daily rumblings",
+  "url": "http://www.jduk.org/blog/?p=1",
+  "date": "2006-08-25 16:23:58",
+  "type": "trackback",
+  "html": "**Polish your Rails...**\n\n..."
+ },
+ {
+  "id": 11907,
+  "parent": 0,
+  "author": "Jey",
+  "url": "",
+  "date": "2006-09-04 05:41:59",
+  "type": "",
+  "html": "It's not enough for L10n to support \"one-language application\" only.\n\nIf you merge your plugin into Rails Core, I hope it'll support multi-language like other L10n plugins.\n\nAnyway, if your plugin works with Gettext, I'll try it."
+ },
+ {
+  "id": 12242,
+  "parent": 0,
+  "author": "jeroen",
+  "url": "",
+  "date": "2006-09-07 10:32:32",
+  "type": "",
+  "html": "jesper,\n\nI like the narrow focus of this plugin (one language per app) - but I really miss being able to reorder date selects. I mean the whole purpose of this plugin is to quickly create a localized form. Would you consider supporting it, I'll be happy to take a look and see if it can be done with too much hassle.\n\nJeroen"
+ },
+ {
+  "id": 12251,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-09-07 11:12:09",
+  "type": "",
+  "html": "Jeroen,\\\nThe newest version already supports reording of date_selects but not datetime_selects (not implemented in Rails). I started a [discussion on the Rails Core]() mailinglist.\n\nAccording to Bob Silva, there are patches for datetime_select, so you could start using it right away.\n\nReordering of date_selects is starting in version 0.6 of the LocalisationSimplified plugin."
+ },
+ {
+  "id": 12252,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-09-07 11:25:40",
+  "type": "",
+  "html": "Info: Just released version 0.6.1 with few bugfixes and more new languages.\\\nhttp://rubyforge.org/frs/?group_id=2074&release_id=6836"
+ },
+ {
+  "id": 12254,
+  "parent": 0,
+  "author": "jeroen",
+  "url": "",
+  "date": "2006-09-07 11:35:55",
+  "type": "",
+  "html": "Hmm I just updated the plugin but this still doesn't work:\n\nselect_date(Date.today, {:order =\\> \\[:day, :month, :year\\]})\n\nAm I overlooking something?"
+ },
+ {
+  "id": 12298,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-09-07 19:59:25",
+  "type": "",
+  "html": "Plugin doesn't work (yet) for select_date() but only for date_select and datetime_select."
+ },
+ {
+  "id": 12403,
+  "parent": 0,
+  "author": "jeroen",
+  "url": "",
+  "date": "2006-09-08 09:21:47",
+  "type": "",
+  "html": "This should fix select_date to use the correct ordering too.\n\ndef select_date(date = Date.today, options = {})\\\norder = LocalizationSimplified::DateHelper::DateSelectOrder\\[:order\\]\n\nsend(\"select\\_#{order\\[0\\]}\".to_sym, date, options) +\\\nsend(\"select\\_#{order\\[1\\]}\".to_sym, date, options) +\\\nsend(\"select\\_#{order\\[2\\]}\".to_sym, date, options)\\\nend\n\nJeroen"
+ },
+ {
+  "id": 12973,
+  "parent": 0,
+  "author": "justaddwater.dk | See you at RailsConf, Europe this Thursday",
+  "url": "http://justaddwater.dk/2006/09/11/railsconf-europe/",
+  "date": "2006-09-11 22:26:44",
+  "type": "pingback",
+  "html": "\\[...\\] As I pointed out while working on my own Localization plugin, there are plenty of loose ends in Rails that could make localization much easier with Rails. \\[...\\]"
+ },
+ {
+  "id": 16141,
+  "parent": 0,
+  "author": "benedikt",
+  "url": "",
+  "date": "2006-09-27 21:34:50",
+  "type": "",
+  "html": "Nice plugin - small, easy, exactly what I was looking for.\n\nI had to remove the UTF8 part though, because it didn't play with .rjs templates (i.e. remote javascript) for what reason ever.\n\nFor the column names: For my needs it was enough to overwrite ActiveRecord::Base.attribute_human_name (the class method) - this works nice for me in 1.1.6 and Edge.\n\nLast but not least, the german translation isn't quite perfect ;) - but that's ok, you have pirate's talk. The need for different flections? and articles depending on the context are a problem which seems to be a bit harder to solve within a simple solution."
+ },
+ {
+  "id": 16144,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-09-27 22:07:08",
+  "type": "",
+  "html": "Benedikt: Thanks for your thoughts and experiments on this. I would love if you'd send me the code examples you ended up using. I will add it to the plugin if it can be of general benefit.\n\nI would be glad if you modify the german translation: I did some of that, so that explains the quality :) Please send me an updated copy, so that I can give you credit and include in next release\n\nI have not tried it out yet with RJS, so I'm really glad you noticed. Please let me know what you did and what response you got. I hope that maybe someone else can contribute with a solution."
+ },
+ {
+  "id": 88549,
+  "parent": 0,
+  "author": "BT",
+  "url": "",
+  "date": "2007-02-21 15:44:03",
+  "type": "",
+  "html": "I even ran into the .rjs problem. And if the line with the modified header (localization_simplified.rb, line 256) is commented out everything works fine for me. Do you know what kind of side effects could be caused by doing that?\n\nBy the way: Great work!! :)"
+ },
+ {
+  "id": 88556,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-02-21 15:58:53",
+  "type": "",
+  "html": "BT: There is no line 256 in the current version (0.8). Which version are you using?\n\nI suggest you upgrade to version 0.8 (but beware that it requires Rails 1.2)\n\nIn Rails 1.2, the content header is automatically set, and thus the problem that you run into is solved, as long as the line is commented out."
+ },
+ {
+  "id": 88580,
+  "parent": 0,
+  "author": "BT",
+  "url": "",
+  "date": "2007-02-21 17:01:05",
+  "type": "",
+  "html": "Of course you're right I forgot to upgrade, sorry! Now everything works fine!\n\nThanks a lot\\\nBT"
+ },
+ {
+  "id": 233864,
+  "parent": 0,
+  "author": "Robert",
+  "url": "",
+  "date": "2007-08-16 16:46:20",
+  "type": "",
+  "html": "Maybe it meight be of interest. I used the human_attribute_override plugin for translating fieldnames in error messages. And I have \"translated object name\" %\\> in my views.\\\nIts not the best solution, but it works very well with this plugin.\n\nI also made a modification on how :error_translation and :error_header are used. In German the plural of error (Fehler) is the same as the singular, but instad i nead to pluralize the second word in :error_header.\\\nMy dirty workaround:\\\n(error_messages_for)\\\n...\\\nmessages = ActiveRecord:: Errors.default_error_messages\\\nif(count\\>1 && messages\\[:error_header_plural\\]!=nil)\\\nerrorheader=messages\\[:error_header_plural\\]\\\nelse\\\nerrorheader=messages\\[:error_header\\]\\\nend\\\nif(count\\>1 && messages\\[:error_translation_plural\\]!=nil)\\\nerrorcount=format(\"%d \"+messages\\[:error_translation_plural\\],count)\\\nelse\\\nerrorcount=pluralize(count, messages\\[:error_translation\\])\\\nend\\\nheader_message = format( errorheader,\\\nerrorcount,\\\n(options\\[:object_name\\] \\|\\|\\\nparams.first).to_s.gsub(\"\\_\", \" \"))\\\nerror_messages = objects.map {\\|object\\| object.errors.full_messages.map {\\|msg\\| content_tag(:li, msg) } }\\\n...\\\nWith :error_header_plural and :error_translation_plural added to the error messages. This produces \"1 Fehler verhinderte...\" or \"2 Fehler verhinderten...\"\n\nPS: As you see, I'm new to rails and ruby. Sorry"
+ },
+ {
+  "id": 403252,
+  "parent": 0,
+  "author": "histidin",
+  "url": "",
+  "date": "2008-03-20 00:17:18",
+  "type": "",
+  "html": "Hello,\\\nI get this Error:\\\nactivesupport-2.0.2/lib/active_support/dependencies.rb:478:in \\`const_missing': uninitialized constant Rails::Plugin::L10N_LANG (NameError)\n\nBut the var is set in the environment.rb and/ or init.rb. Is there special dependency to a native library or gem? Or whats going wrong?\n\nThanks"
+ },
+ {
+  "id": 404512,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2008-03-28 00:59:24",
+  "type": "",
+  "html": "@histidin\n\nI have reproduced your bug by adding the plugin and doing nothing else\\\nBut the bug dissapears the moment I add this line as the first line in my /config/environment.rb\n\nL10N_LANG = :da\n\nUnfortunately my time is limited right now to look more into it. But I wonder what happens at the line in /vendor/plugins/l10n-simplified/init.rb:\\\nL10N_LANG \\|\\|= :da\n\nAs the above line should act as a fallback for the plugin. Please let me know anything you find out.\n\n/Jesper"
+ },
+ {
+  "id": 438573,
+  "parent": 0,
+  "author": "Simon Rimmons",
+  "url": "http://99translations.com",
+  "date": "2008-08-27 03:07:53",
+  "type": "",
+  "html": "We've developed a Web 2.0 tool managing translations. It has very good Rails support - allows using Ruby GetText and YML format for your translations.\n\nPlease check it out."
+ },
+ {
+  "id": 504571,
+  "parent": 0,
+  "author": "amy",
+  "url": "http://www.alibabasoft.org",
+  "date": "2010-12-18 04:17:28",
+  "type": "",
+  "html": "I used the human_attribute_override plugin for translating fieldnames in error messages. And I have “translated object name” %\\> in my views."
+ }
+]

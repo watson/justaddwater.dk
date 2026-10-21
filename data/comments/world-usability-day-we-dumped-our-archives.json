@@ -1,0 +1,47 @@
+[
+ {
+  "id": 27365,
+  "parent": 0,
+  "author": "Tobias",
+  "url": "",
+  "date": "2006-11-14 21:48:51",
+  "type": "",
+  "html": "I think the idea of 'endless scroll' like [the Humanized Reader](http://www.humanized.com/reader) is pretty neat.\\\nBut it also has some problems of its own. Eg. accessibility needs to be considered.\n\nAnyway, happe Usability Day :-)"
+ },
+ {
+  "id": 27561,
+  "parent": 0,
+  "author": "Matthijs",
+  "url": "",
+  "date": "2006-11-15 10:29:40",
+  "type": "",
+  "html": "Sorry but I couldn't disagree more. Why remove the archives? I really don't see the point. One of my main problems with many sites is the missing of a good archives page. When I come to a site by following a link to an article or via a search engine one of the things I always do after reading the article is check the archive for more. A good archive will tell you in a glance what other articles have been published. Be it in a certain time period (chronological archives) or on certain subjects (categories/tags). Or both of course. The archive will tell you how often content is published. And what the most important subjects are.\n\nI always find it very annoying to have to scroll through a lot of content (say the latest 10 posts/summaries), click the previous link, scroll through another 10 posts, click again the previous link, etc etc. I bet not many people will have the patience to take this route further then 2 or 3 pages. And that's a shame, because often a lot of good content is hidden that way. Say that one article about the revolutionary \"css-widget-blabla technique\" published January 2006.\n\nA good archive should give a quick overview of a lot of information. So depending on the amount of posts/articles the archive could consist of just the titles and dates or the titles, dates and a short summery. If you publish daily only the titles would be better, if you post weekly/monthly a short one or two sentence summery fits in.\n\nAnother situation which often happens is that you remember reading a post on a site but you can't remember the exact date or url. Only some period (early this year) or vague description. A quick glance at a list of titles will quickly help you find the article.\n\nAlso, what is the argument for \\*removing\\* the archives? It's only one link somewhere in the navigation or sidebar. Even if only 5% of your visitors would use it, that one link is worth it. It's not like one archive link is cluttering or messing up your layout."
+ },
+ {
+  "id": 27725,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-15 21:49:08",
+  "type": "",
+  "html": "Tobias.\\\nHumanized Reader is a great example where archive pages are less needed. I remember Bill Scott (of Yahoo!) giving more examples of endless scroll in his post [Death to paging](http://looksgoodworkswell.blogspot.com/2005/06/death-to-paging-rico-livegrid-released.html)."
+ },
+ {
+  "id": 27775,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2006-11-15 23:39:52",
+  "type": "",
+  "html": "Matthijs.\n\nThanks for sharing your view here. I'd like to add a few points because I think you miss the important part here.\n\nFist of all, archives are not removed (but replaced) with 50 posts per page. As Thomas notes, we're not done with the work yet, because page2 and pages with previous posts should only contain summaries and not excerpts. We also want to remove the 50 posts limit from page2 and eventually we suddenly have a [single-page archive](/2006/01/09/mullet-style-blog-layout-and-complete-archive-page/). (what Jonathan Boutelle calls [the Long Tail Archive](http://www.jonathanboutelle.com/mt/archives/2006/01/blog_layout_the.html))\n\nAnother important point is that the archive that comes with our blog software (wordpress) is not useful. We don't want an archive page that is a gatekeeper page not providing any useful information, but a list of months (link to [old archive page](/archive/) for your convenience). Note that Like Jakob Nielsen recommends, it is possible still to navigate by subject from the frontpage.\n\nThe other big turn-off with the month-list on the original archive page is pogo-sticking. No really useful information on the page, force people to go back and forth until they find the right article. More about [pogosticking](/2006/06/12/pogosticking-revisited/) and why it should be avoided.\n\nFinally we believe less is more. Removing a link not really providing content can give other links more attention. There are less links that battle for user's attention. To be honest, we're not really there yet, but this may be a start of analyzing more of our content on the blog frontpage to see what's useful to people and what is not."
+ },
+ {
+  "id": 27975,
+  "parent": 0,
+  "author": "Matthijs",
+  "url": "",
+  "date": "2006-11-16 08:41:27",
+  "type": "",
+  "html": "Jesper, thanks for your reply. I don't think I missed the important part here. I do understand your point, but only after considering the other articles you link to. And I think it's also a matter of how we define things.\n\nReading the current post, it basically says: \"no more archives, instead we have links to the next/previous 50 posts\". I think we do agree that that is worse or at least not any better then pogosticking through monthly archives.\n\nSo my main concern was that removing a single page archive and only having the previous/next posts links to browse the archive would be worse then having a monthly list.\n\nAs you clarify, you are planning on having the second page function as an archive, with a list of all posts (probably only titles and dates), isn't it? So I think that in fact we do agree but we name it differently.\n\nAnd I also agree that - often - less is more.\n\nHowever, what about the following situation: visitors come to your site and view/read a post. They want to see what else is there. What will they look for? How will they find the rest of the site's content? My guess is that many people will look for some kind of \"archives\" link somewhere around the top part of the site, near the rest of the navigation. Even if they have seen the \"previous posts\" link. Because when they read \"previous posts\" they will think it will only lead them to the next X amount of posts. While they would like to see an overview of what's here.\n\nWhat do you think?\n\n(ps. thanks for the interesting articles. as you can guess it does make us all think)"
+ }
+]

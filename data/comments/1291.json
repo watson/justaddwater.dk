@@ -1,0 +1,20 @@
+[
+ {
+  "id": 493609,
+  "parent": 0,
+  "author": "Mailand",
+  "url": "",
+  "date": "2010-03-12 15:29:56",
+  "type": "",
+  "html": "Hehe - just revisited an old client's website. It's still holding up using my very custom JS functions to set up the Outlook-ish layout.\n\nI will now reveal the name - however it is related to the danish financial sector. :-)\n\nI couldn't agree more with your points - but with ajax-heavy sites as e.g. Facebook setting the standard I'm afraid we'll only see more sites relying on JS to load the initial layout"
+ },
+ {
+  "id": 493769,
+  "parent": 0,
+  "author": "Peter",
+  "url": "",
+  "date": "2010-03-17 11:37:06",
+  "type": "",
+  "html": "Could you be more specific on this?\n\n\"Tables used for layout are evil\"\n\nCan you please list the cons by using tables for layout?"
+ }
+]

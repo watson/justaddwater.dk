@@ -1,0 +1,47 @@
+[
+ {
+  "id": 20,
+  "parent": 0,
+  "author": "andy glitter",
+  "url": "",
+  "date": "2005-12-02 04:37:47",
+  "type": "",
+  "html": "I use the web accessibility toolbar (http://www.visionaustralia.org.au/info.aspx?page=6140) because it has many useful features not found eleswhere."
+ },
+ {
+  "id": 23,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-04 00:31:12",
+  "type": "",
+  "html": "[Ajaxian.com](http://ajaxian.com/archives/2005/12/firefox_15_java.html) has found an extension for Firefox 1.5 that lets you filter out CSS errors and JavaScript.\n\n> I noticed that my JavaScript console started to spew out CSS errors in 1.5 land:\n>\n> [![javascript-console-highjack](http://ajaxian.com/archives/javascript-console-highjack.jpg)](http://forums.mozillazine.org/viewtopic.php?t=318102)\n>\n> Then I saw [information about](http://blog.dojotoolkit.org/2005/12/01/useful-tools-console2) [Console2](http://forums.mozillazine.org/viewtopic.php?t=318102) which gives you just JavaScript errors, and lets the CSS ones go by.\n\nGreat news, as I have a project at work, where we use Microsoft Sharepoint (with two standard Sharepoint CSS files). These files have lots of CSS errors, which makes it sometimes hard to find the JavaScript errors."
+ },
+ {
+  "id": 33,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2005-12-07 11:07:48",
+  "type": "",
+  "html": "For more info on Internet Explorer tools, the [first run landing page of Fiddler](http://www.fiddlertool.com/Fiddler/firstrun.asp) has more links to other tools, including the IE developer toolbar and powertoys.\n\nFurthermore, there are links to more articles about using Fiddler."
+ },
+ {
+  "id": 7579,
+  "parent": 0,
+  "author": "justaddwater.dk | Why Web Standards Matter (Case Study)",
+  "url": "http://justaddwater.dk/2006/06/29/webstandards-case-study/",
+  "date": "2006-06-29 16:03:27",
+  "type": "pingback",
+  "html": "\\[...\\] More info on my firefox extensions in the article: Web developer’s collection of browser tools (Nov 30th, 2005). \\[...\\]"
+ },
+ {
+  "id": 358558,
+  "parent": 0,
+  "author": "justaddwater.dk | Debugging CSS: My Best Productivity Tip Ever",
+  "url": "http://justaddwater.dk/2007/04/30/debugging-css-my-best-productivity-tip-ever/",
+  "date": "2007-11-18 17:30:37",
+  "type": "pingback",
+  "html": "\\[...\\] Web developer’s collection of browser tool (November \\[...\\]"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "id": 162315,
+  "parent": 0,
+  "author": "Björn Rixman",
+  "url": "http://kraftvaerk.net",
+  "date": "2007-06-04 22:30:44",
+  "type": "",
+  "html": "Thanks for the initiative Jesper, it was a good session indeed.\n\nRelated to the whole web-apps-behaving-like-desktop-applications discussion, what's your opinion on Joyents [Slingshot](http://www.joyent.com/developers/slingshot/)?"
+ },
+ {
+  "id": 160530,
+  "parent": 0,
+  "author": "Matthias Müller-Prove",
+  "url": "http://www.mprove.de",
+  "date": "2007-06-03 00:33:44",
+  "type": "",
+  "html": "Thanks, Jesper, for setting this up. It was a very good session.\\\nBTW - here is the original quote from the book:\n\n> Any system shall not harm your content or, through inaction, allow your content to come to harm."
+ },
+ {
+  "id": 161710,
+  "parent": 0,
+  "author": "Thomas Visby Snitker",
+  "url": "http://www.snitker.com",
+  "date": "2007-06-04 09:33:27",
+  "type": "",
+  "html": "Maybe relevant in this context: Eric Reiss (of the FatDUX) has the following Web Dogma '06 - 10 rules that will enhance the user experience of any website or online application:\n\n1\\. Anything that exists only to satisfy the internal politics of the site owner must be eliminated.\n\n2\\. Anything that exists only to satisfy the ego of the designer must be eliminated.\n\n3\\. Anything that is irrelevant within the context of the page must be eliminated.\n\n4\\. Any feature or technique that reduces the visitor's ability to navigate freely must be reworked or eliminated.\n\n5\\. Any interactive object that forces the visitor to guess its meaning must be reworked or eliminated.\n\n6\\. No software, apart from the browser itself, must be required to get the site to work correctly.\n\n7\\. Content must be readable first, printable second, downloadable third.\n\n8\\. Usability must never be sacrificed for the sake of a style guide.\n\n9\\. No visitor must be forced to register or surrender personal data unless the site owner is unable to provide a service or complete a transaction without it.\n\n10\\. Break any of these rules sooner than do anything outright barbarous.\\*\n\n\\* Shamelessly stolen from George Orwell's famous Rules for Writers"
+ },
+ {
+  "id": 161711,
+  "parent": 0,
+  "author": "Thomas Visby Snitker",
+  "url": "http://www.snitker.com",
+  "date": "2007-06-04 09:34:01",
+  "type": "",
+  "html": "Or maybe the web dogma are Web 1.0?"
+ }
+]

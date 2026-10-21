@@ -1,0 +1,38 @@
+[
+ {
+  "id": 382300,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2007-12-13 11:27:43",
+  "type": "",
+  "html": "Thanks for your comment, Phil! I have now replaced the url\n\nfrom\\\njustaddwater.dk/2005/12/02/yahoo-alerts-mail-rss/#respond\\\nto\\\n\\#respond\n\nI really hope Akismet picks this up. (actually i accidentally marked the comment as spam with our justaddwater.dk url, so I hope Akismet does not misunderstand it)"
+ },
+ {
+  "id": 383028,
+  "parent": 0,
+  "author": "BoltClock",
+  "url": "http://blog.NOVALISTIC.com",
+  "date": "2007-12-15 12:21:54",
+  "type": "",
+  "html": "You may wish to give [Delink Comment Author](http://alexking.org/projects/wordpress/readme?project=delink-comment-author) a shot."
+ },
+ {
+  "id": 382143,
+  "parent": 0,
+  "author": "Phil",
+  "url": "http://www.unintentionallyblank.co.uk",
+  "date": "2007-12-12 14:51:55",
+  "type": "",
+  "html": "That is weird, I've never seen that before! Perhaps the spammers *are* trying to give decent sites a bad name. I'd remove your link and send it off to Akismet to deal with, at least you can't be attached to it then."
+ },
+ {
+  "id": 460186,
+  "parent": 0,
+  "author": "Sam Nichols",
+  "url": "http://www.doggybehave.com",
+  "date": "2008-12-18 18:02:06",
+  "type": "",
+  "html": "Maybe someone was testing a new commenting \"tool\"..and was doing tests on the blog"
+ }
+]

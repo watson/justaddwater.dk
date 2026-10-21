@@ -1,0 +1,65 @@
+[
+ {
+  "id": 1978,
+  "parent": 0,
+  "author": "Lars Gundersen",
+  "url": "http://www.gface.dk",
+  "date": "2006-03-11 18:57:44",
+  "type": "",
+  "html": "Hi,\n\nYou need to put a div inside the td and then apply the following style to it:\n\ndiv {\\\nheight:10px;\\\noverflow:hidden;\\\n}\n\nThis will hide to rest of the content.\n\nHope this will help you out!"
+ },
+ {
+  "id": 1980,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-03-11 20:03:56",
+  "type": "",
+  "html": "Hey Lars.\\\nThank you very much for your feedback. I really appreciate it. Just one thing might prevent me from using your trick: The table in this particular case is generated with Java Server Faces.\\\nSee example here: [MyFaces table example](http://irian.at/myfaces/pagedSortTable.jsf;jsessionid=56913544CE434D22006786DF52AF8308).\\\nA possible workaround might then be to wrap td contents in a div via DOM scripting.\\\nHowever I'd prefer a simpler solution where only CSS is involved."
+ },
+ {
+  "id": 399873,
+  "parent": 0,
+  "author": "Mike",
+  "url": "http://www.mikedwalters.com",
+  "date": "2008-03-03 01:44:01",
+  "type": "",
+  "html": "I thought I'd found my fix, but this isn't working out for me. I think the difference is that my cells have a height, but only some have more than one character of data (its a calendar)."
+ },
+ {
+  "id": 414703,
+  "parent": 0,
+  "author": "Austin",
+  "url": "",
+  "date": "2008-04-29 18:48:13",
+  "type": "",
+  "html": "Restricting the height of the td via CSS doesn't work since the td stretches to accomodate content. You have to wrap the content with a div or some other container.\\\ne.g.\\\ncontent"
+ },
+ {
+  "id": 426233,
+  "parent": 0,
+  "author": "patrick",
+  "url": "",
+  "date": "2008-06-25 17:59:08",
+  "type": "",
+  "html": "Awesome. I've been looking for this for ages. Thank you much\n\nPS: I just tested it and it works perfectly in IE7 FF3 and Safari"
+ },
+ {
+  "id": 441405,
+  "parent": 0,
+  "author": "ramak",
+  "url": "",
+  "date": "2008-09-03 16:45:20",
+  "type": "",
+  "html": "ronn, your fix dint work in my case for whatever reasons. But Lars's fix did it. Anyways my problem got solved, thanks to your posting and lars fix. Thanks guys."
+ },
+ {
+  "id": 513878,
+  "parent": 0,
+  "author": "Rich",
+  "url": "",
+  "date": "2011-03-10 21:50:41",
+  "type": "",
+  "html": "This only works if your table is table-layout=\"fixed\". Gmail is not fixed. All the columns are fixed width except for the Subject column which is auto. This doesn't work when your table is 100% like gmail and when only one column is set to auto while the others are fixed."
+ }
+]

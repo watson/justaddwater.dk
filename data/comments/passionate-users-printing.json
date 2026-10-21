@@ -1,0 +1,38 @@
+[
+ {
+  "id": 465255,
+  "parent": 0,
+  "author": "Jacob Angel",
+  "url": "http://www.jacobangel.com",
+  "date": "2009-01-12 10:53:57",
+  "type": "",
+  "html": "I know this post is very old ... but it popped up when I was looking for a CSS solution for WP.\n\nI'm curious, did you ever hear back from Kathy Sierra? How did she react to your suggestion?"
+ },
+ {
+  "id": 485414,
+  "parent": 0,
+  "author": "Costa",
+  "url": "",
+  "date": "2009-05-06 08:38:51",
+  "type": "",
+  "html": "That is probably the exact reason why I get weird printouts of my site. CSS may be the culprit here. Adding media print to the sheet may help. I ll be applying the code to see if that changes it."
+ },
+ {
+  "id": 485861,
+  "parent": 0,
+  "author": "Joe",
+  "url": "http://josephtaylor.net",
+  "date": "2009-05-11 19:56:53",
+  "type": "",
+  "html": "Just like Jacob, I was looking for a solution for a CSS problem I was having with another Wordpress site I have. Turns out this wasn't the problem, but I kept the information anyway, in case I need it for future reference.\n\nCSS is really kicking my ass, lol"
+ },
+ {
+  "id": 579268,
+  "parent": 0,
+  "author": "Uroda",
+  "url": "http://www.naszpilkach.pl/",
+  "date": "2012-01-07 23:04:45",
+  "type": "",
+  "html": "So what was her response? Did she linked to your blog from hers?"
+ }
+]

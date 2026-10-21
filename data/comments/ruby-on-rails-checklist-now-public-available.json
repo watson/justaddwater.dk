@@ -1,0 +1,20 @@
+[
+ {
+  "id": 144080,
+  "parent": 0,
+  "author": "Chris",
+  "url": "",
+  "date": "2007-05-11 08:34:57",
+  "type": "",
+  "html": "It's a feature I think. It's needed to present distinct password-fields for each protected post.\\\nAnother way to completely hide your posts is to set a post-date in the future. But be careful, since it will appear as the date is reached."
+ },
+ {
+  "id": 144073,
+  "parent": 0,
+  "author": "JanneL",
+  "url": "",
+  "date": "2007-05-11 08:13:42",
+  "type": "",
+  "html": "Well, at least you can save your posts as \"drafts\" without publishing them."
+ }
+]

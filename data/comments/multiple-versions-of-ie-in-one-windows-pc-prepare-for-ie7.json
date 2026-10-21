@@ -1,0 +1,65 @@
+[
+ {
+  "id": 108,
+  "parent": 0,
+  "author": "Casper Fabricius",
+  "url": "",
+  "date": "2006-01-25 18:00:11",
+  "type": "",
+  "html": "This works as expected for me with IE4, IE5 and I5.5 - great tip!\n\nHowever, I'm running the beta of IE7, and I've just grabbed the IE6 files from another computer to try this out, and the behaviour seems to get a bit funky. When I enter a url in the address bar of my \"fake\" IE6, it opens up the page in Firefox, which is my default browser!\n\nIf I make IE my default browser and enters a url in IE6, it is opened in a new IE6 browser window, however, if IE7 is also running, the page is opened in a new tab in IE7. It seems like IE6 is making a \"system call\" or something to let Windows decide who should open the page, instead of just opening it, I don't know ...\n\nBut it works, you just have make IE6 you default browser and make sure you don't have IE7 running!"
+ },
+ {
+  "id": 111,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-01-25 22:23:19",
+  "type": "",
+  "html": "Casper,\\\nthanks for sharing your experience. Due to the nature of this hack, I'd be surprised if it were just working smoothly with no problems.\n\nI must say that one of the primary reasons I use this trick, is to have browsers up and runninng side-by-side. If you're not able to run IE6 and IE7 simultaneouosly, the hack looses its purpose.\n\nPlease share any updates if you get it working!"
+ },
+ {
+  "id": 337,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://visitjesper.homeip.net",
+  "date": "2006-02-01 18:24:58",
+  "type": "",
+  "html": "Just tried this with todays release of IE7 pre beta 2 (on Windows XP service pack 2). It resulted in exactly the same problem as Casper describes above.\\\nI have a feeling that a dll file or two might be missing in the file list in the post.\n\nThere might be another way around: How about an IE7 standalone version on a machine that still defaults to IE6?\n\n[IE7 Standalone Launch Script](http://weblogs.asp.net/jgalloway/archive/2005/12/28/434132.aspx)\\\n[Run I.E.7 beta and I.E.6 side-by-side](http://www.dotnetjunkies.com/WebLog/daveadamson/comments/132462.aspx)\\\n[Should IE7 and IE6 work side-by-side?](http://channel9.msdn.com/ShowPost.aspx?PostID=147114)\\\n[Multiple IEs in Windows](http://labs.insert-title.com/labs/article795.aspx) (this one mentions the same files as mentioned by NocturnDragon above)\\\n[IE7 beta side-by-side with IE6](http://blog.nolanzak.com/IE7BetaSidebysideWithIE6.aspx)\\\nI'll post an update when I've tried it. There are some references about this I'd like to check out. Please post a comment and share your own experiences!"
+ },
+ {
+  "id": 397,
+  "parent": 0,
+  "author": "User Interface Blog &raquo; Internet Explorer 7 Beta 2 Released",
+  "url": "http://www.user-interface.org/2006/02/02/internet-explorer-7-beta-2-released/",
+  "date": "2006-02-02 20:53:17",
+  "type": "pingback",
+  "html": "\\[...\\] Jesper Rønn-Jensen has written a blog entry on how to run multiple version of IE on a PC. \\[...\\]"
+ },
+ {
+  "id": 612,
+  "parent": 0,
+  "author": "justaddwater.dk | IE7 beta running side by side with IE6",
+  "url": "http://justaddwater.dk/2006/02/03/ie7-beta-running-side-by-side-with-ie6/",
+  "date": "2006-02-03 21:05:52",
+  "type": "pingback",
+  "html": "\\[...\\] In the comments of “Multiple versions of IE in one Windows PC” I could see that other people also had problems with the suggestion to make IE6 standalone. \\[...\\]"
+ },
+ {
+  "id": 16207,
+  "parent": 0,
+  "author": "justaddwater.dk | All IE Browsers Standalone On Same PC",
+  "url": "http://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/",
+  "date": "2006-09-28 10:40:17",
+  "type": "pingback",
+  "html": "\\[...\\] Standalone versions of Internet Explorers have been available for a long time. (i blogged about it before back in January and February). The new and best thing is that it’s now dead simple and really really easy to use. \\[...\\]"
+ },
+ {
+  "id": 487428,
+  "parent": 0,
+  "author": "Max Gates",
+  "url": "http://www.easydestination.net/blog/",
+  "date": "2009-07-10 02:32:22",
+  "type": "",
+  "html": "Great tips thanks. I didn't knew it was possible to run two versions of IE side by side. But don't you think its really not required to do this. Microsoft gives you the option to roll back to previous version of IE if you are not satisfied with the current one. Of course if you just want to use two IE versions at same time then this trick is very handy."
+ }
+]

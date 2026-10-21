@@ -1,0 +1,83 @@
+[
+ {
+  "id": 475113,
+  "parent": 0,
+  "author": "Alex Frost",
+  "url": "http://gbdoc.com",
+  "date": "2009-02-27 08:03:55",
+  "type": "",
+  "html": "Yes maybe it looks a bit incorrect, for huma reading but for programmers its right... As Malmberg noticed in general 1 month is about 4,3 weeks so i suppose when 30 days passed the date format will be \\>3 month ago\\<"
+ },
+ {
+  "id": 468933,
+  "parent": 0,
+  "author": "Malmberg",
+  "url": "",
+  "date": "2009-01-28 17:11:18",
+  "type": "",
+  "html": "As january has 31 days which is about 4,3 weeks I dont think Jaiku is completely off :-)"
+ },
+ {
+  "id": 468934,
+  "parent": 0,
+  "author": "Human timer",
+  "url": "",
+  "date": "2009-01-28 17:14:43",
+  "type": "",
+  "html": "Me neither. 1 month \\< 4 weeks !"
+ },
+ {
+  "id": 468936,
+  "parent": 0,
+  "author": "Human timer",
+  "url": "",
+  "date": "2009-01-28 17:15:20",
+  "type": "",
+  "html": "Damn you, shift key!!!\n\nOf course, I meant: 1 month \\> 4 weeks"
+ },
+ {
+  "id": 469226,
+  "parent": 0,
+  "author": "Dave",
+  "url": "",
+  "date": "2009-01-30 15:55:47",
+  "type": "",
+  "html": "Rounding the time elapsed up is incorrect.\n\nWhen referring to a past event, people tend to say that something happened \"at least\" two months and four weeks ago (and when the speaker doesn't specify \"at least\", it is assumed by the audience).\n\nRounding the time period up would lead to factual errors in the most common scenario.\n\n(At least, that's how things are typically interpreted here in the US. I could see it being an interpretation that varies across cultures.)"
+ },
+ {
+  "id": 469006,
+  "parent": 0,
+  "author": "Simon B.",
+  "url": "",
+  "date": "2009-01-28 22:27:00",
+  "type": "",
+  "html": "Since everybody else stole the first part of my planned comment, here's the other part: ...but Jesper is right that \"2 months\" would most probably have been exact enough. And maybe a mouse hover would reveal the exact date, complete with a calendar view of that particular month to show the relation between then and now...?"
+ },
+ {
+  "id": 469198,
+  "parent": 0,
+  "author": "Månhus &raquo; Länksprutning - 30 January 2009",
+  "url": "http://www.moonhouse.se/posts/lanksprutning-30-january-2009.dpg",
+  "date": "2009-01-30 08:00:40",
+  "type": "pingback",
+  "html": "\\[...\\] Human Time Format Gone Wrong \\[...\\]"
+ },
+ {
+  "id": 469098,
+  "parent": 0,
+  "author": "Jesper Rønn-Jensen",
+  "url": "http://justaddwater.dk/",
+  "date": "2009-01-29 10:25:03",
+  "type": "",
+  "html": "Thanks for comments Malmberg, Human timer, Simon B.\n\nCorrect that January is more like 4.3 weeeks it's not completely incorrect.\n\nMy point is, however, that **all time calculations in months should not include weeks**. 3 months is correct enough in the context. Why would you care that it's \"almost 3 months ago\" or \"2 months and 4 weeks ago\". No.\n\nThe \"human time formats\" are an appropriate improvement to avoid time calculations like \"1 year, 3 minutes and 40 seconds ago\""
+ },
+ {
+  "id": 471771,
+  "parent": 0,
+  "author": "Matt",
+  "url": "http://www.teesforall.com/Humor-m-all_6.html",
+  "date": "2009-02-09 17:02:08",
+  "type": "",
+  "html": "I don't know guys, when i see 2 months 4 weeks my brain says, this is dumb and wrong. i don't see an issue with rounding up when its that long ago anyway."
+ }
+]
