@@ -1,0 +1,171 @@
+#!/bin/bash
+# Manage the local Hugo dev server.
+#
+#   bin/dev [start]   start the server in the background (default)
+#   bin/dev stop      stop the server
+#   bin/dev status    show whether the server is running
+#
+# PORT overrides the port (default 1313). Non-default ports use their own
+# pid/log files: logs/hugo-server-<PORT>.{pid,log}.
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+PORT="${PORT:-1313}"
+if [ "$PORT" = "1313" ]; then
+  PID_FILE="logs/hugo-server.pid"
+  LOG_FILE="logs/hugo-server.log"
+else
+  PID_FILE="logs/hugo-server-$PORT.pid"
+  LOG_FILE="logs/hugo-server-$PORT.log"
+fi
+URL="http://localhost:$PORT/"
+
+usage() {
+  echo "Usage: bin/dev [start|stop|status]" >&2
+  echo "  start   start Hugo dev server on port $PORT (default)" >&2
+  echo "  stop    stop the server on port $PORT" >&2
+  echo "  status  show server status on port $PORT" >&2
+  echo "Set PORT=<n> to use a different port." >&2
+}
+
+# PIDs of processes listening on $PORT (newline separated, may be empty).
+listening_pids() {
+  lsof -ti "tcp:$PORT" -sTCP:LISTEN 2>/dev/null || true
+}
+
+# HTTP status code for $URL, or 000 if nothing answers.
+http_code() {
+  curl -s -o /dev/null -w '%{http_code}' --max-time 2 "$URL" 2>/dev/null || true
+}
+
+# Pid recorded in PID_FILE if that process is alive, else empty.
+recorded_pid() {
+  local pid=""
+  if [ -f "$PID_FILE" ]; then
+    pid="$(cat "$PID_FILE" 2>/dev/null || true)"
+    if [ -n "$pid" ] && kill -0 "$pid" 2>/dev/null; then
+      echo "$pid"
+      return 0
+    fi
+  fi
+  return 0
+}
+
+cmd_start() {
+  local pids
+  pids="$(listening_pids)"
+  if [ -n "$pids" ]; then
+    echo "Hugo server already running on port $PORT (pid $(echo $pids)): $URL"
+    exit 0
+  fi
+
+  local old
+  old="$(recorded_pid)"
+  if [ -n "$old" ]; then
+    echo "Hugo server (pid $old) is starting but not listening yet on port $PORT; not starting another." >&2
+    exit 1
+  fi
+  rm -f "$PID_FILE"
+
+  mkdir -p logs
+  echo "Starting Hugo server on port $PORT (log: $LOG_FILE)..."
+  nohup hugo server --port "$PORT" --disableFastRender >>"$LOG_FILE" 2>&1 &
+  local pid=$!
+  echo "$pid" > "$PID_FILE"
+
+  local i=0
+  while [ "$i" -lt 20 ]; do
+    if [ "$(http_code)" = "200" ]; then
+      echo "Hugo server running (pid $pid): $URL"
+      exit 0
+    fi
+    if ! kill -0 "$pid" 2>/dev/null; then
+      echo "Hugo server exited during startup. Last log lines:" >&2
+      tail -n 20 "$LOG_FILE" >&2 || true
+      rm -f "$PID_FILE"
+      exit 1
+    fi
+    sleep 0.5
+    i=$((i + 1))
+  done
+
+  echo "Hugo server did not answer 200 at $URL within 10s (pid $pid still alive). See $LOG_FILE" >&2
+  exit 1
+}
+
+cmd_stop() {
+  local pid
+  pid="$(recorded_pid)"
+  local targets=""
+  if [ -n "$pid" ]; then
+    targets="$pid"
+  else
+    targets="$(listening_pids)"
+  fi
+
+  if [ -z "$targets" ]; then
+    rm -f "$PID_FILE"
+    echo "No Hugo server running on port $PORT; nothing to stop."
+    exit 0
+  fi
+
+  local p
+  for p in $targets; do
+    kill "$p" 2>/dev/null || true
+  done
+
+  local i=0
+  while [ "$i" -lt 10 ]; do
+    if [ -z "$(listening_pids)" ]; then
+      break
+    fi
+    sleep 0.5
+    i=$((i + 1))
+  done
+
+  for p in $targets; do
+    if kill -0 "$p" 2>/dev/null; then
+      kill -9 "$p" 2>/dev/null || true
+    fi
+  done
+
+  rm -f "$PID_FILE"
+  if [ -z "$(listening_pids)" ]; then
+    echo "Stopped Hugo server on port $PORT (pid $(echo $targets))."
+  else
+    echo "Sent kill to Hugo server on port $PORT (pid $(echo $targets)), but port $PORT is still in use." >&2
+  fi
+  exit 0
+}
+
+cmd_status() {
+  local pids code pid
+  pids="$(listening_pids)"
+  pid="$(recorded_pid)"
+  code="$(http_code)"
+
+  if [ -n "$pids" ]; then
+    echo "Hugo server running on port $PORT (listening pid $(echo $pids)); HTTP $code at $URL"
+  else
+    echo "No Hugo server listening on port $PORT."
+  fi
+  if [ -n "$pid" ]; then
+    echo "PID file: $PID_FILE (pid $pid, alive)"
+  elif [ -f "$PID_FILE" ]; then
+    echo "PID file: $PID_FILE (stale)"
+  else
+    echo "PID file: none ($PID_FILE)"
+  fi
+  if [ -n "$pids" ]; then
+    exit 0
+  fi
+  exit 1
+}
+
+case "${1:-start}" in
+  start)  cmd_start ;;
+  stop)   cmd_stop ;;
+  status) cmd_status ;;
+  *)      usage; exit 2 ;;
+esac
