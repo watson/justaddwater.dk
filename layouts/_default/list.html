@@ -1,11 +1,32 @@
 {{ define "main" }}
-{{ if not .IsHome }}<h2 class="pagetitle">{{ .Title }}</h2>{{ end }}
-{{ $pages := cond .IsHome (where site.RegularPages "Type" "posts") .Pages }}
-{{ $p := .Paginate $pages.ByDate.Reverse }}
-{{ range $p.Pages }}
-<div class="post"><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="time">{{ .Date.Format "Jan 2, 2006" }}</span></h2>
-<div class="entry"><p>{{ .Summary | plainify | truncate 300 }}</p>
-<p class="continue-reading"><a href="{{ .RelPermalink }}">Continue reading &raquo;{{ .Title }}&laquo;</a></p></div></div>
+{{- if .IsHome -}}
+{{ $p := .Paginate (where site.RegularPages "Type" "posts").ByDate.Reverse 50 }}
+{{ $first := eq $p.PageNumber 1 }}
+{{ range $i, $e := $p.Pages }}{{ if and $first (ge $i 5) }}{{ else }}{{ partial "post-short.html" $e }}{{ end }}
 {{ end }}
-<div class="navigation">{{ with $p.Prev }}<div class="alignleft"><a href="{{ .URL }}">&laquo; Newer</a></div>{{ end }}{{ with $p.Next }}<div class="alignright"><a href="{{ .URL }}">More articles &raquo;</a></div>{{ end }}</div>
+{{ if and $first (gt (len $p.Pages) 5) }}
+<h2>What we have also written...</h2>
+<div id="oldernews">
+<ul>
+{{ range after 5 $p.Pages }}<li id="post-{{ .Params.wp_id }}" class="linkable">
+	<a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">
+		<span class="title">{{ .Title }}</span>
+		<span class="time">{{ .Date.Format "Jan 2" }}</span>
+	</a>
+</li>
+{{ end }}</ul>
+</div>
+{{ end }}
+<div class="navigation">
+{{ with $p.Prev }}<div class="alignleft"><a href="{{ .URL }}">&laquo; Newer articles</a></div>{{ end }}
+{{ with $p.Next }}<div class="alignright"><a href="{{ .URL }}">More articles &raquo;</a></div>{{ end }}
+</div>
+{{- else -}}
+{{ $p := .Paginate .Pages.ByDate.Reverse 40 }}
+<h2 class="pagetitle">{{ if eq .Data.Plural "categories" }}Archive for the &#8216;{{ .Title }}&#8217; Category{{ else }}Posts Tagged &#8216;{{ .Title }}&#8217;{{ end }}</h2>
+{{ partial "archive-nav.html" $p }}
+{{ range $p.Pages }}{{ partial "post-archive.html" . }}
+{{ end }}
+{{ partial "archive-nav.html" $p }}
+{{- end -}}
 {{ end }}

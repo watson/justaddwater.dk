@@ -1,6 +1,6 @@
 {{- /* Generates /YYYY/, /YYYY/MM/ and /author/<slug>/ (+ /page/N/) archive pages from posts. Regeneration-safe. */ -}}
 {{- /* site.RegularPages is unavailable in adapters, so derive dates from content/posts/YYYY-MM-DD-*.md file names. */ -}}
-{{- $per := 20 -}}
+{{- $per := 40 -}}
 {{- $names := slice -}}
 {{- range os.ReadDir "content/posts" -}}{{ if and (not .IsDir) (findRE `^\d{4}-\d{2}-\d{2}-` .Name) }}{{ $names = $names | append .Name }}{{ end }}{{ end -}}
 {{- $years := slice -}}{{- $months := slice -}}

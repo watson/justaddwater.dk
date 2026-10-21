@@ -1,0 +1,12 @@
+{{- /* Archive-style post block (category, tag, date, author archives). */ -}}
+{{- $au := index hugo.Data.authors (.Params.author | default "jesper") -}}
+{{- $d := .Date.Day -}}
+{{- $sfx := "th" -}}{{ if and (ne $d 11) (ne $d 12) (ne $d 13) }}{{ $m := mod $d 10 }}{{ if eq $m 1 }}{{ $sfx = "st" }}{{ else if eq $m 2 }}{{ $sfx = "nd" }}{{ else if eq $m 3 }}{{ $sfx = "rd" }}{{ end }}{{ end -}}
+<div class="post">
+	<h3 id="post-{{ .Params.wp_id }}"><a href="{{ .RelPermalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">{{ .Title }}</a></h3>
+	<small>{{ .Date.Format "Monday, January" }} {{ $d }}{{ $sfx }}, {{ .Date.Year }} by {{ $au.name }}</small>
+	<div class="entry">
+		{{ partial "excerpt.html" . }}
+	</div>
+	<p class="postmetadata">{{ with .Params.tags }}Tags: {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="/tag/{{ $c | urlize }}/" rel="tag">{{ $c }}</a>{{ end }}<br /> {{ end }}{{ with .Params.categories }}Posted in {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="/category/{{ $c | urlize }}/" rel="category tag">{{ $c }}</a>{{ end }}{{ end }} | {{ partial "commentlink.html" (dict "p" . "tail" " &#187;") }}</p>
+</div>

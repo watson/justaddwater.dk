@@ -1,0 +1,2 @@
+{{- /* Number of approved comments + pingbacks + trackbacks, as WordPress counts them. */ -}}
+{{- return len (index hugo.Data.comments .Params.slug | default slice) -}}

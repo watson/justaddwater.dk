@@ -6,12 +6,9 @@
 {{ else if eq $a "month" }}{{ $y := int .Params.year }}{{ $m := int (strings.TrimLeft "0" .Params.month) }}{{ $posts = where (where $posts "Date.Year" $y) "Date.Month" $m }}{{ end }}
 {{ $posts = $posts.ByDate.Reverse }}
 {{ $slug := .Params.author }}{{ $pn := 1 }}{{ if eq $a "author" }}{{ $posts = where $posts "Params.author" "in" (slice $slug) }}{{ $pn = int .Params.pagenum }}{{ $per := int .Params.per }}{{ $posts = first $per (after (mul (sub $pn 1) $per) $posts) }}{{ end }}
-{{ range $posts }}
-<div class="post"><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="time">{{ .Date.Format "Jan 2, 2006" }}</span></h2>
-<div class="entry"><p>{{ .Summary | plainify | truncate 300 }}</p>
-<p class="continue-reading"><a href="{{ .RelPermalink }}">Continue reading &raquo;{{ .Title }}&laquo;</a></p></div></div>
+{{ $nav := dict "a" $a "pn" $pn "slug" $slug "pages" (.Params.pages | default 1) }}
+{{ partial "date-nav.html" $nav }}
+{{ range $posts }}{{ partial "post-archive.html" . }}
 {{ end }}
-{{ if eq $a "author" }}<div class="navigation">
-{{ if gt $pn 1 }}<div class="alignleft"><a href="{{ cond (eq $pn 2) (printf "/author/%s/" $slug) (printf "/author/%s/page/%d/" $slug (sub $pn 1)) }}">&laquo; Newer</a></div>{{ end }}
-{{ if lt $pn (int .Params.pages) }}<div class="alignright"><a href="/author/{{ $slug }}/page/{{ add $pn 1 }}/">More articles &raquo;</a></div>{{ end }}</div>{{ end }}
+{{ partial "date-nav.html" $nav }}
 {{ end }}

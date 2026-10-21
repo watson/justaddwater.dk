@@ -1,0 +1,7 @@
+{{- /* WP excerpt: hand-written one (data/excerpts.json, see bin/export-excerpts) else first 55 words + [&hellip;]. */ -}}
+{{- with index hugo.Data.excerpts .Params.slug -}}{{ . | safeHTML }}
+{{- else -}}
+{{- $t := .Plain | htmlUnescape | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+{{- $w := split $t " " -}}
+{{- if gt (len $w) 55 -}}<p>{{ delimit (first 55 $w) " " | htmlEscape }} [&hellip;]</p>{{ else }}<p>{{ $t | htmlEscape }}</p>{{ end -}}
+{{- end -}}

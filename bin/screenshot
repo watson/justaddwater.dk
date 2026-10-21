@@ -51,7 +51,10 @@ function loadPages(mode) {
     .filter(l => l && !l.startsWith('#')).map((l, i) => {
       const [p, ...rest] = l.split(/\s+/);
       const ov = Object.fromEntries(rest.map(r => r.split('=')));
-      const slug = (p === '/' ? 'home' : p.replace(/^\/|\/$/g, '').split('/').pop()).slice(0, 40);
+      const segs = p.replace(/^\/|\/$/g, '').split('/');
+      // date archives (/2011/09/) and author archives (/author/x/) need the parent segment to be readable
+      const join = segs.length > 1 && (/^\d+$/.test(segs[segs.length - 1]) || segs[0] === 'author');
+      const slug = (p === '/' ? 'home' : (join ? segs.slice(-2).join('-') : segs[segs.length - 1])).slice(0, 40);
       return { n: String(i + 1).padStart(2, '0'), path: ov[mode] || p, slug };
     }).filter(p => !only.length || only.some(o => o === p.n || p.slug.includes(o)));
 }

@@ -1,0 +1,4 @@
+{{- /* arg: dict "p" page "tail" "" or " &#187;" */ -}}
+{{- $n := partial "commentcount.html" .p -}}
+{{- if eq $n 0 -}}<span>Comments Off<span class="screen-reader-text"> on {{ .p.Title }}</span></span>
+{{- else -}}<a href="{{ .p.RelPermalink }}#comments">{{ $n }} Comment{{ if ne $n 1 }}s{{ end }}{{ .tail | safeHTML }}</a>{{- end -}}

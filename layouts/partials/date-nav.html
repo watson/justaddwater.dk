@@ -1,0 +1,4 @@
+<div class="navigation">
+	<div class="alignleft">{{ if and (eq .a "author") (lt .pn (int .pages)) }}<a href="/author/{{ .slug }}/page/{{ add .pn 1 }}/" >&laquo; Previous Entries</a>{{ end }}</div>
+	<div class="alignright">{{ if and (eq .a "author") (gt .pn 1) }}<a href="{{ cond (eq .pn 2) (printf "/author/%s/" .slug) (printf "/author/%s/page/%d/" .slug (sub .pn 1)) }}" >Next Entries &raquo;</a>{{ end }}</div>
+</div>
