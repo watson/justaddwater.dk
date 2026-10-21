@@ -1,0 +1,83 @@
+#!/usr/bin/env python3 -I
+"""Flag suspicious files and links on justaddwater.dk (read-only; never opens files).
+
+Checks: (1) files in mirror/ by extension and magic bytes,
+        (2) media library + comment bodies via the WP REST API.
+Usage: bin/scan [--no-api] [--no-files]   Report: logs/scan-report.txt
+"""
+import json, os, re, sys, urllib.request
+from urllib.parse import urlparse
+
+BASE = "http://justaddwater.dk/wp-json/wp/v2"
+MIRROR = "mirror"
+BAD_EXT = {"zip","gz","tgz","rar","7z","tar","bz2","exe","msi","dll","scr","bat","cmd","com",
+           "js","jar","apk","dmg","iso","php","phtml","sh","vbs","ps1","swf","docm","xlsm","pptm","lnk","hta"}
+MAGIC = {b"MZ":"Windows executable", b"PK\x03\x04":"zip/office/jar", b"\x1f\x8b":"gzip",
+         b"Rar!":"rar", b"7z\xbc\xaf":"7z", b"\x7fELF":"ELF executable", b"<?php":"PHP source"}
+IMG_EXT = {"jpg","jpeg","png","gif","webp","svg","ico","bmp"}
+LINK = re.compile(r'(?:href|src)=["\']([^"\']+)["\']', re.I)
+RISKY_LINK_EXT = BAD_EXT - {"js", "php"}
+
+def risky_link(u):
+    path = urlparse(u if "//" in u else "//" + u).path
+    return ext(path) in RISKY_LINK_EXT
+out = []
+
+def say(s): out.append(s); print(s)
+
+def ext(p): return os.path.splitext(p.split("?")[0])[1].lstrip(".").lower()
+
+def scan_files():
+    say("== Mirror files ==")
+    n = 0
+    for root, _, files in os.walk(MIRROR):
+        for f in files:
+            p = os.path.join(root, f); e = ext(f); why = []
+            if e in BAD_EXT and not (e == "js" and "/wp-content/themes/" in p + "/"):
+                why.append("extension ." + e)
+            try:
+                head = open(p, "rb").read(8)
+            except OSError: continue
+            for m, name in MAGIC.items():
+                if head.startswith(m) and e not in ("zip","gz","docx","xlsx","pptx","jar","php"):
+                    why.append("magic: " + name)
+            if e in IMG_EXT and why == [] and head[:2] in (b"MZ", b"PK"):
+                why.append("image with executable header")
+            if why: n += 1; say("  %s  [%s]" % (p, "; ".join(why)))
+    say("  %d flagged" % n)
+
+def fetch_all(path):
+    page = 1
+    while True:
+        url = "%s/%s%sper_page=100&page=%d" % (BASE, path, "&" if "?" in path else "?", page)
+        try:
+            with urllib.request.urlopen(url, timeout=30) as r: data = json.load(r)
+        except Exception as ex:
+            if page > 1: return
+            say("  API error on %s: %s" % (path, ex)); return
+        if not data: return
+        yield from data; page += 1
+
+def scan_api():
+    say("== Media library ==")
+    n = 0
+    for m in fetch_all("media/?_fields=id,source_url,mime_type"):
+        if not m["mime_type"].startswith("image/") or ext(m["source_url"]) in BAD_EXT:
+            n += 1; say("  %s  [%s]" % (m["source_url"], m["mime_type"]))
+    say("  %d non-image/suspicious attachments" % n)
+    say("== Comments (links to risky file types, scripts, iframes) ==")
+    n = 0
+    for c in fetch_all("comments/?_fields=id,post,author_name,author_url,content"):
+        html = c["content"]["rendered"]
+        hits = [u for u in LINK.findall(html) if risky_link(u)]
+        if re.search(r"<(script|iframe|object|embed)", html, re.I): hits.append("<script/iframe/object>")
+        if hits:
+            n += 1; say("  comment %s (post %s, %s): %s" % (c["id"], c["post"], c["author_name"], ", ".join(hits)))
+    say("  %d flagged" % n)
+
+if __name__ == "__main__":
+    os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+    if "--no-files" not in sys.argv: scan_files()
+    if "--no-api" not in sys.argv: scan_api()
+    os.makedirs("logs", exist_ok=True)
+    open("logs/scan-report.txt", "w").write("\n".join(out) + "\n")
