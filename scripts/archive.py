@@ -423,6 +423,19 @@ def clean_html(soup, path=''):
         elif tag['href'].endswith('#respond'):
             tag['href'] = tag['href'].removesuffix('#respond') + '#comments'
     restore_demos(soup, path)
+    footer = soup.select_one('#footer p')
+    if footer and 'justaddwater.dk is proudly powered by' in footer.get_text():
+        privacy = footer.find('a', href=re.compile(r'/privacy/?$'))
+        wordpress = footer.find('a', href=re.compile(r'^https?://wordpress\.org/?$'))
+        if privacy and wordpress:
+            privacy.extract()
+            wordpress.extract()
+            footer.clear()
+            footer.extend([privacy, soup.new_tag('br'), 'justaddwater.dk was proudly powered by ', wordpress,
+                           '. It is now a static site ('])
+            repository = soup.new_tag('a', href='https://github.com/watson/justaddwater.dk')
+            repository.string = 'source'
+            footer.extend([repository, ').'])
     return soup
 
 

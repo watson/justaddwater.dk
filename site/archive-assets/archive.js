@@ -19,20 +19,6 @@
       .catch(() => {});
   }
 
-  const footer = document.querySelector('#footer');
-  if (footer) {
-    const note = document.createElement('p');
-    note.className = 'archive-note archive-footer-note';
-    note.append('Static archive · ');
-    const link = document.createElement('a');
-    link.href = local('/search/');
-    link.textContent = 'Search the archive';
-    note.append(link);
-    // Keep the original footer's fixed-height background intact. The archive
-    // note sits on the surrounding page background, outside the theme panel.
-    (document.getElementById('page') || footer).after(note);
-  }
-
   const query = params.get('s') || '';
   const input = document.getElementById('archive-query');
   if (!input && query) {
