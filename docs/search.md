@@ -24,3 +24,7 @@ Only the 440 posts. `layouts/_default/single.html` puts `data-pagefind-body` on 
 - Index another page type: add `data-pagefind-body` for that type in its layout.
 - Exclude a part: `data-pagefind-ignore`. Add a filter/meta: `data-pagefind-filter="name[attr]"` / `data-pagefind-meta`.
 - Pagefind 1.5 offers a newer Component UI; the Default UI still works. Upgrade: `yarn add -D pagefind@<version>`, then `bin/build` and check the indexed page count (440).
+
+## Sorting
+
+Radio buttons "Newest" (default) and "Relevance". Newest uses Pagefind's `sort: {date: "desc"}` on the `date` sort key set in `single.html`; relevance is Pagefind's ranking. The URL carries `&sort=relevance` only for relevance, so a reload keeps the choice.
