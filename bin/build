@@ -3,12 +3,17 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+dest=site
+if [ "${1:-}" = "--dest" ]; then dest="${2:?--dest needs a directory}"; shift 2; fi
+
 case "${1:-}" in
   -h|--help|help)
     cat <<'EOT'
 bin/build - build the static site and its search index into site/
 
-Usage: bin/build [--help]
+Usage: bin/build [--dest DIR] [--help]
+
+  --dest DIR   build into DIR instead of site/ (used by bin/check-site)
 
 Steps:
   1. rm -rf site (retried once on 'Directory not empty'), so no stale pages are indexed
@@ -27,11 +32,11 @@ esac
 PAGEFIND=node_modules/.bin/pagefind
 [ -x "$PAGEFIND" ] || { echo "pagefind missing: run 'yarn install'" >&2; exit 1; }
 
-rm -rf site 2>/dev/null || { sleep 1; rm -rf site; }
-hugo --gc
+rm -rf "$dest" 2>/dev/null || { sleep 1; rm -rf "$dest"; }
+hugo --gc --destination "$dest"
 # static/pagefind may hold a dev index that hugo copied over; always start clean
-rm -rf site/pagefind
-"$PAGEFIND" --site site
+rm -rf "$dest/pagefind"
+"$PAGEFIND" --site "$dest"
 
-frags=$(ls site/pagefind/fragment 2>/dev/null | wc -l | tr -d ' ')
-echo "bin/build: done. site/ built, $frags indexed pages (fragments) in site/pagefind/"
+frags=$(ls "$dest/pagefind/fragment" 2>/dev/null | wc -l | tr -d ' ')
+echo "bin/build: done. $dest/ built, $frags indexed pages (fragments) in $dest/pagefind/"

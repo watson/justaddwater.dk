@@ -17,6 +17,7 @@ Needs Hugo; pandoc only for re-running `bin/export-to-hugo`.
 |---|---|
 | `bin/dev` | start, stop, restart, status, reindex of the Hugo dev server |
 | `bin/build` | `hugo --gc` then Pagefind index into `site/` |
+| `bin/check-site` | verify that the committed `site/` matches the sources |
 | `bin/mirror` | wget mirror of the live site into `mirror/` (git-ignored) |
 | `bin/scan` | flag suspicious files and links in the mirror and comments |
 | `bin/sanitize-export` | commit-safe copy of the raw WordPress XML export |

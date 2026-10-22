@@ -1,0 +1,34 @@
+#!/bin/bash
+# Check that the committed site/ is what the current sources build.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+case "${1:-}" in
+  -h|--help|help)
+    cat <<'EOT'
+bin/check-site - verify that site/ is up to date with the sources
+
+Usage: bin/check-site [--help]
+
+Builds into tmp/check-site with bin/build --dest and compares it with site/
+(diff -rq), except site/pagefind: Pagefind index files carry run-dependent
+hashes, so only the number of indexed pages is compared. Exit 0: identical. Exit 1: differences (lists them): run bin/build
+and commit site/ as its own "build:" commit. Takes about 20 seconds.
+EOT
+    exit 0 ;;
+  "") ;;
+  *) echo "unknown argument: $1 (try --help)" >&2; exit 2 ;;
+esac
+
+[ -d site ] || { echo "site/ missing: run bin/build" >&2; exit 1; }
+rm -f tmp/check-site.diff
+bin/build --dest tmp/check-site >/dev/null 2>&1
+a=$(ls site/pagefind/fragment | wc -l); b=$(ls tmp/check-site/pagefind/fragment | wc -l)
+[ "$a" = "$b" ] || echo "indexed pages differ: site/ $a, build $b" > tmp/check-site.diff
+if diff -rq -x pagefind site tmp/check-site >> tmp/check-site.diff && [ ! -s tmp/check-site.diff ]; then
+  echo "check-site: site/ is up to date"
+else
+  head -20 tmp/check-site.diff
+  echo "check-site: site/ is OUT OF DATE ($(wc -l < tmp/check-site.diff | tr -d ' ') differences): run bin/build" >&2
+  exit 1
+fi

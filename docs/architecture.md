@@ -44,3 +44,11 @@ The converter deletes nothing. After `rm -rf content data`, restore hand-written
 - Comments: sorted by date; more than 100 shows only the newest page of 100 (oldest first within it), like WordPress.
 - Gists: embedded statically from `export/gists/<id>.json`, fetched from the GitHub API once and cached.
 - Search: only posts carry `data-pagefind-body` (`docs/search.md`).
+
+## Generated `site/` (committed)
+
+- Sources of truth: `content/`, `data/`, `layouts/`, `assets/`, `static/` (uploads, theme images, `_redirects`). Nobody edits `site/` by hand.
+- `site/` is fully rebuilt by `bin/build` (`rm -rf site`, Hugo, Pagefind) and committed as its own `build:` commit, so GitHub Pages can publish it as is.
+- Git stores identical files once, so the uploads copied from `static/` into `site/` cost no extra repo space (only the ~15 MB of HTML and search index are new).
+- `bin/check-site` rebuilds into `tmp/check-site` and compares with `site/` (Pagefind files excluded: their hashes change per run, only the indexed page count is compared). Run it before pushing; exit 1 means rebuild and commit `site/`.
+- `.gitattributes` marks `site/**` as generated, which collapses it in GitHub diffs.
