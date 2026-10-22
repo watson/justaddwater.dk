@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 from urllib.parse import parse_qs, urlsplit
 
@@ -218,9 +219,10 @@ class VideoEmbedTests(unittest.TestCase):
                 self.assertEqual(actual, expected)
 
     def test_native_players_preserve_original_ids_sizes_and_supported_options(self):
-        self.assertEqual(len(video_players()), 11)
         migrated = set()
         for row in self.articles:
+            if row['id'] == 1168:  # Owner approved a different upload of this video.
+                continue
             original = BeautifulSoup(row['content']['rendered'], 'html.parser').find(['object', 'iframe', 'embed'])
             movie = original.find('param', attrs={'name': 'movie'})
             source = movie['value'] if movie else original.get('src', '')
@@ -251,9 +253,40 @@ class VideoEmbedTests(unittest.TestCase):
                 once = str(output)
                 self.assertEqual(str(clean_html(output)), once)
                 migrated.add(row['id'])
-        self.assertEqual(migrated, {row['post_id'] for row in video_players()})
-        # Unavailable videos receive the same native player, never a substitute.
-        self.assertTrue({1168, 805}.issubset(migrated))
+        self.assertEqual(migrated, {row['post_id'] for row in video_players() if 'alternative' not in row})
+        # The unapproved Spam replacement still shows its original unavailable ID.
+        self.assertIn(805, migrated)
+
+    def test_only_approved_alternative_videos_replace_original_ids(self):
+        # Independent record of the owner's selection: items 1-5, six posts.
+        approved = {908: '9y10Jvruc_Q', 906: '9y10Jvruc_Q', 848: 'U_HgMduuE5s',
+                    465: 'vMV4PIEIKY4', 930: '1OnlF0X6G3g', 1168: '_tjYoKCBYag'}
+        self.assertEqual(len(video_players()), 16)
+        self.assertEqual({r['post_id'] for r in video_players() if 'alternative' in r}, set(approved))
+        for row in self.articles:
+            if row['id'] not in approved:
+                continue
+            with self.subTest(article=row['slug']):
+                original = BeautifulSoup(row['content']['rendered'], 'html.parser').find(['object', 'iframe', 'embed'])
+                record = next(r for r in video_players() if r['post_id'] == row['id'])
+                self.assertEqual(record['captured'], str(original))
+                self.assertEqual(record['alternative']['url'], 'https://www.youtube.com/watch?v=' + approved[row['id']])
+                output = clean_html(parse_document(row['content']['rendered']))
+                self.assertEqual(len(output.find_all(['iframe', 'object', 'embed'])), 1)
+                frame = output.iframe
+                self.assertEqual(frame['src'].split('?')[0], 'https://www.youtube.com/embed/' + approved[row['id']])
+                for dimension in ('width', 'height'):
+                    size = original.get(dimension) or re.search(dimension + r'\s*:\s*(\d+)px', original.get('style', ''))[1]
+                    self.assertEqual(frame[dimension], size)
+                if 'video.google.com' in original.get('src', ''):
+                    options = {'hl': ['en']}
+                    if row['id'] == 465:
+                        options['cc_load_policy'] = ['1']
+                    self.assertEqual(parse_qs(urlsplit(frame['src']).query), options)
+                self.assertTrue(frame.has_attr('allowfullscreen'))
+                self.assertEqual(frame['referrerpolicy'], 'strict-origin-when-cross-origin')
+                once = str(output)
+                self.assertEqual(str(clean_html(output)), once)
 
     def test_video_check_detects_removed_players_and_changed_parameters(self):
         article = next(row for row in self.articles if row['slug'] == 'lessons-learned-from-pixar-2')

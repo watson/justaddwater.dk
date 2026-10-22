@@ -22,9 +22,9 @@ original host.
   `/…/feed/` paths and scope. Feed item links use the deployed archive address;
   original RSS IDs and comment timestamps are preserved.
   The original RSS and Atom aliases for the Web Standards category also work.
-- Video embeds in **21 posts**. Ten YouTube Flash players use native HTTPS
-  iframes with the original video IDs and dimensions; Vimeo also uses HTTPS.
-  The remaining original players, including retired services, are preserved.
+- Video embeds in **21 posts**. Sixteen use native YouTube players, including
+  five owner-approved alternative uploads across six posts; Vimeo uses HTTPS.
+  Original player dimensions are preserved. The other legacy embeds remain.
 - **61 legacy code examples in 19 articles** displayed as code, plus **14 files
   from 12 GitHub gist embeds** saved locally. Quotes, command-line hyphens and
   literal HTML tags are preserved without executing the examples.
@@ -43,13 +43,17 @@ original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
 fetch errors for possible recovery from backups.
 
-Video players depend on their original external services. Unavailable YouTube
-videos retain their original IDs so YouTube displays its own error UI. Google
-Video, Blip and Mojiti have no usable native replacement and keep their legacy
-embeds until an alternative upload is reviewed. The original capture remains
-unchanged in `data/content.json`; `data/video-players.json` records each migration.
+Video players depend on external services. Approved alternatives restore Jeff
+Sutherland's Scrum Tuning talk (two posts), Mary Poppendieck's Competing on the
+Basis of Speed, Barry Schwartz's Google TechTalk, the SmartLunch OIOREST
+presentation, and the motivation clip. The unavailable Spam video retains its
+original ID so YouTube displays its own error UI. The Danish Scrum presentation
+and two Mojiti players keep their legacy embeds pending a replacement decision.
+The original capture remains unchanged in `data/content.json`;
+`data/video-players.json` records each migration and approved alternative.
 YouTube's supported `hl`, `fs` and `rel` parameters are retained; Flash-only
-`border`, `wmode` and script-access settings are dropped. See the
+`border`, `wmode` and script-access settings are dropped. The Google Video
+subtitle preference on the Barry Schwartz talk maps to `cc_load_policy=1`. See the
 [YouTube player documentation](https://developers.google.com/youtube/player_parameters)
 for current parameter behavior (including the changed meaning of `rel=0`).
 

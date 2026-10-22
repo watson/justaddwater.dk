@@ -32,13 +32,13 @@ def video_players():
 
 
 def modernize_videos(soup):
-    """Use native players for the recorded IDs, even when a video is unavailable.
+    """Use native players for original IDs or owner-approved alternative uploads.
 
     Exact source matching also covers copies on index/category/archive pages.
     Retired providers without a native replacement keep their original markup.
     """
     replacements = {row['captured']: row['replacement'] for row in video_players()}
-    for tag in list(soup.find_all(['object', 'iframe'])):
+    for tag in reversed(soup.find_all(['object', 'iframe', 'embed'])):
         replacement = replacements.get(str(tag))
         if replacement:
             tag.replace_with(BeautifulSoup(replacement, 'html.parser').iframe)
