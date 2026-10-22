@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>firebug – justaddwater.dk</title><link>https://justaddwater.dk/tag/firebug/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/firebug/feed/" rel="self" type="application/rss+xml" /><item><title>Explanation of Firebug Net Panel Findings</title><link>http://justaddwater.dk/2010/04/22/explanation-of-firebug-net-panel-findings/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1311</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 22 Apr 2010 13:07:11 +0000</pubDate><description>&lt;p&gt;Jan Odvarko – one of the Firebug developers – posted some very good explanations on the information available from the Firebug net panel.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" class="aligncenter size-full wp-image-1312" height="229" sizes="(max-width: 520px) 100vw, 520px" src="/wp-content/uploads/2010/04/firebug-1.5-netpanel-explained.png" srcset="/wp-content/uploads/2010/04/firebug-1.5-netpanel-explained.png 520w, /wp-content/uploads/2010/04/firebug-1.5-netpanel-explained-300x132.png 300w" title="firebug-1.5-netpanel-explained" width="520"/&gt;&lt;/p&gt;
+&lt;p&gt;Here is the explanation of the detailed mouseover view when zooming in on each request:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" class="aligncenter size-full wp-image-1313" height="235" sizes="(max-width: 520px) 100vw, 520px" src="/wp-content/uploads/2010/04/firebug-1.5-network-tooltip.png" srcset="/wp-content/uploads/2010/04/firebug-1.5-network-tooltip.png 520w, /wp-content/uploads/2010/04/firebug-1.5-network-tooltip-300x135.png 300w" title="firebug-1.5-network-tooltip" width="520"/&gt;&lt;/p&gt;
+&lt;blockquote cite="http://www.softwareishard.com/blog/firebug/firebug-net-panel-timings/"&gt;
+&lt;ul&gt;
+&lt;li&gt;The second request started &lt;strong&gt;109ms&lt;/strong&gt; after the start of  the first request (since the beginning of the waterfall graph).&lt;/li&gt;
+&lt;li&gt;There are two numbers for each &lt;strong&gt;request phase&lt;/strong&gt; (5  phases). The first number on the left says when the phase started within  the request. The second number on the right (closer to the phase label)  says the time needed to complete each phase. In this case, the first  three phases took zero time, and so the &lt;strong&gt;Waiting&lt;/strong&gt; phase  was the first real and it needed 32ms to complete. The &lt;strong&gt;Receiving&lt;/strong&gt; phase started in &lt;strong&gt;32nd ms&lt;/strong&gt; of the request and needed &lt;strong&gt;15ms&lt;/strong&gt; to complete&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;DOMContenLoaded&lt;/strong&gt;&lt;/em&gt; event was fired &lt;strong&gt;7ms&lt;/strong&gt; after this request started. If this number is negative the event was  fired before the request is started.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;load&lt;/strong&gt;&lt;/em&gt; event was fired &lt;strong&gt;189ms&lt;/strong&gt; after this request started. If this number is negative the event was  fired before the request is started.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are some notes about each request phase.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DNS Lookup&lt;/strong&gt;: DNS resolution time&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connecting&lt;/strong&gt;: Elapsed time required to create a TCP  connection.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Blocking&lt;/strong&gt; (not on the screenshot): Elapsed time  spent in a browser queue waiting for a network connection. Displayed  only in the case where this situation happens (see also &lt;a href="http://www.softwareishard.com/blog/firebug/page-load-analysis-using-firebug/"&gt;this  post&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sending&lt;/strong&gt;: Time needed to send request data to the  server.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Waiting&lt;/strong&gt;: Waiting for the response (till the first  byte is received from the server).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Receiving&lt;/strong&gt;: Time necessary to download response  body.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I found myself reading up on this because I did a HTML5 offline experiment, where the “&lt;a href="http://groups.google.com/group/firebug/browse_thread/thread/e920884868df9555#"&gt;HTML5  .manifest files did not appear in Firebug net panel&lt;/a&gt;”&lt;/p&gt;
+&lt;p&gt;Jan Odvarko has two excellent posts explaining most functionality of the Firebug Net panel. The two posts are highly recommendable&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.softwareishard.com/blog/firebug/firebug-net-panel-timings/"&gt;Firebug  Net Panel Timings&lt;/a&gt; (March 2010)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.softwareishard.com/blog/firebug/introduction-to-firebug-net-panel/"&gt;Introduction  to Firebug: Net Panel&lt;/a&gt; (May 2009)&lt;/li&gt;
+&lt;/ul&gt;
+</description></item></channel></rss>

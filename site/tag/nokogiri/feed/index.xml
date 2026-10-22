@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>nokogiri – justaddwater.dk</title><link>https://justaddwater.dk/tag/nokogiri/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/nokogiri/feed/" rel="self" type="application/rss+xml" /><item><title>Extract HTML Structure From Page With Simple Script</title><link>http://justaddwater.dk/2009/10/05/tiny-script-to-extract-html-structure-from-page/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1176</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 05 Oct 2009 11:00:41 +0000</pubDate><description>&lt;p&gt;I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It’s pretty straight-forward from scratch. &lt;/p&gt;
+&lt;p&gt;To follow the Don’t Repeat Yourself principle, I created a script to make it a one-liner. Just run &lt;code&gt;ruby parsepage.rb [url] [css_selector]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Feel free to use and modify the code (which i put on GitHub so you can fork and pull from it): &lt;a href="http://gist.github.com/199558"&gt;http://gist.github.com/199558&lt;/a&gt;&lt;br/&gt;
+&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1176-1"&gt;&lt;code&gt;#!/usr/bin/env ruby
+# Script that wraps grabbing and selecting stuff from HTML page via CSS selectors
+# Created 2009-10-01 by Jesper Rønn-Jensen, www.justaddwater.dk
+#
+# For usage, run parsepage.rb without arguments.
+#
+# Feel free to modify, fork and improve as long as you commit your changes back to me :)
+def usage
+  &amp;lt;&amp;lt;-EOF #.gsub('    ', '')
+    === USAGE ===
+    parsepage.rb [uri] [css_selector]
+
+    === example ===
+    parsepage.rb "http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/" "h3"
+
+
+    U=http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/
+    parsepage.rb $U "h1,h2,h3"
+
+
+    === OPTIONS ===
+    --text-only      lists only text from matching elements
+    --list-html      lists all matches as HTML &amp;lt;li&amp;gt; elements
+    --count          Count number of matches
+  EOF
+end
+
+
+print usage if ARGV.empty?
+
+
+puts ARGV.inspect
+require "rubygems"
+require "nokogiri"
+require "open-uri"
+
+doc = Nokogiri::HTML(open(ARGV[0]))
+matches =  doc.css(ARGV[1])
+
+result = []
+result &amp;lt;&amp;lt; "no matches found" if matches.empty?
+
+
+if (ARGV.include?('--text-only'))
+  result &amp;lt;&amp;lt; matches.map{|element| "#{element.text}"}
+elsif  (ARGV.include?('--html-list'))
+  result &amp;lt;&amp;lt; matches.map{|element| "&amp;lt;li&amp;gt;#{element.text}&amp;lt;li&amp;gt;"}
+else
+  result &amp;lt;&amp;lt; matches.to_s
+end
+
+result &amp;lt;&amp;lt; ''
+result &amp;lt;&amp;lt; "TOTAL (#{matches.size} match#{'es' if matches.size != 1} found for '#{ARGV[1]}')" if (ARGV.include?('--count'))
+puts result.join("\n")
+
+
+# TODO stuff that would be great to support
+#
+# * support for local files
+# * refactor so this could be used to return a Nokogiri object with selection via irb
+#
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;parsepage.rb · &lt;a href="https://gist.github.com/jesperronn/199558/200af736cdc9dbea29c5ea7e5e8740107e6b12a3"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;I created the script because I wanted to extract headings from a recent article. You could also use it for creating table of contents or similar. &lt;/p&gt;
+&lt;h2&gt;Usage examples&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;
+$ U=http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/
+$ parsepage.rb $U "h3" --html-list
+#=&amp;gt;
+  &amp;lt;li&amp;gt;1. Form Labels Work Best Above The Field&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;2. Users Focus On Faces&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;3. Quality Of Design Is An Indicator Of Credibility&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;4. Most Users Do Not Scroll&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;5. Blue Is The Best Color For Links&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;6. The Ideal Search Box Is 27-Characters Wide&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;7. White Space Improves Comprehension&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;8. Effective User Testing Doesn’t Have To Be Extensive&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;9. Informative Product Pages Help You Stand Out&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;10. Most Users Are Blind To Advertising&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;Bonus: Findings From Our Case-Studies&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;Other Resources&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;Sponsors&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;Smashing Links&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;Stay in touch&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;Popular Posts&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;All Posts&amp;lt;li&amp;gt;
+  &amp;lt;li&amp;gt;Blogroll&amp;lt;li&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;
+$ parsepage.rb $U "h1" --text-only
+#=&amp;gt;
+  Smashing Magazine we smash you with the information that will make your life easier. really.
+  10 Useful Usability Findings and Guidelines
+
+$ parsepage.rb $U "h1:first-child"
+#=&amp;gt;
+&amp;lt;h1 class="title"&amp;gt;&amp;lt;a href="http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/" rel="bookmark" title="10 Useful Usability Findings and Guidelines"&amp;gt;10 Useful Usability Findings and Guidelines&amp;lt;/a&amp;gt;&amp;lt;/h1&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let me know if you find it useful. I’ll happily update script with any general contributions. &lt;/p&gt;
+</description></item></channel></rss>

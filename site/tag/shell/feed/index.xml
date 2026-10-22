@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>shell – justaddwater.dk</title><link>https://justaddwater.dk/tag/shell/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/shell/feed/" rel="self" type="application/rss+xml" /><item><title>How to Remove Trailing Space from source files</title><link>http://justaddwater.dk/2009/11/26/remove-trailing-space-from-source-files/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1241</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 26 Nov 2009 14:10:40 +0000</pubDate><description>&lt;p&gt;When it comes to source code, i am a perfectionist. I cant stand to see trailing whitespace, interchanged tabs/spaces, etc. &lt;/p&gt;
+&lt;p&gt;This Stackoverflow user asked &lt;a href="http://stackoverflow.com/questions/149057/how-to-removing-trailing-whitespace-of-all-files-recursively"&gt;How To Remove Trailing Whitespace Of All Files Recursively&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This reply helped me to work around the fact that \s and \t are not supported in the mac version of sed:  &lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;find dir -type f -print0 | xargs -0 sed -i .bak -E “s/[[:space:]]*$//”
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;So using [:space:] can actually work for both tabs and spaces.&lt;/p&gt;
+&lt;p&gt;However, I ended up not using ‘find’ for the files, and then passing the files to sed directly:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;sed -i ” ‘s/[[:space:]]*$//g’ **/*.*&lt;/p&gt;&lt;/blockquote&gt;
+</description></item></channel></rss>

@@ -14,6 +14,7 @@ import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 from archive import ROOT, HOSTS, CSS_URL, embedded_css, is_video_embed, parse_document
 from recovery import recovery_data, SHORTCODE, UNDO_PATH, TABLE_DEMO, BUTTON_DEMO
+from feeds import feed_specs, comment_items, ATOM, url_path
 
 
 def video_embed_markup(soup):
@@ -91,10 +92,14 @@ def verify(site, base):
                        for row in data['posts'] + data['pages']}
     original_players = {markup for players in expected_videos.values() for markup in players}
     recovery = recovery_data()
+    snapshots = json.loads((ROOT / 'data/comment-feeds.json').read_text())
+    post_guids = json.loads((ROOT / 'data/post-feed-ids.json').read_text())
+    feeds = feed_specs(data, snapshots['feeds'])
     expected_code = {block['id']: block['code'] for block in recovery['code_blocks']}
     expected_code.update({f'gist-{gist["post_id"]}-{index + 1}': file['code']
                           for gist in recovery['gists'].values() for index, file in enumerate(gist['files'])})
     seen_code = set()
+    page_comment_ids = {}
 
     def target(url, document):
         nonlocal local_links
@@ -116,7 +121,7 @@ def verify(site, base):
             errors.append(f'{document}: path escaped site: {url}')
             return None
         if result.is_dir():
-            result /= 'index.html'
+            result /= 'index.html' if (result / 'index.html').is_file() else 'index.xml'
         local_links += 1
         if not result.is_file():
             errors.append(f'{document.relative_to(site)}: missing {url}')
@@ -131,6 +136,7 @@ def verify(site, base):
     pages = list(site.rglob('*.html'))
     for file in pages:
         soup = BeautifulSoup(file.read_bytes(), 'html.parser')
+        page_comment_ids[file] = set()
         relative = '/' + file.relative_to(site).as_posix()
         for tag in soup.find_all(True):
             if tag.name == 'script':
@@ -149,6 +155,7 @@ def verify(site, base):
                 errors.append(f'{file}: inline event handler')
             if tag.get('id') and re.fullmatch(r'comment-\d+', tag['id']):
                 comment_ids.add(int(tag['id'].split('-')[-1]))
+                page_comment_ids[file].add(tag['id'])
             for attr in ('href', 'src', 'poster', 'data', 'action'):
                 url = tag.get(attr)
                 if not url:
@@ -202,6 +209,11 @@ def verify(site, base):
             errors.append(f'Published article text differs from API export: {row["link"]}')
         if video_embed_markup(soup) != expected_videos[row['id']]:
             errors.append(f'Published video players differ from API export: {row["link"]}')
+        if url_path(row['link']) + 'feed/' in snapshots['feeds']:
+            expected_feed = base + url_path(row['link']) + 'feed/'
+            for link in soup.select('.postmetadata.alt a'):
+                if link.get_text(strip=True) == 'RSS 2.0' and link.get('href') != expected_feed:
+                    errors.append(f'Article RSS link does not preserve its comment feed path: {row["link"]}')
         if any(r['post_id'] == row['id'] for r in recovery['tag_lists']):
             if len(soup.select(f'[data-recovery-tags="{row["id"]}"]')) != 1:
                 errors.append(f'Published article is missing its repaired tag list: {row["link"]}')
@@ -245,7 +257,42 @@ def verify(site, base):
 
     for file in site.rglob('*.css'):
         check_css(file.read_text(), file)
-    for file in [site / 'sitemap.xml', site / 'feed/index.xml', site / 'comments/feed/index.xml']:
+    for path, spec in feeds.items():
+        file = site / unquote(path).lstrip('/') / 'index.xml'
+        try:
+            root = ET.parse(file).getroot()
+            atom = spec.get('format') == 'atom'
+            channel = root if atom else root.find('channel')
+            prefix = f'{{{ATOM}}}' if atom else ''
+            if channel is None or channel.findtext(prefix + 'title') != spec['title']:
+                errors.append(f'Wrong RSS channel: {path}')
+                continue
+            items = channel.findall(prefix + 'entry' if atom else 'item')
+            if spec['kind'] == 'comments':
+                expected = comment_items(spec, data, snapshots)
+                expected_guids = [row['guid'] for row in expected]
+                if [i.findtext('pubDate') for i in items] != [row['date'] for row in expected]:
+                    errors.append(f'RSS comment timestamps differ: {path}')
+            else:
+                expected_guids = [post_guids[str(row['id'])] for row in spec['posts']]
+            if [i.findtext(prefix + 'id' if atom else 'guid') for i in items] != expected_guids:
+                errors.append(f'RSS contains the wrong entries: {path}')
+            self_link = channel.find(f'{{{ATOM}}}link[@rel="self"]')
+            if self_link is None or urlsplit(self_link.get('href', '')).path != base + path:
+                errors.append(f'RSS self link does not preserve its path: {path}')
+            if file.with_name('index.html').exists():
+                errors.append(f'HTML masks the RSS directory URL: {path}')
+            for item in items:
+                link = item.find(f'{{{ATOM}}}link').get('href', '') if atom else item.findtext('link', '')
+                expected_host = urlsplit(self_link.get('href', '')).netloc if self_link is not None else ''
+                if urlsplit(link).netloc != expected_host or not urlsplit(link).path.startswith(base + '/'):
+                    errors.append(f'RSS entry links outside the deployed archive: {path}')
+                document = target(urlsplit(link).path, file)
+                if spec['kind'] == 'comments' and urlsplit(link).fragment not in page_comment_ids.get(document, set()):
+                    errors.append(f'RSS comment link does not locate its preserved comment: {link}')
+        except (OSError, ET.ParseError) as error:
+            errors.append(f'{file}: invalid RSS: {error}')
+    for file in [site / 'sitemap.xml']:
         try:
             ET.parse(file)
         except (OSError, ET.ParseError) as error:
@@ -263,6 +310,7 @@ def verify(site, base):
                'disabled_archived_forms': archived_forms,
                'public_comments': len(comment_ids), 'local_links_checked': local_links,
                'recovered_comments': len(recovery['comments']),
+               'rss_feeds': len(feeds),
                'errors': len(errors), 'deployment_base': base or '/'}
     print(json.dumps(summary, indent=2))
     for error in errors[:80]:

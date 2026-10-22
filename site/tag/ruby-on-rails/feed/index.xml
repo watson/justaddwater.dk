@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Ruby on Rails – justaddwater.dk</title><link>https://justaddwater.dk/tag/ruby-on-rails/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/ruby-on-rails/feed/" rel="self" type="application/rss+xml" /><item><title>Selection Groups in Rails made less cumbersome</title><link>http://justaddwater.dk/2009/09/01/selection-groups-in-rails-made-less-cumbersome/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1128</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 01 Sep 2009 12:50:32 +0000</pubDate><description>&lt;p&gt;I made this addition today after (once again) struggling with option groups for a nested Rails model.&lt;/p&gt;
+&lt;p&gt;My solution: create a new tag for FormOptionsHelper: grouped_select &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://gist.github.com/179075"&gt;http://gist.github.com/179075&lt;/a&gt;&lt;/p&gt;
+&lt;div&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1128-1"&gt;&lt;code&gt;### lib/form_options_helper.rb 
+require 'action_view/helpers/form_helper'
+module ActionView
+  module Helpers
+    module FormOptionsHelper
+ 
+      ##
+      def grouped_select(object, method, choices, options = {}, html_options = {})
+        InstanceTag.new(object, method, self, options.delete(:object)).to_grouped_select_tag(choices, options, html_options)
+      end
+      
+    end
+    
+    class InstanceTag
+      include FormOptionsHelper
+      def to_grouped_select_tag(choices, options, html_options)
+        html_options = html_options.stringify_keys
+        add_default_name_and_id(html_options)
+        value = value(object)
+        selected_value = options.has_key?(:selected) ? options[:selected] : value
+        disabled_value = options.has_key?(:disabled) ? options[:disabled] : nil
+        content_tag("select", add_options(grouped_options_for_select(choices, :selected =&amp;gt; selected_value, :disabled =&amp;gt; disabled_value), options, selected_value), html_options)
+      end
+ 
+    end
+    
+    class FormBuilder
+      def grouped_select(method, choices, options = {}, html_options = {})
+        @template.grouped_select(@object_name, method, choices, objectify_options(options), @default_options.merge(html_options))
+      end
+    end
+  end
+end
+
+### config/environment.rb
+require 'form_options_helper'
+
+### app/models/expense_type.rb 
+class ExpenseType &amp;lt; ActiveRecord::Base
+  validates_uniqueness_of :name
+  
+  #returns grouped options split in 'popular' and 'all'
+  def self.groups
+    all_types = self.all.map{|t| [t.name, t.id]}
+    [
+      ['popular', all_types[0..2]],
+      ['all', all_types]
+    ]
+  end
+  
+end
+
+
+### app/views/expense_report/_expense_item.rb
+&amp;lt;li class="expense_item"&amp;gt;
+  &amp;lt;%= expense.grouped_select :expense_type_id, ExpenseType.groups, {:include_blank =&amp;gt; true}, {:class =&amp;gt; 'expense_type'} %&amp;gt;
+  ...
+&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;form_options_helper_to_add_grouped_select.rb · &lt;a href="https://gist.github.com/jesperronn/179083/ed4df9fcbfa2ee5938fa70533d20f25b70a87ffd"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+</description></item><item><title>Shorthand to clean up installed Rubygems (but don’t cleanup Rails)</title><link>http://justaddwater.dk/2009/05/29/shorthand-to-clean-up-installed-rubygems-but-dont-cleanup-rails/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1098</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 29 May 2009 07:57:23 +0000</pubDate><description>&lt;p&gt;I trimmed my installed Rubygems on my local development machine. The command “&lt;code&gt;sudo gem cleanup&lt;/code&gt;” is just for that.&lt;/p&gt;
+&lt;p&gt;Only problem: What about my older Rails apps that require a specific version of Rails, ActiveRecord, etc.?&lt;/p&gt;
+&lt;p&gt;My solution:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;gem list --no-versions | grep -v "^active" | grep -v "^action" | grep -v "^rails$" | xargs sudo gem cleanup {}&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Any suggestions on how to make it even simpler?&lt;/p&gt;
+</description></item><item><title>HTML Guide Textmate Snippets Open Sourced</title><link>http://justaddwater.dk/2009/02/25/html-guide-textmate-snippets-open-sourced/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1036</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 25 Feb 2009 15:38:02 +0000</pubDate><description>&lt;p&gt;One year ago I published “&lt;a href="/2009/02/25/2008/02/08/design-guide-or-html-markup-guide/" rel="bookmark" title="Permanent Link: Design Guide or HTML Markup Guide"&gt;Design Guide or HTML Markup Guide&lt;/a&gt;” with link to the HTML guide we did for the biggest Danish business internet portal.&lt;/p&gt;
+&lt;p&gt;The HTML guide is a really useful tool for every public authority that must deliver applications for the portal.&lt;/p&gt;
+&lt;p&gt;As a help for my own work back then, I created &lt;a href="http://github.com/jesperronn/virk_dk_htmlsnippets/tree/master"&gt;virk_dk_htmlsnippets&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2&gt;Snippets available&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;skel&lt;/code&gt;(tab) — creates HTML skeleton in blank file. Adds correct doctype, head, body and container divs required for the virk.dk html to show correctly.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;fieldset&lt;/code&gt;(tab)   Groups of form elements. Use where you would have used ordinary fieldsets.  See HTML guide » &lt;a href="http://xmltools2.oio.dk/virk/htmlguide/form-fieldset.html"&gt;Form grupper (fieldsets)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;button&lt;/code&gt;(tab) — submit button and other buttons. See HTML guide »  &lt;a href="http://xmltools2.oio.dk/virk/htmlguide/buttons.html"&gt;Knapper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;inputcheck&lt;/code&gt;(tab) — standard checkbox with label and group&lt;br/&gt;
+&lt;code&gt;inputtext&lt;/code&gt;(tab) — text field&lt;br/&gt;
+&lt;code&gt;select&lt;/code&gt;(tab) — select element&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&lt;/code&gt;Usage examples see HTML guide &lt;a href="http://xmltools2.oio.dk/virk/htmlguide/form-simple.html"&gt;Simple form elementer&lt;/a&gt;,  &lt;a href="http://xmltools2.oio.dk/virk/htmlguide/form-special.html"&gt;Særlige form elementer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;table&lt;/code&gt;(tab) — table element. See HTML guide » &lt;a href="http://xmltools2.oio.dk/virk/htmlguide/tables.html"&gt;Tabeller&lt;/a&gt;&lt;br/&gt;
+&lt;code&gt;td&lt;/code&gt;(tab) — table cell inside table row.&lt;br/&gt;
+&lt;code&gt;th&lt;/code&gt;(tab) — table header cell inside table row.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I’m releasing the snippets as open source under the &lt;a href="http://creativecommons.org/licenses/LGPL/2.1/"&gt;LGPL license&lt;/a&gt; so you can freely change, and distribute. However, I encourage you to send me the changes and I’ll work the relevant changes into the snippets.&lt;/p&gt;
+&lt;p&gt;Any editor that understands &lt;a href="http://macromates.com/"&gt;Textmate&lt;/a&gt; snippets can be used. &lt;a href="http://e-texteditor.com/"&gt;E-texteditor&lt;/a&gt; for Windows or &lt;a href="http://projects.gnome.org/gedit/"&gt;GEdit&lt;/a&gt; for Unix/Linux will read the snippets as well.&lt;/p&gt;
+&lt;h3&gt;Download snippets&lt;/h3&gt;
+&lt;p&gt;Go to the project page on GitHub to download &lt;a href="http://github.com/jesperronn/virk_dk_htmlsnippets/tree/master"&gt;virk_dk_htmlsnippets&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Vision: Standard HTML for portals&lt;/h2&gt;
+&lt;p&gt;In general, different portals have different HTML markup. Historically, this is because of many constraints: Limitations in the chosen web framework, limitations in chosen graphical design, random naming of css classes, developer laziness, etc.&lt;/p&gt;
+&lt;p&gt;What if portals could actually use the same HTML markup for most elements? This way, subcontractors and content providers could deliver content/portlets/webparts for multiple portals.&lt;/p&gt;
+&lt;p&gt;In Denmark there are only a few major public portals: Virk.dk for businesses, and Borger.dk for citizens. But some content would actually be relevant on both portals. Sadly, the HTML markup is very different.&lt;/p&gt;
+&lt;p&gt;Imagine how the public authorities would benefit from shared HTML markup:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Develop only one component with the wanted functionality.&lt;/li&gt;
+&lt;li&gt;Easier “mashup” and reuse of data for presentation on multiple portals&lt;/li&gt;
+&lt;li&gt;Lower learning curve for developers&lt;/li&gt;
+&lt;li&gt;More development accelerators like these snippets would emerge&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next time I get to do work for that project, I would probably also create a Ruby on Rails form builder that automagically would generate the right HTML.&lt;/p&gt;
+</description></item></channel></rss>

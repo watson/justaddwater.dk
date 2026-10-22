@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>justaddwater.dk – justaddwater.dk</title><link>https://justaddwater.dk/category/justaddwaterdk/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/category/justaddwaterdk/feed/" rel="self" type="application/rss+xml" /><item><title>iPhoto 11 performance tuning tips, revised</title><link>http://justaddwater.dk/2014/03/09/iphoto-11-performance-tuning-tips-revised/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1709</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 09 Mar 2014 19:41:07 +0000</pubDate><description>&lt;p&gt;My iPhoto library with 6000+ family photos was running slow on my macbook. So I looked for performance tuning tips on the net.&lt;/p&gt;
+&lt;p&gt;Here are the adjusted tip, which works for me.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;This &lt;a href="https://discussions.apple.com/thread/3012995?start=60&amp;amp;tstart=0"&gt;Apple support  thread&lt;/a&gt; mentioned 3 tips:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Upgrade RAM&lt;/li&gt;
+&lt;li&gt;Turn off visual bling in overview pages&lt;/li&gt;
+&lt;li&gt;Vacuum iPhoto database file&lt;span style="line-height: 1.5em;"&gt; &lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Could not do anything with tip 1 today (and I presume I cannot update the RAM on this 2012 macbook air)&lt;/p&gt;
+&lt;p&gt;Tip2 works: Go into settings &amp;gt; “appearance” and turn off “Outline” and “Drop shadow” in the overviews.&lt;/p&gt;
+&lt;p&gt;Tip3 needs adjustment. Originally *.db files were only in top folder ‘ ~/Pictures/iPhoto\ Library/’&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Adjusted command to vacuum iPhoto database files:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;cd ~/Pictures/iPhoto\ Library/ &amp;amp;&amp;amp;  for dbase in `find . -name '*.db'`; do sqlite3 $dbase "vacuum;"; done&lt;/pre&gt;
+&lt;/blockquote&gt;
+</description></item><item><title>Generate CSS sprite for all world’s flags</title><link>http://justaddwater.dk/2013/06/19/generate-css-sprite-for-all-worlds-flags/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1594</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 19 Jun 2013 12:46:24 +0000</pubDate><description>&lt;p&gt;Recently i worked on a project, which had to use flag icons for all flags in the world. The implementation looked like this:&lt;/p&gt;
+&lt;p&gt;css file:&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;In order to reduce the number of HTTP requests, I wanted to change it to using CSS sprites instead.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;CSS file now has changed to lines like this:&lt;/p&gt;
+&lt;p&gt;.er_16{ background-position: -20px 0; }&lt;br/&gt;
+.es_16{ background-position: -20px -20px; }&lt;br/&gt;
+.et_16{ background-position: -20px -40px; }&lt;br/&gt;
+.fi_16{ background-position: -20px -60px; }&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&amp;gt; Generation of sprite: http://spritegen.website-performance.org/&lt;/p&gt;
+&lt;p&gt;&amp;gt; * Upload zip file with flags (in my case all the 16×16 px flags)&lt;br/&gt;
+&amp;gt; * ignore duplicate images&lt;br/&gt;
+&amp;gt; * build direction vertical&lt;br/&gt;
+&amp;gt; * offset 4px (since the images are 16×14, this will make a 20-20 grid)&lt;br/&gt;
+&amp;gt; * background/transparency colour: #ffffff&lt;br/&gt;
+&amp;gt; * output format: PNG&lt;br/&gt;
+&lt;span style="font-size: 13px; line-height: 19px;"&gt;&amp;gt; * Compress Image with OptiPNG: YES&lt;br/&gt;
+&lt;/span&gt;&lt;span style="font-size: 13px; line-height: 19px;"&gt;&amp;gt; * Number of colours: True colour&lt;br/&gt;
+&lt;/span&gt;&lt;span style="font-size: 13px; line-height: 19px;"&gt;&amp;gt; * css suffix: _16 (to indicate 16px icons)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Oh, before creatign the zip file, I removed all countries not matching a two-letter code.&lt;/p&gt;
+&lt;p&gt;cd 16/&lt;/p&gt;
+&lt;p&gt;find . -type f -name ‘???????*’ |xargs -I{} rm {}&lt;/p&gt;
+&lt;p&gt;This would remove countries named “_African Union.png”, “_United Nations.png”, “Olimpic Movement.png”  and similar.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;For the following sizes of flags, I used these offset values:&lt;/p&gt;
+&lt;p&gt;16px, offset 4px will make a 20px grid&lt;/p&gt;
+&lt;p&gt;24px, offset 6px will make a 30px grid&lt;/p&gt;
+&lt;p&gt;32px, offset 8px will make a 40pxgrid&lt;/p&gt;
+&lt;p&gt;48px, offset 2px will make a 50px grid&lt;/p&gt;
+&lt;p&gt;64px, offset 6px will make a 70px grid&lt;/p&gt;
+&lt;p&gt;128px, offset 2px will make a 130px grid&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+</description></item><item><title>Easy delete all .svn Subfolders in Windows Explorer</title><link>http://justaddwater.dk/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1414</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 01 Mar 2011 10:08:51 +0000</pubDate><description>&lt;p&gt;I had to repair a flawed Subversion repository recently (not all files were committed). I had my local repository checked out. This was the flawed part, containing only parts of the folders and files it should.&lt;/p&gt;
+&lt;p&gt;Then, I got a zip file from the machine where it was working. Problem: It contained .svn folders from the other developer. So to merge these i did the following workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Delete all .svn folders from other developer’s zip&lt;/li&gt;
+&lt;li&gt;Move other developers folder over on top of my local install.&lt;/li&gt;
+&lt;li&gt;Commit all missing files&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Of course this will only work if there are no .svn folders in other developer’s file, because then svn authentication, paths, etc. will be messed up, and commit will fail.&lt;/p&gt;
+&lt;p&gt;Luckily, Sanil S (IamTechie blog) wrote a nice little script that actually adds a context menu in Windows explorer:&lt;br/&gt;
+&lt;a href="/wp-content/uploads/2011/03/delete-svn.jpg"&gt;&lt;img alt="" class="alignnone size-full wp-image-1415" height="288" sizes="(max-width: 360px) 100vw, 360px" src="/wp-content/uploads/2011/03/delete-svn.jpg" srcset="/wp-content/uploads/2011/03/delete-svn.jpg 360w, /wp-content/uploads/2011/03/delete-svn-300x240.jpg 300w" title="delete-svn" width="360"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1414-1"&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;delete_svn_subfolders.reg · &lt;a href="https://gist.github.com/jesperronn/848907/66427a7b4a4046e5aa0e0c2aea6b160ac34690bc"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;
+Just save this file as “delete_svn_subfolders.reg”. When you run it, then you will have the new windows explorer context menu item shown in the image.&lt;/p&gt;
+&lt;p&gt;The full script (repeated for the ones with javascript disabled:)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More info:&lt;/p&gt;
+&lt;p&gt;IamTechie: &lt;a href="http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/"&gt;How to remove all “.svn” folders in Windows XP &amp;amp; Vista?&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Zyb.com sync with new Nokia E52 phone</title><link>http://justaddwater.dk/2009/11/03/zyb-com-sync-with-new-nokia-e52-phone/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1215</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 03 Nov 2009 17:19:36 +0000</pubDate><description>&lt;p&gt;The company I work for has negotiated a new phone deal with another tele provider, which meant everybody had to change phones and numbers. &lt;/p&gt;
+&lt;p&gt;I have been using Zyb.com for syncing phones and it has helped me out great every time the old Nokia 6500 has been handed in for repair. The new Nokia E52 is at present not accepting the sync setting from Zyb, so I had to set it up manually. For future’s sake, this is what I did:&lt;/p&gt;
+&lt;p&gt;First, request a phone update  from the Zyb page (https://zyb.com/my/home/) click my image to expand the hidden section.&lt;br/&gt;
+Click “I got a new phone” button and wait for sms with configuration settings.In the phones menu choose&lt;br/&gt;
+Menu &amp;gt; Control Panel &amp;gt; Settings &amp;gt; Connection &amp;gt; Destinations &amp;gt; Uncategorized&lt;/p&gt;
+&lt;p&gt;And here i am stuck??? I can only edit the settings. How do I use it, how do I activate the sync settings?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE 2 days later:&lt;/strong&gt; I got a good explanation from ZYB support on how to get it working:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;To start the sync, please go as follows:1&lt;br/&gt;
+    * Menu&lt;br/&gt;
+    * Control panel&lt;br/&gt;
+    * Phone&lt;br/&gt;
+    * Sync&lt;br/&gt;
+    * Choose ZYB
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This works perfectly as long as you remember that the default sync profile is “Nokia PC Suite”. Thus, the step to “choose ZYB” is very important&lt;/p&gt;
+</description></item><item><title>Bash or Ruby for removing multiple Trac Spam Tickets</title><link>http://justaddwater.dk/2009/09/28/bash-or-ruby-for-removing-multiple-trac-spam-tickets/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1159</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 28 Sep 2009 09:21:32 +0000</pubDate><description>&lt;p&gt;I had to clean up a public Trac ticket db where anonymous tickets are allowed. I had to issue commands like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;trac-admin . ticket remove 58&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I keep forgetting the shell syntax for doing a loop over numbers. But actually a ruby script was just right for the task:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ruby -e "(49..75).each{|i| %x(sudo -u www-data trac-admin . ticket remove #{i})}"
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This shows some of my reasons to love Ruby: Very intuitive syntax. And faster than to lookup bash syntax.&lt;/p&gt;
+</description></item><item><title>Comments working again</title><link>http://justaddwater.dk/2009/06/14/comments-working-again/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1101</guid><dc:creator>Thomas Watson Steen</dc:creator><pubDate>Sun, 14 Jun 2009 15:06:34 +0000</pubDate><description>&lt;p&gt;Thanks to one of our dear readers we just discovered a bug in our commenting system that basically meant that you could not leave a comment on any of our posts. This has now been fixed and you can now again tell us your thoughts.&lt;/p&gt;
+&lt;p&gt;Of cause we should have noticed, since the amount of spam had dropped to zero. But now that we are receiving thousands of spam comments once again we know that everything is ok ;)&lt;/p&gt;
+</description></item><item><title>Jef Raskin’s First Law of Interface Design Explained</title><link>http://justaddwater.dk/2009/03/19/jef-raskins-first-law-of-interface-design-explained/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1055</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 19 Mar 2009 14:01:20 +0000</pubDate><description>&lt;p&gt;In variation of Isaac Asimov’s first law of robotics, Jef Raskin writes the first law of interface design:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;“Any system shall not harm your content or, through inaction, allow your content to come to harm.”&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;In other words:&lt;/p&gt;
+&lt;p&gt;Let’s say you enter this in an email field: jesperrr#gmail.com&lt;/p&gt;
+&lt;p&gt;and you get this error message: “not a valid email address”&lt;/p&gt;
+&lt;p&gt;Then the page reloads and the interface removes all entered text in the email field.&lt;/p&gt;
+&lt;p&gt;Removing or changing the text (in a harmful way) adds frustration to the end user.&lt;/p&gt;
+&lt;p&gt;Another example from an old version of our internal Capgemini timereporting (CTR): If you accidentally type “7..5” hours worked on a project a given day, the system will give this error message:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;“You must enter the time as a valid number”&lt;/p&gt;
+&lt;p&gt;&lt;a href="/wp-content/uploads/2009/03/ctr-error-no-help.png"&gt;&lt;img alt="" class="aligncenter size-medium wp-image-1056" height="104" src="/wp-content/uploads/2009/03/ctr-error-no-help-300x104.png" title="ctr-error-no-help" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Then the application erases the field completely and lets you start over. That’s a violation of the First Law of Interface Design. Instead the system should give a more appropriate error message like&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;“7..5” is not a recognized time format. Please enter the time in the format “3”, “4.0”, “7.5” or similar.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Even better, if you can guess what the user actually meant. The new version of the system actually corrects anything like “7..5”, “7,.25”, “7a”, etc to “7” (it truncates anything from the end it does not understand).&lt;/p&gt;
+&lt;p&gt;Not really perfect to change to “7” if I meant “7.5” or “7.25”. So there is still a law violation, although it’s smaller than just removing the field content.&lt;/p&gt;
+&lt;h2&gt;More examples&lt;/h2&gt;
+&lt;p&gt;The worst kind of Interface Law violations are the ones that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;says “username too short” and deletes the username completely&lt;/li&gt;
+&lt;li&gt;says “error in your phone number” and deletes all the other fields so that you have to type everything again&lt;/li&gt;
+&lt;li&gt;says “credit card information invalid. type again” and then deletes all entered credit card information&lt;/li&gt;
+&lt;li&gt;says “wrong license code” and then deletes the license code field(s)&lt;/li&gt;
+&lt;li&gt;says “incorrect captcha” and resets other fields I entered&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All these examples fail in user experience because they do not take into account that you most of the time want to correct an accidental typo. The last thing you want is to re-type all the other fields, numbers, characters that were actually correct.&lt;/p&gt;
+&lt;h2&gt;Exceptions&lt;/h2&gt;
+&lt;p&gt;I think this one is ok if it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;says “passwords don’t match” and deletes both passwords — passwords are not shown on screen and system does not know if you made a typo in first field or second field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks to Mathias Müller-Prove for giving me the correct quotation. Read more in his short memorial of Jef Raskin “&lt;a href="http://www.mprove.de/script/05/uxf/newsletter05.html"&gt;In Memoriam: Jef Raskin — &lt;span class="subtitle"&gt;User Experience Newsletter #5, March 2005&lt;/span&gt;&lt;/a&gt;”&lt;/p&gt;
+&lt;p&gt;What’s your favorite violation the First Law of Interface Design?&lt;/p&gt;
+</description></item><item><title>Textmate Path Modification — Ruby Version Issues</title><link>http://justaddwater.dk/2009/03/10/textmate-path-modification-ruby-version-issues/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1044</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 10 Mar 2009 10:47:26 +0000</pubDate><description>&lt;p&gt;I had some issues with Ruby on my macbook after upgrading Ruby from 1.8.6 to 1.8.7.&lt;/p&gt;
+&lt;p&gt;This was a problem in Textmate as it still picked up the old version and ignored $PATH i set in my .profile.&lt;/p&gt;
+&lt;p&gt;Thanks to fast and excellent help from Allan Odgaard and others in the ##Textmate IRC channel.&lt;/p&gt;
+&lt;p&gt;The main point is that if you modify your $PATH you should probably also set a variable in Textmate reflecting that change. Otherwise you may end up with Textmate running an old version of a program like I did.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" class="alignnone size-full wp-image-1045" height="253" src="/wp-content/uploads/2009/03/textmate-preferences-advanced-path.png" title="textmate-preferences-advanced-path" width="450"/&gt;&lt;/p&gt;
+&lt;p&gt;Note also that there is some help on the Textmate Wiki: “&lt;a href="http://wiki.macromates.com/Troubleshooting/RubyVersionIssue"&gt;RubyVersionIssue&lt;/a&gt;” with a link to the suggestion Alan mentions above (&lt;a href="http://manual.macromates.com/en/shell_commands#search_path"&gt;setting path for Finder&lt;/a&gt; in environment.plist).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Pasted as Plain Text by peterhaza
+Description: No description
+URL: http://rafb.net/p/mlsekL34.html
+
+March 6th 2009
+11:25 jesperronn: Hi everybody (new to the IRC channel) I know this has been 
+up millions of times: Ruby version issues!
+11:26 jesperronn: My problem is basically the same as described: wrong (old) 
+ruby version picked up by Textmate
+11:26 jesperronn: I tried the suggestion that was linked (setting up 
+~/.MacOSX/environment.plist and adding new ruby path)
+11:27 jesperronn: Could somebody give me some troubleshooting help?
+11:29 malesca: jesperronn: Did you reboot after changing environment.plist?
+11:29 malesca: path?
+11:29 inner_six: Your search path is incorrect. See 
+http://manual.macromates.com/en/shell_commands#search_path and be sure to 
+read the last paragraph about ~/.MacOSX/environment.plist (used for shebang 
+scripts)
+11:29 jesperronn: Yes I did reboot
+11:30 jesperronn: (although it says logout/login in the wiki page)
+11:30 jesperronn: After the reboot the test suggested actually changed result
+11:30 jesperronn: #!/bin/sh echo "$PATH"
+11:31 jesperronn: result was: /usr/bin:/bin:/usr/sbin:/sbin
+11:31 jesperronn: sorry for the smilies...:(
+11:31 jesperronn: it changed to /Users/jesper/Library/Application 
+Support/TextMate/Pristine 
+Copy/Support/bin/CocoaDialog.app/Contents/MacOS:/Library/Frameworks/Python.fra
+mework/Versions/Current/bin:/usr/local/apache2/bin:/usr/local/mysql/bin:/Users
+/jesper/bin:/usr/local/bin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/b
+in:/usr/X11/bin:/Users/jesper/Library/Application Support/TextMate/Pristine 
+Copy/Support/bin
+11:31 jesperronn: which is the correct from .profile
+11:32 jesperronn: And "ruby --version" now gives me the new correct version 
+1.8.7
+11:33 jesperronn: So it works when running snippets in plain text via CTRL-R
+11:33 jesperronn: Now the issue is still there for my .rb file
+11:34 jesperronn: The .rb file starts with #!/usr/bin/env ruby
+11:35 jesperronn: and running Command-R tells me the version is the old 1.8.6 
+(located at /usr/bin/ruby)
+11:35 jesperronn: So how do I change this behaviour on Ruby files??????
+11:37 jesperronn: inner_six: there is no difference in the ruby version 
+picked up if I remove the shebang
+11:37 jesperronn: inner_six: i already added the environment.plist on my 
+machine
+11:39 perdiy: jesperronn: Have you set TM_RUBY?
+11:40 jesperronn: perdix: how do I check that? (i probably have not)
+11:40 perdix: jesperronn: Check Preferences → Advanced → Shell Variables 
+11:41 jesperronn: thanks perdix. No it's not set
+11:41 jesperronn: perdix: what do you suggest I do?
+11:42 perdix: jesperronn: Not sure…
+11:44 perdix: Just so I understand you correctly: entering ‘ruby --version’ 
+and hitting ⌃R says it’s ruby 1.8.7, but creating a Ruby file containing 
+‘puts RUBY_VERSION’ and hitting ⌘R says it’s ruby 1.8.6?
+11:46 jesperronn: perdix: Thats exactly what i did!
+11:46 jesperronn: and the exact reults i got
+11:48 perdix: Sorry, then I have no idea. You could set TM_RUBY to the full 
+path to the ruby executable you want to run (in the mentioned prefpane), but 
+that’s a workaround.
+11:49 perdix: Or wait for someone more knowledgeable to come online…
+11:52 jesperronn: perdix: hehe thanks for your suggestions.. I tried to set 
+TM_RUBY to /usr/local/bin/ruby (no Textmate restart). That actually gave an 
+extremely strange error. 
+11:53 jesperronn: Blank white "run" window only with this text: 
+/tmp/temp_textmate.azBvzx: line 6: : command not found
+12:02 perdix: jesperronn: Huh. Does `$TM_RUBY --version`, ⌃R work?
+12:12 allan: jesperronn: the test with #!/bin/sh gave another result because 
+I think you forgot to select BOTH lines
+12:12 allan: jesperronn: instead of editing environment.plist try set PATH in 
+TM’s preferences
+12:12 allan: TM_RUBY will not help you since it is your script (using ‘env’) 
+that needs the correct ruby
+12:13 allan: so only setting PATH properly can fix this
+12:13 allan: your second error must be because you set TM_RUBY to something 
+non-existing
+12:39 jesperronn: allan: where do I set PATH in preferences? 
+12:40 jesperronn: allan: do you mean set a shell variable "PATH" in the 
+advanced preferences&amp;gt;shell variables?
+12:45 allan: jesperronn: yes
+12:45 jesperronn: allan: I can see that setting a shell variable PATH in 
+advanced preferences actually works! 
+12:45 jesperronn: Why is this not different 'out of the box' 
+12:45 allan: jesperronn: what do you mean?
+12:45 allan: that TextMate should know how you want PATH setup?
+12:45 allan: because that is impossible
+12:45 allan: and it _does_ work out of the box
+12:45 jesperronn: yes
+12:46 allan: it just does not work with custom ruby installs
+12:46 allan: emphasis here on custom ;)
+12:46 jesperronn: OK
+12:46 jesperronn: I actually tried to remove the ruby 1.8.6 after upgrading 
+but i had to undo because it gave me problems running ruby inside textmate...
+12:47 jesperronn: Maybe it\s just my limitted knowledge of Textmate internals
+12:47 jesperronn: Thanks a lot for help, allan, perdix and inner_six!
+12:48 allan: jesperronn: essentially it’s pretty simple: PATH tells what 
+locations programs should shell for commands (and what order)
+12:49 allan: so if you want to install something new yet still keep the 
+system version (recommended) then just install it wherever you want and put 
+that location first in the PATH variable
+12:49 allan: that environment.plist failed for you is likely due to a typo on 
+your part
+12:49 allan: that is the system-supported way to set environment variables 
+for all apps launched by Finder though
+12:50 allan: where Terminal runs a shell so it additionally has the profile 
+files
+12:50 allan: and TextMate has the Preferences → Advanced…
+12:50 jesperronn: allan: what I do not understand is why to use 
+environment.plist and not .profile or similar
+12:51 jesperronn: So the error on my side is probably that I added path 
+settings to .profile
+12:51 allan: jesperronn: .profile is for your shell
+12:51 allan: i.e. only bash etc. will execute .profile
+12:51 allan: so it works when what you launch from TM goes via bash
+12:51 allan: but not when it is run w/o a shell
+12:52 allan: this is analogical to asking in #bash why you have to setup 
+stuff in .profile when you have Preferences → Advanced → Shell Variables in 
+TextMate ;)
+12:52 jesperronn: So for me to learn a lesson here: I should always use 
+environment.plist and remove all custom $PATH adjustments in .profile
+12:52 allan: jesperronn: it doesn’t really matter
+12:53 allan: really, only shell and TextMate care about PATH
+12:53 allan: so whether you set it locally for each of the two apps or 
+globally makes little difference
+12:53 allan: and in a shell context editing .profile is probably easier
+12:53 allan: plus does not require re-login to have changes take effect
+12:53 allan: also, in .profile you can have “code”
+12:54 allan: e.g. you can add to your PATH, conditionally set something etc.
+12:54 allan: where environment.plist is 100% declarative
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PS. Thanks to Peter Haza (phˆ) for digging up the archived conversation.&lt;/p&gt;
+&lt;p&gt;PPS. Note to self: Clean transscript from irrelevant status changes with: cat tmp.txt |grep -v “has left”|grep -v “has joined” | grep -v “is now known as”&lt;/p&gt;
+</description></item><item><title>Using Local File-based Git — Server Laziness</title><link>http://justaddwater.dk/2009/02/21/using-local-file-based-git-server-laziness/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1029</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sat, 21 Feb 2009 09:04:59 +0000</pubDate><description>&lt;p&gt;My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Each developer’s machine has it’s own Git repository.&lt;/li&gt;
+&lt;li&gt;On my machine I had an extra ‘master’ repository that other developers could push into.&lt;/li&gt;
+&lt;li&gt;In the example below the local developer repos is called ‘local’ and the master is called ‘remote’&lt;/li&gt;
+&lt;li&gt;The master repository could be on a network drive as well.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Developer’s workflow: Push changes to ‘remote’:&lt;br/&gt;
+&lt;/p&gt;&lt;pre class="archive-code" data-recovery-code="post-1029-1"&gt;&lt;code class="language-bash"&gt;cd local #developer's local repository
+git pull ../remote master #get the latest code from 'remote' repository
+git push ../remote master #push the recent commits from here to the 'remote' folder&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Git remote makes it easier&lt;/h3&gt;
+&lt;p&gt;In stead of using a path in “git pull ../remote master”, it’s even easier to add the path just like you would do on GitHub or similar:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1029-2"&gt;&lt;code class="language-bash"&gt;git remote add origin ../remote/ #one time for all
+git pull origin master # pull from the 'remote' directory
+git push origin master #push recent commits from here to the 'remote' folder&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Bonus tip: Using remote git to SSH server&lt;/h3&gt;
+&lt;p&gt;It’s real easy to make a remote backup copy of your Git repository even if you have not set up a git server. Here is an example of how I did it on a server where I have SSH access to:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1029-3"&gt;&lt;code class="language-bash"&gt;git remote add origin ssh://jesper@myserver.com/~/project.git/&lt;/code&gt;&lt;/pre&gt;&lt;br/&gt;
+Setup the repository on the remote server:&lt;br/&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1029-4"&gt;&lt;code class="language-bash"&gt;$ ssh jesper@myserver.com
+Welcome to myserver.com!
+$ mkdir project.git &amp;amp;&amp;amp; cd project.git/
+$ git --bare init
+Initialized empty Git repository in /home/jesper/project.git
+$ exit
+Bye!&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Related posts:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/2009/02/21/2007/04/26/howto-create-a-temporary-local-subversion-repository/" rel="bookmark" title="Justaddwater.dk: Howto Create a Temporary Local Subversion Repository"&gt;Howto Create a Temporary Local Subversion Repository (April 2007)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/2009/02/21/2009/01/17/git-side-benefit-reducing-disk-usage/" rel="bookmark" title="Justaddwater.dk: Git Side Benefit: Reducing Disk Usage"&gt;Git Side Benefit: Reducing Disk Usage&lt;/a&gt; (January 17)&lt;/li&gt;
+&lt;/ul&gt;
+</description></item><item><title>Bad Usability Calendar 2009 Is Out</title><link>http://justaddwater.dk/2009/01/15/bad-usability-calendar-2009-is-out/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1007</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 15 Jan 2009 11:12:40 +0000</pubDate><description>&lt;p&gt;My Norwegian friend Eidar from NetLife Research pointed out that the 2009 version of the bad usability calendar is now online. &lt;/p&gt;
+&lt;p&gt;Learning by bad examples is often a good way in discussing usability with people that are not hardcore usability people.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" class="alignnone" data-original-url="http://www.badusability.com/img/international/bad-usability-calendar-2009-thumbnail.png" height="315" src="/archive-assets/unavailable.svg" width="237"/&gt;&lt;/p&gt;
+&lt;p&gt;I’m currently wrapping a couple of A3 calendars in plastic to use as posters here at the office.&lt;/p&gt;
+&lt;p&gt;Download from: &lt;a href="http://www.badusability.com/"&gt;Badusability.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Previous articles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/2008/01/17/bad-usability-calendar-2008/" rel="bookmark" title="Permanent Link to Bad Usability Calendar 2008"&gt;Bad Usability Calendar 2008&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/2007/01/27/bad-usability-calendar-2007-finally-ready/" rel="bookmark" title="Permanent Link to Bad Usability Calendar 2007 Finally Ready"&gt;Bad Usability Calendar 2007 Finally Ready&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/2006/10/16/bad-usability-calendar/" rel="bookmark" title="Permanent Link to Bad Usability Calendar"&gt;Bad Usability Calendar&lt;/a&gt; (2005 and 2006)&lt;/li&gt;
+&lt;/ul&gt;
+</description></item></channel></rss>

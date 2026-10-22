@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Comments on: CSS Fun: Flag Deprecated HTML Tags</title><link>https://justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/feed/" rel="self" type="application/rss+xml" /><item><title>By: Jesper Rønn-Jensen</title><link>https://justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/#comment-467194</link><guid isPermaLink="false">http://justaddwater.dk/?p=990#comment-467194</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 20 Jan 2009 10:46:42 +0000</pubDate><description>&lt;p&gt;Jack Clarke wrote:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;
+Jack Clarke&lt;br/&gt;
+http:// technewsline.net/ | &lt;a href="mailto:clark31@mail.com" rel="external"&gt;clark31@mail.com&lt;/a&gt; | 75.177.28.174&lt;/p&gt;
+&lt;p&gt;Pretty cool, it would be fun to have a tool that will do the same thing on on any site – I think you’d be surprised how much deprecated HTML is still in use.
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Actually, you could easily add this into a greasemonkey script or similar. &lt;/p&gt;
+&lt;p&gt;PS. I marked your original comment as spam because it’s refering to a product/SEO site. See our &lt;a href="/2008/12/17/time-to-revise-our-comment-policy/"&gt;revised blog comment policy&lt;/a&gt;.&lt;/p&gt;
+</description></item><item><title>By: Jon Cram</title><link>https://justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/#comment-464587</link><guid isPermaLink="false">http://justaddwater.dk/?p=990#comment-464587</guid><dc:creator>Jon Cram</dc:creator><pubDate>Thu, 08 Jan 2009 12:11:30 +0000</pubDate><description>&lt;p&gt;A great idea!&lt;/p&gt;
+&lt;p&gt;It might be better to differentiate between deprecated elements and the deprecated /use/ of elements.&lt;/p&gt;
+&lt;p&gt;The HTML 4.01 specs contain a list of elements, with those deprecated marked as such: &lt;a href="http://www.w3.org/TR/REC-html40/index/elements.html" rel="external"&gt;http://www.w3.org/TR/REC-html40/index/elements.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You’ll notice that the list of elements doesn’t mark ‘i’ and ‘b’ as deprecated. It is not that ‘i’ and ‘b’ have been deprecated, more than their /use/ has been cautioned against.&lt;/p&gt;
+&lt;p&gt;There are use cases supporting the need for ‘i’ to italicise a piece of text instead of using CSS to achieve the same visual effect.&lt;/p&gt;
+&lt;p&gt;A good example is the use of italics when presenting a book title within text. We can’t use ’em’ because we don’t want to emphasise the title, we merely want to use italics in following with the conventions of print. There are more justifications for this, but that would start getting too off-topic.&lt;/p&gt;
+&lt;p&gt;Back to my main point: use one form of colouring for deprecated elements (ones you can be certain should not be there) and a different form of colouring for commonly misused elements (which /probably/ shouldn’t be there, but might actually be correctly used).&lt;/p&gt;
+</description></item></channel></rss>

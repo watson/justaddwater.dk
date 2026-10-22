@@ -6,6 +6,8 @@ from pathlib import Path
 import re
 import shutil
 
+from feeds import deploy_feed
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -56,10 +58,11 @@ class PrefixHTML(HTMLParser):
         self.parts.append(f'<?{data}>')
 
 
-def prepare(destination, base_path):
+def prepare(destination, base_path, site_url=None):
     base = '/' + base_path.strip('/') if base_path.strip('/') else ''
     if not re.fullmatch(r'(?:/[A-Za-z0-9._-]+)*', base):
         raise ValueError('Invalid deployment base path')
+    site_url = site_url or ('https://watson.github.io' + base if base else 'https://justaddwater.dk')
     source = ROOT / 'site'
     destination = destination.resolve()
     if destination == ROOT or destination == source or source.is_relative_to(destination):
@@ -67,8 +70,10 @@ def prepare(destination, base_path):
     if destination.exists():
         shutil.rmtree(destination)
     shutil.copytree(source, destination)
-    if base:
-        for path in destination.rglob('*'):
+    for path in destination.rglob('*'):
+        if path.name == 'index.xml':
+            path.write_text(deploy_feed(path.read_text(), site_url))
+        elif base:
             if path.suffix.lower() not in ('.html', '.css'):
                 continue
             text = path.read_text()
@@ -86,6 +91,7 @@ def prepare(destination, base_path):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--base-path', default='')
+    parser.add_argument('--site-url', help='Absolute deployed site URL used inside RSS feeds')
     parser.add_argument('--output', type=Path, default=ROOT / '_site')
     args = parser.parse_args()
-    prepare(args.output, args.base_path)
+    prepare(args.output, args.base_path, args.site_url)

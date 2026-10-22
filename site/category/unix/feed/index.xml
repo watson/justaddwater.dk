@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Unix – justaddwater.dk</title><link>https://justaddwater.dk/category/unix/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/category/unix/feed/" rel="self" type="application/rss+xml" /><item><title>Find Occurences of Text String in Files</title><link>http://justaddwater.dk/2008/06/17/find-occurences-of-text-string-in-files/</link><guid isPermaLink="false">http://justaddwater.dk/?p=934</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 17 Jun 2008 12:54:11 +0000</pubDate><description>&lt;p&gt;I had to search for occurences of string in particular files, and using Cygwin i did the following:&lt;/p&gt;
+&lt;p&gt;find all files that ends on .js, .html or .ascx:&lt;br/&gt;
+&lt;code&gt;$ find -regextype posix-extended -regex ".+\.(js|html?|ascx)$"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then search for lines that contain the following javascript construction &lt;code&gt;for( var x in object)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I ended up with this regular expression to match the javascript: &lt;code&gt;/for\s?\(.+?\bin\b.+?\)/&lt;/code&gt;. Although not strictly necessary, i test for word-boundaries around &lt;code&gt;"in"&lt;/code&gt; — it would be sufficient just to use spaces like this &lt;code&gt;" in "&lt;/code&gt;. For grep to eat this its pack with parameters that show filename (-H), line number (-n), only matching part of line (-o), and use Pearl compatible regexps (-P):&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; grep -nHoP "for\s?\(.+?\bin\b.+?\)" &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Set this into a find expression where the -exec flag allows you to run the grep command on each file found:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ find -regextype posix-extended -regex ".+\.(js|html?|ascx)$"  -exec grep -nHoP "for\s?\(.+?\bin\b.+?\)" '{}' \;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Choosing a -regextype for find&lt;/strong&gt;&lt;br/&gt;
+The regextype had to be changed and I found that these work with the chosen regexp:&lt;br/&gt;
+* posix-extended, posix-awk, and posix-egrep&lt;br/&gt;
+but posix-basic did not work.&lt;/p&gt;
+</description></item></channel></rss>

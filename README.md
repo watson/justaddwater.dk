@@ -18,6 +18,10 @@ original host.
   all API pages. Images and downloads discovered in HTML and CSS are also copied,
   including files not listed in the media library.
 - The original site layout, plus local search, RSS feeds, a sitemap and a 404 page.
+- Article comment feeds and category, tag and author feeds retain their original
+  `/…/feed/` paths and scope. Feed item links use the deployed archive address;
+  original RSS IDs and comment timestamps are preserved.
+  The original RSS and Atom aliases for the Web Standards category also work.
 - Original video players in **21 posts**, including YouTube, Vimeo and legacy
   Flash embeds, with their original URLs, dimensions and player parameters.
 - **61 legacy code examples in 19 articles** displayed as code, plus **14 files
@@ -56,11 +60,13 @@ posts, unpublished media and server-side files are not included.
 ## Preview locally
 
 ```sh
-python3 -m http.server 8000 --directory site
+python3 scripts/serve.py --directory site --port 8000
 ```
 
 Open <http://localhost:8000>. Use an HTTP server, rather than opening HTML files
-directly, so search can load its local JSON index.
+directly, so search can load its local JSON index. The preview server also serves
+`index.xml` at feed directory URLs, matching GitHub Pages. Feeds contain XML
+directly, without an HTML redirect or an `index.xml` suffix in their public URLs.
 
 ## GitHub Pages
 
@@ -94,6 +100,14 @@ Capturing uses only public GET requests, with four concurrent requests and bound
 timeouts. Raw responses are cached in `.cache/`, which is excluded from Git. Keep
 that cache for repeatable local rebuilding; move it aside to make a fresh capture.
 External-image results are cached separately in `data/external-images.json`.
+Original public comment RSS fields are captured in `data/comment-feeds.json`;
+this retains pingbacks omitted by the public comments API. Original post feed IDs
+are saved separately in `data/post-feed-ids.json`. To refresh these
+snapshots after capturing the site, run `.venv/bin/python scripts/capture_feeds.py`
+before rebuilding. The capture accepts only comments already present in the
+reviewed archive. Article feeds retain WordPress's ten most recent responses,
+including the two owner-approved recoveries where applicable; articles without
+responses have valid empty feeds.
 HTML is parsed using the browser's HTML5 rules to preserve formatting in the
 original WordPress markup, including mismatched inline tags. Literal form tags
 inside legacy `[code]` examples are escaped before parsing so they cannot swallow
@@ -121,6 +135,8 @@ executable scripts or dynamic forms. It verifies that archived form controls are
 disabled and have an associated notice. It also checks background images in external
 stylesheets, style attributes and embedded style blocks, rejecting remote CSS
 dependencies. The deployment workflow runs these checks before publishing.
+RSS checks cover feed paths, article footer links, scoped entries, original
+comment timestamps and IDs, and links back into the deployed archive.
 Expected article text is checked independently of the converter's cleanup rules,
 so the same accidental deletion cannot be hidden on both sides of the comparison.
 Recovered examples are checked character-for-character against their recorded
@@ -131,7 +147,7 @@ nested Flash players and their parameters; playback availability is not required
 To test a project URL prefix:
 
 ```sh
-python3 scripts/prepare_pages.py --base-path /justaddwater.dk
+.venv/bin/python scripts/prepare_pages.py --base-path /justaddwater.dk
 .venv/bin/python scripts/verify.py --site _site --base-path /justaddwater.dk
 ```
 

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>office – justaddwater.dk</title><link>https://justaddwater.dk/category/office/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/category/office/feed/" rel="self" type="application/rss+xml" /><item><title>Automatic Excel Time Format Without Colon in Input</title><link>http://justaddwater.dk/2011/01/05/automatic-excel-time-format-without-colon-in-input/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1395</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 05 Jan 2011 19:41:43 +0000</pubDate><description>&lt;p&gt;For a simple Excel sheet time reporting, i needed to enter hours every day for arrival and departure time.&lt;/p&gt;
+&lt;p&gt;Excel is not so smart about the time format. For instance I need to enter “9:00” for nine in the morning. I wanted just to enter “900”, and let the excel sheet format the data correctly itself.&lt;/p&gt;
+&lt;p&gt;I found a working solution on PC Mag: “&lt;a href="http://www.pcmag.com/article2/0,2817,2316755,00.asp"&gt;Easy Date and Time Entry in Excel Tips&lt;/a&gt;“. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Enter time format as a simple number (like “900” or “1500”). &lt;/li&gt;
+&lt;li&gt;Format the cell to display an extra colon.&lt;/li&gt;
+&lt;li&gt;In a (hidden?) cell, calculate the time to use for further calculations.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Format cells for viewing:&lt;/h4&gt;
+&lt;p&gt;Take the cell and format it so it visually shows the colon for the number that is input. Go to the menu item “Format” &amp;gt; “Cells…” dialog. Select “Custom” format and input “0\:00” as shown on the screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat.png"&gt;&lt;img alt="" class="alignnone size-medium wp-image-1397" height="284" sizes="(max-width: 300px) 100vw, 300px" src="/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat-300x284.png" srcset="/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat-300x284.png 300w, /wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat.png 399w" title="excel-format-normal-number-as-timeformat" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Create (hidden)? cell to calculate time:&lt;/h4&gt;
+&lt;p&gt;Take an adjacent cell and let it interpret the input value as a time value. &lt;code&gt;=TIME(9, 15, 0)&lt;/code&gt; is equivalent to 09:15:00 and will require 3 parameters for hour, minutes, seconds. &lt;/p&gt;
+&lt;p&gt;Our inputformat is “915”. Extract hours value: &lt;code&gt;TRUNC(915/100)&lt;/code&gt;&lt;br/&gt;
+Extract minutes value with modulus that extracts the rest 15 from 915 divided by 100: &lt;code&gt;MOD(915, 100)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;So the formula will be &lt;code&gt;=TIME( TRUNC(915/100), MOD(915,100), 0)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This calculation is hidden in the final spreadsheet in columns E, G, and J.&lt;/p&gt;
+&lt;p&gt;Here a screenshot of the result:&lt;/p&gt;
+&lt;p&gt;&lt;a href="/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet.png"&gt;&lt;img alt="" class="alignnone size-medium wp-image-1396" height="153" sizes="(max-width: 300px) 100vw, 300px" src="/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet-300x153.png" srcset="/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet-300x153.png 300w, /wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet.png 402w" title="excel-format-number-as-time-screenshot-timesheet" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I added the time sheet template here for further convenience.&lt;br/&gt;
+&lt;a href="/wp-content/uploads/2011/01/2011-timesheet1.xls"&gt;2011-timesheet.xls&lt;/a&gt; (47KB Excel format)&lt;/p&gt;
+&lt;p&gt;(timesheet updated January 6th: Sum can now handle more than 24 hours)&lt;/p&gt;
+&lt;p&gt;IAnd now I can happily save entering colons every day :)&lt;/p&gt;
+</description></item></channel></rss>

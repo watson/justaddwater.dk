@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>plugin – justaddwater.dk</title><link>https://justaddwater.dk/tag/plugin/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/plugin/feed/" rel="self" type="application/rss+xml" /><item><title>Plugin for Rails’s Resource Controller</title><link>http://justaddwater.dk/2008/11/07/plugin-for-railss-resource-controller/</link><guid isPermaLink="false">http://justaddwater.dk/?p=969</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 07 Nov 2008 15:15:59 +0000</pubDate><description>&lt;p&gt;If you’re using Resource Controller for Ruby on Rails, you may want to look atthe plugin I just created.&lt;/p&gt;
+&lt;p&gt;From the readme file:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;ResouceControllerRespondTo&lt;br/&gt;
+==========================&lt;/p&gt;
+&lt;p&gt;Extends ResourceController plugin for Rails to make it respond_to .xml and .json formats&lt;/p&gt;
+&lt;p&gt;Based on code by Florent Piteau and Joe Fiorini… Jesper merely provided the glue and packed as plugin.&lt;br/&gt;
+See &lt;a href="http://groups.google.com/group/resource_controller/browse_thread/thread/ec9100db655bc5a9"&gt;resource controller forum thread&lt;/a&gt; for the complete discussion&lt;/p&gt;
+&lt;p&gt;Copyright (c) 2008 Jesper Rønn-Jensen (&lt;a href="/"&gt;www.justaddwater.dk&lt;/a&gt;), released under the MIT license
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;More info:&lt;br/&gt;
+&lt;a href="http://github.com/jesperronn/resource_controller_respond_to/"&gt;resource_controller_respond_to&lt;/a&gt; plugin on GitHub&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/giraffesoft/resource_controller/"&gt;resource_controller&lt;/a&gt; on GitHub&lt;/p&gt;
+</description></item></channel></rss>

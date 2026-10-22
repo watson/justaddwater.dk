@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>button – justaddwater.dk</title><link>https://justaddwater.dk/tag/button/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/button/feed/" rel="self" type="application/rss+xml" /><item><title>CSS Styling Buttons Problem with Underlined Text</title><link>http://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1141</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 16 Sep 2009 08:32:56 +0000</pubDate><description>&lt;p&gt;I ran into the challenge the other day to style a&amp;lt;button&amp;gt; element to make it look like a link (with underline and everything).&lt;/p&gt;
+&lt;p&gt;Unfortunately, the &amp;lt;button&amp;gt; element does not react to text-decoration: underline;&lt;/p&gt;
+&lt;p&gt;But according to &lt;a href="http://csscreator.com/node/25902" title="CSS Forum: [Solved?] Doctype prevents underline in button input"&gt;a discussion at the CSS Creator forum&lt;/a&gt;, there is a way out:&lt;/p&gt;
+&lt;blockquote cite="http://csscreator.com/node/25902"&gt;&lt;p&gt;I was just messing around with it and for some reason this doesn’t work:&lt;br/&gt;
+&lt;code&gt;input {text-decoration:underline;}&lt;/code&gt;&lt;br/&gt;
+but this does:&lt;br/&gt;
+&lt;code&gt;input {text-decoration:underline;float:left;}&lt;/code&gt;&lt;br/&gt;
+and&lt;br/&gt;
+&lt;code&gt;input{text-decoration:underline;display:block;}&lt;/code&gt;&lt;br/&gt;
+and&lt;br/&gt;
+&lt;code&gt;input{text-decoration:underline;position:absolute;}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Don’t ask me…  I can’t explain this one.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Interesting!&lt;/p&gt;
+&lt;p&gt;I ended up implementing it as &lt;code&gt;display:inline-block;&lt;/code&gt; which also works fine. Here is my final rules for styling buttons as links&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;.clickable, button.tertiary, input.tertiary{
+  color: #339;
+  text-decoration: underline;
+  display: inline-block; /* else underline won't work */
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  padding: 0;
+}
+.clickable:hover, button.tertiary:hover, input.tertiary:hover{
+  text-decoration: underline;
+  color: #669;
+}&lt;/pre&gt;
+&lt;/blockquote&gt;
+</description></item></channel></rss>

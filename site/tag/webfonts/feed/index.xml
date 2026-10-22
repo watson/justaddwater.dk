@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>webfonts – justaddwater.dk</title><link>https://justaddwater.dk/tag/webfonts/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/webfonts/feed/" rel="self" type="application/rss+xml" /><item><title>Get started using advanced web fonts today</title><link>http://justaddwater.dk/2012/02/24/get-started-using-advanced-webfonts-today/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1580</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 24 Feb 2012 16:00:05 +0000</pubDate><description>&lt;p&gt;I saw this example on &lt;a href="http://uxcampcph.org/"&gt;a blog today&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href="/wp-content/uploads/2012/02/web-font-example.png"&gt;&lt;img alt="" class="aligncenter size-full wp-image-1581" height="106" src="/wp-content/uploads/2012/02/web-font-example.png" title="web-font-example" width="250"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Studying the code, it turns out this is just &lt;a href="https://developers.google.com/webfonts/docs/getting_started"&gt;clever use of Google’s font api&lt;/a&gt;. What you essentially do is to add this to your &amp;lt;HEAD&amp;gt; element:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;!-- Google Fonts --&amp;gt; 
+&amp;lt;link href='&lt;a href="http://fonts.googleapis.com/css?family=Cabin Sketch:bold"&gt;http://fonts.googleapis.com/css?family=Cabin Sketch:bold&lt;/a&gt;' rel='stylesheet' type='text/css' /&amp;gt; 
+&amp;lt;style type="text/css" media="screen"&amp;gt; 
+  h1 { font-family: 'Cabin Sketch', arial, serif; } 
+  .entry-title { 
+    font-family:'Cabin Sketch'; 
+  } 
+&amp;lt;/style&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now the stylesheet referenced takes care of the rest. It’s as simple as that!&lt;/p&gt;
+&lt;h2&gt;Browser support&lt;/h2&gt;
+&lt;p&gt;The best part of this, is that it works for all modern browsers, and also for old IE versions (down to IE6).&lt;/p&gt;
+&lt;p&gt;From&lt;a href="https://developers.google.com/webfonts/faq"&gt; googles FAQ&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;What browsers are supported?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Google Web Fonts API is compatible with the following browsers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Chrome: version 4.249.4+&lt;/li&gt;
+&lt;li&gt;Mozilla Firefox: version: 3.5+&lt;/li&gt;
+&lt;li&gt;Apple Safari: version 3.1+&lt;/li&gt;
+&lt;li&gt;Opera: version 10.5+&lt;/li&gt;
+&lt;li&gt;Microsoft Internet Explorer: version 6+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Does the Google Web Fonts API work on mobile devices?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Google Web Fonts API works reliably on the vast majority of modern mobile operating systems, including Android 2.2+ and iOS 4.2+ (iPhone, iPad, iPod). Support for earlier iOS versions is limited.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2&gt;Bandwidth considerations&lt;/h2&gt;
+&lt;p&gt;One word of caution: Think twice before adding a lot of extra bytes to your web application. You should only add assets to it if it &lt;em&gt;really makes a difference for your end users!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+</description></item></channel></rss>

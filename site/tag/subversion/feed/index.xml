@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>subversion – justaddwater.dk</title><link>https://justaddwater.dk/tag/subversion/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/subversion/feed/" rel="self" type="application/rss+xml" /><item><title>Forgotten Subversion Commands, Undo, Merge Branches and More</title><link>http://justaddwater.dk/2012/06/28/forgotten-subversion-commands-undo-merge-branches-and-more/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1587</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 28 Jun 2012 19:42:46 +0000</pubDate><description>&lt;p&gt;In a current project I use a lot of Subversion (svn) from the command-line.&lt;/p&gt;
+&lt;p&gt;Subversion recently has lost terrain to Git for several reasons. But actually, svn is capable of doing many of the things I love from Git.&lt;/p&gt;
+&lt;p&gt;Here are some less known commands I find extremely helpful.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Undo last commit&lt;/h3&gt;
+&lt;pre&gt;svn merge -r HEAD:PREV .&lt;/pre&gt;
+&lt;p&gt;This commands merges in the changes required to go from latest version (HEAD) and back to the previous (PREV).&lt;/p&gt;
+&lt;p&gt;It also makes sense to view latest commit comment, and possibly include the revision number/description in your new commit message.&lt;/p&gt;
+&lt;pre&gt;svn log --limit 1&lt;/pre&gt;
+&lt;p&gt;After this, you should to an `svn status` and (if you are satisfied with the result), then commit:&lt;/p&gt;
+&lt;pre&gt;svn commit -m "reverted accidentally committed previous version"&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href="http://stackoverflow.com/questions/747713/subversion-retract-accidental-checkin/747758#747758"&gt;http://stackoverflow.com/questions/747713/subversion-retract-accidental-checkin/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;View files changed since last update&lt;/h3&gt;
+&lt;pre&gt;svn st -u&lt;/pre&gt;
+&lt;p&gt;The -u flag gives  an overview of &lt;strong&gt;what has been updated on the server.&lt;/strong&gt; This is what IDEs like Eclipse and IntelliJ do behind the scenes.&lt;/p&gt;
+&lt;p&gt;I have seen much confusion caused when `svn log` will not show what changed on the server. In case you need more info, then investigate the changes with&lt;/p&gt;
+&lt;pre&gt;svn log -r BASE:HEAD&lt;/pre&gt;
+&lt;p&gt;As opposed to `svn log`, this command actually shows log messages on the server.&lt;/p&gt;
+&lt;p&gt;and if you need the list of files changed:&lt;/p&gt;
+&lt;pre&gt;svn diff -r xxx:HEAD --summarize&lt;/pre&gt;
+&lt;p&gt;Where xxx represents the version number of BASE (and you can get it with `svn info`)&lt;/p&gt;
+&lt;p&gt;More info: &lt;a href="http://stackoverflow.com/questions/1444005/displaying-a-list-of-files-that-have-changed-since-last-changeset-in-svn"&gt;http://stackoverflow.com/questions/1444005/displaying-a-list-of-files-that-have-changed-since-last-changeset-in-svn&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Merge to branch from trunk&lt;/h3&gt;
+&lt;p&gt;After branching, it’s easy to keep up-to-date with changes of the trunk. Just go to the branch, and merge all from trunk, like this:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;cd branch
+svn merge ^/trunk&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;where as of Subversion 1.6, the  caret “^” is a handy annotation for the base repository url.&lt;/p&gt;
+&lt;p&gt;After this merge, you can just commit the changes with a standard comment that changes have been merge.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Merge from trunk to current branch&lt;/h3&gt;
+&lt;p&gt;In this case I want to merge all changes from trunk to a specific branch. (I am doing this daily to keep my branch updated). First step is to find the branch split point:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;$ svn log --stop-on-copy | tail -n 4
+r1769 | jesper | 2012-05-09 11:07:45 +0200 (Wed, 09 May 2012) | 1 line&lt;/pre&gt;
+&lt;pre&gt;Adding the new branch in subversion
+------------------------------------------------------------------------&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So, the revision number is “1769”, which marks the first split point of the branch.&lt;/p&gt;
+&lt;p&gt;We now have a way to target all trunk changes with a higher revision number than “1769”.&lt;/p&gt;
+&lt;p&gt;The merge command is then:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt; svn merge -r 1769:HEAD ^/trunk .&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;If that matters I am using svn 1.6.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+</description></item><item><title>Easy delete all .svn Subfolders in Windows Explorer</title><link>http://justaddwater.dk/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1414</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 01 Mar 2011 10:08:51 +0000</pubDate><description>&lt;p&gt;I had to repair a flawed Subversion repository recently (not all files were committed). I had my local repository checked out. This was the flawed part, containing only parts of the folders and files it should.&lt;/p&gt;
+&lt;p&gt;Then, I got a zip file from the machine where it was working. Problem: It contained .svn folders from the other developer. So to merge these i did the following workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Delete all .svn folders from other developer’s zip&lt;/li&gt;
+&lt;li&gt;Move other developers folder over on top of my local install.&lt;/li&gt;
+&lt;li&gt;Commit all missing files&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Of course this will only work if there are no .svn folders in other developer’s file, because then svn authentication, paths, etc. will be messed up, and commit will fail.&lt;/p&gt;
+&lt;p&gt;Luckily, Sanil S (IamTechie blog) wrote a nice little script that actually adds a context menu in Windows explorer:&lt;br/&gt;
+&lt;a href="/wp-content/uploads/2011/03/delete-svn.jpg"&gt;&lt;img alt="" class="alignnone size-full wp-image-1415" height="288" sizes="(max-width: 360px) 100vw, 360px" src="/wp-content/uploads/2011/03/delete-svn.jpg" srcset="/wp-content/uploads/2011/03/delete-svn.jpg 360w, /wp-content/uploads/2011/03/delete-svn-300x240.jpg 300w" title="delete-svn" width="360"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1414-1"&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;delete_svn_subfolders.reg · &lt;a href="https://gist.github.com/jesperronn/848907/66427a7b4a4046e5aa0e0c2aea6b160ac34690bc"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;
+Just save this file as “delete_svn_subfolders.reg”. When you run it, then you will have the new windows explorer context menu item shown in the image.&lt;/p&gt;
+&lt;p&gt;The full script (repeated for the ones with javascript disabled:)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More info:&lt;/p&gt;
+&lt;p&gt;IamTechie: &lt;a href="http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/"&gt;How to remove all “.svn” folders in Windows XP &amp;amp; Vista?&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Windows SVN pre-commit-hook</title><link>http://justaddwater.dk/2010/06/10/windows-svn-pre-commit-hook/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1354</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 10 Jun 2010 08:23:32 +0000</pubDate><description>&lt;p&gt;At a current project I work on, we use a Windows server to run our subversion repository. &lt;/p&gt;
+&lt;p&gt;I wanted to set up the pre-commit hook so that commits with empty comment are automatically rejected.&lt;/p&gt;
+&lt;p&gt;All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal). &lt;/p&gt;
+&lt;p&gt;Here is a the pre-commit hook rewritten as a windows .bat file.&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1354-1"&gt;&lt;code&gt;REM Subversion pre-commit hook for Windows machine
+REM put this in your SVN repository folder /hooks/pre-commit.bat
+REM we use it with svn version 
+REM http://stackoverflow.com/questions/869248/windows-pre-commit-hook-for-comment-length-subversion
+
+@echo off  
+:: Stops commits that have empty log messages.        
+@echo off  
+
+setlocal  
+
+rem Subversion sends through the path to the repository and transaction id  
+set REPOS=%1  
+set TXN=%2           
+
+rem line below ensures at least one character ".", 5 characters require change to "....."
+svnlook log %REPOS% -t %TXN% | findstr . &amp;gt; nul  
+if %errorlevel% gtr 0 (goto err) else exit 0  
+
+:err  
+echo. 1&amp;gt;&amp;amp;2  
+echo Your commit has been blocked because you didn't enter a comment. 1&amp;gt;&amp;amp;2  
+echo Write a log message describing the changes made and try again. 1&amp;gt;&amp;amp;2
+echo Thanks 1&amp;gt;&amp;amp;2
+exit 1
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;pre-commit.bat · &lt;a href="https://gist.github.com/jesperronn/432704/ba29b920034d1a997b119a13740e9e1458f43455"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+</description></item><item><title>Importing Existing Git repository into SVN</title><link>http://justaddwater.dk/2009/07/08/importing-existing-git-repository-into-svn/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1104</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 08 Jul 2009 08:59:58 +0000</pubDate><description>&lt;p&gt;Many of my colleagues know svn but are in general not (yet) ready jump over to using Git for bigger projects.&lt;/p&gt;
+&lt;p&gt;Today I had to import my existing Git repository into SVN. I had been working locally with a Git repos and wanted to keep my history before giving access to my colleagues. &lt;/p&gt;
+&lt;p&gt;The guide from Google Code is really easy, and the commands are just to follow (although several of them I don’t understand). Set the following variables to fit your needs&lt;/p&gt;
+&lt;p&gt;USERNAME=jesper&lt;br/&gt;
+SVN_REPOS=https://project.caplab.dk/svn/&lt;br/&gt;
+#NOTE in my example I expect standard /trunk, /tags, /branches layout&lt;br/&gt;
+EXISTING_GIT_REPO=~/src/expensereport.git&lt;br/&gt;
+NEW_GIT_SVN_REPO=~/src/expensereport&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+ $ git svn clone --username $USERNAME $SVN_REPOS $NEW_GIT_SVN_REPO
+ $ cd $NEW_GIT_SVN_REPO
+ $ git fetch $EXISTING_GIT_REPO
+
+ $ git branch tmp $(cut -b-40 .git/FETCH_HEAD)
+ $ git tag -a -m "Last fetch" last tmp
+
+ $ INIT_COMMIT=$(git log tmp --pretty=format:%H | tail -1)
+ $ git checkout $INIT_COMMIT .
+ $ git commit -C $INIT_COMMIT
+
+ $ git rebase master tmp
+ $ git branch -M tmp master
+
+$ git svn dcommit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Later, export Git repository updates to SVN as follows: &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+ $ git fetch $EXISTING_GIT_REPO
+ $ git branch tmp $(cut -b-40 .git/FETCH_HEAD)
+ $ git tag -a -m "Last fetch" newlast tmp
+ $ git rebase --onto master last tmp
+ $ git branch -M tmp master
+ $ git svn dcommit
+ $ mv .git/refs/tags/newlast .git/refs/tags/last
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Find the full explanation from the Google Code wiki: &lt;a href="http://code.google.com/p/support/wiki/ImportingFromGit"&gt; ImportingFromGit&lt;br/&gt;
+Import a Git repository to Google Code.&lt;br/&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Found via Stackoverflow: &lt;a href="http://stackoverflow.com/questions/661018/pushing-an-existing-git-repository-to-svn"&gt;Pushing an existing git repository to SVN&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>How to make a dry-run with svn update</title><link>http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/</link><guid isPermaLink="false">http://justaddwater.dk/?p=924</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 29 Apr 2008 17:24:50 +0000</pubDate><description>&lt;p&gt;Quick Subversion trick:&lt;/p&gt;
+&lt;p&gt;I asked at the office today if anyone could figure out a method for doing a dry-run to see what files would be updated if you do an “svn update” from repository.&lt;/p&gt;
+&lt;p&gt;My colleague Mads came up with this:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;jesper:test_project jesper$ svn merge --dry-run -r BASE:HEAD .&lt;br/&gt;
+U    app/helpers/application_helper.rb&lt;br/&gt;
+U    app/controllers/reports_controller.rb&lt;br/&gt;
+A    app/views/layouts/formula.html.erb&lt;br/&gt;
+U    app/views/overview/index.html.erb&lt;br/&gt;
+U    app/views/overview/_sidebar.html.erb&lt;br/&gt;
+U    app/views/reports/index.html.erb&lt;br/&gt;
+A    app/views/reports/_sidebar.html.erb&lt;br/&gt;
+U    app/views/reports/new.html.erb&lt;br/&gt;
+U    app/views/reports/start.html.erb&lt;br/&gt;
+C    log/development.log&lt;br/&gt;
+U    public/stylesheets/app.css&lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Brilliant! Now I can see which files will conflict or update before I pull newest version from repository. Now added as an alias:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;alias svnupdry='svn merge --dry-run -r BASE:HEAD .'&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I took a brief look at the Git manual. There is apparently no flag on ‘git pull’ that does a dry-run. Anyone knows if the same thing is possible with Git?&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;small&gt;Technorati Tags: &lt;a href="http://technorati.com/tag/subversion" rel="tag"&gt;subversion&lt;/a&gt;, &lt;a href="http://technorati.com/tag/dry-run" rel="tag"&gt; dry-run&lt;/a&gt;, &lt;a href="http://technorati.com/tag/git" rel="tag"&gt; git&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</description></item></channel></rss>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>gwt – justaddwater.dk</title><link>https://justaddwater.dk/tag/gwt/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/gwt/feed/" rel="self" type="application/rss+xml" /><item><title>GWT Developer Plugin now Works with Firefox 9</title><link>http://justaddwater.dk/2012/01/28/gwt-developer-plugin-now-works-with-firefox-9/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1562</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sat, 28 Jan 2012 13:38:44 +0000</pubDate><description>&lt;p&gt;(UPDATED) The GWT developer plugin has been updated to works with Firefox 9, a couple of days ago.&lt;/p&gt;
+&lt;p&gt;Its not yet officially available, but can be downloaded directly from the codebase:&lt;br/&gt;
+&lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;google-web-toolkit.googlecode.com/svn/trunk/ prebuilt folder&lt;/a&gt; in here  is the &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/gwt-dev-plugin.xpi"&gt;gwt-dev-plugin.xpi&lt;/a&gt;, and it works like a charm :)&lt;/p&gt;
+&lt;p&gt;Previously i wrote when the plugin was updated to &lt;a href="/2011/10/10/gwt-developer-plugin-for-firefox-7-is-now-ready/"&gt;work with Firefox 7 and 8&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More info in the group discussion: “&lt;a href="https://groups.google.com/group/google-web-toolkit/browse_thread/thread/8d9d369fdbfdf87e/98f045c1eb38af0d#cdb775c291719219"&gt;GWT Developer Plugin for Firefox 9&lt;/a&gt;”&lt;/p&gt;
+&lt;p&gt;What timing, as Mozilla is likely to release &lt;a href="https://wiki.mozilla.org/Releases#Firefox_10"&gt;Firefox 10 this coming Tuesday&lt;/a&gt;. For the sake of web developers that use GWT, i hope the plugin updates can come sooner in the future.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE 2012-02-02: This thread in the google group follows &lt;a href="https://groups.google.com/group/google-web-toolkit/browse_thread/thread/2a259452c849c881#"&gt;plugin development for Firefox 10&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+</description></item><item><title>GWT Developer plugin for Firefox 7 is now Ready</title><link>http://justaddwater.dk/2011/10/10/gwt-developer-plugin-for-firefox-7-is-now-ready/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1531</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 10 Oct 2011 22:18:42 +0000</pubDate><description>&lt;p&gt;&lt;strong&gt;UPDATED 2011-12-14:&lt;/strong&gt; &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;Prebuilt&lt;/a&gt; folder now contains Firefox 8 version of the GWT developer plugin.&lt;/p&gt;
+&lt;p&gt;Since Firefox 7 was released, i have defered upgrading for one simple reason: At work I am dependent on GWT Developer plugin.&lt;/p&gt;
+&lt;p&gt;Today I found the ready-to-release plugin which actually works with Firefox 7:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/&lt;/a&gt; in here  is the &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/gwt-dev-plugin.xpi"&gt;gwt-dev-plugin.xpi&lt;/a&gt;, and it works like a charm :)&lt;/p&gt;
+&lt;p&gt;(In firefox, it asks you to download. And then you can drag the downloaded .xpi back into the browser to install. Why Firefox will not instantly recognize the .xpi file is kind of strange)&lt;/p&gt;
+</description></item><item><title>GWT relevant snippets for IntelliJ Idea editor</title><link>http://justaddwater.dk/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1361</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 05 Oct 2010 21:47:32 +0000</pubDate><description>&lt;p&gt;I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it’s a very short list.&lt;/p&gt;
+&lt;p&gt;Snippet 1: Live template to bootstrap a class to use UI binder logic. Very useful when converting existing (pre gwt 2.0) Java classes to UI binder pattern, which gives better separation of logic and view.&lt;/p&gt;
+&lt;p&gt;Snippet 2: Create new UiBinder.ui.xml file. Intellij has support for creating entire new java class + uibinder file. That is useful for new classes, but most often I find myself converting an existing class, and needed this shortcut for that.&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1361-1"&gt;&lt;code&gt;/* add this to IntelliJ Idea "File&amp;gt;Settings&amp;gt; Live templates"
+ *
+ * Abbreviation: binder
+ * Group:        user
+ * Description:  GWT UiBinder bootstrapping on existing class
+ *
+ */
+
+    @com.google.gwt.uibinder.client.UiTemplate("$CLASS$.ui.xml")
+    interface Binder extends com.google.gwt.uibinder.client.UiBinder&amp;lt;com.google.gwt.user.client.ui.HTMLPanel,$CLASS$&amp;gt; {
+    }
+
+    private static Binder ourUiBinder = GWT.create(Binder.class);
+
+    //public $CLASS$() {
+    //    com.google.gwt.user.client.ui.HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);
+    //}
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;com.google.gwt.template.binder.java · &lt;a href="https://gist.github.com/jesperronn/612402/79c24f9b9269c8b65c829e0bd1df0034d0805075"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;pre class="archive-code" data-recovery-code="gist-1361-2"&gt;&lt;code&gt;&amp;lt;!-- 
+  add this to IntelliJ Idea "File &amp;gt; Settings &amp;gt; File templates"
+  "Templates" tab
+  Name:      GWT UI binder
+  Extension: xml
+
+--&amp;gt;
+&amp;lt;ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'&amp;gt;
+  &amp;lt;${ROOT_TAG_NAME}&amp;gt;
+    
+  &amp;lt;/${ROOT_TAG_NAME}&amp;gt;
+&amp;lt;/ui:UiBinder&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;com.google.gwt.template.file.uibinder.xml · &lt;a href="https://gist.github.com/jesperronn/612402/79c24f9b9269c8b65c829e0bd1df0034d0805075"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt; &lt;/p&gt;
+</description></item></channel></rss>

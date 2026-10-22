@@ -37,7 +37,8 @@ jobs:
       - name: Prepare static files
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-        run: python3 scripts/prepare_pages.py --base-path "$PAGES_BASE_PATH"
+          PAGES_SITE_URL: ${{ steps.pages.outputs.base_url }}
+        run: .venv/bin/python scripts/prepare_pages.py --base-path "$PAGES_BASE_PATH" --site-url "$PAGES_SITE_URL"
       - name: Validate the deployment
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}

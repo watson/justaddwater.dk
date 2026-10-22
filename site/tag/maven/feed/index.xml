@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>maven – justaddwater.dk</title><link>https://justaddwater.dk/tag/maven/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/maven/feed/" rel="self" type="application/rss+xml" /><item><title>Maven mirrorOf * in settings.xml breaks the build</title><link>http://justaddwater.dk/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1550</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 20 Jan 2012 21:37:59 +0000</pubDate><description>&lt;p&gt;In our maven3 pom.xml files for a particular project, we have defined a reference to an internal Nexus repository. Since we are behind a firewall, the Nexus repository also has to be mirror of the outside world. I discovered that this &lt;strong&gt;generic &amp;lt;mirrorOf&amp;gt; from my settings.xml is actually evil&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;!-- settings.xml --&amp;gt;
+&amp;lt;mirrors&amp;gt;
+  &amp;lt;mirror&amp;gt;
+    &amp;lt;id&amp;gt;insideFirewallRepo&amp;lt;/id&amp;gt;
+    &amp;lt;mirrorOf&amp;gt;*&amp;lt;/mirrorOf&amp;gt;
+    &amp;lt;name&amp;gt;Mirror of the world outside.&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://nexus_url/nexus/content/groups/public/&amp;lt;/url&amp;gt;
+  &amp;lt;/mirror&amp;gt;
+&amp;lt;/mirrors&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The reason for this being evil was our project pom files which had the following references&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;properties&amp;gt;
+  &amp;lt;nexus.url&amp;gt;http://nexus_url/nexus&amp;lt;/nexus.url&amp;gt;
+  &amp;lt;subversion.url&amp;gt;http://svn_url/svn&amp;lt;/subversion.url&amp;gt;
+&amp;lt;/properties&amp;gt;
+
+  &amp;lt;scm&amp;gt;
+    &amp;lt;connection&amp;gt;scm:svn:${subversion.url}/common-gwt-gui/trunk&amp;lt;/connection&amp;gt;
+&amp;lt;/scm&amp;gt;
+
+&amp;lt;repositories&amp;gt;
+    &amp;lt;repository&amp;gt;
+        &amp;lt;id&amp;gt;nexus-repo-releases&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;Nexus Repo&amp;lt;/name&amp;gt;
+        &amp;lt;url&amp;gt;${nexus.url}/content/groups/public/&amp;lt;/url&amp;gt;
+        &amp;lt;releases&amp;gt; &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt; &amp;lt;/releases&amp;gt;
+        &amp;lt;snapshots&amp;gt; &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt; &amp;lt;/snapshots&amp;gt;
+    &amp;lt;/repository&amp;gt;
+    &amp;lt;repository&amp;gt;
+        &amp;lt;id&amp;gt;nexus-repo-snapshots&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;Nexus Repo&amp;lt;/name&amp;gt;
+        &amp;lt;url&amp;gt;${nexus.url}/content/groups/public-snapshots/&amp;lt;/url&amp;gt;
+        &amp;lt;releases&amp;gt; &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt; &amp;lt;/releases&amp;gt;
+        &amp;lt;snapshots&amp;gt; &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt; &amp;lt;/snapshots&amp;gt;
+    &amp;lt;/repository&amp;gt;
+ &amp;lt;/repositories&amp;gt;&lt;/pre&gt;
+&lt;pre&gt;[repeat the &amp;lt;repositories&amp;gt; section for &amp;lt;pluginRepositories&amp;gt;]&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;And the same pom file contains the following &amp;lt;distributionManagement&amp;gt; section:&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;distributionManagement&amp;gt;
+    &amp;lt;repository&amp;gt;
+        &amp;lt;id&amp;gt;company.releases&amp;lt;/id&amp;gt;
+        &amp;lt;url&amp;gt;${nexus.url}/content/repositories/company/&amp;lt;/url&amp;gt;
+    &amp;lt;/repository&amp;gt;
+    &amp;lt;snapshotRepository&amp;gt;
+        &amp;lt;id&amp;gt;company.snapshots&amp;lt;/id&amp;gt;
+        &amp;lt;url&amp;gt;${nexus.url}/content/repositories/company-snapshots/&amp;lt;/url&amp;gt;
+    &amp;lt;/snapshotRepository&amp;gt;
+&amp;lt;/distributionManagement&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Finally we have the maven release-plugin, but this irrelevant for now:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;build&amp;gt;
+    &amp;lt;plugins&amp;gt;
+        &amp;lt;plugin&amp;gt;
+            &amp;lt;artifactId&amp;gt;maven-release-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;configuration&amp;gt;
+                &amp;lt;tagBase&amp;gt;${subversion.url}/project_name/releases&amp;lt;/tagBase&amp;gt;
+            &amp;lt;/configuration&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+    &amp;lt;/plugins&amp;gt;
+ &amp;lt;/build&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Error message: Using the wrong repository for snapshots&lt;/h2&gt;
+&lt;p&gt;Now, the generic mirrorOf * in settings.xml actually overrides the specific repository information we set in the pom.xml. Because of that setting, the pom.xml &amp;lt;repository&amp;gt; is not used. And the result is an error message like this. (error message enhanced in bold)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/maven-metadata
+.xml
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/maven-metadata
+.xml
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/dependency_project
+-1.18-SNAPSHOT.pom
+[WARNING] The POM for com.company:dependency_project:jar:1.18-SNAPSHOT is missing, no dependency information available
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/dependency_project
+-1.18-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] project_name ...................................... FAILURE [1.108s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.364s
+[INFO] Finished at: Fri Jan 20 12:28:04 CET 2012
+[INFO] Final Memory: 5M/15M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project project_name: Could not resolve dependencies for project com.company:project_name:jar:2.1.1
+3-SNAPSHOT: Could not find artifact com.company:dependency_project:jar:1.18-SNAPSHOT in &lt;strong&gt;insideFirewallRepo (http://nexus_url
+/nexus/content/groups/public/&lt;/strong&gt;) -&amp;gt; [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn &amp;lt;goals&amp;gt; -rf :project_name&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Notice that the errormessage actually gave the ID of our &amp;lt;mirror&amp;gt; from settings.xml:
+&amp;lt;!-- settings.xml --&amp;gt;
+ &amp;lt;mirrors&amp;gt;
+   &amp;lt;mirror&amp;gt;
+     &amp;lt;id&amp;gt;&lt;strong&gt;insideFirewallRepo&lt;/strong&gt;&amp;lt;/id&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;So problem is that maven actually does not use the pom.xml settings, but we can easily fix this.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Solution: Exclude local repositories from mirrorOf *&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;We need to force Maven to use the &amp;lt;repository&amp;gt; values from the project pom.xml. And  maven can do just that, since we need to take the &amp;lt;repository&amp;gt; ids and exclude them from mirrorOf *.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Take the repository ids from the pom file:&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;repositories&amp;gt;
+&amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;&lt;strong&gt;nexus-repo-releases&lt;/strong&gt;&amp;lt;/id&amp;gt;&amp;lt;repository&amp;gt;
+&amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;&lt;strong&gt;nexus-repo-snapshots&lt;/strong&gt;&amp;lt;/id&amp;gt;&amp;lt;repository&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;And exclude them to mirrorOf in settings.xml (add an exclamation mark in front of them). Line added enhanced in bold:&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;!-- settings.xml --&amp;gt;
+&amp;lt;mirrors&amp;gt;
+  &amp;lt;mirror&amp;gt;
+    &amp;lt;id&amp;gt;insideFirewallRepo&amp;lt;/id&amp;gt;
+    &amp;lt;mirrorOf&amp;gt;&lt;strong&gt;!nexus-repo-releases,!nexus-repo-snapshots,*&lt;/strong&gt;&amp;lt;/mirrorOf&amp;gt;
+    &amp;lt;name&amp;gt;Mirror of the world outside.&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://nexus_url/nexus/content/groups/public/&amp;lt;/url&amp;gt;
+  &amp;lt;/mirror&amp;gt;
+&amp;lt;/mirrors&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Most users could probably just remove the &amp;lt;mirrors&amp;gt; block from settings.xml, but in this particular project, that is not possible since firewall blocks for access to maven central. So, in order for us to use external dependencies, we must use the &amp;lt;mirror&amp;gt; in settings.xml&lt;/p&gt;
+&lt;p&gt;Then, you could argue, to use &amp;lt;proxy&amp;gt; instead of &amp;lt;mirrors&amp;gt; in settings.xml. This may be a decent solution as well, but in my case i wanted to avoid that, since the company proxy required user/password. Our jenkins build machines would then have my username/password, and it would lock my account whenever my password expires.&lt;/p&gt;
+&lt;p&gt;Within those constraints, the &amp;lt;mirror&amp;gt; block with excluded internal repositories seems like a decent fit.&lt;/p&gt;
+&lt;p&gt;For the issues described in this article, I have been using Maven 3.0.3 and Sonatype Nexus 1.9.2&lt;/p&gt;
+</description></item></channel></rss>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Rubygems – justaddwater.dk</title><link>https://justaddwater.dk/tag/rubygems/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/rubygems/feed/" rel="self" type="application/rss+xml" /><item><title>Shorthand to clean up installed Rubygems (but don’t cleanup Rails)</title><link>http://justaddwater.dk/2009/05/29/shorthand-to-clean-up-installed-rubygems-but-dont-cleanup-rails/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1098</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 29 May 2009 07:57:23 +0000</pubDate><description>&lt;p&gt;I trimmed my installed Rubygems on my local development machine. The command “&lt;code&gt;sudo gem cleanup&lt;/code&gt;” is just for that.&lt;/p&gt;
+&lt;p&gt;Only problem: What about my older Rails apps that require a specific version of Rails, ActiveRecord, etc.?&lt;/p&gt;
+&lt;p&gt;My solution:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;gem list --no-versions | grep -v "^active" | grep -v "^action" | grep -v "^rails$" | xargs sudo gem cleanup {}&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Any suggestions on how to make it even simpler?&lt;/p&gt;
+</description></item></channel></rss>

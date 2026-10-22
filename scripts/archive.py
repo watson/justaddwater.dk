@@ -22,6 +22,7 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup, Comment
+from feeds import feed_specs, is_feed, write_feeds
 from recovery import recovery_data, restore_code, restore_tag_lists, restore_gists, restore_demos, restore_local_forms, restore_comments, UNDO_URL, UNDO_PATH
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -142,13 +143,18 @@ def local_url(value, base, ids):
     if path.endswith('/function.file-exists'):
         return None
     query = parse_qs(parts.query)
+    if 'feed' in query:
+        for key in ('p', 'page_id', 'attachment_id'):
+            if key in query and query[key][0] in ids:
+                return ids[query[key][0]].rstrip('/') + '/feed/'
+        if query['feed'][0] == 'comments-rss2':
+            return '/comments/feed/'
+        return (path if path != '/index.php' else '/').rstrip('/') + '/feed/'
     for key in ('p', 'page_id', 'attachment_id'):
         if key in query:
             return ids.get(query[key][0])
     if 's' in query:
         return '/search/'
-    if 'feed' in query:
-        return '/comments/feed/' if query['feed'][0] == 'comments-rss2' else '/feed/'
     if 'paged' in query:
         path = f'{path.rstrip("/")}/page/{query["paged"][0]}/'
     if 'cat' in query or 'm' in query or 'author' in query:
@@ -175,10 +181,6 @@ def disk_path(path):
 
 def is_asset(path):
     return Path(urlsplit(path).path).suffix.lower() in ASSET_SUFFIXES or path.startswith(('/wp-content/', '/wp-includes/'))
-
-
-def is_feed(path):
-    return bool(re.search(r'/(?:feed|rss2?|atom)/?$', path))
 
 
 def embedded_css(soup):
@@ -463,7 +465,7 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                 tag['data-original-url'] = value
                 continue
             if attr == 'href' and urlsplit(value).hostname == 'feeds.justaddwater.dk':
-                tag[attr] = '/feed/index.xml'
+                tag[attr] = '/feed/'
                 continue
             path = local_url(value, base, ids)
             if not path:
@@ -471,10 +473,6 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                     del tag[attr]
                 continue
             fragment = urlsplit(html.unescape(value)).fragment
-            if is_feed(path):
-                path = '/comments/feed/' if '/comments/' in path else '/feed/'
-                tag[attr] = path + 'index.xml'
-                continue
             if path in routes or path in ('/search/', '/feed/', '/comments/feed/'):
                 tag[attr] = path + ('#' + fragment if fragment else '')
             else:
@@ -546,16 +544,20 @@ def build(data, state):
                 child.unlink()
     ids = id_routes(data)
     routes = set(state['pages']) | set(state['assets']) | set(recovered_assets) | {UNDO_PATH, '/archive-assets/demos.js'}
+    comment_snapshots = json.loads((ROOT / 'data/comment-feeds.json').read_text())
+    routes.update(feed_specs(data, comment_snapshots['feeds']))
     external_file = ROOT / 'data/external-images.json'
     external = json.loads(external_file.read_text()) if external_file.exists() else {}
-    unavailable, comment_ids = set(), set()
+    unavailable, comment_ids, comment_links = set(), set(), {}
     for path in sorted(state['pages']):
         raw, _ = fetch(ORIGIN + path)
         soup = restore_comments(parse_document(raw, path=path), path)
         soup = clean_html(soup, path=path)
         soup = rewrite(soup, ORIGIN + path, ids, routes, unavailable, external)
         for tag in soup.find_all(id=re.compile(r'^comment-\d+$')):
-            comment_ids.add(int(tag['id'].split('-')[-1]))
+            comment_id = int(tag['id'].split('-')[-1])
+            comment_ids.add(comment_id)
+            comment_links.setdefault(comment_id, path)
         target = disk_path(path)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(str(soup))
@@ -598,7 +600,15 @@ def build(data, state):
               for p in data['posts'] + data['pages']]
     write_json(SITE / 'archive-assets/search.json', search)
     write_json(SITE / 'archive-assets/routes.json', ids)
-    feeds(data)
+    def render_feed_content(markup, base):
+        soup = clean_html(parse_document(markup))
+        # Players remain on the article, but are not executable RSS content.
+        for tag in soup.find_all(['iframe', 'object', 'embed', 'script', 'style']):
+            tag.decompose()
+        soup = rewrite(soup, base, ids, routes, unavailable, external)
+        return soup.body.decode_contents()
+
+    generated_feeds = write_feeds(data, SITE, render_feed_content, comment_links=comment_links)
     (SITE / '.nojekyll').touch()
     sitemap = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
     for path in sorted({urlsplit(p['link']).path for p in data['posts'] + data['pages']} | {'/'}):
@@ -618,40 +628,13 @@ def build(data, state):
               'recovered_code_blocks': len(recovery['code_blocks']),
               'recovered_gist_embeds': len(recovery['gists']),
               'repaired_tag_lists': [row['post_id'] for row in recovery['tag_lists']],
+              'rss_feeds': len(generated_feeds),
               'unavailable_pages': {p: e for p, e in state['failed_pages'].items() if local_url(p, ORIGIN, ids) and local_url(p, ORIGIN, ids) not in routes},
               'unavailable_assets': {p: e for p, e in state['failed_assets'].items() if local_url(p, ORIGIN, ids) not in routes},
               'unavailable_references': sorted(unavailable)}
     write_json(ROOT / 'data/capture-report.json', report)
     print(json.dumps({k: v for k, v in report.items() if not isinstance(v, (list, dict))}, indent=2))
     print('Comments missing from rendered HTML:', len(missing_comments), flush=True)
-
-
-def feeds(data):
-    for kind, path in [('posts', '/feed/'), ('comments', '/comments/feed/')]:
-        rss = ET.Element('rss', version='2.0')
-        channel = ET.SubElement(rss, 'channel')
-        ET.SubElement(channel, 'title').text = 'justaddwater.dk' + (' comments' if kind == 'comments' else '')
-        ET.SubElement(channel, 'link').text = 'https://justaddwater.dk/'
-        ET.SubElement(channel, 'description').text = 'Instant Usability & Web Standards — static archive'
-        for row in data[kind][:50]:
-            item = ET.SubElement(channel, 'item')
-            title = row['title']['rendered'] if kind == 'posts' else 'Comment by ' + row['author_name']
-            ET.SubElement(item, 'title').text = html.unescape(title)
-            ET.SubElement(item, 'link').text = row['link'].replace('http://', 'https://', 1)
-            ET.SubElement(item, 'guid').text = row['link']
-            content = BeautifulSoup(restore_code(row['content']['rendered']), 'html.parser')
-            restore_tag_lists(content)
-            restore_gists(content)
-            for tag in content.find_all(['script', 'iframe', 'object', 'embed']):
-                tag.decompose()
-            ET.SubElement(item, 'description').text = str(content)
-            date = datetime.fromisoformat(row.get('date_gmt') or row['date']).replace(tzinfo=timezone.utc)
-            ET.SubElement(item, 'pubDate').text = date.strftime('%a, %d %b %Y %H:%M:%S GMT')
-        target = disk_path(path)
-        target.parent.mkdir(parents=True, exist_ok=True)
-        # index.xml is requested explicitly by archive links and served as XML.
-        ET.ElementTree(rss).write(target.with_name('index.xml'), encoding='utf-8', xml_declaration=True)
-        target.write_text('<!doctype html><meta http-equiv="refresh" content="0;url=index.xml"><a href="index.xml">RSS feed</a>')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>hack – justaddwater.dk</title><link>https://justaddwater.dk/tag/hack/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/tag/hack/feed/" rel="self" type="application/rss+xml" /><item><title>Print CSS Background Logo Hack</title><link>http://justaddwater.dk/2009/09/29/print-css-background-logo-hack/</link><guid isPermaLink="false">http://justaddwater.dk/2009/09/29/print-css-background-logo-hack/</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 29 Sep 2009 09:08:58 +0000</pubDate><description>&lt;p&gt;I learned this nice little hack to bypass the standard browser setting that normally prevents background images from being printed. &lt;/p&gt;
+&lt;p&gt;The hack makes use of converting the background-image to a list item with an image. &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* Hack, to trick the browser to print another logo 
+   Unfortunetaly, Firefox on Windows doesn't show logo on print 
+    — see Mozilla bug 133490 for further details */
+#header {
+  display: list-item; 
+  list-style-image: url(../images/logo_print.gif); 
+  list-style-position: inside;
+	margin: 0 !important;
+  padding: 0 !important;
+	height: 50pt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This way, you don’t have to fall back to inserting an image tag in your HTML for the logo. Instead, just have an a element that contains the corporate logo text, and nothing all.&lt;/p&gt;
+</description></item></channel></rss>

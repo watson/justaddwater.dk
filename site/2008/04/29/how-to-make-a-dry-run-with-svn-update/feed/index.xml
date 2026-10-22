@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Comments on: How to make a dry-run with svn update</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/</link><description>Instant Usability &amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/feed/" rel="self" type="application/rss+xml" /><item><title>By: Jesper Rønn-Jensen</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-513724</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-513724</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 09 Mar 2011 21:17:24 +0000</pubDate><description>&lt;p&gt;@Markus, yeah unfortunately wordpress tries to clever-change all quotes and double dashes. &lt;/p&gt;
+&lt;p&gt;It is really really a wrong default and very annoying.&lt;/p&gt;
+&lt;p&gt;BTW, you can avoid the double dashes by using the single letter equivalents “-n” for dry-run and “-r” for revision. But it then becomes less intuitive and a bit harder to learn:&lt;/p&gt;
+&lt;p&gt;Then the expression becomes:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;svn merge –n –r BASE:HEAD .&lt;/pre&gt;
+&lt;/blockquote&gt;
+</description></item><item><title>By: Markus Hedlund</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-513654</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-513654</guid><dc:creator>Markus Hedlund</dc:creator><pubDate>Wed, 09 Mar 2011 09:10:37 +0000</pubDate><description>&lt;p&gt;That should be&lt;/p&gt;
+&lt;p&gt;svn merge –dry-run –revision BASE:HEAD .&lt;/p&gt;
+&lt;p&gt;with two “-” before “dry-run” and “revision”.&lt;/p&gt;
+</description></item><item><title>By: Markus Hedlund</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-513653</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-513653</guid><dc:creator>Markus Hedlund</dc:creator><pubDate>Wed, 09 Mar 2011 09:09:42 +0000</pubDate><description>&lt;p&gt;That line didn’t work with SVN 1.6.16. Had to change it to:&lt;/p&gt;
+&lt;p&gt;svn merge –dry-run –revision BASE:HEAD .&lt;/p&gt;
+</description></item><item><title>By: svn 指令 « 阿喵就像家</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-501840</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-501840</guid><dc:creator>svn 指令 &amp;#171; 阿喵就像家</dc:creator><pubDate>Sat, 30 Oct 2010 09:13:53 +0000</pubDate><description>&lt;p&gt;[…] &lt;a href="/2008/04/29/how-to-make-a-dry-run-with-svn-update/"&gt;http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/&lt;/a&gt; […]&lt;/p&gt;
+</description></item><item><title>By: Weekly Digest for April 23rd – BorkWeb</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-495378</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-495378</guid><dc:creator>Weekly Digest for April 23rd &amp;#8211; BorkWeb</dc:creator><pubDate>Fri, 23 Apr 2010 09:09:17 +0000</pubDate><description>&lt;p&gt;[…] Shared justaddwater.dk | How to make a dry-run with svn update. […]&lt;/p&gt;
+</description></item><item><title>By: Subversion update dry-run .. | itech9</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-489176</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-489176</guid><dc:creator>Subversion update dry-run .. &amp;#124; itech9</dc:creator><pubDate>Wed, 16 Sep 2009 19:50:26 +0000</pubDate><description>&lt;p&gt;[…] From &lt;a href="/2008/04/29/how-to-make-a-dry-run-with-svn-update/"&gt;http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/&lt;/a&gt; […]&lt;/p&gt;
+</description></item><item><title>By: Dan</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-484053</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-484053</guid><dc:creator>Dan</dc:creator><pubDate>Fri, 17 Apr 2009 05:07:08 +0000</pubDate><description>&lt;p&gt;thanks for your great post, Jesper! this is a very handy trick to know…will save me lots of time.&lt;/p&gt;
+</description></item><item><title>By: EmbeddedLinuxGuy</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-435066</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-435066</guid><dc:creator>EmbeddedLinuxGuy</dc:creator><pubDate>Mon, 11 Aug 2008 18:36:58 +0000</pubDate><description>&lt;p&gt;This doesn’t work perfectly for me on very old checkouts.  I get false conflicts and “Skipping” messages, similar to symptoms in this forum post:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://translocator.ws/2005/10/12/svn-update-dry-run" rel="external"&gt;http://translocator.ws/2005/10/12/svn-update-dry-run&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[jesse@sente]~/svn/rex&amp;gt; svn merge –dry-run -r BASE:HEAD .&lt;br/&gt;
+Skipped missing target: ‘www/html/HP/Traffic_Users_Guide.pdf’&lt;br/&gt;
+Skipped ‘www/html/js/traffic-class.js’&lt;br/&gt;
+C    www/cgi-bin/queries&lt;br/&gt;
+[jesse@sente]~/svn/rex/www/cgi-bin&amp;gt;svn status queries&lt;br/&gt;
+[jesse@sente]~/svn/rex/www/cgi-bin&amp;gt;svn diff queries&lt;br/&gt;
+[jesse@sente]~/svn/rex/www/cgi-bin&amp;gt;svn status -u queries&lt;br/&gt;
+       *    44231   queries&lt;/p&gt;
+&lt;p&gt;See also&lt;/p&gt;
+</description></item><item><title>By: chebbers</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-431761</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-431761</guid><dc:creator>chebbers</dc:creator><pubDate>Wed, 23 Jul 2008 16:43:12 +0000</pubDate><description>&lt;p&gt;“svn status -u” won’t show files that will become conflicted&lt;/p&gt;
+</description></item><item><title>By: mehryar</title><link>https://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/#comment-421842</link><guid isPermaLink="false">http://justaddwater.dk/?p=924#comment-421842</guid><dc:creator>mehryar</dc:creator><pubDate>Tue, 03 Jun 2008 00:15:30 +0000</pubDate><description>&lt;p&gt;svn status -u&lt;/p&gt;
+&lt;p&gt;will also do a dry update run&lt;/p&gt;
+</description></item></channel></rss>
