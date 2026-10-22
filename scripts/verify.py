@@ -207,6 +207,19 @@ def verify(site, base):
     missing_comments = {row['id'] for row in data['comments']} - comment_ids
     if missing_comments:
         errors.append(f'{len(missing_comments)} public comments missing from HTML: {sorted(missing_comments)[:20]}')
+    for comment in recovery['comments']:
+        file = site / comment['path'].lstrip('/') / 'index.html'
+        soup = BeautifulSoup(file.read_bytes(), 'html.parser')
+        matches = soup.find_all(id=f'comment-{comment["id"]}')
+        if len(matches) != 1:
+            errors.append(f'Recovered comment missing or duplicated: {comment["id"]}')
+            continue
+        item = matches[0]
+        if (item.cite is None or item.cite.get_text() != comment['author']
+                or item.p is None or item.p.get_text() != comment['content']
+                or item.time is None or item.time.get('datetime') != comment['date'].replace(' ', 'T')
+                or comment['type'] not in item.get('class', [])):
+            errors.append(f'Recovered comment differs from reviewed content: {comment["id"]}')
 
     for file in site.rglob('*.css'):
         check_css(file.read_text(), file)
@@ -227,6 +240,7 @@ def verify(site, base):
                'recovered_code_examples': len(seen_code),
                'disabled_archived_forms': archived_forms,
                'public_comments': len(comment_ids), 'local_links_checked': local_links,
+               'recovered_comments': len(recovery['comments']),
                'errors': len(errors), 'deployment_base': base or '/'}
     print(json.dumps(summary, indent=2))
     for error in errors[:80]:

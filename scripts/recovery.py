@@ -3,6 +3,7 @@
 The private SQL dump and WordPress installation are never build inputs. Only
 the reviewed snippets, asset files, and provenance in data/recovery.json ship.
 """
+from datetime import datetime
 from functools import lru_cache
 import html
 import json
@@ -96,3 +97,58 @@ def restore_demos(soup, path):
         soup.html['data-archive-demo'] = 'table-height'
         script = soup.new_tag('script', src='/archive-assets/demos.js', defer='defer')
         soup.head.append(script)
+
+
+def restore_comments(soup, path):
+    """Restore only owner-approved comments at their original permalinks."""
+    for comment in recovery_data()['comments']:
+        anchor = f'comment-{comment["id"]}'
+        if comment['path'] != path or soup.find(id=anchor):
+            continue
+        content = soup.find(id='content')
+        if content is None:
+            raise ValueError('Recovered comment destination has no content: ' + path)
+        comments = content.select_one('ol.commentlist')
+        if comments is None:
+            heading = soup.new_tag('h3', id='comments')
+            heading.string = '1 Response'
+            comments = soup.new_tag('ol', attrs={'class': 'commentlist'})
+            respond = content.find(id='respond')
+            if respond:
+                respond.insert_before(heading)
+                respond.insert_before(comments)
+            else:
+                content.append(heading)
+                content.append(comments)
+        item = soup.new_tag('li', id=anchor, attrs={'class': ['alt', comment['type']]})
+        cite = soup.new_tag('cite')
+        author = soup.new_tag('a', href=comment['author_url'], attrs={'class': 'url'})
+        author.string = comment['author']
+        cite.append(author)
+        item.append(cite)
+        item.append(' (Pingback):' if comment['type'] == 'pingback' else ' Says:')
+        item.append(soup.new_tag('br'))
+        metadata = soup.new_tag('small', attrs={'class': 'commentmetadata'})
+        permalink = soup.new_tag('a', href='#' + anchor)
+        date = datetime.fromisoformat(comment['date'])
+        timestamp = soup.new_tag('time', datetime=date.isoformat())
+        timestamp.string = f'{date:%B} {date.day}, {date:%Y at %H:%M}'
+        permalink.append(timestamp)
+        metadata.append(permalink)
+        item.append(metadata)
+        paragraph = soup.new_tag('p')
+        # These reviewed comments contain plain text and bare URLs only.
+        for part in re.split(r'(https?://\S+)', comment['content']):
+            if part.startswith(('http://', 'https://')):
+                link = soup.new_tag('a', href=part, rel='nofollow')
+                link.string = part
+                paragraph.append(link)
+            else:
+                paragraph.append(part)
+        item.append(paragraph)
+        comments.append(item)
+        count = len(comments.find_all('li', recursive=False))
+        heading = content.find(id='comments')
+        if heading:
+            heading.string = f'{count} Response' + ('s' if count != 1 else '')
+    return soup

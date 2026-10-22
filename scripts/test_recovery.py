@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 from archive import ROOT, ORIGIN, clean_html, parse_document, local_url, rewrite
 from prepare_pages import PrefixHTML
-from recovery import recovery_data, TABLE_DEMO, UNDO_URL, UNDO_PATH
+from recovery import recovery_data, restore_comments, TABLE_DEMO, UNDO_URL, UNDO_PATH
 from verify import article_text_preserved
 
 
@@ -73,6 +73,40 @@ class RecoveryTests(unittest.TestCase):
         rewritten = rewrite(undo, ORIGIN, {}, {UNDO_PATH}, set())
         self.assertEqual(rewritten.iframe['src'], UNDO_PATH)
         self.assertEqual(rewritten.iframe['sandbox'], 'allow-scripts')
+
+    def test_only_approved_comments_are_restored_once_on_their_original_pages(self):
+        self.assertEqual({c['id'] for c in recovery_data()['comments']}, {27244, 58286})
+        source = '<div id="content"><div class="entry">Original content</div><h3 id="respond">Leave a Reply</h3></div>'
+        untouched = restore_comments(parse_document(source), '/unrelated/')
+        self.assertIsNone(untouched.select_one('.commentlist'))
+        for comment in recovery_data()['comments']:
+            with self.subTest(comment=comment['id']):
+                soup = parse_document(source)
+                restore_comments(soup, comment['path'])
+                restore_comments(soup, comment['path'])
+                soup = clean_html(soup, path=comment['path'])
+                soup = rewrite(soup, ORIGIN + comment['path'], {},
+                               {'/archive/', '/2006/11/14/world-usability-day-we-dumped-our-archives/', '/'}, set())
+                items = soup.select('.commentlist > li')
+                self.assertEqual(len(items), 1)
+                item = items[0]
+                self.assertEqual(item['id'], f'comment-{comment["id"]}')
+                self.assertEqual(item.cite.get_text(), comment['author'])
+                self.assertEqual(item.p.get_text(), comment['content'])
+                self.assertEqual(item.time['datetime'], comment['date'].replace(' ', 'T'))
+                self.assertIn(comment['type'], item['class'])
+                self.assertEqual(soup.select_one('.entry').get_text(), 'Original content')
+                self.assertLess(str(soup).index('commentlist'), str(soup).index('id="respond"'))
+                self.assertFalse(any(a['href'].startswith(ORIGIN) for a in item.select('a[href]')))
+
+    def test_recovered_comment_does_not_replace_an_existing_comment_or_require_a_form(self):
+        source = '<div id="content"><p>Archive links</p></div>'
+        soup = restore_comments(parse_document(source), '/archive/')
+        self.assertIsNotNone(soup.find(id='comment-27244'))
+        self.assertIsNone(soup.form)
+        soup.find(id='comment-27244').p.string = 'Already present in a newer capture'
+        restore_comments(soup, '/archive/')
+        self.assertEqual(soup.find(id='comment-27244').p.get_text(), 'Already present in a newer capture')
 
 
 if __name__ == '__main__':

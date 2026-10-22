@@ -3,6 +3,30 @@
     "database": "2007-09-17_watson_wp_jawdk.sql (dump completed 2007-09-16)",
     "files": "Original jaw WordPress checkout, last commit 6d95951 (2009-10-05)"
   },
+  "comments": [
+    {
+      "id": 27244,
+      "post_id": 150,
+      "path": "/archive/",
+      "date": "2006-11-14 13:00:21",
+      "author": "justaddwater.dk | World Usability Day: We dumped our archives",
+      "author_url": "http://justaddwater.dk/2006/11/14/world-usability-day-we-dumped-our-archives/",
+      "type": "pingback",
+      "content": "[...] Even though I say that we have abandoned the archive, the functionality is still here if you know the direct URL (cool URL’s never change!). Take for example the archive overview page: http://justaddwater.dk/archive/ [...]",
+      "source": "2007 database; restoration approved by the owner on 2026-10-22"
+    },
+    {
+      "id": 58286,
+      "post_id": 506,
+      "path": "/2006/06/21/user-experience-revisited/user-experience-radar-based-on-pete-morvilles-ux-honeycomb/",
+      "date": "2007-01-10 23:37:37",
+      "author": "Jesper Rønn-Jensen",
+      "author_url": "http://justaddwater.dk/",
+      "type": "comment",
+      "content": "From http://www.tiltool.com/blog/?p=33",
+      "source": "2007 database; author name encoding repaired; restoration approved by the owner on 2026-10-22"
+    }
+  ],
   "assets": [
     {
       "path": "/wp-content/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.png",

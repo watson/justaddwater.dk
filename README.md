@@ -12,7 +12,8 @@ original host.
 
 - **440 posts and 10 pages**, captured from the public site on 22 October 2026.
 - **2,219 public API comments**, all preserved as read-only content. The rendered
-  pages contain **2,782 comment and trackback entries** in total.
+  pages contain **2,784 comment and trackback entries** in total, including two
+  owner-approved comments recovered from the 2007 database backup.
 - **548 public media records.** WordPress advertises 572, but returns 548 across
   all API pages. Images and downloads discovered in HTML and CSS are also copied,
   including files not listed in the media library.
@@ -103,8 +104,10 @@ The original captured article markup remains in `data/content.json`.
 
 The database dump, WordPress configuration and unreviewed historical content are
 not included in this repository. Rebuilds use only the selected public material
-in `data/recovery.json` and `data/recovered-assets/`. Previously removed comments
-and obsolete newsletter pages require separate owner review before restoration.
+in `data/recovery.json` and `data/recovered-assets/`. The owner approved restoring
+comments #27244 (the archive pingback) and #58286 (Jesper's source attribution)
+on 22 October 2026. The other three historical comments and four historical pages
+reviewed alongside them remain excluded.
 
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset

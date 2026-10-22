@@ -22,7 +22,7 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup, Comment
-from recovery import recovery_data, restore_code, restore_gists, restore_demos, UNDO_URL, UNDO_PATH
+from recovery import recovery_data, restore_code, restore_gists, restore_demos, restore_comments, UNDO_URL, UNDO_PATH
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / '.cache'
@@ -549,7 +549,8 @@ def build(data, state):
     unavailable, comment_ids = set(), set()
     for path in sorted(state['pages']):
         raw, _ = fetch(ORIGIN + path)
-        soup = clean_html(parse_document(raw, path=path), path=path)
+        soup = restore_comments(parse_document(raw, path=path), path)
+        soup = clean_html(soup, path=path)
         soup = rewrite(soup, ORIGIN + path, ids, routes, unavailable, external)
         for tag in soup.find_all(id=re.compile(r'^comment-\d+$')):
             comment_ids.add(int(tag['id'].split('-')[-1]))
@@ -609,6 +610,7 @@ def build(data, state):
               'api_reported_totals': data['api_reported_totals'],
               'html_pages': len(state['pages']), 'downloaded_assets': len(state['assets']),
               'comments_in_html': len(comment_ids), 'comments_missing_from_html': missing_comments,
+              'recovered_comments': [c['id'] for c in recovery['comments']],
               'recovered_assets': [a['path'] for a in recovery['assets']],
               'repaired_asset_aliases': recovery['aliases'],
               'recovered_code_blocks': len(recovery['code_blocks']),

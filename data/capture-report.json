@@ -21,8 +21,12 @@
   },
   "html_pages": 1675,
   "downloaded_assets": 816,
-  "comments_in_html": 2782,
+  "comments_in_html": 2784,
   "comments_missing_from_html": [],
+  "recovered_comments": [
+    27244,
+    58286
+  ],
   "recovered_assets": [
     "/wp-content/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.png",
     "/wp-content/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.thumbnail.png"
