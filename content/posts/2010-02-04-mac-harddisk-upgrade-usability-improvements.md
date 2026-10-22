@@ -11,7 +11,7 @@ author: "jesper"
 
 Blogging for the first time in a long time from my wife's computer, because I'm installing my brand new Intel SSD hard drive in my macbook.
 
-[![intel_160gb_ssd](/wp-content/uploads/2010/02/intel_160gb_ssd-150x150.jpg "intel_160gb_ssd")](/wp-content/uploads/2010/02/intel_160gb_ssd.jpg)
+[{{< img src=`/wp-content/uploads/2010/02/intel_160gb_ssd-150x150.jpg` alt=`intel_160gb_ssd` title=`intel_160gb_ssd` class=`aligncenter size-thumbnail wp-image-1265` width=`150` height=`150` >}}](/wp-content/uploads/2010/02/intel_160gb_ssd.jpg)
 
 Oddly enough I ran into a few things during the install process that I think Apple could improve in their interface. (using Snow Leopard)
 
@@ -31,7 +31,7 @@ Many of these points are pretty obvious when i write it now, but I *know* each o
 
 I wasted 2 hours of valuable time here. Because of the missing help on screens, first I put the old hard drive back in. Then I put the SSD drive in a usb-dockingstation to investigate it with Disk Utility. Then I called Thomas to learn that I had to press 'C' at startup to force a boot menu. Furthermore I was too quick and pressed "Install new system", before I found the dropdown menu and saw the menu item I should have taken: "Restore the system from backup"
 
-[![IMG_0198-restore-system-from-backup-mac-osx10.6](../wp-content/uploads/2010/02/IMG_0198-restore-system-from-backup-mac-osx10.6.jpg "IMG_0198-restore-system-from-backup-mac-osx10.6")](../wp-content/uploads/2010/02/IMG_0198-restore-system-from-backup-mac-osx10.6.jpg)
+[{{< img src=`../wp-content/uploads/2010/02/IMG_0198-restore-system-from-backup-mac-osx10.6.jpg` alt=`IMG_0198-restore-system-from-backup-mac-osx10.6` title=`IMG_0198-restore-system-from-backup-mac-osx10.6` width=`250` height=`188` >}}](../wp-content/uploads/2010/02/IMG_0198-restore-system-from-backup-mac-osx10.6.jpg)
 
 By the way, It took roughly 3 hours to read 120GB from the TimeCapsule and everything was back up and running. Hooray for TimeCapsule.
 

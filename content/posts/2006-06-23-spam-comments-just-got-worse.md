@@ -16,7 +16,7 @@ The last days, we've experienced a lot more spam comments than usual. For some m
 
 Now, that number has more than tripled. We removed 150 spam comments just in the last 21 hours.
 
-[![spam comment screenshot. Click to see large image](/wp-content/uploads/2006/06/screenshot-akismet-spam-crop2.png)](/wp-content/uploads/2006/06/screenshot-akismet-spam-orig.png "Click for large image. Akismet spam from justaddwater.dk")Thanks to Akismet (wordpress plugin to remove spam comments), the removal is fairly automatic. However, the last couple of days, 20-30 spam comments slipped through. Why? Akismet glitch or downtime? Or the comments were unique so that they appeard on justaddwater.dk before Akismet could recognize it as spam.
+[{{< img src=`/wp-content/uploads/2006/06/screenshot-akismet-spam-crop2.png` alt=`spam comment screenshot. Click to see large image` align=`right` style=`margin-left: 5px` >}}](/wp-content/uploads/2006/06/screenshot-akismet-spam-orig.png "Click for large image. Akismet spam from justaddwater.dk")Thanks to Akismet (wordpress plugin to remove spam comments), the removal is fairly automatic. However, the last couple of days, 20-30 spam comments slipped through. Why? Akismet glitch or downtime? Or the comments were unique so that they appeard on justaddwater.dk before Akismet could recognize it as spam.
 
 Comments that slips through Akismet appears in the comment RSS feed until we manually remove them. Even though it's usually not more that 30 minutes, it worries me.
 

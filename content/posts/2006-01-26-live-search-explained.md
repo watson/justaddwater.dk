@@ -22,7 +22,7 @@ That concludes that users are likely to refine results when searching. Refining 
 
 **Live search**: The search user interface is identical to traditional search. But results are fetched whenever the user "hesitates" — for instance stop typing for a brief moment. An example of this is [Google Suggest](http://www.google.com/webhp?hl=en&complete=1 "Google labs: Google suggest") where the most popular results are presented as-you-type.
 
-[![Google suggest autocomplete feature](/wp-content/uploads/2006/01/screenshot%20google%20suggest.thumbnail.png)](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/google-suggest-autocomplete-feature/ "Google suggest autocomplete feature")
+[{{< img src=`/wp-content/uploads/2006/01/screenshot%20google%20suggest.thumbnail.png` alt=`Google suggest autocomplete feature` width=`84` height=`96` >}}](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/google-suggest-autocomplete-feature/ "Google suggest autocomplete feature")
 
 The user experience is very different that traditional search: Here you type, hesitate, and get results. This has some benefits:
 
@@ -39,7 +39,7 @@ Bill Scott of Yahoo has described Kayak.com (travel site) autocomplete:
 
 > Kayak.com is a good example of live auto complete. Say the user is wanting to fly into New York city. They seem to remember that the airport they want is called LaGuardia (not sure how to spell it or what the airport code is). When I type 'New Y' I get the following results:
 >
-> ![kayak-auto-complete-LGA.png](http://static.flickr.com/34/71871872_e922cab3cc_o.png)
+> {{< img src=`http://static.flickr.com/34/71871872_e922cab3cc_o.png` alt=`kayak-auto-complete-LGA.png` width=`303` height=`98` >}}
 >
 > Ok, this is nice. I hate remembering the airport code. And I hate having to go to another page to find out that the site could not figure out what I meant. Jakob Nielsen states as one of his ten usability principles, Error Prevention. Providing the feedback instantaneously to cue me to what the system thinks is great. Saves me time and makes me feel like I am narrowing in on the right thing. This probably ties in with Jared Spool's research on [The Confidence Game](http://www.uie.com/brainsparks/2005/10/20/brain-sparks-live-the-confidence-game-102705) which shows that users are happy to click and click as long as they feel confident they are reaching their goal. Here I have the best of both worlds. Raise my confidence and do it with the minimal effort!
 >

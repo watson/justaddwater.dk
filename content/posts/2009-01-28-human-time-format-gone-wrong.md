@@ -13,4 +13,4 @@ In general it's good to use the human time formats (1 hour ago, 2 months ago, et
 
 Of course it requires that the algorithm be correct. Look at this example from [Jaiku](http://joakimtrolle.jaiku.com/presence/47914612) on what not to do:
 
-[![](/wp-content/uploads/2009/01/jaiku-wrong-calculation-of-time-thumb-28-01-2009-15-20-57.png "jaiku-wrong-calculation-of-time-thumb-28-01-2009-15-20-57")](/wp-content/uploads/2009/01/jaiku-wrong-calculation-of-time-28-01-2009-15-20-57.png)
+[{{< img src=`/wp-content/uploads/2009/01/jaiku-wrong-calculation-of-time-thumb-28-01-2009-15-20-57.png` alt=`` title=`jaiku-wrong-calculation-of-time-thumb-28-01-2009-15-20-57` class=`alignnone size-full wp-image-1019` width=`373` height=`200` >}}](/wp-content/uploads/2009/01/jaiku-wrong-calculation-of-time-28-01-2009-15-20-57.png)

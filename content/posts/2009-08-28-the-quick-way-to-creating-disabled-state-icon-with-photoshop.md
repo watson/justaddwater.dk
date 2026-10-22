@@ -22,7 +22,7 @@ In Photoshop, create a new layer for each button state. Select the layer and cho
 - Saturation: -80
 - Lightness: +40
 
-![photoshop-elements-saturation-for-disabled-buttons](/wp-content/uploads/2009/08/photoshop-elements-saturation-for-disabled-buttons-300x184.png "photoshop-elements-saturation-for-disabled-buttons")
+{{< img src=`/wp-content/uploads/2009/08/photoshop-elements-saturation-for-disabled-buttons-300x184.png` alt=`photoshop-elements-saturation-for-disabled-buttons` title=`photoshop-elements-saturation-for-disabled-buttons` class=`aligncenter size-medium wp-image-1123` width=`300` height=`184` >}}
 
 **Hover state background-image:**
 
@@ -32,6 +32,6 @@ You have each icon defined now with several states in the same file. Perfect for
 
 The final result:
 
-![buttons-rejected-normal-state](/wp-content/uploads/2009/08/buttons-rejected-normal-state.png "buttons-rejected-normal-state")
+{{< img src=`/wp-content/uploads/2009/08/buttons-rejected-normal-state.png` alt=`buttons-rejected-normal-state` title=`buttons-rejected-normal-state` class=`aligncenter size-full wp-image-1125` width=`463` height=`75` >}}
 
 What are your best settings for this type of task?

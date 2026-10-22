@@ -31,7 +31,7 @@ First group: low hanging fruit
 5.  Add "About the Authors" block to the left column when viewing posts (unfortunately not part of K2 plugin)
 6.  Activate [daily backup plugin](http://www.skippy.net/blog/plugins/)
 7.  Improve "About the authors page". Add photos, more description, LinkedIn profile links
-8.  Maybe a ["subscribe to new posts" (plugin](http://www.skippy.net/blog/2005/02/17/subscribe2/)) that could target non-technical users that read our blog infrequently. Install plugin and decide later if we'll use it
+8.  Maybe a ["subscribe to new posts" (plugin](http://www.skippy.net/blog/2005/02/17/subscribe2/)) that could target non-technical users that read our blog infrequently. <small>Install plugin and decide later if we'll use it</small>
 9.  Add a mandatory Technorati-tag check when posting a new post (maybe with [UTW](http://www.neato.co.nz/ultimate-tag-warrior/))
 10. ~~Create a favicon that appears in bookmarks, technorati, etc~~
 11. ~~Add a contact form so the readers can contact us~~

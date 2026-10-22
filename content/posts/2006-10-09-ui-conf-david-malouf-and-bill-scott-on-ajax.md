@@ -11,7 +11,7 @@ technorati: ["david malouf", "bill scott", "uiconf", "ui11", "ajax", "ria", "goo
 ---
 
 David Malouf and Bill Scott: Designing Powerful Web Apps with Ajax\
-[![David Malouf and Bill Scott on UI Conf](http://static.flickr.com/79/265346636_c34ea54d3a_m.jpg)](http://www.flickr.com/photos/jesper/265346636/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/79/265346636_c34ea54d3a_m.jpg` alt=`David Malouf and Bill Scott on UI Conf` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/265346636/ "Photo Sharing")
 
 From UI 11 Conference, Cambridge, Boston October 9, 2006. David's and Bills [presentation notes available](http://billwscott.com/share/presentations/ui11/).
 

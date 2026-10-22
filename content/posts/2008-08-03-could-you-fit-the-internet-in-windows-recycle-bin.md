@@ -13,4 +13,4 @@ author: "jesper"
 
 That was the question Windows asked me the other day when I was about to delete a shortcut from my desktop :)
 
-[![](/wp-content/uploads/2008/08/send-internet-to-recycle-bin.png "send-internet-to-recycle-bin")](http://justaddwater.dk/wp-content/uploads/2008/08/send-internet-to-recycle-bin.png)
+[{{< img src=`/wp-content/uploads/2008/08/send-internet-to-recycle-bin.png` alt=`` title=`send-internet-to-recycle-bin` class=`alignnone size-full wp-image-943` width=`423` height=`375` >}}](http://justaddwater.dk/wp-content/uploads/2008/08/send-internet-to-recycle-bin.png)

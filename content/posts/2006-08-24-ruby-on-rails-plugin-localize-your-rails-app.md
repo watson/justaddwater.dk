@@ -52,6 +52,6 @@ As I've written in the [Rails Core group](http://groups.google.com/group/rubyonr
 >
 > This would be an ideal solution to some of the most important i18n related issues, and I'd like to know the view of the community on this point.
 >
-> *From my post "[i18n-friendly, plugable Rails core](http://groups.google.com/group/rubyonrails-core/browse_thread/thread/346cda3cd39e6fa9)" in the Ruby on Rails Core list.*
+> *<small>From my post "[i18n-friendly, plugable Rails core](http://groups.google.com/group/rubyonrails-core/browse_thread/thread/346cda3cd39e6fa9)" in the Ruby on Rails Core list.</small>*
 
 It's my hope that the Rails Core team will acknowledge that it should be easier to localize your application. (Today, many text strings and date/time/currency formats are hard coded and difficult to overwrite).

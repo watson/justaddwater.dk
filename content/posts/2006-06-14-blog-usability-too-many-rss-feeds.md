@@ -10,7 +10,7 @@ author: "thomas"
 technorati: ["syndication", "rss", "atom", "feeds", "tadalist", "usability", "justaddwater.dk", "blogging", "feed icon", "icons", "wordpress"]
 ---
 
-![Large Feedicon](/wp-content/uploads/2006/06/feed-icon-128x128.png "Large Feedicon")After reading "[Pick a Format (Any Format)](http://nick.typepad.com/blog/2006/05/pick_a_format_a.html "Nick Bradbury: Pick a Format (Any Format)")" by Nick Bradbury (tip by: [Jeremy Voorhis](http://www.jvoorhis.com/ "jvoorhis") on [Octoblog](http://outside-thoughts.octopod.info/articles/2006/06/12/switching-to-mephisto "Octoblog: Switching to Mephisto")) we must say that we totally agree. The point in the post is simple:
+{{< img src=`/wp-content/uploads/2006/06/feed-icon-128x128.png` alt=`Large Feedicon` title=`Large Feedicon` align=`right` style=`margin-left: 1.5em` >}}After reading "[Pick a Format (Any Format)](http://nick.typepad.com/blog/2006/05/pick_a_format_a.html "Nick Bradbury: Pick a Format (Any Format)")" by Nick Bradbury (tip by: [Jeremy Voorhis](http://www.jvoorhis.com/ "jvoorhis") on [Octoblog](http://outside-thoughts.octopod.info/articles/2006/06/12/switching-to-mephisto "Octoblog: Switching to Mephisto")) we must say that we totally agree. The point in the post is simple:
 
 > I keep running across sites that offer **the same exact content** as an RSS feed *and* an Atom feed.
 >

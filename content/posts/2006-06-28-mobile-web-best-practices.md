@@ -10,7 +10,7 @@ author: "thomas"
 technorati: ["w3c", "accessibility", "user experience", "usability", "web standards", "mobile", "guidelines", "web development", "programming"]
 ---
 
-[![W3C Icon](/wp-content/uploads/2006/06/w3c_home.png "W3C Icon")](http://www.w3.org/ "W3C")Yesterday the W3C released a Candidate Recommendation document called "[Mobile Web Best Practices 1.0](http://www.w3.org/TR/2006/CR-mobile-bp-20060627/ "W3C: Mobile Web Best Practices 1.0")". With this document W3C is offering a set of guidelines to help web developers deliver a better user experience to mobile users.
+[{{< img src=`/wp-content/uploads/2006/06/w3c_home.png` alt=`W3C Icon` title=`W3C Icon` align=`left` style=`margin: 5px 8px 0pt 0pt` >}}](http://www.w3.org/ "W3C")Yesterday the W3C released a Candidate Recommendation document called "[Mobile Web Best Practices 1.0](http://www.w3.org/TR/2006/CR-mobile-bp-20060627/ "W3C: Mobile Web Best Practices 1.0")". With this document W3C is offering a set of guidelines to help web developers deliver a better user experience to mobile users.
 
 The deadline for providing feedback to W3C is the 27th of August 2006 and all developers are encouraged to try it out.
 

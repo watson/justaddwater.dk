@@ -14,13 +14,13 @@ It is no secret that all versions of Internet Explorer on Windows prior to versi
 
 ### The IE PNG bug explained
 
-In the screenshots below you can see the same image as it is seen in Internet Explorer 6 and Internet Explorer 7 (Gray border added around the edge of the screenshot for your viewing pleasure):
+In the screenshots below you can see the same image as it is seen in Internet Explorer 6 and Internet Explorer 7 <small>(Gray border added around the edge of the screenshot for your viewing pleasure)</small>:
 
 ![Screenshot of IE6 png bug](/wp-content/uploads/2006/11/png-alpha-trans2.png "Screenshot of IE6 png bug")\
-PNG alpha transparency bug as seen in IE6
+<small>PNG alpha transparency bug as seen in IE6</small>
 
 ![Screenshot of IE6 png bug fixed](/wp-content/uploads/2006/11/png-alpha-trans-fixed2.png "Screenshot of IE6 png bug fixed")\
-No PNG alpha transparency bug as seen in IE7
+<small>No PNG alpha transparency bug as seen in IE7</small>
 
 Instead of showing what is truly behind the image all IE renderer's prior to IE 7 just shows an ugly, bluish/gray background color.
 

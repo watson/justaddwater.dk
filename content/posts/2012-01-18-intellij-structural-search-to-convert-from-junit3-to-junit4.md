@@ -55,4 +55,4 @@ Replacement template:
 org.junit.Assert.assertThat.assertThat($msg$, $actual$, org.hamcrest.core.Is.is($expected$));
 ```
 
-[![](/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat-300x247.png "intellij-structural-search-assertequals-replace-by-assertThat")](/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat.png)
+[{{< img src=`/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat-300x247.png` alt=`` title=`intellij-structural-search-assertequals-replace-by-assertThat` class=`aligncenter size-medium wp-image-1542` width=`300` height=`247` >}}](/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat.png)

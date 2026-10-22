@@ -16,7 +16,7 @@ Background-image is 1px away from border on buttons.
 I have buttons that are styled with border and background-image. Must work in IE7. But there is a small 1px gap between border and the background-image.
 
 Look at this screenshot from IE7:\
-[![](/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.png "ie7css-flaw-background-image-on-buttons")](/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.png)
+[{{< img src=`/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.png` alt=`` title=`ie7css-flaw-background-image-on-buttons` class=`aligncenter size-full wp-image-964` width=`500` height=`169` >}}](/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.png)
 
 [ie7css-flaw-background-image-on-buttons](http://justaddwater.dk/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.html)
 

@@ -23,7 +23,7 @@ I found a working solution on PC Mag: "[Easy Date and Time Entry in Excel Tips](
 
 Take the cell and format it so it visually shows the colon for the number that is input. Go to the menu item "Format" \> "Cells..." dialog. Select "Custom" format and input "0\\:00" as shown on the screenshot.
 
-[![](/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat-300x284.png "excel-format-normal-number-as-timeformat")](/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat.png)
+[{{< img src=`/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat-300x284.png` alt=`` title=`excel-format-normal-number-as-timeformat` class=`alignnone size-medium wp-image-1397` width=`300` height=`284` >}}](/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat.png)
 
 #### Create (hidden)? cell to calculate time:
 
@@ -38,7 +38,7 @@ This calculation is hidden in the final spreadsheet in columns E, G, and J.
 
 Here a screenshot of the result:
 
-[![](/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet-300x153.png "excel-format-number-as-time-screenshot-timesheet")](/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet.png)
+[{{< img src=`/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet-300x153.png` alt=`` title=`excel-format-number-as-time-screenshot-timesheet` class=`alignnone size-medium wp-image-1396` width=`300` height=`153` >}}](/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet.png)
 
 I added the time sheet template here for further convenience.\
 [2011-timesheet.xls](http://justaddwater.dk/wp-content/uploads/2011/01/2011-timesheet1.xls) (47KB Excel format)

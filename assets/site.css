@@ -693,7 +693,8 @@ a img {
 #sidebar{margin-left:545px}
 .entry img{max-width:100%;height:auto}
 .entry pre{overflow:auto;background:#f4f4f4;padding:6px}
-.entry table{display:block;overflow:auto;max-width:100%}
+.entry table{max-width:100%}
+@media(max-width:740px){.entry table{display:block;overflow:auto}}
 .post .time{font-size:1em;color:#AAA}
 .post h2 a{color:#333}
 .postmeta{margin:.4em 0;color:#777;font-size:.9em}
@@ -725,5 +726,3 @@ a img {
 
 /* headings after a left-aligned photo paragraph clear it (original had inline clear:both on those h3) */
 .entry p:has(> img[align=left]) ~ h3{clear:both}
-/* group photo paragraph on /about-the-authors/ was text-align:center in the original (lost in the markdown export) */
-.entry p:has(> img[src*="mb-2006-018-C-00117"]){text-align:center}

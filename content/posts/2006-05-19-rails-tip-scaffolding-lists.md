@@ -12,7 +12,7 @@ technorati: ["ruby on rails", "tip", "usability", "listings"]
 
 You might wonder what a code example is doing here in a blog about usability and web standards. As you might know, Thomas and I are both web developers, and we're really obsessed about **making usable web applications**.
 
-What better way than to share code for things that make web apps more usable. Thomas has already [shared code that we use for this blog](/2006/05/02/justaddwaterdk-wordpress-plugins/ "Justaddwater.dk WordPress Plugins") to make it more usable (and I know there is more to come!).
+What better way than to share code for things that make web apps more usable. Thomas has already [shared code that we use for this blog](/2006/05/02/justaddwaterdk-wordpress-plugins/ "Justaddwater.dk WordPress Plugins") to make it more usable <small>(and I know there is more to come!)</small>.
 
 This tip is regarding scaffolding code in Ruby on Rails (which we use in Capgemini). The problem is that usually your data model contains **so many attributes, that it wrecks the list view totally**. There are so many horisontal columns in the table that it's impossible to see all columns on the screen, you get horizontal scroll. And even worse: The actions (view, edit, destroy) are completely hidden.
 

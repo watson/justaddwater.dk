@@ -16,9 +16,17 @@ Recently I have looked for better ways to display incoming links (referring URLs
 
 I must say that this part is done very well in MeasureMap.
 
-[](/wp-content/uploads/2006/01/Links%20List%20-%20Measure%20Map1137511815029.png "Measure Map links list")[![Measure Map links list](/wp-content/uploads/2006/01/Links%20List%20-%20Measure%20Map1137511815029.thumbnail.png)](/?attachment_id=91 "Measure Map links list")
+<div align="center">
 
-MeasureMap list of incoming links
+[](/wp-content/uploads/2006/01/Links%20List%20-%20Measure%20Map1137511815029.png "Measure Map links list")[{{< img src=`/wp-content/uploads/2006/01/Links%20List%20-%20Measure%20Map1137511815029.thumbnail.png` alt=`Measure Map links list` width=`65` height=`96` >}}](/?attachment_id=91 "Measure Map links list")
+
+</div>
+
+<div align="center">
+
+<small>MeasureMap list of incoming links</small>
+
+</div>
 
 It really works well. It seems updated very frequently (maybe even real-time, which I haven't tested).
 

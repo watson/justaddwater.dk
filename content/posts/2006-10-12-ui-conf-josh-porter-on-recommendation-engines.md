@@ -12,7 +12,7 @@ technorati: ["joshua porter", "uiconf", "ui11", "recommendation", "reputation", 
 
 \[Jesper's note: It will be interesting to see how this maps to Jakob Nielsen's old ideas about [reputation managers](http://www.useit.com/alertbox/990905.html).\]
 
-[![Josh Porter presenting](http://static.flickr.com/82/268008424_dd9859a898_t.jpg)](http://www.flickr.com/photos/jesper/268008424/ "Photo Sharing")\
+[{{< img src=`http://static.flickr.com/82/268008424_dd9859a898_t.jpg` alt=`Josh Porter presenting` width=`67` height=`100` >}}](http://www.flickr.com/photos/jesper/268008424/ "Photo Sharing")\
 Netflix example:
 
 Wall-Mart went head to head with Netflix and lost. They are now linking to Netflix
@@ -51,7 +51,7 @@ Pandora's Music recommendations\
 Hired musical experts and recorded small facets of the music.\
 Not a personalized recommendation system. Music based system recommendation from musical elements
 
-[![Audience at Josh Porter's presentation](http://static.flickr.com/112/268008560_f2f41fde7a_m.jpg)](http://www.flickr.com/photos/jesper/268008560/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/112/268008560_f2f41fde7a_m.jpg` alt=`Audience at Josh Porter's presentation` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/268008560/ "Photo Sharing")
 
 Tivo (movie recommendation) [thinks I'm Gay](http://snarkiness.typepad.com/snarkattack/2002/11/my_tivo_thinks_.html)\
 \* Basil Iwanyk\

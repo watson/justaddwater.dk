@@ -12,9 +12,9 @@ author: "jesper"
 Usability testing videos are an eye-opener. Jakob Nielsen presented a few video clips on last weeks "Usability Dagene 2005". Today he made one of them public available in his new alertbox [Talking-head video is boring online](http://www.useit.com/alertbox/video.html).
 
 Jakob's point is that recent eyetracking studys show that people gaze away from the talking head, instead keeping an eye on video controls and background details (in this video, a road sign). I think the article is very good (even though that during the conference he said that these findings were only preliminary).\
-[![video_talking_head_eyetrack](http://static.flickr.com/18/70625954_c5c8601eb5_m.jpg)](http://www.flickr.com/photos/jesper/70625954/ "Screenshot of video eyetrack study")
+[{{< img src=`http://static.flickr.com/18/70625954_c5c8601eb5_m.jpg` alt=`video_talking_head_eyetrack` width=`240` height=`176` >}}](http://www.flickr.com/photos/jesper/70625954/ "Screenshot of video eyetrack study")
 
-Other blogs ([Sync2Play](http://www.sync2play.com/20051205/talkinghead_video_is_boring.html), [OffOnATangent](http://offonatangent.blogspot.com/2005/12/talking-heads-are-boring.html), [Usernomics](http://www.usernomics.com/news/2005/12/talking-head-video-is-boring-online.html), [ChristianSarkar](http://www.christiansarkar.com/2005/12/keep_web_videos_under_a_minute.htm)) are already commenting on the article. But I think that there is a more important point here: **Use video clips to make your points**.
+Other blogs (<small>[Sync2Play](http://www.sync2play.com/20051205/talkinghead_video_is_boring.html), [OffOnATangent](http://offonatangent.blogspot.com/2005/12/talking-heads-are-boring.html), [Usernomics](http://www.usernomics.com/news/2005/12/talking-head-video-is-boring-online.html), [ChristianSarkar](http://www.christiansarkar.com/2005/12/keep_web_videos_under_a_minute.htm)</small>) are already commenting on the article. But I think that there is a more important point here: **Use video clips to make your points**.
 
 ### Video clips makes its points
 

@@ -14,7 +14,15 @@ How do you build a system that can deliver and update content to 100,000 people 
 
 > On January 10th, 2006, [MacRumors.com](http://www.macrumors.com/) successfully delivered live updates of the Macworld San Francisco Keynote speech to over 100,000 people simultaneously using the latest web technologies.
 >
+>
+> <div style="margin-left: 2em; margin-right: 2em; font-size: smaller">
+>
+>
 > *"By far the best mac keynote coverage I have ever seen. No constant page refreshing. No 'page will update every three minutes' even though they never do. I just let the page update every minute like it was supposed to. It was actually weird to get coverage without some sort of connection failure." - MacRumors member, war*
+>
+>
+> </div>
+>
 
 The live coverage web solution is basically a transscript updated frequently during the keynote. One article is about the [traffic they experienced](http://www.macrumors.com/events/mwsf2006-stats.php "MacRumors.com's Webcast Stats during the Macworld San Francisco 2006 Keynote"):
 
@@ -24,16 +32,44 @@ The live coverage web solution is basically a transscript updated frequently dur
 
 With peak loads that reaches insane levels of almost 4,000 hits per second:
 
-> |                       |                    |
-> |-----------------------|--------------------|
-> | Hits/second ⁽²⁾       | 3,812              |
-> | IRC users             | 6,079              |
-> | Simultaneous visitors | 109,000            |
-> | Bandwidth ⁽³⁾         | approx. 77Mbit/sec |
+> <table>
+> <tr>
+> <td>Hits/second <sup>(2)</sup></td>
+> <td>3,812</td>
+> </tr>
+> <tr>
+> <td>IRC users</td>
+> <td>6,079</td>
+> </tr>
+> <tr>
+> <td>Simultaneous visitors</td>
+> <td>109,000</td>
+> </tr>
+> <tr>
+> <td>Bandwidth <sup>(3)</sup></td>
+> <td>approx. 77Mbit/sec</td>
+> </tr>
+> </table>
 
-[![MacWorld keynote hits graph (from macrumors.com)](/wp-content/uploads/2006/01/hits-20060110.gif)](http://www.macrumors.com/events/mwsf2006-stats.php "MacWorld keynote hits graph (from macrumors.com)")
+
+<div align="center">
+
+
+[{{< img src=`/wp-content/uploads/2006/01/hits-20060110.gif` alt=`MacWorld keynote hits graph (from macrumors.com)` width=`480` height=`235` >}}](http://www.macrumors.com/events/mwsf2006-stats.php "MacWorld keynote hits graph (from macrumors.com)")
+
+
+</div>
+
+
+
+<div align="center">
+
 
 Hits per second from ~8am to ~12:30pm. Average over each minute.
+
+
+</div>
+
 
 They also posted an article about [how they built the system](http://www.macrumorslive.com/about/ "MacRumorsLive.com: EQX Webcast System") which is insanely interesting
 
@@ -53,7 +89,30 @@ This reminds me of Ajaxinfo (the guys behind [AJAX usability metrics](http://blo
 
 > Recently on Developer.com, I looked at ways for developers to [communicate the value of Ajax](http://www.developer.com/xml/article.php/3554271) in dollars and cents. Arguing for or against a technology usually creates some stress for developers, who tend to speak a different language from business decision makers.
 >
-> [TABLE]
+> <table width="100%" cellpadding="5" border="0">
+> <tr bgcolor="#f0f0f0" align="center">
+> <td><strong>Developers talk about</strong>
+> <div align="left">
+> <ul>
+> <li>Usability</li>
+> <li>Bandwidth</li>
+> <li>Ramp-up</li>
+> <li>Cost of Ownership</li>
+> </ul>
+> </div>
+> </td>
+> <td><strong>Managers talk about</strong>
+> <div align="left">
+> <ul>
+> <li>Efficiency</li>
+> <li>Transaction costs</li>
+> <li>Training costs</li>
+> <li>Return on Investment (ROI)</li>
+> </ul>
+> </div>
+> </td>
+> </tr>
+> </table>
 
 Right at the point. Performance website or not, the metrics he mentions above are almost like something Jakob Nielsen could have done. Conclusions:
 
@@ -63,7 +122,15 @@ Right at the point. Performance website or not, the metrics he mentions above ar
 >
 > Although the benefits of improved application architecture extend beyond mere time savings, when included in the decision making process, an ROI approach such as this can help make a solid business case for Ajax.
 
-![Total time taken (AJAX vs traditional webapp)](/wp-content/uploads/2006/01/totaltimetaken.gif)![Total bytes transferred (AJAX vs traditional webapp)](/wp-content/uploads/2006/01/bytestransferred.gif)
+
+<div align="center">
+
+
+{{< img src=`/wp-content/uploads/2006/01/totaltimetaken.gif` alt=`Total time taken (AJAX vs traditional webapp)` width=`300` height=`241` >}}{{< img src=`/wp-content/uploads/2006/01/bytestransferred.gif` alt=`Total bytes transferred (AJAX vs traditional webapp)` width=`300` height=`241` >}}
+
+
+</div>
+
 
 The benefits listed here are very similar to benefits when we're arguing for web-standards: Reduced bandwith, training costs, cost of ownership, and increased return on investment. But for the time being I still believe that AJAX has increased learning costs for developers. (Although most developers are really keen on using AJAX and webstandards it still requires expert knowledge regarding libraries, backend integration and browser compatibility — to name a few).\
 I'd be happy to hear your comments on this. Please share more info here. Also check out Ajaxinfo's [Call for AJAX Studies](http://www.ajaxinfo.com/default~viewart~22.htm).

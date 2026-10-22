@@ -33,7 +33,7 @@ Also, check out the [Wikipedia entry on spacer.gif](http://en.wikipedia.org/wiki
 I'm suddenly seriously interested in this of purely historical reasons. It's amazing how much effort everybody put into aligning tables and serving up spacer.gif's. In this perspective, the wikipedia article has links to some amazing articles. Here's from David Siegels website "[The Single Pixel GIF Trick](http://www.dsiegel.com/tips/wonk5/single.html "David Siegel: The single pixel GIF")":
 
 > **Never Use the Standard HTML Constructs**\
-> ![](http://www.dsiegel.com/tips/resources/dot_clear.gif)\
+> {{< img src=`http://www.dsiegel.com/tips/resources/dot_clear.gif` alt=`` vspace=`1` >}}\
 > If you want machines to read your web pages, use things like definition lists, unordered lists, headers, etc. If you want people to read them, don't do it. They take away your typographic control. Specify your own font sizes when you want a size change. If you must use bullets, make your own bullets (I don't see much point in bullets if your vertical grouping is good). And try not to number your list items. It is hardly ever necessary.
 >
 > If the standard HTML constructs delivered true typographic results, I'd use them, but since typographers don't get invited to sit on the committees that make the decisions, I work around them to get what I want.
@@ -49,4 +49,4 @@ Also its kind of interesting that the transparent pixel has almost gone away aga
 **So please help me out here: Post anything you know here in a comment that can lead me closer to enlightment on who invented that gif and what happened!**
 
 PS. The accompanying website for the book is still available. Oh yeah, if you **wondered about the fish**, go see it in action on the site. To follow the spirit, the link opens in a new window:\
-[![Check out David Siegels' classic web design book.](http://www.killersites.com/images/creatingKillerSitesLogoWhite.gif)](http://www.killersites.com/killerSites/core.html)
+[{{< img src=`http://www.killersites.com/images/creatingKillerSitesLogoWhite.gif` alt=`Check out David Siegels' classic web design book.` style=`margin-top: 25px` width=`340` height=`39` border=`0` >}}](http://www.killersites.com/killerSites/core.html)

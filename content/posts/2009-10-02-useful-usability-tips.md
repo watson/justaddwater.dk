@@ -31,7 +31,7 @@ Just to pull one of many useful findings:
 >
 > A [study by UX Matters](http://www.uxmatters.com/mt/archives/2006/07/label-placement-in-forms.php) found that the ideal position for labels in forms is above the fields. On many forms, labels are put to the left of the fields, creating a two-column layout; while this looks good, it’s not the easiest layout to use. Why is that? Because forms are generally vertically oriented; i.e. **users fill the form from top to bottom**. Users scan the form downwards as they go along. And following the label to the field below is easier than finding the field to the right of the label.
 >
-> [![Tumblr](http://media2.smashingmagazine.com/wp-content/uploads/2009/09/tumblr.png)](http://www.tumblr.com/)\
+> [{{< img src=`http://media2.smashingmagazine.com/wp-content/uploads/2009/09/tumblr.png` alt=`Tumblr` width=`480` height=`414` >}}](http://www.tumblr.com/)\
 > *[Tumblr](http://www.tumblr.com/) features a simple and elegant sign-up form that adheres to UX Matter’s recommendation.*
 
 Even though most of the findings are pretty much basic stuff, I highly recommend reading it and researching the linked articles in the bottom.

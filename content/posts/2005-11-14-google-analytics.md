@@ -11,7 +11,7 @@ author: "jesper"
 
 We just signed up for testing the new [Google Analytics](http://www.google.com/analytics) statistics software. It gives us an idea of who is browsing our website. On the humorous side, the signup process is missing something. It seems that the license agreement is not found. Hilarious. Of course I accepted (but I'm still wondering what that means). We're looking forward to try this out.
 
-[![screenshot google analytics agreement](http://static.flickr.com/26/63155510_d2335c263a_m.jpg)](http://www.flickr.com/photos/jesper/63155510/ "screenshot google analytics: license agreement not found")
+[{{< img src=`http://static.flickr.com/26/63155510_d2335c263a_m.jpg` alt=`screenshot google analytics agreement` width=`240` height=`225` >}}](http://www.flickr.com/photos/jesper/63155510/ "screenshot google analytics: license agreement not found")
 
 Photo Matt writes that this is the first [online stat tool that actuallly validates XHTML strict](http://photomatt.net/2005/11/14/google-analytics/). Previously, it's been a problem with major sites that use online stats, that the JavaScript messes up an otherwise XHTML compliant page:
 

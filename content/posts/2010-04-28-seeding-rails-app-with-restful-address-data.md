@@ -28,6 +28,6 @@ Now I can access municipalities in a grouped selectbox like so in the view code:
     %>
 
 The final result rendered in the user interface:\
-![](/wp-content/uploads/2010/04/Screen-shot-2010-04-28-at-3.18.06-PM.png "Rails rendered optgroup selectbox")
+{{< img src=`/wp-content/uploads/2010/04/Screen-shot-2010-04-28-at-3.18.06-PM.png` alt=`` title=`Rails rendered optgroup selectbox` class=`aligncenter size-full wp-image-1343` width=`286` height=`253` >}}
 
 This code is based on Rails 2.3.5.

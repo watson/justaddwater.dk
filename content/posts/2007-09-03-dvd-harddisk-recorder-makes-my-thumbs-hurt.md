@@ -12,7 +12,7 @@ technorati: ["user experience", "usability", "dvd", "recorder", "harddisk", "ami
 
 Last week our old DVD player stopped working, and we decided it was time for a technological quantum leap.
 
-![Amitech 736](http://www.amitech.dk/includes/images/54736.jpg "Amitech 736")
+{{< img src=`http://www.amitech.dk/includes/images/54736.jpg` alt=`Amitech 736` title=`Amitech 736` width=`250` height=`167` >}}
 
 So I ordered this DVD/harddisk recorder: [Amitech 736](http://www.amitech.dk/includes/webprodukt/hifi2/harddiskRecorder/index736.asp) with all the right buzzword features:
 

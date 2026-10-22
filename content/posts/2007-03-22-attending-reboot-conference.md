@@ -20,7 +20,11 @@ However, just networking and meeting old friends and colleagues and perhaps pote
 
 Like Jakob "mentalized" Skjerning, I must agree that the website is absolutely horrific. And after registering relations to other participants, I was "spammed" by auto generated emails each time I'm involved in a new relation:
 
+<div style="text-align: center">
+
 ![gmail-inbox-reboot-invitations.png](/wp-content/uploads/2007/03/gmail-inbox-reboot-invitations.png)
+
+</div>
 
 See you soon!
 

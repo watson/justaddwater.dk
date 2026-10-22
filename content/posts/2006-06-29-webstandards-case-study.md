@@ -56,16 +56,53 @@ In this particular case, there were 6 errors and 15,700 warnings (all of which c
 
 ### Result
 
-|                                              | Before | After     |
-|----------------------------------------------|--------|-----------|
-| display:none on subgroup:                    | 19 sec | \<0.5 sec |
-| `document.getElementsByTagName('*').length`: | 27,000 | 11,471    |
-| Number of image tags:                        | 7,200  | 1,426     |
-| Number of tables:                            | 1,416  | 11        |
-| HTML validation errors:                      | 6      | 0         |
-| HTML validation warnings:                    | 15,700 | 0         |
-| IE memory consumption (avg):                 | 46MB   | 35MB      |
-| IE memory consumption (peak).                | 58MB   | 36MB      |
+<table width="100%" cellspacing="1" style="background: #eeeeee">
+<tr>
+<th></th>
+<th>Before</th>
+<th>After</th>
+</tr>
+<tr>
+<td>display:none on subgroup:</td>
+<td>19 sec</td>
+<td>&lt;0.5 sec</td>
+</tr>
+<tr>
+<td><code>document.getElementsByTagName('*').length</code>:</td>
+<td>27,000</td>
+<td>11,471</td>
+</tr>
+<tr>
+<td>Number of image tags:</td>
+<td>7,200</td>
+<td>1,426</td>
+</tr>
+<tr>
+<td>Number of tables:</td>
+<td>1,416</td>
+<td>11</td>
+</tr>
+<tr>
+<td>HTML validation errors:</td>
+<td>6</td>
+<td>0</td>
+</tr>
+<tr>
+<td>HTML validation warnings:</td>
+<td>15,700</td>
+<td>0</td>
+</tr>
+<tr>
+<td>IE memory consumption (avg):</td>
+<td>46MB</td>
+<td>35MB</td>
+</tr>
+<tr>
+<td>IE memory consumption (peak).</td>
+<td>58MB</td>
+<td>36MB</td>
+</tr>
+</table>
 
 ### Long-term findings
 
@@ -90,7 +127,7 @@ These tools I used for quick investigation of the HTML page:
 
 - [HTML validator Firefox extension](https://addons.mozilla.org/firefox/249/ "Firefox Add-ons: HTML validator") by [Marc Gueury](http://users.skynet.be/mgueury/mozilla/ "Marc Gueury Mozilla homepage")
 - [Firebug Firefox extension](https://addons.mozilla.org/firefox/1843/ "Firefox Add-ons: Firebug") by [Joe Hewitt](http://www.joehewitt.com/ "Joe Hewitt website")
-- Content/markup ratio with [pageinfo bookmarklet](http://slayeroffice.com/?c=/content/tools/pagenfo.html "Slayeroffice: Page Info Favelet") by Slayeroffice (Steve Chipman) who has a [cat named Javascript](http://slayeroffice.com/archives/?p=140 "Slayeroffice: Javascript the cat")!
-- Counting of HTML elements with [JavaScript shell bookmarklet](http://www.squarefree.com/shell/ "Squarefree: Javascript Shell") by Jesse Ruderman: `document.getElementsByTagName('*').length` could be done dicectly from the browser address bar by typing: `javascript:alert(document.getElementsByTagName('*').length);`
+- Content/markup ratio with [pageinfo bookmarklet](http://slayeroffice.com/?c=/content/tools/pagenfo.html "Slayeroffice: Page Info Favelet") by Slayeroffice (Steve Chipman) <small>who has a [cat named Javascript](http://slayeroffice.com/archives/?p=140 "Slayeroffice: Javascript the cat")!</small>
+- Counting of HTML elements with [JavaScript shell bookmarklet](http://www.squarefree.com/shell/ "Squarefree: Javascript Shell") by Jesse Ruderman: `document.getElementsByTagName('*').length` <small>could be done dicectly from the browser address bar by typing:</small> `javascript:alert(document.getElementsByTagName('*').length);`
 
 More info on my firefox extensions in the article: [Web developer’s collection of browser tools](/2005/11/30/web-developers-collection-of-browser-tools/ "Permanent Link to Web developer’s collection of browser tools") (Nov 30th, 2005).

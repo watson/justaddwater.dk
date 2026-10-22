@@ -31,7 +31,11 @@ Unfortunately, it seems that we will have to wait a bit more before we can use t
 
 I have borrowed these screenshots from [Avinash Kaushik's](http://www.kaushik.net/avinash/2007/05/google-analytics-is-re-launched-do-these-five-things-first-in-v2.html) blog post.
 
-[![Google Analtyics Dashboard](http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_dashboard_sm.jpg)](http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_dashboard.jpg)
+<div align="center">
+
+[{{< img src=`http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_dashboard_sm.jpg` alt=`Google Analtyics Dashboard` hspace=`7` border=`0` >}}](http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_dashboard.jpg)
+
+</div>
 
 You can drag and drop sort the boxes on the dashboard, personalize the content. I really love the use of the tiny sparklines next to each number.
 
@@ -43,15 +47,31 @@ Compare this to the old dashboard (screenshot from our Justaddwater.dk blog):
 
 Over a year ago I wrote about the tedious process [to view referring URLs in Google Analytics](/2006/01/08/google-analytics-trick-how-to-view-referring-urls/). Now, from Avinash's screenshot, it looks like this:
 
+<div align="center">
+
 [![google analytics v2 discover data](http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_discover_data-2_sm-1.jpg)](http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_discover_data-2.jpg)
+
+</div>
+
+<div align="left">
 
 In the list in the bottom, it looks very similar to the old version, and I cannot see the unique URL (unless the screenshot above gets unique links from the frontpages of stumbleupon.com, google.com, and fredcavazza.net?).
 
+</div>
+
+<div align="left">
+
 Unfortunately, it seems like it's still necessary to dig after the information regarding the unique URLs.
+
+</div>
+
+<div align="left">
 
 Compare to how it is now:
 
-[![Google-Analytics-referring-urls](http://static.flickr.com/37/82489027_60abb70353.jpg)](http://www.flickr.com/photos/jesper/82489027/ "'Referring Source' in 'Marketing Optimization' › 'Visitor Segment Performance'")
+</div>
+
+[{{< img src=`http://static.flickr.com/37/82489027_60abb70353.jpg` alt=`Google-Analytics-referring-urls` width=`500` height=`344` >}}](http://www.flickr.com/photos/jesper/82489027/ "'Referring Source' in 'Marketing Optimization' › 'Visitor Segment Performance'")
 
 I really hope this get's easier and that I can see all the unique URLs from a site directly.
 

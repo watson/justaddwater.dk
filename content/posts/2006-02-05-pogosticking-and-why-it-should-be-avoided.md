@@ -20,11 +20,11 @@ In my wording, pogosticking is: **Unnecessary navigation and extra clicks that o
 
 Linksys has the following page layout on [their support page](http://www.linksys.com/servlet/Satellite?childpagename=US%2FLayout&packedargs=c%3DL_Content_C1%26cid%3D1115416835852&pagename=Linksys%2FCommon%2FVisitorWrapper "Linksys support page"). I had a Linksys router, and want to find any software updates. I remember that my router is wireless, has 4 cable connections, is blue, the product name is something with "v2" in it. How do I find it?
 
-[![Linksys support page](/wp-content/uploads/2006/02/screenshot-linksys-pogostick-crop.png)](/2006/02/05/pogosticking-and-why-it-should-be-avoided/linksys-support-page/ "Linksys support page")
+[{{< img src=`/wp-content/uploads/2006/02/screenshot-linksys-pogostick-crop.png` alt=`Linksys support page` width=`414` height=`322` >}}](/2006/02/05/pogosticking-and-why-it-should-be-avoided/linksys-support-page/ "Linksys support page")
 
 There are 398 products in the dropdown box. My thought here is that their competitors must have a comparative advantage. This is what I found on the similar [Netgear support](http://kbserver.netgear.com/downloads_support.asp "Netgear Support Home Page") page:
 
-[![Netgear support page](/wp-content/uploads/2006/02/screenshot-netgear-pogostick-crop.png)](/2006/02/05/pogosticking-and-why-it-should-be-avoided/netgear-support-page/ "Netgear support page")
+[{{< img src=`/wp-content/uploads/2006/02/screenshot-netgear-pogostick-crop.png` alt=`Netgear support page` width=`273` height=`442` >}}](/2006/02/05/pogosticking-and-why-it-should-be-avoided/netgear-support-page/ "Netgear support page")
 
 Here are 261 products to choose from.
 
@@ -42,13 +42,13 @@ Also, Jonathan Boutelle has a [good point on archive pogosticking](http://www.jo
 
 > One of the prototypical features of any blog is a monthly archive. This is typically a link on the sidebar for each month since the blog went live, and usually looks something like this:
 >
-> ![monthlyarchive.gif](http://www.jonathanboutelle.com/mt/archives/monthlyarchive.gif)
+> {{< img src=`http://www.jonathanboutelle.com/mt/archives/monthlyarchive.gif` alt=`monthlyarchive.gif` width=`100` height=`230` >}}
 >
 > It’s obviously a good thing to provide access to archived content from the front page. But what use case is being satisfied by this design? Is this really the best way to access archived content?
 >
 > The casual browser who wants to explore your older content is forced to click on each month in succession, “pogo-sticking” from month to month just to scan your stories for interesting content. Loyal readers looking for a particular article are also forced into the same pattern.
 >
-> ![workflow1.gif](http://www.jonathanboutelle.com/mt/archives/workflow1.gif)
+> {{< img src=`http://www.jonathanboutelle.com/mt/archives/workflow1.gif` alt=`workflow1.gif` width=`400` height=`236` >}}
 >
 > This is a huge waste of time for readers. A much better approach to the archiving problem is to provide one page with hyperlinks to ALL your content, organized by date. This allows your readers to scroll immediately to the article they are looking for, bypassing the annoying “pogo-sticking”.
 

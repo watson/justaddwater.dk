@@ -17,7 +17,7 @@ January is so far the most visited month. To give you an idea of who you and you
 As mentioned above, January was the month where we really got noticed around the world. Just see the rising graph below where we top around Thursday/Friday the 26th or the 27th with over 130 visitors:
 
 ![Visits and Pageviews, January 2006](/wp-content/uploads/2006/02/Google%20Analytics%20-%20Visits%20and%20Pageviews%20-%20Jan2006.jpg)\
-Visits and Pageviews, January 2006 - *Source: Google Analytics*
+<small>Visits and Pageviews, January 2006 - *Source: Google Analytics*</small>
 
 ### Top 5 Stories
 
@@ -29,7 +29,7 @@ One post in particular has drawn a lot of attention. Part of this is of cause be
 4.  [Windows Vista setting new standards for Find-as-You-Type searching](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/) (109 visitors)
 5.  [Google Analytics trick: How to view referring URLs](/2006/01/08/google-analytics-trick-how-to-view-referring-urls/) (69 visitors)
 
-*Source: Measure Map*
+*<small>Source: Measure Map</small>*
 
 ### Browser Versions
 
@@ -37,17 +37,32 @@ This month Mozilla Firefox have surpassed Internet Explorer and can now claim 1s
 
 ![Browser Versions, January 2006](/wp-content/uploads/2006/02/Google%20Analytics%20-%20Browser%20Versions%20-%20Jan2006.png)
 
-Browser Versions, January 2006 - *Source: Google Analytics*
+<small>Browser Versions, January 2006 - *Source: Google Analytics*</small>
 
 ### Statistical numbers
 
-|                                       |                         |
-|---------------------------------------|-------------------------|
-| Total visits:                         | 1,563                   |
-| Total unique visitors:                | 1,185 (2.78% returning) |
-| Average visits per day:               | 50.42                   |
-| Average pageviews per visit:          | 1.79                    |
-| Dropout percentage on the front page: | 45.88%                  |
+<table border="1">
+<tr>
+<td>Total visits:</td>
+<td>1,563</td>
+</tr>
+<tr>
+<td>Total unique visitors:</td>
+<td>1,185 (2.78% returning)</td>
+</tr>
+<tr>
+<td>Average visits per day:</td>
+<td>50.42</td>
+</tr>
+<tr>
+<td>Average pageviews per visit:</td>
+<td>1.79</td>
+</tr>
+<tr>
+<td>Dropout percentage on the front page:</td>
+<td>45.88%</td>
+</tr>
+</table>
 
 ### RSS/Atom
 
@@ -56,10 +71,10 @@ Around 15% of our hits come from news feed aggregators. This is a bit lower then
 ### Other graphs
 
 ![Geographical reader location, January 2006](/wp-content/uploads/2006/02/Google%20Analytics%20-%20Geo%20Map%20Overlay%20-%20Jan2006.jpg)\
-Geographical reader location, January 2006 - *Source: Google Analytics*
+<small>Geographical reader location, January 2006 - *Source: Google Analytics*</small>
 
 ![Visits by Source, January 2006](/wp-content/uploads/2006/02/Google%20Analytics%20-%20Vistis%20by%20Source%20-%20Jan2006.jpg)\
-Visits by Source, January 2006 - *Source: Google Analytics*
+<small>Visits by Source, January 2006 - *Source: Google Analytics*</small>
 
 ![Visits by New and Returning, January 2006](/wp-content/uploads/2006/02/Google%20Analytics%20-%20Visits%20by%20New%20and%20Returning%20-%20Jan2006.jpg)\
-Visits by New and Returning, January 2006 - *Source: Google Analytics*
+<small>Visits by New and Returning, January 2006 - *Source: Google Analytics*</small>

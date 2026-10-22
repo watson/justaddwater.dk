@@ -18,7 +18,7 @@
 <div class="post">
 <h2>{{ partial "tt.html" .Title }}</h2>
 <div class="entry">
-{{ .Content }}
+{{ partial "tx.html" (dict "s" .Content "plain" false) }}
 {{ if eq .RelPermalink "/archive/" }}{{ partial "archive-lists.html" . }}{{ end }}
 {{ with .Params.technorati }}<p><small>Technorati Tags: {{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $p := site.GetPage (printf "/tags/%s" ($t | urlize)) }}{{ if $p }}<a href="{{ $p.RelPermalink }}" rel="tag">{{ $t }}</a>{{ else }}{{ $t }}{{ end }}{{ end }}</small></p>{{ end }}
 {{ if eq .Type "posts" }}

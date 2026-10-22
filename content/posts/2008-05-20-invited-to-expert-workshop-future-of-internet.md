@@ -10,18 +10,18 @@ author: "jesper"
 ---
 
 This Friday I'm invited to attend a workshop on the future of Internet (usage) hosted by [Innovation Lab](http://ilab.dk) -- a Danish company that has a lot of experience in searching and analyzing future trends.\
-![innovation lab logo](http://www.next2007.dk/2007/ilabLogo.gif)
+{{< img src=`http://www.next2007.dk/2007/ilabLogo.gif` alt=`innovation lab logo` class=`aligncenter` >}}
 
 Skilled people from [Wemind](http://www.wemind.dk/) and [Creuna](http://www.creuna.dk/) will also attend.
 
-![Wemind logo](http://www.wemind.dk/images/wemind-logo.png)
+{{< img src=`http://www.wemind.dk/images/wemind-logo.png` alt=`Wemind logo` class=`aligncenter` >}}
 
-![Creuna logo](http://www.creuna.dk/gfx/logo-creuna.gif)
+{{< img src=`http://www.creuna.dk/gfx/logo-creuna.gif` alt=`Creuna logo` class=`aligncenter` >}}
 
 Although it's a so-called expert workshop, I definitely don't consider myself as an expert and i hate to guess on the future (i'd rather guess when chances are I am guessing correct). A Danish philosopher said "Prediction is difficult, especially of the future".
 
-![clairvoyant looking into orb of the future](http://www.rickrichards.com/astral/clairvoyant1a.jpg)\
-(picture from http://www.rickrichards.com)
+{{< img src=`http://www.rickrichards.com/astral/clairvoyant1a.jpg` alt=`clairvoyant looking into orb of the future` class=`aligncenter` >}}\
+<small>(picture from http://www.rickrichards.com)</small>
 
 My focus in the workshop will be ease of use and simplicity, as historically these factors have lead to big leaps in innovation.
 

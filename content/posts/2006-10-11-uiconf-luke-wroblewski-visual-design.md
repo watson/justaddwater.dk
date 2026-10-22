@@ -12,7 +12,7 @@ technorati: ["luke wroblewski", "uiconf", "ui11", "visual", "design", "visceral"
 
 *\[Live notes from UI Conf\]*\
 Luke Wroblewski\
-[![Lukew](http://static.flickr.com/111/267101293_28f7b8b5b0_s.jpg)](http://www.flickr.com/photos/jesper/267101293/ "Photo Sharing")\
+[{{< img src=`http://static.flickr.com/111/267101293_28f7b8b5b0_s.jpg` alt=`Lukew` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267101293/ "Photo Sharing")\
 Management "i hate purple" - the visceral side with immediate reaction. look-and-feel level.
 
 But there is a deeper Structural, visual side. Structure underlining level.
@@ -74,7 +74,7 @@ Example Monitoring overall health of network \[very good example\]\
 From two separate pages with table based data
 
 To this\
-[![Lukew presenting](http://static.flickr.com/84/267101000_b37af4e5d5_m.jpg)](http://www.flickr.com/photos/jesper/267101000/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/84/267101000_b37af4e5d5_m.jpg` alt=`Lukew presenting` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/267101000/ "Photo Sharing")
 
 Example from ebay\
 finance, gallery, second chance bid, feedback, feature\
@@ -111,7 +111,7 @@ Recently i had to design for an organization with only 256 colors. "IT will not 
 ### Exercise
 
 \[following here was an excercise redesigning an interface\]\
-[![Our exercise team](http://static.flickr.com/104/267100630_8f8db50d4d_m.jpg)](http://www.flickr.com/photos/jesper/267100630/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/104/267100630_8f8db50d4d_m.jpg` alt=`Our exercise team` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/267100630/ "Photo Sharing")
 
 Verizon example:
 
@@ -162,7 +162,7 @@ New version feels simpler but can actually do more. They got rid of visual diffe
 
 After lunch: Other exercise to evaluate either two email applications or two currency trading applications.
 
-[![Packed room](http://static.flickr.com/96/267099727_7b7aba0036_t.jpg)](http://www.flickr.com/photos/jesper/267099727/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/96/267099727_7b7aba0036_t.jpg` alt=`Packed room` width=`100` height=`67` >}}](http://www.flickr.com/photos/jesper/267099727/ "Photo Sharing")
 
 ### Visual personality
 
@@ -244,7 +244,7 @@ Four groups of teams either describing\
 
 =\>**These are called mood boards** in traditional madvertising
 
-[![Our team working hard](http://static.flickr.com/101/267203836_a67732a2d7_s.jpg)](http://www.flickr.com/photos/jesper/267203836/ "Photo Sharing")[![Rugby fantasy moodboard](http://static.flickr.com/95/267203608_f09684f928_s.jpg)](http://www.flickr.com/photos/jesper/267203608/ "Photo Sharing")[![Personas in play](http://static.flickr.com/106/267204065_1c633e9c1d_s.jpg)](http://www.flickr.com/photos/jesper/267204065/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/101/267203836_a67732a2d7_s.jpg` alt=`Our team working hard` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267203836/ "Photo Sharing")[{{< img src=`http://static.flickr.com/95/267203608_f09684f928_s.jpg` alt=`Rugby fantasy moodboard` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267203608/ "Photo Sharing")[{{< img src=`http://static.flickr.com/106/267204065_1c633e9c1d_s.jpg` alt=`Personas in play` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267204065/ "Photo Sharing")
 
 ### Final Q&A
 

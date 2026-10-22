@@ -196,8 +196,12 @@ The vocabulary are standard shapes to express common concepts.
 - Tool agnostic (works even in powerpoint)
 - Whiteboard-compatible (so quick sketching of shapes are easily distinct)
 
+<div align="center">
+
 ![](http://www.jjg.net/ia/visvocab/images/fig10.gif)\
-**Figure 10:** An example use of a decision point in a login sequence
+<small>**Figure 10:** An example use of a decision point in a login sequence</small>
+
+</div>
 
 From <http://www.jjg.net/ia/visvocab/>
 

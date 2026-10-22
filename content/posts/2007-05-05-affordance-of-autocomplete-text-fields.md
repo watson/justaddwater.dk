@@ -33,7 +33,7 @@ And as soon as you start typing, the results will appear as shown below:
 
 **Yahoo!s Design Pattern Library** has [one autocomplete example](http://developer.yahoo.com/ypatterns/pattern.php?pattern=autocomplete) from the recent Yahoo! Mail beta:
 
-[![Auto completion of contacts in Yahoo! Mail Beta](http://developer.yahoo.com/ypatterns/images/pattern_autocomplete_ani.gif)](http://developer.yahoo.com/ypatterns/pattern.php?pattern=autocomplete)
+[{{< img src=`http://developer.yahoo.com/ypatterns/images/pattern_autocomplete_ani.gif` alt=`Auto completion of contacts in Yahoo! Mail Beta` width=`441` height=`207` border=`0` >}}](http://developer.yahoo.com/ypatterns/pattern.php?pattern=autocomplete)
 
 The screenshot used for example has no affordance to hint the hidden functionality. There is also nothing describing the availability of automplete functionality.
 

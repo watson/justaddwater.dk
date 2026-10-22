@@ -17,11 +17,11 @@ En ting er dog blevet værre: Udbakke-metaforen. Nu er den gemt mere af vejen en
 Se fx her hvor jeg netop har lagt en regning i "udbakke" til betaling. Hvor lang tid var du om at finde den?\
 [](/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult.png)
 
-[![](/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult-300x271.png "danske-netbank-udbakke-skjult")](/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult.png)
+[{{< img src=`/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult-300x271.png` alt=`` title=`danske-netbank-udbakke-skjult` class=`aligncenter size-medium wp-image-1450` width=`300` height=`271` >}}](/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult.png)
 
 Lad os lige  spole noget tid tilbage. Danske bank proklamerede at man ville investere op mod 1.000.000.000 danske kroner i at gøre netbanken mere brugervenlig. De kalder initiativet "Bedre bank" ([link til "bedre bank" info](http://www.danskebank.dk/da-dk/bedrebank/Documents/bedrebank.html?page=posts&category_id=1&post_id=18 "Danske Bank: Bedre Bank")). Her er et screenshot med teksten "Vi investerer massivt i brugervenlighed".
 
-[![](/wp-content/uploads/2011/04/danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic.jpg "danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic")](/wp-content/uploads/2011/04/danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic.jpg)
+[{{< img src=`/wp-content/uploads/2011/04/danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic.jpg` alt=`` title=`danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic` class=`size-full wp-image-1461` width=`173` height=`189` >}}](/wp-content/uploads/2011/04/danskebank-vi-investerer-massivt-i-brugervenlighed-tiltag_pic.jpg)
 
 *Fra danske banks website... men uden link til uddybning af konkrete tiltag*
 
@@ -35,7 +35,7 @@ Hvor lang tid var du om at lokalisere udbakken på øverste screenshot. 1 sekund
 
 Lad os lige vende tilbage til screenshottet øverst. Jeg har netop lagt en regning til betaling i udbakke. Sådan her ser skærmen ud:
 
-[![Udbakke er gemt af vejen i venstremenuen, og statusbeskeden står helt nederst i skærmen](/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult-highlight-arrow.png "danske-netbank-udbakke-skjult-highlight-arrow")](/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult-highlight-arrow.png)
+[{{< img src=`/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult-highlight-arrow.png` alt=`Udbakke er gemt af vejen i venstremenuen, og statusbeskeden står helt nederst i skærmen` title=`danske-netbank-udbakke-skjult-highlight-arrow` class=`aligncenter size-full wp-image-1463` width=`370` height=`650` >}}](/wp-content/uploads/2011/04/danske-netbank-udbakke-skjult-highlight-arrow.png)
 
 Netbanken på billedet giver korrekt to vigtige informationer:
 
@@ -60,7 +60,7 @@ Det meste af pladsen bliver faktisk brugt på indtastningsfelterne til en "ny tr
 
 ## Det kunne eksempelvis gøres sådan her:
 
-[![Mit forslag til en bedre anbefaling: Mere tydelig. Visuel vægt. Placeret så den ses først.](/wp-content/uploads/2011/04/danske-netbank-udbakke-better-confirmation-300x171.png "danske-netbank-udbakke-better-confirmation")](/wp-content/uploads/2011/04/danske-netbank-udbakke-better-confirmation.png)
+[{{< img src=`/wp-content/uploads/2011/04/danske-netbank-udbakke-better-confirmation-300x171.png` alt=`Mit forslag til en bedre anbefaling: Mere tydelig. Visuel vægt. Placeret så den ses først.` title=`danske-netbank-udbakke-better-confirmation` class=`aligncenter size-medium wp-image-1452` width=`300` height=`171` >}}](/wp-content/uploads/2011/04/danske-netbank-udbakke-better-confirmation.png)
 
 ## Bonustip: Advarsel hvis banken forlades med fyldt udbakke
 

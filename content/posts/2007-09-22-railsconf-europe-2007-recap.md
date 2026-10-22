@@ -20,7 +20,11 @@ Dave Thomas' keynote had a great section about art and the work of great artists
 
 "Everytime you step away from your keyboard, you engage another part of your brain", he said, refering to using whiteboards, papers, napkins, etc, to sketch ideas and think it over. At leas in Capgemini, the next year will be the year of the prototypes, and I still believe that Ruby on Rails is just fit for this purpose. (yes, I know we can and should do a lot more than just prototypes, but it really is a sweetspot where big enterprise organisations with a fixed architectural platform can still taste some of the advantages with Ruby on Rails).
 
-[![IMG_3416_crop](http://farm2.static.flickr.com/1194/1414028690_bed6089427_m.jpg "IMG_3416_crop")](http://www.flickr.com/photos/jesper/1414028690/ "Photo Sharing")
+<div style="float: left; margin-top: 0pt; margin-right: 10px; width: 160px">
+
+[{{< img src=`http://farm2.static.flickr.com/1194/1414028690_bed6089427_m.jpg` alt=`IMG_3416_crop` title=`IMG_3416_crop` align=`left` width=`160` height=`240` >}}](http://www.flickr.com/photos/jesper/1414028690/ "Photo Sharing")
+
+</div>
 
 David Heinemeier gave a good keynote the next morning, and one of the things he mentioned was just a little thing for Rails developers. But actually a brilliant example that software can always benefit from: **Better defaults**. David mentioned that the debugger in the upcoming Rails 2.0 is only working in development environment by default. Which means that your production application won't break if you forget to remove a breakpoint. Ruby on Rails have a lot of good defaults.
 
@@ -52,9 +56,9 @@ Thanks to Jørgen's boss for paying the dinner. They really deserve the mention.
 
 Photos from the evening below. It was really a lovely evening and the discussions continued fueled with beer, as you can probably see on the photos.
 
-[![IMG_3452](http://farm2.static.flickr.com/1053/1413201523_8d779e84d3_m.jpg)](http://www.flickr.com/photos/jesper/1413201523/ "Photo Sharing")
+[{{< img src=`http://farm2.static.flickr.com/1053/1413201523_8d779e84d3_m.jpg` alt=`IMG_3452` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/1413201523/ "Photo Sharing")
 
-[![IMG_3446](http://farm2.static.flickr.com/1252/1413190853_5837bf797d_t.jpg)](http://www.flickr.com/photos/jesper/1413190853/ "Photo Sharing")[![IMG_3448](http://farm2.static.flickr.com/1232/1413194401_77fba88922_t.jpg)](http://www.flickr.com/photos/jesper/1413194401/ "Photo Sharing")[![IMG_3458](http://farm2.static.flickr.com/1069/1414092082_0e4f58bb8b_t.jpg)](http://www.flickr.com/photos/jesper/1414092082/ "Photo Sharing")[![IMG_3448](http://farm2.static.flickr.com/1232/1413194401_77fba88922_t.jpg)](http://www.flickr.com/photos/jesper/1413194401/ "Photo Sharing")[![IMG_3451](http://farm2.static.flickr.com/1380/1413197627_75280e7f6a_t.jpg)](http://www.flickr.com/photos/jesper/1413197627/ "Photo Sharing")[![IMG_3441](http://farm2.static.flickr.com/1045/1413156349_d6ef40be3d_t.jpg)](http://www.flickr.com/photos/jesper/1413156349/ "Photo Sharing")
+[{{< img src=`http://farm2.static.flickr.com/1252/1413190853_5837bf797d_t.jpg` alt=`IMG_3446` width=`100` height=`67` >}}](http://www.flickr.com/photos/jesper/1413190853/ "Photo Sharing")[{{< img src=`http://farm2.static.flickr.com/1232/1413194401_77fba88922_t.jpg` alt=`IMG_3448` width=`100` height=`67` >}}](http://www.flickr.com/photos/jesper/1413194401/ "Photo Sharing")[{{< img src=`http://farm2.static.flickr.com/1069/1414092082_0e4f58bb8b_t.jpg` alt=`IMG_3458` width=`100` height=`67` >}}](http://www.flickr.com/photos/jesper/1414092082/ "Photo Sharing")[{{< img src=`http://farm2.static.flickr.com/1232/1413194401_77fba88922_t.jpg` alt=`IMG_3448` width=`100` height=`67` >}}](http://www.flickr.com/photos/jesper/1413194401/ "Photo Sharing")[{{< img src=`http://farm2.static.flickr.com/1380/1413197627_75280e7f6a_t.jpg` alt=`IMG_3451` width=`100` height=`67` >}}](http://www.flickr.com/photos/jesper/1413197627/ "Photo Sharing")[{{< img src=`http://farm2.static.flickr.com/1045/1413156349_d6ef40be3d_t.jpg` alt=`IMG_3441` width=`100` height=`67` >}}](http://www.flickr.com/photos/jesper/1413156349/ "Photo Sharing")
 
 More info:
 

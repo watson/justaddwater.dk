@@ -28,14 +28,51 @@ I've tried a lot of different prototyping tools: Paper, Photoshop, Powerpoint, D
 
 My experience goes pretty well with the 2002 GUUUI survey where 52 people replied on their preferred prototyping tool and their satisfaction with it (people preferring HTML were the most happy with their tool).
 
-|  |  |  |  |  |  |
-|----|----|----|----|----|----|
-| "I'm perfectly happy with the prototyping tool I'm using" |  |  |  |  |  |
-|  | Strongly disagree | Mildly disagree | Neither agree nor disagree | Mildly agree | Strongly agree |
-| All replies (52 replies) | 7.5% | 37.7% | 15.1% | 32.1% | 7.5% |
-| Using a visual or text based HTML tool (15 replies) | 6.7% | 20.0% | 6.7% | 60.0% | 6.7% |
-| Using a diagramming tool (13 replies) | 7.7% | 76.9% | 7.7% | 0.0% | 7.7% |
-| Using a graphic design tool (10 replies) | 10.0% | 20.0% | 20.0% | 50.0% | 0.0% |
+<table cellspacing="1" cellpadding="2" border="0" class="article">
+<tr>
+<td class="smallCopy" colspan="5"><span class="bold">"I'm perfectly happy with the prototyping tool I'm using"</span></td>
+</tr>
+<tr>
+<td class="smallCopy"></td>
+<td align="center" class="smallCopy">Strongly disagree</td>
+<td align="center" class="smallCopy">Mildly disagree</td>
+<td align="center" class="smallCopy">Neither agree nor disagree</td>
+<td align="center" class="smallCopy">Mildly agree</td>
+<td align="center" class="smallCopy">Strongly agree</td>
+</tr>
+<tr>
+<td bgcolor="#f0f0f2" class="smallCopy">All replies (52 replies)</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">7.5%</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">37.7%</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">15.1%</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">32.1%</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">7.5%</td>
+</tr>
+<tr>
+<td class="smallCopy">Using a visual or text based HTML tool (15  		 replies)</td>
+<td valign="top" align="center" class="smallCopy">6.7%</td>
+<td valign="top" align="center" class="smallCopy">20.0%</td>
+<td valign="top" align="center" class="smallCopy">6.7%</td>
+<td valign="top" align="center" class="smallCopy">60.0%</td>
+<td valign="top" align="center" class="smallCopy">6.7%</td>
+</tr>
+<tr>
+<td bgcolor="#f0f0f2" class="smallCopy">Using a diagramming tool  		 (13 replies)</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">7.7%</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">76.9%</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">7.7%</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">0.0%</td>
+<td valign="top" bgcolor="#f0f0f2" align="center" class="smallCopy">7.7%</td>
+</tr>
+<tr>
+<td class="smallCopy">Using a graphic design tool (10 replies)</td>
+<td valign="top" align="center" class="smallCopy">10.0%</td>
+<td valign="top" align="center" class="smallCopy">20.0%</td>
+<td valign="top" align="center" class="smallCopy">20.0%</td>
+<td valign="top" align="center" class="smallCopy">50.0%</td>
+<td valign="top" align="center" class="smallCopy">0.0%</td>
+</tr>
+</table>
 
 Source [2002 GUUUI survey](http://www.guuui.com/issues/01_03_02.php "GUUUI - Results from a survey of web prototyping tools usage") on prototyping tools.
 

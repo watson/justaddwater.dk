@@ -24,7 +24,7 @@ Explanation:
 1.  **Screenshot** of the entire page or content area
 2.  **Description** of the page purpose. Primary action and possible secondary actions on page.
 3.  **Preconditions**: What data must be available for the page to render. Where is data retrieved?
-4.  **Postconditions**: Data that the user enters. Where is data saved? (Could also be data behavioural data: Example measuring if user completes a purchase)
+4.  **Postconditions**: Data that the user enters. Where is data saved? <small>(Could also be data behavioural data: Example measuring if user completes a purchase)</small>
 
 Then repeat for each screen. Sometimes I also need to document variations of each screen. In that way, each page is repeated with the appropriate screenshots.
 

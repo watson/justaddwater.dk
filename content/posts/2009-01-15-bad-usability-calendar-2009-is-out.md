@@ -13,7 +13,7 @@ My Norwegian friend Eidar from NetLife Research pointed out that the 2009 versio
 
 Learning by bad examples is often a good way in discussing usability with people that are not hardcore usability people.
 
-![](http://www.badusability.com/img/international/bad-usability-calendar-2009-thumbnail.png)
+{{< img src=`http://www.badusability.com/img/international/bad-usability-calendar-2009-thumbnail.png` alt=`` class=`alignnone` width=`237` height=`315` >}}
 
 I'm currently wrapping a couple of A3 calendars in plastic to use as posters here at the office.
 

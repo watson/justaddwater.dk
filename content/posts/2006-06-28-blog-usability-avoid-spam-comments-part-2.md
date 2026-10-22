@@ -10,7 +10,7 @@ author: "thomas"
 technorati: ["blog usability", "spam comments", "akismet", "bbcode", "guide", "wordpress", "blogging", "justaddwater.dk", "htaccess", "wordpress theme"]
 ---
 
-![Can of SPAM](/wp-content/uploads/2006/06/spamcan-small2_resize.jpg)In our previous article [Blog usability: Avoid spam comments](/2006/06/24/blog-usability-avoid-spam-comments/ "justaddwater.dk: Blog usability: Avoid spam comments") we discussed the two ways we currently where fighting spam comments on our blog:
+{{< img src=`/wp-content/uploads/2006/06/spamcan-small2_resize.jpg` alt=`Can of SPAM` align=`right` style=`margin-left: 10px` >}}In our previous article [Blog usability: Avoid spam comments](/2006/06/24/blog-usability-avoid-spam-comments/ "justaddwater.dk: Blog usability: Avoid spam comments") we discussed the two ways we currently where fighting spam comments on our blog:
 
 1.  Use Akismet for Wordpress
 2.  Make a spam filter against BBCode like "\[/url\]"
@@ -32,9 +32,9 @@ Since the symbolic link is located in our theme directory it is never deleted wh
 
 ### Simple 3-Step Implementation Guide
 
-If you don't have shell access you must ask your host provider to do this for you
+<small>If you don't have shell access you must ask your host provider to do this for you</small>
 
-1.  **Create Symbolic Link** Create a symbolic link from your theme directory to the `wp-comments-post.php` file:Go to the directory of your current theme (in our case `wp-content/themes/jaw/`) and execute the following command: ln -s ../../../wp-comments-post.php my-comments-post.php In this example we name the symbolic link `my-comments-post.php`, but you can choose any name.
+1.  **Create Symbolic Link** Create a symbolic link from your theme directory to the `wp-comments-post.php` file:Go to the directory of your current theme (in our case `wp-content/themes/jaw/`) and execute the following command: ln -s ../../../wp-comments-post.php my-comments-post.php <small>In this example we name the symbolic link `my-comments-post.php`, but you can choose any name.</small>
 
 2.  **Update Comment Form** Still in your theme directory you need to find which files that contain links to the `wp-comments-post.php` file. To do this execute the following command: grep -l wp-comments-post.php \* You will then get a list of the files you need to edit. Now update each file so that the link to `wp-comments-post.php` instead point to the symbolic link. This is usually done by changing the following:
 

@@ -20,7 +20,7 @@ Try to swap the sitemap for the homepage!
 
 Jareds opinion. Sitemaps actually serve a better job than most homepages do.
 
-[![Jesper taking live notes](http://static.flickr.com/116/267800486_8689bac074_m.jpg)](http://www.flickr.com/photos/jesper/267800486/ "Photo Sharing")\
+[{{< img src=`http://static.flickr.com/116/267800486_8689bac074_m.jpg` alt=`Jesper taking live notes` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/267800486/ "Photo Sharing")\
 \[photo of me live-blogging\]
 
 Pulldowns and flyouts simply doesn't work! The trigger words don't smell.
@@ -90,7 +90,7 @@ Wants help to close all those darn toolbars. Hello Mr. paperclip.\
 It looks like you need help. There is a bullet point called "I need help" :)
 
 \[Jesper's note: reminds me of this image from Kathy Sierra's presentation on RailsConf:\]\
-[![Disturbing Paperclip](http://static.flickr.com/109/252302653_84e4d4ccba_m.jpg)](http://www.flickr.com/photos/jesper/252302653/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/109/252302653_84e4d4ccba_m.jpg` alt=`Disturbing Paperclip` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/252302653/ "Photo Sharing")
 
 **The knowledge gap**\
 Discussion about Current knowledge point compared to target knowledge\

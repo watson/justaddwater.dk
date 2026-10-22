@@ -10,7 +10,7 @@ author: "thomas"
 technorati: ["justaddwater.dk", "blogging", "usability", "privacy policy", "law", "Google"]
 ---
 
-![Digital Footprints](http://justaddwater.dk/wp-content/uploads/2007/09/digital_footprints.jpg)When asking a user about personal details you should also tell what you are going to use it for. Basically it's always good practice to have a privacy policy available on your website so users can see what data is being collected about them, how it is uses etc.
+{{< img src=`http://justaddwater.dk/wp-content/uploads/2007/09/digital_footprints.jpg` alt=`Digital Footprints` style=`float: left; margin: 0.5em 1em 1em 0` >}}When asking a user about personal details you should also tell what you are going to use it for. Basically it's always good practice to have a privacy policy available on your website so users can see what data is being collected about them, how it is uses etc.
 
 Many cooperate websites have privacy policies. They are long and written in a non-userfriendly language similar to the User Agreements we all approve without reading them when installing software or signing up with online services.
 

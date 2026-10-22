@@ -13,7 +13,7 @@ At a current project I am working on, we use Hudson and Maven to build our Java 
 
 Not working strategy: To append memory params on the job itself. We modified the job inside Hudson configuration and added `-Xmx512m -XX:MaxPermSize=256m` to the MAVEN_OPTS field in the "build" section of the job configuration.
 
-[![](/wp-content/uploads/2010/11/mavensettings-for-hudson-slave-job-300x161.png "mavensettings-for-hudson-slave-job")](/wp-content/uploads/2010/11/mavensettings-for-hudson-slave-job.png)
+[{{< img src=`/wp-content/uploads/2010/11/mavensettings-for-hudson-slave-job-300x161.png` alt=`` title=`mavensettings-for-hudson-slave-job` class=`alignright size-medium wp-image-1374` width=`300` height=`161` >}}](/wp-content/uploads/2010/11/mavensettings-for-hudson-slave-job.png)
 
 Unfortunately this did not work. Still an OutOfMemoryError on the Hudson slave. Fortunately, another strategy actually worked: To modify the settings of the slave service/daemon itself.
 

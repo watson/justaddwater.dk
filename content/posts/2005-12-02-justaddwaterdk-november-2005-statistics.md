@@ -22,19 +22,19 @@ It would be interesting if there where some kind of way to find out how many peo
 It is funny to watch where our visitors come from. When we started the blog only our friends in Denmark read it. But after a month of writing the global picture is a bit more diverse:
 
 ![Geographical reader location, November 2005 - justaddwater.dk](/wp-content/googleanalyticsgeomapoverlaynov05_01.jpg)\
-Geographical reader location, November 2005 - *Source: Google Analytics*
+<small>Geographical reader location, November 2005 - *Source: Google Analytics*</small>
 
 ### Misc. graphs
 
 Here is just a small collection of the graphs we can pull from Google Analytics. As with the graph above these does not cover the two first weeks of November, but only the 14th to the 30th:
 
 ![Visits and Pageviews, November 2005 - justaddwater.dk](/wp-content/googleanalyticsvisitsandpageviewsnov05.jpg)\
-Visits and Pageviews, November 2005 - *Source: Google Analytics*
+<small>Visits and Pageviews, November 2005 - *Source: Google Analytics*</small>
 
 ![Vistis by New and Returning, November 2005 - justaddwater.dk](/wp-content/googleanalyticsvisitsbynewandreturningnov05.jpg)\
-Visits by New and Returning, November 2005 - *Source: Google Analytics*
+<small>Visits by New and Returning, November 2005 - *Source: Google Analytics*</small>
 
 ![Visits by Source, November 2005 - justaddwater.dk](/wp-content/googleanalyticsvisitsbysourcenov05.jpg)\
-Visits by Source, November 2005 - *Source: Google Analytics*
+<small>Visits by Source, November 2005 - *Source: Google Analytics*</small>
 
-Technorati tags: [web statistics](http://technorati.com/tag/web+statistics) [google analytics](http://technorati.com/tag/google+analytics)
+<small>Technorati tags: [web statistics](http://technorati.com/tag/web+statistics) [google analytics](http://technorati.com/tag/google+analytics)</small>

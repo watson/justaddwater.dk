@@ -39,3 +39,7 @@
 /2015/04/15/change-history-of-svn-repository/ # SVN post: code/pre blocks and trailing backslash artifacts seen in excerpts
 /2011/09/ # date archive (month)
 /author/jesper/ # author archive
+/2006/01/12/justaddwaterdk-december-2005-statistics/ # table-heavy statistics post
+/2006/01/09/fixing-the-keyboard-shortcut-problem/ # post with table
+/2006/01/14/ajax-performance-stats-roi-and-business-value/ # post with tables
+/2006/06/29/webstandards-case-study/ # post with table

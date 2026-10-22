@@ -1,5 +1,5 @@
 {{- /* WordPress-style wptexturize. arg: dict "s" string "plain" bool (plain text title vs HTML fragment).
-       Straight quotes -> curly, -- -> en dash, --- -> em dash, ... -> ellipsis; text nodes only,
+       Straight quotes -> curly, NxN -> N×N, -- -> en dash, --- -> em dash, ... -> ellipsis; text nodes only,
        never inside <pre>/<code>, tags, attributes. Output is safe HTML. */ -}}
 {{- $in := .s -}}
 {{- if .plain -}}{{ $in = $in | replaceRE `&` "&amp;" | replaceRE `<` "&lt;" | replaceRE `>` "&gt;" }}{{ end -}}
@@ -12,7 +12,7 @@
 {{- $t := . | replaceRE `&(?:quot|#0*34|#x22);` `"` | replaceRE `&(?:#0*39|#x27|apos);` `'` -}}
 {{- $p := cond (findRE `^[\s(\[{\-]` $prev) " " "x" -}}
 {{- $t = print $p $t -}}
-{{- $t = $t | replaceRE `\bWordpress\b` "WordPress" | replaceRE `\.\.\.` "…" | replaceRE `---` "—" | replaceRE ` -- ` " — " | replaceRE `([^x]|^)--` "${1}–" | replaceRE ` - ` " – "
+{{- $t = $t | replaceRE `\b(\d+)x(\d+)\b` "${1}×${2}" | replaceRE `\bWordpress\b` "WordPress" | replaceRE `\.\.\.` "…" | replaceRE `---` "—" | replaceRE ` -- ` " — " | replaceRE `([^x]|^)--` "${1}–" | replaceRE ` - ` " – "
   | replaceRE `([\s(\[{\-])'(\d\d\b|em\b|cause\b|tis\b|twas\b)` "${1}’${2}"
   | replaceRE `([\s(\[{"\-])'` "${1}‘" | replaceRE `'` "’"
   | replaceRE `([\s(\[{\-‘])"` "${1}“" | replaceRE `"` "”" -}}

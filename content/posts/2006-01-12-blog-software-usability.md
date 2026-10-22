@@ -15,7 +15,7 @@ technorati: ["wordpress", "blogging", "search", "usability", "google analytics",
 I like Wordpress Dashboard. The name suggests that it's an overview of whats relevant to your blog. What's happening. What's popular. Who comments. What important updates are available. The Dashboard should work like in a car. The **most important and relevant information should be visible at a glance**. Lets have a brief look at the dashboard.\
 I suggest you only take a brief look to judge for your self whether you think the main objectives of the Dashboard page are met.
 
-[![Wordpress Dashboard for Justaddwater.dk](/wp-content/uploads/2006/01/screenshot%20WordPress%20dashboard%201137074448414.thumbnail.png)](/wp-content/uploads/2006/01/screenshot%20WordPress%20dashboard%201137074448414.png "Wordpress Dashboard for Justaddwater.dk")
+[{{< img src=`/wp-content/uploads/2006/01/screenshot%20WordPress%20dashboard%201137074448414.thumbnail.png` alt=`Wordpress Dashboard for Justaddwater.dk` width=`62` height=`96` >}}](/wp-content/uploads/2006/01/screenshot%20WordPress%20dashboard%201137074448414.png "Wordpress Dashboard for Justaddwater.dk")
 
 Click on the screenshot above for and look for 5 seconds only. Then ask yourself what you could remember from the page. Yup you just tried a [5 second usability test](http://www.uie.com/articles/five_second_test/).
 

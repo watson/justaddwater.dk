@@ -73,9 +73,9 @@ Fjerne funktioner.
 Fordobling af forbbedring. Fordoble gennemførelse. Eksempel Tokyo Plakater i subway er med fotomodeller. Internet: Involvering, interaktivt. Det involverer mig. Video med sjovt eksempel: Der var brugt hvid hudfarve og japansk kvinde undrer sig over at man ser det med hvidt ansigt og ikke hudfarve.\
 5 brugere -\> typisk 50-100 brugere
 
-[![Jacob Nielsen speaks at Usability Dagene, Copenhagen, November 21, 2006](http://static.flickr.com/32/65632712_c4563a2c23_m.jpg)](http://www.flickr.com/photos/jesper/65632712/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/32/65632712_c4563a2c23_m.jpg` alt=`Jacob Nielsen speaks at Usability Dagene, Copenhagen,  November 21, 2006` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/65632712/ "Photo Sharing")
 
-Jesper Rønn-Jensen and Jakob Nielsen, Usability Week, Copenhagen, 2004
+<small>Jesper Rønn-Jensen and Jakob Nielsen, Usability Week, Copenhagen, 2004</small>
 
 User benefits by usability work. Documented effect typically 100% or 200% bigger success rate.\
 No usability work:

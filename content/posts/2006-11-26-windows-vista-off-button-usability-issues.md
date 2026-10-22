@@ -14,7 +14,7 @@ Below is my argument that some user interface widgets are introduced only becaus
 
 > I'm sure there's a whole *team* of UI designers, programmers, and testers who worked very hard on the OFF button in Windows Vista, but seriously, is this the best you could come up with?
 >
-> ![Image of the menu in Windows Vista for turning off the computer](http://www.joelonsoftware.com/items/2006/11/21vistaOff.PNG)
+> {{< img src=`http://www.joelonsoftware.com/items/2006/11/21vistaOff.PNG` alt=`Image of the menu in Windows Vista for turning off the computer` border=`0` >}}
 >
 > Every time you want to leave your computer, you have to choose between nine, count them, nine options: two icons and seven menu items. The two icons, I think, are shortcuts to menu items. I'm guessing the lock icon does the same thing as the lock menu item, but I'm not sure which menu item the on/off icon corresponds to.
 >

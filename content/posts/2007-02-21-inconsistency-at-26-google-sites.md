@@ -18,43 +18,134 @@ Below are Chris' observations from his article [A to z of Google Information Arc
 >
 > There is an attempt at being consistent in the menu designs, but someone needs to sit down a write a style guide. The Googlers can't even agree on whether they should be using "*Sign Out*" or "*Sign out*". The font sizes are almost the same. Apart from Analytics they all agree on the text colour. The only people using *FAQ* instead of *Help* are Alerts. AdSense use *Log Out* instead of *Sign Out*, and they put it before the *Help* item instead of after it.
 >
-> |  |  |
-> |----|----|
-> | **The A to Z of Google Menu Options** |  |
-> | ![](http://usability.typepad.com/google/gmenu_adsense.jpg) | [AdSense](https://www.google.com/adsense/) |
-> | ![](http://usability.typepad.com/google/gmenu_adwords.jpg) | [AdWords](https://adwords.google.com/select) |
-> | ![](http://usability.typepad.com/google/gmenu_alerts.jpg) | [Alerts](http://www.google.com/newsalerts) |
-> | ![](http://usability.typepad.com/google/gmenu_analytics.jpg) | [Analytics](https://www.google.com/analytics/home/) |
-> | ![](http://usability.typepad.com/google/gmenu_base.jpg) | [Base](http://base.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_books.jpg) | [Books](http://books.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_calendar.jpg) | [Calendar](http://www.google.com/calendar) |
-> | ![](http://usability.typepad.com/google/gmenu_coop.jpg) | [Co-op](http://www.google.com/coop/) |
-> | ![](http://usability.typepad.com/google/gmenu_docs.jpg) | [Docs](http://docs.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_finance.jpg) | [Finance](http://finance.google.com/finance) |
-> | ![](http://usability.typepad.com/google/gmenu_froogle.jpg) | [Froogle](http://froogle.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_google.jpg) | [Google](http://www.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_groups.jpg) | [Groups](http://groups.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_history.jpg) | [History](http://google.com/searchhistory) |
-> | ![](http://usability.typepad.com/google/gmenu_mail.jpg) | [Mail](http://mail.google.com/mail) |
-> | ![](http://usability.typepad.com/google/gmenu_maps.jpg) | [Maps](http://maps.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_myaccount.jpg) | [My Account](https://www.google.com/accounts/) |
-> | ![](http://usability.typepad.com/google/gmenu_news.jpg) | [News](http://news.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_notebook.jpg) | [Notebook](http://www.google.com/gn) |
-> | ![](http://usability.typepad.com/google/gmenu_pagecreator.jpg) | [Page Creator](http://pages.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_patents.jpg) | [Patents](http://www.google.com/patents) |
-> | ![](http://usability.typepad.com/google/gmenu_personalised.jpg) | [Personalised](http://www.google.com/ig) |
-> | ![](http://usability.typepad.com/google/gmenu_photos.jpg) | [Photos](http://picasaweb.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_reader.jpg) | [Reader](http://www.google.com/reader/) |
-> | ![](http://usability.typepad.com/google/gmenu_video.jpg) | [Video](http://video.google.com/) |
-> | ![](http://usability.typepad.com/google/gmenu_webmastertools.jpg) | [Webmaster Tools](http://www.google.com/webmasters/sitemaps) |
+> <table id="AutoNumber1" style="border-collapse: collapse" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0">
+> <tr>
+> <td colspan="2">
+> <p align="center"><strong>The A to Z of Google Menu Options</strong></p>
+> </td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_adsense.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="https://www.google.com/adsense/">AdSense</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_adwords.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="https://adwords.google.com/select">AdWords</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_alerts.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/newsalerts">Alerts</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_analytics.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="https://www.google.com/analytics/home/">Analytics</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_base.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://base.google.com/">Base</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_books.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://books.google.com/">Books</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_calendar.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/calendar">Calendar</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_coop.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/coop/">Co-op</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_docs.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://docs.google.com/">Docs</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_finance.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://finance.google.com/finance">Finance</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_froogle.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://froogle.google.com/">Froogle</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_google.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/">Google</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_groups.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://groups.google.com/">Groups</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_history.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://google.com/searchhistory">History</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_mail.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://mail.google.com/mail">Mail</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_maps.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://maps.google.com/">Maps</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_myaccount.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="https://www.google.com/accounts/">My Account</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_news.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://news.google.com/">News</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_notebook.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/gn">Notebook</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_pagecreator.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://pages.google.com/">Page Creator</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_patents.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/patents">Patents</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_personalised.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/ig">Personalised</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_photos.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://picasaweb.google.com/">Photos</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_reader.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/reader/">Reader</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_video.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://video.google.com/">Video</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_webmastertools.jpg` alt=`` width=`550` height=`20` >}}</td>
+> <td><a href="http://www.google.com/webmasters/sitemaps">Webmaster Tools</a></td>
+> </tr>
+> </table>
 >
 > And you may have noticed the new blue menu list that has started to appear in the left hand side of some Google pages.
 >
-> |  |  |
-> |----|----|
-> | ![](http://usability.typepad.com/google/gmenu_blue_mail.jpg) | [Mail](http://mail.google.com/mail/) |
-> | ![](http://usability.typepad.com/google/gmenu_blue_calendar.jpg) | [Calendar](http://www.google.com/calendar/) |
-> | ![](http://usability.typepad.com/google/gmenu_blue_docs.jpg) | [Docs](http://docs.google.com/) |
+> <table id="AutoNumber2" style="border-collapse: collapse" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0">
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_blue_mail.jpg` alt=`` width=`415` height=`16` >}}</td>
+> <td><a href="http://mail.google.com/mail/">Mail</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_blue_calendar.jpg` alt=`` width=`415` height=`16` >}}</td>
+> <td><a href="http://www.google.com/calendar/">Calendar</a></td>
+> </tr>
+> <tr>
+> <td>{{< img src=`http://usability.typepad.com/google/gmenu_blue_docs.jpg` alt=`` width=`415` height=`16` >}}</td>
+> <td><a href="http://docs.google.com/">Docs</a></td>
+> </tr>
+> </table>
 >
 > They haven't even got the same entries. It is *Mail* or *Gmail*? Should it be *more* or *all my services*?
 >

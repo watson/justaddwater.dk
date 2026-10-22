@@ -12,7 +12,7 @@ technorati: ["IE", "IE3", "IE4", "IE5", "IE5.5", "IE6", "IE7", "multiple interne
 
 **Update 2006-09-28: [All IE Browsers Standalone On Same PC](/2006/09/28/all-ie-browsers-standalone-on-same-pc/ "Justaddwater.dk: All IE Browsers Standalone On Same PC") (September 28, 2006) solves the problem.**
 
-**UPDATE 2006-02-03: The method described below will sometimes not work. To run IE7 and IE6 side-by-side, see the new post "[IE7 beta running side by side with IE6](/2006/02/03/ie7-beta-running-side-by-side-with-ie6/ "Justaddwater.dk: IE7 beta running side by side with IE6")". For older versions of IE, this still works and you could safely continue as described below**, (but you should acknowledge that this is still "unsupported", and is likely to make Internet Explorer less stable).
+**UPDATE 2006-02-03: The method described below will sometimes not work. To run IE7 and IE6 side-by-side, see the new post "[IE7 beta running side by side with IE6](/2006/02/03/ie7-beta-running-side-by-side-with-ie6/ "Justaddwater.dk: IE7 beta running side by side with IE6")". For older versions of IE, this still works and you could safely continue as described below**, <small>(but you should acknowledge that this is still "unsupported", and is likely to make Internet Explorer less stable)</small>.
 
 For some time I've used a trick from Quirksmode.org (Peter Paul Koch) to test webpages with different versions if Microsoft Internet Explorer (IE) on the same machine. This trick can come in handy if you want to run usability tests with old versions of IE.
 

@@ -14,16 +14,20 @@ technorati: ["blog usabilty", "blogging", "usability", "digg", "delicious", "soc
 
 Do you remember this from the pre-bubble era? Lots of websites had a link like this. Who used it by the way? I didn't! Here's Altavista homepage from February 2000.
 
+<div align="center">
+
 [![Altavista homepage 2000 cropped](/wp-content/uploads/2006/11/screenshot-altavista-2000-crop.thumbnail.png)](/2006/11/15/blog-usability-distracting-bookmark-icons/altavista-homepage-2000-full-screenshot/ "Altavista homepage 2000 full screenshot")\
 Image from [Internet Archive](http://web.archive.org/web/*/http://altavista.com)
 
+</div>
+
 Now it has gotten even worse on blogs. From Matt over at 37Signals, "[It's the content, not the icons](http://www.37signals.com/svn/posts/93-its-the-content-not-the-icons)":
 
-> ![](http://www.37signals.com/svn/images/joeyinteractive_icons.png)\
-> ![corunet icons](http://www.37signals.com/svn/images/corunet_icons.png) ![web2 list icons](http://www.37signals.com/svn/images/web2list_icons.png)\
-> ![treehugger icons](http://www.37signals.com/svn/images/treehugger_icons.png)\
-> ![danlockton icons](http://www.37signals.com/svn/images/danlockton_icons.png)\
-> ![zingfu icons](http://www.37signals.com/svn/images/zingfu_icons.png)\
+> {{< img src=`http://www.37signals.com/svn/images/joeyinteractive_icons.png` alt=`` width=`259` height=`73` >}}\
+> {{< img src=`http://www.37signals.com/svn/images/corunet_icons.png` alt=`corunet icons` width=`132` height=`57` >}} {{< img src=`http://www.37signals.com/svn/images/web2list_icons.png` alt=`web2 list icons` style=`overflow:hidden` width=`195` height=`33` >}}\
+> {{< img src=`http://www.37signals.com/svn/images/treehugger_icons.png` alt=`treehugger icons` style=`overflow:hidden` width=`434` height=`33` >}}\
+> {{< img src=`http://www.37signals.com/svn/images/danlockton_icons.png` alt=`danlockton icons` style=`overflow:hidden` width=`433` height=`72` >}}\
+> {{< img src=`http://www.37signals.com/svn/images/zingfu_icons.png` alt=`zingfu icons` style=`overflow:hidden` width=`450` height=`33` >}}\
 >
 > Given the Ebola-like spread of these things they must be really effective, right? Not so much. Zero out of [Technorati’s top 10 blogs](http://www.technorati.com/pop/blogs/) feature those icons. And only two out of the 15 entries in the current crop at [Digg’s Top Today](http://digg.com/view/all/popular/today) page offer “Digg me” icons.
 >

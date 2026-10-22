@@ -26,26 +26,26 @@ Many of the comments are apparently not automated and address a specific thing i
 ### A: Author name and URL is a product name
 
 The most common situation we see is like this:\
-[![](/wp-content/uploads/2008/12/comment-spam-name-and-url.png "comment-spam-name-and-url")](/wp-content/uploads/2008/12/comment-spam-name-and-url.png)\
+[{{< img src=`/wp-content/uploads/2008/12/comment-spam-name-and-url.png` alt=`` title=`comment-spam-name-and-url` class=`alignnone size-full wp-image-983` width=`445` height=`170` >}}](/wp-content/uploads/2008/12/comment-spam-name-and-url.png)\
 Until now, we have manually assessed the content of each of these. If it's relevant for the blog post, we have been approving it.
 
 ### B: Author name seems personal but URL is a product name
 
 A seemingly valid name but apparently the URL points on a product (or may be a site that sells a product). Example:\
-[![](/wp-content/uploads/2008/12/comment-spam-valid-name-product-url.png "comment-spam-valid-name-product-url")](/wp-content/uploads/2008/12/comment-spam-valid-name-product-url.png)
+[{{< img src=`/wp-content/uploads/2008/12/comment-spam-valid-name-product-url.png` alt=`` title=`comment-spam-valid-name-product-url` class=`alignnone size-full wp-image-984` width=`445` height=`133` >}}](/wp-content/uploads/2008/12/comment-spam-valid-name-product-url.png)
 
 This type of comments have been approved if we decided the content to be valid. In this case it's actually an invalid comment as the CSS is included inside the example file. But I approved the comment as the author may not have known that.
 
 ### C: Author has a gravatar but URL is a product name
 
 In rare cases, people post a comment where there is a valid gravatar but something smells about the URL. Example:\
-[![](/wp-content/uploads/2008/12/comment-spam-valid-gravatar.png "comment-spam-valid-gravatar")](/wp-content/uploads/2008/12/comment-spam-valid-gravatar.png)\
+[{{< img src=`/wp-content/uploads/2008/12/comment-spam-valid-gravatar.png` alt=`` title=`comment-spam-valid-gravatar` class=`alignnone size-full wp-image-985` width=`445` height=`111` >}}](/wp-content/uploads/2008/12/comment-spam-valid-gravatar.png)\
 This type of comments have been marked as spam if the content was not adding any real value.
 
 ### D: A personal gravatar but name is a product name
 
 We have very rarely seen people that use a product name instead of their actual name. Example:\
-[![](/wp-content/uploads/2008/12/comment-spam-valid-gravatar-invalid-name.png "comment-spam-valid-gravatar-invalid-name")](/wp-content/uploads/2008/12/comment-spam-valid-gravatar-invalid-name.png)\
+[{{< img src=`/wp-content/uploads/2008/12/comment-spam-valid-gravatar-invalid-name.png` alt=`` title=`comment-spam-valid-gravatar-invalid-name` class=`alignnone size-full wp-image-986` width=`445` height=`211` >}}](/wp-content/uploads/2008/12/comment-spam-valid-gravatar-invalid-name.png)\
 In this case, Taylor Thompson would be better off by using his real name. He obviously put effort into commenting. In this case we have previously approved comments.
 
 ### E: Comments in other languages

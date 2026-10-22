@@ -11,7 +11,7 @@ author: "jesper"
 
 I saw this example on [a blog today](http://uxcampcph.org/):
 
-[![](/wp-content/uploads/2012/02/web-font-example.png "web-font-example")](/wp-content/uploads/2012/02/web-font-example.png)
+[{{< img src=`/wp-content/uploads/2012/02/web-font-example.png` alt=`` title=`web-font-example` class=`aligncenter size-full wp-image-1581` width=`250` height=`106` >}}](/wp-content/uploads/2012/02/web-font-example.png)
 
 Studying the code, it turns out this is just [clever use of Google's font api](https://developers.google.com/webfonts/docs/getting_started). What you essentially do is to add this to your \<HEAD\> element:
 

@@ -12,7 +12,7 @@ technorati: ["book", "jared spool", "tara scanlon", "will schroeder", "carolyn s
 
 Earlier I wrote about [Pogosticking and why it should be avoided](/2006/02/05/pogosticking-and-why-it-should-be-avoided/ "Justaddwater.dk: Pogosticking and why it should be avoided"). I mentioned that pogosticking is: **Unnecessary navigation and extra clicks that occurs because pages do not match the information users need to find what they are looking for**.
 
-[![Book cover: Web Site Usability](/wp-content/uploads/2006/06/screenshot-spool-book-1997.thumbnail.png)](/wp-content/uploads/2006/06/screenshot-spool-book-1997.png "Book cover: Web Site Usability")Then I'm reading this book from 1999. It's a classic: Web Site Usability (a designer's guide) by Jared Spool, Tara Scanlon, Will Schroeder, Carolyn Snyder & Terri DeAngelo. Before you read the following excerpt, there's a few things to bear in mind:
+[{{< img src=`/wp-content/uploads/2006/06/screenshot-spool-book-1997.thumbnail.png` alt=`Book cover: Web Site Usability` align=`right` style=`margin-left: 5px` >}}](/wp-content/uploads/2006/06/screenshot-spool-book-1997.png "Book cover: Web Site Usability")Then I'm reading this book from 1999. It's a classic: Web Site Usability (a designer's guide) by Jared Spool, Tara Scanlon, Will Schroeder, Carolyn Snyder & Terri DeAngelo. Before you read the following excerpt, there's a few things to bear in mind:
 
 - The book is from 1999 but the research is conducted around 1996-1997 as I understand it.
 - The examples are really old school.

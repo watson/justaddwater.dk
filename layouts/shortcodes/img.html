@@ -1,0 +1,6 @@
+{{- /* Raw <img> from the original posts with presentational attributes (class, align, hspace, vspace, style, width, height, border). */ -}}
+{{- $a := dict -}}
+{{- range $k := slice "class" "align" "hspace" "vspace" "style" "width" "height" "border" -}}
+  {{- with $.Get $k -}}{{- $a = merge $a (dict $k .) -}}{{- end -}}
+{{- end -}}
+{{- partial "img.html" (dict "dest" (.Get "src") "alt" (.Get "alt") "title" (.Get "title") "attrs" $a) -}}

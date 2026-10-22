@@ -22,4 +22,4 @@ Alex Bosworth has ten bullets in his gun. [Ajax](http://en.wikipedia.org/wiki/AJ
 
 I wonder why he says ten things — list is only six items. Anyway, I think it's an excellent list. Now, [go read Alex's blog post](http://www.sourcelabs.com/blogs/ajb/2005/12/10_places_you_must_use_ajax.html). See ya later !
 
-Technorati tags: [ajax](http://technorati.com/tag/ajax) [usability](http://technorati.com/tag/usability)
+<small>Technorati tags: [ajax](http://technorati.com/tag/ajax) [usability](http://technorati.com/tag/usability)</small>

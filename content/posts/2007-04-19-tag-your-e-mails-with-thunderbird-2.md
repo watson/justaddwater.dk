@@ -14,7 +14,7 @@ One of the cornerstones in Web 2.0 are the [folksonomy](http://en.wikipedia.org/
 
 Today Mozilla launched their e-mail client 'Mozilla Thunderbird 2' just 12 days after the launch of release candidate 1! One the the main new features is tags, a feature I've been waiting and hoping for for many years now. I've never understood why none of the major e-mail client developers Microsoft or Mozilla got this into their clients before. For me it just seems so obvious. But here it is.
 
-![Mozilla Thunderbird 2 message tags](http://justaddwater.dk/wp-content/uploads/2007/04/message-tags.png)
+{{< img src=`http://justaddwater.dk/wp-content/uploads/2007/04/message-tags.png` alt=`Mozilla Thunderbird 2 message tags` style=`margin-left: auto; margin-right: auto; display: block` >}}
 
 > Thunderbird 2 allows you to “tag” messages with descriptors such as “To Do” or “Done” or even create your own tags that are specific to your needs. Tags can be combined with saved searches and mail views to make it easier to organize email.
 

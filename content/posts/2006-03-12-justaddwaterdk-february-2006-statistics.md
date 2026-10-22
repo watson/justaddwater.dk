@@ -28,7 +28,7 @@ The number one story in January must see it self reduced to a 3rd place this mon
 4.  [Live search explained](/2006/01/26/live-search-explained/) (285 visitors)
 5.  [IE7 beta running side by side with IE6](/2006/02/03/ie7-beta-running-side-by-side-with-ie6/) (177 visitors)
 
-*Source: Measure Map*
+*<small>Source: Measure Map</small>*
 
 ### Browser Versions
 
@@ -36,25 +36,40 @@ Nothing big has happen on the browser front this month. The only trend that seem
 
 ![Browser Versions, February 2006](/wp-content/uploads/2006/03/Google%20Analytics%20-%20Browser%20Versions%20-%20Feb2006.png)
 
-Browser Versions, February 2006 - *Source: Google Analytics*
+<small>Browser Versions, February 2006 - *Source: Google Analytics*</small>
 
 ### Statistical numbers
 
-|                                       |        |
-|---------------------------------------|--------|
-| Total visits:                         | 3,092  |
-| Total unique visitors:                | 2,585  |
-| Average visits per day:               | 110.43 |
-| Average pageviews per visit:          | 1.77   |
-| Dropout percentage on the front page: | 50.74% |
+<table border="1">
+<tr>
+<td>Total visits:</td>
+<td>3,092</td>
+</tr>
+<tr>
+<td>Total unique visitors:</td>
+<td>2,585</td>
+</tr>
+<tr>
+<td>Average visits per day:</td>
+<td>110.43</td>
+</tr>
+<tr>
+<td>Average pageviews per visit:</td>
+<td>1.77</td>
+</tr>
+<tr>
+<td>Dropout percentage on the front page:</td>
+<td>50.74%</td>
+</tr>
+</table>
 
 ### Other graphs
 
 ![Geographical reader location, February 2006](/wp-content/uploads/2006/03/Google%20Analytics%20-%20Geo%20Map%20Overlay%20-%20Feb2006.png)\
-Geographical reader location, February 2006 - *Source: Google Analytics*
+<small>Geographical reader location, February 2006 - *Source: Google Analytics*</small>
 
 ![Visits by Source, February 2006](/wp-content/uploads/2006/03/Google%20Analytics%20-%20Vistis%20by%20Source%20-%20Feb2006.png)\
-Visits by Source, February 2006 - *Source: Google Analytics*
+<small>Visits by Source, February 2006 - *Source: Google Analytics*</small>
 
 ![Visits by New and Returning, February 2006](/wp-content/uploads/2006/03/Google%20Analytics%20-%20Visits%20by%20New%20and%20Returning%20-%20Feb2006.png)\
-Visits by New and Returning, February 2006 - *Source: Google Analytics*
+<small>Visits by New and Returning, February 2006 - *Source: Google Analytics*</small>

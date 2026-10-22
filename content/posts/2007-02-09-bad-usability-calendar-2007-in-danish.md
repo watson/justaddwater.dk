@@ -20,9 +20,9 @@ This year's version contains advice regarding AJAX, overwhelming use of graphics
 
 ### Download Bad Usability Calendar 2007
 
-- [English](http://iallenkelhet.no/nedlast/bad_usability_calendar_07_english_A3.pdf) (560KB PDF)
-- [Norwegian](http://www.iallenkelhet.no/nedlast/bad_usability_calendar_07_norsk_A3.pdf) (1.2 MB PDF)
-- [Danish](/wp-content/uploads/2007/02/bad_usability_calendar_07-da-opt.pdf "Download Bad Usability Calendar (Danish version)") (3.3 MB PDF)
+- [English](http://iallenkelhet.no/nedlast/bad_usability_calendar_07_english_A3.pdf) <small>(560KB PDF)</small>
+- [Norwegian](http://www.iallenkelhet.no/nedlast/bad_usability_calendar_07_norsk_A3.pdf) <small>(1.2 MB PDF)</small>
+- [Danish](/wp-content/uploads/2007/02/bad_usability_calendar_07-da-opt.pdf "Download Bad Usability Calendar (Danish version)") <small>(3.3 MB PDF)</small>
 
 Related articles:
 

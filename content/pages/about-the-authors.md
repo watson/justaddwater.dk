@@ -11,7 +11,11 @@ author: "jesper"
 
 This weblog is run and maintained by Jesper Rønn-Jensen from [NineConsult](http://nine.dk/) and Thomas Watson Steen from [3dbyggeri danmark](http://www.3dbyggeri.dk/).
 
+<div style="text-align: center;">
+
 ![Jesper Rønn-Jensen (left) and Thomas Watson Steen. Photo by Michael Bothager](/wp-content/uploads/2006/06/mb-2006-018-C-00117-300x200.jpg)
+
+</div>
 
 The thoughts here present their personal opinions and views and is not necessarily connected with their employer. If you want to contact us please fill in [our contact form »](/contact-us/)
 
@@ -34,7 +38,7 @@ Popular posts (just to pick a few):
 
 ### Jesper Rønn-Jensen
 
-![Jesper Rønn-Jensen. Photo by Michael Bothager](/wp-content/uploads/2006/06/mb-2006-018-C-00045-133x200.jpg)Web developer, usability specialist, interaction design. Started working with web pages seriously since 1995 and professionally since 1997.
+{{< img src=`/wp-content/uploads/2006/06/mb-2006-018-C-00045-133x200.jpg` alt=`Jesper Rønn-Jensen. Photo by Michael Bothager` align=`left` style=`margin-right: 5px;` >}}Web developer, usability specialist, interaction design. Started working with web pages seriously since 1995 and professionally since 1997.
 
 Jesper is passionate about his work, and seldom misses a chance to share knowledge on web development issues.
 
@@ -42,7 +46,7 @@ View [Jesper's LinkedIn profile](http://www.linkedin.com/in/jesper) for more inf
 
 ### Thomas Watson Steen
 
-![Thomas Watson Steen. Photo by Michael Bothager](/wp-content/uploads/2006/06/mb-2006-018-C-00017-133x200.jpg)Part Java, part web developer. His work have since the late 90’s evolved around professional programming and software design with a high in-depth interest in usability, web and programming standards.
+{{< img src=`/wp-content/uploads/2006/06/mb-2006-018-C-00017-133x200.jpg` alt=`Thomas Watson Steen. Photo by Michael Bothager` align=`left` style=`margin-right: 5px;` >}}Part Java, part web developer. His work have since the late 90’s evolved around professional programming and software design with a high in-depth interest in usability, web and programming standards.
 
 During his career he has been the main architect behind a popular CMS, a GUI developer and served as a web standards adviser. He is known as a techie that gladly preaches usability, standard compliance and other interesting subjects in a user-friendly manner to everyone that shows an interest.
 
@@ -50,7 +54,7 @@ After working at Capgemini, he joined 3 friends in the Danish startup **3dbygger
 
 View his LinkedIn profile for more info and details on his professional skills.
 
-[![View Thomas Watson Steen's profile on LinkedIn](http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.gif)](http://www.linkedin.com/in/watson)
+[{{< img src=`http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.gif` alt=`View Thomas Watson Steen's profile on LinkedIn` width=`80` height=`15` border=`0` >}}](http://www.linkedin.com/in/watson)
 
 ### History of Justaddwater.dk
 

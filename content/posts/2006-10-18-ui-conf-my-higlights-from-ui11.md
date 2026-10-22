@@ -18,7 +18,7 @@ technorati: ["uiconf", "ui11", "usability", "conference", "event", "jared spool"
 
 Oh, and I took this really cool photo of him presenting:
 
-[![Lukew presenting](http://static.flickr.com/84/267101000_b37af4e5d5_m.jpg)](http://www.flickr.com/photos/jesper/267101000/ "Photo Sharing")\
+[{{< img src=`http://static.flickr.com/84/267101000_b37af4e5d5_m.jpg` alt=`Lukew presenting` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/267101000/ "Photo Sharing")\
 (In fact, photo is taken right after the presentation, because he was usually standing with his back to the audience while explaining the screenshots. After the session I got him to "present" to get the photo with his logo projected on his breast).
 
 **Jeff Patton's talk on agile project teams** was a powerwalk through tips, tricks and pitfalls of agile projects, compared to usual web development projects. I had a chance to meet Jeff after his 90 minute 76 (dense) slide presentation, and found out that he knows Ole (jepsen), my old Capgemini colleague. I know there is so much from his talk that I can use in my everyday work (even though very few projects I'm involved in are truly agile).
@@ -54,7 +54,7 @@ Finally it was truly inspiring to meet so many like-minded and inspiring people.
 ### Great photo opportunity
 
 UI Conf was a great chance to take some photos. I posted the better of them on flickr. But some are worth highlighting here.\
-[![Barry Schwartz](http://static.flickr.com/95/267800531_5281bead2c_s.jpg)](http://www.flickr.com/photos/jesper/267800531/ "Photo Sharing")[![Morning sunrise in Boston](http://static.flickr.com/99/266005673_9a7c10927d_s.jpg)](http://www.flickr.com/photos/jesper/266005673/ "Photo Sharing")[![Beer at the Cheers Bar](http://static.flickr.com/108/268227641_edc138473c_s.jpg)](http://www.flickr.com/photos/jesper/268227641/ "Photo Sharing")[![Luke Wroblewski presenting (closeup)](http://static.flickr.com/100/267101116_1cb3f02871_s.jpg)](http://www.flickr.com/photos/jesper/267101116/ "Photo Sharing")[![John Rhodes](http://static.flickr.com/108/269194080_5432e06723_s.jpg)](http://www.flickr.com/photos/jesper/269194080/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/95/267800531_5281bead2c_s.jpg` alt=`Barry Schwartz` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267800531/ "Photo Sharing")[{{< img src=`http://static.flickr.com/99/266005673_9a7c10927d_s.jpg` alt=`Morning sunrise in Boston` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/266005673/ "Photo Sharing")[{{< img src=`http://static.flickr.com/108/268227641_edc138473c_s.jpg` alt=`Beer at the Cheers Bar` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/268227641/ "Photo Sharing")[{{< img src=`http://static.flickr.com/100/267101116_1cb3f02871_s.jpg` alt=`Luke Wroblewski presenting (closeup)` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267101116/ "Photo Sharing")[{{< img src=`http://static.flickr.com/108/269194080_5432e06723_s.jpg` alt=`John Rhodes` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/269194080/ "Photo Sharing")
 
 Here are my notes from the presentations
 

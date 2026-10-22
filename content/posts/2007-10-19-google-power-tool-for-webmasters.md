@@ -10,7 +10,7 @@ author: "thomas"
 technorati: ["Google Webmaster Tools", "Google Webmaster Central", "sitemap", "sitemaps", "tool", "review", "search engines", "http errors", "accessibility"]
 ---
 
-![Google Webmaster Tools logo](/wp-content/uploads/2007/10/tools2.gif)If you run a blog or any other website for that matter, you might want to check out [Google Webmaster Central](http://www.google.com/webmasters/) - in particular their [Google Webmaster Tool](http://www.google.com/webmasters/tools/) - if you haven't already seen it.
+{{< img src=`/wp-content/uploads/2007/10/tools2.gif` alt=`Google Webmaster Tools logo` style=`margin: 0pt 0pt 1em 1em; float: right` >}}If you run a blog or any other website for that matter, you might want to check out [Google Webmaster Central](http://www.google.com/webmasters/) - in particular their [Google Webmaster Tool](http://www.google.com/webmasters/tools/) - if you haven't already seen it.
 
 **Google Webmaster Tool is a great tool for webmasters who want to see and manage how Google crawls their site(s).** If you have a Google ID you can add all the sites that you control to a dashboard. From here you can see intimate details for each site. After adding justaddwater.dk I found that Google was encountering some HTTP errors when crawling our site. This of cause is very important since other users unfortunately also encounter these errors.
 

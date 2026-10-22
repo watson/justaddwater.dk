@@ -13,7 +13,7 @@ After my harddisk crashed and I reinstalled the machine recently, I misconfigure
 
 This made Git history look horrible, with incorrect email, image. By accident I even wrote an incorrect name at one point.
 
-[![git history github](/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09-300x265.png)](/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09.png)
+[{{< img src=`/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09-300x265.png` alt=`git history github` class=`aligncenter size-medium wp-image-1734` width=`300` height=`265` >}}](/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09.png)
 
  
 
@@ -58,7 +58,7 @@ git filter-branch --env-filter '\
 
 10 seconds later, I could push the changed repository up back on the server. The result was much better:
 
-[![github log images fixed](/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png)](/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png)
+[{{< img src=`/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png` alt=`github log images fixed` class=`aligncenter size-medium wp-image-1735` width=`203` height=`300` >}}](/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png)
 
  
 

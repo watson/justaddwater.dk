@@ -19,6 +19,6 @@ Today I found that these two commands can do it for iChat for mac:
 Restart iChat. (tip from MacOSXhints.com: [Disable graphical smileys in iChat 3.0](http://www.macosxhints.com/article.php?story=20050522145205539) but it works for me on Mac OS X 10.5.8 with iChat 4.0.8 (619).
 
 Now my conversations look like this:\
-![ichat-messenger-with-smileys-disabled](/wp-content/uploads/2009/08/ichat-messenger-with-smileys-disabled-218x300.png "ichat-messenger-with-smileys-disabled")
+{{< img src=`/wp-content/uploads/2009/08/ichat-messenger-with-smileys-disabled-218x300.png` alt=`ichat-messenger-with-smileys-disabled` title=`ichat-messenger-with-smileys-disabled` class=`aligncenter size-medium wp-image-1108` width=`218` height=`300` >}}
 
 Which reminds me that I better soon write a short article on the problem of having the wrong and obtrusive defaults in your applications.

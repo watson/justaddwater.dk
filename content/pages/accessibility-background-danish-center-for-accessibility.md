@@ -25,13 +25,13 @@ The following metadata is available on the article:
 - This copy is made 2006-01-18
 - Language: Danish
 - URL of original document: [www.dcft.dk/it/artikler/universel](http://www.dcft.dk/it/artikler/universel) ([print version](http://www.dcft.dk/it/artikler/universel/document_print))
-- Screenshot of original article available [![Screenshot of this article from the originating website www.dcft.dc](/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png)](/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png "Screenshot of this article from the originating website www.dcft.dc")
+- Screenshot of original article available [{{< img src=`/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png` alt=`Screenshot of this article from the originating website www.dcft.dc` width=`34` height=`96` >}}](/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png "Screenshot of this article from the originating website www.dcft.dc")
 
 Please comment on this if you have any similar data, if you know more about this data, or if you'd translate this page from Danish into other languages.
 
 ------------------------------------------------------------------------
 
-### ![Logo: Dansk Center For Tilgængelighed](/wp-content/uploads/2006/01/icon_img.gif)Tilgængelighed til internet
+### {{< img src=`/wp-content/uploads/2006/01/icon_img.gif` alt=`Logo: Dansk Center For Tilgængelighed` width=`55` height=`54` >}}Tilgængelighed til internet
 
 "Web'ens styrke ligger i, at den er universel. Det er helt grundlæggende, at alle mennesker uanset funktionsnedsættelser har adgang". Citatet stammer fra web'ens opfinder Tim Berners-Lee.Den styrke, som Tim Berners-Lee taler om, er vi i dag ved at ødelægge. Vi designer alt for ofte web-steder uden hensyn til, at mennesker kan have problemer med forståelse, syn, hørelse eller motorik for blot at nævne et par eksempler. Eller vi regner med at vores modtager anvender den samme browser som os, eller browser på web'en på samme måde, som vi gør.
 
@@ -66,17 +66,64 @@ Der findes ingen samlede statistikker over antallet af handicappede mennesker i 
 
 ### Tilgængelighed og handicaps
 
-| Handicapgruppe | Estimeret antal | Af populationen |
-|----|----|----|
-| Synshandicappede (blinde og svagsynede) | 51.000 | 1,0 % |
-| Døve | 4.000 | 0,1% |
-| Døvblinde | 1.250 | 0,02% |
-| Personer med motoriske funktionsnedsættelser | 26.360 | 0,5% |
-| Personer med kognitive funktionsnedsættelser | 75.000 | 1.5% |
-| Personer med mere end én funktionsnedsættelse (hjerneskadede, multihandicappede, mennesker med cerebral parese, mennesker med dissemineret sklerose og mennesker med forskellig syndromer) | 7.000 | 0,1% |
-| Ordblinde/dyslektikere | 200.000 | 3,9% |
-| Personer med nedsat læse- og skrivefunktion | 612.000 | 12 % |
-| Samlet population | 5.100.000 | 100,0% |
+<table width="75%" border="1" summary="Artikler omhandlende IT og Tilgængelighed">
+<tr>
+<th>
+<p align="left">Handicapgruppe</p>
+</th>
+<th>
+<p align="left">Estimeret antal</p>
+</th>
+<th>
+<p align="left">Af populationen</p>
+</th>
+</tr>
+<tr>
+<td>Synshandicappede (blinde og svagsynede)</td>
+<td>51.000</td>
+<td>1,0 %</td>
+</tr>
+<tr>
+<td>Døve</td>
+<td>4.000</td>
+<td>0,1%</td>
+</tr>
+<tr>
+<td>Døvblinde</td>
+<td>1.250</td>
+<td>0,02%</td>
+</tr>
+<tr>
+<td>Personer med motoriske funktionsnedsættelser</td>
+<td>26.360</td>
+<td>0,5%</td>
+</tr>
+<tr>
+<td>Personer med kognitive funktionsnedsættelser</td>
+<td>75.000</td>
+<td>1.5%</td>
+</tr>
+<tr>
+<td>Personer med mere end én funktionsnedsættelse (hjerneskadede, multihandicappede, mennesker med cerebral parese, mennesker med dissemineret sklerose og mennesker med forskellig syndromer)</td>
+<td>7.000</td>
+<td>0,1%</td>
+</tr>
+<tr>
+<td>Ordblinde/dyslektikere</td>
+<td>200.000</td>
+<td>3,9%</td>
+</tr>
+<tr>
+<td>Personer med nedsat læse- og skrivefunktion</td>
+<td>612.000</td>
+<td>12 %</td>
+</tr>
+<tr>
+<td>Samlet population</td>
+<td>5.100.000</td>
+<td>100,0%</td>
+</tr>
+</table>
 
 ## Relevante links
 

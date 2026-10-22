@@ -10,7 +10,7 @@ author: "thomas"
 technorati: ["happy birthday", "justaddwater.dk", "humor", "blogging", "funny signs", "top 10"]
 ---
 
-![Justaddwater 2nd Birthday](/wp-content/uploads/2007/10/justaddwater-2nd-birthday.png)Today is a great day. At least if you ask Jesper and my self. I just got a call from Jesper who was out shopping with his family, wishing me a happy birthday. Today it's exactly two years ago that we postet [our first post](/2005/10/14/frist-post/ "First Post") on Justaddwater.dk and we are still going strong.
+{{< img src=`/wp-content/uploads/2007/10/justaddwater-2nd-birthday.png` alt=`Justaddwater 2nd Birthday` style=`margin: 0pt 0pt 1em 1em; float: right` >}}Today is a great day. At least if you ask Jesper and my self. I just got a call from Jesper who was out shopping with his family, wishing me a happy birthday. Today it's exactly two years ago that we postet [our first post](/2005/10/14/frist-post/ "First Post") on Justaddwater.dk and we are still going strong.
 
 We would like to thank all our readers who keep coming to our site over and over again. By reading and commenting on our posts you guys show us great support. It is because of you that we love doing this.
 

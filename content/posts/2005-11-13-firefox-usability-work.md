@@ -22,6 +22,6 @@ What I think is *really* interestning is that usability work is done. Usability 
 
 Very clear and very well thought of. Now the tabs are connected with the function "close". And if the tabs are small, the close button is hidden on inactive tabs. The latter is similar to a user interface feature Netvibes.com: Close button appears on mouseover.
 
-[![screenshot netvibes hover](http://static.flickr.com/28/62926403_8a703c719a.jpg)](http://www.flickr.com/photos/jesper/62926403/ "Netvibes.com user controls appear on mouseover. Click to enlarge")
+[{{< img src=`http://static.flickr.com/28/62926403_8a703c719a.jpg` alt=`screenshot netvibes hover` width=`500` height=`127` >}}](http://www.flickr.com/photos/jesper/62926403/ "Netvibes.com user controls appear on mouseover. Click to enlarge")
 
 Technorati tags: [usability](http://technorati.com/tag/usability) [firefox](http://technorati.com/tag/firefox) [screenshot](http://technorati.com/tag/screenshot) [netvibes](http://technorati.com/tag/netvibes)

@@ -14,7 +14,7 @@ The day started with a "Sun General Session" for all conference attendees. If th
 
 > "It isn't a question of whether, but a question of how"
 
-See webcast, segment two, 22:10
+<small>See webcast, segment two, 22:10</small>
 
 The rest of the session was full of news of different Java frameworks, tools, etc. that was going to be open sourced - It is truly a good day for the Open Source community :)
 

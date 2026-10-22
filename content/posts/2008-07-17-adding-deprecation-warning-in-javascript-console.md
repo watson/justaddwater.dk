@@ -16,6 +16,6 @@ I used this quick trick today to help me clean up and refactor some javascript f
       +'\nCalled by:\n'+ arguments.callee.caller );
 
 Which results in a fine deprecation warning in the console:\
-[![](/wp-content/uploads/2008/07/firebug-javascript-caller-callee-debugger-warning.png "firebug-javascript-caller-callee-debugger-warning")](http://justaddwater.dk/wp-content/uploads/2008/07/firebug-javascript-caller-callee-debugger-warning.png)
+[{{< img src=`/wp-content/uploads/2008/07/firebug-javascript-caller-callee-debugger-warning.png` alt=`` title=`firebug-javascript-caller-callee-debugger-warning` class=`alignnone size-full wp-image-941` width=`500` height=`249` >}}](http://justaddwater.dk/wp-content/uploads/2008/07/firebug-javascript-caller-callee-debugger-warning.png)
 
 There is plenty of space for improvement here. Feel free to use or tamper ... but please post any alternative suggestions here as a comment.

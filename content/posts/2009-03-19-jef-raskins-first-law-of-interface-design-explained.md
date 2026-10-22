@@ -27,7 +27,7 @@ Another example from an old version of our internal Capgemini timereporting (CTR
 
 > "You must enter the time as a valid number"
 >
-> [![](/wp-content/uploads/2009/03/ctr-error-no-help-300x104.png "ctr-error-no-help")](/wp-content/uploads/2009/03/ctr-error-no-help.png)
+> [{{< img src=`/wp-content/uploads/2009/03/ctr-error-no-help-300x104.png` alt=`` title=`ctr-error-no-help` class=`aligncenter size-medium wp-image-1056` width=`300` height=`104` >}}](/wp-content/uploads/2009/03/ctr-error-no-help.png)
 
 Then the application erases the field completely and lets you start over. That's a violation of the First Law of Interface Design. Instead the system should give a more appropriate error message like
 

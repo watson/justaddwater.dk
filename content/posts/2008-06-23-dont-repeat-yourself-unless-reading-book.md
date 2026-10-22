@@ -10,7 +10,11 @@ author: "jesper"
 technorati: ["book", "review", "dry", "repeat", "repetition", "pragmatic programmer", "pragprog", "code"]
 ---
 
-[![The Pragmatic Programmer](http://www.pragprog.com/images/covers/190x228/tpp.jpg?1184184147 "pragmatic programmer book image")](http://www.pragprog.com/titles/tpp/the-pragmatic-programmer)
+<div style="float: left; margin: 0 10px 10px 0">
+
+[{{< img src=`http://www.pragprog.com/images/covers/190x228/tpp.jpg?1184184147` alt=`The Pragmatic Programmer` title=`pragmatic programmer book image` width=`190` height=`228` >}}](http://www.pragprog.com/titles/tpp/the-pragmatic-programmer)
+
+</div>
 
 After reading Pragmatic Programmer at my recent vacation, I immediately found an urge to repeat myself and read it again.
 
@@ -30,4 +34,4 @@ Bonus link: Jeff Atwoods article about the [Department of Redundancy Department]
 >
 > Is there *really* any doubt what type of the variable br is? Does it help anyone, ever, to require another `BufferedReader` on the front of that line? This has bothered me for years, but it was an itch I just couldn't scratch. Until now.
 
-![department of redundancy department.](http://www.codinghorror.com/blog/images/department-of-redundancy-department.png)
+{{< img src=`http://www.codinghorror.com/blog/images/department-of-redundancy-department.png` alt=`department of redundancy department.` width=`250` height=`250` border=`0` >}}

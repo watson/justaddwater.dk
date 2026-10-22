@@ -13,9 +13,13 @@ Sometimes, when doing web development, we forget that not everybody are as famil
 
 This example from Pixum (internet photo developer) shows a good detail:
 
-![pixum-status-message-with-shopping-cart-affordance-crop](/wp-content/uploads/2009/09/pixum-status-message-with-shopping-cart-affordance-crop1.png "pixum-status-message-with-shopping-cart-affordance-crop")
+{{< img src=`/wp-content/uploads/2009/09/pixum-status-message-with-shopping-cart-affordance-crop1.png` alt=`pixum-status-message-with-shopping-cart-affordance-crop` title=`pixum-status-message-with-shopping-cart-affordance-crop` class=`aligncenter size-full wp-image-1149` width=`443` height=`210` >}}
+
+<div style="text-align: center;">
 
 The status message from Pixum gives immediate feedback that makes it easy to go to next step
+
+</div>
 
 Note that the status message contains a link to the shopping basket to provide easy way to purchase. This design decision will probably decrease number of abandoned shopping carts.
 

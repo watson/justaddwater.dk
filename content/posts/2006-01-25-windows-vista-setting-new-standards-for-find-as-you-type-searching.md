@@ -12,7 +12,7 @@ technorati: ["windows xp", "windows vista", "comparison", "user experience", "us
 
 Very interesting read from a user interface point-of-view. I stumbled upon a walkthrough of Windows Vista. An interesting perspective here is that the **search field has gotten a prominent position** on the Start menu itself.
 
-![Windows Vista search box on Start menu ](/wp-content/uploads/2006/01/vista%20search.jpg)
+{{< img src=`/wp-content/uploads/2006/01/vista%20search.jpg` alt=`Windows Vista search box on Start menu ` width=`396` height=`190` >}}
 
 From [BentUser - Windows XP and Vista Side-by-Side](http://www.bentuser.com/article.aspx?ID=332&page=1) (via [MadMan's LinksMatic: Windows XP vs Vista](http://www.madmanweb.com/links/archives/000459.html)):
 
@@ -34,7 +34,7 @@ Previously, Live search has been implemented in multiple desktop and web applica
 
 In all of these examples, You're actually searching without pressing a search button. Here are screenshots of GMail and Google Suggest:
 
-[![Google suggest autocomplete feature](/wp-content/uploads/2006/01/screenshot%20google%20suggest.thumbnail.png)](/?attachment_id=113 "Google suggest autocomplete feature") [![GMail screenshot autocomplete feature](/wp-content/uploads/2006/01/screenshot%20gmail%20crop1.png)](/?attachment_id=112 "GMail screenshot autocomplete feature")\
+[{{< img src=`/wp-content/uploads/2006/01/screenshot%20google%20suggest.thumbnail.png` alt=`Google suggest autocomplete feature` width=`84` height=`96` >}}](/?attachment_id=113 "Google suggest autocomplete feature") [{{< img src=`/wp-content/uploads/2006/01/screenshot%20gmail%20crop1.png` alt=`GMail screenshot autocomplete feature` width=`248` height=`84` >}}](/?attachment_id=112 "GMail screenshot autocomplete feature")\
 Recently I've seen more Live search solutions showing up. There's a [blog plugin that does it](http://binarybonsai.com/wordpress/k2/features-and-plugins/ "Wordpress plugin K2: feature list"). There's even [a component library](http://developer.ebusiness-apps.com/technologies/webdevelopment/codeandcomponents/ebawebcombov3/media/demos.htm "EBA: Live search component and demos") (perhaps more than one). [Amazon's diamond search](http://www.amazon.com/gp/gsl/search/finder/104-2613138-0017553?%5Fencoding=UTF8&productGroupID=loose%5Fdiamonds "Amazon.com: Diamond Search") does it. I'm confident that this will show up more and more.
 
 ### When is Live search ready for mainstream

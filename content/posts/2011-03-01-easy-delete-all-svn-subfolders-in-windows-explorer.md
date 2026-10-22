@@ -20,7 +20,7 @@ Then, I got a zip file from the machine where it was working. Problem: It contai
 Of course this will only work if there are no .svn folders in other developer's file, because then svn authentication, paths, etc. will be messed up, and commit will fail.
 
 Luckily, Sanil S (IamTechie blog) wrote a nice little script that actually adds a context menu in Windows explorer:\
-[![](/wp-content/uploads/2011/03/delete-svn.jpg "delete-svn")](/wp-content/uploads/2011/03/delete-svn.jpg)
+[{{< img src=`/wp-content/uploads/2011/03/delete-svn.jpg` alt=`` title=`delete-svn` class=`alignnone size-full wp-image-1415` width=`360` height=`288` >}}](/wp-content/uploads/2011/03/delete-svn.jpg)
 
 *delete_svn_subfolders.reg — [gist on GitHub](https://gist.github.com/848907)*
 

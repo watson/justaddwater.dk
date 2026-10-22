@@ -10,7 +10,7 @@ author: "jesper"
 ---
 
 The power disappeared at our office, and killed outlook 2003. Suddently I got this error:\
-[![Outlook 2003: Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened.](/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened-300x56.png "unable-to-start-outlook-unable-to-open-the-outlook-window--the-set-of-folders-could-not-be-opened")](/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened.png)
+[{{< img src=`/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened-300x56.png` alt=`Outlook 2003: Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened.` title=`unable-to-start-outlook-unable-to-open-the-outlook-window--the-set-of-folders-could-not-be-opened` class=`aligncenter size-medium wp-image-1456` width=`300` height=`56` >}}](/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened.png)
 
 > Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened.
 

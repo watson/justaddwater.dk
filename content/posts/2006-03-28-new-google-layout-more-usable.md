@@ -13,7 +13,7 @@ technorati: ["Google", "usability"]
 After [a tip from Ars Technica](http://arstechnica.com/news.ars/post/20060326-6460.html "Ars Technica: Take a sneak peek at Google's new interface") I found that is was possible to cheat [Google](http://www.google.com/ "Google") into letting you test their new front page design (you can do it too!).
 
 [![New Google front page](/wp-content/uploads/2006/03/new-google-GUI.thumbnail.png)](/wp-content/uploads/2006/03/new-google-GUI.png "New Google front page")\
-*Click on thumbnail to see larger screenshot*
+*<small>Click on thumbnail to see larger screenshot</small>*
 
 As far as I can see the only difference is that they now display their categories (Images, Groups, News etc.) vertically to the left of the search results instead of horizontally above the search field. According to Ars Technica this gives two usability enhancements:
 

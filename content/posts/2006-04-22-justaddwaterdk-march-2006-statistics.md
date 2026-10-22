@@ -17,7 +17,7 @@ Ok... I know that we are soon done with April, but I just haven't gotten around 
 After a record high visit count in February with 575 unique visitors we have gotten a slightly steadier stream of visitors browsing our blog each day. The general picture does of cause reflect when new and interesting posts are published, so the graph goes a bit up and down:
 
 ![Visits and Pageviews, March 2006](/wp-content/uploads/2006/04/Google%20Analytics%20-%20Visits%20and%20Pageviews%20-%20Mar2006.png)\
-Visits and Pageviews, March 2006 - *Source: Google Analytics*
+<small>Visits and Pageviews, March 2006 - *Source: Google Analytics*</small>
 
 ### Top 5 Stories
 
@@ -29,22 +29,22 @@ After Max Kiesler published his "[Round-up of 30 AJAX tutorials](http://www.maxk
 4.  [New Google layout more usable](/2006/03/28/new-google-layout-more-usable/) (182 visitors)
 5.  [Windows Vista setting new standards for Find-as-You-Type searching](/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/) (137 visitors)
 
-*Source: Measure Map*
+*<small>Source: Measure Map</small>*
 
 ### Browser Versions
 
 Here is the ever popular browser version stats battle with Firefox leading big-time with 56.45% over Internet Explorers 29.39%:
 
 ![Browser Versions, March 2006](/wp-content/uploads/2006/04/Google%20Analytics%20-%20Browser%20Versions%20-%20Mar2006.png)\
-Browser Versions, March 2006 - *Source: Google Analytics*
+<small>Browser Versions, March 2006 - *Source: Google Analytics*</small>
 
 ### Other graphs
 
 ![Visits by Source, March 2006](/wp-content/uploads/2006/04/Google%20Analytics%20-%20Vistis%20by%20Source%20-%20Mar2006.png)\
-Visits by Source, March 2006 - *Source: Google Analytics*
+<small>Visits by Source, March 2006 - *Source: Google Analytics*</small>
 
 ![Visits by New and Returning, March 2006](/wp-content/uploads/2006/04/Google%20Analytics%20-%20Visits%20by%20New%20and%20Returning%20-%20Mar2006.png)\
-Visits by New and Returning, March 2006 - *Source: Google Analytics*
+<small>Visits by New and Returning, March 2006 - *Source: Google Analytics*</small>
 
 ![Geographical reader location, March 2006](/wp-content/uploads/2006/04/Google%20Analytics%20-%20Geo%20Map%20Overlay%20-%20Mar2006.png)\
-Geographical reader location, March 2006 - *Source: Google Analytics*
+<small>Geographical reader location, March 2006 - *Source: Google Analytics*</small>

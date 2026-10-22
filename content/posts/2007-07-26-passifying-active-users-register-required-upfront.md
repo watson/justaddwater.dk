@@ -21,7 +21,7 @@ It's an interesting situation to look at, and I have some questions for you:
 - What impact does it have on a website to require registration before they can participate in the conversation?
 - How big a decrease in user participation should we expect when forcing users to register?
 - How many potentially active users are made passive in this way, when you force them to register upfront?
-- What difference in user participation could we expect from moving forced registration to the end of the conversation (My personal theory: When users have invested time and effort, they will more likely put some work in filling in a tedious form if it's in the way for joining the conversation. It's like being put on hold on the phone: You wait... as long as there is hope you can get forward any moment... The longer you wait, the more likely you are to stay on the phone.  See my vaguely related post on "[worst user experience ever](/2006/05/13/ticket-systems/)")
+- What difference in user participation could we expect from moving forced registration to the end of the conversation <small>(My personal theory: When users have invested time and effort, they will more likely put some work in filling in a tedious form if it's in the way for joining the conversation. It's like being put on hold on the phone: You wait... as long as there is hope you can get forward any moment... The longer you wait, the more likely you are to stay on the phone.  See my vaguely related post on "[worst user experience ever](/2006/05/13/ticket-systems/)")</small>
 
 For the sake of the discussion, let's keep spam comments out of the equation, and for the moment consider it a solved problem (we can always discuss what to do about spam comments in another conversation).
 

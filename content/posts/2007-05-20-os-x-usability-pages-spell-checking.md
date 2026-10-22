@@ -32,11 +32,19 @@ Problem solved! (but not in an easy Apple-kind-of-way)
 
 Now I get to the core of this article. The reason why I started writing this was because I was tired of seeing all these red wavy lines under each word when working in Pages - and I know that I'm not *that* bad a speller.
 
+<div style="text-align: center">
+
 ![Bad spelling?](/wp-content/uploads/2007/05/picture-1.png)
+
+</div>
 
 My initial reaction was to find some sort of spelling menu-item hidden away in the menus. I found this quickly under "Edit \> Spelling \> Spelling..."
 
+<div style="text-align: center">
+
 ![Pages.app ’spelling’ dialog](/wp-content/uploads/2007/05/picture-4.png)
+
+</div>
 
 But as you might see there is no option with which I can change the current language. After searching through numerous settings dialogs and sub-menus, I turned to the all-mighty Google. I quickly found the answer on a blog called iUseApple.com.
 

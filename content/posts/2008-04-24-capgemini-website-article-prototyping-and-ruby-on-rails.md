@@ -19,7 +19,7 @@ Here are some short extracts that I translated for your convenience:
 
 > \[...\]Ruby on Rails opens up towards a more flexible development process, where it's much easier to implement client requirements as the project runs. In collaboration with Capgemini , this means that it's possible to lower price and time-to-market significantly for a product. But also to improve the quality of the final product
 
-![Jesper and Mads building bricks as a symbol of ruby prototyping](http://www.dk.capgemini.com/m/dk/img/jesper_mads_3_3841.jpg)
+{{< img src=`http://www.dk.capgemini.com/m/dk/img/jesper_mads_3_3841.jpg` alt=`Jesper and Mads building bricks as a symbol of ruby prototyping` class=`alignnone` >}}
 
 > Capgemini has recently proved that prototype development in advance of actual implementation can improve the result significantly. Jesper Rønn-Jensen, developer at Capgemini Denmark:
 >

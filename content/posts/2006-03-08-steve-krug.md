@@ -10,7 +10,7 @@ author: "jesper"
 technorati: ["accessibility", "usability"]
 ---
 
-![dont-make-me-think.jpg](/wp-content/uploads/2006/03/dont-make-me-think.jpg)I'm a big fan of [Steve Krug](http://www.sensible.com/ "Steve Krug website") and especially the "[Don't make me think](http://www.sensible.com/buythebook.html "Don't make me think: buy the book")" mantra (because most people actually get the point). In his [presentation at the Boston-IA chapter](http://www.boston-ia.org/news/article_17.html "Boston-IA: ") from Jan 26, this blog suddently shows up.
+{{< img src=`/wp-content/uploads/2006/03/dont-make-me-think.jpg` alt=`dont-make-me-think.jpg` align=`left` style=`margin-right: 6px` >}}I'm a big fan of [Steve Krug](http://www.sensible.com/ "Steve Krug website") and especially the "[Don't make me think](http://www.sensible.com/buythebook.html "Don't make me think: buy the book")" mantra (because most people actually get the point). In his [presentation at the Boston-IA chapter](http://www.boston-ia.org/news/article_17.html "Boston-IA: ") from Jan 26, this blog suddently shows up.
 
 Steve Krug refers to "[25% of all web users are disabled](/2006/01/20/one-of-four-web-users-are-disabled-users/ "Justaddwater.dk: 25% of all web users are disabled")". Steve Krug. I'm amazed!
 

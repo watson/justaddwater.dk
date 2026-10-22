@@ -15,7 +15,7 @@ technorati: ["barry schwartz", "uiconf", "ui11", "choice", "psychology", "parado
 
 Update: I recommend the [notes from Luke Wroblewski](http://lukew.com/ff/entry.asp?419 "Luke W: UI11: The Paradox of Choice") if you like s short prosa of Barry Schwartz' presentation.
 
-[![Barry Schwartz](http://static.flickr.com/95/267800531_5281bead2c_m.jpg)](http://www.flickr.com/photos/jesper/267800531/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/95/267800531_5281bead2c_m.jpg` alt=`Barry Schwartz` width=`183` height=`240` >}}](http://www.flickr.com/photos/jesper/267800531/ "Photo Sharing")
 
 The official syllogism\
 \* More freedom means more welfare\
@@ -76,7 +76,7 @@ increase efficiencies in mating ritual "and 6 months later there's a wedding"
 Finding: When you have seen more people, you make less choices\
 "I guess they go home and rent a video in stead"
 
-[![Audience](http://static.flickr.com/98/267785927_ea21ff20fb_s.jpg)](http://www.flickr.com/photos/jesper/267785927/ "Photo Sharing")[![Audience listening](http://static.flickr.com/120/267785387_83b075c732_s.jpg)](http://www.flickr.com/photos/jesper/267785387/ "Photo Sharing")[![Audience listening](http://static.flickr.com/91/267785172_079fc94c1a_s.jpg)](http://www.flickr.com/photos/jesper/267785172/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/98/267785927_ea21ff20fb_s.jpg` alt=`Audience` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267785927/ "Photo Sharing")[{{< img src=`http://static.flickr.com/120/267785387_83b075c732_s.jpg` alt=`Audience listening` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267785387/ "Photo Sharing")[{{< img src=`http://static.flickr.com/91/267785172_079fc94c1a_s.jpg` alt=`Audience listening` width=`75` height=`75` >}}](http://www.flickr.com/photos/jesper/267785172/ "Photo Sharing")
 
 401(K) investing \[retirement plans\]\
 \* 2-3 mutual funds to choose from\
@@ -105,7 +105,7 @@ buying jeans. presented with lots of choices
 **So, the more options there are, the more likely the fact that people will regret their choice.**
 
 From another cartoon: "Everything was better back when everything was worse!"\
-[![Barry Schwartz presenting](http://static.flickr.com/86/267786364_a2d3e8747f_m.jpg)](http://www.flickr.com/photos/jesper/267786364/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/86/267786364_a2d3e8747f_m.jpg` alt=`Barry Schwartz presenting` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/267786364/ "Photo Sharing")
 
 ### Use an agent to katalyze choice
 
@@ -135,7 +135,7 @@ Lessons learned\
 
 Subjective state related to number of choices.\
 \[graph that tops at some choices\]\
-[![Satisfaction curve](http://static.flickr.com/120/267786407_410ad0a2d5_m.jpg)](http://www.flickr.com/photos/jesper/267786407/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/120/267786407_410ad0a2d5_m.jpg` alt=`Satisfaction curve` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/267786407/ "Photo Sharing")
 
 Conclusion: welfare is not increased with number of choices. You figure out where the sweet spot is.
 

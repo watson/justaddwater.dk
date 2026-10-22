@@ -18,15 +18,37 @@ From the program (Danish):
 
 > **Weblogs - spild af tid - eller ingen tid at spilde?**
 >
-> |  |  |  |
-> |----|----|----|
-> | Flere og flere virksomheder bruger weblogs (blogs). Hvilke formål har virksomhederne med at bruge blogs og hvordan ser de første resultater ud? Er corporate blogs for vindere eller tabere? IT-Branchen har bedt en ekspert og tre virksomheder, der aktivt bruger blogs, give deres bud. Presse og andre interesserede er velkomne. |  |  |
-> |  |  |  |
-> | **Dato:** |  | 13\. juni 9:00 - 11:00 |
-> |  |  |  |
-> | **Sted:** |  | Børsbygningen, Biblioteket |
-> |  |  |  |
-> | **Adresse:** |  | Slotsholmsgade, 1217 København K. |
-> |  |  |  |
+> <table cellspacing="0" cellpadding="0" border="0">
+> <tr>
+> <td colspan="3">Flere og flere virksomheder bruger weblogs (blogs). Hvilke formål har virksomhederne med at bruge blogs og hvordan ser de første resultater ud? Er corporate blogs for vindere eller tabere? IT-Branchen har bedt en ekspert og tre virksomheder, der aktivt bruger blogs, give deres bud. Presse og andre interesserede er velkomne.</td>
+> </tr>
+> <tr>
+> <td style="height: 20px" colspan="3"></td>
+> </tr>
+> <tr>
+> <td valign="top"><strong>Dato:</strong></td>
+> <td style="width: 10px"></td>
+> <td>13. juni 9:00 - 11:00</td>
+> </tr>
+> <tr>
+> <td style="height: 8px" colspan="3"></td>
+> </tr>
+> <tr>
+> <td valign="top"><strong>Sted:</strong></td>
+> <td style="width: 10px"></td>
+> <td>Børsbygningen, Biblioteket</td>
+> </tr>
+> <tr>
+> <td style="height: 8px" colspan="3"></td>
+> </tr>
+> <tr>
+> <td valign="top"><strong>Adresse:</strong></td>
+> <td></td>
+> <td>Slotsholmsgade, 1217 København K.</td>
+> </tr>
+> <tr>
+> <td style="height: 8px" colspan="3"></td>
+> </tr>
+> </table>
 >
 > Case: Capgemini om erfaringer med bloggen justaddwater.dk om usability og web-standarder

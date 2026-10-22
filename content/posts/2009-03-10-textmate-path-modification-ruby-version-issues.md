@@ -17,7 +17,7 @@ Thanks to fast and excellent help from Allan Odgaard and others in the \##Textma
 
 The main point is that if you modify your \$PATH you should probably also set a variable in Textmate reflecting that change. Otherwise you may end up with Textmate running an old version of a program like I did.
 
-![](/wp-content/uploads/2009/03/textmate-preferences-advanced-path.png "textmate-preferences-advanced-path")
+{{< img src=`/wp-content/uploads/2009/03/textmate-preferences-advanced-path.png` alt=`` title=`textmate-preferences-advanced-path` class=`alignnone size-full wp-image-1045` width=`450` height=`253` >}}
 
 Note also that there is some help on the Textmate Wiki: "[RubyVersionIssue](http://wiki.macromates.com/Troubleshooting/RubyVersionIssue)" with a link to the suggestion Alan mentions above ([setting path for Finder](http://manual.macromates.com/en/shell_commands#search_path) in environment.plist).
 

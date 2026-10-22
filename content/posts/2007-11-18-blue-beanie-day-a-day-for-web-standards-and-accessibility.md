@@ -10,7 +10,7 @@ author: "thomas"
 technorati: ["Blue Beanie Day", "Jeffery Zeldman", "DWWS", "Designing With Web Standards", "Web Standards", "Accessibility", "Facebook", "Flickr", "book", "event"]
 ---
 
-![Designing With Web Standards cover photo](/wp-content/uploads/2007/11/dwws.jpg)
+{{< img src=`/wp-content/uploads/2007/11/dwws.jpg` alt=`Designing With Web Standards cover photo` style=`margin: 0pt 0pt 1em 1em; float: right` >}}
 
 I just got an event invitation on Facebook asking me to join "[Blue Beanie Day](http://www.facebook.com/event.php?eid=6209917619 "Facebook Event: Blue Beanie Day")". Two questions quickly popped into my head:
 

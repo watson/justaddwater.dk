@@ -18,10 +18,11 @@ Besides the obvious language differences in the GUI, I find it a major problem t
 
 Ctrl+F usually stand for “Find” and Ctrl+B for “Bold”. But in Danish this of cause does not make sense. In Danish “Bold” is spelled “Fed” so to use Ctrl+B would suddenly not make that much sense anymore. “Find” in Danish and English is actually spelled the same so here you would expect the keyboard shortcut to remain the same, but no - as you can see in the table below they have switched place:
 
-|      | English | Danish |
-|------|---------|--------|
-| Find | Ctrl+F  | Ctrl+B |
-| Bold | Ctrl+B  | Ctrl+F |
+<table border="1">
+<tr><th></th><th>English</th><th>Danish</th></tr>
+<tr><th>Find</th><td>Ctrl+F</td><td>Ctrl+B</td></tr>
+<tr><th>Bold</th><td>Ctrl+B</td><td>Ctrl+F</td></tr>
+</table>
 
 Is this good or bad? Mostly good I would say. For the average Danish user it makes sence to use Ctrl+F, Ctrl+K and Ctrl+U to either make some text **bold (fed)**, *italic (kursiv)* or *underlined (understreget)*. But for a techie user like me that likes pure English GUI’s this is a huge annoyance. When working on a Danish Windows I find my self pressing Ctrl+F to open the Find-dialog all the time. It’s a constant topic for debate among my fellow developers. Usually we just blame Microsoft with phrases like “Why don’t they just make software that works the way we would expect it to?” or “Why would anybody wanna change the way the shortcuts work - I’m used to…” etc. etc…
 

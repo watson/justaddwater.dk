@@ -49,11 +49,11 @@ Their task is to consider [rewriting an ASP/VBScript system](http://mentalized.n
 >
 > In J2EE land we tend to focus on solving the difficult problems, instead of making the easy problems easier to code. This is one of the biggest lessons that J2EE can learn from Rails - [productivity](http://dev2dev.bea.com/blog/editors/archive/2005/07/productivity.html).
 
-[Ruby on Rails from a Business Perspective](http://www.screamingatthekeyboard.com/articles/2006/03/02/ruby-on-rails-vs-php-from-a-business-perspective) via [The Case for Rails: Talking to Management](http://blog.inquirylabs.com/2006/03/29/the-case-for-rails-talking-to-management/ "Inquiry labs blog: The Case for Rails: Talking to Management")
+[Ruby on Rails from a Business Perspective](http://www.screamingatthekeyboard.com/articles/2006/03/02/ruby-on-rails-vs-php-from-a-business-perspective) <small>via [The Case for Rails: Talking to Management](http://blog.inquirylabs.com/2006/03/29/the-case-for-rails-talking-to-management/ "Inquiry labs blog: The Case for Rails: Talking to Management")</small>
 
 > It also helps that Ruby on Rails can crank out a system in about 1/3rd of the time as PHP, but that’s probably my own coding preferences talking.
 
-Business case for [Ruby on Rails vs. Java](http://www.jroller.com/page/obie?entry=productivity_arbitrage "Obie Fernandez: Productivity Arbitrage") by Obie Fernandez (via [Curt Hibbs](http://blog.curthibbs.us/articles/2005/12/21/productivity-arbitrage-and-ajax/ "Curt Hibbs: Productivity arbitage and AJAX"))
+Business case for [Ruby on Rails vs. Java](http://www.jroller.com/page/obie?entry=productivity_arbitrage "Obie Fernandez: Productivity Arbitrage") by Obie Fernandez <small>(via [Curt Hibbs](http://blog.curthibbs.us/articles/2005/12/21/productivity-arbitrage-and-ajax/ "Curt Hibbs: Productivity arbitage and AJAX"))</small>
 
 > *Want a realistic example of what I’m describing? Two well-respected consultancies find themselves competing head-to-head for a project: a fairly typical internal web application, of the type that large corporate clients often request. Both consultancies follow Agile practices. Timely delivery for this project is critical (as usual), but delivering on-time is particularly important in this case. The client will get hit with severe regulatory penalties if the new system is not implemented within a year’s time.*
 

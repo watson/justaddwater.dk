@@ -11,7 +11,7 @@ author: "jesper"
 
 As you may already know, I am in New York with my company, attending the QCon conference.
 
-[![](/wp-content/uploads/2012/06/IMG_6542-300x199.jpg "brooklyn bridge")](/wp-content/uploads/2012/06/IMG_6542.jpg)
+[{{< img src=`/wp-content/uploads/2012/06/IMG_6542-300x199.jpg` alt=`` title=`brooklyn bridge` class=`aligncenter size-medium wp-image-1615` width=`300` height=`199` >}}](/wp-content/uploads/2012/06/IMG_6542.jpg)
 
 Earler today I attended Matt Wynne's presentation at QCon New York. It was one of the best presentations I have seen so far. Especially, since he began as his alter-ego, Darren Workshy.
 
@@ -38,7 +38,7 @@ So he describes the process as this:
 > as awkward and\
 > unpleasant as I can
 
-[![](/wp-content/uploads/2012/06/IMG_6582-matwynne-bdd-cucumber-1-300x199.jpg "IMG_6582")](/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/img_6582/)
+[{{< img src=`/wp-content/uploads/2012/06/IMG_6582-matwynne-bdd-cucumber-1-300x199.jpg` alt=`` title=`IMG_6582` class=`aligncenter size-medium wp-image-1616` width=`300` height=`199` >}}](/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/img_6582/)
 
 "Cucumber is a threat to us mortgage-driven developers"
 
@@ -52,7 +52,7 @@ Refucturing the code to make it undreadable and hard for others to understand:
 > unmaintainable to anybody except yourself"\
 > -- [Jason Gorman, 2006 ](http://www.waterfall2006.com/gorman.html)
 
-[![](/wp-content/uploads/2012/06/IMG_6584-matwynne-bdd-cucumber-2-300x199.jpg "IMG_6584")](/wp-content/uploads/2012/06/IMG_6584-matwynne-bdd-cucumber-2.jpg)
+[{{< img src=`/wp-content/uploads/2012/06/IMG_6584-matwynne-bdd-cucumber-2-300x199.jpg` alt=`` title=`IMG_6584` class=`aligncenter size-medium wp-image-1617` width=`300` height=`199` >}}](/wp-content/uploads/2012/06/IMG_6584-matwynne-bdd-cucumber-2.jpg)
 
 So, for Darren Workshy, to pay his mortgages he will follow these best practices
 
@@ -61,7 +61,7 @@ So, for Darren Workshy, to pay his mortgages he will follow these best practices
 - and nice and brittle (hard to read)
 - Avoid using words you hear business people using. Invent your own instead!
 
-[![](/wp-content/uploads/2012/06/IMG_6589-matwynne-bdd-cucumber-3-300x199.jpg "Matt Wynne best practices for MDD Mortgage-driven development")](/wp-content/uploads/2012/06/IMG_6589-matwynne-bdd-cucumber-3.jpg)
+[{{< img src=`/wp-content/uploads/2012/06/IMG_6589-matwynne-bdd-cucumber-3-300x199.jpg` alt=`` title=`Matt Wynne best practices for MDD Mortgage-driven development` class=`aligncenter size-medium wp-image-1618` width=`300` height=`199` >}}](/wp-content/uploads/2012/06/IMG_6589-matwynne-bdd-cucumber-3.jpg)
 
 This way, Darren Workshy will become indispensible at work, nobody can maintain code but him. And he will be able to stay in the job and pay his mortgages. That is mortgage-driven development.
 

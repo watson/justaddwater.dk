@@ -23,6 +23,6 @@ Me and Mads at our presentation booth just before people arrive
 [![Mads demoing and explaining](http://farm3.static.flickr.com/2180/2235005017_aa0a89322c_m.jpg)](http://flickr.com/photos/jesper/2235005017/)
 
 **UPDATE:** Added the following photos taken by Tobias\
-[![Our presentation booth from above](http://farm3.static.flickr.com/2093/2266026923_a23f5027b1_m.jpg)](http://www.flickr.com/photos/jesper/2266026923/ "Our presentation booth from above by Tobias Michaelsen")
+[{{< img src=`http://farm3.static.flickr.com/2093/2266026923_a23f5027b1_m.jpg` alt=`Our presentation booth from above` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/2266026923/ "Our presentation booth from above by Tobias Michaelsen")
 
-[![Mads demoing and explaining](http://farm3.static.flickr.com/2095/2266026609_90129cab1b_m.jpg)](http://www.flickr.com/photos/jesper/2266026609/ "Mads demoing and explaining by Tobias Michaelsen")
+[{{< img src=`http://farm3.static.flickr.com/2095/2266026609_90129cab1b_m.jpg` alt=`Mads demoing and explaining` width=`240` height=`137` >}}](http://www.flickr.com/photos/jesper/2266026609/ "Mads demoing and explaining by Tobias Michaelsen")

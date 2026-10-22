@@ -12,7 +12,7 @@ technorati: ["railsconf", "berlin", "europe", "capgemini", "presentation", "ruby
 
 For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.
 
-![Railsconf speaker 2007](http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg)
+{{< img src=`http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg` alt=`Railsconf speaker 2007` width=`125` height=`125` >}}
 
 At the presentation we will introduce a Ruby on Rails plugin that can create the foundation for a local Rails app based on forms scraped from a remote application. In our case, an internal application used for timereporting in Capgemini.
 

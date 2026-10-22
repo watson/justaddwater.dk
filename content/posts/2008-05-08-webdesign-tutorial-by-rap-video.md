@@ -13,7 +13,7 @@ Learning web design by a hiphop video is really neat.
 
 Four years ago we had the usability rap (along with the excellent gangsta-style cartoons from the OK/Cancel guys):
 
-[![Jakob Nielsen and Jared Spool - gangsta style okcancel20040206](http://static.flickr.com/31/65652674_4a2b197cfd_m.jpg)](http://www.flickr.com/photos/jesper/65652674/ "Jakob Nielsen and Jared Spool - gangsta style")
+[{{< img src=`http://static.flickr.com/31/65652674_4a2b197cfd_m.jpg` alt=`Jakob Nielsen and Jared Spool - gangsta style okcancel20040206` width=`240` height=`125` >}}](http://www.flickr.com/photos/jesper/65652674/ "Jakob Nielsen and Jared Spool - gangsta style")
 
 (the mp3 file with the actual rap seems to have disappeared... could anybody point me to a working link?)
 

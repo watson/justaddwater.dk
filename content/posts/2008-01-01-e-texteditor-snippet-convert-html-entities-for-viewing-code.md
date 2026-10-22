@@ -60,8 +60,8 @@ Code:
 
     print encode(STDIN.read)
 
-The blog software messes up single/double quotes, so here is a link to the raw snippet file which I put in `/Bundles/HTML.tmbundle/Commands`. On my E-texteditor/Windows install that is `C:\Documents and Settings\[username]\Application Data\e`\
-`\Bundles\HTML.tmbundle\Commands . `
+The blog software messes up single/double quotes, so here is a link to the raw snippet file which I put in `/Bundles/HTML.tmbundle/Commands`. <small>On my E-texteditor/Windows install that is `C:\Documents and Settings\[username]\Application Data\e`\
+`\Bundles\HTML.tmbundle\Commands . `</small>
 
 **Here it is for you to download:**\
 [entities-convert-html-for-html-output.tmCommand](/wp-content/uploads/2007/12/entities-convert-html-for-html-output.tmCommand "entities-convert-html-for-html-output.tmCommand")\

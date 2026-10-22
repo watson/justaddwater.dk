@@ -1,0 +1,39 @@
+{{- /* Shared image output: width/height + WordPress-style srcset for local uploads; $attrsIn = img attributes kept from the original markup (class, align, hspace, style...). */ -}}
+{{- $dest := .dest -}}
+{{- $in := .attrs | default dict -}}
+{{- $attrs := "" -}}{{- $ss := "" -}}
+{{- if and (strings.HasPrefix $dest "/wp-content/uploads/") (not (strings.Contains $dest "//")) -}}
+  {{- $path := $dest | urls.PathUnescape -}}
+  {{- $ext := path.Ext $path -}}
+  {{- $m := findRESubmatch `^(.+)-(\d+)x(\d+)(\.[A-Za-z0-9]+)$` $path -}}
+  {{- $thumbFile := printf "static%s" $path -}}
+  {{- if and $m (ne $ext ".svg") (ne $ext ".gif") -}}
+    {{- $base := index $m 0 1 -}}
+    {{- $w := index $m 0 2 -}}
+    {{- $h := index $m 0 3 -}}
+    {{- $fullPath := printf "%s%s" $base (index $m 0 4) -}}
+    {{- $fullFile := printf "static%s" $fullPath -}}
+    {{- if and (fileExists $fullFile) (fileExists $thumbFile) -}}
+      {{- with try (images.Config $fullFile) -}}
+        {{- if not .Err -}}
+          {{- $fullW := .Value.Width -}}
+          {{- $fullURL := printf "%s%s" (index (findRESubmatch `^(.+)-\d+x\d+\.[A-Za-z0-9]+$` $dest) 0 1) $ext -}}
+          {{- $fullURL = (urls.Parse $fullURL).String -}}
+          {{- $thumbURL := (urls.Parse $dest).String -}}
+          {{- $attrs = printf ` width="%s" height="%s"` $w $h -}}
+          {{- $ss = printf ` srcset="%s %sw, %s %dw" sizes="(max-width: %spx) 100vw, %spx"` $thumbURL $w $fullURL $fullW $w $w -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and (not $attrs) (fileExists $thumbFile) (ne $ext ".svg") (ne $ext ".gif") -}}
+    {{- with try (images.Config $thumbFile) -}}
+      {{- if not .Err -}}
+        {{- $attrs = printf ` width="%d" height="%d"` .Value.Width .Value.Height -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if or (isset $in "width") (isset $in "height") -}}{{- $attrs = "" -}}{{- end -}}
+{{- $attrs = print $attrs $ss -}}
+<img src="{{ $dest }}" alt="{{ .alt }}"{{ with .title }} title="{{ . }}"{{ end }}{{ range $k, $v := $in }}{{ printf ` %s="%s"` $k ($v | htmlEscape) | safeHTMLAttr }}{{ end }}{{ $attrs | safeHTMLAttr }}>

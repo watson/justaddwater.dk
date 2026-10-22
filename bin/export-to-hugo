@@ -163,13 +163,27 @@ def wpautop(t):
             out += autop_text(t[pos:]); break
         out += autop_text(t[pos:m.start()])
         name = m.group(2).lower(); depth = 1; end = None
+        if name == "p":
+            # source often has <p align=..> never closed (WordPress ends it at the blank line / next block)
+            h = re.compile(r"</p\s*>|\n\s*\n|<(?:ul|ol|dl|table|div|blockquote|pre|form|h[1-6]|p)\b", re.I).search(t, m.end())
+            if h and h.group(0).lower().startswith("</p"):
+                out.append(t[m.start():h.end()]); pos = h.end()
+            else:
+                hit = h.start() if h else len(t)
+                inner = re.sub(r"[ \t]*\n[ \t]*", "<br>\n", t[m.end():hit].strip())
+                out.append(t[m.start():m.end()] + inner + "</p>"); pos = hit
+            continue
         for mm in TAG.finditer(t, m.end()):
             if mm.group(2).lower() != name or mm.group(3): continue
             depth += -1 if mm.group(1) else 1
             if depth == 0: end = mm; break
         if end is None:
             out.append(t[m.start():]); break
-        if name in RECURSE:
+        if name == "div" and not re.search(r"\n\s*\n", t[m.end():end.start()]) and not re.match(r"\s*\n", t[m.end():]):
+            # WordPress leaves a one-chunk <div>text</div> unwrapped (newlines -> <br>)
+            inner = re.sub(r"[ \t]*\n[ \t]*", "<br>\n", t[m.end():end.start()].strip())
+            out.append(t[m.start():m.end()] + inner + t[end.start():end.end()])
+        elif name in RECURSE:
             out.append(t[m.start():m.end()] + "\n\n" + wpautop(t[m.end():end.start()]) + "\n\n" + t[end.start():end.end()])
         else:
             out.append(t[m.start():end.end()])
@@ -180,7 +194,7 @@ def protect_styled_divs(html):
     """Pandoc drops <div> wrappers, losing float/centering. Swap each styled <div>...</div> (balanced, so nested
     divs work) for marker paragraphs; restore_styled_divs() puts the real tags back around the converted Markdown."""
     tags, out, pos = [], [], 0
-    open_re = re.compile(r'<div\b[^>]*\sstyle="[^"]*"[^>]*>', re.I)
+    open_re = re.compile(r'<div\b[^>]*\s(?:style|align)="[^"]*"[^>]*>', re.I)
     tok = re.compile(r'<div\b|</div\s*>', re.I)
     while True:
         m = open_re.search(html, pos)
@@ -201,21 +215,93 @@ def protect_styled_divs(html):
 
 def restore_styled_divs(md, tags):
     for n, tag in enumerate(tags):
-        md = re.sub(r"(?m)^\s*PPDIVOPEN%dPP\s*$" % n, "\n" + tag + "\n", md)
-        md = re.sub(r"(?m)^\s*PPDIVCLOSE%dPP\s*$" % n, "\n</div>\n", md)
+        md = re.sub(r"(?m)^([ \t>]*)PPDIVOPEN%dPP[ \t]*$" % n, lambda m: "%s\n%s%s\n%s" % (m.group(1).rstrip(" ") , m.group(1), tag, m.group(1).rstrip(" ")), md)
+        md = re.sub(r"(?m)^([ \t>]*)PPDIVCLOSE%dPP[ \t]*$" % n, lambda m: "%s\n%s</div>\n%s" % (m.group(1).rstrip(" "), m.group(1), m.group(1).rstrip(" ")), md)
     return md
 
-def to_md(html):
+IMG_ATTRS = ("class", "align", "hspace", "vspace", "style", "width", "height", "border")
+
+def img_shortcode(tag):
+    """<img ...> -> Hugo shortcode (layouts/shortcodes/img.html) so presentational attributes survive and the
+    srcset/width/height logic of partials/img.html still applies."""
+    a = {k.lower(): (v1 or v2) for k, v1, v2 in re.findall(r"""([\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')""", tag)}
+    if not a.get("src"): return None
+    a = {k: unescape(v).replace("`", "").replace("\n", " ") for k, v in a.items()}
+    parts = ["src=`%s`" % a["src"], "alt=`%s`" % a.get("alt", "")]
+    if a.get("title"): parts.append("title=`%s`" % a["title"])
+    parts += ["%s=`%s`" % (k, a[k]) for k in IMG_ATTRS if a.get(k)]
+    return "{{< img %s >}}" % " ".join(parts)
+
+def protect_imgs(html, everything=False):
+    """Replace <img> having presentational attributes (or all of them inside raw tables) with tokens."""
+    store = []
+    def rep(m):
+        a = m.group(0)
+        if not everything and not re.search(r"\s(%s)\s*=" % "|".join(IMG_ATTRS), a, re.I): return a
+        sc = img_shortcode(a)
+        if sc is None or "}}" in sc.replace(" >}}", ""): return a
+        store.append(sc); return "PPIMG%dPP" % (len(store) - 1)
+    return re.sub(r"<img\b[^>]*>", rep, html, flags=re.I), store
+
+def protect_tables(html):
+    """Pandoc turns <table> into a borderless GFM table and drops attributes. Keep each balanced
+    <table>...</table> as raw HTML (blank lines collapsed so the Markdown HTML block doesn't end early)."""
+    tabs, out, pos = [], [], 0
+    def keep_style(m):               # inline <style> blocks style those tables (e.g. spreadsheet paste); keep verbatim
+        tabs.append(re.sub(r"\s*\n\s*", "\n", m.group(0).replace("\r", "")))
+        return "<p>PPTABLE%dPP</p>" % (len(tabs) - 1)
+    html = re.sub(r"<style\b.*?</style\s*>", keep_style, html, flags=re.S | re.I)
+    tok = re.compile(r"<table\b|</table\s*>", re.I)
+    while True:
+        m = re.compile(r"<table\b", re.I).search(html, pos)
+        if not m:
+            out.append(html[pos:]); break
+        depth, end = 0, None
+        for t in tok.finditer(html, m.start()):
+            depth += 1 if t.group(0).lower().startswith("<table") else -1
+            if depth == 0: end = t; break
+        if end is None:
+            out.append(html[pos:m.end()]); pos = m.end(); continue
+        raw = html[m.start():end.end()]
+        raw, imgs = protect_imgs(raw, everything=True)
+        for i, sc in enumerate(imgs): raw = raw.replace("PPIMG%dPP" % i, sc)
+        raw = re.sub(r"\s*\n\s*", "\n", raw.replace("\r", ""))
+        raw = re.sub(r"<br\s*/?>\s*(?=</t[dh]>)", "", raw, flags=re.I)
+        tabs.append(raw)
+        out.append(html[pos:m.start()]); out.append("<p>PPTABLE%dPP</p>" % (len(tabs) - 1))
+        pos = end.end()
+    return "".join(out), tabs
+
+def restore_tables(md, tabs):
+    for n, raw in enumerate(tabs):
+        def rep(m):
+            pre = m.group(1); lines = raw.split("\n")
+            cont = re.sub(r"[^>\s]", " ", pre) if not pre.strip().startswith(">") else pre
+            cont = re.sub(r"^(\s*)[-*+]|^(\s*)\d+[.)]", lambda x: " " * len(x.group(0)), cont)
+            return "\n".join([pre + lines[0]] + [cont + l for l in lines[1:]]) + "\n"
+        md = re.sub(r"(?m)^([ \t>]*(?:[-*+]|\d+[.)])?[ \t>]*)PPTABLE%dPP[ \t]*\n?" % n, rep, md)
+    return md
+
+def to_md(html, post=False):
     html = wpautop(shortcodes(html))
     html = re.sub(r'(href|src)="https?://(?:www\.)?justaddwater\.dk(/[^"]*)"', r'\1="\2"', html)
     # explicit <br> hugging block boundaries only produces stray `\\` after conversion
     html = re.sub(r"(?:<br\s*/?>(?:\s|&nbsp;|\xa0)*)+(?=</(?:li|p|td|th|ul|ol|div|blockquote)>|<(?:ul|ol|blockquote|table|p|div)[\s>])", "", html, flags=re.I)
     html = re.sub(r"(<(?:li|ul|ol|td|th)(?:\s[^>]*)?>)\s*(?:<br\s*/?>\s*)+", r"\1", html, flags=re.I)
+    tabs = imgs = []
+    if post:
+        html, tabs = protect_tables(html)
+        html, imgs = protect_imgs(html)
+        html = re.sub(r"<p\b([^>]*\s(?:align|style)=[^>]*)>(.*?)</p>", r"<div\1>\2</div>", html, flags=re.I | re.S)
+        html = re.sub(r"</?small\b[^>]*>", lambda m: "PPSMALLCLOSEPP" if m.group(0)[1] == "/" else "PPSMALLOPENPP", html, flags=re.I)
     html, div_tags = protect_styled_divs(html)
     r = subprocess.run(["pandoc", "-f", "html", "-t", "gfm-raw_html", "--wrap=none"],
                        input=html, capture_output=True, text=True)
     md = r.stdout if r.returncode == 0 else html
     md = restore_styled_divs(md, div_tags)
+    md = restore_tables(md, tabs)
+    md = md.replace("PPSMALLOPENPP", "<small>").replace("PPSMALLCLOSEPP", "</small>")
+    for i, sc in enumerate(imgs): md = md.replace("PPIMG%dPP" % i, sc)
     md = re.sub(r"(?m)^\\[ \t]*$\n?", "", md)      # lone hard breaks beside block elements
     md = re.sub(r"\\\n(?=\n)", "\n", md)          # hard break at paragraph end
     # source used Markdown-style `code` spans in plain text; pandoc escapes the backticks
@@ -249,7 +335,7 @@ for it in chan.findall("item"):
     for m in re.finditer(r"\[tags[^\]]*\](.*?)\[/?tags\]", raw, flags=re.S):
         techno += [x.strip() for x in re.split(r"[,\n]", re.sub(r"<[^>]+>", "", m.group(1))) if x.strip()]
     if techno: meta["technorati"] = techno
-    body = to_md(raw)
+    body = to_md(raw, post=True)
     base = "content/posts/%s-%s.md" % (date[:10], slug) if ptype == "post" else "content/pages/%s.md" % slug
     write(base, fm(meta) + body + "\n"); stats[ptype] += 1; n += 1
     coms = []

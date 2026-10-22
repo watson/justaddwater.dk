@@ -31,19 +31,19 @@ Jesper presenting at reboot8
 Here is some of the feedback I got. I decided to shamelessly to put the kind comments here, so if I have a bad day, I can get back to this post and read all your kind comments :-)
 
 > Thanks a lot, I really enjoyed the demo! This should be required reading for any web development team.\
-> Source: [Jeppe Kruse](/2006/06/01/my-talk-at-reboot8-prototyping/#comment-4228)
+> <small>Source: [Jeppe Kruse](/2006/06/01/my-talk-at-reboot8-prototyping/#comment-4228)</small>
 
 > Good to see clueful work in a big consulting firm…nice presentation.\
-> Source: [Guy Dickinson](/2006/06/01/my-talk-at-reboot8-prototyping/#comment-4323)
+> <small>Source: [Guy Dickinson](/2006/06/01/my-talk-at-reboot8-prototyping/#comment-4323)</small>
 
 > If I had the money I would hire you.\
-> [Eric Reiss](http://www.e-reiss.com/About%20us/About%20Eric%20Reiss.aspx "Eric Reiss: e-reiss.com") told me after the presentation
+> <small>[Eric Reiss](http://www.e-reiss.com/About%20us/About%20Eric%20Reiss.aspx "Eric Reiss: e-reiss.com") told me after the presentation</small>
 
 > After my first attendance last year I knew what to expect somehow and what this will be all about. So this year I did have expectations - the biggest one to be motivated and inspired. This really did happen. The talks from Bill Laio, [Ben Hammersley](http://www.benhammersley.com/) and [Jesper Rønn-Jensen](//) were really good and did inspire me again.\
-> Source: [Michael Hartmann (designitsimple.de)](http://www.designitsimple.de/wordpress/2006/06/1st-day-of-reboot8/)
+> <small>Source: [Michael Hartmann (designitsimple.de)](http://www.designitsimple.de/wordpress/2006/06/1st-day-of-reboot8/)</small>
 
 > Prototyping is way important, not only in software engineering, also with organisations. You definitely should understand why, [read here](http://www.shamiro.ch/ct.ashx?id=c574ed95-d344-4caa-976f-6142082a0f8d&url=http%3a%2f%2fjustaddwater.dk%2f2006%2f06%2f01%2fmy-talk-at-reboot8-prototyping%2f) \[link to justaddwater.dk\].\
-> Source: [Benjamin J. J. Voigt](http://www.shamiro.ch/My+Reboot+Pics++Forward+And+Backward+Looking.aspx)
+> <small>Source: [Benjamin J. J. Voigt](http://www.shamiro.ch/My+Reboot+Pics++Forward+And+Backward+Looking.aspx)</small>
 
 Jeppe Kruse also posted a comment in Danish on his weblog:
 
@@ -55,7 +55,7 @@ Jeppe Kruse also posted a comment in Danish on his weblog:
 >
 > Med en funktionsdygtig prototype er det meget nemmere at se, hvordan dimsen virker; man kan få lov at bruge den i stedet for at kigge på et billede af den. Og så er alt arbejdet gjort næsten inden man kommer i gang.
 >
-> Source: [Jeppe Kruse weblog](http://geppe.dk/blog/index.php/site/comments/jesper_roenn_jensen_reboot_8/)
+> <small>Source: [Jeppe Kruse weblog](http://geppe.dk/blog/index.php/site/comments/jesper_roenn_jensen_reboot_8/)</small>
 
 My own impression: I Started out a little too tense, but fund the natural flow afterwards. I was glad for my cuecards, helped me some at the beginning. Thomas took some more photos that are available at [Flickr.com](http://flickr.com/photos/jesper).
 
@@ -87,4 +87,4 @@ In particular, it was a pleasant to meet [Lynn](http://www.gelconference.com "Ly
 
 It's the audience that makes reboot a special event
 
-[![IMG_7792](http://static.flickr.com/67/159617815_2f3a6e8b7f_m.jpg)](http://www.flickr.com/photos/jesper/159617815/ "Photo Sharing")
+[{{< img src=`http://static.flickr.com/67/159617815_2f3a6e8b7f_m.jpg` alt=`IMG_7792` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/159617815/ "Photo Sharing")

@@ -24,7 +24,7 @@ Thomas Baekdal on [The Battle Between Usability and User-Experience](http://www.
 
 Jesse's conference was about "defining the user experience". User experience, the way he defined it that day, was focused on **how teams organize to provide web applications with high user experience.**
 
-![JJG: Five planes of user experience](/wp-content/uploads/2006/06/user-experience-thumb.png)
+{{< img src=`/wp-content/uploads/2006/06/user-experience-thumb.png` alt=`JJG: Five planes of user experience` align=`right` >}}
 
 He went though the five planes of user experience (simplified below):
 
@@ -48,7 +48,7 @@ Mike Kuniavsky from his [profile page](http://www.amazon.com/gp/pdp/profile/A245
 >
 > The key part of this definition, for me, is the relationship of the organization to the product. To me, the user experience is incomplete without a consideration of the organization that created the experience. The end result is the intersection of an organization's goals and that organization's understanding of users' goals, and it's the designer and researcher's role to mediate a compromise between these.
 
-I've always been an admiror of Mikes work (ever since I heard the [Wired/Webmonkey interview mp3 with him](http://webmonkey.com/webmonkey/radio/mikek.html "Webmonkey interview: Mike Kuniavsky") around 1998-2000). His book, Observing the user experience, was also pointed to by Jesse James Garrett. I have the book, but only got through a few chapters. (Note to self: Should definately pick up the book again — especially now he's linking to the stuff I wrote)
+I've always been an admiror of Mikes work (ever since I heard the [Wired/Webmonkey interview mp3 with him](http://webmonkey.com/webmonkey/radio/mikek.html "Webmonkey interview: Mike Kuniavsky") around 1998-2000). His book, Observing the user experience, was also pointed to by Jesse James Garrett. I have the book, but only got through a few chapters. <small>(Note to self: Should definately pick up the book again — especially now he's linking to the stuff I wrote)</small>
 
 Mike's got a point: I like the tight coupling between user experience and the organization (the sender, the product). But then, it's not really a tangible, easy-to-use definition. I want something that everybody can understand. Users, web developers, designers, business analysts, clients must all be able to agree on the same definition and understand the definition in the same way. In my opinion this tends toward being too philosophical.
 
@@ -76,13 +76,25 @@ Finally, revisiting the diagram by Bryce Glass ([soldierant](http://soldierant.n
 
 > [](http://www.flickr.com/photos/bryce/106972762/ "Big picture on Flickr.com")
 >
-> PPDIVOPEN0PP
+>
+> <div style="text-align: center">
+>
 >
 > [![User experience diagram](http://static.flickr.com/37/106972762_7fbced62e7.jpg)](http://www.flickr.com/photos/bryce/106972762/ "Big picture on Flickr.com")
 >
-> PPDIVCLOSE0PP
+>
+> </div>
+>
+
+
+<div align="center">
+
 
 > Click image for big version on Flickr. My previous post: "[User Experience Diagram](/2006/03/06/user-experience-diagram/ "Permanent Link: User Experience Diagram")"
+
+
+</div>
+
 
 Your web application should hopefully help users get "a positive experience" as stated on the diagram. Compare this to Baekdal's philosophy, which is much more focused on how to get there:
 

@@ -14,9 +14,9 @@ I'm at RailsConf Europe here in Berlin, and now attending the full-day session "
 
 Below are the live notes, I wrote with Mads Buus (we wrote the notes collaboratively with Google Docs, [direct link](http://docs.google.com/Doc?docid=az54pw3d9f_24hsvwnt&hl=en)).
 
-[![IMG_3392_crop](http://farm2.static.flickr.com/1342/1395418767_1d23095952_m.jpg)](http://www.flickr.com/photos/jesper/1395418767/)
+[{{< img src=`http://farm2.static.flickr.com/1342/1395418767_1d23095952_m.jpg` alt=`IMG_3392_crop` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/1395418767/)
 
-[![IMG_3397](http://farm2.static.flickr.com/1411/1396313456_e999c55dfe_m.jpg)](http://www.flickr.com/photos/jesper/1396313456/)
+[{{< img src=`http://farm2.static.flickr.com/1411/1396313456_e999c55dfe_m.jpg` alt=`IMG_3397` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/1396313456/)
 
  
 
@@ -64,7 +64,7 @@ Chad: Have you run your other test recently?
 
 Chad: Id like to have only one test failing at a time
 
-[![IMG_3403](http://farm2.static.flickr.com/1192/1395426465_0bd1d6a2d0_m.jpg)](http://www.flickr.com/photos/jesper/1395426465/)
+[{{< img src=`http://farm2.static.flickr.com/1192/1395426465_0bd1d6a2d0_m.jpg` alt=`IMG_3403` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/1395426465/)
 
 Mads: Instead of fixing the design, we wirte more tests. Are we thinking too much about test than the code?\
 Chad: now, were running into friction. and frictions tell us tu stop and think about the design

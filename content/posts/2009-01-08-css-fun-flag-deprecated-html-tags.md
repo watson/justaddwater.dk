@@ -18,7 +18,7 @@ Here is a little fun CSS snippet that helped me identify deprecated HTML on a re
 > `font{background-color: aqua; color: red}`\
 > `b,i,font{text-decoration: blink;}`
 
-[![](/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif "blink-and-flag-deprecated-font-b-i-tags")](/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif)
+[{{< img src=`/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif` alt=`` title=`blink-and-flag-deprecated-font-b-i-tags` class=`alignnone size-full wp-image-991` width=`249` height=`165` >}}](/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif)
 
 This was really useful for identifying dirty HTML that was generated from a Microsoft-based CMS.
 

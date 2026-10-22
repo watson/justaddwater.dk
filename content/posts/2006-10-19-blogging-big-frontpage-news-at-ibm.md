@@ -12,7 +12,7 @@ technorati: ["blogging", "blog usability", "ibm", "guidelines", "policy"]
 
 Via [Keith Instone](http://instone.org/ibmblogroll) I learned that IBM's US frontpage story today is about blogs.
 
-[![IBM frontpage large size screenshot](/wp-content/uploads/2006/10/ibm-blogging-frontpage-story-small.png)](/2006/10/19/blogging-big-frontpage-news-at-ibm/ibm-frontpage-large-size-screenshot/ "IBM frontpage large size screenshot")
+[{{< img src=`/wp-content/uploads/2006/10/ibm-blogging-frontpage-story-small.png` alt=`IBM frontpage large size screenshot` width=`350` height=`313` >}}](/2006/10/19/blogging-big-frontpage-news-at-ibm/ibm-frontpage-large-size-screenshot/ "IBM frontpage large size screenshot")
 
 There are several points here worth noting:
 

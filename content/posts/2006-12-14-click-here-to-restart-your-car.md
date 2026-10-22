@@ -12,7 +12,7 @@ technorati: ["cars", "microsoft", "general motors", "GM", "usability", "video", 
 
 I just saw the very funny usability video called '[Lexus Self-Parking “Usability” Test](http://usabilityworks.org/2006/12/06/lexus-self-parking-usability-test/ "Matthew Oliphant's usabilityworks.org - Lexus Self-Parking “Usability” Test")' (via Matthew Oliphant).
 
-![Car vs. Computer](/wp-content/uploads/2006/12/istock_000000733283small.png)Car manufactures stuff more and more electronic gear into our 'intelligent' cars - But how does that effect the user experience? The fellas in the video are not impressed. **They even get into a fight over how to operate the interface correctly.**
+{{< img src=`/wp-content/uploads/2006/12/istock_000000733283small.png` alt=`Car vs. Computer` style=`float: left` >}}Car manufactures stuff more and more electronic gear into our 'intelligent' cars - But how does that effect the user experience? The fellas in the video are not impressed. **They even get into a fight over how to operate the interface correctly.**
 
 This got me thinking of the story about **GM vs. Microsoft** that have been going around the internet for many years now. But just in case you haven't read it yet or if you would like to re-discover it, here it is:
 

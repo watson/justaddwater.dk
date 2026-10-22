@@ -11,7 +11,7 @@ author: "jesper"
 
 Time for a little geeky gimmick. Some developers see and express a lot of "WTF??" while trying to understand code
 
-[![](/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg "focus-shift-cartoon-wtf-per-minute-wtfm")](/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg)
+[{{< img src=`/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg` alt=`` title=`focus-shift-cartoon-wtf-per-minute-wtfm` class=`aligncenter size-medium wp-image-1493` width=`300` height=`282` >}}](/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg)
 
 IN this spirit, i created a quick @WTF annotation for Java.
 

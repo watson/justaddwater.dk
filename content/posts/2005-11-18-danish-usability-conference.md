@@ -9,7 +9,7 @@ tags: []
 author: "jesper"
 ---
 
-[![IMG_1551](http://static.flickr.com/30/65199575_ad1a0ab136_m.jpg)](http://www.flickr.com/photos/jesper/65199575/ "Photo Sharing")\
+[{{< img src=`http://static.flickr.com/30/65199575_ad1a0ab136_m.jpg` alt=`IMG_1551` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/65199575/ "Photo Sharing")\
 Monday to Tuesday is the Danish usability conference "[Usability dagene 2005](http://danskit.dk/sw3696.asp)" (usability days 2005). I'm looking forward to this, and especially to hear Jacob Nielsen, Rolf Molich and Thomas Snitker.
 
 According to the program, Jacob will talk about\

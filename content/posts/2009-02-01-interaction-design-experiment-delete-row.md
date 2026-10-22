@@ -15,11 +15,11 @@ You see the list of files, then click delete on the row you want to delete.The r
 
 Now, to to delete, press "save changes" below the rows.
 
-[![](/wp-content/uploads/2009/02/google-groups-mass-delete-multiple-files-300x140.png "google-groups-mass-delete-multiple-files")](/wp-content/uploads/2009/02/google-groups-mass-delete-multiple-files.png)
+[{{< img src=`/wp-content/uploads/2009/02/google-groups-mass-delete-multiple-files-300x140.png` alt=`` title=`google-groups-mass-delete-multiple-files` class=`alignnone size-medium wp-image-1024` width=`300` height=`140` >}}](/wp-content/uploads/2009/02/google-groups-mass-delete-multiple-files.png)
 
 This layout is close to the old-school principle with checkboxes adjacent to the rows. This example is seen in Hotmail (where I think it originated 13 years ago).
 
-[![](/wp-content/uploads/2009/02/hotmail-checkbox-select-for-deletion-principle.png "hotmail-checkbox-select-for-deletion-principle")](/wp-content/uploads/2009/02/hotmail-checkbox-select-for-deletion-principle.png)
+[{{< img src=`/wp-content/uploads/2009/02/hotmail-checkbox-select-for-deletion-principle.png` alt=`` title=`hotmail-checkbox-select-for-deletion-principle` class=`alignnone size-medium wp-image-1025` width=`278` height=`204` >}}](/wp-content/uploads/2009/02/hotmail-checkbox-select-for-deletion-principle.png)
 
 In my opinion, the new Google Groups style mass deletion could do better:
 

@@ -15,7 +15,7 @@ Now:
 
  
 
-[![screenshot-with-easter-eggs](/wp-content/uploads/2015/03/screenshot-with-easter-eggs-300x222.png)](/wp-content/uploads/2015/03/screenshot-with-easter-eggs.png)
+[{{< img src=`/wp-content/uploads/2015/03/screenshot-with-easter-eggs-300x222.png` alt=`screenshot-with-easter-eggs` class=`aligncenter size-medium wp-image-1748` width=`300` height=`222` >}}](/wp-content/uploads/2015/03/screenshot-with-easter-eggs.png)
 
 Before
 
@@ -23,7 +23,7 @@ Before
 
  
 
-[![screenshot-without-easter-eggs](/wp-content/uploads/2015/03/screenshot-without-easter-eggs-300x194.png)](/wp-content/uploads/2015/03/screenshot-without-easter-eggs.png)
+[{{< img src=`/wp-content/uploads/2015/03/screenshot-without-easter-eggs-300x194.png` alt=`screenshot-without-easter-eggs` class=`aligncenter size-medium wp-image-1749` width=`300` height=`194` >}}](/wp-content/uploads/2015/03/screenshot-without-easter-eggs.png)
 
  
 
@@ -31,7 +31,7 @@ The trick is really easy. CSS border radius can be applied in ellipsis shapes. E
 
  
 
-[![Screen Shot 2015-03-27 at 09.59.44](/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44-300x99.png)](/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44.png)
+[{{< img src=`/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44-300x99.png` alt=`Screen Shot 2015-03-27 at 09.59.44` class=`aligncenter size-medium wp-image-1750` width=`300` height=`99` >}}](/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44.png)
 
 And voila, the 60% and 40% vertical radius will do the trick.
 

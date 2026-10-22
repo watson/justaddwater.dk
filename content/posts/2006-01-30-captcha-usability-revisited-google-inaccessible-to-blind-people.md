@@ -23,7 +23,7 @@ The problem is that it requires vision to see what's the word/text in the word v
 
 Here is what Google does in the sign-in process:
 
-[![screenshot of the google account signup captcha](/wp-content/uploads/2006/01/screenshot-google-captcha.png)](/?attachment_id=124 "screenshot of the google account signup captcha")
+[{{< img src=`/wp-content/uploads/2006/01/screenshot-google-captcha.png` alt=`screenshot of the google account signup captcha` width=`495` height=`186` >}}](/?attachment_id=124 "screenshot of the google account signup captcha")
 
 Clicking on the wheelchair icon reveals a popup-window that shows the same image in a separate window.
 
@@ -35,7 +35,7 @@ The [press release from Blind Access Journal](http://www.prweb.com/releases/2006
 
 Recently, Peter Kranz of Standards Schmandards wrote a terrific overview different accessibility problems with captcha and came up with a [proposal for an accessible captcha](http://standards-schmandards.com/index.php?2005/01/01/11-captcha "Standards-schmandards: Proposal for an Accessible Captcha").
 
-![standards-schmandards-captcha](/wp-content/uploads/2006/01/standards-schmandards-captcha2.gif)
+{{< img src=`/wp-content/uploads/2006/01/standards-schmandards-captcha2.gif` alt=`standards-schmandards-captcha` width=`166` height=`44` >}}
 
 > Some of the [solutions proposed in the W3C article](http://www.w3.org/TR/turingtest/#solutions) are:
 >

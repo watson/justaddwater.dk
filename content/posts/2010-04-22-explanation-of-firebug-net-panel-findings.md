@@ -11,11 +11,11 @@ author: "jesper"
 
 Jan Odvarko – one of the Firebug developers – posted some very good explanations on the information available from the Firebug net panel.
 
-![](/wp-content/uploads/2010/04/firebug-1.5-netpanel-explained.png "firebug-1.5-netpanel-explained")
+{{< img src=`/wp-content/uploads/2010/04/firebug-1.5-netpanel-explained.png` alt=`` title=`firebug-1.5-netpanel-explained` class=`aligncenter size-full wp-image-1312` width=`520` height=`229` >}}
 
 Here is the explanation of the detailed mouseover view when zooming in on each request:
 
-![](/wp-content/uploads/2010/04/firebug-1.5-network-tooltip.png "firebug-1.5-network-tooltip")
+{{< img src=`/wp-content/uploads/2010/04/firebug-1.5-network-tooltip.png` alt=`` title=`firebug-1.5-network-tooltip` class=`aligncenter size-full wp-image-1313` width=`520` height=`235` >}}
 
 > - The second request started **109ms** after the start of the first request (since the beginning of the waterfall graph).
 > - There are two numbers for each **request phase** (5 phases). The first number on the left says when the phase started within the request. The second number on the right (closer to the phase label) says the time needed to complete each phase. In this case, the first three phases took zero time, and so the **Waiting** phase was the first real and it needed 32ms to complete. The **Receiving** phase started in **32nd ms** of the request and needed **15ms** to complete

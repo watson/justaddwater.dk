@@ -25,9 +25,17 @@ In general I find that I use these less and less, because much functionality is 
 
 Import all at once (separate HTML page):
 
-**[Web Standards Investigation Tools (WSIT) HTML page](/wp-content/uploads/2007/10/web-standards-investigation-tools.html)** (last updated 2007-10-12)
+<div style="text-align: center">
+
+**[Web Standards Investigation Tools (WSIT) HTML page](/wp-content/uploads/2007/10/web-standards-investigation-tools.html)** <small>(last updated 2007-10-12)</small>
+
+</div>
+
+<div style="text-align: center">
 
 ![bookmarlets.png](/wp-content/uploads/2007/10/bookmarlets.png)
+
+</div>
 
 Instruction:
 

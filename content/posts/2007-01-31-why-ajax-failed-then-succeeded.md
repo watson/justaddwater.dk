@@ -19,7 +19,7 @@ Database Requirements in the Age of Scalable Services") (via IT conversations), 
 
 > Natural language was billed as a replacement for the GUI, but it failed to achieve that. It also failed as a query language for databases, as a calculation language for spreadsheets and as a document creation language, Bosworth said. "Humans expect a human level of comprehension," he said, noting that database queries and spreadsheet formulas have to be exact.
 >
-> [![eWEEK.com Special Report: Google's Global Reach](http://common.ziffdavisinternet.com/util_get_image/9/0,1425,i=94222,00.jpg)](http://www.eweek.com/category2/0,1874,1743276,00.asp)
+> [{{< img src=`http://common.ziffdavisinternet.com/util_get_image/9/0,1425,i=94222,00.jpg` alt=`eWEEK.com Special Report: Google's Global Reach` align=`left` width=`160` height=`110` border=`0` >}}](http://www.eweek.com/category2/0,1874,1743276,00.asp)
 >
 > But natural language got a second life, too, triggered in part by Microsoft Help, and the next step turned out to be Google, Bosworth said. The trick to being successful with natural language is to "start with a fuzzy problem, one no human can resolve anyway…orient it around search, and the magic is just in the ranking," he said.
 >

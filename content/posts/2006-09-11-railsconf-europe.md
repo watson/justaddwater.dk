@@ -50,7 +50,7 @@ Unfortunately running simultaneously with Dominic Mitchell (Unicode and Rails), 
 
 Fortunately, all the key notes look very promising. Furthermore, [David previously said](http://weblog.rubyonrails.org/2006/8/1/why-you-need-to-come-to-railsconf-eu "Riding Rails weblog: Why you need to come to RailsConf EU") the presentations would not be a repetition of the US RailsConf. Especially worth a mention is [Kathy Sierra:](http://headrush.typepad.com/ "Kathy Sierra blog: Creating Passionate Users") For the readers of this blog, Kathy is definately worth listening to (and reading) — very usability related articles.
 
-As a side note, I wrote Kathy a while ago because of a print problem in the CSS on her blog's pages. [Email explaining problem and solution](/passionate-users-printing/ "Creating Passionate Users website printing problems solved in CSS").
+<small>As a side note, I wrote Kathy a while ago because of a print problem in the CSS on her blog's pages. [Email explaining problem and solution](/passionate-users-printing/ "Creating Passionate Users website printing problems solved in CSS").</small>
 
 ### Live blogging
 

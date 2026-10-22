@@ -40,4 +40,4 @@ So here it is. The story unveils itself more than ten years after the technique 
 
 Tables and images had just appeared in recent browsers, so at that time, **putting transparent pixels in table cells was the only way to achieve fancy layouts**.
 
-(\*) Actually the first CSS recommendation was published in December 1996 but it took three years before the first browser with decent css support was released (Internet Explorer 5 for Mac).
+<small>(\*) Actually the first CSS recommendation was published in December 1996 but it took three years before the first browser with decent css support was released (Internet Explorer 5 for Mac).</small>

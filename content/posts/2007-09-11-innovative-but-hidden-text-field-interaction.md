@@ -13,7 +13,7 @@ You might know this example. It works this way in Adobe Photoshop.
 
 > **Drag to adjust numberic value**\
 > Mouseover the input box, hold down Cmd + drag left or right to increase / decrease. Hold down Cmd + Opt or Shift key and drag can change the value in decimal or 10 interval. This shortcut works in all dialog palettes.\
-> ![screenshot](http://www.webdesignerwall.com/wp-content/uploads/2007/09/shortcuts-6.gif "screenshot")
+> {{< img src=`http://www.webdesignerwall.com/wp-content/uploads/2007/09/shortcuts-6.gif` alt=`screenshot` title=`screenshot` width=`361` height=`123` >}}
 
 Copied from WebdesignWall's "[Photoshop secret shortcuts](http://www.webdesignerwall.com/tutorials/photoshop-secret-shortcuts/)"
 
