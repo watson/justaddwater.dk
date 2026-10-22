@@ -33,6 +33,14 @@ ASSET_SUFFIXES = {'.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp
                   '.mov', '.woff', '.woff2', '.ttf', '.eot', '.swf', '.doc', '.xls'}
 BLOCKED = ('/wp-admin', '/wp-json', '/wp-login', '/wp-comments-post', '/xmlrpc', '/wp-cron')
 CSS_URL = re.compile(r'url\(\s*([\'\"]?)(.*?)\1\s*\)', re.I)
+# Player endpoints present in the original articles, including retired services.
+VIDEO_PLAYERS = {
+    'www.youtube.com': ('/embed/', '/v/'),
+    'player.vimeo.com': ('/video/',),
+    'video.google.com': ('/googleplayer.swf',),
+    'blip.tv': ('/scripts/flash/showplayer.swf',),
+    'mojiti.com': ('/bofangqi/',),
+}
 COUNTS = {}
 
 
@@ -315,6 +323,20 @@ def crawl(data):
     return state
 
 
+def is_video_embed(tag):
+    if tag.name not in ('iframe', 'object', 'embed'):
+        return False
+    urls = [tag.get('src', ''), tag.get('data', '')]
+    if tag.name == 'object':
+        urls.extend(param.get('value', '') for param in tag.find_all('param')
+                    if param.get('name', '').lower() == 'movie')
+    for url in urls:
+        parts = urlsplit(url)
+        if parts.scheme in ('http', 'https') and parts.path.startswith(VIDEO_PLAYERS.get(parts.hostname, ())):
+            return True
+    return False
+
+
 def clean_html(soup, preserve_demo_controls=False):
     # The old host prints PHP open_basedir warnings on attachment pages. These
     # are runtime diagnostics, not article content or archive navigation.
@@ -330,10 +352,11 @@ def clean_html(soup, preserve_demo_controls=False):
                 if stop:
                     break
                 node = after
-    # No legacy JavaScript, tracking, dynamic forms or executable embeds are
-    # needed by this archive. Code examples in pre/code remain plain text.
-    for tag in soup.find_all(['script', 'iframe', 'object', 'embed', 'applet', 'base']):
-        tag.decompose()
+    # Keep original video players, even obsolete Flash players. Process nested
+    # embeds before their objects so removing a parent cannot invalidate a child.
+    for tag in reversed(soup.find_all(['script', 'iframe', 'object', 'embed', 'applet', 'base'])):
+        if not is_video_embed(tag):
+            tag.decompose()
     for comment in soup.find_all(string=lambda x: isinstance(x, Comment)):
         comment.extract()
     for tag in soup.find_all(True):

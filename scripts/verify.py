@@ -11,7 +11,14 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from archive import ROOT, HOSTS, CSS_URL, embedded_css, parse_document
+from archive import ROOT, HOSTS, CSS_URL, embedded_css, is_video_embed, parse_document
+
+
+def video_embed_markup(soup):
+    # Compare the original markup directly, including object params, nested
+    # embeds, dimensions and URLs. Do not sanitize the expected players.
+    return Counter(str(tag) for tag in soup.find_all(['iframe', 'object', 'embed'])
+                   if is_video_embed(tag))
 
 
 def expected_article_content(soup):
@@ -52,6 +59,9 @@ def verify(site, base):
     errors, local_links, comment_ids = [], 0, set()
     external_images = Counter()
     data = json.loads((ROOT / 'data/content.json').read_text())
+    expected_videos = {row['id']: video_embed_markup(BeautifulSoup(row['content']['rendered'], 'html.parser'))
+                       for row in data['posts'] + data['pages']}
+    original_players = {markup for players in expected_videos.values() for markup in players}
 
     def target(url, document):
         nonlocal local_links
@@ -91,13 +101,13 @@ def verify(site, base):
         for tag in soup.find_all(True):
             if tag.name == 'script' and tag.get('src') != base + '/archive-assets/archive.js':
                 errors.append(f'{file}: unexpected executable script')
-            if tag.name in ('iframe', 'object', 'embed', 'applet'):
-                errors.append(f'{file}: active legacy embed')
+            if tag.name in ('iframe', 'object', 'embed', 'applet') and str(tag) not in original_players:
+                errors.append(f'{file}: embed differs from original video players')
             if any(attr.lower().startswith('on') for attr in tag.attrs):
                 errors.append(f'{file}: inline event handler')
             if tag.get('id') and re.fullmatch(r'comment-\d+', tag['id']):
                 comment_ids.add(int(tag['id'].split('-')[-1]))
-            for attr in ('href', 'src', 'poster', 'action'):
+            for attr in ('href', 'src', 'poster', 'data', 'action'):
                 url = tag.get(attr)
                 if not url:
                     continue
@@ -132,6 +142,8 @@ def verify(site, base):
         actual = ' '.join(soup.get_text(' ', strip=True).split())
         if not article_text_preserved(row['content']['rendered'], actual):
             errors.append(f'Published article text differs from API export: {row["link"]}')
+        if video_embed_markup(soup) != expected_videos[row['id']]:
+            errors.append(f'Published video players differ from API export: {row["link"]}')
         content_checks += 1
     missing_comments = {row['id'] for row in data['comments']} - comment_ids
     if missing_comments:
@@ -152,6 +164,7 @@ def verify(site, base):
     if external_images:
         errors.append(f'Remote image dependencies remain: {dict(external_images)}')
     summary = {'html_pages': len(pages), 'published_posts_and_pages': content_checks,
+               'articles_with_video_players': sum(bool(players) for players in expected_videos.values()),
                'public_comments': len(comment_ids), 'local_links_checked': local_links,
                'errors': len(errors), 'deployment_base': base or '/'}
     print(json.dumps(summary, indent=2))

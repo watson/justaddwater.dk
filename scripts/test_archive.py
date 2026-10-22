@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 from archive import ROOT, ORIGIN, clean_html, parse_document, references, rewrite
 from prepare_pages import PrefixHTML
-from verify import article_text_preserved
+from verify import article_text_preserved, video_embed_markup
 
 
 class BackgroundCaptureTests(unittest.TestCase):
@@ -101,6 +101,55 @@ class FormExampleTests(unittest.TestCase):
             self.assertIn('<form action="example?a=1&amp;b=2">Example</form>', text)
             self.assertIn('François’ notes', text)
             self.assertIsNone(output.form)
+
+
+class VideoEmbedTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = json.loads((ROOT / 'data/content.json').read_text())
+        # These two articles contain an interactive demo and literal object-tag
+        # examples, respectively. All other embedded players are videos.
+        excluded = {'undo-not-confirmation-end-of-discussion', 'ie-7-web-standards-and-css-support'}
+        cls.articles = [row for row in data['posts'] if row['slug'] not in excluded
+                        and BeautifulSoup(row['content']['rendered'], 'html.parser').find(['iframe', 'object', 'embed'])]
+
+    def test_all_original_players_survive_conversion_and_project_deployment(self):
+        self.assertEqual(len(self.articles), 21)
+        for row in self.articles:
+            with self.subTest(article=row['slug']):
+                original = BeautifulSoup(row['content']['rendered'], 'html.parser')
+                expected = [str(tag) for tag in original.find_all(['iframe', 'object', 'embed'])]
+                output = rewrite(clean_html(parse_document(row['content']['rendered'])),
+                                 row['link'], {}, set(), set())
+                parser = PrefixHTML('/justaddwater.dk')
+                parser.feed(str(output))
+                parser.close()
+                deployed = BeautifulSoup(''.join(parser.parts), 'html.parser')
+                actual = [str(tag) for tag in deployed.find_all(['iframe', 'object', 'embed'])]
+                self.assertEqual(actual, expected)
+
+    def test_video_check_detects_removed_players_and_changed_parameters(self):
+        article = next(row for row in self.articles if row['slug'] == 'lessons-learned-from-pixar-2')
+        source = article['content']['rendered']
+        expected = video_embed_markup(BeautifulSoup(source, 'html.parser'))
+        for mutation in ('remove', 'url', 'dimensions', 'parameter'):
+            with self.subTest(mutation=mutation):
+                output = clean_html(parse_document(source))
+                self.assertEqual(video_embed_markup(output), expected)
+                if mutation == 'remove':
+                    output.object.decompose()
+                elif mutation == 'url':
+                    output.embed['src'] = 'http://www.youtube.com/v/changed'
+                elif mutation == 'dimensions':
+                    output.object['width'] = '1'
+                else:
+                    output.find('param', attrs={'name': 'movie'})['value'] = 'http://www.youtube.com/v/changed'
+                self.assertNotEqual(video_embed_markup(output), expected)
+
+    def test_unrelated_embeds_and_scripts_are_still_removed(self):
+        source = '<iframe src="http://humanized.com/demo.html"></iframe><object data="example.swf"><embed src="example.swf"></object><applet></applet><script>tracking()</script>'
+        output = clean_html(parse_document(source))
+        self.assertIsNone(output.find(['iframe', 'object', 'embed', 'applet', 'script']))
 
 
 if __name__ == '__main__':

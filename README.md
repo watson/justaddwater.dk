@@ -17,6 +17,8 @@ original host.
   all API pages. Images and downloads discovered in HTML and CSS are also copied,
   including files not listed in the media library.
 - The original site layout, plus local search, RSS feeds, a sitemap and a 404 page.
+- Original video players in **21 posts**, including YouTube, Vimeo and legacy
+  Flash embeds, with their original URLs, dimensions and player parameters.
 - A public-content export in `data/content.json` and recovery reports in `data/`.
 
 Some local files already returned 404, and some external images could not be
@@ -26,8 +28,11 @@ original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
 fetch errors for possible recovery from backups.
 
-Legacy tracking scripts, WordPress runtime scripts, executable embeds and comment
-submission forms are removed. Code examples remain text, and downloadable
+Video players depend on their original external services; obsolete or unavailable
+players are preserved even if they no longer play.
+
+Legacy tracking scripts, WordPress runtime scripts, other executable embeds and
+comment submission forms are removed. Code examples remain text, and downloadable
 examples remain files. CSS-demo controls remain visible without submitting forms.
 Historical comments retain their original authorship and
 links. This is a public static capture, **not** a database backup: drafts, private
@@ -87,6 +92,8 @@ stylesheets, style attributes and embedded style blocks, rejecting remote CSS
 dependencies. The deployment workflow runs these checks before publishing.
 Expected article text is checked independently of the converter's cleanup rules,
 so the same accidental deletion cannot be hidden on both sides of the comparison.
+Video markup is compared directly with the original public export, including
+nested Flash players and their parameters; playback availability is not required.
 
 To test a project URL prefix:
 
