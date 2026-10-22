@@ -23,7 +23,7 @@ import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup, Comment
 from feeds import feed_specs, is_feed, write_feeds
-from recovery import recovery_data, restore_code, restore_tag_lists, restore_gists, restore_demos, restore_local_forms, restore_comments, UNDO_URL, UNDO_PATH
+from recovery import recovery_data, restore_code, restore_tag_lists, restore_gists, restore_demos, restore_local_forms, restore_comments, modernize_videos, UNDO_URL, UNDO_PATH
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / '.cache'
@@ -392,11 +392,12 @@ def clean_html(soup, path=''):
                 if stop:
                     break
                 node = after
-    # Keep original video players, even obsolete Flash players. Process nested
+    # Keep recognized video players, including retired providers. Process nested
     # embeds before their objects so removing a parent cannot invalidate a child.
     for tag in reversed(soup.find_all(['script', 'iframe', 'object', 'embed', 'applet', 'base'])):
         if not is_video_embed(tag) and not (tag.name == 'iframe' and tag.get('src') == UNDO_URL):
             tag.decompose()
+    modernize_videos(soup)
     for comment in soup.find_all(string=lambda x: isinstance(x, Comment)):
         comment.extract()
     for tag in soup.find_all(True):

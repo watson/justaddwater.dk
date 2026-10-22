@@ -1,11 +1,13 @@
 import json
 import unittest
+from urllib.parse import parse_qs, urlsplit
 
 from bs4 import BeautifulSoup
 
 from archive import ROOT, ORIGIN, clean_html, parse_document, references, rewrite
 from prepare_pages import PrefixHTML
-from verify import archived_form_errors, article_text_preserved, video_embed_markup
+from verify import archived_form_errors, article_text_preserved, video_embed_markup, expected_video_markup
+from recovery import video_players
 
 
 class BackgroundCaptureTests(unittest.TestCase):
@@ -201,37 +203,74 @@ class VideoEmbedTests(unittest.TestCase):
         cls.articles = [row for row in data['posts'] if row['slug'] not in excluded
                         and BeautifulSoup(row['content']['rendered'], 'html.parser').find(['iframe', 'object', 'embed'])]
 
-    def test_all_original_players_survive_conversion_and_project_deployment(self):
+    def test_all_recorded_players_survive_conversion_and_project_deployment(self):
         self.assertEqual(len(self.articles), 21)
         for row in self.articles:
             with self.subTest(article=row['slug']):
-                original = BeautifulSoup(row['content']['rendered'], 'html.parser')
-                expected = [str(tag) for tag in original.find_all(['iframe', 'object', 'embed'])]
+                expected = expected_video_markup(row)
                 output = rewrite(clean_html(parse_document(row['content']['rendered'])),
                                  row['link'], {}, set(), set())
                 parser = PrefixHTML('/justaddwater.dk')
                 parser.feed(str(output))
                 parser.close()
                 deployed = BeautifulSoup(''.join(parser.parts), 'html.parser')
-                actual = [str(tag) for tag in deployed.find_all(['iframe', 'object', 'embed'])]
+                actual = video_embed_markup(deployed)
                 self.assertEqual(actual, expected)
+
+    def test_native_players_preserve_original_ids_sizes_and_supported_options(self):
+        self.assertEqual(len(video_players()), 11)
+        migrated = set()
+        for row in self.articles:
+            original = BeautifulSoup(row['content']['rendered'], 'html.parser').find(['object', 'iframe', 'embed'])
+            movie = original.find('param', attrs={'name': 'movie'})
+            source = movie['value'] if movie else original.get('src', '')
+            if not (source.startswith('http://www.youtube.com/v/') or 'player.vimeo.com' in source):
+                continue
+            with self.subTest(article=row['slug']):
+                record = next(item for item in video_players() if item['post_id'] == row['id'])
+                self.assertEqual(record['captured'], str(original))
+                # Check the actual conversion against the original API data,
+                # independently of the recorded replacement HTML.
+                output = clean_html(parse_document(row['content']['rendered']))
+                self.assertEqual(len(output.find_all(['object', 'iframe', 'embed'])), 1)
+                frame = output.iframe
+                self.assertEqual((frame['width'], frame['height']), (original['width'], original['height']))
+                if 'youtube.com' in source:
+                    video_id, _, query = source.split('/v/')[1].partition('&')
+                    self.assertEqual(urlsplit(frame['src']).path, '/embed/' + video_id)
+                    options = {k: v for k, v in parse_qs(query).items() if k in ('hl', 'fs', 'rel')}
+                    self.assertEqual(parse_qs(urlsplit(frame['src']).query), options)
+                    self.assertEqual(urlsplit(frame['src']).hostname, 'www.youtube.com')
+                else:
+                    self.assertEqual(frame['src'], source.replace('http:', 'https:', 1))
+                self.assertEqual(urlsplit(frame['src']).scheme, 'https')
+                self.assertTrue(frame.has_attr('allowfullscreen'))
+                self.assertEqual(frame['frameborder'], '0')
+                self.assertEqual(frame['referrerpolicy'], 'strict-origin-when-cross-origin')
+                self.assertTrue(frame['title'])
+                once = str(output)
+                self.assertEqual(str(clean_html(output)), once)
+                migrated.add(row['id'])
+        self.assertEqual(migrated, {row['post_id'] for row in video_players()})
+        # Unavailable videos receive the same native player, never a substitute.
+        self.assertTrue({1168, 805}.issubset(migrated))
 
     def test_video_check_detects_removed_players_and_changed_parameters(self):
         article = next(row for row in self.articles if row['slug'] == 'lessons-learned-from-pixar-2')
         source = article['content']['rendered']
-        expected = video_embed_markup(BeautifulSoup(source, 'html.parser'))
+        expected = expected_video_markup(article)
         for mutation in ('remove', 'url', 'dimensions', 'parameter'):
             with self.subTest(mutation=mutation):
                 output = clean_html(parse_document(source))
                 self.assertEqual(video_embed_markup(output), expected)
                 if mutation == 'remove':
-                    output.object.decompose()
+                    output.iframe.decompose()
                 elif mutation == 'url':
-                    output.embed['src'] = 'http://www.youtube.com/v/changed'
+                    output.iframe['src'] = 'https://www.youtube.com/embed/changed'
                 elif mutation == 'dimensions':
-                    output.object['width'] = '1'
+                    output.iframe['width'] = '1'
                 else:
-                    output.find('param', attrs={'name': 'movie'})['value'] = 'http://www.youtube.com/v/changed'
+                    output.iframe['src'] = output.iframe['src'].replace('rel=0', 'rel=1')
                 self.assertNotEqual(video_embed_markup(output), expected)
 
     def test_unrelated_embeds_and_scripts_are_still_removed(self):

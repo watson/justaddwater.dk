@@ -1,0 +1,57 @@
+[
+  {
+    "post_id": 1378,
+    "captured": "<iframe frameborder=\"0\" height=\"225\" src=\"http://player.vimeo.com/video/16527312\" width=\"400\"></iframe>",
+    "replacement": "<iframe allow=\"autoplay; fullscreen; picture-in-picture; encrypted-media\" allowfullscreen=\"\" frameborder=\"0\" height=\"225\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://player.vimeo.com/video/16527312\" title=\"Rapid Prototyping with Aza Raskin\" width=\"400\"></iframe>"
+  },
+  {
+    "post_id": 1337,
+    "captured": "<object height=\"364\" width=\"445\"><param name=\"movie\" value=\"http://www.youtube.com/v/k2h2lvhzMDc&amp;hl=en_US&amp;fs=1&amp;rel=0&amp;border=1\"/><param name=\"allowFullScreen\" value=\"true\"/><param name=\"allowscriptaccess\" value=\"always\"/><embed allowfullscreen=\"true\" allowscriptaccess=\"always\" height=\"364\" src=\"http://www.youtube.com/v/k2h2lvhzMDc&amp;hl=en_US&amp;fs=1&amp;rel=0&amp;border=1\" type=\"application/x-shockwave-flash\" width=\"445\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"364\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/k2h2lvhzMDc?hl=en_US&amp;fs=1&amp;rel=0\" title=\"YouTube video player\" width=\"445\"></iframe>"
+  },
+  {
+    "post_id": 1168,
+    "captured": "<object height=\"344\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/gZTVX21jPtc&amp;hl=en&amp;fs=1&amp;\"/><param name=\"allowFullScreen\" value=\"true\"/><param name=\"allowscriptaccess\" value=\"always\"/><embed allowfullscreen=\"true\" allowscriptaccess=\"always\" height=\"344\" src=\"http://www.youtube.com/v/gZTVX21jPtc&amp;hl=en&amp;fs=1&amp;\" type=\"application/x-shockwave-flash\" width=\"425\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"344\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/gZTVX21jPtc?hl=en&amp;fs=1\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  },
+  {
+    "post_id": 1060,
+    "captured": "<object height=\"344\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/l1wKO3rID9g&amp;hl=en&amp;fs=1\"/><param name=\"allowFullScreen\" value=\"true\"/><param name=\"allowscriptaccess\" value=\"always\"/><embed allowfullscreen=\"true\" allowscriptaccess=\"always\" height=\"344\" src=\"http://www.youtube.com/v/l1wKO3rID9g&amp;hl=en&amp;fs=1\" type=\"application/x-shockwave-flash\" width=\"425\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"344\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/l1wKO3rID9g?hl=en&amp;fs=1\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  },
+  {
+    "post_id": 926,
+    "captured": "<object height=\"355\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/a0qMe7Z3EYg&amp;hl=en&amp;rel=0\"/><param name=\"wmode\" value=\"transparent\"/><embed height=\"355\" src=\"http://www.youtube.com/v/a0qMe7Z3EYg&amp;hl=en&amp;rel=0\" type=\"application/x-shockwave-flash\" width=\"425\" wmode=\"transparent\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"355\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/a0qMe7Z3EYg?hl=en&amp;rel=0\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  },
+  {
+    "post_id": 913,
+    "captured": "<object height=\"355\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/Su4ZIqxaObo&amp;rel=1&amp;border=0\"/><param name=\"wmode\" value=\"transparent\"/><embed height=\"355\" src=\"http://www.youtube.com/v/Su4ZIqxaObo&amp;rel=1&amp;border=0\" type=\"application/x-shockwave-flash\" width=\"425\" wmode=\"transparent\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"355\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/Su4ZIqxaObo?rel=1\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  },
+  {
+    "post_id": 849,
+    "captured": "<object height=\"355\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/vTQT-9dnrr4&amp;rel=1\"/><param name=\"wmode\" value=\"transparent\"/><embed height=\"355\" src=\"http://www.youtube.com/v/vTQT-9dnrr4&amp;rel=1\" type=\"application/x-shockwave-flash\" width=\"425\" wmode=\"transparent\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"355\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/vTQT-9dnrr4?rel=1\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  },
+  {
+    "post_id": 805,
+    "captured": "<object height=\"355\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/wZ7YedEopp4&amp;rel=1\"/><param name=\"wmode\" value=\"transparent\"/><embed height=\"355\" src=\"http://www.youtube.com/v/wZ7YedEopp4&amp;rel=1\" type=\"application/x-shockwave-flash\" width=\"425\" wmode=\"transparent\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"355\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/wZ7YedEopp4?rel=1\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  },
+  {
+    "post_id": 699,
+    "captured": "<object height=\"353\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/c-SSu3tJ3ns\"/><param name=\"wmode\" value=\"transparent\"/><embed height=\"353\" src=\"http://www.youtube.com/v/c-SSu3tJ3ns\" type=\"application/x-shockwave-flash\" width=\"425\" wmode=\"transparent\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"353\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/c-SSu3tJ3ns\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  },
+  {
+    "post_id": 698,
+    "captured": "<object height=\"350\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/2GtgSkmDnbQ\"/><param name=\"wmode\" value=\"transparent\"/><embed height=\"350\" src=\"http://www.youtube.com/v/2GtgSkmDnbQ\" type=\"application/x-shockwave-flash\" width=\"425\" wmode=\"transparent\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"350\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/2GtgSkmDnbQ\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  },
+  {
+    "post_id": 538,
+    "captured": "<object height=\"350\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/6gmP4nk0EOE\"/><param name=\"wmode\" value=\"transparent\"/><embed height=\"350\" src=\"http://www.youtube.com/v/6gmP4nk0EOE\" type=\"application/x-shockwave-flash\" width=\"425\" wmode=\"transparent\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"350\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/6gmP4nk0EOE\" title=\"YouTube video player\" width=\"425\"></iframe>"
+  }
+]

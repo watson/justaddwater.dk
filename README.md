@@ -22,8 +22,9 @@ original host.
   `/…/feed/` paths and scope. Feed item links use the deployed archive address;
   original RSS IDs and comment timestamps are preserved.
   The original RSS and Atom aliases for the Web Standards category also work.
-- Original video players in **21 posts**, including YouTube, Vimeo and legacy
-  Flash embeds, with their original URLs, dimensions and player parameters.
+- Video embeds in **21 posts**. Ten YouTube Flash players use native HTTPS
+  iframes with the original video IDs and dimensions; Vimeo also uses HTTPS.
+  The remaining original players, including retired services, are preserved.
 - **61 legacy code examples in 19 articles** displayed as code, plus **14 files
   from 12 GitHub gist embeds** saved locally. Quotes, command-line hyphens and
   literal HTML tags are preserved without executing the examples.
@@ -42,8 +43,15 @@ original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
 fetch errors for possible recovery from backups.
 
-Video players depend on their original external services; obsolete or unavailable
-players are preserved even if they no longer play.
+Video players depend on their original external services. Unavailable YouTube
+videos retain their original IDs so YouTube displays its own error UI. Google
+Video, Blip and Mojiti have no usable native replacement and keep their legacy
+embeds until an alternative upload is reviewed. The original capture remains
+unchanged in `data/content.json`; `data/video-players.json` records each migration.
+YouTube's supported `hl`, `fs` and `rel` parameters are retained; Flash-only
+`border`, `wmode` and script-access settings are dropped. See the
+[YouTube player documentation](https://developers.google.com/youtube/player_parameters)
+for current parameter behavior (including the changed meaning of `rel=0`).
 
 Legacy tracking scripts and WordPress runtime scripts are removed. The two
 reviewed JavaScript demonstrations use a small local script; other code examples
@@ -141,8 +149,10 @@ Expected article text is checked independently of the converter's cleanup rules,
 so the same accidental deletion cannot be hidden on both sides of the comparison.
 Recovered examples are checked character-for-character against their recorded
 sources, and recovered assets and repaired aliases are checked for byte identity.
-Video markup is compared directly with the original public export, including
-nested Flash players and their parameters; playback availability is not required.
+Video markup is compared with the original public export and explicit migration
+records, including retained nested Flash players and their parameters. Tests
+independently check migrated video IDs, dimensions and supported options against
+the original export; playback availability is not required.
 
 To test a project URL prefix:
 

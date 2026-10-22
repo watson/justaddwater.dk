@@ -11,6 +11,8 @@ from pathlib import Path
 import re
 from urllib.parse import quote_plus
 
+from bs4 import BeautifulSoup
+
 ROOT = Path(__file__).resolve().parents[1]
 SHORTCODE = re.compile(r'\[code\b[^\]]*\].*?\[/code\]', re.I | re.S)
 UNDO_URL = 'http://humanized.com/weblog/images/resources/undo/todo.html'
@@ -22,6 +24,24 @@ BUTTON_DEMO = '/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-butto
 @lru_cache
 def recovery_data():
     return json.loads((ROOT / 'data/recovery.json').read_text())
+
+
+@lru_cache
+def video_players():
+    return json.loads((ROOT / 'data/video-players.json').read_text())
+
+
+def modernize_videos(soup):
+    """Use native players for the recorded IDs, even when a video is unavailable.
+
+    Exact source matching also covers copies on index/category/archive pages.
+    Retired providers without a native replacement keep their original markup.
+    """
+    replacements = {row['captured']: row['replacement'] for row in video_players()}
+    for tag in list(soup.find_all(['object', 'iframe'])):
+        replacement = replacements.get(str(tag))
+        if replacement:
+            tag.replace_with(BeautifulSoup(replacement, 'html.parser').iframe)
 
 
 def code_key(source):

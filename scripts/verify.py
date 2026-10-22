@@ -13,15 +13,24 @@ import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
 from archive import ROOT, HOSTS, CSS_URL, embedded_css, is_video_embed, parse_document
-from recovery import recovery_data, SHORTCODE, UNDO_PATH, TABLE_DEMO, BUTTON_DEMO
+from recovery import recovery_data, video_players, SHORTCODE, UNDO_PATH, TABLE_DEMO, BUTTON_DEMO
 from feeds import feed_specs, comment_items, ATOM, url_path
 
 
 def video_embed_markup(soup):
-    # Compare the original markup directly, including object params, nested
-    # embeds, dimensions and URLs. Do not sanitize the expected players.
+    # Compare complete markup, including params, nested embeds and dimensions.
     return Counter(str(tag) for tag in soup.find_all(['iframe', 'object', 'embed'])
                    if is_video_embed(tag))
+
+
+def expected_video_markup(row):
+    # Read the explicit migration record, without running the converter. Posts
+    # without a migration must retain every original player and parameter.
+    markup = str(BeautifulSoup(row['content']['rendered'], 'html.parser'))
+    for player in video_players():
+        if player['post_id'] == row['id']:
+            markup = markup.replace(player['captured'], player['replacement'])
+    return video_embed_markup(BeautifulSoup(markup, 'html.parser'))
 
 
 def expected_article_content(soup):
@@ -88,7 +97,7 @@ def verify(site, base):
     errors, local_links, comment_ids, archived_forms = [], 0, set(), 0
     external_images = Counter()
     data = json.loads((ROOT / 'data/content.json').read_text())
-    expected_videos = {row['id']: video_embed_markup(BeautifulSoup(row['content']['rendered'], 'html.parser'))
+    expected_videos = {row['id']: expected_video_markup(row)
                        for row in data['posts'] + data['pages']}
     original_players = {markup for players in expected_videos.values() for markup in players}
     recovery = recovery_data()
@@ -150,7 +159,7 @@ def verify(site, base):
             local_demo = (tag.name == 'iframe' and tag.get('src') == base + UNDO_PATH
                           and tag.get('sandbox') == ['allow-scripts'])
             if tag.name in ('iframe', 'object', 'embed', 'applet') and str(tag) not in original_players and not local_demo:
-                errors.append(f'{file}: embed differs from original video players')
+                errors.append(f'{file}: embed differs from recorded video players')
             if any(attr.lower().startswith('on') for attr in tag.attrs):
                 errors.append(f'{file}: inline event handler')
             if tag.get('id') and re.fullmatch(r'comment-\d+', tag['id']):
@@ -208,7 +217,7 @@ def verify(site, base):
         if not article_text_preserved(row['content']['rendered'], actual):
             errors.append(f'Published article text differs from API export: {row["link"]}')
         if video_embed_markup(soup) != expected_videos[row['id']]:
-            errors.append(f'Published video players differ from API export: {row["link"]}')
+            errors.append(f'Published video players differ from recorded originals or migrations: {row["link"]}')
         if url_path(row['link']) + 'feed/' in snapshots['feeds']:
             expected_feed = base + url_path(row['link']) + 'feed/'
             for link in soup.select('.postmetadata.alt a'):
