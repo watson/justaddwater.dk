@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firefox Tip For Framebuster JavaScript · justaddwater.dk</title>
+<meta name="description" content="I have for long been struggling with an internal legacy application that wraps the content page in a frameset. Very annoying because I have spent some time to …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/10/19/google-power-tool-for-webmasters/" rel="prev">Google Power Tool for Webmasters</a></div>
+<div class="alignright"><a href="/2007/10/23/setting-up-subversion-externals-with-tortoisesvn/" rel="next">Setting Up Subversion Externals With TortoiseSVN</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-10-22"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Browser"></span><span hidden data-pagefind-filter="category[data-v]" data-v="JavaScript"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I have for long been struggling with an internal legacy application that wraps the content page in a frameset. Very annoying because I have spent some time to reverse engineer a poor-mans API to the application. Problem: An inline “reverse” framebuster script that makes sure that everything is nicely(?) wrapped in the frameset. As you [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Oct 22"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="2"></span>
+<h2 data-pagefind-meta="title">Firefox Tip For Framebuster JavaScript</h2>
+<div class="entry">
+<p>I have for long been struggling with an internal legacy application that wraps the content page in a frameset. Very annoying because I have spent some time to reverse engineer a poor-mans API to the application.</p>
+<p>Problem: An inline &ldquo;reverse&rdquo; framebuster script that makes sure that everything is nicely(?) wrapped in the frameset. As you see it&rsquo;s included inline in the HTML.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">Language</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Javascript&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;application_url&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">frames</span>[<span style="color:#ae81ff">0</span>]) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">frames</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">name</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;FrameMain&#39;</span>) {
+</span></span><span style="display:flex;"><span>      document.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">url</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#a6e22e">url</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span></code></pre></div><p>One thing is I never understood the thing about putting everything in a frameset. In this case, I have not been able to change the code. But as I have to use the application every now and then, the big question is:</p>
+<p><strong>How to change or remove the inline JavaScript, and make sure the framebuster is ignored?</strong></p>
+<p>I did not think this was possible until I got this answer from &ldquo;esquifit&rdquo; in the <a href="http://groups.google.com/group/greasemonkey-users">Greasemonkey user goup</a>:</p>
+<blockquote>
+<p>You do not need GM nor Opera for this task. Firefox comes with a<br>
+built-in capability for allowing/disallowing access to<br>
+properties/methods of DOM Objects on a per-site basis. It is called<br>
+Configurable Security Policies (CAPS) and it is described in [1].<br>
+Further examples and explanations are provided for example in [2] and<br>
+[3].<br>
+A short guide assuming the simplest case:<br>
+1) Close Firefox<br>
+2) Locate your profile folder [4]<br>
+3) Locate the file user.js within this folder. If it does not exist,<br>
+create it with a *text* editor (Notepad, vim, etc.), not with a &lsquo;word<br>
+processor&rsquo; (MS Word, OpenOffice.org, Wordpad, etc.)<br>
+4) Add the following lines to user.js:<br>
+user_pref(&ldquo;capability.policy.policynames&rdquo;, &ldquo;noframebuster&rdquo;);<br>
+user_pref(&ldquo;capability.policy.noframebuster.sites&rdquo;,<br>
+&ldquo;<a href="http://www.annoying-site.com/">http://www.annoying-site.com</a>&rdquo;);<br>
+user_pref(&ldquo;capability.policy.noframebuster.Location.replace&rdquo;, &ldquo;noAccess&rdquo;);<br>
+Of course, you will have to replace the domain with the one you want to prevent from redirecting your frames.</p>
+</blockquote>
+<p>Find the entire discussion here:</p>
+<ul>
+<li>Greasemonkey users group: &ldquo;<a href="http://groups.google.com/group/greasemonkey-users/browse_thread/thread/42a64be1aa31e1d8/76df7564697e076a#76df7564697e076a">How to ignore framebuster script</a>&rdquo;</li>
+</ul>
+
+
+<p><small>Technorati Tags: <a href="/tag/javascript/" rel="tag">javascript</a>, frameset, frames, frame buster, inline, <a href="/tag/firefox/" rel="tag">firefox</a>, location.replace</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, October 22nd, 2007 at 13:30 (GMT-1) and is filed under <a href="/category/browser/" rel="category tag">Browser</a>, <a href="/category/javascript/" rel="category tag">JavaScript</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to &#8220;Firefox Tip For Framebuster JavaScript&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-309001">
+<cite><a href="http://fasterda.cn/index.php/2007/10/22/firefox-tip-for-framebuster-javascript/" class="url" rel="external">fasterda » Blog Archive » Firefox Tip For Framebuster JavaScript</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-309001" title="">October 22nd, 2007 at 15:28 (GMT-1)</a> </small>
+<p>[&hellip;] check the full story here [&hellip;]</p>
+</li>
+
+<li id="comment-309363">
+<cite><a href="http://qzpoint.cn/index.php/2007/10/22/firefox-tip-for-framebuster-javascript/" class="url" rel="external">Firefox Tip For Framebuster JavaScript | qzpoint</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-309363" title="">October 22nd, 2007 at 19:24 (GMT-1)</a> </small>
+<p>[&hellip;] here for full [&hellip;]</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Links on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/links/</link>
+		<description>Recent content in Links on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 04 Oct 2011 20:44:55 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/links/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Useful Background research for Certification</title>
+				<link>https://justaddwater.dk/2011/10/04/useful-background-research-for-certification/</link>
+				<pubDate>Tue, 04 Oct 2011 20:44:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/10/04/useful-background-research-for-certification/</guid>
+				<description>&lt;p&gt;I have just applied for certification to become Capgemini Software Engineer level 1+2. The process had some tests and a thorough application formula where i should describe my deeds.&lt;/p&gt;&#xA;&lt;p&gt;The tests were of two formats: 10 questions in 15 minutes, and 30 questions in 40 minutes (multiple choice questions).&lt;/p&gt;&#xA;&lt;p&gt;For the tests I took, these were some links with background material which I found most helpful:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;IBM Developerworks: &lt;a href=&#34;http://www.ibm.com/developerworks/rational/library/apr05/crain/index.html&#34;&gt;Understanding RUP roles&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Wikipedia &lt;a href=&#34;http://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration&#34;&gt;Capability Maturity Model Integration (&lt;strong&gt;CMMI&lt;/strong&gt;)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Wikipedia &lt;a href=&#34;http://en.wikipedia.org/wiki/IBM_Rational_Unified_Process&#34;&gt;RUP (Rational Unified Process)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Wikipedia &lt;a href=&#34;http://en.wikipedia.org/wiki/Software_configuration_management&#34;&gt;Software configuration management&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Wikipedia &lt;a href=&#34;http://en.wikipedia.org/wiki/Information_Systems_Architecture&#34;&gt;Enterprise architecture&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Unified Process for EDUcation: A &lt;a href=&#34;http://www.upedu.org/process/activity/chklists/ck_sad.htm&#34;&gt;Software Architecture Document example&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;and finally a blog post about &lt;a href=&#34;http://appdevchronicles.blogspot.com/2007/10/test-specification-techniques.html&#34;&gt;test specification techniques&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;As you may notice, the topics mostly covered were RUP, IAF (a capgemini architecture framework), A little CMMI, and hardly any agile methodologies at all. No SCRUM, Lean, Kanban or similar references. Although i think i saw one question on XP (eXtreme Programming).&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

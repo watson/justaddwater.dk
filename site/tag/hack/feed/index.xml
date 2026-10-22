@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Hack on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/hack/</link>
+		<description>Recent content in Hack on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 29 Sep 2009 11:08:58 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/hack/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Print CSS Background Logo Hack</title>
+				<link>https://justaddwater.dk/2009/09/29/print-css-background-logo-hack/</link>
+				<pubDate>Tue, 29 Sep 2009 11:08:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/29/print-css-background-logo-hack/</guid>
+				<description>&lt;p&gt;I learned this nice little hack to bypass the standard browser setting that normally prevents background images from being printed.&lt;/p&gt;&#xA;&lt;p&gt;The hack makes use of converting the background-image to a list item with an image.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;/* Hack, to trick the browser to print another logo &#xA;   Unfortunetaly, Firefox on Windows doesn&#39;t show logo on print &#xA;    — see Mozilla bug 133490 for further details */&#xA;#header {&#xA;  display: list-item; &#xA;  list-style-image: url(../images/logo_print.gif); &#xA;  list-style-position: inside;&#xA;    margin: 0 !important;&#xA;  padding: 0 !important;&#xA;    height: 50pt;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;This way, you don&amp;rsquo;t have to fall back to inserting an image tag in your HTML for the logo. Instead, just have an a element that contains the corporate logo text, and nothing all.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

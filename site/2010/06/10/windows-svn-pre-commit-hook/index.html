@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows SVN pre-commit-hook · justaddwater.dk</title>
+<meta name="description" content="At a current project I work on, we use a Windows server to run our subversion repository.
+I wanted to set up the pre-commit hook so that commits with empty …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2010/05/24/interesting-visualization-of-money-flow/" rel="prev">Interesting visualization of Money Flow</a></div>
+<div class="alignright"><a href="/2010/10/01/successful-approach-to-user-experience/" rel="next">Successful Approach to User Experience</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2010-06-10"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2010"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="At a current project I work on, we use a Windows server to run our subversion repository. I wanted to set up the pre-commit hook so that commits with empty comment are automatically rejected. All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal). Here [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jun 10"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="2"></span>
+<h2 data-pagefind-meta="title">Windows SVN pre-commit-hook</h2>
+<div class="entry">
+<p>At a current project I work on, we use a Windows server to run our subversion repository.</p>
+<p>I wanted to set up the pre-commit hook so that commits with empty comment are automatically rejected.</p>
+<p>All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal).</p>
+<p>Here is a the pre-commit hook rewritten as a windows .bat file.</p>
+<p><em>pre-commit.bat — <a href="https://gist.github.com/432704">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span><span style="color:#75715e">REM Subversion pre-commit hook for Windows machine</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">REM put this in your SVN repository folder /hooks/pre-commit.bat</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">REM we use it with svn version </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">REM http://stackoverflow.com/questions/869248/windows-pre-commit-hook-for-comment-length-subversion</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">echo</span> off  
+</span></span><span style="display:flex;"><span>:<span style="color:#75715e">: Stops commits that have empty log messages.        </span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">echo</span> off  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">setlocal</span>  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">rem Subversion sends through the path to the repository and transaction id  </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">set</span> REPOS=%1  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">set</span> TXN=%2           
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">rem line below ensures at least one character &#34;.&#34;, 5 characters require change to &#34;.....&#34;</span>
+</span></span><span style="display:flex;"><span>svnlook log %REPOS% -t %TXN% | findstr . &gt; nul  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> %errorlevel% <span style="color:#f92672">gtr</span> 0 (<span style="color:#66d9ef">goto</span> err) <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">exit</span> 0  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>:err<span style="color:#75715e">  </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span>. <span style="color:#ae81ff">1</span>&gt;&amp;<span style="color:#ae81ff">2</span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> Your commit has been blocked because you didn&#39;t enter a comment. <span style="color:#ae81ff">1</span>&gt;&amp;<span style="color:#ae81ff">2</span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> Write a log message describing the changes made and try again. <span style="color:#ae81ff">1</span>&gt;&amp;<span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> Thanks <span style="color:#ae81ff">1</span>&gt;&amp;<span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">exit</span> 1
+</span></span></code></pre></div>
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, June 10th, 2010 at 09:23 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to &#8220;Windows SVN pre-commit-hook&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-502222">
+<cite>ocpjp</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-502222" title="">November 8th, 2010 at 17:30 (GMT-1)</a> </small>
+<p>Below is a section of my pre-hook. It only assigns the first word to the log message and not the entire log. Any idea what is wrong?</p>
+<p>rem Subversion sends through the path to the repository and transaction id<br>
+set REPOS=%1<br>
+set TXN=%2<br>
+for /f &ldquo;tokens=* delims= “ %%a in (&lsquo;svnlook log %REPOS% -t %TXN%&rsquo;) do (set LogMessage=%%a)</p>
+
+</li>
+
+<li id="comment-510249">
+<cite><a href="http://www.reviewmaze.com" class="url" rel="external">Ray</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-510249" title="">February 5th, 2011 at 20:04 (GMT-1)</a> </small>
+<p>@ocpjp</p>
+<p>Doesn&rsquo;t you practically override the log message with each iteration of your loop so at the end you only have one word?</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

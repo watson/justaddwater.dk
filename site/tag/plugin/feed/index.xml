@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Plugin on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/plugin/</link>
+		<description>Recent content in Plugin on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 07 Nov 2008 16:15:59 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/plugin/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Plugin for Rails&#39;s Resource Controller</title>
+				<link>https://justaddwater.dk/2008/11/07/plugin-for-railss-resource-controller/</link>
+				<pubDate>Fri, 07 Nov 2008 16:15:59 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/11/07/plugin-for-railss-resource-controller/</guid>
+				<description>&lt;p&gt;If you&amp;rsquo;re using Resource Controller for Ruby on Rails, you may want to look atthe plugin I just created.&lt;/p&gt;&#xA;&lt;p&gt;From the readme file:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h1 id=&#34;resoucecontrollerrespondto&#34;&gt;ResouceControllerRespondTo\&lt;/h1&gt;&#xA;&lt;p&gt;Extends ResourceController plugin for Rails to make it respond_to .xml and .json formats&lt;/p&gt;&#xA;&lt;p&gt;Based on code by Florent Piteau and Joe Fiorini&amp;hellip; Jesper merely provided the glue and packed as plugin.&lt;br&gt;&#xA;See &lt;a href=&#34;http://groups.google.com/group/resource_controller/browse_thread/thread/ec9100db655bc5a9&#34;&gt;resource controller forum thread&lt;/a&gt; for the complete discussion&lt;/p&gt;&#xA;&lt;p&gt;Copyright (c) 2008 Jesper Rønn-Jensen (&lt;a href=&#34;www.justaddwater.dk/&#34;&gt;www.justaddwater.dk&lt;/a&gt;), released under the MIT license&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

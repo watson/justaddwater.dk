@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Railsconf on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/railsconf/</link>
+		<description>Recent content in Railsconf on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 11 Sep 2007 14:31:55 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/railsconf/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Busy Preparing RailsConf Presentation</title>
+				<link>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</link>
+				<pubDate>Tue, 11 Sep 2007 14:31:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</guid>
+				<description>&lt;p&gt;For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.&lt;/p&gt;&#xA;&lt;img src=&#34;http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg&#34; alt=&#34;Railsconf speaker 2007&#34; height=&#34;125&#34; width=&#34;125&#34;&gt;&#xA;&#xA;&lt;p&gt;At the presentation we will introduce a Ruby on Rails plugin that can create the foundation for a local Rails app based on forms scraped from a remote application. In our case, an internal application used for timereporting in Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;My head is too ful of all the details in the presentation but fact is, that we&amp;rsquo;re running two trials on the presentation this Thursday the 13th in our Capgemini office in Copenhagen, Denmark.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

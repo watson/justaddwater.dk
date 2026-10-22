@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Businesscase on Just Add Water</title>
+		<link>https://justaddwater.dk/category/businesscase/</link>
+		<description>Recent content in Businesscase on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 13 Feb 2007 09:43:33 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/businesscase/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Danish Newspaper Interview: Capgemini on Rails</title>
+				<link>https://justaddwater.dk/2007/02/13/danish-newspaper-interview-capgemini-on-rails/</link>
+				<pubDate>Tue, 13 Feb 2007 09:43:33 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/13/danish-newspaper-interview-capgemini-on-rails/</guid>
+				<description>&lt;p&gt;Thomas and I are interviewed in Danish newspaper &amp;ldquo;Børsen&amp;rdquo; today. The article is a 10,000 feet business overview on the productivity gains and possibilities with Ruby on Rails.&lt;/p&gt;&#xA;&lt;p&gt;I really like the picture (by &lt;a href=&#34;http://reimarjuul.com/&#34;&gt;Reimar Juul&lt;/a&gt;) and the fact that the article mentions both Justaddwater.dk and Copenhagen Ruby Brigade. Woot!&lt;/p&gt;&#xA;&lt;div style=&#34;text-align:center&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/borsen-ruby-on-rails-article-overview-maxi.png&#34; title=&#34;Screenshot of Børsen article&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/borsen-ruby-on-rails-article-overview-mini.png&#34; alt=&#34;Screenshot of Børsen article&#34; width=&#34;202&#34; height=&#34;278&#34;&gt;&#xA;&lt;/a&gt; &lt;small&gt;Click image to view larger version&lt;/small&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;For the benefit of the Danish speaking readers, I really want to include the entire text from the article here to make it searchable and quotable for the benefit of everybody who is also interested in Ruby on Rails for enterprise use. Currently I&amp;rsquo;m awaiting permission from Børsen to include the article here. Also, I&amp;rsquo;m awaiting a direct link to the Børsen article if you like to read it in it&amp;rsquo;s original domain.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Nielsen, Joel on Software and David Heinemeier Hansson</title>
+				<link>https://justaddwater.dk/2006/09/12/nielsen-joel-on-software-and-david-heinemeier-hansson/</link>
+				<pubDate>Tue, 12 Sep 2006 13:39:04 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/12/nielsen-joel-on-software-and-david-heinemeier-hansson/</guid>
+				<description>&lt;p&gt;Jakob Nielsen&amp;rsquo;s newsletters often contains small comments to usability related stuff in the news. His latest newsletter is no exception, but misses a very important point.&lt;/p&gt;&#xA;&lt;p&gt;From the mail:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Joel Spolsky wrote about the choice of implementation technology for enterprise projects, making two great points:&lt;/p&gt;&#xA;&lt;p&gt;(*) There are three platforms that are all known to work, so pick one of them, avoiding the fancy, but risky ones that don&amp;rsquo;t have a sufficient ecosystem.&lt;/p&gt;&#xA;&lt;p&gt;(*) As long as you use one of the safe platforms, success or failure of your project will not be due to which technology you chose, so go with the one your software architect knows the best.&lt;/p&gt;&#xA;&lt;p&gt;&amp;gt; &lt;a href=&#34;http://www.joelonsoftware.com/items/2006/09/01.html&#34;&gt;http://www.joelonsoftware.com/items/2006/09/01.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Joel&amp;rsquo;s second point matches with our findings from intranet portal projects: what makes a good portal is not the technology (they all suck), but how you fit the tech to your company&amp;rsquo;s needs:&lt;/p&gt;&#xA;&lt;p&gt;&amp;gt; &lt;a href=&#34;http://www.nngroup.com/reports/intranet/portals&#34;&gt;http://www.nngroup.com/reports/intranet/portals&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Watir: Another sweetspot for Enterprise Ruby</title>
+				<link>https://justaddwater.dk/2006/07/14/watir-sweetspot-enterprise-ruby/</link>
+				<pubDate>Fri, 14 Jul 2006 11:18:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/07/14/watir-sweetspot-enterprise-ruby/</guid>
+				<description>&lt;p&gt;There are many speculations regarding Ruby (the programming language) and it&amp;rsquo;s ready-ness for enterprise use. The other day, a colleague of mine found an absolutely sweet spot: Automated testing via the browser interface.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://wtr.rubyforge.org/&#34; title=&#34;Watir: &#34;&gt;Watir&lt;/a&gt; stands for &amp;ldquo;Web Application Testing in Ruby&amp;rdquo;, you write a few lines of Ruby that fires up Internet Explorer, and then clicks around, fills in form fields, submits, etc.&lt;/p&gt;&#xA;&lt;p&gt;My colleague used a couple of hours to write a few lines to integration test a complex system for a financial customer. He modified it to repeat the same test in three different environments and via timers found out that one of the environments performed very badly.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ruby on Rails for the enterprise: Business perspective</title>
+				<link>https://justaddwater.dk/2006/05/16/rails-enterprise-business-perspective/</link>
+				<pubDate>Tue, 16 May 2006 00:06:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/16/rails-enterprise-business-perspective/</guid>
+				<description>&lt;p&gt;Thought this would be a good opportunity to have a look at the business perspective of using Ruby on Rails for the enterprise. &lt;a href=&#34;http://www.quotedprintable.com/articles/2005/12/21/the-business-case-for-ruby-on-rails&#34; title=&#34;Quoted Printable: The Business Case for Ruby on Rails&#34;&gt;The Business Case for Ruby on Rails&lt;/a&gt; inspired me to see what has been written on the business perspective since this was written December last year.&lt;/p&gt;&#xA;&lt;p&gt;As I wrote &lt;a href=&#34;https://justaddwater.dk/2006/04/12/rails-prototyping/&#34; title=&#34;Permanent Link: Ruby on Rails as rapid prototyping tool&#34;&gt;previously&lt;/a&gt;, Ruby on Rails has proven to deliver:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Speaking on usability and rapid prototyping</title>
+				<link>https://justaddwater.dk/2006/05/10/speaking-on-usability-and-rapid-prototyping/</link>
+				<pubDate>Wed, 10 May 2006 11:50:33 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/10/speaking-on-usability-and-rapid-prototyping/</guid>
+				<description>&lt;p&gt;For those of you in Denmark in the Copenhagen area.&lt;/p&gt;&#xA;&lt;p&gt;May 19 I&amp;rsquo;m speaking about rapid prototyping to make usability testing earlier and more often. The focus will be on the benefits and the business value user testing creates early in the process, so at this event, there&amp;rsquo;s really no focus on &lt;a href=&#34;https://justaddwater.dk/2006/04/12/rails-prototyping/&#34; title=&#34;justaddwater.dk: Ruby on Rails as rapid prototyping tool&#34;&gt;Ruby on Rails as the prototyping tool&lt;/a&gt; (but you can refer to my earlier post about that).&lt;br&gt;&#xA;From Snitker &amp;amp; Co&amp;rsquo;s newsletter that is sent out today: (in Danish)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ruby on Rails as rapid prototyping tool</title>
+				<link>https://justaddwater.dk/2006/04/12/rails-prototyping/</link>
+				<pubDate>Wed, 12 Apr 2006 00:16:45 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/12/rails-prototyping/</guid>
+				<description>&lt;p&gt;Ruby on Rails might be the perfect match as a prototyping tool. It delivers consistent productivity gains compared to any other prototyping tool. Very few lines of code makes it easy to change. Here is why we use it at work as our preferred prototyping tool.&lt;/p&gt;&#xA;&lt;p&gt;First time I heard about Ruby on Rails was when David Heinemeier Hansson, Jason Fried and Ryan Singer presented the &amp;ldquo;&lt;a href=&#34;http://www.37signals.com/workshop-062504.php&#34; title=&#34;37 signals: The building of Basecamp workshop&#34;&gt;Building of Basecamp&lt;/a&gt;&amp;rdquo; workshop in Denmark June 2005. Basecamp was the project that sparked the development of the Ruby on Rails framework.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>AJAX businesscase: Reduce development costs and increase usability</title>
+				<link>https://justaddwater.dk/2006/02/08/ajax-businesscase/</link>
+				<pubDate>Wed, 08 Feb 2006 12:00:28 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/02/08/ajax-businesscase/</guid>
+				<description>&lt;p&gt;As a followup to my earlier post &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/01/14/ajax-performance-stats-roi-and-business-value/&#34; title=&#34;Justaddwater.dk: AJAX performance stats, ROI, and business value&#34;&gt;AJAX performance stats, ROI, and business value&lt;/a&gt;&amp;rdquo;, I decided that I&amp;rsquo;d share with you some considerations on a recent project I was involved in. I can&amp;rsquo;t give you all the juicy details, and I might never be able to show you the final solution or tell, who the customer is.&lt;/p&gt;&#xA;&lt;p&gt;Anyways, I want to give you some of the details on why we decided to implement AJAX validations in this particular web application. I worked on a project for a Danish company in the financial sector. We had a complex interface where the user had to enter a lot of information about a lot of users. This is illustrated here with user #1, #2, and so on.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>AJAX performance stats, ROI, and business value</title>
+				<link>https://justaddwater.dk/2006/01/14/ajax-performance-stats-roi-and-business-value/</link>
+				<pubDate>Sat, 14 Jan 2006 00:10:30 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/14/ajax-performance-stats-roi-and-business-value/</guid>
+				<description>&lt;p&gt;How do you build a system that can deliver and update content to 100,000 people simultaneously? Via &lt;a href=&#34;http://ajaxian.com/?p=735&#34; title=&#34;Ajax Reduces Load on MacRumors.com Servers&#34;&gt;Ajaxian.com&lt;/a&gt; I saw this article from MacRumors on what traffic they got when Steve Jobs delivered his keynote on MacWorld a few days ago.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;On January 10th, 2006, &lt;a href=&#34;http://www.macrumors.com/&#34;&gt;MacRumors.com&lt;/a&gt; successfully delivered live updates of the Macworld San Francisco Keynote speech to over 100,000 people simultaneously using the latest web technologies.&lt;/p&gt;&#xA;&lt;div style=&#34;margin-left: 2em; margin-right: 2em; font-size: smaller&#34;&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;By far the best mac keynote coverage I have ever seen. No constant page refreshing. No &amp;lsquo;page will update every three minutes&amp;rsquo; even though they never do. I just let the page update every minute like it was supposed to. It was actually weird to get coverage without some sort of connection failure.&amp;rdquo; - MacRumors member, war&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

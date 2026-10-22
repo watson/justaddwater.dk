@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Git Side Benefit: Reducing Disk Usage · justaddwater.dk</title>
+<meta name="description" content="A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed.
+I …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/01/15/bad-usability-calendar-2009-is-out/" rel="prev">Bad Usability Calendar 2009 Is Out</a></div>
+<div class="alignright"><a href="/2009/01/28/human-time-format-gone-wrong/" rel="next">Human Time Format Gone Wrong</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-01-17"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed. I created two checkouts of a svn project — one using traditional svn and one using git (which can actually clone a svn repos — see explanation [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 17"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="5"></span>
+<h2 data-pagefind-meta="title">Git Side Benefit: Reducing Disk Usage</h2>
+<div class="entry">
+<p>A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed.<br>
+I created two checkouts of a svn project &ndash; one using traditional svn and one using git (which can actually clone a svn repos &ndash; see explanation below).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>~/my-projects<span style="color:#f92672">]</span>  du -hd <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt; berammelse berammelse.git <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt; dokboks dokboks.git       <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt; intrastat intrastat.git   <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt; kompetenceregister k2.git <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt; ourpeople ourpeople.git   <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt; let0004 let0004.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>43M berammelse
+</span></span><span style="display:flex;"><span>38M berammelse.git
+</span></span><span style="display:flex;"><span>63M dokboks
+</span></span><span style="display:flex;"><span>11M dokboks.git
+</span></span><span style="display:flex;"><span>53M intrastat
+</span></span><span style="display:flex;"><span>34M intrastat.git
+</span></span><span style="display:flex;"><span>144M    kompetenceregister
+</span></span><span style="display:flex;"><span>47M kompetenceregister.git
+</span></span><span style="display:flex;"><span>118M    ourpeople
+</span></span><span style="display:flex;"><span>151M    ourpeople.git
+</span></span><span style="display:flex;"><span>163M    let0004
+</span></span><span style="display:flex;"><span>98M let0004.git
+</span></span></code></pre></div><p>For any project I tried this, Git uses significantly less disk space. It&rsquo;s just a side effect, I know. But more important: The git version has all the logfile history offline and that makes rolling forward/back much faster :)<br>
+FYI i&rsquo;m using my version of <a href="http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/%20%20">Dr. Nic&rsquo;s &ldquo;gitify&rdquo;</a> command that wraps a &ldquo;git svn&rdquo; command. This way I can use git locally and then re-commit into svn when done.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env ruby -wKU</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># command from</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install with</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sudo port install git-core +svn</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># get svn info location</span>
+</span></span><span style="display:flex;"><span>svnurl <span style="color:#f92672">=</span> <span style="color:#e6db74">`svn info | grep &#34;^URL:&#34;`</span><span style="color:#f92672">.</span>gsub(<span style="color:#e6db74">&#39;URL: &#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#f92672">.</span>chomp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># project = basename</span>
+</span></span><span style="display:flex;"><span>project <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>basename(<span style="color:#66d9ef">Dir</span><span style="color:#f92672">.</span>pwd)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>puts cmd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;git svn clone </span><span style="color:#e6db74">#{</span>svnurl<span style="color:#e6db74">}</span><span style="color:#e6db74"> ../</span><span style="color:#e6db74">#{</span>project<span style="color:#e6db74">}</span><span style="color:#e6db74">.git&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">`</span><span style="color:#e6db74">#{</span>cmd<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>puts <span style="color:#e6db74">&#34;(&#39;git svn rebase&#39; merges changes from svn.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> &#39;git svn dcommit&#39; updates svn with your git commits)&#34;</span>
+</span></span></code></pre></div>
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Saturday, January 17th, 2009 at 14:28 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">5 Responses to &#8220;Git Side Benefit: Reducing Disk Usage&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-468318">
+<cite><a href="http://www.getlinkspro.com" class="url" rel="external">Jeet</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-468318" title="">January 26th, 2009 at 10:46 (GMT-1)</a> </small>
+<p>I am not entirely sure about git reducing the disk usage, since it has to keep &lsquo;whole&rsquo; copies of the commits, I am inclined to think that total size required by a well used git repository would be higher than svn/cvs repository that will only keep differences.</p>
+<p>Might try something locally before I can conclude.. but yeah, I have switched to git already :))</p>
+
+</li>
+
+<li id="comment-476803">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-476803" title="">March 9th, 2009 at 10:08 (GMT-1)</a> </small>
+<p>@Jeet i follow your thoughts but the repositories I tested with above actually shows a disk usage reduction.</p>
+<p>The biggest SVN repository above had more than 16,000 commits and the Git version was 40% smaller even though it contained the entire project history.</p>
+<p>So even though that the svn repositories here are only snapshots in time (the history remains on the server), there is a significant difference.</p>
+<p>BTW, the Git repos also only contains differences between each revision.</p>
+
+</li>
+
+<li class="alt" id="comment-494115">
+<cite>Andrew</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-494115" title="">March 24th, 2010 at 17:46 (GMT-1)</a> </small>
+<p>See <a href="https://git.wiki.kernel.org/index.php/GitSvnComparison">https://git.wiki.kernel.org/index.php/GitSvnComparison</a><br>
+They say there that GIT version of Mozilla repository is 420 MB instead of 12 GB in SVN.<br>
+But that&rsquo;s the remote repository, which does not really matter to me :-)<br>
+What matters to me is that when I download it to my machine, with GIT I have to download the entire 420 MB :-( while with SVN only a snapshot of the latest sources.<br>
+Distributed VCSs are good for large decentralized projects.</p>
+</li>
+
+<li id="comment-513664">
+<cite>subbarao</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-513664" title="">March 9th, 2011 at 12:54 (GMT-1)</a> </small>
+<p>Hey guys, I want to know the exact procedure used by git to reduce disk usage i.e. the algorithm used by it to store changes. Any suggestions ???</p>
+</li>
+
+<li class="alt" id="comment-545542">
+<cite><a href="http://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/" class="url" rel="external">justaddwater.dk | Using Git for SVN Repositories Workflow</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-545542" title="">September 30th, 2011 at 19:46 (GMT-1)</a> </small>
+<p>[&hellip;] the last months I have been using Git to work with my Subversion repositories. Besides from reducing disk usage, Git also makes my work slightly faster and independent of network access — I can make [&hellip;]</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

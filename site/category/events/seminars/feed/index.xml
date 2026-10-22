@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Events/Seminars on Just Add Water</title>
+		<link>https://justaddwater.dk/category/events/seminars/</link>
+		<description>Recent content in Events/Seminars on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 20 Jun 2012 22:07:43 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/events/seminars/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Jim Webber on qCon New York</title>
+				<link>https://justaddwater.dk/2012/06/20/jim-webber-on-qcon-new-york/</link>
+				<pubDate>Wed, 20 Jun 2012 22:07:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/06/20/jim-webber-on-qcon-new-york/</guid>
+				<description>&lt;p&gt;Please help me choose the best photos I took during Jim Webbers talk at qCon New York.&lt;/p&gt;&#xA;&lt;p&gt;You can do me a favor and vote (max 3 votes per person).&lt;/p&gt;&#xA;&lt;p&gt;[gallery columns=&amp;ldquo;4&amp;rdquo;]&lt;/p&gt;&#xA;&lt;p&gt;License: &lt;a href=&#34;http://creativecommons.org/licenses/by/3.0/&#34;&gt;Creative commons (attribution)&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mortgage-driven development vs Behaviour-driven development</title>
+				<link>https://justaddwater.dk/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/</link>
+				<pubDate>Mon, 18 Jun 2012 21:26:41 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/</guid>
+				<description>&lt;p&gt;As you may already know, I am in New York with my company, attending the QCon conference.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2012/06/IMG_6542.jpg&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2012/06/IMG_6542-300x199.jpg&#34; alt=&#34;&#34; title=&#34;brooklyn bridge&#34; class=&#34;aligncenter size-medium wp-image-1615&#34; height=&#34;199&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2012/06/IMG_6542-300x199.jpg 300w, https://justaddwater.dk/wp-content/uploads/2012/06/IMG_6542.jpg 1280w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Earler today I attended Matt Wynne&amp;rsquo;s presentation at QCon New York. It was one of the best presentations I have seen so far. Especially, since he began as his alter-ego, Darren Workshy.&lt;/p&gt;&#xA;&lt;p&gt;Darren Workshy, hater of behaviour-driven development. Darren has invented &lt;strong&gt;Mortgage-driven development (MDD)&lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Public Danish Data REST Interface</title>
+				<link>https://justaddwater.dk/2008/05/28/public-danish-data-rest-interface/</link>
+				<pubDate>Wed, 28 May 2008 21:31:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/05/28/public-danish-data-rest-interface/</guid>
+				<description>&lt;p&gt;Christian Dalager and I did an internal Capgemini SmartLunch presentation about REST interfaces in the public Danish sector. REST interface is great news for those in favor of easy-to-integrate, scalable SOA interfaces, and REST services is actually used more than SOAP, XMLRPC, etc. in companies offering multiple interfaces to their data (Amazon, Yahoo, Google, Ebay, Microsoft and more).&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://en.itst.dk/hd_logo_en_191_89.gif&#34; alt=&#34;Danish National IT and Telecom Agency logo&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The Danish National IT and Telecom Agency has published some really useful data as a REST interface (although they haven&amp;rsquo;t committed themselves yet to make the service permanent). The published data is a complete dataset for Denmark which includes:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Free Beer for RubyFools Attendees</title>
+				<link>https://justaddwater.dk/2008/03/31/free-beer-for-rubyfools-attendees/</link>
+				<pubDate>Mon, 31 Mar 2008 13:41:41 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/31/free-beer-for-rubyfools-attendees/</guid>
+				<description>&lt;p&gt;I thought I&amp;rsquo;d better post this before April Fools day tomorrow. My employer, Capgemini has accepted to sponsor the &lt;a href=&#34;http://jaoo.dk/ruby-cph/conference/&#34;&gt;Copenhagen RubyFools conference&lt;/a&gt; from today and till Wendesday.&lt;br&gt;&#xA;&lt;a href=&#34;http://jaoo.dk/ruby-cph/conference/&#34; title=&#34;Ruby Fools conference website&#34;&gt;&lt;img src=&#34;http://justaddwater.dk/wp-content/uploads/2008/03/ruby_fools_logo_cph.gif&#34; alt=&#34;ruby_fools_logo_cph.gif&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://dk.capgemini.com/&#34; title=&#34;Capgemini Denmark website&#34;&gt;&lt;img src=&#34;http://justaddwater.dk/wp-content/uploads/2008/03/capgemini-logo.gif&#34; alt=&#34;capgemini-logo.gif&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The sponsorship involves that Capgemini will sponsor free beer for one hour at the Ruby Cave (social event) tomorrow evening. As far as i know, it starts at 7&amp;rsquo;o clock. So be there and be thirsty. The more free beer you drink, the better return on investment for Capgemini :)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf Europe 2007 Recap</title>
+				<link>https://justaddwater.dk/2007/09/22/railsconf-europe-2007-recap/</link>
+				<pubDate>Sat, 22 Sep 2007 02:12:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/22/railsconf-europe-2007-recap/</guid>
+				<description>&lt;p&gt;I wanted this post to be named &amp;ldquo;Usability Lessons from RailsConf Europe 2007&amp;rdquo; — but realized that only some what I want to write below is about usability.&lt;/p&gt;&#xA;&lt;p&gt;So RailsConf Europe this year is over, and there are a few things i want to highlight from a conference that in general was a smash hit.&lt;/p&gt;&#xA;&lt;h3 id=&#34;usability-and-prototyping-fits-agile-development-style&#34;&gt;Usability and prototyping fits agile development style&lt;/h3&gt;&#xA;&lt;p&gt;Dave Thomas&amp;rsquo; keynote had a great section about art and the work of great artists. Michaelangelo and DaVinci usually worked with prototypes — paper prototypes — that allowed them to iterate fast and wild. Thomas wanted the audience to work in that way too. What a coincidence that we have been using prototyping as a key methodology at work, and for the last year and half with Ruby on rails.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf Live Notes: Testing Tutorial</title>
+				<link>https://justaddwater.dk/2007/09/17/railsconf-live-notes-testing-tutorial/</link>
+				<pubDate>Mon, 17 Sep 2007 17:05:18 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/17/railsconf-live-notes-testing-tutorial/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;m at RailsConf Europe here in Berlin, and now attending the full-day session &amp;ldquo;&lt;a href=&#34;http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736&#34;&gt;Ruby (and Rails) Testing Techniques: Charity Tutorial&lt;/a&gt; by Marcel Molina and Chad Fowler.&lt;/p&gt;&#xA;&lt;p&gt;Below are the live notes, I wrote with Mads Buus (we wrote the notes collaboratively with Google Docs, &lt;a href=&#34;http://docs.google.com/Doc?docid=az54pw3d9f_24hsvwnt&amp;amp;hl=en&#34;&gt;direct link&lt;/a&gt;).&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/jesper/1395418767/&#34;&gt;&lt;img src=&#34;http://farm2.static.flickr.com/1342/1395418767_1d23095952_m.jpg&#34; alt=&#34;IMG_3392_crop&#34; height=&#34;160&#34; width=&#34;240&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/jesper/1396313456/&#34;&gt;&lt;img src=&#34;http://farm2.static.flickr.com/1411/1396313456_e999c55dfe_m.jpg&#34; alt=&#34;IMG_3397&#34; height=&#34;160&#34; width=&#34;240&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Verifying your expectations.&lt;/li&gt;&#xA;&lt;li&gt;Guru reads the output&amp;rdquo; -testing (just printing stuff out to verify something)&lt;/li&gt;&#xA;&lt;li&gt;Testing is better: declare your expectations.&lt;/li&gt;&#xA;&lt;li&gt;Real value: Analysis, design process. Bonus: verification.&lt;/li&gt;&#xA;&lt;li&gt;If something is too hard to write, you&amp;rsquo;re probably doing it wrong (design is wrong)&lt;/li&gt;&#xA;&lt;li&gt;Red, green, refactoring. Write a test that fail, the implement until green.&lt;/li&gt;&#xA;&lt;li&gt;Red/green testing: Write code to make testing fail&amp;hellip; red. Then write just enough code to make test pass.&lt;/li&gt;&#xA;&lt;li&gt;Marcel&amp;rsquo;s loops coding/testing is 1-5 minutes. Possible to work with 20 second loops&lt;/li&gt;&#xA;&lt;li&gt;No &amp;lsquo;Code smells&amp;rsquo;, no comments. &amp;lsquo;method_missing&amp;rsquo; needs documentation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Your code should be so simple that you shouldnt put comments in your code. If it just says &amp;ldquo;test_foo&amp;rdquo; [new team members] have to do more brain processing.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Busy Preparing RailsConf Presentation</title>
+				<link>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</link>
+				<pubDate>Tue, 11 Sep 2007 14:31:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</guid>
+				<description>&lt;p&gt;For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.&lt;/p&gt;&#xA;&lt;img src=&#34;http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg&#34; alt=&#34;Railsconf speaker 2007&#34; height=&#34;125&#34; width=&#34;125&#34;&gt;&#xA;&#xA;&lt;p&gt;At the presentation we will introduce a Ruby on Rails plugin that can create the foundation for a local Rails app based on forms scraped from a remote application. In our case, an internal application used for timereporting in Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;My head is too ful of all the details in the presentation but fact is, that we&amp;rsquo;re running two trials on the presentation this Thursday the 13th in our Capgemini office in Copenhagen, Denmark.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf Talk Accepted: Prototyping, Hacking Enterprise Legacy Applications</title>
+				<link>https://justaddwater.dk/2007/06/08/railsconf-talk-accepted-prototyping-hacking-enterprise-legacy-applications/</link>
+				<pubDate>Fri, 08 Jun 2007 19:52:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/08/railsconf-talk-accepted-prototyping-hacking-enterprise-legacy-applications/</guid>
+				<description>&lt;p&gt;Woohoo. I got a response from O&amp;rsquo;Reilly that my talk for RailsConf in Berlin is accepted. I will be presenting with my colleague &lt;a href=&#34;http://www.upperbound.net/upperbound/show/HomePage&#34;&gt;Mads Buus&lt;/a&gt;, who&amp;rsquo;s also active in our &lt;a href=&#34;http://copenhagenrb.dk/&#34;&gt;Copenhagen Ruby user group&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/06/railsconf-2007-berlin-logo.png&#34; alt=&#34;railsconf-2007-berlin-logo.png&#34; width=&#34;566&#34; height=&#34;76&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Here is the talk proposal:&lt;/p&gt;&#xA;&lt;p&gt;Title: &lt;strong&gt;Screenscraping as a tool for changing the (legacy) world&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Conference: RailsConf Europe 2007&lt;br&gt;&#xA;Type/Duration: 45 Minute Conference Session&lt;br&gt;&#xA;Audience Level: Intermediate&lt;br&gt;&#xA;Audience Type: web developers, programmers&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Description Short:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Tired of your existing corporate legacy application? Show them you can do better! Learn how to make your own Rails version of a website with ugly UI, bad user feedback, no API.&lt;/p&gt;&#xA;&lt;p&gt;Use these tools and techniques to build your own, better, user interface on top of an old legacy backend.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Reboot Conversation: Past, Present, Future of Interaction Design</title>
+				<link>https://justaddwater.dk/2007/06/01/reboot-conversation-past-present-future-of-interaction-design/</link>
+				<pubDate>Fri, 01 Jun 2007 19:26:35 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/01/reboot-conversation-past-present-future-of-interaction-design/</guid>
+				<description>&lt;p&gt;Reboot was very good this year, and after meeting people like Mathias Müller-Prove (works with user experience on &lt;a href=&#34;http://openoffice.org&#34;&gt;OpenOffice&lt;/a&gt; and &lt;a href=&#34;http://www.reboot.dk/artefact-1993-en.html&#34; title=&#34;Reboot presentation: A duel between desktop and web applications&#34;&gt;did another presentation&lt;/a&gt;), Matthew (works in &lt;a href=&#34;http://allpeers.com/&#34;&gt;AllPeers&lt;/a&gt; &amp;amp;mdash; a company that does an interestning firefox plugin, that I unfortunately never got a demo of).&lt;/p&gt;&#xA;&lt;p&gt;This inspired me to have a conversation about &amp;ldquo;&lt;a href=&#34;http://www.reboot.dk/artefact-2617-en.html&#34; title=&#34;Reboot conversation: The humane interface&#34;&gt;the humane interface&lt;/a&gt;&amp;rdquo;&amp;hellip; In the light of Jef Raskin&amp;rsquo;s book The Humane Interface to discuss the past, present and future of interaction design, human computer interaction and related stuff.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Interaction Design Day: Usability Bloopers</title>
+				<link>https://justaddwater.dk/2007/05/24/interaction-design-day-usability-bloopers/</link>
+				<pubDate>Thu, 24 May 2007 11:30:03 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/05/24/interaction-design-day-usability-bloopers/</guid>
+				<description>&lt;p&gt;Interaction Design Day, Copenhagen&lt;br&gt;&#xA;I&amp;rsquo;m here live blogging at the &lt;a href=&#34;http://www.sigchi.dk/sigchi/aktivitet/messe/2007/&#34;&gt;Danish Interaction Design Day 2007&lt;/a&gt; in Copenhagen (link in Danish). This post is probably the only one I&amp;rsquo;ll live blog today, as I only attend part of the conference.&lt;/p&gt;&#xA;&lt;p&gt;The mini conference is a fine mix between trade show and presentations. Best thing is to meet many of my colleages in companies I have worked with. Thomas and his colleagues from &lt;a href=&#34;http://www.snitker.com/&#34;&gt;Snitker.com&lt;/a&gt;, Rolf Molich from &lt;a href=&#34;http://www.dialogdesign.dk/&#34;&gt;DialogDesign&lt;/a&gt;, Nanna, Christina and Jacob Hage from &lt;a href=&#34;http://www.creuna.dk/&#34;&gt;Creuna&lt;/a&gt;, Anette, Hannah, Linda from &lt;a href=&#34;http://www.kmd.dk/&#34;&gt;KMD&lt;/a&gt;, and many more, both project participants and clients.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Attending Reboot Conference</title>
+				<link>https://justaddwater.dk/2007/03/22/attending-reboot-conference/</link>
+				<pubDate>Thu, 22 Mar 2007 16:11:33 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/03/22/attending-reboot-conference/</guid>
+				<description>&lt;p&gt;May 31st and June 1st, the annual Reboot conference will take place here in Copenhagen.&lt;/p&gt;&#xA;&lt;p&gt;For now, there is no information on who&amp;rsquo;s speaking and almost no rumours on what&amp;rsquo;s going on.&lt;/p&gt;&#xA;&lt;p&gt;But I&amp;rsquo;m expecting the best: Usually, there is a strong setup of  international speakers on topics that range from geek speak to the more managerial level.  Last year was a blast, and I hope for the most interesting presentations.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Prototyping Talk in Danish IT Usability Network</title>
+				<link>https://justaddwater.dk/2007/02/28/prototyping-talk-in-danish-it-usability-network/</link>
+				<pubDate>Wed, 28 Feb 2007 21:22:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/28/prototyping-talk-in-danish-it-usability-network/</guid>
+				<description>&lt;p&gt;Jesper and I were invited yesterday to speak for the &lt;a href=&#34;http://www.dansk-it.dk/netvaerk/4_typer_netvaerk/kompetence_netvaerk/usability.aspx&#34; title=&#34;Dansk IT usability kompetencenetværk&#34;&gt;Danish IT usability network&lt;/a&gt; (link in Danish) about prototyping and our experience with prototypes.&lt;/p&gt;&#xA;&lt;p&gt;In short, the presentation touched&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Prototyping, how and when to get up to speed&lt;/li&gt;&#xA;&lt;li&gt;Cases from the public and financial sectors where we have been prototyping&lt;/li&gt;&#xA;&lt;li&gt;Experience with different tools, such as Axure and Ruby on Rails&lt;/li&gt;&#xA;&lt;li&gt;Lots of good questions from the audience&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;We were around 25 people in total, and both Jesper and I were impressed with the good and relevant questions that everybody had. Actually, it was a shame we were not able to stay for the afternoon group discussions about the different presentations.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: My Higlights from UI11</title>
+				<link>https://justaddwater.dk/2006/10/18/ui-conf-my-higlights-from-ui11/</link>
+				<pubDate>Wed, 18 Oct 2006 17:12:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/18/ui-conf-my-higlights-from-ui11/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://www.uie.com/events/uiconf/2006/&#34;&gt;UI11&lt;/a&gt; is over and I headed back to Denmark to digest the insightful presentations. The conference had many highlights and it was truly inspirational to meet so many bright people.Some highlights are worth mentioning.&lt;/p&gt;&#xA;&lt;h3 id=&#34;fantastic-speakers&#34;&gt;Fantastic speakers&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Meeting Luke Wroblewski&lt;/strong&gt; made me realize there is much to being a successful designer than just graphical design. Most of his presentation was centered around understanding the business logic, processes, analysis of data. Though I&amp;rsquo;m not a graphical designer, that made me realize why I tend to be involved in business analysis when I&amp;rsquo;m on a project.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Josh Porter on recommendation engines</title>
+				<link>https://justaddwater.dk/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/</link>
+				<pubDate>Thu, 12 Oct 2006 22:16:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/</guid>
+				<description>&lt;p&gt;[Jesper&amp;rsquo;s note: It will be interesting to see how this maps to Jakob Nielsen&amp;rsquo;s old ideas about &lt;a href=&#34;http://www.useit.com/alertbox/990905.html&#34;&gt;reputation managers&lt;/a&gt;.]&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/jesper/268008424/&#34; title=&#34;Photo Sharing&#34;&gt;&lt;img src=&#34;http://static.flickr.com/82/268008424_dd9859a898_t.jpg&#34; alt=&#34;Josh Porter presenting&#34; height=&#34;100&#34; width=&#34;67&#34;&gt;&#xA;&lt;/a&gt;&lt;br&gt;&#xA;Netflix example:&lt;/p&gt;&#xA;&lt;p&gt;Wall-Mart went head to head with Netflix and lost. They are now linking to Netflix&lt;/p&gt;&#xA;&lt;p&gt;* 4 million subscribers 10 months ago&lt;br&gt;&#xA;* 60,000 titles, 40,000 of which are rented every day&lt;br&gt;&#xA;* 2/3 of movies rented come from recommendations&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The movies we recommend generate more satisfaction than (new releases)&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Jared Spool</title>
+				<link>https://justaddwater.dk/2006/10/12/ui-conf-jared-spool/</link>
+				<pubDate>Thu, 12 Oct 2006 17:44:46 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/12/ui-conf-jared-spool/</guid>
+				<description>&lt;p&gt;[Jesper&amp;rsquo;s note: There is actually a lot of this that I decided not to jot down. Jared said that his talk is available on Google Video. However, I couldn&amp;rsquo;t find it]&lt;/p&gt;&#xA;&lt;p&gt;Scent of information. Like predator hunting, people hunt for information. The &amp;ldquo;scent&amp;rdquo; users pick up is actually trigger words.&lt;/p&gt;&#xA;&lt;p&gt;Example: A short link from &amp;ldquo;Neutrogena&amp;rdquo; link text &amp;ldquo;SOS&amp;rdquo; which doesn&amp;rsquo;t work. It doesn&amp;rsquo;t contain trigger words.&lt;/p&gt;&#xA;&lt;p&gt;Try to swap the sitemap for the homepage!&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Barry Schwartz, the paradox of choice</title>
+				<link>https://justaddwater.dk/2006/10/12/barry-schwartz-the-paradox-of-choice/</link>
+				<pubDate>Thu, 12 Oct 2006 15:23:51 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/12/barry-schwartz-the-paradox-of-choice/</guid>
+				<description>&lt;p&gt;&lt;em&gt;[Jesper&amp;rsquo;s live notes from UI Conf. Barry Schwartz really has some deep insightful psychological points, that we can actually use in our daily work as usability professionals.&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;His main point is that more choices actually makes choosing harder and sometimes can paralyze people. In contradiction to traditional research, he argues that, the more choices you present people to, the less satisified people will eventually be.]&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Update: I recommend the &lt;a href=&#34;http://lukew.com/ff/entry.asp?419&#34; title=&#34;Luke W: UI11: The Paradox of Choice&#34;&gt;notes from Luke Wroblewski&lt;/a&gt; if you like s short prosa of Barry Schwartz&amp;rsquo; presentation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Luke Wroblewski on Visual Design in the Development Process</title>
+				<link>https://justaddwater.dk/2006/10/11/uiconf-luke-wroblewski-visual-design/</link>
+				<pubDate>Wed, 11 Oct 2006 23:01:59 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/11/uiconf-luke-wroblewski-visual-design/</guid>
+				<description>&lt;p&gt;&lt;em&gt;[Live notes from UI Conf]&lt;/em&gt;&lt;br&gt;&#xA;Luke Wroblewski&lt;br&gt;&#xA;&lt;a href=&#34;http://www.flickr.com/photos/jesper/267101293/&#34; title=&#34;Photo Sharing&#34;&gt;&lt;img src=&#34;http://static.flickr.com/111/267101293_28f7b8b5b0_s.jpg&#34; alt=&#34;Lukew&#34; height=&#34;75&#34; width=&#34;75&#34;&gt;&#xA;&lt;/a&gt;&lt;br&gt;&#xA;Management &amp;ldquo;i hate purple&amp;rdquo; - the visceral side with immediate reaction. look-and-feel level.&lt;/p&gt;&#xA;&lt;p&gt;But there is a deeper Structural, visual side. Structure underlining level.&lt;/p&gt;&#xA;&lt;p&gt;Example: airport map. This example i use over and over again.&lt;br&gt;&#xA;* no airplanes&lt;br&gt;&#xA;* every single color is as saturated as can be&lt;br&gt;&#xA;* small toggle arrows hide important symbol explanation&lt;/p&gt;&#xA;&lt;p&gt;rework:&lt;br&gt;&#xA;* primary purpose: see airplane traffic&lt;br&gt;&#xA;* airport map is background&lt;br&gt;&#xA;* same color map&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Jeff Patton on Agile Development</title>
+				<link>https://justaddwater.dk/2006/10/10/uiconf-jeff-patton-agile-development/</link>
+				<pubDate>Tue, 10 Oct 2006 21:17:16 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/10/uiconf-jeff-patton-agile-development/</guid>
+				<description>&lt;p&gt;&lt;em&gt;[Live notes from UI Conf]&lt;/em&gt;&lt;br&gt;&#xA;My final thoughts: This is a power talk, and the full day tomorrow probably covers it better.&lt;/p&gt;&#xA;&lt;p&gt;Why agile development continues to grow in popularity&lt;/p&gt;&#xA;&lt;p&gt;Rare combination: Companies that are strong both on agile development and user experience.&lt;/p&gt;&#xA;&lt;p&gt;Wrong assumption. Agile is just about finishing something faster&lt;br&gt;&#xA;It isn&amp;rsquo;t just about finishing faster. It&amp;rsquo;s about finishing faster. I&amp;rsquo;ll explain some more about that later.&lt;/p&gt;&#xA;&lt;h3 id=&#34;greedines-short-sightednes-and-blame&#34;&gt;Greedines, short-sightednes and blame&lt;/h3&gt;&#xA;&lt;p&gt;Common things go wrong when projects go wrong.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Gerry McGovern on Search engine optimization</title>
+				<link>https://justaddwater.dk/2006/10/10/uiconf-gerry-mcgovern-seo/</link>
+				<pubDate>Tue, 10 Oct 2006 17:59:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/10/uiconf-gerry-mcgovern-seo/</guid>
+				<description>&lt;p&gt;AOL clicks related to search result position.&lt;/p&gt;&#xA;&lt;p&gt;Important lesson: If you&amp;rsquo;re not in the first ten results you don&amp;rsquo;t exist&lt;br&gt;&#xA;1st on list: 42%&lt;br&gt;&#xA;2nd 12%&lt;br&gt;&#xA;3rd 8%&lt;/p&gt;&#xA;&lt;p&gt;They prefer to get the wrong results quickly rather than to waste time finding the right result.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;North pole:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;More people have been to the North Pole than there have been at search result 5,000&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;(creates a laugh in the room)&lt;/p&gt;&#xA;&lt;h3 id=&#34;on-search-engine-optimization-seo&#34;&gt;On Search Engine Optimization (SEO)&lt;/h3&gt;&#xA;&lt;p&gt;Google banned the BMW website. (because of shady search engine optimization).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Jeffrey Eisenberg on Top activities of Design &amp; Usability Teams</title>
+				<link>https://justaddwater.dk/2006/10/10/uiconf-jeffrey-eisenberg/</link>
+				<pubDate>Tue, 10 Oct 2006 16:18:37 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/10/uiconf-jeffrey-eisenberg/</guid>
+				<description>&lt;p&gt;From UI 11 Conference, Cambridge, Boston October 10, 2006.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m sitting in on Jeffrey Eisenbergs sample presentation, which is a compressed version of yesterdays all-day talk. He started off with an example from godaddy.com&lt;/p&gt;&#xA;&lt;p&gt;Godaddy spent 5 million this year buying airtime for a superbowl commercial.&lt;br&gt;&#xA;TV commercial: hopefully this &lt;a href=&#34;http://www.godaddy.com/gdshop/superbowl05/landing.asp?se=%2B&#34;&gt;direct link&lt;/a&gt; works. (Otherwise choose &amp;ldquo;superbowl 2006&amp;rdquo; and enter access password to start).&lt;/p&gt;&#xA;&lt;p&gt;* Commercial ends with &amp;ldquo;There is more at godaddy.com&amp;rdquo;&lt;br&gt;&#xA;* 1100% increased traffic on homepage&lt;br&gt;&#xA;* 35% increased sales&lt;br&gt;&#xA;&amp;ldquo;I&amp;rsquo;m not saying this doesn&amp;rsquo;t work, I&amp;rsquo;m just saying there is some money left on the table&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: David Malouf and Bill Scott on AJAX</title>
+				<link>https://justaddwater.dk/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/</link>
+				<pubDate>Mon, 09 Oct 2006 15:40:10 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/</guid>
+				<description>&lt;p&gt;David Malouf and Bill Scott: Designing Powerful Web Apps with Ajax&lt;br&gt;&#xA;&lt;a href=&#34;http://www.flickr.com/photos/jesper/265346636/&#34; title=&#34;Photo Sharing&#34;&gt;&lt;img src=&#34;http://static.flickr.com/79/265346636_c34ea54d3a_m.jpg&#34; alt=&#34;David Malouf and Bill Scott on UI Conf&#34; height=&#34;160&#34; width=&#34;240&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;From UI 11 Conference, Cambridge, Boston October 9, 2006. David&amp;rsquo;s and Bills &lt;a href=&#34;http://billwscott.com/share/presentations/ui11/&#34;&gt;presentation notes available&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Macromedia coined the term &amp;ldquo;Rich Internet Application&amp;rdquo; originally because they wanted to create buzz around Macromedia Flash MX.&lt;/p&gt;&#xA;&lt;p&gt;Usability tests often raise the Q: &amp;ldquo;Why doesn&amp;rsquo;t this work like my windows desktop&amp;rdquo;. So emulation of desktop behaviours.&lt;br&gt;&#xA;* trees&lt;br&gt;&#xA;* panels&lt;br&gt;&#xA;* drag and drop&lt;br&gt;&#xA;* spinner&lt;br&gt;&#xA;* slider&lt;br&gt;&#xA;* form validation&lt;br&gt;&#xA;* context menu&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Attending UI11 Conference next week</title>
+				<link>https://justaddwater.dk/2006/10/03/attending-ui11-conference-next-week/</link>
+				<pubDate>Tue, 03 Oct 2006 13:22:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/03/attending-ui11-conference-next-week/</guid>
+				<description>&lt;p&gt;Update: All notes collected in the category &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/category/eventsseminars/ui11/&#34;&gt;UI11&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Next week I will be in Cambridge, Massachussets attending &lt;a href=&#34;http://www.uie.com/events/uiconf/2006/&#34;&gt;User Interface 11 Conference&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I plan to post my notes here on the blog, but don&amp;rsquo;t expect them to be as extensive as the ones &lt;a href=&#34;http://copenhagenrb.dk/2006/9/14/railsconf-europe-session-overviews&#34; title=&#34;Railsconf notes on copenhagenrb.dk&#34;&gt;I posted from RailsConf&lt;/a&gt;. Maybe more like my notes from &lt;a href=&#34;https://justaddwater.dk/notes-elements-of-user-experience/&#34;&gt;Jesse James Garret&amp;rsquo;s workshop in Copenhagen&lt;/a&gt;. I&amp;rsquo;ll update this post with links to my notes when available.&lt;/p&gt;&#xA;&lt;p&gt;It was a tough dilemma to choose between the various tracks on the conference. Here is my selections:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf presentation notes</title>
+				<link>https://justaddwater.dk/2006/09/14/railsconf-presentation-notes/</link>
+				<pubDate>Thu, 14 Sep 2006 13:22:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/14/railsconf-presentation-notes/</guid>
+				<description>&lt;p&gt;Just a short note that I just published my first notes from the RailsConf keynote presentations. RailsConf ends tomorrow, Friday, and I expect that more notes will show up on our Rails related website: copenhagen.rb&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://copenhagenrb.dk/2006/9/14/railsconf-europe-session-overviews&#34;&gt;Copenhagenrb.dk: Railsconf Europe Session overview&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>See you at RailsConf, Europe this Thursday</title>
+				<link>https://justaddwater.dk/2006/09/11/railsconf-europe/</link>
+				<pubDate>Mon, 11 Sep 2006 22:26:17 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/11/railsconf-europe/</guid>
+				<description>&lt;p&gt;We are heading to London Wednesday to attend RailsConf (&lt;a href=&#34;https://justaddwater.dk/2006/05/22/attending-railsconf-europe/&#34; title=&#34;Justaddwater.dk: Attending RailsConf Europe, London, September&#34;&gt;described earlier&lt;/a&gt;). I&amp;rsquo;m really looking forward to the exciting presentations. I&amp;rsquo;m glad we&amp;rsquo;re two Capgemini employees going, because many of the parallel sessions &lt;a href=&#34;http://europe.railsconf.org/pages/schedule&#34; title=&#34;Railsconf Europe: Schedule&#34;&gt;in the schedule&lt;/a&gt; look interesting.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;d like to get in touch with any Justaddwater readers attending the conference. Also nice to see several presentations that touch our main topics usability, accessibility, webstandards.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Thoughts regarding Ruby on Rails Meetup this week</title>
+				<link>https://justaddwater.dk/2006/06/26/rails-meetup-thoughts/</link>
+				<pubDate>Mon, 26 Jun 2006 22:57:25 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/26/rails-meetup-thoughts/</guid>
+				<description>&lt;p&gt;Thomas and I are really looking forward to this week&amp;rsquo;s Copenhagen Rails Meetup. Remember to join us&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;if you&amp;rsquo;re in Copenhagen this thursday&lt;/li&gt;&#xA;&lt;li&gt;if you&amp;rsquo;re working with Ruby on Rails professionally or in your spare time&lt;/li&gt;&#xA;&lt;li&gt;if you like free beer&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Invite yourself by adding your name in the comments for &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/05/31/ruby-on-rails-copenhagen-meetup/&#34; title=&#34;Permanent Link to Ruby on Rails Copenhagen Meetup&#34;&gt;Ruby on Rails Copenhagen Meetup&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Beer will be free until a certain amount, then each will have to pay individually. The free beer sponsored by our employer, Capgemini. The reason for doing this — you may have seen this coming — is that we&amp;rsquo;re looking for talented web developers. Ruby on Rails developers are welcome (but note that the primary skills required are &lt;a href=&#34;http://www.dk.capgemini.com/job/ledige/java-udviklere.shtml&#34; title=&#34;Capgemini.dk: Java developers (Danish)&#34;&gt;Java&lt;/a&gt; or &lt;a href=&#34;http://www.dk.capgemini.com/job/ledige/dot_net_udviklere.shtml&#34; title=&#34;Capgemini.dk: .Net developers (Danish)&#34;&gt;.Net&lt;/a&gt;).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ten reaffirmations from London @media 2006</title>
+				<link>https://justaddwater.dk/2006/06/25/ten-reaffirmations-from-london-media-2006/</link>
+				<pubDate>Sun, 25 Jun 2006 00:56:13 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/25/ten-reaffirmations-from-london-media-2006/</guid>
+				<description>&lt;p&gt;Hi, this is Luis Villa, Thomas and Jesper&amp;rsquo;s former colleague at Capgemini Spain. They couldn&amp;rsquo;t make it to @media in London last week, so they asked me to give a summary of the event.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.vivabit.com/atmedia2006/&#34;&gt;London @media 2006&lt;/a&gt; was a Conference about &lt;em&gt;frontend&lt;/em&gt; and web user interface in all its dimensions: strategy, design and building and after attending the &lt;a href=&#34;http://www.w3.org/2006/03/TP2006-participants.html&#34;&gt;W3C Technical Plenary at Cannes&lt;/a&gt; — more technical — it was the chance to see &lt;a href=&#34;http://www.vivabit.com/atmedia2006/speakers/&#34;&gt;other people&lt;/a&gt; that have most influenced the user experience on the web and talking with them. Really, it felt like a rock concert full of fans.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Presentation for corporate weblogging event</title>
+				<link>https://justaddwater.dk/2006/06/13/weblog-event/</link>
+				<pubDate>Tue, 13 Jun 2006 07:30:08 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/13/weblog-event/</guid>
+				<description>&lt;p&gt;This morning we&amp;rsquo;re speaking in about corporate weblogs in Copenhagen, Denmark. It’s hosted by the &lt;a href=&#34;http://www.itb.dk/site.asp?p=51&#34;&gt;Danish IT Industry Association&lt;/a&gt;, and We’ll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;The presentation is in Danish. More info on previous blog post &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/&#34; title=&#34;Permanent Link: Speaking on Corporate Weblogging event&#34;&gt;Speaking on Corporate Weblogging event&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Powerpoint version: &lt;a href=&#34;https://justaddwater.dk/wp-content/pres_2006-06-13_blogging.ppt&#34; title=&#34;Capgemini justaddwater.dk blogging 2006-06-13, 2.1MB Powerpoint presentation&#34;&gt;Capgemini og Justaddwater.dk&lt;/a&gt; (2.1MB)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>reboot8 roundup</title>
+				<link>https://justaddwater.dk/2006/06/06/reboot8-roundup/</link>
+				<pubDate>Tue, 06 Jun 2006 15:27:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/06/reboot8-roundup/</guid>
+				<description>&lt;p&gt;Last weeks &lt;a href=&#34;http://reboot.dk&#34;&gt;reboot8&lt;/a&gt; conference in Copenhagen is over, and it&amp;rsquo;s time to get back to work. There were some very good talks but it&amp;rsquo;s the audience that makes reboot a special event. The highlights of my reboot were the talks from &lt;a href=&#34;http://www.benhammersley.com/Ben/Talks.html&#34;&gt;Ben Hammersley&lt;/a&gt;, &lt;a href=&#34;http://blog.jjg.net&#34;&gt;Jesse James Garret&lt;/a&gt;, &lt;a href=&#34;http://doc.weblogs.com/whoIsDoc&#34;&gt;Doc Searls&lt;/a&gt; and &lt;a href=&#34;http://adactio.com/articles/1132/&#34;&gt;Jeremy Keith&lt;/a&gt; (who was asked by &lt;a href=&#34;http://www.w3.org/People/howcome/&#34;&gt;Håkan Wium Lie&lt;/a&gt; if there was anything he&amp;rsquo;d like him to add to the HTML A element).&lt;/p&gt;&#xA;&lt;h3 id=&#34;my-presentation-on-rapid-prototyping&#34;&gt;My presentation on rapid prototyping&lt;/h3&gt;&#xA;&lt;p&gt;For weeks I had been looking forward to presenting &lt;a href=&#34;https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/&#34;&gt;my talk on rapid prototyping&lt;/a&gt; and do a demo of an application we did in Capgemini. It went fairly well. No technical flaws, I also got a little extra time so there was time for questions.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My Talk at Reboot8: Prototyping</title>
+				<link>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</link>
+				<pubDate>Thu, 01 Jun 2006 11:27:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</guid>
+				<description>&lt;p&gt;Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.&lt;/p&gt;&#xA;&lt;p&gt;Topic: Prototype driven development with Ruby on Rails, and demo of the application we made at Capgemini with the Danish public Agency of Companies and Commerce.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Presentation&lt;/strong&gt; (Powerpoint format) for download here:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt&#34;&gt;Prototype driven development with Ruby on Rails: Powerpoint version (1.11 MB)&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Elements of User Experience, my notes</title>
+				<link>https://justaddwater.dk/2006/05/31/user-experience-notes/</link>
+				<pubDate>Wed, 31 May 2006 10:15:07 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/31/user-experience-notes/</guid>
+				<description>&lt;p&gt;Today I’m attending &lt;a href=&#34;http://blog.jjg.net/&#34;&gt;Jesse James Garrett&lt;/a&gt;’s event &amp;ldquo;&lt;a href=&#34;http://www.adaptivepath.com/events/2006/may3/&#34;&gt;The elements of User Experience&lt;/a&gt;&amp;rdquo; here in Copenhagen. I&amp;rsquo;ll update this post during the day with my notes. &lt;del&gt;if there&amp;rsquo;s network access which I sort of hope.&lt;/del&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;ins&gt;Update: Notes done. Very good day! Now on for the informal cocktail hour!&lt;/ins&gt;&lt;/p&gt;&#xA;&lt;p&gt;*&lt;em&gt;Click here for &lt;a href=&#34;https://justaddwater.dk/notes-elements-of-user-experience/&#34; title=&#34;Justaddwater.dk: Jesper&#39;s Notes, Elements of User Experience&#34;&gt;My notes, &amp;ldquo;the elements of User Experience&amp;rdquo;&lt;/a&gt;*&lt;/em&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;text-align: center&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/notes-elements-of-user-experience/jesse-games-garrett-in-action-copenhagen-may-31-2006/&#34; title=&#34;Jesse Games Garrett in action, Copenhagen, May 31, 2006&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/05/jjg-7697-thumb.jpg&#34; alt=&#34;Jesse Games Garrett in action, Copenhagen, May 31, 2006&#34; width=&#34;130&#34; height=&#34;196&#34;&gt;&#xA;&lt;/a&gt;&lt;br&gt;&#xA;Click image to view notes&lt;a href=&#34;https://justaddwater.dk/2006/05/31/user-experience-notes/jesse-games-garrett-in-action-copenhagen-may-31-2006/&#34; title=&#34;Jesse Games Garrett in action, Copenhagen, May 31, 2006&#34;&gt;&lt;br&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+			</item>
+			<item>
+				<title>Reboot8 Program Finally Ready</title>
+				<link>https://justaddwater.dk/2006/05/30/reboot8-program/</link>
+				<pubDate>Tue, 30 May 2006 00:22:48 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/30/reboot8-program/</guid>
+				<description>&lt;p&gt;[updated with Friday program]&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been very curious with respect to the conference program for reboot8 next week. Especially because &lt;a href=&#34;https://justaddwater.dk/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/&#34; title=&#34;Justaddwater.dk: speaking at reboot8 about Rails and rapid prototyping&#34;&gt;I&amp;rsquo;ll be giving a short talk&lt;/a&gt; there.&lt;/p&gt;&#xA;&lt;p&gt;I see from the &lt;a href=&#34;http://reboot.dk/wiki/Program&#34; title=&#34;Reboot: program &#34;&gt;Program page&lt;/a&gt; that now there &lt;strong&gt;is a program available&lt;/strong&gt; for &lt;del&gt;Thursday at least&lt;/del&gt; &lt;ins&gt;the entire conference&lt;/ins&gt;. I just mailed Thomas Madsen-Mygdal to ask if the other half of the program is on the way. Also, it seems like &lt;a href=&#34;http://binarybonsai.com/archives/2006/04/27/reboot-80-google-calendar/&#34; title=&#34;Binary Bonsai: reboot 8 google calendar&#34;&gt;Michael Heliemanns Google Calendar&lt;/a&gt; is not yet updated with the schedule (at least not in my Google Calendar).&lt;br&gt;&#xA;I&amp;rsquo;ll be speaking in the &amp;ldquo;demos&amp;rdquo; section somewhere between 16.45 and 17.30.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Attending RailsConf Europe, London, September</title>
+				<link>https://justaddwater.dk/2006/05/22/attending-railsconf-europe/</link>
+				<pubDate>Mon, 22 May 2006 09:17:40 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/22/attending-railsconf-europe/</guid>
+				<description>&lt;p&gt;Thomas and I are attending &lt;a href=&#34;http://europe.railsconf.org/&#34;&gt;RailsConf Europe&lt;/a&gt; in London, September 14-15 later this year.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://codefluency.com/files/railsconf/railsconf-europe-attendee.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;From the &lt;a href=&#34;http://europe.railsconf.org/&#34; title=&#34;RailsConf Europe&#34;&gt;RailsConf website&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The conference is already &lt;em&gt;packed&lt;/em&gt; with exciting speakers, including the creator of Rails, &lt;a href=&#34;http://www.loudthinking.com/&#34;&gt;David Heinemeier Hansson&lt;/a&gt;, Pragmatic Programmer &lt;a href=&#34;http://www.pragmaticbookshelf.com/&#34;&gt;Dave Thomas&lt;/a&gt;, best-selling author and passion maven &lt;a href=&#34;http://headrush.typepad.com/&#34;&gt;Kathy Sierra&lt;/a&gt;, Rails core developers &lt;a href=&#34;http://jamis.jamisbuck.org/&#34;&gt;Jamis Buck&lt;/a&gt;, &lt;a href=&#34;http://vernix.org/marcel&#34;&gt;Marcel Molina, Jr.&lt;/a&gt;, &lt;a href=&#34;http://script.aculo.us/&#34;&gt;Thomas Fuchs&lt;/a&gt;, Rails authors and trainers &lt;a href=&#34;http://www.rubypowerandlight.com/&#34;&gt;David Alan Black&lt;/a&gt;, and &lt;a href=&#34;http://www.chadfowler.com/&#34;&gt;Chad Fowler&lt;/a&gt;, &lt;a href=&#34;http://rake.rubyforge.org/&#34;&gt;Rake&lt;/a&gt; author &lt;a href=&#34;http://onestepback.org/&#34;&gt;Jim Weirich&lt;/a&gt; and many more to be announced.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Although not mentioned on the website, Europe would be a perfect audience for talks on internationalization, so I&amp;rsquo;d like to see Jeremy Voorhis&amp;rsquo; presentation &amp;ldquo;&lt;a href=&#34;http://www.jvoorhis.com/articles/2006/04/14/globalizing-rails-in-yvr&#34; title=&#34;Jeremy Voorhis: Globalizing Rails Wrapup&#34;&gt;Globalizing Rails&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Elements of User Experience, Copenhagen, May 31st</title>
+				<link>https://justaddwater.dk/2006/05/18/elements-of-user-experience-copenhagen-may-31st/</link>
+				<pubDate>Thu, 18 May 2006 09:50:40 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/18/elements-of-user-experience-copenhagen-may-31st/</guid>
+				<description>&lt;p&gt;Just a quick note: I&amp;rsquo;m attending Jesse James Garrett&amp;rsquo;s event in Copenhagen May 31st, &amp;ldquo;&lt;a href=&#34;http://www.adaptivepath.com/events/2006/may3/&#34;&gt;The elements of User Experience&lt;/a&gt;&amp;rdquo;. I&amp;rsquo;m really looking forward to this, as I&amp;rsquo;m a big admirer of &lt;a href=&#34;http://blog.jjg.net/&#34;&gt;Jesse&lt;/a&gt; and &lt;a href=&#34;http://adaptivepath.com&#34;&gt;Adaptive Path&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;You probably know that it was Jesse James Garrett who &lt;a href=&#34;http://www.adaptivepath.com/publications/essays/archives/000385.php&#34; title=&#34;Adaptive Path: Ajax: A New Approach to Web Applications&#34;&gt;coined the term &amp;ldquo;AJAX&amp;rdquo;&lt;/a&gt;, which I think is a way to &lt;a href=&#34;https://justaddwater.dk/2006/02/08/ajax-businesscase/&#34; title=&#34;Justaddwater.dk: AJAX businesscase: Reduce development costs and increase usability&#34;&gt;connect technology with valuable user experience&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

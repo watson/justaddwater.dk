@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple versions of IE in one Windows PC – Prepare for IE7 · justaddwater.dk</title>
+<meta name="description" content="Update 2006-09-28: All IE Browsers Standalone On Same PC (September 28, 2006) solves the problem.
+UPDATE 2006-02-03: The method described below will sometimes …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2006/01/24/more-numbers-confirming-25-of-web-users-disabled/" rel="prev">More numbers confirming 25% of web users disabled</a></div>
+<div class="alignright"><a href="/2006/01/25/windows-vista-setting-new-standards-for-find-as-you-type-searching/" rel="next">Windows Vista setting new standards for Find-as-You-Type searching</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2006-01-25"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2006"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Browser"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="How would you test a webpage in IE 6 when IE 7 is released? Here’s a simple way that does not require multiple machines or complicated setups of multiple operating systems."></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 25"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="7"></span>
+<h2 data-pagefind-meta="title">Multiple versions of IE in one Windows PC – Prepare for IE7</h2>
+<div class="entry">
+<p><strong>Update 2006-09-28: <a href="/2006/09/28/all-ie-browsers-standalone-on-same-pc/" title="Justaddwater.dk: All IE Browsers Standalone On Same PC">All IE Browsers Standalone On Same PC</a> (September 28, 2006) solves the problem.</strong></p>
+<p><strong>UPDATE 2006-02-03: The method described below will sometimes not work. To run IE7 and IE6 side-by-side, see the new post &ldquo;<a href="/2006/02/03/ie7-beta-running-side-by-side-with-ie6/" title="Justaddwater.dk: IE7 beta running side by side with IE6">IE7 beta running side by side with IE6</a>&rdquo;. For older versions of IE, this still works and you could safely continue as described below</strong>, <small>(but you should acknowledge that this is still &ldquo;unsupported&rdquo;, and is likely to make Internet Explorer less stable)</small>.</p>
+<p>For some time I&rsquo;ve used a trick from Quirksmode.org (Peter Paul Koch) to test webpages with different versions if Microsoft Internet Explorer (IE) on the same machine. This trick can come in handy if you want to run usability tests with old versions of IE.</p>
+<p>How would you test a webpage in IE 6 when IE 7 is released? Here&rsquo;s a simple way that does not require multiple machines or complicated setups of multiple operating systems.</p>
+<p>Usually IE upgrades and removes the old version of the browser. This is OK for most web users, but when I test and develop pages, its often convenient to have an old IE version available.</p>
+<p>The method has been known for quite some years, and today I found information on how to transform Internet Explorer 6 to a standalone version. In that way, you&rsquo;re prepared when IE7 is released.<br>
+The following is a <a href="http://blogs.msdn.com/ie/archive/2006/01/23/516393.aspx#516872" title="IE blog: comment on how to run IE 6 as a standalone application">comment from IE blog</a> (comment by <a href="http://blogs.msdn.com/utility/Redirect.aspx?U=http%3a%2f%2fwww.nocturndragon.net" title="NocturnDragon">NocturnDragon</a>):</p>
+<blockquote>
+<p>Make IE6 standalone and then upgrade to IE7 when you&rsquo;ll get it.you just need to copy this files to a folder of your choice (almost all of them are in the system32 folder)browseui.dll<br>
+dispex.dll<br>
+iexplore.exe<br>
+inetcpl.cpl<br>
+jscript.dll<br>
+mshtml.dll<br>
+mshtml.tlb<br>
+shdocvw.dll<br>
+urlmon.dll<br>
+vbscript.dll<br>
+xpsp2res.dlland do not forget to create a empty file inside that folder called: iexplore.exe.localI wonder why MS is so reluctant to let you do this with a simple checkbox during the install!I&rsquo;ve been running IE5.0, IE5.5 and IE6.0 standalone for some time now. That&rsquo;s the simplest way to test your webpages on all of them.</p>
+</blockquote>
+<p>Just for the record, here is a reference to <a href="http://www.quirksmode.org/browsers/multipleie.html" title="Quirksmode.org: Browsers - multiple Explorers">Peter Paul Koch&rsquo;s original article</a>, which I&rsquo;m confident that he&rsquo;ll update when IE7 is released.</p>
+<blockquote>
+<p>A solution <a href="http://www.insert-title.com/web_design/?page=articles/dev/multi_IE">has been found</a> however, by web developer Joe Maddalone who deserves eternal fame. Read his page for the technical details.</p>
+<p>Web developer Ryan Parman <a href="http://www.skyzyx.com/archives/000094.php">made the customized browsers files available</a> on his site. I copied them to my server to make sure this valuable resource doesn&rsquo;t disappear. Subsequently I found similarly doctored Explorer 3 and 4 versions on <a href="http://www.nachtarchiv.de/Webdesign.html?reportage=25">nachtarchiv.de</a>.</p>
+<p>Here&rsquo;s how it works:</p>
+<ol>
+<li>Start with a Windows XP box with Explorer 6 installed on it. I have heard, but not tested, that this will also work on Windows 2000.</li>
+<li>Download the browsers of your choice:
+<ul>
+<li><a href="http://www.quirksmode.org/browsers/IE30.zip">Explorer 3</a> (828K)</li>
+<li><a href="http://www.quirksmode.org/browsers/IE4.zip">Explorer 4</a> (2417K)</li>
+<li><a href="http://www.quirksmode.org/browsers/ie501sp2_nt.zip">Explorer 5.01</a> (3004K)</li>
+<li><a href="http://www.quirksmode.org/browsers/ie55sp2_nt.zip">Explorer 5.5 sp2</a> (3597K)</li>
+</ul>
+</li>
+<li>Unzip the zip files and put them somewhere in a directory.</li>
+<li>To run the browsers, execute the <code>IEXPLORE.EXE</code> files in each directory. This works. Nonetheless, keeping the versions apart is not simple.</li>
+<li>I verified that this were in fact working copies of 5.01 and 5.5 by some simple CSS tests you can do right here on this site. See below.</li>
+<li>Nonetheless you&rsquo;ll find problems. The Help -&gt; Info screen, for instance, always shows the Explorer 6.0 version number, even though the image above it says &ldquo;Explorer 4&rdquo; in 4.0, &ldquo;Explorer 5&rdquo; in 5.0, but &ldquo;Explorer 6.0&rdquo; in 5.5.</li>
+<li>The user agent string seems to work fine, though. To help you keep these versions apart I wrote a simple <a href="http://www.quirksmode.org/js/keepieapart.html">script</a> that precedes the document title by the IE version.</li>
+</ol>
+</blockquote>
+<p>I&rsquo;ve been using this trick on several occations, and even on Windows XP it introduces some stability problems in Internet Explorer.</p>
+<ul>
+<li>It sometimes crash when you choose bookmarks.</li>
+<li>It also shows IE6 information in the &ldquo;about&rdquo; box in all the installed versions</li>
+<li>Internet Explorer 4 address bar does not work (instead press CTRL+L to load a page)</li>
+</ul>
+<p>Decide for your self if you can use this trick. I can live with the crashes becaus it has a huge advantage for me that I can test HTML and CSS early in the development.</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/ie/" rel="tag">IE</a>, IE3, IE4, IE5, IE5.5, IE6, IE7, multiple internet explorers, microsoft internet explorer, standalone, <a href="/tag/browser/" rel="tag">browser</a>, cross-browser</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Wednesday, January 25th, 2006 at 14:29 (GMT-1) and is filed under <a href="/category/browser/" rel="category tag">Browser</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">7 Responses to &#8220;Multiple versions of IE in one Windows PC – Prepare for IE7&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-108">
+<cite>Casper Fabricius</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-108" title="">January 25th, 2006 at 18:00 (GMT-1)</a> </small>
+<p>This works as expected for me with IE4, IE5 and I5.5 – great tip!</p>
+<p>However, I&rsquo;m running the beta of IE7, and I&rsquo;ve just grabbed the IE6 files from another computer to try this out, and the behaviour seems to get a bit funky. When I enter a url in the address bar of my &ldquo;fake&rdquo; IE6, it opens up the page in Firefox, which is my default browser!</p>
+<p>If I make IE my default browser and enters a url in IE6, it is opened in a new IE6 browser window, however, if IE7 is also running, the page is opened in a new tab in IE7. It seems like IE6 is making a &ldquo;system call&rdquo; or something to let Windows decide who should open the page, instead of just opening it, I don&rsquo;t know &hellip;</p>
+<p>But it works, you just have make IE6 you default browser and make sure you don&rsquo;t have IE7 running!</p>
+
+</li>
+
+<li id="comment-111">
+<cite><a href="http://visitjesper.homeip.net" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-111" title="">January 25th, 2006 at 22:23 (GMT-1)</a> </small>
+<p>Casper,<br>
+thanks for sharing your experience. Due to the nature of this hack, I&rsquo;d be surprised if it were just working smoothly with no problems.</p>
+<p>I must say that one of the primary reasons I use this trick, is to have browsers up and runninng side-by-side. If you&rsquo;re not able to run IE6 and IE7 simultaneouosly, the hack looses its purpose.</p>
+<p>Please share any updates if you get it working!</p>
+
+</li>
+
+<li class="alt" id="comment-337">
+<cite><a href="http://visitjesper.homeip.net" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-337" title="">February 1st, 2006 at 18:24 (GMT-1)</a> </small>
+<p>Just tried this with todays release of IE7 pre beta 2 (on Windows XP service pack 2). It resulted in exactly the same problem as Casper describes above.<br>
+I have a feeling that a dll file or two might be missing in the file list in the post.</p>
+<p>There might be another way around: How about an IE7 standalone version on a machine that still defaults to IE6?</p>
+<p><a href="http://weblogs.asp.net/jgalloway/archive/2005/12/28/434132.aspx">IE7 Standalone Launch Script</a><br>
+<a href="http://www.dotnetjunkies.com/WebLog/daveadamson/comments/132462.aspx">Run I.E.7 beta and I.E.6 side-by-side</a><br>
+<a href="http://channel9.msdn.com/ShowPost.aspx?PostID=147114">Should IE7 and IE6 work side-by-side?</a><br>
+<a href="http://labs.insert-title.com/labs/article795.aspx">Multiple IEs in Windows</a> (this one mentions the same files as mentioned by NocturnDragon above)<br>
+<a href="http://blog.nolanzak.com/IE7BetaSidebysideWithIE6.aspx">IE7 beta side-by-side with IE6</a><br>
+I&rsquo;ll post an update when I&rsquo;ve tried it. There are some references about this I&rsquo;d like to check out. Please post a comment and share your own experiences!</p>
+
+</li>
+
+<li id="comment-397">
+<cite><a href="http://www.user-interface.org/2006/02/02/internet-explorer-7-beta-2-released/" class="url" rel="external">User Interface Blog » Internet Explorer 7 Beta 2 Released</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-397" title="">February 2nd, 2006 at 20:53 (GMT-1)</a> </small>
+<p>[&hellip;] Jesper Rønn-Jensen has written a blog entry on how to run multiple version of IE on a PC. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-612">
+<cite><a href="http://justaddwater.dk/2006/02/03/ie7-beta-running-side-by-side-with-ie6/" class="url" rel="external">justaddwater.dk | IE7 beta running side by side with IE6</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-612" title="">February 3rd, 2006 at 21:05 (GMT-1)</a> </small>
+<p>[&hellip;] In the comments of “Multiple versions of IE in one Windows PC” I could see that other people also had problems with the suggestion to make IE6 standalone. [&hellip;]</p>
+</li>
+
+<li id="comment-16207">
+<cite><a href="http://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/" class="url" rel="external">justaddwater.dk | All IE Browsers Standalone On Same PC</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-16207" title="">September 28th, 2006 at 10:40 (GMT-1)</a> </small>
+<p>[&hellip;] Standalone versions of Internet Explorers have been available for a long time. (i blogged about it before back in January and February). The new and best thing is that it’s now dead simple and really really easy to use. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-487428">
+<cite><a href="http://www.easydestination.net/blog/" class="url" rel="external">Max Gates</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-487428" title="">July 10th, 2009 at 02:32 (GMT-1)</a> </small>
+<p>Great tips thanks. I didn&rsquo;t knew it was possible to run two versions of IE side by side. But don&rsquo;t you think its really not required to do this. Microsoft gives you the option to roll back to previous version of IE if you are not satisfied with the current one. Of course if you just want to use two IE versions at same time then this trick is very handy.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introducing Tiny JavaScript Number Formatter · justaddwater.dk</title>
+<meta name="description" content="For a current project, I created a tiny number formatter that inserts thousand delimiters in a string:
+10000 to 10,000 etc.
+Just add css …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/08/03/could-you-fit-the-internet-in-windows-recycle-bin/" rel="prev">Could You Fit The Internet In Windows Recycle Bin?</a></div>
+<div class="alignright"><a href="/2008/08/28/download-pages-ie-vs-firefox/" rel="next">Download Pages — IE vs. Firefox</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-08-18"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="JavaScript"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="For a current project, I created a tiny number formatter that inserts thousand delimiters in a string: 10000 to 10,000 etc. Just add css class=“numberformat currency” to a text field, and it will be formatted automatically. It is based on the Prototype JavaScript library. You can get it from it’s GitHub repository page. Feel free [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Aug 18"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="1"></span>
+<h2 data-pagefind-meta="title">Introducing Tiny JavaScript Number Formatter</h2>
+<div class="entry">
+<p>For a current project, I created a tiny number formatter that inserts thousand delimiters in a string:</p>
+<p>10000 to 10,000 etc.</p>
+<p>Just add css class=&ldquo;numberformat currency&rdquo; to a text field, and it will be formatted automatically.</p>
+<p>It is based on the <a href="http://prototypejs.org">Prototype JavaScript library</a>. You can get it from it&rsquo;s GitHub repository page. Feel free to add or alter the functionality. Releasing under Creative Commons license.</p>
+<p><a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" alt="Creative Commons License">
+</a><br>
+This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 Unported License</a>.</p>
+<p>Some quick notes:</p>
+<p>I&rsquo;m using this on a rather big HTML page, so the selection of DOM nodes must be as simple and quick as possible. So if you are considering moderations, please make sure that the DOM manipulations are as lightweight as possible.</p>
+<p>The script is as simple as possible. It does not parse the string as a number. Instead it just strips any thousand delimiters in the string. Afterwards it sets its own. There may be some important logic here to add to make the code more robust.</p>
+<p>I have also added a test page to the project&hellip; not a real test page, but a HTML page that shows examples that are modified. Please back up any added functionality with changes to that page as well.</p>
+<p>Contact me for commit access if you would like to contribute. I do not expect to add any functionality to the code unless the work project requires it.</p>
+<p>More info:<br>
+<a href="http://github.com/jesperronn/numberformat-js/">GitHub repository</a></p>
+
+
+<p><small>Technorati Tags: <a href="/tag/javascript/" rel="tag">javascript</a>, <a href="/tag/opensource/" rel="tag">opensource</a>, <a href="/tag/project/" rel="tag">project</a>, <a href="/tag/library/" rel="tag">library</a></small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, August 18th, 2008 at 10:50 (GMT-1) and is filed under <a href="/category/javascript/" rel="category tag">JavaScript</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">One Response to &#8220;Introducing Tiny JavaScript Number Formatter&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-459497">
+<cite><a href="http://davidwford.com/" class="url" rel="external">David</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-459497" title="">December 15th, 2008 at 01:56 (GMT-1)</a> </small>
+<p>Interesting. I suppose it could easily be modified to add things like $ signs, decimals as well.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

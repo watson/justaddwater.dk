@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Button on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/button/</link>
+		<description>Recent content in Button on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 16 Sep 2009 10:32:56 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/button/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CSS Styling Buttons Problem with Underlined Text</title>
+				<link>https://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</link>
+				<pubDate>Wed, 16 Sep 2009 10:32:56 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</guid>
+				<description>&lt;p&gt;I ran into the challenge the other day to style a&amp;lt;button&amp;gt; element to make it look like a link (with underline and everything).&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately, the &amp;lt;button&amp;gt; element does not react to text-decoration: underline;&lt;/p&gt;&#xA;&lt;p&gt;But according to &lt;a href=&#34;http://csscreator.com/node/25902&#34; title=&#34;CSS Forum: [Solved?] Doctype prevents underline in button input&#34;&gt;a discussion at the CSS Creator forum&lt;/a&gt;, there is a way out:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I was just messing around with it and for some reason this doesn&amp;rsquo;t work:&lt;br&gt;&#xA;&lt;code&gt;input {text-decoration:underline;}&lt;/code&gt;&lt;br&gt;&#xA;but this does:&lt;br&gt;&#xA;&lt;code&gt;input {text-decoration:underline;float:left;}&lt;/code&gt;&lt;br&gt;&#xA;and&lt;br&gt;&#xA;&lt;code&gt;input{text-decoration:underline;display:block;}&lt;/code&gt;&lt;br&gt;&#xA;and&lt;br&gt;&#xA;&lt;code&gt;input{text-decoration:underline;position:absolute;}&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t ask me&amp;hellip; I can&amp;rsquo;t explain this one.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

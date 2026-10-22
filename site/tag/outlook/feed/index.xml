@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Outlook on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/outlook/</link>
+		<description>Recent content in Outlook on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 05 Apr 2011 09:20:34 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/outlook/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Fixed Outlook 2003 Corruption after Power Blackout</title>
+				<link>https://justaddwater.dk/2011/04/05/fixed-outlook-2003-corruption-after-power/</link>
+				<pubDate>Tue, 05 Apr 2011 09:20:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/04/05/fixed-outlook-2003-corruption-after-power/</guid>
+				<description>&lt;p&gt;The power disappeared at our office, and killed outlook 2003. Suddently I got this error:&lt;br&gt;&#xA;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened-300x56.png&#34; alt=&#34;Outlook 2003: Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened.&#34; title=&#34;unable-to-start-outlook-unable-to-open-the-outlook-window--the-set-of-folders-could-not-be-opened&#34; class=&#34;aligncenter size-medium wp-image-1456&#34; height=&#34;56&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened-300x56.png 300w, https://justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened.png 630w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I followed advice from a &lt;a href=&#34;http://social.technet.microsoft.com/Forums/en/outlook/thread/a111e6d8-491f-449e-9b57-1b77f99e9aad&#34;&gt;forum thread, that recommended to run &amp;ldquo;outlook.exe /resetnavpane&amp;rdquo;&lt;/a&gt;, but with no luck.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

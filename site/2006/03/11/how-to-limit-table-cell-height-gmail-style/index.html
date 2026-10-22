@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to limit table cell height (GMail style) · justaddwater.dk</title>
+<meta name="description" content="I just sent this to the CSS-D discussion list
+Hope you can help me with this. I want to limit a table cell height to only one line of text. My example below …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2006/03/08/steve-krug/" rel="prev">25% disabled web users picked up by Steve Krug</a></div>
+<div class="alignright"><a href="/2006/03/12/justaddwaterdk-february-2006-statistics/" rel="next">Justaddwater.dk February 2006 Statistics</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2006-03-11"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2006"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="CSS"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Standards"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I just sent this to the CSS-D discussion list Hope you can help me with this. I want to limit a table cell height to only one line of text. My example below does not work – any height on td is simply ignored if content is long. Problem here (according to for instance http://annevankesteren.nl/2004/01/css-tables [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Mar 11"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="7"></span>
+<h2 data-pagefind-meta="title">How to limit table cell height (GMail style)</h2>
+<div class="entry">
+<p>I just sent this to the <a href="http://archivist.incutio.com/viewlist/css-discuss/71697" title="CSS-D: How to limit table cell height (GMail style)">CSS-D discussion list</a></p>
+<blockquote>
+<p>Hope you can help me with this. I want to limit a table cell height to only one line of text. My example below does not work – any height on td is simply ignored if content is long.</p>
+<p>Problem here (according to for instance <a href="http://annevankesteren.nl/2004/01/css-tables">http://annevankesteren.nl/2004/01/css-tables</a> ) is that CSS specification requires table cell to expand to a minimum height of the containing content.</p>
+<p>So my question is: How is this solved in for instance GMail where content i only one line high (and additional overflowing content is hidden). Please share your thoughts on this, and if you could point me to any information on how to solve this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;</span> !DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">xmlns</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span> <span style="color:#a6e22e">xml:lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">title</span>&gt;&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">table</span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">300</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">border</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dashed</span> <span style="color:#66d9ef">red</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">td</span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">vertical-align</span>: <span style="color:#66d9ef">top</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#dfc</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>; <span style="color:#75715e">/* table cell does not obey this height */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;I want table row to be the height of 1 text line.&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">table</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">td</span>&gt;1. start cell not much content&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">td</span>&gt;2. second cell has insanely long content that I know will always wrap&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">table</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>Any help appreciated,<br>
+Jesper</p>
+<p>&ndash; Jesper Rønn-Jensen Capgemini Danmark A/S <a href="/">http://justaddwater.dk/</a> (weblog)</p>
+</blockquote>
+<p><a href="/wp-content/uploads/2006/03/fixed-table-cells-notworking.html">Example page – not working</a></p>
+<p>I&rsquo;ll post the results here as I find out how Google GMail does the trick. Please share any tricks that you know of here. Oh, for your information, solution must work in Internet Explorer&hellip;</p>
+<p><ins>UPDATE: Now working!</ins> Thanks to the information at <a href="http://www.blakems.com/archives/000077.html" title="BlakeMS.com: Using text-overflow">BlakeMS blog</a>, I now got it working (no Javascript necessary).</p>
+<blockquote>
+<p>Now this works the same with table cells. See below and note that you must set table to have the table-layout: fixed property for it to work.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">tbl</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">table-layout</span>:<span style="color:#66d9ef">fixed</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-top</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#333</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-collapse</span>: <span style="color:#66d9ef">collapse</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#fff</span>;
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">tbl</span> <span style="color:#f92672">td</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">dashed</span> <span style="color:#ae81ff">#333</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-overflow</span>:<span style="color:#66d9ef">ellipsis</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">overflow</span>:<span style="color:#66d9ef">hidden</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">white-space</span>:<span style="color:#66d9ef">nowrap</span>;
+</span></span><span style="display:flex;"><span> } 
+</span></span></code></pre></div></blockquote>
+<p>Note that he also adds <code>white-space:nowrap</code>. Otherwise it won&rsquo;t work. <a href="/wp-content/uploads/2006/03/fixed-table-cells-working.html">Example page – working</a></p>
+
+
+<p><small>Technorati Tags: <a href="/tag/web-standards/" rel="tag">web standards</a>, <a href="/tag/css/" rel="tag">css</a>, <a href="/tag/tables/" rel="tag">tables</a>, <a href="/tag/google/" rel="tag">google</a>, gmail</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Saturday, March 11th, 2006 at 17:49 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/css/" rel="category tag">CSS</a>, <a href="/category/web-standards/" rel="category tag">Web Standards</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">7 Responses to &#8220;How to limit table cell height (GMail style)&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-1978">
+<cite><a href="http://www.gface.dk" class="url" rel="external">Lars Gundersen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-1978" title="">March 11th, 2006 at 18:57 (GMT-1)</a> </small>
+<p>Hi,</p>
+<p>You need to put a div inside the td and then apply the following style to it:</p>
+<p>div {<br>
+height:10px;<br>
+overflow:hidden;<br>
+}</p>
+<p>This will hide to rest of the content.</p>
+<p>Hope this will help you out!</p>
+
+</li>
+
+<li id="comment-1980">
+<cite><a href="http://visitjesper.homeip.net" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-1980" title="">March 11th, 2006 at 20:03 (GMT-1)</a> </small>
+<p>Hey Lars.<br>
+Thank you very much for your feedback. I really appreciate it. Just one thing might prevent me from using your trick: The table in this particular case is generated with Java Server Faces.<br>
+See example here: <a href="http://irian.at/myfaces/pagedSortTable.jsf;jsessionid=56913544CE434D22006786DF52AF8308">MyFaces table example</a>.<br>
+A possible workaround might then be to wrap td contents in a div via DOM scripting.<br>
+However I&rsquo;d prefer a simpler solution where only CSS is involved.</p>
+</li>
+
+<li class="alt" id="comment-399873">
+<cite><a href="http://www.mikedwalters.com" class="url" rel="external">Mike</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-399873" title="">March 3rd, 2008 at 01:44 (GMT-1)</a> </small>
+<p>I thought I&rsquo;d found my fix, but this isn&rsquo;t working out for me. I think the difference is that my cells have a height, but only some have more than one character of data (its a calendar).</p>
+</li>
+
+<li id="comment-414703">
+<cite>Austin</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-414703" title="">April 29th, 2008 at 18:48 (GMT-1)</a> </small>
+<p>Restricting the height of the td via CSS doesn&rsquo;t work since the td stretches to accomodate content. You have to wrap the content with a div or some other container.<br>
+e.g.<br>
+content</p>
+</li>
+
+<li class="alt" id="comment-426233">
+<cite>patrick</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-426233" title="">June 25th, 2008 at 17:59 (GMT-1)</a> </small>
+<p>Awesome. I&rsquo;ve been looking for this for ages. Thank you much</p>
+<p>PS: I just tested it and it works perfectly in IE7 FF3 and Safari</p>
+
+</li>
+
+<li id="comment-441405">
+<cite>ramak</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-441405" title="">September 3rd, 2008 at 16:45 (GMT-1)</a> </small>
+<p>ronn, your fix dint work in my case for whatever reasons. But Lars&rsquo;s fix did it. Anyways my problem got solved, thanks to your posting and lars fix. Thanks guys.</p>
+</li>
+
+<li class="alt" id="comment-513878">
+<cite>Rich</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-513878" title="">March 10th, 2011 at 21:50 (GMT-1)</a> </small>
+<p>This only works if your table is table-layout=&ldquo;fixed&rdquo;. Gmail is not fixed. All the columns are fixed width except for the Subject column which is auto. This doesn&rsquo;t work when your table is 100% like gmail and when only one column is set to auto while the others are fixed.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

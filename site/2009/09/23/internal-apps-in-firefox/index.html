@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internal Apps In Firefox · justaddwater.dk</title>
+<meta name="description" content="This post is probably highly irrelevant unless you work at Capgemini and want to use the internal nordic applications in Firefox.
+Read on if you want to access …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/09/21/sell-more-add-next-steps-to-your-status-messages/" rel="prev">Sell More: Add Next Steps To Your Status Messages</a></div>
+<div class="alignright"><a href="/2009/09/28/bash-or-ruby-for-removing-multiple-trac-spam-tickets/" rel="next">Bash or Ruby for removing multiple Trac Spam Tickets</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-09-23"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Accessibility"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Browser"></span><span hidden data-pagefind-filter="category[data-v]" data-v="capgemini"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="This post is probably highly irrelevant unless you work at Capgemini and want to use the internal nordic applications in Firefox. Read on if you want to access systems like CTR (time reporting), Event calendar, Skills database, PDR, Project forms or similar applications in Firefox. Problem is that the systems are not accessible at all [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Sep 23"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="1"></span>
+<h2 data-pagefind-meta="title">Internal Apps In Firefox</h2>
+<div class="entry">
+<p>This post is probably highly irrelevant unless you work at Capgemini and want to use the <a href="http://applications.capgemini.se/">internal nordic applications</a> in Firefox.</p>
+<p>Read on if you want to access systems like CTR (time reporting), Event calendar, Skills database, PDR, Project forms or similar applications in Firefox.</p>
+<p>Problem is that the systems are not accessible at all if you&rsquo;re not logged in. The reason is some extremely malformed HTML. Here is the entire content of the HTML page sent out:</p>
+<blockquote>
+<p>&lt;!&ndash; CFIF (#Cookie.CFId# LT 10000) &ndash;&gt;<br>
+&lt;!&ndash; CFLOCATION URL=”/applikationer/Login/CleanUp.cfm” Addtoken=&ldquo;NO&rdquo; &ndash;&gt;<br>
+&lt;!&ndash; /CFIF &mdash;&gt;</p>
+<p>&lt;HTML&gt;<br>
+&lt;HEAD&gt;<br>
+&lt;TITLE&gt;CTR System&lt;/TITLE&gt;<br>
+&lt;/HEAD&gt;</p>
+<p>&lt;!&ndash; No Cookie &ndash;&gt;</p>
+<p>&lt;FORM Name=&ldquo;ssoRedirect&rdquo; Method=&ldquo;Post&rdquo; Action=&ldquo;<a href="https://sso.capgemini.com/gate.asp%22">https://sso.capgemini.com/gate.asp”</a>&gt;<br>
+&lt;INPUT Type = &ldquo;hidden&rdquo; Name=&ldquo;calling_url&rdquo; Value=&ldquo;<a href="http://applications.capgemini.se/Applications/CTR/CTR.cfm?%22">http://applications.capgemini.se/Applications/CTR/CTR.cfm?”</a>&gt;<br>
+&lt;INPUT Type = &ldquo;hidden&rdquo; Name=&ldquo;server_identifier&rdquo; Value=&ldquo;applications.capgemini.se&rdquo;&gt;<br>
+&lt;/FORM&gt;</p>
+<p>&lt;SCRIPT Language=&ldquo;javascript&rdquo;&gt;<br>
+document.forms[&lsquo;ssoRedirect&rsquo;].submit()<br>
+&lt;/SCRIPT&gt;</p>
+</blockquote>
+<p>Several problems here: Content outside of HTML element. No body element. No end HTML tag. And the most critical that triggers this particular problem: The form element and the SCRIPT element are outside the body.</p>
+<p>IE has an interpretation of this illegal structure: It creates a body element and fills in the SCRIPT and FORM tag into them.</p>
+<p>Firefox guesses differently. It moves the FORM element to the body as well, but the SCRIPT element is put in the HEAD section. The consequence is that the form submit happens before the FORM element is rendered. And it gives a JavaScript error that the form is not found.</p>
+<p>I wrote a Greasemonkey script that essentially posts the form again (and Greasemonkey is not triggered until DOM is loaded).</p>
+<p>Install greasemonkey script:</p>
+<p><a href="/wp-content/uploads/2009/09/capinternal_systems_login_nordic_apps.user.js">capinternal_systems_login_nordic_apps.user.js</a> (version 1.0 created 2009-09-23)</p>
+<p>If you want to improve on it or add more for more internal systems, feel free to fork this gist on Github <a href="http://gist.github.com/191896">http://gist.github.com/191896</a></p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Wednesday, September 23rd, 2009 at 12:28 (GMT-1) and is filed under <a href="/category/accessibility/" rel="category tag">Accessibility</a>, <a href="/category/browser/" rel="category tag">Browser</a>, <a href="/category/capgemini/" rel="category tag">capgemini</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">One Response to &#8220;Internal Apps In Firefox&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-489351">
+<cite><a href="http://www.londonmoscow.com" class="url" rel="external">interpreting</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489351" title="">September 24th, 2009 at 13:19 (GMT-1)</a> </small>
+<p>It is really a great post that allows you to learn a lot from your post. The post about HTML was really awesome as it has helped quite a lot to me.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to make a dry-run with svn update · justaddwater.dk</title>
+<meta name="description" content="Quick Subversion trick:
+I asked at the office today if anyone could figure out a method for doing a dry-run to see what files would be updated if you do an …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/04/24/capgemini-website-article-prototyping-and-ruby-on-rails/" rel="prev">Capgemini website article: Prototyping and Ruby on Rails</a></div>
+<div class="alignright"><a href="/2008/05/06/internal-or-external-company-blog/" rel="next">Internal or External Company Blog?</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-04-29"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="justaddwater.dk"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Quick Subversion trick: I asked at the office today if anyone could figure out a method for doing a dry-run to see what files would be updated if you do an “svn update” from repository. My colleague Mads came up with this: `jesper:test_project jesper$ svn merge –dry-run -r BASE:HEAD .` `U app/helpers/application_helper.rb` `U app/controllers/reports_controller.rb` `A [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Apr 29"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="12"></span>
+<h2 data-pagefind-meta="title">How to make a dry-run with svn update</h2>
+<div class="entry">
+<p>Quick Subversion trick:</p>
+<p>I asked at the office today if anyone could figure out a method for doing a dry-run to see what files would be updated if you do an &ldquo;svn update&rdquo; from repository.</p>
+<p>My colleague Mads came up with this:</p>
+<blockquote>
+<p><code>jesper:test_project jesper$ svn merge --dry-run -r BASE:HEAD .</code><br>
+<code>U app/helpers/application_helper.rb</code><br>
+<code>U app/controllers/reports_controller.rb</code><br>
+<code>A app/views/layouts/formula.html.erb</code><br>
+<code>U app/views/overview/index.html.erb</code><br>
+<code>U app/views/overview/_sidebar.html.erb</code><br>
+<code>U app/views/reports/index.html.erb</code><br>
+<code>A app/views/reports/_sidebar.html.erb</code><br>
+<code>U app/views/reports/new.html.erb</code><br>
+<code>U app/views/reports/start.html.erb</code><br>
+<code>C log/development.log</code><br>
+<code>U public/stylesheets/app.css</code></p>
+</blockquote>
+<p>Brilliant! Now I can see which files will conflict or update before I pull newest version from repository. Now added as an alias:</p>
+<p><code>alias svnupdry='svn merge --dry-run -r BASE:HEAD .'</code></p>
+<p>I took a brief look at the Git manual. There is apparently no flag on &lsquo;git pull&rsquo; that does a dry-run. Anyone knows if the same thing is possible with Git?</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/subversion/" rel="tag">subversion</a>, dry-run, <a href="/tag/git/" rel="tag">git</a></small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, April 29th, 2008 at 19:24 (GMT-1) and is filed under <a href="/category/justaddwater.dk/" rel="category tag">justaddwater.dk</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">12 Responses to &#8220;How to make a dry-run with svn update&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-415190">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-415190" title="">May 1st, 2008 at 19:46 (GMT-1)</a> </small>
+<p>Another nice one:</p>
+<p><code>alias svnupall='for DIR in `find . -maxdepth 2 -type d -name &quot;.svn&quot; | cut -d / -f 2`; do echo &quot;$DIR: &quot;;svn update ./$DIR; done''</code></p>
+<p>This one updates all my svn projects in my code projects dir.<br>
+From <a href="http://codesnippets.joyent.com/posts/show/368">http://codesnippets.joyent.com/posts/show/368</a></p>
+
+</li>
+
+<li id="comment-420839">
+<cite><a href="http://www.ronyasoft.com/products/proposter/download.html" class="url" rel="external">Rasterbator</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420839" title="">May 28th, 2008 at 15:05 (GMT-1)</a> </small>
+<p>Is that works? Anyway, i will copy down and have a try on it<br>
+Thank you</p>
+</li>
+
+<li class="alt" id="comment-421842">
+<cite><a href="http://www.mehryar.com" class="url" rel="external">mehryar</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-421842" title="">June 3rd, 2008 at 02:15 (GMT-1)</a> </small>
+<p>svn status -u</p>
+<p>will also do a dry update run</p>
+
+</li>
+
+<li id="comment-431761">
+<cite>chebbers</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-431761" title="">July 23rd, 2008 at 18:43 (GMT-1)</a> </small>
+<p>&ldquo;svn status -u&rdquo; won&rsquo;t show files that will become conflicted</p>
+</li>
+
+<li class="alt" id="comment-435066">
+<cite><a href="http://LinuxIsFun.com" class="url" rel="external">EmbeddedLinuxGuy</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-435066" title="">August 11th, 2008 at 20:36 (GMT-1)</a> </small>
+<p>This doesn&rsquo;t work perfectly for me on very old checkouts. I get false conflicts and &ldquo;Skipping&rdquo; messages, similar to symptoms in this forum post:</p>
+<p><a href="http://translocator.ws/2005/10/12/svn-update-dry-run">http://translocator.ws/2005/10/12/svn-update-dry-run</a></p>
+<p>[jesse@sente]<del>/svn/rex&gt; svn merge &ndash;dry-run -r BASE:HEAD .<br>
+Skipped missing target: &lsquo;www/html/HP/Traffic_Users_Guide.pdf&rsquo;<br>
+Skipped &lsquo;www/html/js/traffic-class.js&rsquo;<br>
+C www/cgi-bin/queries<br>
+[jesse@sente]</del>/svn/rex/www/cgi-bin&gt;svn status queries<br>
+[jesse@sente]<del>/svn/rex/www/cgi-bin&gt;svn diff queries<br>
+[jesse@sente]</del>/svn/rex/www/cgi-bin&gt;svn status -u queries<br>
+* 44231 queries</p>
+<p>See also</p>
+
+</li>
+
+<li id="comment-484053">
+<cite><a href="http://www.yourversion.com" class="url" rel="external">Dan</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-484053" title="">April 17th, 2009 at 07:07 (GMT-1)</a> </small>
+<p>thanks for your great post, Jesper! this is a very handy trick to know&hellip;will save me lots of time.</p>
+</li>
+
+<li class="alt" id="comment-489176">
+<cite><a href="http://itech9.com/wp/?p=105" class="url" rel="external">Subversion update dry-run .. | itech9</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489176" title="">September 16th, 2009 at 21:50 (GMT-1)</a> </small>
+<p>[&hellip;] From <a href="http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/">http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/</a> [&hellip;]</p>
+</li>
+
+<li id="comment-495378">
+<cite><a href="http://borkweb.com/story/weekly-digest-for-april-23rd" class="url" rel="external">Weekly Digest for April 23rd – BorkWeb</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-495378" title="">April 23rd, 2010 at 10:09 (GMT-1)</a> </small>
+<p>[&hellip;] Shared justaddwater.dk | How to make a dry-run with svn update. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-501840">
+<cite><a href="http://mlwmlw.no-ip.org/2010/10/svn-%e6%8c%87%e4%bb%a4/" class="url" rel="external">svn 指令 « 阿喵就像家</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-501840" title="">October 30th, 2010 at 10:13 (GMT-1)</a> </small>
+<p>[&hellip;] <a href="http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/">http://justaddwater.dk/2008/04/29/how-to-make-a-dry-run-with-svn-update/</a> [&hellip;]</p>
+</li>
+
+<li id="comment-513653">
+<cite><a href="http://markushedlund.com" class="url" rel="external">Markus Hedlund</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-513653" title="">March 9th, 2011 at 10:09 (GMT-1)</a> </small>
+<p>That line didn&rsquo;t work with SVN 1.6.16. Had to change it to:</p>
+<p>svn merge &ndash;dry-run &ndash;revision BASE:HEAD .</p>
+
+</li>
+
+<li class="alt" id="comment-513654">
+<cite><a href="http://markushedlund.com" class="url" rel="external">Markus Hedlund</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-513654" title="">March 9th, 2011 at 10:10 (GMT-1)</a> </small>
+<p>That should be</p>
+<p>svn merge &ndash;dry-run &ndash;revision BASE:HEAD .</p>
+<p>with two &ldquo;-&rdquo; before &ldquo;dry-run&rdquo; and &ldquo;revision&rdquo;.</p>
+
+</li>
+
+<li id="comment-513724">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-513724" title="">March 9th, 2011 at 22:17 (GMT-1)</a> </small>
+<p>@Markus, yeah unfortunately wordpress tries to clever-change all quotes and double dashes.</p>
+<p>It is really really a wrong default and very annoying.</p>
+<p>BTW, you can avoid the double dashes by using the single letter equivalents &ldquo;-n&rdquo; for dry-run and &ldquo;-r&rdquo; for revision. But it then becomes less intuitive and a bit harder to learn:</p>
+<p>Then the expression becomes:</p>
+<pre tabindex="0"><code>svn merge –n –r BASE:HEAD .
+</code></pre>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

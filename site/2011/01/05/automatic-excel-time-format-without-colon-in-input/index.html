@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automatic Excel Time Format Without Colon in Input · justaddwater.dk</title>
+<meta name="description" content="For a simple Excel sheet time reporting, i needed to enter hours every day for arrival and departure time.
+Excel is not so smart about the time format. For …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2010/11/22/rapid-prototyping-with-a-piece-of-wood/" rel="prev">Rapid Prototyping With a Piece of Wood</a></div>
+<div class="alignright"><a href="/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/" rel="next">Easy delete all .svn Subfolders in Windows Explorer</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2011-01-05"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2011"></span><span hidden data-pagefind-filter="category[data-v]" data-v="office"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="For a simple Excel sheet time reporting, i needed to enter hours every day for arrival and departure time. Excel is not so smart about the time format. For instance I need to enter “9:00” for nine in the morning. I wanted just to enter “900”, and let the excel sheet format the data correctly [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 5"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="4"></span>
+<h2 data-pagefind-meta="title">Automatic Excel Time Format Without Colon in Input</h2>
+<div class="entry">
+<p>For a simple Excel sheet time reporting, i needed to enter hours every day for arrival and departure time.</p>
+<p>Excel is not so smart about the time format. For instance I need to enter &ldquo;9:00&rdquo; for nine in the morning. I wanted just to enter &ldquo;900&rdquo;, and let the excel sheet format the data correctly itself.</p>
+<p>I found a working solution on PC Mag: &ldquo;<a href="http://www.pcmag.com/article2/0,2817,2316755,00.asp">Easy Date and Time Entry in Excel Tips</a>&rdquo;.</p>
+<ol>
+<li>Enter time format as a simple number (like &ldquo;900&rdquo; or &ldquo;1500&rdquo;).</li>
+<li>Format the cell to display an extra colon.</li>
+<li>In a (hidden?) cell, calculate the time to use for further calculations.</li>
+</ol>
+<h4 id="format-cells-for-viewing">Format cells for viewing:</h4>
+<p>Take the cell and format it so it visually shows the colon for the number that is input. Go to the menu item &ldquo;Format&rdquo; &gt; &ldquo;Cells&hellip;&rdquo; dialog. Select &ldquo;Custom&rdquo; format and input &ldquo;0\:00&rdquo; as shown on the screenshot.</p>
+<p><a href="/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat.png"><img src="/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat-300x284.png" alt="" title="excel-format-normal-number-as-timeformat" class="alignnone size-medium wp-image-1397" height="284" width="300" srcset="/wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat-300x284.png 300w, /wp-content/uploads/2011/01/excel-format-normal-number-as-timeformat.png 399w" sizes="(max-width: 300px) 100vw, 300px">
+</a></p>
+<h4 id="create-hidden-cell-to-calculate-time">Create (hidden)? cell to calculate time:</h4>
+<p>Take an adjacent cell and let it interpret the input value as a time value. <code>=TIME(9, 15, 0)</code> is equivalent to 09:15:00 and will require 3 parameters for hour, minutes, seconds.</p>
+<p>Our inputformat is &ldquo;915&rdquo;. Extract hours value: <code>TRUNC(915/100)</code><br>
+Extract minutes value with modulus that extracts the rest 15 from 915 divided by 100: <code>MOD(915, 100)</code></p>
+<p>So the formula will be <code>=TIME( TRUNC(915/100), MOD(915,100), 0)</code></p>
+<p>This calculation is hidden in the final spreadsheet in columns E, G, and J.</p>
+<p>Here a screenshot of the result:</p>
+<p><a href="/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet.png"><img src="/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet-300x153.png" alt="" title="excel-format-number-as-time-screenshot-timesheet" class="alignnone size-medium wp-image-1396" height="153" width="300" srcset="/wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet-300x153.png 300w, /wp-content/uploads/2011/01/excel-format-number-as-time-screenshot-timesheet.png 402w" sizes="(max-width: 300px) 100vw, 300px">
+</a></p>
+<p>I added the time sheet template here for further convenience.<br>
+<a href="http://justaddwater.dk/wp-content/uploads/2011/01/2011-timesheet1.xls">2011-timesheet.xls</a> (47KB Excel format)</p>
+<p>(timesheet updated January 6th: Sum can now handle more than 24 hours)</p>
+<p>IAnd now I can happily save entering colons every day :)</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Wednesday, January 5th, 2011 at 20:41 (GMT-1) and is filed under <a href="/category/office/" rel="category tag">office</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">4 Responses to &#8220;Automatic Excel Time Format Without Colon in Input&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-506543">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-506543" title="">January 6th, 2011 at 12:33 (GMT-1)</a> </small>
+<p>Updated the sum calculation. If it got to 24 hours it would continue from 00:00. The solution was to change the format of the sum field. New (custom) format &ldquo;[h]:mm&rdquo; solved the problem.</p>
+<p>I found the solution in this <a href="http://www.contextures.com/xlfaqdat.html#FormatHour">Excel Dates and Times FAQ</a></p>
+
+</li>
+
+<li id="comment-507655">
+<cite>tjensen</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-507655" title="">January 15th, 2011 at 11:10 (GMT-1)</a> </small>
+<p>what about a macro insert a &ldquo;:&rdquo; with a simple substring right 2 chars replace.<br>
+in global.dot works in every sheets no hidden collums etc</p>
+</li>
+
+<li class="alt" id="comment-509036">
+<cite>Ronald</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-509036" title="">January 26th, 2011 at 06:10 (GMT-1)</a> </small>
+<p>Thanks for sharing this one this is very helpful especially to the people who are looking for this topic. This is very informative like this site I&rsquo;ve discovered earlier <a href="http://www.judithbassler.com/blog/include-the-dates-and-times-in-excel.html">http://www.judithbassler.com/blog/include-the-dates-and-times-in-excel.html</a></p>
+</li>
+
+<li id="comment-510314">
+<cite>Sandálias Personalizadas</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-510314" title="">February 6th, 2011 at 14:34 (GMT-1)</a> </small>
+<p>what about a macro insert a “:” with a simple substring right 2 chars replace.<br>
+in global.dot works in every sheets no hidden collums etc.<br>
+thanks!</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

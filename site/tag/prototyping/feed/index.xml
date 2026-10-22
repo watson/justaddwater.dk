@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Prototyping on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/prototyping/</link>
+		<description>Recent content in Prototyping on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 22 Nov 2010 22:35:22 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/prototyping/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Rapid Prototyping With a Piece of Wood</title>
+				<link>https://justaddwater.dk/2010/11/22/rapid-prototyping-with-a-piece-of-wood/</link>
+				<pubDate>Mon, 22 Nov 2010 22:35:22 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/11/22/rapid-prototyping-with-a-piece-of-wood/</guid>
+				<description>&lt;p&gt;May I recommend Aza Raskins recent presentation on Rapid prototyping. He shares a lot of very insightful thoughts on how (and why) rapid prototyping is so important.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://player.vimeo.com/video/16527312&#34; width=&#34;400&#34; height=&#34;225&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://vimeo.com/16527312&#34;&gt;Rapid Prototyping with Aza Raskin&lt;/a&gt; from &lt;a href=&#34;http://vimeo.com/zerolab&#34;&gt;Dan Braghis&lt;/a&gt; on &lt;a href=&#34;http://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Aza Raskin, creative lead at Firefox, shares some tips and tricks about rapid prototyping at the Mozilla Drumbeat festival&lt;/p&gt;&#xA;&lt;p&gt;One of his points: &amp;ldquo;&lt;strong&gt;Aim to finish a usable artifact in a day. This helps you focus and scope.&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My Talk at Reboot8: Prototyping</title>
+				<link>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</link>
+				<pubDate>Thu, 01 Jun 2006 11:27:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</guid>
+				<description>&lt;p&gt;Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.&lt;/p&gt;&#xA;&lt;p&gt;Topic: Prototype driven development with Ruby on Rails, and demo of the application we made at Capgemini with the Danish public Agency of Companies and Commerce.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Presentation&lt;/strong&gt; (Powerpoint format) for download here:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt&#34;&gt;Prototype driven development with Ruby on Rails: Powerpoint version (1.11 MB)&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

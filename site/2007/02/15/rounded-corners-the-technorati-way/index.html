@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rounded Corners the Technorati Way · justaddwater.dk</title>
+<meta name="description" content="It&rsquo;s been a while where web standards don&rsquo;t get the attention it deserves on this blog. In that spirit, here&rsquo;s a behind-the-scenes view on how …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/02/14/humorous-vista-features-from-the-onion/" rel="prev">Humorous Vista Features (from The Onion)</a></div>
+<div class="alignright"><a href="/2007/02/16/usability-test-results-too-diverse/" rel="next">Usability Test Results Too Diverse?</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-02-15"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="CSS"></span><span hidden data-pagefind-filter="category[data-v]" data-v="HTML"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Standards"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="It’s been a while where web standards don’t get the attention it deserves on this blog. In that spirit, here’s a behind-the-scenes view on how Technorati makes rounded corners on a faded background. I remember Eric Meyer mentioned this solution back at a workshop in 2005 (before he could actually tell that it was for [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Feb 15"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="13"></span>
+<h2 data-pagefind-meta="title">Rounded Corners the Technorati Way</h2>
+<div class="entry">
+<p>It&rsquo;s been a while where web standards don&rsquo;t get the attention it deserves on this blog. In that spirit, here&rsquo;s a behind-the-scenes view on how Technorati makes rounded corners on a faded background.</p>
+<p><img src="/wp-content/uploads/2007/02/technorati-rounded-corner-justadwater-rank-9980-mini.png" alt="Technorati screenshot of box with rounded corners on faded background (showing Justaddwater Ranks no. 9980 on Technorati)" width="444" height="78">
+</p>
+<p>I remember Eric Meyer mentioned this solution back at a workshop in 2005 (before he could actually tell that it was for Technorati — the redesign was unveiled a few days later).</p>
+<h3 id="technique">Technique</h3>
+<p>HTML for the box:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bloginfo-summary boxc&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;..&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;..&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    ..
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">b</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn tr&#34;</span>&gt;&lt;/<span style="color:#f92672">b</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">b</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn br&#34;</span>&gt;&lt;/<span style="color:#f92672">b</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">b</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn tl&#34;</span>&gt;&lt;/<span style="color:#f92672">b</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">b</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn bl&#34;</span>&gt;&lt;/<span style="color:#f92672">b</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>The HTML is then styled with the following CSS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span>.<span style="color:#a6e22e">bloginfo-summary</span> {<span style="color:#66d9ef">background</span>:
+</span></span><span style="display:flex;"><span>  url(<span style="color:#e6db74">http://static.technorati.com/static/css/img/bg/fade-lightgreen.png</span>) <span style="color:#66d9ef">repeat-x</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">left</span>;<span style="color:#66d9ef">margin-bottom</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;<span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">690</span><span style="color:#66d9ef">px</span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Large radius image backgrounds */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> {<span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">relative</span>;}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">cn</span> { <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">background</span>:
+</span></span><span style="display:flex;"><span> url(<span style="color:#e6db74">http://static.technorati.com/static/css/img/corners/white.png</span>) <span style="color:#66d9ef">no-repeat</span>;
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">tl</span> {<span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">background-position</span>: <span style="color:#66d9ef">top</span> <span style="color:#66d9ef">left</span>;}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">tr</span> {<span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">background-position</span>: <span style="color:#66d9ef">top</span> <span style="color:#66d9ef">right</span>;}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">bl</span> {<span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">background-position</span>: <span style="color:#66d9ef">bottom</span> <span style="color:#66d9ef">left</span>;}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">br</span> {<span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">background-position</span>: <span style="color:#66d9ef">bottom</span> <span style="color:#66d9ef">right</span>;}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* IE Filters */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> <span style="color:#f92672">html</span> .<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">bl</span> {<span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">-2</span><span style="color:#66d9ef">px</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> <span style="color:#f92672">html</span> .<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">br</span> {<span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">-2</span><span style="color:#66d9ef">px</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> <span style="color:#f92672">html</span> .<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">cn</span> {<span style="color:#66d9ef">background-image</span>:
+</span></span><span style="display:flex;"><span>       url(<span style="color:#e6db74">http://static.technorati.com/static/css/img/corners/white.gif</span>);
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span></code></pre></div><p>So, graphically displayed, the <code>&lt;b&gt;</code> elements are actually positioned in each corner with no content:</p>
+<p><img src="/wp-content/uploads/2007/02/technorati-rounded-corner-html-tags-mini.png" alt="Technorati screenshot of box with rounded corners on faded background showing HTML elements" width="448" height="99">
+</p>
+<p>Note that the background-image for the faded box is one thin sliced faded image:<br>
+<img src="http://static.technorati.com/static/css/img/bg/fade-lightgreen.png" alt="technorati faded background slice">
+</p>
+<p>The corners is made with only one image that&rsquo;s positioned differently depending on which corner it&rsquo;s in. The image is actually a transparent circle on white background.</p>
+<div style="background-color: #339933; color: #dddddd; height: 30px; line-height: 30px">
+<p><img src="http://static.technorati.com/static/css/img/corners/white.gif" alt="technorati rounded corner image">
+ shown on dark background for clarity.</p>
+</div>
+<p>So I <a href="/wp-content/uploads/2007/03/technorati-style-rounded-corners.html" title="Example page: technorati-style rounded corners">included the final example on a separate page</a> (because the WordPress editor doesn&rsquo;t let me add the HTML code precisely as it&rsquo;s required)</p>
+<p><a href="/wp-content/uploads/2007/03/technorati-style-rounded-corners.html" title="Example page: technorati-style rounded corners">example page: technorati-style rounded corners</a></p>
+<p>More info<br>
+Eric Meyer: <a href="http://meyerweb.com/eric/thoughts/2005/06/21/technorati-redesigns/">Technorati Redesigns</a> (June 2005)<br>
+Smileycat: <a href="http://www.smileycat.com/miaow/archives/000044.html">CSS Rounded Corners Roundup</a></p>
+
+
+<p><small>Technorati Tags: <a href="/tag/web-standards/" rel="tag">web standards</a>, <a href="/tag/css/" rel="tag">css</a>, <a href="/tag/html/" rel="tag">html</a>, rounded corners, technorati, tantek celic, eric meyer</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, February 15th, 2007 at 12:01 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/css/" rel="category tag">CSS</a>, <a href="/category/html/" rel="category tag">HTML</a>, <a href="/category/web-standards/" rel="category tag">Web Standards</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">13 Responses to &#8220;Rounded Corners the Technorati Way&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-84199">
+<cite><a href="http://www.webtouch.dk" class="url" rel="external">Sune Jakobsen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-84199" title="">February 15th, 2007 at 15:48 (GMT-1)</a> </small>
+<p>I don&rsquo;t agree that it&rsquo;s the right solution to use &lt;b&gt; tags for this purpose. &lt;b&gt; tags are for bold content only (btw deprecated, use strong instead). It would make more sense to use a span tag instead, because they are intended for non semantic purposes only.</p>
+<p>Keep the web semantic :o)</p>
+
+</li>
+
+<li id="comment-84201">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-84201" title="">February 15th, 2007 at 15:53 (GMT-1)</a> </small>
+<p>Sune.<br>
+I must admit that I don&rsquo;t remember what reasons Eric Meyer gave for choosing the b-tag in this particular solution.</p>
+<p>However I&rsquo;m absolutely confident that there is a valid reason because Eric had to report to Tantek Celik.</p>
+<p>It really does not get more semantic than that :)</p>
+
+</li>
+
+<li class="alt" id="comment-84361">
+<cite><a href="http://tantek.com/" class="url" rel="external">Tantek</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-84361" title="">February 15th, 2007 at 20:45 (GMT-1)</a> </small>
+<p>The short answer is the B is dead.</p>
+<p>It means nothing other than &ldquo;presentational fluff&rdquo;. And thus we used to for exactly that, presentational fluff. Whereas using a span would imply zero/neutral semantics (or that the <a href="http://microformats.org/wiki/semantic-class-names">semantics might be in the class attribute</a>), Eric and I wanted to actually imply *negative* semantics (that these tags are purely here for presentational reasons), and thus imminently ignorable by anyone parsing the document looking for semantics.</p>
+<p>Another interpretation is that since B is dead, we have repurposed it to mean &ldquo;presentational Building block&rdquo;, which, once again, for document semantics, can be ignored.</p>
+
+</li>
+
+<li id="comment-84447">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-84447" title="">February 15th, 2007 at 23:54 (GMT-1)</a> </small>
+<p>Thanks a lot for the elaboration, Tantek.</p>
+<p>Your explanation leads me to another question, though.</p>
+<p>Using a &lt;b&gt;-tag means that you&rsquo;re stuck with XHTML 1.0 or lower. It must have been a tough decision to make. I mean, either use an older HTML standard or break validation and have pages with validation errors.</p>
+<p>What&rsquo;s the worst thing to do? <strong>Break validation or use deprecated elements?</strong></p>
+<p>I think that&rsquo;s an interesting question seen in the perspective that Roger Johansson and Peter Paul Koch points out that the recent <a href="http://www.456bereastreet.com/archive/200702/the_dutch_accessibility_law_is_awesome/" title="456 Berea St.: Dutch accessibility law is awesome">Dutch accessibility law</a> actually forbids the use of deprecated elements on government sites.</p>
+<p>What are your opinions on this?</p>
+
+</li>
+
+<li class="alt" id="comment-84461">
+<cite><a href="http://www.webtouch.dk" class="url" rel="external">Sune Jakobsen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-84461" title="">February 16th, 2007 at 00:21 (GMT-1)</a> </small>
+<p>Using the b-tag as a building block tag is a very nice idea, that i haven&rsquo;t thought of let us hope i will be a part of XHTML3.0 in the year. But until W3C defines a building block tag as a part of the standard I strongly recommend using the span tag, as i see no reason to invent a negative semantic tag, sorry!</p>
+<p>Jesper -&gt; The dutch law allows the use of validated HTML 4.01, so the b-tag is an option (i know it&rsquo;s a detail, but allow me to benefit from the hours i spend reading about it :o)</p>
+
+</li>
+
+<li id="comment-84474">
+<cite><a href="http://tantek.com/" class="url" rel="external">Tantek</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-84474" title="">February 16th, 2007 at 01:01 (GMT-1)</a> </small>
+<p>Jesper,</p>
+<p>You asserted &ldquo;you’re stuck with XHTML 1.0 or lower&rdquo; – that&rsquo;s kind of like saying &ldquo;you&rsquo;re stuck with everything that works well today&rdquo;. What precisely is the real world problem you are pointing out?</p>
+<p>How does using XHTML 1.0 break validation or use deprecated elements? W3C for some reason left the purely presentational B tag in XHTML 1.0 Strict <em>without deprecating it</em> (probably for political reasons, I&rsquo;m guessing), so rather than complain about it being there and people misusing it, we declare a new use for it that makes much more sense. And it looks like Sune has answered the other question.</p>
+
+</li>
+
+<li class="alt" id="comment-89202">
+<cite><a href="http://webtouch.dk/runde-hj%c3%b8rner-nu-med-kant/" class="url" rel="external">webtouch.dk » Runde hjørner - nu med kant</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-89202" title="">February 22nd, 2007 at 14:41 (GMT-1)</a> </small>
+<p>[&hellip;] en lille diskussion på justaddwater.dk, hvor jeg har tilladt mig at øffe lidt over man ikke bør bruge bold tags til design, så hænger [&hellip;]</p>
+</li>
+
+<li id="comment-98814">
+<cite>Nikolaj</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-98814" title="">March 8th, 2007 at 09:36 (GMT-1)</a> </small>
+<p>Hi,</p>
+<p>I tried to use the technique described here to create rounded corners.</p>
+<p>I turned out that the code snippets are a bit incomplete, which made me seek the original technorati solution myself.</p>
+<p>One of the more crucial findings was that the following css rule is missing in the snippets:</p>
+<p>b.cn {<br>
+position: absolute;<br>
+&hellip;<br>
+}</p>
+
+</li>
+
+<li class="alt" id="comment-98860">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-98860" title="">March 8th, 2007 at 10:45 (GMT-1)</a> </small>
+<p>@Nikolaj: Thanks a lot for reporting this. I have added the css rule and updated the post with an example page as well.</p>
+</li>
+
+<li id="comment-100334">
+<cite><a href="http://meiert.com/en/" class="url" rel="external">Jens Meiert</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-100334" title="">March 9th, 2007 at 17:58 (GMT-1)</a> </small>
+<p>As long as the affected boxes are not &ldquo;liquid&rdquo; (and I remember that Technorati uses boxes with fix width), you may simply want to use one image for the top section (including corner top-left and top-right) and one image for the bottom section. Both can likely be applied without any markup changes (!). For example: &ldquo;div&rdquo; with a bottom positioned background image and &ldquo;div hn&rdquo; with a background image for that boxes&rsquo; heading.</p>
+<p>That solution is pretty simple (compare it to the above &ldquo;+20 elements, +20 rules for a rounded corner&rdquo;), doesn&rsquo;t necessarily require extra-markup, and works pretty well most of the time (unless the rounded containers are very small and increased font size thus breaks them rather fast, and unless we&rsquo;re talking about completely liquid boxes).</p>
+<p>So well, I highly respect Tantek&rsquo;s and Eric&rsquo;s expertise, but the above technique should not be used. It is general web dev &ldquo;bad practice&rdquo;, and one of the drawbacks will definitely be the increased cost of a later redesign (since you decided to cover over with markup rubbish). Here, the cost of solution is definitely higher than the cost of the problem &hellip;</p>
+
+</li>
+
+<li class="alt" id="comment-100337">
+<cite><a href="http://meiert.com/en/" class="url" rel="external">Jens Meiert</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-100337" title="">March 9th, 2007 at 18:06 (GMT-1)</a> </small>
+<p>Update: I forgot to mention that I even included <a href="http://meiert.com/de/publications/books/3897214229/lib/code/abgerundete-ecken/">Eric&rsquo;s method</a> in my <a href="http://meiert.com/de/publications/books/3897214229/">book</a>, just to present it and to point out its problems. Take a look at the source code, that by the way (and of course intentionally) uses &ldquo;span&rdquo; elements. You surely don&rsquo;t want to do that, and you surely don&rsquo;t want to maintain that by no means.</p>
+</li>
+
+<li id="comment-113052">
+<cite>Nikolaj</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-113052" title="">March 23rd, 2007 at 15:46 (GMT-1)</a> </small>
+<p>Actually your example is still a bit incomplete – at least in my IE6.</p>
+<p>To repair you can append the following to the boxc b.cn rule:</p>
+<p>line-height: 1px;<br>
+font-size: 1px;</p>
+<p>Regards Nikolaj</p>
+
+</li>
+
+<li class="alt" id="comment-231408">
+<cite><a href="http://www.cayne.ws" class="url" rel="external">Thomas Cayne</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-231408" title="">August 12th, 2007 at 05:25 (GMT-1)</a> </small>
+<p>Thanks for your information on rounded corner boxes. I try to implement whatever I find to improve my learning curve. Like many people I want to get away from javascript and graphics as much as possible. However, I doubt anyone can. I found a website that lists as much rounded corner techniques as the author can. It&rsquo;s Smily Cat. I hope this helps. So far I have only tested a few of the websites listed.</p>
+<p>Keep up the good work.</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

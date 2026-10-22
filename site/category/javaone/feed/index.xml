@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>JavaOne on Just Add Water</title>
+		<link>https://justaddwater.dk/category/javaone/</link>
+		<description>Recent content in JavaOne on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 05 Jun 2006 01:26:29 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/javaone/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>JavaOne 2006 daily report: Ehhh daily?</title>
+				<link>https://justaddwater.dk/2006/06/05/javaone-2006-daily-report-ehhh-daily/</link>
+				<pubDate>Mon, 05 Jun 2006 01:26:29 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/05/javaone-2006-daily-report-ehhh-daily/</guid>
+				<description>&lt;p&gt;Ok&amp;hellip; what happened? I was blogging about my trip to JavaOne (&lt;a href=&#34;https://justaddwater.dk/2006/05/14/javaone-2006-daily-report-the-arrival/&#34; title=&#34;Permanent Link to JavaOne 2006 daily report: The arrival&#34;&gt;The arrival&lt;/a&gt;, &lt;a href=&#34;https://justaddwater.dk/2006/05/16/javaone-2006-daily-report-the-waiting/&#34; title=&#34;Permanent Link to JavaOne 2006 daily report: The waiting&#34;&gt;The waiting&lt;/a&gt;, &lt;a href=&#34;https://justaddwater.dk/2006/05/17/javaone-2006-daily-report-day-one/&#34; title=&#34;Permanent Link to JavaOne 2006 daily report: Day One&#34;&gt;Day One&lt;/a&gt;), and then what? No day two or anything. There are many excuses but none of them really matter since this is a blog and here I make the rules. Ok Jesper does as well, and he have been teasing me with the missing posts from JavaOne. Sorry :(&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>JavaOne 2006 daily report: Day One</title>
+				<link>https://justaddwater.dk/2006/05/17/javaone-2006-daily-report-day-one/</link>
+				<pubDate>Wed, 17 May 2006 19:17:03 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/17/javaone-2006-daily-report-day-one/</guid>
+				<description>&lt;p&gt;The day started with a &amp;ldquo;Sun General Session&amp;rdquo; for all conference attendees. If there is one sentence that is worth repeating from this session it must be this one by Rich Green when he is asked by Jonathan Schwartz (President and CEO of Sun) &amp;ldquo;Are you gonna open source Java?&amp;rdquo;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;It isn&amp;rsquo;t a question of whether, but a question of how&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;small&gt;See webcast, segment two, 22:10&lt;/small&gt;&lt;/p&gt;&#xA;&lt;p&gt;The rest of the session was full of news of different Java frameworks, tools, etc. that was going to be open sourced - It is truly a good day for the Open Source community :)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>JavaOne 2006 daily report: The waiting</title>
+				<link>https://justaddwater.dk/2006/05/16/javaone-2006-daily-report-the-waiting/</link>
+				<pubDate>Tue, 16 May 2006 22:22:04 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/16/javaone-2006-daily-report-the-waiting/</guid>
+				<description>&lt;p&gt;It is now Thursday morning - The day where the big JavaOne convention starts. For the last couple of days we have been playing tourists in the beautiful hills of San Francisco.&lt;/p&gt;&#xA;&lt;p&gt;Sunday we went around the town looking at the harbor area and tried the famous San Francisco Cable Cars. We also stumbled upon the famous &lt;a href=&#34;http://en.wikipedia.org/wiki/Lombard_Street,_San_Francisco&#34; title=&#34;Wikipedia: Lombard Street (San Francisco)&#34;&gt;Lombard Street&lt;/a&gt; that I know best from the movie Bullitt&amp;rsquo;s (1968) now very famous car chase, the progenitor of all subsequent movie car chases.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>JavaOne 2006 daily report: The arrival</title>
+				<link>https://justaddwater.dk/2006/05/14/javaone-2006-daily-report-the-arrival/</link>
+				<pubDate>Sun, 14 May 2006 07:18:02 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/14/javaone-2006-daily-report-the-arrival/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://java.sun.com/javaone/sf/&#34; title=&#34;JavaOne 2006 Conference Homepage&#34;&gt;JavaOne&lt;/a&gt; is the biggest Java convention in the world held once a year in USA. Five of my colleagues and me from Capgemini have taken the long trip from Denmark to San Francisco in California (19 hours!). My plan is to give you daily updates on all the interesting sessions I’m attending. I’m especially looking forward to hearing the following:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=279401&amp;amp;ilocation_id=124-1&amp;amp;ilanguage=english&#34;&gt;Beyond AJAX: Asynchronous JavaScript ™ Technology and XML Native Processing&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=277639&amp;amp;ilocation_id=124-1&amp;amp;ilanguage=english&#34;&gt;Corporate Cola: Visualizing Your Email&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=278170&amp;amp;ilocation_id=124-1&amp;amp;ilanguage=english&#34;&gt;Stronger Than AJAX: Swing in a Server-Side Web Architecture&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=277251&amp;amp;ilocation_id=124-1&amp;amp;ilanguage=english&#34;&gt;Extreme Web Caching&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=277372&amp;amp;ilocation_id=124-1&amp;amp;ilanguage=english&#34;&gt;Java™ Technology, AJAX, Web 2.0 and SOA&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www28.cplan.com/javaone06_cv_124_1/session_details.jsp?isid=278161&amp;amp;ilocation_id=124-1&amp;amp;ilanguage=english&#34;&gt;Evolving JavaServer™ Faces Technology: AJAX Done Right&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve put &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2006/05/schedule.html&#34; title=&#34;JavaOne 2006 Session Schedule for Thomas Watson Steen&#34;&gt;my whole session schedule&lt;/a&gt; online, but keep in mind that this is just resevations I made from home, so I might skip some of them or join other sessions.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>JavaOne 2006 Blogger Meetup</title>
+				<link>https://justaddwater.dk/2006/05/09/javaone-2006-blogger-meetup/</link>
+				<pubDate>Tue, 09 May 2006 11:23:28 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/09/javaone-2006-blogger-meetup/</guid>
+				<description>&lt;p&gt;Are you going to JavaOne in San Francisco this year? I&amp;rsquo;m attending with 6 of my coworkers flying over on Saturday. I just wanted to let you know about a blogger meetup arranged by SunMink (beer included!). &lt;a href=&#34;http://blogs.sun.com/roller/page/webmink?entry=register_now_for_javaone_blogger&#34; title=&#34;SunMink: Register Now for JavaOne Blogger Beer&#34;&gt;See his post&lt;/a&gt; for more details and &lt;a href=&#34;http://javabloggers.gobof.org/&#34; title=&#34;Sign up for the JavaOne blogger meetup&#34;&gt;sign up here&lt;/a&gt; (only name and e-mail address required).&lt;/p&gt;&#xA;&lt;p&gt;- See you at JavaOne :)&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

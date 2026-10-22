@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Jaiku on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/jaiku/</link>
+		<description>Recent content in Jaiku on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 28 Jan 2009 15:33:44 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/jaiku/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Human Time Format Gone Wrong</title>
+				<link>https://justaddwater.dk/2009/01/28/human-time-format-gone-wrong/</link>
+				<pubDate>Wed, 28 Jan 2009 15:33:44 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/01/28/human-time-format-gone-wrong/</guid>
+				<description>&lt;p&gt;In general it&amp;rsquo;s good to use the human time formats (1 hour ago, 2 months ago, etc.) that you see in many of the new web applications. In general, the detail level is up the shorter the time span.&lt;/p&gt;&#xA;&lt;p&gt;Of course it requires that the algorithm be correct. Look at this example from &lt;a href=&#34;http://joakimtrolle.jaiku.com/presence/47914612&#34;&gt;Jaiku&lt;/a&gt; on what not to do:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2009/01/jaiku-wrong-calculation-of-time-28-01-2009-15-20-57.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2009/01/jaiku-wrong-calculation-of-time-thumb-28-01-2009-15-20-57.png&#34; alt=&#34;&#34; title=&#34;jaiku-wrong-calculation-of-time-thumb-28-01-2009-15-20-57&#34; class=&#34;alignnone size-full wp-image-1019&#34; height=&#34;200&#34; width=&#34;373&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

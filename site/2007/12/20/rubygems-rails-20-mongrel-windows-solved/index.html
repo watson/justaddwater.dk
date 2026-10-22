@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rubygems: Rails 2.0, Mongrel, Windows, solved · justaddwater.dk</title>
+<meta name="description" content="Now is the time to revoke the install warning Rails 2.0, gem install, Windows =&gt; Mongrel Trouble I wrote about December 9th as Rails 2.0 was released. …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/12/19/50-reasons-why-it-wont-work/" rel="prev">50 Reasons Why It Won’t Work</a></div>
+<div class="alignright"><a href="/2007/12/21/map-with-positions-in-css/" rel="next">Usability of Map With Positions in CSS</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-12-20"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Ruby on Rails"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Now is the time to revoke the install warning Rails 2.0, gem install, Windows =&gt; Mongrel Trouble I wrote about December 9th as Rails 2.0 was released. Rubygems 1.0 was released 10 hours ago and solves the Win32 problems mentioned in the previous post. So for now, back to: &gt; gem update –system &gt; gem [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Dec 20"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="6"></span>
+<h2 data-pagefind-meta="title">Rubygems: Rails 2.0, Mongrel, Windows, solved</h2>
+<div class="entry">
+<p>Now is the time to revoke the install warning <a href="/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/" title="Permanent Link to Rails 2.0, gem install, Windows =&gt; Mongrel Trouble">Rails 2.0, gem install, Windows =&gt; Mongrel Trouble</a> I wrote about December 9th as Rails 2.0 was released.</p>
+<p>Rubygems 1.0 was released 10 hours ago and solves the Win32 problems mentioned in the previous post.</p>
+<p>So for now, back to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> gem update <span style="color:#f92672">--</span>system
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> gem update rails
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> gem update mongrel
+</span></span></code></pre></div><p>And everything works for me. Note that for now, there still is a problem with mongrel_service (will probably be fixed in next version). Luis Lavena describes a workaround in his updated article.</p>
+<p>Related info:</p>
+<ul>
+<li>Justaddwater.dk: <a href="/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/" title="Permanent Link to Rails 2.0, gem install, Windows =&gt; Mongrel Trouble">Rails 2.0, gem install, Windows =&gt; Mongrel Trouble</a></li>
+<li>Eric Hodel: <a href="http://blog.segment7.net/articles/2007/12/20/rubygems-1-0-0">RubyGems 1.0.0</a></li>
+<li>Luis Lavena:<a href="http://blog.mmediasys.com/2007/12/19/latest-rubygems-and-rails-is-a-deadly-combo/" title="Enlace Permanente a Latest RubyGems and Rails is a deadly combo">Latest RubyGems and Rails is a deadly combo</a></li>
+</ul>
+
+
+<p><small>Technorati Tags: <a href="/tag/ruby/" rel="tag">ruby</a>, <a href="/tag/rails/" rel="tag">rails</a>, mongrel, <a href="/tag/rubygems/" rel="tag">rubygems</a>, copenhagenrb, rails2.0</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, December 20th, 2007 at 21:13 (GMT-1) and is filed under <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">6 Responses to &#8220;Rubygems: Rails 2.0, Mongrel, Windows, solved&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-384836">
+<cite><a href="http://justaddwater.dk/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/" class="url" rel="external">justaddwater.dk | Rails 2.0, gem install, Windows =&gt; Mongrel Trouble</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-384836" title="">December 20th, 2007 at 21:15 (GMT-1)</a> </small>
+<p>[&hellip;] UPDATE December 20th: Problems are history with new Rubygems 1.0 release. See: Rubygems: Rails 2.0, Mongrel, Windows, solved. [&hellip;]</p>
+</li>
+
+<li id="comment-384997">
+<cite><a href="http://www.johanenmarjan.nl" class="url" rel="external">johan</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-384997" title="">December 21st, 2007 at 22:23 (GMT-1)</a> </small>
+<p>I think you mean: gem update &ndash; system</p>
+<p>regards, johan</p>
+
+</li>
+
+<li class="alt" id="comment-385010">
+<cite>Geoff</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-385010" title="">December 21st, 2007 at 23:42 (GMT-1)</a> </small>
+<p>1.0.1 is out and fixes a few snags.</p>
+<p><a href="http://blog.segment7.net/articles/2007/12/20/rubygems-1-0-1">http://blog.segment7.net/articles/2007/12/20/rubygems-1-0-1</a></p>
+
+</li>
+
+<li id="comment-402692">
+<cite><a href="http://www.metaspring.com" class="url" rel="external">MetaSpring</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-402692" title="">March 17th, 2008 at 04:03 (GMT-1)</a> </small>
+<p>Thanks for the info. Now someone just needs to write a windows fix for backgroundrb.</p>
+</li>
+
+<li class="alt" id="comment-419266">
+<cite>Satish</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-419266" title="">May 20th, 2008 at 11:26 (GMT-1)</a> </small>
+<p>Hi All,</p>
+<p>I have heard lot about Ruby on Rails 2.0 and I want to get some information of it.<br>
+If any of you help me start learning it, would be great help to me.<br>
+I need to know installation guide on Windows XP and some free e books for Ruby on Rails 2.0</p>
+<p>Thanking you</p>
+
+</li>
+
+<li id="comment-426632">
+<cite><a href="http://blog.emson.co.uk/2008/06/an-almost-fix-for-creating-rubygems-on-windows/" class="url" rel="external">Ben</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-426632" title="">June 27th, 2008 at 11:26 (GMT-1)</a> </small>
+<p>Like the site,<br>
+I&rsquo;ve written an article on creating your own RubyGems on a Windows PC.<br>
+I hope you find it useful:</p>
+<p><a href="http://blog.emson.co.uk/2008/06/an-almost-fix-for-creating-rubygems-on-windows/">http://blog.emson.co.uk/2008/06/an-almost-fix-for-creating-rubygems-on-windows/</a></p>
+<p>Enjoy,<br>
+Ben&hellip;</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

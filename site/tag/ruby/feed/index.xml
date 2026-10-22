@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ruby on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/ruby/</link>
+		<description>Recent content in Ruby on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 13 Dec 2015 21:20:01 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/ruby/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ruby make list minimum length</title>
+				<link>https://justaddwater.dk/2015/12/13/ruby-make-list-minimum-length/</link>
+				<pubDate>Sun, 13 Dec 2015 21:20:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2015/12/13/ruby-make-list-minimum-length/</guid>
+				<description>&lt;p&gt;In a Ruby on Rails app, I wanted a list to be at least of two items. This could be done in several ways.&lt;/p&gt;&#xA;&lt;p&gt;Here is a first naïve impementation:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;# Naïve implementation, just return whatever number I need&#xA;def sum_up_a(existing)&#xA;  return 2 if existing == 0&#xA;  return 1 if existing == 1&#xA;  return 0&#xA;end&#xA;&#xA;sum_up_a(0)   # =&amp;gt; 2&#xA;sum_up_a(1)   # =&amp;gt; 1&#xA;sum_up_a(2)   # =&amp;gt; 0&#xA;sum_up_a(3)   # =&amp;gt; 0&#xA;sum_up_a(10)  # =&amp;gt; 0&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;A slightly improved version could investigate number of existing, and return the diff only if needed:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Seeding Rails App With RESTful Address Data</title>
+				<link>https://justaddwater.dk/2010/04/28/seeding-rails-app-with-restful-address-data/</link>
+				<pubDate>Wed, 28 Apr 2010 11:55:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/28/seeding-rails-app-with-restful-address-data/</guid>
+				<description>&lt;p&gt;Grabbing data from Restful webservices has never been easier. I use this code in the Rails /db/seeds.rb file to grab data from the Danish webservice with addresses, municipalities, regions, etc.&lt;/p&gt;&#xA;&lt;p&gt;I decided to import the data into a local database to ensure it could work offline.&lt;/p&gt;&#xA;&lt;p&gt;Code from &lt;code&gt;/db/seeds.rb&lt;/code&gt; file:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gist.github.com/382105&#34;&gt;View gist 382105 on GitHub&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now I can access municipalities in a grouped selectbox like so in the view code:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Extract HTML Structure From Page With Simple Script</title>
+				<link>https://justaddwater.dk/2009/10/05/tiny-script-to-extract-html-structure-from-page/</link>
+				<pubDate>Mon, 05 Oct 2009 13:00:41 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/10/05/tiny-script-to-extract-html-structure-from-page/</guid>
+				<description>&lt;p&gt;I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It&amp;rsquo;s pretty straight-forward from scratch.&lt;/p&gt;&#xA;&lt;p&gt;To follow the Don&amp;rsquo;t Repeat Yourself principle, I created a script to make it a one-liner. Just run &lt;code&gt;ruby parsepage.rb [url] [css_selector]&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Feel free to use and modify the code (which i put on GitHub so you can fork and pull from it): &lt;a href=&#34;http://gist.github.com/199558&#34;&gt;http://gist.github.com/199558&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

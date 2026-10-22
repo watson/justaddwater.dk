@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Project on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/project/</link>
+		<description>Recent content in Project on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 18 Aug 2008 10:50:25 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/project/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Introducing Tiny JavaScript Number Formatter</title>
+				<link>https://justaddwater.dk/2008/08/18/introducing-tiny-javascript-number-formatter/</link>
+				<pubDate>Mon, 18 Aug 2008 10:50:25 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/08/18/introducing-tiny-javascript-number-formatter/</guid>
+				<description>&lt;p&gt;For a current project, I created a tiny number formatter that inserts thousand delimiters in a string:&lt;/p&gt;&#xA;&lt;p&gt;10000 to 10,000 etc.&lt;/p&gt;&#xA;&lt;p&gt;Just add css class=&amp;ldquo;numberformat currency&amp;rdquo; to a text field, and it will be formatted automatically.&lt;/p&gt;&#xA;&lt;p&gt;It is based on the &lt;a href=&#34;http://prototypejs.org&#34;&gt;Prototype JavaScript library&lt;/a&gt;. You can get it from it&amp;rsquo;s GitHub repository page. Feel free to add or alter the functionality. Releasing under Creative Commons license.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://creativecommons.org/licenses/by-sa/3.0/&#34;&gt;&lt;img src=&#34;http://i.creativecommons.org/l/by-sa/3.0/88x31.png&#34; alt=&#34;Creative Commons License&#34;&gt;&#xA;&lt;/a&gt;&lt;br&gt;&#xA;This work is licensed under a &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/3.0/&#34;&gt;Creative Commons Attribution-Share Alike 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

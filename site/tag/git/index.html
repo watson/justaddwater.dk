@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Git · justaddwater.dk</title>
+<meta name="description" content="Usability, web development and blogging, 2005–2016. An archive.">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="home-bg">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="narrowcolumn">
+
+<h2 class="pagetitle">Posts Tagged &#8216;Git&#8217;</h2>
+<div class="navigation">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>
+
+<div class="post">
+	<h3 id="post-1658"><a href="/2012/11/09/git-checkout-old-revisions-by-date/" rel="bookmark" title="Permanent Link to Git checkout old revisions by date">Git checkout old revisions by date</a></h3>
+	<small>Friday, November 9th, 2012 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>I wanted to do some code stats for a repository. This line checks out old revisions by date and shows code stats: `git checkout `git rev-list -n 1 –before=”2012-03-01” master` ` Then, I ran cloc to count lines of code: `cloc . ` Its really easy to register the point in time as a git [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/git/" rel="tag">git</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a> | <span>Comments Off<span class="screen-reader-text"> on Git checkout old revisions by date</span></span></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1587"><a href="/2012/06/28/forgotten-subversion-commands-undo-merge-branches-and-more/" rel="bookmark" title="Permanent Link to Forgotten Subversion Commands, Undo, Merge Branches and More">Forgotten Subversion Commands, Undo, Merge Branches and More</a></h3>
+	<small>Thursday, June 28th, 2012 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>In a current project I use a lot of Subversion (svn) from the command-line. Subversion recently has lost terrain to Git for several reasons. But actually, svn is capable of doing many of the things I love from Git. Here are some less known commands I find extremely helpful. Undo last commit svn merge -r HEAD:PREV . This commands [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/code/" rel="tag">Code</a>, <a href="/tag/git/" rel="tag">git</a>, <a href="/tag/subversion/" rel="tag">subversion</a>, <a href="/tag/svn/" rel="tag">svn</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/web-development/" rel="category tag">Web Development</a> | <span>Comments Off<span class="screen-reader-text"> on Forgotten Subversion Commands, Undo, Merge Branches and More</span></span></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1520"><a href="/2011/09/30/collection-of-useful-git-tips-to-get-started/" rel="bookmark" title="Permanent Link to Collection of useful Git Tips to get started">Collection of useful Git Tips to get started</a></h3>
+	<small>Friday, September 30th, 2011 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>I thought it was time to collect some of my most useful findings when working with Git. These are typically from situations where I found a useful way, which I wanted to jot down. Also I have answered and asked some questions on StackOverflow. The good thing about it, is that I am always able [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/git/" rel="tag">git</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a> | <a href="/2011/09/30/collection-of-useful-git-tips-to-get-started/#comments">4 Comments &#187;</a></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1247"><a href="/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/" rel="bookmark" title="Permanent Link to How to make Git ignore files that already exist in your project">How to make Git ignore files that already exist in your project</a></h3>
+	<small>Monday, December 7th, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>For a project I’m working on, I had to change some files with personal settings, and the files kept showing up with a `git status`. Adding files to .gitignore that are already tracked does not work. (and it’s actually pretty well documented in the documentation). In stead, it’s possible to use this command: git update-index –assume-unchanged [filename(s)] From [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/code/" rel="tag">Code</a>, <a href="/tag/git/" rel="tag">git</a>, <a href="/tag/ignore/" rel="tag">ignore</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a>, <a href="/category/web-development/" rel="category tag">Web Development</a> | <a href="/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/#comments">5 Comments &#187;</a></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1161"><a href="/2009/09/30/spoken-git-commit-log-%E2%80%94-another-annoyance-at-the-office/" rel="bookmark" title="Permanent Link to Spoken Git Commit Log — Another Annoyance at the Office">Spoken Git Commit Log — Another Annoyance at the Office</a></h3>
+	<small>Wednesday, September 30th, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>Here is a short one-liner that really annoyed my colleagues today. I set my mac to read aloud all changes in the repository since yesterday: ` git log –pretty=format:”%an commit %s, %ad.” –date=relative –since=yesterday |say ` if you remove the “say” command in the end it’s actually pretty readable: `pagerbak commit VA17, 34 minutes ago. [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/code/" rel="tag">Code</a>, <a href="/tag/git/" rel="tag">git</a>, <a href="/tag/humor/" rel="tag">Humor</a>, <a href="/tag/logging/" rel="tag">logging</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a>, <a href="/category/humor/" rel="category tag">Humor</a>, <a href="/category/web-development/" rel="category tag">Web Development</a> | <a href="/2009/09/30/spoken-git-commit-log-%E2%80%94-another-annoyance-at-the-office/#comments">1 Comment &#187;</a></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1117"><a href="/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/" rel="bookmark" title="Permanent Link to How to add Git Pull Shortcut to Different Github Branches">How to add Git Pull Shortcut to Different Github Branches</a></h3>
+	<small>Sunday, August 23rd, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>UPDATE 9 hours later: Changed to “remote = origin” to the specific branch “remote = dean” which works! Short explanation on how to pull changes from different Git repositories into your local Git repository. Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/code/" rel="tag">Code</a>, <a href="/tag/git/" rel="tag">git</a>, <a href="/tag/github/" rel="tag">github</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a>, <a href="/category/web-development/" rel="category tag">Web Development</a> | <span>Comments Off<span class="screen-reader-text"> on How to add Git Pull Shortcut to Different Github Branches</span></span></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1104"><a href="/2009/07/08/importing-existing-git-repository-into-svn/" rel="bookmark" title="Permanent Link to Importing Existing Git repository into SVN">Importing Existing Git repository into SVN</a></h3>
+	<small>Wednesday, July 8th, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>Many of my colleagues know svn but are in general not (yet) ready jump over to using Git for bigger projects. Today I had to import my existing Git repository into SVN. I had been working locally with a Git repos and wanted to keep my history before giving access to my colleagues. The guide [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/code/" rel="tag">Code</a>, <a href="/tag/git/" rel="tag">git</a>, <a href="/tag/subversion/" rel="tag">subversion</a>, <a href="/tag/svn/" rel="tag">svn</a>, <a href="/tag/web-development/" rel="tag">Web Development</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a> | <a href="/2009/07/08/importing-existing-git-repository-into-svn/#comments">7 Comments &#187;</a></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1038"><a href="/2009/03/09/using-git-for-svn-repositories-workflow/" rel="bookmark" title="Permanent Link to Using Git for SVN Repositories Workflow">Using Git for SVN Repositories Workflow</a></h3>
+	<small>Monday, March 9th, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>For the last months I have been using Git to work with my Subversion repositories. Besides from reducing disk usage, Git also makes my work slightly faster and independent of network access — I can make commits to repository which is sync’ed later when I get online. One challenge though: Using branches I ran into [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/git/" rel="tag">git</a>, <a href="/tag/svn/" rel="tag">svn</a>, <a href="/tag/workflow/" rel="tag">workflow</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a> | <a href="/2009/03/09/using-git-for-svn-repositories-workflow/#comments">8 Comments &#187;</a></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1029"><a href="/2009/02/21/using-local-file-based-git-server-laziness/" rel="bookmark" title="Permanent Link to Using Local File-based Git — Server Laziness">Using Local File-based Git — Server Laziness</a></h3>
+	<small>Saturday, February 21st, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup: Each developer’s machine has it’s own Git repository. On my machine [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/code/" rel="tag">Code</a>, <a href="/tag/git/" rel="tag">git</a>, <a href="/tag/ssh/" rel="tag">ssh</a>, <a href="/tag/svn/" rel="tag">svn</a>, <a href="/tag/web-development/" rel="tag">Web Development</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/justaddwater.dk/" rel="category tag">justaddwater.dk</a>, <a href="/category/web-development/" rel="category tag">Web Development</a> | <span>Comments Off<span class="screen-reader-text"> on Using Local File-based Git -- Server Laziness</span></span></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1014"><a href="/2009/01/17/git-side-benefit-reducing-disk-usage/" rel="bookmark" title="Permanent Link to Git Side Benefit: Reducing Disk Usage">Git Side Benefit: Reducing Disk Usage</a></h3>
+	<small>Saturday, January 17th, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed. I created two checkouts of a svn project — one using traditional svn and one using git (which can actually clone a svn repos — see explanation [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/code/" rel="tag">Code</a>, <a href="/tag/git/" rel="tag">git</a>, <a href="/tag/gitify/" rel="tag">gitify</a>, <a href="/tag/svn/" rel="tag">svn</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a> | <a href="/2009/01/17/git-side-benefit-reducing-disk-usage/#comments">5 Comments &#187;</a></p>
+</div>
+
+
+<div class="navigation">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>
+
+</div>
+<div id="sidebar"><ul>
+<li id="search-2" class="widget widget_search"><form method="get" id="searchform" action="/search/">
+<div><input type="text" value="" name="q" id="s">
+<input type="submit" id="searchsubmit" value="Search">
+</div>
+</form>
+</li>
+<li id="text-1" class="widget widget_text"><h2 class="widgettitle">Authors</h2>
+<div class="textwidget"><p>This blog is written by Jesper R&oslash;nn-Jensen from NineConsult and Thomas Watson Steen from 3dbyggeri danmark.</p>
+<p><a href="/about-the-authors/">About the authors</a></p></div>
+</li>
+<li id="text-2" class="widget widget_text"><h2 class="widgettitle">Subscribe to this Blog</h2>
+<div class="textwidget"><p>
+Subscribe <a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=520581">by e-mail</a> or get our feed directly to your feed reader:
+</p>
+<p style="text-align: center">
+<a href="/feed/" title="Subscribe to our feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"></a>
+</p></div>
+</li>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+<ul>
+<li class="page_item page-item-93"><a href="/contact-us/">Contact us</a></li>
+<li class="page_item page-item-57"><a href="/blogtools/">Justaddwater.dk tools page</a></li>
+<li class="page_item page-item-235"><a href="/wordpress-plugins/">WordPress Plugins</a></li>
+<li class="page_item page-item-388"><a href="/passionate-users-printing/">Creating Passionate Users website printing problems solved in CSS</a></li>
+<li class="page_item page-item-276"><a href="/notes-elements-of-user-experience/">Jesper&#8217;s Notes, &quot;Elements of User Experience&quot;</a></li>
+</ul>
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

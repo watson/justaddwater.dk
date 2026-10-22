@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fixed Strange Hudson Slave OutOfMemoryError · justaddwater.dk</title>
+<meta name="description" content="At a current project I am working on, we use Hudson and Maven to build our Java code. Strangely, one of the slaves constantly failed with an OutOfMemory error. …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/" rel="prev">GWT relevant snippets for IntelliJ Idea editor</a></div>
+<div class="alignright"><a href="/2010/11/22/rapid-prototyping-with-a-piece-of-wood/" rel="next">Rapid Prototyping With a Piece of Wood</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2010-11-12"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2010"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Continous integration"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Java"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="At a current project I am working on, we use Hudson and Maven to build our Java code. Strangely, one of the slaves constantly failed with an OutOfMemory error. We tried two obvious fixes. The first did not work: Not working strategy: To append memory params on the job itself. We modified the job inside [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Nov 12"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="2"></span>
+<h2 data-pagefind-meta="title">Fixed Strange Hudson Slave OutOfMemoryError</h2>
+<div class="entry">
+<p>At a current project I am working on, we use Hudson and Maven to build our Java code. Strangely, one of the slaves constantly failed with an OutOfMemory error. We tried two obvious fixes. The first did not work:</p>
+<p>Not working strategy: To append memory params on the job itself. We modified the job inside Hudson configuration and added <code>-Xmx512m -XX:MaxPermSize=256m</code> to the MAVEN_OPTS field in the &ldquo;build&rdquo; section of the job configuration.</p>
+<p><a href="/wp-content/uploads/2010/11/mavensettings-for-hudson-slave-job.png"><img src="/wp-content/uploads/2010/11/mavensettings-for-hudson-slave-job-300x161.png" alt="" title="mavensettings-for-hudson-slave-job" class="alignright size-medium wp-image-1374" height="161" width="300" srcset="/wp-content/uploads/2010/11/mavensettings-for-hudson-slave-job-300x161.png 300w, /wp-content/uploads/2010/11/mavensettings-for-hudson-slave-job.png 561w" sizes="(max-width: 300px) 100vw, 300px">
+</a></p>
+<p>Unfortunately this did not work. Still an OutOfMemoryError on the Hudson slave. Fortunately, another strategy actually worked: To modify the settings of the slave service/daemon itself.</p>
+<p>So appending memory params to the <code>hudson-slave.xml</code>. Locate the xml section <code>service=&gt;arguments</code>. Add the following code.<br>
+From:</p>
+<blockquote>
+<p>&lt;executable&gt;C:\Program Files\Java\jre6\bin\java.exe&lt;/executable&gt;</p>
+<p>&lt;arguments&gt;<br>
+-Xrs -jar &ldquo;%BASE%\slave.jar&rdquo;<br>
+-jnlpUrl http://hudsonMaster:8080/hudson/computer/JesperRonn/slave-agent.jnlp<br>
+&lt;/arguments&gt;</p>
+</blockquote>
+<p>To:</p>
+<blockquote>
+<p>&lt;executable&gt;C:\Program Files\Java\jre6\bin\java.exe&lt;/executable&gt;</p>
+<p>&lt;arguments&gt;<br>
+<strong>-Xmx512m -XX:MaxPermSize=256m</strong><br>
+-Xrs -jar &ldquo;%BASE%\slave.jar&rdquo;<br>
+-jnlpUrl http://hudsonMaster:8080/hudson/computer/JesperRonn/slave-agent.jnlp<br>
+&lt;/arguments&gt;</p>
+</blockquote>
+<p>That actually solved the problem. Remember to restart the hudson slave service/daemon<br>
+append. For reference, here is the <a href="http://justaddwater.dk/wp-content/uploads/2010/11/hudson-slave-example.xml_.txt">hudson-slave-example.xml</a>.</p>
+<p>Full stacktrace from the original error:</p>
+<blockquote>
+<p><br>
+<code>Exception:</code><br>
+<code>Stacktrace:</code><br>
+<code>org.apache.commons.jelly.JellyTagException: jar:file:/C:/deployer/hudson/war/WEB-INF/lib/hudson-core-1.382.jar!/hudson/model/Run/console.jelly:67:27: Java heap space</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.handleException(TagScript.java:728)</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:290)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:76)</code><br>
+<code>at org.apache.commons.jelly.TagSupport.invokeBody(TagSupport.java:161)</code><br>
+<code>at org.apache.commons.jelly.tags.core.OtherwiseTag.doTag(OtherwiseTag.java:41)</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:270)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.apache.commons.jelly.TagSupport.invokeBody(TagSupport.java:161)</code><br>
+<code>at org.apache.commons.jelly.tags.core.ChooseTag.doTag(ChooseTag.java:38)</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:270)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.kohsuke.stapler.jelly.CallTagLibScript$1.run(CallTagLibScript.java:75)</code><br>
+<code>at org.apache.commons.jelly.tags.define.InvokeBodyTag.doTag(InvokeBodyTag.java:91)</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:270)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.apache.commons.jelly.tags.core.CoreTagLibrary$1.run(CoreTagLibrary.java:98)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.apache.commons.jelly.tags.core.CoreTagLibrary$2.run(CoreTagLibrary.java:105)</code><br>
+<code>at org.kohsuke.stapler.jelly.CallTagLibScript.run(CallTagLibScript.java:96)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.kohsuke.stapler.jelly.CallTagLibScript$1.run(CallTagLibScript.java:75)</code><br>
+<code>at org.apache.commons.jelly.tags.define.InvokeBodyTag.doTag(InvokeBodyTag.java:91)</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:270)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:76)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:76)</code><br>
+<code>at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:76)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:76)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:76)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.apache.commons.jelly.tags.core.CoreTagLibrary$2.run(CoreTagLibrary.java:105)</code><br>
+<code>at org.kohsuke.stapler.jelly.CallTagLibScript.run(CallTagLibScript.java:96)</code><br>
+<code>at org.kohsuke.stapler.jelly.CompressTag.doTag(CompressTag.java:21)</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:270)</code><br>
+<code>at org.kohsuke.stapler.jelly.JellyViewScript.run(JellyViewScript.java:40)</code><br>
+<code>at org.kohsuke.stapler.jelly.DefaultScriptInvoker.invokeScript(DefaultScriptInvoker.java:40)</code><br>
+<code>at org.kohsuke.stapler.jelly.DefaultScriptInvoker.invokeScript(DefaultScriptInvoker.java:30)</code><br>
+<code>at org.kohsuke.stapler.jelly.JellyFacet$1.dispatch(JellyFacet.java:67)</code><br>
+<code>at org.kohsuke.stapler.Stapler.invoke(Stapler.java:537)</code><br>
+<code>at org.kohsuke.stapler.MetaClass$13.dispatch(MetaClass.java:359)</code><br>
+<code>at org.kohsuke.stapler.Stapler.invoke(Stapler.java:537)</code><br>
+<code>at org.kohsuke.stapler.MetaClass$7.doDispatch(MetaClass.java:219)</code><br>
+<code>at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:30)</code><br>
+<code>at org.kohsuke.stapler.Stapler.invoke(Stapler.java:537)</code><br>
+<code>at org.kohsuke.stapler.Stapler.invoke(Stapler.java:453)</code><br>
+<code>at org.kohsuke.stapler.Stapler.service(Stapler.java:135)</code><br>
+<code>at javax.servlet.http.HttpServlet.service(HttpServlet.java:45)</code><br>
+<code>at winstone.ServletConfiguration.execute(ServletConfiguration.java:249)</code><br>
+<code>at winstone.RequestDispatcher.forward(RequestDispatcher.java:335)</code><br>
+<code>at winstone.RequestDispatcher.doFilter(RequestDispatcher.java:378)</code><br>
+<code>at hudson.util.PluginServletFilter$1.doFilter(PluginServletFilter.java:94)</code><br>
+<code>at hudson.util.PluginServletFilter.doFilter(PluginServletFilter.java:86)</code><br>
+<code>at winstone.FilterConfiguration.execute(FilterConfiguration.java:195)</code><br>
+<code>at winstone.RequestDispatcher.doFilter(RequestDispatcher.java:368)</code><br>
+<code>at hudson.security.csrf.CrumbFilter.doFilter(CrumbFilter.java:47)</code><br>
+<code>at winstone.FilterConfiguration.execute(FilterConfiguration.java:195)</code><br>
+<code>at winstone.RequestDispatcher.doFilter(RequestDispatcher.java:368)</code><br>
+<code>at hudson.security.ChainedServletFilter$1.doFilter(ChainedServletFilter.java:84)</code><br>
+<code>at hudson.security.ChainedServletFilter.doFilter(ChainedServletFilter.java:76)</code><br>
+<code>at hudson.security.HudsonFilter.doFilter(HudsonFilter.java:164)</code><br>
+<code>at winstone.FilterConfiguration.execute(FilterConfiguration.java:195)</code><br>
+<code>at winstone.RequestDispatcher.doFilter(RequestDispatcher.java:368)</code><br>
+<code>at winstone.RequestDispatcher.forward(RequestDispatcher.java:333)</code><br>
+<code>at winstone.RequestHandlerThread.processRequest(RequestHandlerThread.java:244)</code><br>
+<code>at winstone.RequestHandlerThread.run(RequestHandlerThread.java:150)</code><br>
+<code>at java.lang.Thread.run(Unknown Source)</code><br>
+<code>Caused by: java.lang.OutOfMemoryError: Java heap space</code><br>
+<code>at hudson.console.ConsoleNote.readFrom(ConsoleNote.java:220)</code><br>
+<code>at hudson.console.ConsoleAnnotationOutputStream.eol(ConsoleAnnotationOutputStream.java:109)</code><br>
+<code>at hudson.console.LineTransformationOutputStream.eol(LineTransformationOutputStream.java:60)</code><br>
+<code>at hudson.console.LineTransformationOutputStream.write(LineTransformationOutputStream.java:56)</code><br>
+<code>at hudson.console.LineTransformationOutputStream.write(LineTransformationOutputStream.java:74)</code><br>
+<code>at org.apache.commons.io.output.ProxyOutputStream.write(ProxyOutputStream.java:70)</code><br>
+<code>at org.apache.commons.io.output.CountingOutputStream.write(CountingOutputStream.java:71)</code><br>
+<code>at org.kohsuke.stapler.framework.io.LargeText.writeLogTo(LargeText.java:145)</code><br>
+<code>at hudson.console.AnnotatedLargeText.writeHtmlTo(AnnotatedLargeText.java:154)</code><br>
+<code>at hudson.model.Run.writeLogTo(Run.java:1038)</code><br>
+<code>at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</code><br>
+<code>at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)</code><br>
+<code>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)</code><br>
+<code>at java.lang.reflect.Method.invoke(Unknown Source)</code><br>
+<code>at org.apache.commons.jexl.util.introspection.UberspectImpl$VelMethodImpl.invoke(UberspectImpl.java:258)</code><br>
+<code>at org.apache.commons.jexl.parser.ASTMethod.execute(ASTMethod.java:104)</code><br>
+<code>at org.apache.commons.jexl.parser.ASTReference.execute(ASTReference.java:83)</code><br>
+<code>at org.apache.commons.jexl.parser.ASTReference.value(ASTReference.java:57)</code><br>
+<code>at org.apache.commons.jexl.parser.ASTReferenceExpression.value(ASTReferenceExpression.java:51)</code><br>
+<code>at org.apache.commons.jexl.ExpressionImpl.evaluate(ExpressionImpl.java:80)</code><br>
+<code>at hudson.ExpressionFactory2$JexlExpression.evaluate(ExpressionFactory2.java:72)</code><br>
+<code>at org.apache.commons.jelly.impl.ExpressionScript.run(ExpressionScript.java:66)</code><br>
+<code>at org.apache.commons.jelly.TagSupport.invokeBody(TagSupport.java:161)</code><br>
+<code>at org.apache.commons.jelly.tags.core.WhitespaceTag.doTag(WhitespaceTag.java:48)</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:270)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.kohsuke.stapler.jelly.ReallyStaticTagLibrary$1.run(ReallyStaticTagLibrary.java:76)</code><br>
+<code>at org.apache.commons.jelly.TagSupport.invokeBody(TagSupport.java:161)</code><br>
+<code>at org.apache.commons.jelly.tags.core.OtherwiseTag.doTag(OtherwiseTag.java:41)</code><br>
+<code>at org.apache.commons.jelly.impl.TagScript.run(TagScript.java:270)</code><br>
+<code>at org.apache.commons.jelly.impl.ScriptBlock.run(ScriptBlock.java:95)</code><br>
+<code>at org.apache.commons.jelly.TagSupport.invokeBody(TagSupport.java:161)</code>\</p>
+</blockquote>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Friday, November 12th, 2010 at 11:19 (GMT-1) and is filed under <a href="/category/continous-integration/" rel="category tag">Continous integration</a>, <a href="/category/java/" rel="category tag">Java</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to &#8220;Fixed Strange Hudson Slave OutOfMemoryError&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-502423">
+<cite><a href="http://www.msa-kbh.dk" class="url" rel="external">Carly</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-502423" title="">November 14th, 2010 at 01:01 (GMT-1)</a> </small>
+<p>This took me a whole long week when I did it myself and corrected the error.</p>
+</li>
+
+<li id="comment-502547">
+<cite><a href="http://bongiornowebshop.nl" class="url" rel="external">Bon Giorno</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-502547" title="">November 16th, 2010 at 13:33 (GMT-1)</a> </small>
+<p>Shouldnt u swap the the numbers like this -Xmx256m -XX:MaxPermSize=512m.</p>
+<p>How can Xmx be larger then the max permission size?</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Groovy for Hudson console · justaddwater.dk</title>
+<meta name="description" content="Hudson continuous integration server has a console which is good for testing scripts and access to commands that your Hudson jobs need.
+The hudson console only …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2010/03/26/googles-direct-links-inside-suggestion-list/" rel="prev">Google’s Direct Links Inside Suggestion List</a></div>
+<div class="alignright"><a href="/2010/04/22/explanation-of-firebug-net-panel-findings/" rel="next">Explanation of Firebug Net Panel Findings</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2010-04-20"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2010"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Hudson continuous integration server has a console which is good for testing scripts and access to commands that your Hudson jobs need. The hudson console only let’s you run Groovy script. To run commands on the machine, Groovy has the method `”string”.execute()`. So now I can use this snippet to test versions of Ruby, JRuby, [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Apr 20"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">Groovy for Hudson console</h2>
+<div class="entry">
+<p>Hudson continuous integration server has a console which is good for testing scripts and access to commands that your Hudson jobs need.</p>
+<p>The hudson console only let&rsquo;s you run Groovy script. To run commands on the machine, Groovy has the method <code>&quot;string&quot;.execute()</code>. So now I can use this snippet to test versions of Ruby, JRuby, etc:</p>
+<pre><code>def commands = [&quot;ruby --version&quot;, &quot;gem environment&quot;, &quot;which ruby&quot;, &quot;which gem&quot;, &quot;jruby --version&quot;]
+
+commands.each{
+  run(it)
+}
+
+def run(cmd) {
+  //def proc = commands[1].execute()
+  def proc = cmd.execute()
+  proc.waitFor()
+
+  // Obtain status and output
+  println &quot;return code: ${ proc.exitValue()}&quot;
+  println &quot;stderr: ${proc.err.text}&quot;
+  println &quot;stdout: ${proc.in.text}&quot; // *out* from the external program is *in* for groovy
+
+}
+</code></pre>
+<p>Example borrowed from and shrinkwrapped from <a href="http://groovy.codehaus.org/JN1015-Collections">groovy.codehaus.org/JN1015-Collections</a></p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, April 20th, 2010 at 12:25 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

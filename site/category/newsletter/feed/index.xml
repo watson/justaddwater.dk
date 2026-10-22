@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Newsletter on Just Add Water</title>
+		<link>https://justaddwater.dk/category/newsletter/</link>
+		<description>Recent content in Newsletter on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 04 Apr 2006 22:39:09 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/newsletter/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>E-mail vs. RSS</title>
+				<link>https://justaddwater.dk/2006/04/04/e-mail-vs-rss/</link>
+				<pubDate>Tue, 04 Apr 2006 22:39:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/04/e-mail-vs-rss/</guid>
+				<description>&lt;p&gt;Syndicated feeds in form of RSS or Atom is the hot way of getting news from around the world delivered instantly and dynamically to your desktop. Previously a user could only do so by registering for an e-mail newsletter.&lt;/p&gt;&#xA;&lt;p&gt;Believe it or not some people don&amp;rsquo;t have a news aggregator installed. They might not even know of the free online news aggregators like for instance Google Reader. Maybe they don&amp;rsquo;t feel safe with this new technology or maybe they simply just don&amp;rsquo;t care. Whatever the reason we should still consider offering them the old school newsletter send by regular e-mail alongside the news feed offer.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Cucumber on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/cucumber/</link>
+		<description>Recent content in Cucumber on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 18 Jun 2012 21:26:41 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/cucumber/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Mortgage-driven development vs Behaviour-driven development</title>
+				<link>https://justaddwater.dk/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/</link>
+				<pubDate>Mon, 18 Jun 2012 21:26:41 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/</guid>
+				<description>&lt;p&gt;As you may already know, I am in New York with my company, attending the QCon conference.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2012/06/IMG_6542.jpg&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2012/06/IMG_6542-300x199.jpg&#34; alt=&#34;&#34; title=&#34;brooklyn bridge&#34; class=&#34;aligncenter size-medium wp-image-1615&#34; height=&#34;199&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2012/06/IMG_6542-300x199.jpg 300w, https://justaddwater.dk/wp-content/uploads/2012/06/IMG_6542.jpg 1280w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Earler today I attended Matt Wynne&amp;rsquo;s presentation at QCon New York. It was one of the best presentations I have seen so far. Especially, since he began as his alter-ego, Darren Workshy.&lt;/p&gt;&#xA;&lt;p&gt;Darren Workshy, hater of behaviour-driven development. Darren has invented &lt;strong&gt;Mortgage-driven development (MDD)&lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Capgemini SmartLunch: Cucumber for Automated Acceptance Testing</title>
+				<link>https://justaddwater.dk/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing/</link>
+				<pubDate>Tue, 27 Apr 2010 13:27:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing/</guid>
+				<description>&lt;p&gt;Today I did an internal presentation on how we used Cucumber as testing framework on several recent occasions.&lt;/p&gt;&#xA;&lt;p&gt;The presentation was held in our usual Capgemini SmartLunch format: People can eat and learn in their lunchbreak. External visitors are welcome. Duration 30-45 minutes including questions.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.pdf&#34;&gt;pres 2010-04-27-cucumber&lt;/a&gt; (573KB pdf format)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.key_.zip&#34;&gt;pres 2010-04-27-cucumber.key&lt;/a&gt; (782KB keynote format)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
+</rss>

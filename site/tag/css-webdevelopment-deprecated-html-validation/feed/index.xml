@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Css Webdevelopment Deprecated Html Validation on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/css-webdevelopment-deprecated-html-validation/</link>
+		<description>Recent content in Css Webdevelopment Deprecated Html Validation on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 08 Jan 2009 11:47:14 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/css-webdevelopment-deprecated-html-validation/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CSS Fun: Flag Deprecated HTML Tags</title>
+				<link>https://justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/</link>
+				<pubDate>Thu, 08 Jan 2009 11:47:14 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/</guid>
+				<description>&lt;p&gt;Here is a little fun CSS snippet that helped me identify deprecated HTML on a recent project. Put these lines into the CSS file of your website:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;br&gt;&#xA;&lt;code&gt;/* Watch out for invalid/deprecated HTML in CMS */&lt;/code&gt;&lt;br&gt;&#xA;&lt;code&gt;b{font-size: x-large; background-color: fuchsia; color: yellow; font-weight: normal;}&lt;/code&gt;&lt;br&gt;&#xA;&lt;code&gt;i{font-size: x-large; background-color: lime; color: blue; font-style: normal}&lt;/code&gt;&lt;br&gt;&#xA;&lt;code&gt;font{background-color: aqua; color: red}&lt;/code&gt;&lt;br&gt;&#xA;&lt;code&gt;b,i,font{text-decoration: blink;}&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif&#34; alt=&#34;&#34; title=&#34;blink-and-flag-deprecated-font-b-i-tags&#34; class=&#34;alignnone size-full wp-image-991&#34; height=&#34;165&#34; width=&#34;249&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This was really useful for identifying dirty HTML that was generated from a Microsoft-based CMS.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

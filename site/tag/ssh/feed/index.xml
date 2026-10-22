@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ssh on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/ssh/</link>
+		<description>Recent content in Ssh on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 21 Feb 2009 10:04:59 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/ssh/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Using Local File-based Git -- Server Laziness</title>
+				<link>https://justaddwater.dk/2009/02/21/using-local-file-based-git-server-laziness/</link>
+				<pubDate>Sat, 21 Feb 2009 10:04:59 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/02/21/using-local-file-based-git-server-laziness/</guid>
+				<description>&lt;p&gt;My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Each developer&amp;rsquo;s machine has it&amp;rsquo;s own Git repository.&lt;/li&gt;&#xA;&lt;li&gt;On my machine I had an extra &amp;lsquo;master&amp;rsquo; repository that other developers could push into.&lt;/li&gt;&#xA;&lt;li&gt;In the example below the local developer repos is called &amp;rsquo;local&amp;rsquo; and the master is called &amp;lsquo;remote&amp;rsquo;&lt;/li&gt;&#xA;&lt;li&gt;The master repository could be on a network drive as well.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Developer&amp;rsquo;s workflow: Push changes to &amp;lsquo;remote&amp;rsquo;:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

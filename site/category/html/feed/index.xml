@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>HTML on Just Add Water</title>
+		<link>https://justaddwater.dk/category/html/</link>
+		<description>Recent content in HTML on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 02 Sep 2009 15:23:49 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/html/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</title>
+				<link>https://justaddwater.dk/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/</link>
+				<pubDate>Wed, 02 Sep 2009 15:23:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/</guid>
+				<description>&lt;p&gt;I was reading up on the good old HTML specification and discovered a feature I had always wanted &amp;ndash; and it&amp;rsquo;s already there:&lt;br&gt;&#xA;Creating widths of columns that will work like percentages, but will also pay attention to any small, fixed-width columns.&lt;/p&gt;&#xA;&lt;p&gt;Take a look at HTML&amp;rsquo;s proportional widths and amount alignment features.&lt;/p&gt;&#xA;&lt;p&gt;Look at this from HTML specification of &amp;lt;COL&amp;gt; elements:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Authors may specify column widths in three ways:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fixed&lt;/strong&gt;&lt;br&gt;&#xA;A fixed width specification is given in pixels (e.g., &lt;code&gt; width&lt;/code&gt;=&amp;ldquo;30&amp;rdquo;). A fixed-width specification enables incremental rendering.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Percentage&lt;/strong&gt;&lt;br&gt;&#xA;A percentage specification (e.g., &lt;code&gt;width&lt;/code&gt;=&amp;ldquo;20%&amp;rdquo;) is based on the percentage of the horizontal space available to the table (between the current left and right margins, including floats). Note that this space does not depend on the table itself, and thus percentage specifications enable incremental rendering.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Proportional&lt;/strong&gt;&lt;br&gt;&#xA;Proportional specifications (e.g., &lt;code&gt;width&lt;/code&gt;=&amp;ldquo;3*&amp;rdquo;) refer to portions of the horizontal space &lt;em&gt;required&lt;/em&gt; by a table. If the table width is given a fixed value via the &lt;code&gt;width&lt;/code&gt; attribute of the &lt;a href=&#34;http://www.w3.org/TR/html4/struct/tables.html#edef-TABLE&#34;&gt;&lt;code&gt;TABLE&lt;/code&gt;&lt;/a&gt; element, user agents may render the table incrementally even with proportional columns.However, if the table does not have a fixed width, user agents must receive all table data before they can determine the horizontal space required by the table. Only then may this space be allotted to proportional columns.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>1996 Humour Ahead: Spacer.gif, Table Layouts</title>
+				<link>https://justaddwater.dk/2007/12/06/1996-humour-ahead-spacergif-table-layouts/</link>
+				<pubDate>Thu, 06 Dec 2007 18:28:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/12/06/1996-humour-ahead-spacergif-table-layouts/</guid>
+				<description>&lt;p&gt;In case you missed it, Dustin Diaz has written this excellent parody on what the hottest web techniques were like before webstandards and css were invented.&lt;br&gt;&#xA;[Seven hottest web 1.0 techniques to trick out your webpage](&lt;a href=&#34;http://www.dustindiaz.com/web-1-point-oh-techniques/&#34;&gt;http://www.dustindiaz.com/web-1-point-oh-techniques/&lt;/a&gt; &amp;ldquo;Dustin Diaz: &amp;ldquo;Seven hottest web 1.0 techniques to trick out your webpage&amp;rdquo;&amp;rdquo;).&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h3 id=&#34;2-animation-without-javascript&#34;&gt;2) Animation without JavaScript&lt;/h3&gt;&#xA;&lt;p&gt;Believe it! It’s true. Drop those old scripts that made your website scroll and blink because why bother programming JavaScript when plain ‘ol HTML can do it for you! These are the ever-so-beloved &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;marquee&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;&#xA;&lt;h3 id=&#34;blink-and-marquee&#34;&gt;blink and marquee&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;blink&amp;gt;Sale! Sale! Sale! Buy now and save big!&amp;lt;/blink&amp;gt;&#xA;&#xA;&amp;lt;marquee&amp;gt;Welcome welcome welcome! Today is the beginning of the end, buy now!&amp;lt;/marquee&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Web Site Investigation Toolbox Update</title>
+				<link>https://justaddwater.dk/2007/10/12/web-site-investigation-toolbox-update/</link>
+				<pubDate>Fri, 12 Oct 2007 10:54:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/10/12/web-site-investigation-toolbox-update/</guid>
+				<description>&lt;p&gt;I figured the original bookmarklet toolbox needed an update (i have updated and added a few bookmarklets since I first posted &lt;a href=&#34;https://justaddwater.dk/2006/09/18/toolbox/&#34; title=&#34;Permanent Link: Toolbox — locating problems in HTML&#34;&gt;Toolbox — locating problems in HTML&lt;/a&gt;). Quirksmode detection, Layout grid and more.&lt;/p&gt;&#xA;&lt;p&gt;For example I added &amp;ldquo;quirks or !quirks&amp;rdquo; to determine whether a page runs standards mode or quirks mode. It pops up an alert that displays rendering mode for each frame.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;ldquo;Document mode: CSS1 Compat&amp;rdquo; is standards mode&lt;/li&gt;&#xA;&lt;li&gt;&amp;ldquo;Document mode: Back compat&amp;rdquo; is quirksmode&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I forget where I found the code (please notify me and I&amp;rsquo;ll give you credit).I also modified &lt;a href=&#34;http://slayeroffice.com/?c=/content/tools/pagenfo.html&#34;&gt;Steve Chipman&amp;rsquo;s excellent &amp;ldquo;PageInfo&amp;rdquo;&lt;/a&gt; so that its usable with frames. If frames are found it asks you to enter a frame number (index from document.frames[x])&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>E-Texteditor For Windows</title>
+				<link>https://justaddwater.dk/2007/04/28/e-texteditor-for-windows/</link>
+				<pubDate>Sat, 28 Apr 2007 00:55:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/28/e-texteditor-for-windows/</guid>
+				<description>&lt;p&gt;I have been looking a fast, intuitive editor for my Windows laptop.&lt;/p&gt;&#xA;&lt;p&gt;Now I stopped looking. E-texteditor for windows is very intuitive and easy to use. I highly recommend watching the screencast (a short tour of some of the best features). Although it&amp;rsquo;s still in beta, it seems so much better than the alternatives.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m using it for HTML, CSS, JavaScript, Ruby on Rails editing. And it just works.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.e-texteditor.com/index.html&#34; title=&#34;E-texteditor homepage with screenshot&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/e-texteditor-homepage.png&#34; alt=&#34;e-texteditor-homepage.png&#34; width=&#34;453&#34; height=&#34;428&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Rounded Corners the Technorati Way</title>
+				<link>https://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/</link>
+				<pubDate>Thu, 15 Feb 2007 12:01:05 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/</guid>
+				<description>&lt;p&gt;It&amp;rsquo;s been a while where web standards don&amp;rsquo;t get the attention it deserves on this blog. In that spirit, here&amp;rsquo;s a behind-the-scenes view on how Technorati makes rounded corners on a faded background.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/technorati-rounded-corner-justadwater-rank-9980-mini.png&#34; alt=&#34;Technorati screenshot of box with rounded corners on faded background (showing Justaddwater Ranks no. 9980 on Technorati)&#34; width=&#34;444&#34; height=&#34;78&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;I remember Eric Meyer mentioned this solution back at a workshop in 2005 (before he could actually tell that it was for Technorati — the redesign was unveiled a few days later).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Humorous Vista Features (from The Onion)</title>
+				<link>https://justaddwater.dk/2007/02/14/humorous-vista-features-from-the-onion/</link>
+				<pubDate>Wed, 14 Feb 2007 15:36:15 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/14/humorous-vista-features-from-the-onion/</guid>
+				<description>&lt;p&gt;The Onion has a humorous feature list from Microsoft Vista in the recent issue:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h2 id=&#34;microsoft-vista-released&#34;&gt;Microsoft Vista Released&lt;/h2&gt;&#xA;&lt;p&gt;Microsoft released its new operating system, Vista, on Jan. 30. Here are some of its features:&lt;/p&gt;&#xA;&lt;div class=&#34;article_photo_alt&#34; style=&#34;width: 250px; float:right;&#34;&gt;&#xA;&lt;img src=&#34;http://www.theonion.com/content/files/images/Infographic-Microsoft.jpg&#34; alt=&#34;Microsoft Vista Released&#34; title=&#34;Microsoft Vista Released&#34; height=&#34;171&#34; width=&#34;250&#34;&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Microsoft Word&amp;rsquo;s helpful paper-clip icon now blinks at rate of normal humans&lt;/li&gt;&#xA;&lt;li&gt;Enhanced graphics on &amp;ldquo;System Is Not Responding&amp;rdquo; pop-up window&lt;/li&gt;&#xA;&lt;li&gt;Five new card-back designs for Solitaire&lt;/li&gt;&#xA;&lt;li&gt;Something that Apple would never, ever dream up in a billion years&lt;/li&gt;&#xA;&lt;li&gt;4,391 security flaws to be patched over next 15 years&lt;/li&gt;&#xA;&lt;li&gt;Promise of broad, open-minded future or some bullshit&lt;/li&gt;&#xA;&lt;li&gt;Lists blocked wireless connections with greater speed and accuracy&lt;/li&gt;&#xA;&lt;li&gt;New operating system, same old Microsoft Paint&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;What are your best feature list&lt;/strong&gt; (be imaginative and humorous)?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Microsoft&#39;s Commitment to Web Standards</title>
+				<link>https://justaddwater.dk/2007/01/19/microsofts-commitment-to-web-standards/</link>
+				<pubDate>Fri, 19 Jan 2007 00:53:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/01/19/microsofts-commitment-to-web-standards/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://www.molly.com/2006/12/14/who-questions-bill-gates-commitment-to-web-standards/&#34;&gt;Molly interviewed Bill Gates&lt;/a&gt; on Microsoft&amp;rsquo;s commitment to web standards. Today, Roger added his comments in his article: &lt;a href=&#34;http://www.456bereastreet.com/archive/200701/bill_gates_on_web_standards_huh/&#34;&gt;Bill Gates on Web standards: Huh?&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In a brief discussion about web standards, Bill seems to interpret web standards as ws*, xml, etc. He does not really mention html, xhtml, css or similar approaches, which is why he probably does not follow Molly&amp;rsquo;s point to sceptics of Microsofts commitment to webstandards.&lt;/p&gt;&#xA;&lt;p&gt;Molly:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I’m just saying there are a lot of skeptics still out there.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>More visual HTML jokes</title>
+				<link>https://justaddwater.dk/2007/01/05/more-visual-html-jokes/</link>
+				<pubDate>Fri, 05 Jan 2007 10:49:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/01/05/more-visual-html-jokes/</guid>
+				<description>&lt;p&gt;Inspired by Neatorama&amp;rsquo;s &amp;ldquo;&lt;a href=&#34;http://www.neatorama.com/2007/01/01/visual-html-joke/&#34;&gt;Visual HTML joke&lt;/a&gt;&amp;rdquo; that got &lt;a href=&#34;http://digg.com/programming/Visual_HTML_joke&#34;&gt;digged&lt;/a&gt; recently.&lt;/p&gt;&#xA;&lt;p&gt;If you have not yet seen it, it&amp;rsquo;s an &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt;-tag on each side of the Tower of Pisa:&lt;br&gt;&#xA;&lt;a href=&#34;http://www.neatorama.com/2007/01/01/visual-html-joke/&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/01/html-tag-italicized.thumbnail.jpg&#34; alt=&#34;original photo italic tag &#34; width=&#34;67&#34; height=&#34;96&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I decided to visualize a few HTML tags myself:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/01/340503313_08ddd76886-base.jpg&#34; alt=&#34;baseball base for base tag&#34; width=&#34;500&#34; height=&#34;375&#34;&gt;&#xA;&lt;br&gt;&#xA;Modified from &lt;a href=&#34;http://flickr.com/photos/mikemac29/340503313/&#34;&gt;http://flickr.com/photos/mikemac29/340503313/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/01/18550828_107d4f01d0-greek-temple.jpg&#34; alt=&#34;Greek temple for colgroup tag&#34; width=&#34;500&#34; height=&#34;333&#34;&gt;&#xA;&lt;br&gt;&#xA;Modified from &lt;a href=&#34;http://flickr.com/photos/jorgeorte/18550828/&#34;&gt;http://flickr.com/photos/jorgeorte/18550828/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/01/311161230_358281a617-submarine.jpg&#34; alt=&#34;submarine for html sub tag&#34; width=&#34;500&#34; height=&#34;310&#34;&gt;&#xA;&lt;br&gt;&#xA;Modified from &lt;a href=&#34;http://flickr.com/photos/maddiedigital/311161230/&#34;&gt;http://flickr.com/photos/maddiedigital/311161230/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/01/337567708_ccbfea4bd6-table.jpg&#34; alt=&#34;Old table for table tag&#34; width=&#34;500&#34; height=&#34;375&#34;&gt;&#xA;&lt;br&gt;&#xA;Modified from &lt;a href=&#34;http://flickr.com/photos/anabananasplit/337567708/&#34;&gt;http://flickr.com/photos/anabananasplit/337567708/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/01/258758222_f5ad157c7d-better-body.jpg&#34; alt=&#34;female body for html body tag&#34; width=&#34;333&#34; height=&#34;500&#34;&gt;&#xA;&lt;br&gt;&#xA;Modified from &lt;a href=&#34;http://flickr.com/photos/idua_japan/258758222/&#34;&gt;http://flickr.com/photos/idua_japan/258758222/&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Technique — locating problems in HTML</title>
+				<link>https://justaddwater.dk/2006/09/18/technique/</link>
+				<pubDate>Mon, 18 Sep 2006 22:37:19 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/18/technique/</guid>
+				<description>&lt;p&gt;Technique for using the toolbox: Locating problems in HTML.&lt;/p&gt;&#xA;&lt;p&gt;I decided to make a little toolbox that&amp;rsquo;s easy to apply on web pages, when investigating problems with web pages. Basically, it&amp;rsquo;s the tools I used when investigating the case I described in &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/06/29/webstandards-case-study/&#34;&gt;Why web standards matter (case study)&lt;/a&gt;&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;I split this into two posts. This is the second part. The first one is about the &lt;a href=&#34;https://justaddwater.dk/2006/09/18/toolbox&#34;&gt;toolbox&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;web-standards-investigation-technique&#34;&gt;Web standards investigation technique&lt;/h3&gt;&#xA;&lt;p&gt;The case study shwoed a page in big trouble and the problem turned out to be a combination of different things that led to the guidelines:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Toolbox — locating problems in HTML</title>
+				<link>https://justaddwater.dk/2006/09/18/toolbox/</link>
+				<pubDate>Mon, 18 Sep 2006 22:35:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/18/toolbox/</guid>
+				<description>&lt;p&gt;I decided to make a little toolbox that&amp;rsquo;s easy to apply on web pages, when investigating problems with web pages. Basically, it&amp;rsquo;s the tools I used when investigating the case I described in &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/06/29/webstandards-case-study/&#34;&gt;Why web standards matter (case study)&lt;/a&gt;&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;I decided to split this into two posts. This first one is about the toolbox. The second part is about the &lt;a href=&#34;https://justaddwater.dk/2006/09/18/technique&#34;&gt;investigation technique&lt;/a&gt; (available separately).&lt;/p&gt;&#xA;&lt;h3 id=&#34;firefox-extensions-for-the-toolbox&#34;&gt;Firefox Extensions for the toolbox&lt;/h3&gt;&#xA;&lt;p&gt;I use Firefox for the investigation. It has the best web developer tools and bookmarklet support. &lt;a href=&#34;http://www.getfirefox.com&#34;&gt;Get firefox&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Why Web Standards Matter (Case Study)</title>
+				<link>https://justaddwater.dk/2006/06/29/webstandards-case-study/</link>
+				<pubDate>Thu, 29 Jun 2006 16:03:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/29/webstandards-case-study/</guid>
+				<description>&lt;p&gt;Project managers often have a hard time understanding web standards and why they matter. In this case, my arguments made a perfect business case for the managers of a particular project.&lt;/p&gt;&#xA;&lt;p&gt;Recently I was called out to debug some javascript code that did not perform. There was really not a big problem in Firefox, but Internet Explorer hung using 20 seconds or more each time the script was activated by the user.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Web Development Cheat Sheets</title>
+				<link>https://justaddwater.dk/2006/05/23/web-development-cheat-sheets/</link>
+				<pubDate>Tue, 23 May 2006 18:52:24 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/23/web-development-cheat-sheets/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/05/ilovejackdaniels.jpg&#34; alt=&#34;ILoveJackDaniels.com logo&#34; title=&#34;ILoveJackDaniels.com logo&#34; align=&#34;left&#34; style=&#34;margin-right: 8px&#34; width=&#34;195&#34; height=&#34;68&#34;&gt;&#xA;I just found this page on ILoveJackDaniels.com: &lt;a href=&#34;http://www.ilovejackdaniels.com/cheat-sheets/&#34; title=&#34;ILiveJackDaniels: Cheat Sheets&#34;&gt;Cheat Sheets&lt;/a&gt;. It contains a bunch of cheat sheets (you know the good old &lt;strong&gt;reference posters&lt;/strong&gt; that is nice to have around the office). Realy good stuff. Now I just need to go to the office after dark to print a couple of posters on the A0 plotter ;)&lt;/p&gt;&#xA;&lt;p&gt;They are in both PNG and PDF format.&lt;/p&gt;&#xA;&lt;p&gt;Here is a complete list of all the cheat sheets listed so far:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

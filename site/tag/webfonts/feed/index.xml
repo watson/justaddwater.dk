@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Webfonts on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/webfonts/</link>
+		<description>Recent content in Webfonts on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 24 Feb 2012 17:00:05 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/webfonts/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Get started using advanced web fonts today</title>
+				<link>https://justaddwater.dk/2012/02/24/get-started-using-advanced-webfonts-today/</link>
+				<pubDate>Fri, 24 Feb 2012 17:00:05 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/02/24/get-started-using-advanced-webfonts-today/</guid>
+				<description>&lt;p&gt;I saw this example on &lt;a href=&#34;http://uxcampcph.org/&#34;&gt;a blog today&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2012/02/web-font-example.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2012/02/web-font-example.png&#34; alt=&#34;&#34; title=&#34;web-font-example&#34; class=&#34;aligncenter size-full wp-image-1581&#34; height=&#34;106&#34; width=&#34;250&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Studying the code, it turns out this is just &lt;a href=&#34;https://developers.google.com/webfonts/docs/getting_started&#34;&gt;clever use of Google&amp;rsquo;s font api&lt;/a&gt;. What you essentially do is to add this to your &amp;lt;HEAD&amp;gt; element:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;!-- Google Fonts --&amp;gt; &#xA;&amp;lt;link href=&amp;#39;http://fonts.googleapis.com/css?family=Cabin Sketch:bold&amp;#39; rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39; /&amp;gt; &#xA;&amp;lt;style type=&amp;#34;text/css&amp;#34; media=&amp;#34;screen&amp;#34;&amp;gt; &#xA;  h1 { font-family: &amp;#39;Cabin Sketch&amp;#39;, arial, serif; } &#xA;  .entry-title { &#xA;    font-family:&amp;#39;Cabin Sketch&amp;#39;; &#xA;  } &#xA;&amp;lt;/style&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now the stylesheet referenced takes care of the rest. It&amp;rsquo;s as simple as that!&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

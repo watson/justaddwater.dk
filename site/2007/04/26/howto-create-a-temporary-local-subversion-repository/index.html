@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Howto Create a Temporary Local Subversion Repository · justaddwater.dk</title>
+<meta name="description" content="UPDATE May 1st, 2007 (forgot the two final steps 8 and 9).
+I&rsquo;ve run into the situation a couple of times where I get started on a client&rsquo;s office, …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/" rel="prev">Prototyping Ruby on Rails Checklist to Get Started</a></div>
+<div class="alignright"><a href="/2007/04/28/e-texteditor-for-windows/" rel="next">E-Texteditor For Windows</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-04-26"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Productivity"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Prototyping"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="UPDATE May 1st, 2007 (forgot the two final steps 8 and 9). I’ve run into the situation a couple of times where I get started on a client’s office, but due to delays and politics it takes time to get a proper versioning control server set up. It turned out to be easy when I [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Apr 26"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="4"></span>
+<h2 data-pagefind-meta="title">Howto Create a Temporary Local Subversion Repository</h2>
+<div class="entry">
+<p>UPDATE May 1st, 2007 (forgot the two final steps 8 and 9).</p>
+<p>I&rsquo;ve run into the situation a couple of times where I get started on a client&rsquo;s office, but due to delays and politics it takes time to get a proper versioning control server set up.</p>
+<p>It turned out to be easy when I figured out the where to find the details on it. I&rsquo;m running windows XP, don&rsquo;t know how this differs on other operating systems.</p>
+<ol>
+<li>Install TortoiseSVN, find the latest .exe in the <a href="http://subversion.tigris.org/servlets/ProjectDocumentList?folderID=91" title="TortoiseSVN Download Windows Binaries">binaries folder</a></li>
+<li>In windows explorer find the root folder for where you want your repository (this should be different than where your code workspace is).</li>
+<li>Create a new folder. In this example, I choose &ldquo;&lt;code&gt;C:\svn-repo&lt;code&gt;&rdquo;</li>
+<li>In windows explorer, right click and select &ldquo;TortoiseSVN&rdquo; &gt; &ldquo;Create repository here&hellip;&rdquo; <img src="/wp-content/uploads/2007/04/svn-create-local-repository-with-subversion-tortoisesvn.png" alt="svn-create-local-repository-with-subversion-tortoisesvn.png" width="407" height="421">
+</li>
+<li>Select &ldquo;native filesystem (FSFS)&rdquo; <a href="/wp-content/uploads/2007/04/svn-create-local-repository-native-filesystem.png" title="Direct link to file"><img src="/wp-content/uploads/2007/04/svn-create-local-repository-native-filesystem.png" alt="svn-create-local-repository-native-filesystem.png" width="285" height="171">
+</a></li>
+<li>Check in your code. Go to your workspace folder, right click it an select &ldquo;TortoiseSVN&rdquo; &gt; &ldquo;Import&hellip;&rdquo; <img src="/wp-content/uploads/2007/04/svn-import-workspace-folder-into-subversion.png" alt="svn-import-workspace-folder-into-subversion.png" width="221" height="81">
+</li>
+<li>Now write the url of you file repository. In my case, &ldquo;<code>file:///C:/svn-repo/projectname</code>&rdquo; <img src="/wp-content/uploads/2007/04/svn-import-initial-commit-message.png" alt="svn-import-initial-commit-message.png" width="458" height="336">
+ Also remember to put in a commit message</li>
+<li>UPDATE (forgot to write these very important steps below): Now, delete your source files. You just comitted them to the repository. Don&rsquo;t worry, they will be back in a moment. <small>(If you are the cautious type like me, you probably just move the files to somewhere else&hellip;)</small></li>
+<li>Now it&rsquo;s time to check out the files from subversion. Right click and choose &ldquo;Check out&hellip;&rdquo; in the context menu. Then select your repository, in my case &ldquo;<code>file:///C:/svn-repo/projectname</code>&rdquo;. And you&rsquo;re done!</li>
+</ol>
+<p>From now on, your code is versioned, and can later be ported to the real subversion repository (any comments on how this is done would be greatly appreciated). Now, you can commit changes, view and diff changes, merge and roll back. Just like you would do in a normal code repository.</p>
+<h2 id="advanced-use">Advanced use</h2>
+<p>For user and access control it&rsquo;s possible to modify the config files in the subversion /conf directory. The files in <code>/svn-repo/conf/</code> has the info (although it&rsquo;s not very self-explanatory).</p>
+<p>The repository is only set up for file access, so you will need to share your repository in order for more developers to use it.</p>
+<p>A better (and slightly more complicated) strategy is to use Apache as a frontend webserver and set it up to serve your subversion repository via that. If you want details on that I suggest reading:</p>
+<ul>
+<li>Svn.spears.at: <a href="http://svn.spears.at/"><strong>Subversion</strong> for <strong>Windows</strong> with <strong>Apache</strong> server HOWTO</a></li>
+<li>Joe White: <a href="http://excastle.com/blog/archive/2005/05/31/1048.aspx">Mere-Moments Guide to installing a Subversion server on Windows</a></li>
+</ul>
+<p>All in all, this can be a great benefit and speed things up in enterprise environments, where many chefs are involved in the most basic tasks. Please feel free to add your own advice and tips in the comments.</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/svn/" rel="tag">svn</a>, <a href="/tag/subversion/" rel="tag">subversion</a>, tortoisesvn, <a href="/tag/windows/" rel="tag">windows</a>, xp, local, repository</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, April 26th, 2007 at 21:30 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/productivity/" rel="category tag">Productivity</a>, <a href="/category/prototyping/" rel="category tag">Prototyping</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">4 Responses to &#8220;Howto Create a Temporary Local Subversion Repository&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-135409">
+<cite><a href="http://www.spoiledmilk.dk" class="url" rel="external">Russell Quinn</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-135409" title="">April 26th, 2007 at 23:44 (GMT-1)</a> </small>
+<p>I&rsquo;d suggest setting up some hosting somewhere and having your repository in a remote location (you can do this over the discussed http protocol), then you don&rsquo;t have to worry about a volatile repository on your local machine (laptop?) or merging into the main one later.</p>
+</li>
+
+<li id="comment-135418">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-135418" title="">April 27th, 2007 at 00:04 (GMT-1)</a> </small>
+<p>Russel. Thanks for your suggestion. I actually already have access to a subversion server hosted at a remote location. The only thing is, that I often run into &ldquo;enterprisey&rdquo; rules about not putting business sensitive data on a foreign server outside corporate firewalls.</p>
+<p>Maybe it&rsquo;s just the clients that I work with&hellip;</p>
+
+</li>
+
+<li class="alt" id="comment-135419">
+<cite><a href="http://www.spoiledmilk.dk" class="url" rel="external">Russell Quinn</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-135419" title="">April 27th, 2007 at 00:08 (GMT-1)</a> </small>
+<p>ahh, yes, in that case your not limited by technology but by other factors :(</p>
+</li>
+
+<li id="comment-358555">
+<cite><a href="http://justaddwater.dk/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/" class="url" rel="external">justaddwater.dk | Prototyping Ruby on Rails Checklist to Get Started</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-358555" title="">November 18th, 2007 at 17:30 (GMT-1)</a> </small>
+<p>[&hellip;] give me the source code.” « AJAX and Web2.0 User Experience Bad For Traffic Counts Howto Create a Temporary Local Subversion Repository [&hellip;]</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adding Deprecation Warning in JavaScript Console · justaddwater.dk</title>
+<meta name="description" content="I used this quick trick today to help me clean up and refactor some javascript functions today:
+if (&quot;console&quot; in window) console.warn(&#39;DEPRECATED …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/07/01/ie-css-bug-limited-include-statements/" rel="prev">IE CSS Bug: Limited @include Statements</a></div>
+<div class="alignright"><a href="/2008/08/03/could-you-fit-the-internet-in-windows-recycle-bin/" rel="next">Could You Fit The Internet In Windows Recycle Bin?</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-07-17"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="JavaScript"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I used this quick trick today to help me clean up and refactor some javascript functions today: `if (“console” in window) console.warn(‘DEPRECATED function call to ‘&#43; arguments.callee &#43;’\nCalled by:\n’&#43; arguments.callee.caller ); ` Which results in a fine deprecation warning in the console: There is plenty of space for improvement here. Feel free to use or [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jul 17"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="2"></span>
+<h2 data-pagefind-meta="title">Adding Deprecation Warning in JavaScript Console</h2>
+<div class="entry">
+<p>I used this quick trick today to help me clean up and refactor some javascript functions today:</p>
+<pre><code>if (&quot;console&quot; in window)
+  console.warn('DEPRECATED function call to '+ arguments.callee
+  +'\nCalled by:\n'+ arguments.callee.caller );
+</code></pre>
+<p>Which results in a fine deprecation warning in the console:<br>
+<a href="http://justaddwater.dk/wp-content/uploads/2008/07/firebug-javascript-caller-callee-debugger-warning.png"><img src="/wp-content/uploads/2008/07/firebug-javascript-caller-callee-debugger-warning.png" alt="" title="firebug-javascript-caller-callee-debugger-warning" class="alignnone size-full wp-image-941" height="249" width="500">
+</a></p>
+<p>There is plenty of space for improvement here. Feel free to use or tamper &hellip; but please post any alternative suggestions here as a comment.</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, July 17th, 2008 at 13:10 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/javascript/" rel="category tag">JavaScript</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to &#8220;Adding Deprecation Warning in JavaScript Console&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-430475">
+<cite>Mick Staugaard</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-430475" title="">July 17th, 2008 at 14:17 (GMT-1)</a> </small>
+<p>That&rsquo;s a really neat little trick! Thanks for sharing Jesper.</p>
+</li>
+
+<li id="comment-430650">
+<cite>Tobias</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-430650" title="">July 18th, 2008 at 11:22 (GMT-1)</a> </small>
+<p>If you want to get the console output in Internet Explorer, you can install the Companion.JS plug-in:<br>
+<a href="http://www.my-debugbar.com/wiki/CompanionJS/HomePage">http://www.my-debugbar.com/wiki/CompanionJS/HomePage</a></p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

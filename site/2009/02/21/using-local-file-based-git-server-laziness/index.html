@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using Local File-based Git — Server Laziness · justaddwater.dk</title>
+<meta name="description" content="My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/02/01/interaction-design-experiment-delete-row/" rel="prev">Interaction Design Experiment: Delete Row</a></div>
+<div class="alignright"><a href="/2009/02/25/html-guide-textmate-snippets-open-sourced/" rel="next">HTML Guide Textmate Snippets Open Sourced</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-02-21"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="justaddwater.dk"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup: Each developer’s machine has it’s own Git repository. On my machine [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Feb 21"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">Using Local File-based Git — Server Laziness</h2>
+<div class="entry">
+<p>My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup:</p>
+<ol>
+<li>Each developer&rsquo;s machine has it&rsquo;s own Git repository.</li>
+<li>On my machine I had an extra &lsquo;master&rsquo; repository that other developers could push into.</li>
+<li>In the example below the local developer repos is called &rsquo;local&rsquo; and the master is called &lsquo;remote&rsquo;</li>
+<li>The master repository could be on a network drive as well.</li>
+</ol>
+<p>Developer&rsquo;s workflow: Push changes to &lsquo;remote&rsquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd local <span style="color:#75715e">#developer&#39;s local repository</span>
+</span></span><span style="display:flex;"><span>git pull ../remote master <span style="color:#75715e">#get the latest code from &#39;remote&#39; repository</span>
+</span></span><span style="display:flex;"><span>git push ../remote master <span style="color:#75715e">#push the recent commits from here to the &#39;remote&#39; folder</span>
+</span></span></code></pre></div><h3 id="git-remote-makes-it-easier">Git remote makes it easier</h3>
+<p>In stead of using a path in &ldquo;git pull ../remote master&rdquo;, it&rsquo;s even easier to add the path just like you would do on GitHub or similar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add origin ../remote/ <span style="color:#75715e">#one time for all</span>
+</span></span><span style="display:flex;"><span>git pull origin master <span style="color:#75715e"># pull from the &#39;remote&#39; directory</span>
+</span></span><span style="display:flex;"><span>git push origin master <span style="color:#75715e">#push recent commits from here to the &#39;remote&#39; folder</span>
+</span></span></code></pre></div><h3 id="bonus-tip-using-remote-git-to-ssh-server">Bonus tip: Using remote git to SSH server</h3>
+<p>It&rsquo;s real easy to make a remote backup copy of your Git repository even if you have not set up a git server. Here is an example of how I did it on a server where I have SSH access to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add origin ssh://jesper@myserver.com/~/project.git/
+</span></span></code></pre></div><p>Setup the repository on the remote server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh jesper@myserver.com
+</span></span><span style="display:flex;"><span>Welcome to myserver.com!
+</span></span><span style="display:flex;"><span>$ mkdir project.git <span style="color:#f92672">&amp;&amp;</span> cd project.git/
+</span></span><span style="display:flex;"><span>$ git --bare init
+</span></span><span style="display:flex;"><span>Initialized empty Git repository in /home/jesper/project.git
+</span></span><span style="display:flex;"><span>$ exit
+</span></span><span style="display:flex;"><span>Bye!
+</span></span></code></pre></div><h3 id="related-posts">Related posts:</h3>
+<ul>
+<li><a href="../2007/04/26/howto-create-a-temporary-local-subversion-repository/" title="Justaddwater.dk: Howto Create a Temporary Local Subversion Repository">Howto Create a Temporary Local Subversion Repository (April 2007)</a></li>
+<li><a href="../2009/01/17/git-side-benefit-reducing-disk-usage/" title="Justaddwater.dk: Git Side Benefit: Reducing Disk Usage">Git Side Benefit: Reducing Disk Usage</a> (January 17)</li>
+</ul>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Saturday, February 21st, 2009 at 10:04 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/justaddwater.dk/" rel="category tag">justaddwater.dk</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

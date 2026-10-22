@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Mac on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/mac/</link>
+		<description>Recent content in Mac on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 04 Feb 2010 22:56:23 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/mac/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Mac Harddisk Upgrade Usability Improvements</title>
+				<link>https://justaddwater.dk/2010/02/04/mac-harddisk-upgrade-usability-improvements/</link>
+				<pubDate>Thu, 04 Feb 2010 22:56:23 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/02/04/mac-harddisk-upgrade-usability-improvements/</guid>
+				<description>&lt;p&gt;Blogging for the first time in a long time from my wife&amp;rsquo;s computer, because I&amp;rsquo;m installing my brand new Intel SSD hard drive in my macbook.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/02/intel_160gb_ssd.jpg&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2010/02/intel_160gb_ssd-150x150.jpg&#34; alt=&#34;intel_160gb_ssd&#34; title=&#34;intel_160gb_ssd&#34; class=&#34;aligncenter size-thumbnail wp-image-1265&#34; height=&#34;150&#34; width=&#34;150&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2010/02/intel_160gb_ssd-150x150.jpg 150w, https://justaddwater.dk/wp-content/uploads/2010/02/intel_160gb_ssd.jpg 550w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Oddly enough I ran into a few things during the install process that I think Apple could improve in their interface. (using Snow Leopard)&lt;/p&gt;&#xA;&lt;h2 id=&#34;apple-should-recognize-a-new-unformatted-disk-inserted-and-show-an-install-guide&#34;&gt;Apple should recognize a new unformatted disk inserted and show an install guide&lt;/h2&gt;&#xA;&lt;p&gt;I took out the old disk, inserted the new one, and booted the machine. After 1-2 minutes of nothing, a big folder with a questionmark appeared in the middle of the screen &amp;ndash; blinking. No helpful text (no text at all). Just one big blinking questionmark on top of a folder.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How To add &#34;Open folder in Textmate&#34; to Finder Context Menu</title>
+				<link>https://justaddwater.dk/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/</link>
+				<pubDate>Tue, 08 Dec 2009 10:44:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/</guid>
+				<description>&lt;p&gt;I wanted to add a menu item in Finder&amp;rsquo;s context menu that would open the selected folder in Textmate.&lt;br&gt;&#xA;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.24.20-AM.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.24.20-AM-289x300.png&#34; alt=&#34;Textmate context menu item: Open selected folder in  Textmate&#34; title=&#34;Textmate context menu item: Open selected folder in  Textmate&#34; class=&#34;aligncenter size-medium wp-image-1253&#34; height=&#34;300&#34; width=&#34;289&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.24.20-AM-289x300.png 289w, https://justaddwater.dk/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.24.20-AM.png 366w&#34; sizes=&#34;(max-width: 289px) 100vw, 289px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A google search suggested the method described by K. Adam Christensen on his blog: &amp;ldquo;&lt;a href=&#34;http://shifteleven.com/articles/2006/09/17/opening-a-directory-in-textmate-from-finder&#34;&gt;Opening a directory in TextMate from Finder&lt;/a&gt;&amp;rdquo;. However, from the documentation, I learned that that method is now outdated. Snow Leopard users should use &amp;ldquo;Services&amp;rdquo; and not &amp;ldquo;workflow&amp;rdquo; for setting this up.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

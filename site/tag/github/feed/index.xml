@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Github on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/github/</link>
+		<description>Recent content in Github on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 23 Aug 2009 23:42:45 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/github/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>How to add Git Pull Shortcut to Different Github Branches</title>
+				<link>https://justaddwater.dk/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/</link>
+				<pubDate>Sun, 23 Aug 2009 23:42:45 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;UPDATE 9 hours later: Changed to &amp;ldquo;remote = origin&amp;rdquo; to the specific branch &amp;ldquo;remote = dean&amp;rdquo; which works!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Short explanation on how to pull changes from different Git repositories into your local Git repository.&lt;/p&gt;&#xA;&lt;p&gt;Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, the remote repository is automatically added so you can do a simple git pull (instead of the verbose version &amp;ldquo;git pull origin master&amp;rdquo;)&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

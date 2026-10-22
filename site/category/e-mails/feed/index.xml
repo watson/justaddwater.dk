@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>E-Mails on Just Add Water</title>
+		<link>https://justaddwater.dk/category/e-mails/</link>
+		<description>Recent content in E-Mails on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 05 Apr 2011 09:20:34 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/e-mails/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Fixed Outlook 2003 Corruption after Power Blackout</title>
+				<link>https://justaddwater.dk/2011/04/05/fixed-outlook-2003-corruption-after-power/</link>
+				<pubDate>Tue, 05 Apr 2011 09:20:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/04/05/fixed-outlook-2003-corruption-after-power/</guid>
+				<description>&lt;p&gt;The power disappeared at our office, and killed outlook 2003. Suddently I got this error:&lt;br&gt;&#xA;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened-300x56.png&#34; alt=&#34;Outlook 2003: Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened.&#34; title=&#34;unable-to-start-outlook-unable-to-open-the-outlook-window--the-set-of-folders-could-not-be-opened&#34; class=&#34;aligncenter size-medium wp-image-1456&#34; height=&#34;56&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened-300x56.png 300w, https://justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened.png 630w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I followed advice from a &lt;a href=&#34;http://social.technet.microsoft.com/Forums/en/outlook/thread/a111e6d8-491f-449e-9b57-1b77f99e9aad&#34;&gt;forum thread, that recommended to run &amp;ldquo;outlook.exe /resetnavpane&amp;rdquo;&lt;/a&gt;, but with no luck.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Tag your e-mails with Thunderbird 2</title>
+				<link>https://justaddwater.dk/2007/04/19/tag-your-e-mails-with-thunderbird-2/</link>
+				<pubDate>Thu, 19 Apr 2007 12:13:14 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/19/tag-your-e-mails-with-thunderbird-2/</guid>
+				<description>&lt;p&gt;One of the cornerstones in Web 2.0 are the &lt;a href=&#34;http://en.wikipedia.org/wiki/Folksonomy&#34; title=&#34;Wikipedia: Folksonomy&#34;&gt;folksonomy&lt;/a&gt;, a user generated taxonomy, popularly referred to as &lt;strong&gt;tags&lt;/strong&gt;. Google made tags popular (&lt;a href=&#34;http://mail.google.com/mail/help/why_gmail.html#label&#34; title=&#34;About Gmail: Labels&#34;&gt;they call them labels&lt;/a&gt;) when they launched Gmail (taxonomy) and the online bookmark service del.icio.us &lt;a href=&#34;http://del.icio.us/help/tags&#34; title=&#34;del.icio.us help: What are tags?&#34;&gt;gave us tags&lt;/a&gt; + social network = folksonomy.&lt;/p&gt;&#xA;&lt;p&gt;Today Mozilla launched their e-mail client &amp;lsquo;Mozilla Thunderbird 2&amp;rsquo; just 12 days after the launch of release candidate 1! One the the main new features is tags, a feature I&amp;rsquo;ve been waiting and hoping for for many years now. I&amp;rsquo;ve never understood why none of the major e-mail client developers Microsoft or Mozilla got this into their clients before. For me it just seems so obvious. But here it is.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Scrolling vs. E-mails</title>
+				<link>https://justaddwater.dk/2007/04/11/scrolling-vs-e-mails/</link>
+				<pubDate>Wed, 11 Apr 2007 18:14:46 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/11/scrolling-vs-e-mails/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;http://justaddwater.dk/wp-content/uploads/2007/04/preview_newspaper.thumbnail.jpg&#34; alt=&#34;Newspaper photo&#34; style=&#34;float: right; margin-left: 8px&#34;&gt;&#xA;Ever heard the term &amp;ldquo;Below the fold&amp;rdquo;? This refers to the time before online, before internet - in the days when newspapers ruled the world. When folding a newspaper in half you only see the top part, and the adverts and headlines in the bottom part of the front-page don&amp;rsquo;t get get that much attention.&lt;/p&gt;&#xA;&lt;p&gt;This term has been used widely on the World Wide Web when discussing usability issues related to long webpages. Now Jason at Signal vs. Noise have brought up the subject when talking about e-mails:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

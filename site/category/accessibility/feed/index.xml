@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Accessibility on Just Add Water</title>
+		<link>https://justaddwater.dk/category/accessibility/</link>
+		<description>Recent content in Accessibility on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 23 Sep 2009 12:28:46 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/accessibility/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Internal Apps In Firefox</title>
+				<link>https://justaddwater.dk/2009/09/23/internal-apps-in-firefox/</link>
+				<pubDate>Wed, 23 Sep 2009 12:28:46 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/23/internal-apps-in-firefox/</guid>
+				<description>&lt;p&gt;This post is probably highly irrelevant unless you work at Capgemini and want to use the &lt;a href=&#34;http://applications.capgemini.se/&#34;&gt;internal nordic applications&lt;/a&gt; in Firefox.&lt;/p&gt;&#xA;&lt;p&gt;Read on if you want to access systems like CTR (time reporting), Event calendar, Skills database, PDR, Project forms or similar applications in Firefox.&lt;/p&gt;&#xA;&lt;p&gt;Problem is that the systems are not accessible at all if you&amp;rsquo;re not logged in. The reason is some extremely malformed HTML. Here is the entire content of the HTML page sent out:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Sharepoint 2007, Accessibility, and Impossible UI Customization</title>
+				<link>https://justaddwater.dk/2008/01/20/sharepoint-2007-accessibility-and-impossible-ui-customization/</link>
+				<pubDate>Sun, 20 Jan 2008 20:51:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/20/sharepoint-2007-accessibility-and-impossible-ui-customization/</guid>
+				<description>&lt;p&gt;Emil Stenström&amp;rsquo;s recent &amp;ldquo;&lt;a href=&#34;http://friendlybit.com/css/sharepoint-2007-from-an-interface-developers-view/&#34;&gt;Sharepoint 2007 from an interface developer’s view&lt;/a&gt;&amp;rdquo; is definitely worth reading if you care about webstandards, accessibility and decent frontend code in general.&lt;br&gt;&#xA;Here are some of the quotes that really stand out in an excellent article that i really recommend you read before picking your web development platform.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;One major problem is that you still need javascript enabled for many of the accessibility features. Enabling “Accessibility mode”, among other things, makes dropdown menus appear as new windows (popups) instead of dynamically writing HTML to the page. And this is after they “fixed” it.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Blue Beanie Day - A day for Web Standards and Accessibility</title>
+				<link>https://justaddwater.dk/2007/11/18/blue-beanie-day-a-day-for-web-standards-and-accessibility/</link>
+				<pubDate>Sun, 18 Nov 2007 13:47:46 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/11/18/blue-beanie-day-a-day-for-web-standards-and-accessibility/</guid>
+				<description>&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/11/dwws.jpg&#34; alt=&#34;Designing With Web Standards cover photo&#34; style=&#34;margin: 0pt 0pt 1em 1em; float: right&#34; width=&#34;200&#34; height=&#34;228&#34;&gt;&#xA;&#xA;&lt;p&gt;I just got an event invitation on Facebook asking me to join &amp;ldquo;&lt;a href=&#34;http://www.facebook.com/event.php?eid=6209917619&#34; title=&#34;Facebook Event: Blue Beanie Day&#34;&gt;Blue Beanie Day&lt;/a&gt;&amp;rdquo;. Two questions quickly popped into my head:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;What is a Blue Beanie?&lt;/li&gt;&#xA;&lt;li&gt;Where do I get one?&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;If you are into web standards and accessibility you have already seen a blue beanie on the cover of Jeffery Zeldman&amp;rsquo;s great book &amp;ldquo;&lt;a href=&#34;http://www.zeldman.com/dwws/&#34; title=&#34;Zeldman: Designing With Web Standards&#34;&gt;Designing With Web Standards&lt;/a&gt;&amp;rdquo;. A must-have for any web developer - both amateurs and professionals. You can see the cover here to the right.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Google Power Tool for Webmasters</title>
+				<link>https://justaddwater.dk/2007/10/19/google-power-tool-for-webmasters/</link>
+				<pubDate>Fri, 19 Oct 2007 16:02:56 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/10/19/google-power-tool-for-webmasters/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/10/tools2.gif&#34; alt=&#34;Google Webmaster Tools logo&#34; style=&#34;margin: 0pt 0pt 1em 1em; float: right&#34;&gt;&#xA;If you run a blog or any other website for that matter, you might want to check out &lt;a href=&#34;http://www.google.com/webmasters/&#34;&gt;Google Webmaster Central&lt;/a&gt; - in particular their &lt;a href=&#34;http://www.google.com/webmasters/tools/&#34;&gt;Google Webmaster Tool&lt;/a&gt; - if you haven&amp;rsquo;t already seen it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Google Webmaster Tool is a great tool for webmasters who want to see and manage how Google crawls their site(s).&lt;/strong&gt; If you have a Google ID you can add all the sites that you control to a dashboard. From here you can see intimate details for each site. After adding justaddwater.dk I found that Google was encountering some HTTP errors when crawling our site. This of cause is very important since other users unfortunately also encounter these errors.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mobile User Experience:Trying Out Opera Mini</title>
+				<link>https://justaddwater.dk/2007/06/28/mobile-user-experiencetrying-out-opera-mini/</link>
+				<pubDate>Thu, 28 Jun 2007 23:27:25 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/28/mobile-user-experiencetrying-out-opera-mini/</guid>
+				<description>&lt;p&gt;While being on vacation in beautiful Toscana, Italy, i&amp;rsquo;m trying out the Opera Mini browser on my Nokia 6233 cell phone. It is actually possible to use the blog administration software on the browser (log in, navigate, write posts, etc.)&lt;/p&gt;&#xA;&lt;p&gt;But it sure is not easy! There are lots of issues in the interface that easily leads to catastrophic accidents: For instance, i just lost half an hour worth of typing because i accidentally hit the back button. Normally i get a warning (&amp;ldquo;Are you sure&amp;hellip;&amp;rdquo;), but apparently that warning does not work on the Opera Mini browser. HTML is tedious: I could use some kind of snippet library with at least p + a tags, and how do i enter a line break? Furthermore, i can see only two lines of text (8-10 words) at any time in the text area where i write this text. Absolutely horrific for reviewing text and really really annoying that there is blank space on the screen for probably six more lines of text!&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Does Sony think their customers are morons?</title>
+				<link>https://justaddwater.dk/2007/04/16/does-sony-think-their-customers-are-morons/</link>
+				<pubDate>Mon, 16 Apr 2007 14:33:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/16/does-sony-think-their-customers-are-morons/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;I&amp;rsquo;m not pirating music or films, and I will gladly pay huge sums of money to huge world-wide record companies and film studios. But if they insist on protecting their publications with DRM, I will in turn insist only to pay half the price at the shop counter in return for less accessible content.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;It is no secret that DRM, or &lt;a href=&#34;http://en.wikipedia.org/wiki/Digital_Rights_Management&#34; title=&#34;Wikipedia: Digital Rights Management&#34;&gt;Digital Rights Management&lt;/a&gt;, have been used widely throughout the DVD and CD publishing world for some years now. DRM is not a technology in its own, but rather an umbrella-term used to cover the various technologies that exist, intended to prevent illegal copying of DVDs and CDs.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Bad Usability Calendar 2007 in Danish</title>
+				<link>https://justaddwater.dk/2007/02/09/bad-usability-calendar-2007-in-danish/</link>
+				<pubDate>Fri, 09 Feb 2007 10:48:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/09/bad-usability-calendar-2007-in-danish/</guid>
+				<description>&lt;p&gt;Thomas Baekdal and I have translated and are now publishing Bad Usability Calendar 2007 in Danish.&lt;/p&gt;&#xA;&lt;p&gt;I can highly recommend using this calendar in projects as wallpaper. But good luck on using it for actual planning.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/bad-usability-calendar-2007-danish-dk-screenshot.jpg&#34; alt=&#34;Screenshot of Danish Bad Usability Calendar (dårlig brugervenlighed kalender 2007)&#34; width=&#34;488&#34; height=&#34;170&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;This year&amp;rsquo;s version contains advice regarding AJAX, overwhelming use of graphics, advertising, and much more.&lt;/p&gt;&#xA;&lt;h3 id=&#34;download-bad-usability-calendar-2007&#34;&gt;Download Bad Usability Calendar 2007&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://iallenkelhet.no/nedlast/bad_usability_calendar_07_english_A3.pdf&#34;&gt;English&lt;/a&gt; &lt;small&gt;(560KB PDF)&lt;/small&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.iallenkelhet.no/nedlast/bad_usability_calendar_07_norsk_A3.pdf&#34;&gt;Norwegian&lt;/a&gt; &lt;small&gt;(1.2 MB PDF)&lt;/small&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/bad_usability_calendar_07-da-opt.pdf&#34; title=&#34;Download Bad Usability Calendar (Danish version)&#34;&gt;Danish&lt;/a&gt; &lt;small&gt;(3.3 MB PDF)&lt;/small&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Related articles:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Bad Usability Calendar 2007 Finally Ready</title>
+				<link>https://justaddwater.dk/2007/01/27/bad-usability-calendar-2007-finally-ready/</link>
+				<pubDate>Sat, 27 Jan 2007 09:57:31 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/01/27/bad-usability-calendar-2007-finally-ready/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;ve been waiting for this with excitement: Eidar and the rest of NetLife Research in Norway have finally &lt;a href=&#34;http://www.iallenkelhet.no/bad-usability-calendar-2007-is-here&#34;&gt;released the 2007 version of Bad Usability Calendar&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Direct download: &lt;a href=&#34;http://iallenkelhet.no/nedlast/bad_usability_calendar_07_english_A3.pdf&#34;&gt;Bad Usability Calendar 2007&lt;/a&gt; (1.2 MB PDF)&lt;/p&gt;&#xA;&lt;p&gt;Very nice to see that the calendar actually is released under a Creative Commons license, so you can translate it into you native language as long as you keep the reference to NetLife Research.&lt;/p&gt;&#xA;&lt;p&gt;Related posts:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2006/10/16/bad-usability-calendar/&#34; title=&#34;Permanent Link: Bad Usability Calendar&#34;&gt;Bad Usability Calendar&lt;/a&gt; (2006)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2006/11/10/bad-usability-calendar-2007-open-for-proposals/&#34; title=&#34;Permanent Link: Bad Usability Calendar 2007 open for proposals&#34;&gt;Bad Usability Calendar 2007 open for proposals&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Google Release of Audio Alternative to CAPTCHA</title>
+				<link>https://justaddwater.dk/2006/12/03/google-release-of-audio-alternative-to-captcha/</link>
+				<pubDate>Sun, 03 Dec 2006 21:47:20 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/12/03/google-release-of-audio-alternative-to-captcha/</guid>
+				<description>&lt;p&gt;Google updated their CAPTCHA logic to provide an audio alternative for visual impaired users — or also users that have a hard time reading the twisted letters.&lt;/p&gt;&#xA;&lt;p&gt;Without even mentioning the online petition where almost 5,000 people protested against the original format where only an image was available. From the Google blog - &lt;a href=&#34;http://googleblog.blogspot.com/2006/11/audio-captchas-when-visual-images-are.html&#34;&gt;Audio captchas when visual images are unusable&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You can easily spot the availability of audio captchas by the presence of the well-recognized &amp;ldquo;wheelchair&amp;rdquo; icon for accessibility &amp;mdash; the image is tagged with appropriate alt text to help blind users. Incidentally you don’t have to be visually impaired to use the audio captcha; if you are in a situation where you find it hard to view the visual captcha &amp;ndash; either because you&amp;rsquo;re at a non-graphical display, or because the specific visual challenge we offered you turned out to be unusable in a given situation, feel free to give the audio captcha a try. We&amp;rsquo;ve worked hard to ensure that the audio captchas work on different hardware/software combinations, and you do not need any special hardware (or software) other than a sound card to be able to use them.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Bad Usability Calendar 2007 open for proposals</title>
+				<link>https://justaddwater.dk/2006/11/10/bad-usability-calendar-2007-open-for-proposals/</link>
+				<pubDate>Fri, 10 Nov 2006 09:37:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/11/10/bad-usability-calendar-2007-open-for-proposals/</guid>
+				<description>&lt;p&gt;Our Norwegian friends at Netlife Research have opened for suggestions to next years Bad Usability Calendar. I already used the &lt;a href=&#34;https://justaddwater.dk/2006/10/16/bad-usability-calendar/&#34; title=&#34;Justaddwater.dk: Bad Usability Calendar 2006&#34;&gt;2006 calendar with great impact&lt;/a&gt; in my professional engagements, and I&amp;rsquo;m really looking forward to next year&amp;rsquo;s version.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;To make a calendar for 2007 that has the same level of unusual unusefulness, we would like your feedback.&lt;/p&gt;&#xA;&lt;p&gt;Give us your best examples of bad usability!&lt;/p&gt;&#xA;&lt;p&gt;The best idea will get an honourable mention, as well as a numbered limited edition of the 2007 Bad Usability Calendar. All suggestions that make the final cut will get a prize.&lt;/p&gt;&#xA;&lt;p&gt;If you need inspiration, check out the Bad Usability Calendars for &lt;a href=&#34;http://www.netliferesearch.com/files/kalender_netlife_V3_mai2005.jpg&#34;&gt;2005&lt;/a&gt;(jpg), and &lt;a href=&#34;http://www.netliferesearch.com/files/kalender_2006_eng_A3.pdf&#34;&gt;2006&lt;/a&gt; (pdf). Thank you in advance for all your help.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>The IE PNG fix vs. Accessibility</title>
+				<link>https://justaddwater.dk/2006/11/06/the-ie-png-fix-vs-accessibility/</link>
+				<pubDate>Mon, 06 Nov 2006 14:08:45 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/11/06/the-ie-png-fix-vs-accessibility/</guid>
+				<description>&lt;p&gt;It is no secret that all versions of Internet Explorer on Windows prior to version 7.0 has a flaw in its PNG renderer. The flaw basically involves the rendering of the alpha transparency and means that the images cannot fade nicely into the background.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-ie-png-bug-explained&#34;&gt;The IE PNG bug explained&lt;/h3&gt;&#xA;&lt;p&gt;In the screenshots below you can see the same image as it is seen in Internet Explorer 6 and Internet Explorer 7 &lt;small&gt;(Gray border added around the edge of the screenshot for your viewing pleasure)&lt;/small&gt;:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>IE7 Accessibility: Magnification</title>
+				<link>https://justaddwater.dk/2006/10/25/ie7-accessibility-magnification/</link>
+				<pubDate>Wed, 25 Oct 2006 18:28:51 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/25/ie7-accessibility-magnification/</guid>
+				<description>&lt;p&gt;It just occurred to me that the new Internet Explorer 7 ships with a zoom tool.&lt;/p&gt;&#xA;&lt;p&gt;In other/older browsers (even the new Firefox 2 which was just released yesterday) zoom can only achieved natively by increasing or decreasing the text size - and that is only if the text size is not written in pixels.&lt;/p&gt;&#xA;&lt;p&gt;IE7 still have the old text size in-/decrease functionality but have also added a regular zoom tool:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>CAPTCHA usability: Humane alternative to CAPTCHA</title>
+				<link>https://justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/</link>
+				<pubDate>Mon, 23 Oct 2006 15:25:06 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/</guid>
+				<description>&lt;p&gt;Revisiting CAPTCHA: Since W3C wrote about &amp;ldquo;&lt;a href=&#34;http://www.w3.org/TR/turingtest/&#34;&gt;inaccessibility of CAPTCHA&lt;/a&gt;&amp;rdquo; almost a year ago, a new technique has emerged:&lt;/p&gt;&#xA;&lt;p&gt;Using technology, to make it easier for humans, and challenging for robots to fill out a form, and using a more traditional fall-back method in the rare cases where the system cannot detect if a human is filling in the form.&lt;/p&gt;&#xA;&lt;p&gt;CAPTCHA is for instance showing an image with distorted text in order to make it impossible for computers to read. The side effect has been problems for people using assistive technology such as blind people using screenreaders.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Bad Usability Calendar</title>
+				<link>https://justaddwater.dk/2006/10/16/bad-usability-calendar/</link>
+				<pubDate>Mon, 16 Oct 2006 10:07:44 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/16/bad-usability-calendar/</guid>
+				<description>&lt;p&gt;Perfect wallpaper for any project room. The Bad Usability Calendar from Norwegian company &lt;a href=&#34;http://www.netliferesearch.com/&#34;&gt;Netlife Research&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At UI 11 last week I was fortunate to meet Eidar (&lt;a href=&#34;http://flickr.com/photos/jesper/267203608/&#34;&gt;photo&lt;/a&gt;) from Netlife Research. His usability firm made a Bad Usability Calendar, which is absolutely fantastic. I&amp;rsquo;m putting the link here directly, as their pages are in Norwegian.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Bad Usability Calendar 2006 (&lt;a href=&#34;http://www.netliferesearch.com/files/kalender_2006_eng_A3.pdf&#34;&gt;Direct link, English version, 886 kb PDF&lt;/a&gt;)&lt;/strong&gt;, &lt;small&gt;[&lt;a href=&#34;http://www.netliferesearch.com/article.php?articleID=170&#34;&gt;link to page&lt;/a&gt;]&lt;/small&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/10/screenshot-bad-usability-calendar1.png&#34; alt=&#34;Bad usability calendar 2006 screenshot&#34; width=&#34;400&#34; height=&#34;268&#34;&gt;&#xA;&lt;br&gt;&#xA;They also did a &lt;a href=&#34;http://www.netliferesearch.com/article.php?articleID=138&#34;&gt;similar calender for 2005&lt;/a&gt;, but unfortunately only in Norwegian.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mobile Web Best Practices</title>
+				<link>https://justaddwater.dk/2006/06/28/mobile-web-best-practices/</link>
+				<pubDate>Wed, 28 Jun 2006 10:13:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/28/mobile-web-best-practices/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3C&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/w3c_home.png&#34; alt=&#34;W3C Icon&#34; title=&#34;W3C Icon&#34; align=&#34;left&#34; style=&#34;margin: 5px 8px 0pt 0pt&#34; width=&#34;72&#34; height=&#34;48&#34;&gt;&#xA;&lt;/a&gt;Yesterday the W3C released a Candidate Recommendation document called &amp;ldquo;&lt;a href=&#34;http://www.w3.org/TR/2006/CR-mobile-bp-20060627/&#34; title=&#34;W3C: Mobile Web Best Practices 1.0&#34;&gt;Mobile Web Best Practices 1.0&lt;/a&gt;&amp;rdquo;. With this document W3C is offering a set of guidelines to help web developers deliver a better user experience to mobile users.&lt;/p&gt;&#xA;&lt;p&gt;The deadline for providing feedback to W3C is the 27th of August 2006 and all developers are encouraged to try it out.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ten reaffirmations from London @media 2006</title>
+				<link>https://justaddwater.dk/2006/06/25/ten-reaffirmations-from-london-media-2006/</link>
+				<pubDate>Sun, 25 Jun 2006 00:56:13 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/25/ten-reaffirmations-from-london-media-2006/</guid>
+				<description>&lt;p&gt;Hi, this is Luis Villa, Thomas and Jesper&amp;rsquo;s former colleague at Capgemini Spain. They couldn&amp;rsquo;t make it to @media in London last week, so they asked me to give a summary of the event.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.vivabit.com/atmedia2006/&#34;&gt;London @media 2006&lt;/a&gt; was a Conference about &lt;em&gt;frontend&lt;/em&gt; and web user interface in all its dimensions: strategy, design and building and after attending the &lt;a href=&#34;http://www.w3.org/2006/03/TP2006-participants.html&#34;&gt;W3C Technical Plenary at Cannes&lt;/a&gt; — more technical — it was the chance to see &lt;a href=&#34;http://www.vivabit.com/atmedia2006/speakers/&#34;&gt;other people&lt;/a&gt; that have most influenced the user experience on the web and talking with them. Really, it felt like a rock concert full of fans.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability: Avoid Spam Comments</title>
+				<link>https://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/</link>
+				<pubDate>Sat, 24 Jun 2006 23:58:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/</guid>
+				<description>&lt;p&gt;Since yesterday, the volume of spam comments has gone up even more. Now we get 150 spam comments every 12 hours. (&lt;a href=&#34;https://justaddwater.dk/2006/06/23/spam-comments-just-got-worse/&#34; title=&#34;Justaddwater.dk: Spam comments just got worse&#34;&gt;Yesterday it was 21 hours&lt;/a&gt;). I promised to tell about what countermeasures we have taken against spam comments.&lt;/p&gt;&#xA;&lt;p&gt;What has that to do with usability? Well, in my opinion, irrelevant comments removes focus from the relevant content on the page, and makes your article less useful because of the irrelevant content.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>57% of users will benefit from assistive technologies</title>
+				<link>https://justaddwater.dk/2006/04/24/assistive/</link>
+				<pubDate>Mon, 24 Apr 2006 10:00:15 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/24/assistive/</guid>
+				<description>&lt;p&gt;As a followup to my post &lt;a href=&#34;https://justaddwater.dk/2006/01/20/one-of-four-web-users-are-disabled-users/&#34; title=&#34;Permanent Link: 25% of all web users are disabled&#34;&gt;25% of all web users are disabled&lt;/a&gt;, I saw that Microsoft commissioned Forrester to make research about accessibility and assistive technologies.&lt;/p&gt;&#xA;&lt;p&gt;They found that &lt;a href=&#34;http://www.microsoft.com/presspass/press/2004/feb04/02-02AdultUserBenefitsPR.mspx&#34; title=&#34;Microsoft.com: New Research Study Shows 57 Percent of Adult Computer Users Can Benefit From Accessible Technology&#34;&gt;57% are likely to benefit from assistive technologies&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The goals of this study were to identify the range of physical and cognitive abilities among working-age adults and current computer users in the United States, the types of difficulties and impairments that limit the scope of activities and their degree of severity, and the number of people who could potentially benefit from using accessible technology. This information, coupled with aging population trends, can help to explain the aging population&amp;rsquo;s impact on computer use and need for accessible technology.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Free Service: See your website in different browsers</title>
+				<link>https://justaddwater.dk/2006/04/22/free-service-see-your-website-in-different-browsers/</link>
+				<pubDate>Sat, 22 Apr 2006 15:45:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/22/free-service-see-your-website-in-different-browsers/</guid>
+				<description>&lt;p&gt;A free online service called &lt;a href=&#34;http://browsershots.org/&#34;&gt;Browsershots&lt;/a&gt; has just launched (still beta). You provide it with a URI and it will take real screenshots in different browsers of that page.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/04/browsershots.png&#34; alt=&#34;Browsershots.org website screenshot&#34; width=&#34;437&#34; height=&#34;272&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Currently you get screenshots from the following browser brands:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Epiphany 1.4.8&lt;/li&gt;&#xA;&lt;li&gt;Firefox 1.0.4&lt;/li&gt;&#xA;&lt;li&gt;Firefox 1.5.0&lt;/li&gt;&#xA;&lt;li&gt;Galeon 1.3.20&lt;/li&gt;&#xA;&lt;li&gt;Konqueror 3.3&lt;/li&gt;&#xA;&lt;li&gt;Mozilla 1.7.8&lt;/li&gt;&#xA;&lt;li&gt;MSIE 6.0&lt;/li&gt;&#xA;&lt;li&gt;MSIE 7.0 Beta&lt;/li&gt;&#xA;&lt;li&gt;Opera 8.50&lt;/li&gt;&#xA;&lt;li&gt;Safari 2.0&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can even choose multiple screen resolutions as well.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Golden nuggets for describing browser support</title>
+				<link>https://justaddwater.dk/2006/04/11/golden-nuggets-for-describing-browser-support/</link>
+				<pubDate>Tue, 11 Apr 2006 13:06:50 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/11/golden-nuggets-for-describing-browser-support/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://developer.yahoo.net/yui/articles/gbs/gbs.html&#34;&gt;Yahoo! Developer Network: Graded Browser Support&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Super article by Nate Koechley of Yahoo!. He has done an excellent job for describing Yahoo!&amp;rsquo;s different grades of browser support. For those of you who wonder why not all browsers get the same code. They do. They just interpret it differently. This is what makes front-end web development so hard.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Support does not mean that everybody gets the same thing. Expecting two users using different browser software to have an identical experience fails to embrace or acknowledge the heterogeneous essence of the Web. In fact, requiring the same experience for all users creates a barrier to participation. Availability and accessibility of content should be our key priority.&lt;/p&gt;&#xA;&lt;p&gt;Consider television. At the core: TV distributes information. A hand-cranked emergency radio is capable of receiving television audio transmissions. It would be counter-productive to prevent access to this content, even though it’s a fringe experience.&lt;/p&gt;&#xA;&lt;p&gt;Some viewers still have black-and-white televisions. Broadcasting only in black-and-white — the “lowest common denominator” approach — ensures a shared experience but benefits no one. Excluding the black-and-white television owners — the “you must be this tall to ride” approach — provides no benefit either.&lt;/p&gt;&#xA;&lt;p&gt;An appropriate support strategy allows every user to consume as much visual and interactive richness as their environment can support. This approach—commonly referred to as &lt;em&gt;progressive enhancement&lt;/em&gt; — builds a rich experience on top of an accessible core, without compromising that core.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>E-mail vs. RSS</title>
+				<link>https://justaddwater.dk/2006/04/04/e-mail-vs-rss/</link>
+				<pubDate>Tue, 04 Apr 2006 22:39:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/04/e-mail-vs-rss/</guid>
+				<description>&lt;p&gt;Syndicated feeds in form of RSS or Atom is the hot way of getting news from around the world delivered instantly and dynamically to your desktop. Previously a user could only do so by registering for an e-mail newsletter.&lt;/p&gt;&#xA;&lt;p&gt;Believe it or not some people don&amp;rsquo;t have a news aggregator installed. They might not even know of the free online news aggregators like for instance Google Reader. Maybe they don&amp;rsquo;t feel safe with this new technology or maybe they simply just don&amp;rsquo;t care. Whatever the reason we should still consider offering them the old school newsletter send by regular e-mail alongside the news feed offer.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How to indicate required or optional form fields</title>
+				<link>https://justaddwater.dk/2006/03/29/how-to-indicate-required-or-optional-form-fields/</link>
+				<pubDate>Wed, 29 Mar 2006 17:50:33 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/03/29/how-to-indicate-required-or-optional-form-fields/</guid>
+				<description>&lt;p&gt;I got &lt;a href=&#34;https://justaddwater.dk/2005/12/23/sensible-forms-a-form-usability-checklist/#comment-2039&#34;&gt;a question from Kimberly&lt;/a&gt;, one of our reader, in the &lt;a href=&#34;https://justaddwater.dk/2005/12/23/sensible-forms-a-form-usability-checklist/&#34;&gt;Sensible Forms: A Form Usability Checklist&lt;/a&gt; post where she asks where the best place to display the asterisk indicating a required field in af form is:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;[&amp;hellip;] I’d like to see the askterick appear before the label so that a user isn’t forced to read every label or field and can simply look for the askterick. What do you think?&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>25% disabled web users picked up by Steve Krug</title>
+				<link>https://justaddwater.dk/2006/03/08/steve-krug/</link>
+				<pubDate>Wed, 08 Mar 2006 23:31:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/03/08/steve-krug/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/03/dont-make-me-think.jpg&#34; alt=&#34;dont-make-me-think.jpg&#34; align=&#34;left&#34; style=&#34;margin-right: 6px&#34; width=&#34;225&#34; height=&#34;290&#34;&gt;&#xA;I&amp;rsquo;m a big fan of &lt;a href=&#34;http://www.sensible.com/&#34; title=&#34;Steve Krug website&#34;&gt;Steve Krug&lt;/a&gt; and especially the &amp;ldquo;&lt;a href=&#34;http://www.sensible.com/buythebook.html&#34; title=&#34;Don&#39;t make me think: buy the book&#34;&gt;Don&amp;rsquo;t make me think&lt;/a&gt;&amp;rdquo; mantra (because most people actually get the point). In his &lt;a href=&#34;http://www.boston-ia.org/news/article_17.html&#34; title=&#34;Boston-IA: &#34;&gt;presentation at the Boston-IA chapter&lt;/a&gt; from Jan 26, this blog suddently shows up.&lt;/p&gt;&#xA;&lt;p&gt;Steve Krug refers to &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/01/20/one-of-four-web-users-are-disabled-users/&#34; title=&#34;Justaddwater.dk: 25% of all web users are disabled&#34;&gt;25% of all web users are disabled&lt;/a&gt;&amp;rdquo;. Steve Krug. I&amp;rsquo;m amazed!&lt;/p&gt;&#xA;&lt;p&gt;Have a look in the PowerPoint at page 9 (you really can&amp;rsquo;t miss it) or if you&amp;rsquo;re not into Microsoft programs, take a look at the &lt;a href=&#34;http://www.boston-ia.org/library/presentations/krug_presentation_2006.html&#34; title=&#34;Boston-IA Presentation: Real-Life Accessibility, by Steve Krug, January 2006 (Text Version)&#34;&gt;text version&lt;/a&gt; online or see my screenshot here:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Captcha usability revisited: Google inaccessible to blind people</title>
+				<link>https://justaddwater.dk/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-people/</link>
+				<pubDate>Mon, 30 Jan 2006 16:42:24 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-people/</guid>
+				<description>&lt;p&gt;&lt;em&gt;An online petition is being circulated to all Internet users for the purpose of collecting signatures showing support for Google to make its word verification scheme accessible to the blind and visually impaired.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;I just signed up for the request to make Google more accessible. (I&amp;rsquo;m &lt;a href=&#34;http://www.petitiononline.com/mod_perl/signed.cgi?captcha&#34; title=&#34;Google Word Verification Accessibility: Petition signatures&#34;&gt;number 2759 on the list&lt;/a&gt;), and &lt;a href=&#34;http://www.petitiononline.com/captcha/&#34; title=&#34;Sign the Google Word Verification Accessibility Pertition&#34;&gt;you can sign it too&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;We, the undersigned, ask Google Inc. to &amp;ldquo;do no evil&amp;rdquo; and follow their mission statement to &amp;ldquo;organize the world&amp;rsquo;s information and make it universally accessible and useful&amp;rdquo; by promptly adding accessibility to their visual word verification scheme so that the blind and visually impaired are allowed to fully participate in all products and services offered by the company on terms of equality with our sighted peers.Sincerely,&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.petitiononline.com/mod_perl/signed.cgi?captcha&#34;&gt;The Undersigned&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>More numbers confirming 25% of web users disabled</title>
+				<link>https://justaddwater.dk/2006/01/24/more-numbers-confirming-25-of-web-users-disabled/</link>
+				<pubDate>Tue, 24 Jan 2006 23:57:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/24/more-numbers-confirming-25-of-web-users-disabled/</guid>
+				<description>&lt;p&gt;UPDATE: This is reposted (with a new URL): I forgot to fill out a title for the article and my blog software did not stop me. This is of course a usability issue as the software is not dealing with my stupidity and eagerness to press the publish button ;-)&lt;/p&gt;&#xA;&lt;p&gt;More numbers show up that back up my claim that &lt;a href=&#34;https://justaddwater.dk/2006/01/20/one-of-four-web-users-are-disabled-users/&#34; title=&#34;Justaddwater.dk: One of four web users are disabled&#34;&gt;25% of your users are disabled&lt;/a&gt;. (&amp;ldquo;disabled&amp;rdquo; to me is physical as for instance a visual impairment, and technological as using a small screen or wireless device).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>25% of all web users are disabled</title>
+				<link>https://justaddwater.dk/2006/01/20/one-of-four-web-users-are-disabled-users/</link>
+				<pubDate>Fri, 20 Jan 2006 11:09:30 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/20/one-of-four-web-users-are-disabled-users/</guid>
+				<description>&lt;p&gt;Did you know that up to 25% of all visitors on your website have some kind of accessibility problem. Some of your users may be blind, deaf, dyslectic, has learning disabilities or motoric disabilities such as schlerosis, parkinson&amp;rsquo;s disease, etc. A so-called functional disability.&lt;/p&gt;&#xA;&lt;p&gt;But how about users with a technical disability: Wireless devices, slow internet connections, old browsers, feed readers, etc. These should be considered as well, as there are probably more people with technological disability than functional disability.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The Anatomy of Web Fonts</title>
+				<link>https://justaddwater.dk/2005/12/14/the-anatomy-of-web-fonts/</link>
+				<pubDate>Wed, 14 Dec 2005 23:40:27 +0000</pubDate>
+				<guid>https://justaddwater.dk/2005/12/14/the-anatomy-of-web-fonts/</guid>
+				<description>&lt;p&gt;Just want to tell you about a very great and informative article on sitepoint.com by Andy Hume I just read called &amp;ldquo;&lt;a href=&#34;http://www.sitepoint.com/article/anatomy-web-fonts&#34;&gt;The Anatomy of Web Fonts&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s basically teaching the reader typography for the web. Many of the examples and points given will be very familiar to the traditional book or newspaper typographer. But everything is carefully explained and written with the focus on how to &lt;strong&gt;type text in a readable and accessible fashion on the web&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

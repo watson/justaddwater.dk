@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Svn on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/svn/</link>
+		<description>Recent content in Svn on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 28 Jun 2012 20:42:46 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/svn/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Forgotten Subversion Commands, Undo, Merge Branches and More</title>
+				<link>https://justaddwater.dk/2012/06/28/forgotten-subversion-commands-undo-merge-branches-and-more/</link>
+				<pubDate>Thu, 28 Jun 2012 20:42:46 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/06/28/forgotten-subversion-commands-undo-merge-branches-and-more/</guid>
+				<description>&lt;p&gt;In a current project I use a lot of Subversion (svn) from the command-line.&lt;/p&gt;&#xA;&lt;p&gt;Subversion recently has lost terrain to Git for several reasons. But actually, svn is capable of doing many of the things I love from Git.&lt;/p&gt;&#xA;&lt;p&gt;Here are some less known commands I find extremely helpful.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;h3 id=&#34;undo-last-commit&#34;&gt;Undo last commit&lt;/h3&gt;&#xA;&lt;p&gt;svn merge -r HEAD:PREV .&lt;/p&gt;&#xA;&lt;p&gt;This commands merges in the changes required to go from latest version (HEAD) and back to the previous (PREV).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Easy delete all .svn Subfolders in Windows Explorer</title>
+				<link>https://justaddwater.dk/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/</link>
+				<pubDate>Tue, 01 Mar 2011 11:08:51 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/</guid>
+				<description>&lt;p&gt;I had to repair a flawed Subversion repository recently (not all files were committed). I had my local repository checked out. This was the flawed part, containing only parts of the folders and files it should.&lt;/p&gt;&#xA;&lt;p&gt;Then, I got a zip file from the machine where it was working. Problem: It contained .svn folders from the other developer. So to merge these i did the following workflow:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Delete all .svn folders from other developer&amp;rsquo;s zip&lt;/li&gt;&#xA;&lt;li&gt;Move other developers folder over on top of my local install.&lt;/li&gt;&#xA;&lt;li&gt;Commit all missing files&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Of course this will only work if there are no .svn folders in other developer&amp;rsquo;s file, because then svn authentication, paths, etc. will be messed up, and commit will fail.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Windows SVN pre-commit-hook</title>
+				<link>https://justaddwater.dk/2010/06/10/windows-svn-pre-commit-hook/</link>
+				<pubDate>Thu, 10 Jun 2010 09:23:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/06/10/windows-svn-pre-commit-hook/</guid>
+				<description>&lt;p&gt;At a current project I work on, we use a Windows server to run our subversion repository.&lt;/p&gt;&#xA;&lt;p&gt;I wanted to set up the pre-commit hook so that commits with empty comment are automatically rejected.&lt;/p&gt;&#xA;&lt;p&gt;All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal).&lt;/p&gt;&#xA;&lt;p&gt;Here is a the pre-commit hook rewritten as a windows .bat file.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;pre-commit.bat — &lt;a href=&#34;https://gist.github.com/432704&#34;&gt;gist on GitHub&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Importing Existing Git repository into SVN</title>
+				<link>https://justaddwater.dk/2009/07/08/importing-existing-git-repository-into-svn/</link>
+				<pubDate>Wed, 08 Jul 2009 10:59:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/07/08/importing-existing-git-repository-into-svn/</guid>
+				<description>&lt;p&gt;Many of my colleagues know svn but are in general not (yet) ready jump over to using Git for bigger projects.&lt;/p&gt;&#xA;&lt;p&gt;Today I had to import my existing Git repository into SVN. I had been working locally with a Git repos and wanted to keep my history before giving access to my colleagues.&lt;/p&gt;&#xA;&lt;p&gt;The guide from Google Code is really easy, and the commands are just to follow (although several of them I don&amp;rsquo;t understand). Set the following variables to fit your needs&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Using Git for SVN Repositories Workflow</title>
+				<link>https://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/</link>
+				<pubDate>Mon, 09 Mar 2009 14:52:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/</guid>
+				<description>&lt;p&gt;For the last months I have been using Git to work with my Subversion repositories. Besides from &lt;a href=&#34;https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/&#34; title=&#34;justaddwater.dk | Git Side Benefit: Reducing Disk Usage&#34;&gt;reducing disk usage&lt;/a&gt;, Git also makes my work slightly faster and independent of network access &amp;ndash; I can make commits to repository which is sync&amp;rsquo;ed later when I get online.&lt;/p&gt;&#xA;&lt;p&gt;One challenge though: Using branches&lt;/p&gt;&#xA;&lt;p&gt;I ran into some pitfalls when using branches in Subversion repository. Here is a quick guide to how I setup and work with svn branches in git-svn.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Using Local File-based Git -- Server Laziness</title>
+				<link>https://justaddwater.dk/2009/02/21/using-local-file-based-git-server-laziness/</link>
+				<pubDate>Sat, 21 Feb 2009 10:04:59 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/02/21/using-local-file-based-git-server-laziness/</guid>
+				<description>&lt;p&gt;My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Each developer&amp;rsquo;s machine has it&amp;rsquo;s own Git repository.&lt;/li&gt;&#xA;&lt;li&gt;On my machine I had an extra &amp;lsquo;master&amp;rsquo; repository that other developers could push into.&lt;/li&gt;&#xA;&lt;li&gt;In the example below the local developer repos is called &amp;rsquo;local&amp;rsquo; and the master is called &amp;lsquo;remote&amp;rsquo;&lt;/li&gt;&#xA;&lt;li&gt;The master repository could be on a network drive as well.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Developer&amp;rsquo;s workflow: Push changes to &amp;lsquo;remote&amp;rsquo;:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Git Side Benefit: Reducing Disk Usage</title>
+				<link>https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/</link>
+				<pubDate>Sat, 17 Jan 2009 14:28:52 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/</guid>
+				<description>&lt;p&gt;A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed.&lt;br&gt;&#xA;I created two checkouts of a svn project &amp;ndash; one using traditional svn and one using git (which can actually clone a svn repos &amp;ndash; see explanation below).&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;~/my-projects&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;  du -hd &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; berammelse berammelse.git &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; dokboks dokboks.git       &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; intrastat intrastat.git   &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; kompetenceregister k2.git &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; ourpeople ourpeople.git   &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; let0004 let0004.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;43M berammelse&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;38M berammelse.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;63M dokboks&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;11M dokboks.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;53M intrastat&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;34M intrastat.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;144M    kompetenceregister&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;47M kompetenceregister.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;118M    ourpeople&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;151M    ourpeople.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;163M    let0004&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;98M let0004.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For any project I tried this, Git uses significantly less disk space. It&amp;rsquo;s just a side effect, I know. But more important: The git version has all the logfile history offline and that makes rolling forward/back much faster :)&lt;br&gt;&#xA;FYI i&amp;rsquo;m using my version of &lt;a href=&#34;http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/%20%20&#34;&gt;Dr. Nic&amp;rsquo;s &amp;ldquo;gitify&amp;rdquo;&lt;/a&gt; command that wraps a &amp;ldquo;git svn&amp;rdquo; command. This way I can use git locally and then re-commit into svn when done.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

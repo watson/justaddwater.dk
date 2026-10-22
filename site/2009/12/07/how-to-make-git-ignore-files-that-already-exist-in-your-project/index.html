@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to make Git ignore files that already exist in your project · justaddwater.dk</title>
+<meta name="description" content="For a project I&rsquo;m working on, I had to change some files with personal settings, and the files kept showing up with a git status.
+Adding files to …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/12/01/run-tiny-webserver-from-any-directory/" rel="prev">Run Tiny Webserver From Any Directory</a></div>
+<div class="alignright"><a href="/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/" rel="next">How To add “Open folder in Textmate” to Finder Context Menu</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-12-07"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="git"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="For a project I’m working on, I had to change some files with personal settings, and the files kept showing up with a `git status`. Adding files to .gitignore that are already tracked does not work. (and it’s actually pretty well documented in the documentation). In stead, it’s possible to use this command: git update-index –assume-unchanged [filename(s)] From [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Dec 7"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="5"></span>
+<h2 data-pagefind-meta="title">How to make Git ignore files that already exist in your project</h2>
+<div class="entry">
+<p>For a project I&rsquo;m working on, I had to change some files with personal settings, and the files kept showing up with a <code>git status</code>.</p>
+<p>Adding files to .gitignore that are already tracked does not work. (and it&rsquo;s actually pretty well documented in the documentation). In stead, it&rsquo;s possible to use this command:</p>
+<p>git update-index &ndash;assume-unchanged [filename(s)]</p>
+<p>From <a href="http://www.kernel.org/pub/software/scm/git/docs/git-update-index.html">git-update-index manual page</a>:</p>
+<blockquote>
+<pre><code>--assume-unchanged
+--no-assume-unchanged
+</code></pre>
+<p>When these flags are specified, the object names recorded for the paths are not updated. Instead, these options set and unset the &ldquo;assume unchanged&rdquo; bit for the paths.</p>
+<p>When the &ldquo;assume unchanged&rdquo; bit is on, git stops checking the working tree files for possible modifications, so you need to manually unset the bit to tell git when you change the working tree file. This is sometimes helpful when working with a big project on a filesystem that has very slow lstat(2) system call (e.g. cifs).</p>
+</blockquote>
+<p>Fantastic! my system files are now ignored by git :)</p>
+<p>It&rsquo;s an incredibly useful tip for example if you have files that MUST live in the repository and that servers/editors change. In this particular project, Tomcat keeps changing two files. Furthermore I have changed the log-level from INFO to WARN which I should not commit into the repository.</p>
+<p><code>git update-index --assume-unchanged</code> lets me do exactly that.</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, December 7th, 2009 at 13:28 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">5 Responses to &#8220;How to make Git ignore files that already exist in your project&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-502328">
+<cite><a href="http://cbanta.wordpress.com/2010/11/10/ignore-git-files-that-already-exist-in-the-repository/" class="url" rel="external">Ignore Git files that already exist in the repository « Blog</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-502328" title="">November 11th, 2010 at 05:19 (GMT-1)</a> </small>
+<p>[&hellip;] I made changes to some config files for dev purposes. And I didn’t want to commit that back into git. The problem is that .gitignore and .git/info/exclude don’t work on a file already in the repository. So after googling a bit, I found a way to do this here: <a href="http://justaddwater.dk/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/">http://justaddwater.dk/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/</a> [&hellip;]</p>
+</li>
+
+<li id="comment-541841">
+<cite><a href="http://choirarrangements.freeldssheetmusic.org" class="url" rel="external">roger</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-541841" title="">September 19th, 2011 at 17:00 (GMT-1)</a> </small>
+<p>for followers:</p>
+<p>$ git update-index &ndash;assume-unchanged source_code/PushSource.vxcproj<br>
+fatal: Unable to mark file source_code/PushSource.vxcproj</p>
+<p>meant &ldquo;that file doesn&rsquo;t exist&rdquo;</p>
+
+</li>
+
+<li class="alt" id="comment-565865">
+<cite><a href="http://eduboris.blogspot.com" class="url" rel="external">EduBoris</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-565865" title="">December 1st, 2011 at 22:01 (GMT-1)</a> </small>
+<p>Perfect!</p>
+<p>Worked well for existing files, is it possible for newly created files not yet in the repo&hellip; and not required (such as cache files)?</p>
+<p>Thank you for the tip :)</p>
+
+</li>
+
+<li id="comment-574561">
+<cite>Martin</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-574561" title="">December 22nd, 2011 at 04:54 (GMT-1)</a> </small>
+<p>EduBoris, if the file is not being tracked by git yet, just add it on .gitignore file. Thanks for this tip!</p>
+</li>
+
+<li class="alt" id="comment-617926">
+<cite><a href="http://chrisburbridge.com" class="url" rel="external">Chris Burbridge</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-617926" title="">June 14th, 2012 at 22:53 (GMT-1)</a> </small>
+<p>Thanks! Just what I was looking for.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

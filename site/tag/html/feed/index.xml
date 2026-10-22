@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>HTML on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/html/</link>
+		<description>Recent content in HTML on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 16 Sep 2009 10:32:56 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/html/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CSS Styling Buttons Problem with Underlined Text</title>
+				<link>https://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</link>
+				<pubDate>Wed, 16 Sep 2009 10:32:56 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</guid>
+				<description>&lt;p&gt;I ran into the challenge the other day to style a&amp;lt;button&amp;gt; element to make it look like a link (with underline and everything).&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately, the &amp;lt;button&amp;gt; element does not react to text-decoration: underline;&lt;/p&gt;&#xA;&lt;p&gt;But according to &lt;a href=&#34;http://csscreator.com/node/25902&#34; title=&#34;CSS Forum: [Solved?] Doctype prevents underline in button input&#34;&gt;a discussion at the CSS Creator forum&lt;/a&gt;, there is a way out:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I was just messing around with it and for some reason this doesn&amp;rsquo;t work:&lt;br&gt;&#xA;&lt;code&gt;input {text-decoration:underline;}&lt;/code&gt;&lt;br&gt;&#xA;but this does:&lt;br&gt;&#xA;&lt;code&gt;input {text-decoration:underline;float:left;}&lt;/code&gt;&lt;br&gt;&#xA;and&lt;br&gt;&#xA;&lt;code&gt;input{text-decoration:underline;display:block;}&lt;/code&gt;&lt;br&gt;&#xA;and&lt;br&gt;&#xA;&lt;code&gt;input{text-decoration:underline;position:absolute;}&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t ask me&amp;hellip; I can&amp;rsquo;t explain this one.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</title>
+				<link>https://justaddwater.dk/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/</link>
+				<pubDate>Wed, 02 Sep 2009 15:23:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/</guid>
+				<description>&lt;p&gt;I was reading up on the good old HTML specification and discovered a feature I had always wanted &amp;ndash; and it&amp;rsquo;s already there:&lt;br&gt;&#xA;Creating widths of columns that will work like percentages, but will also pay attention to any small, fixed-width columns.&lt;/p&gt;&#xA;&lt;p&gt;Take a look at HTML&amp;rsquo;s proportional widths and amount alignment features.&lt;/p&gt;&#xA;&lt;p&gt;Look at this from HTML specification of &amp;lt;COL&amp;gt; elements:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Authors may specify column widths in three ways:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fixed&lt;/strong&gt;&lt;br&gt;&#xA;A fixed width specification is given in pixels (e.g., &lt;code&gt; width&lt;/code&gt;=&amp;ldquo;30&amp;rdquo;). A fixed-width specification enables incremental rendering.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Percentage&lt;/strong&gt;&lt;br&gt;&#xA;A percentage specification (e.g., &lt;code&gt;width&lt;/code&gt;=&amp;ldquo;20%&amp;rdquo;) is based on the percentage of the horizontal space available to the table (between the current left and right margins, including floats). Note that this space does not depend on the table itself, and thus percentage specifications enable incremental rendering.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Proportional&lt;/strong&gt;&lt;br&gt;&#xA;Proportional specifications (e.g., &lt;code&gt;width&lt;/code&gt;=&amp;ldquo;3*&amp;rdquo;) refer to portions of the horizontal space &lt;em&gt;required&lt;/em&gt; by a table. If the table width is given a fixed value via the &lt;code&gt;width&lt;/code&gt; attribute of the &lt;a href=&#34;http://www.w3.org/TR/html4/struct/tables.html#edef-TABLE&#34;&gt;&lt;code&gt;TABLE&lt;/code&gt;&lt;/a&gt; element, user agents may render the table incrementally even with proportional columns.However, if the table does not have a fixed width, user agents must receive all table data before they can determine the horizontal space required by the table. Only then may this space be allotted to proportional columns.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

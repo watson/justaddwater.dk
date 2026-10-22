@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>WordPress on Just Add Water</title>
+		<link>https://justaddwater.dk/category/wordpress/</link>
+		<description>Recent content in WordPress on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 14 Jun 2009 17:06:34 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/wordpress/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Comments working again</title>
+				<link>https://justaddwater.dk/2009/06/14/comments-working-again/</link>
+				<pubDate>Sun, 14 Jun 2009 17:06:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/06/14/comments-working-again/</guid>
+				<description>&lt;p&gt;Thanks to one of our dear readers we just discovered a bug in our commenting system that basically meant that you could not leave a comment on any of our posts. This has now been fixed and you can now again tell us your thoughts.&lt;/p&gt;&#xA;&lt;p&gt;Of cause we should have noticed, since the amount of spam had dropped to zero. But now that we are receiving thousands of spam comments once again we know that everything is ok ;)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Make Wordpress Editor Less Evil</title>
+				<link>https://justaddwater.dk/2008/01/06/make-wordpress-editor-less-evil/</link>
+				<pubDate>Sun, 06 Jan 2008 19:26:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/06/make-wordpress-editor-less-evil/</guid>
+				<description>&lt;p&gt;This Friday, Jesper and I had a chat about things we don&amp;rsquo;t like about the current WordPress WYSIWYG editor. In particular when trying to write code examples in our posts:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Jesper:&lt;/strong&gt; One change I really would appreciate in the next Wordpress would be the ability to shift wysiwyg/code editor directly on the edit page&lt;/p&gt;&#xA;&lt;p&gt;(Now we have to change it on the user prefs page)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Thomas:&lt;/strong&gt; now = today&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Jesper:&lt;/strong&gt; aggreed! the sooner the better!&lt;/p&gt;&#xA;&lt;p&gt;I would like always to put my setting to wysiwyg off and turn it on when editing a post individually. Too often I have burnt my fingers and messed up posts containing code, blockquotes or formatted whitespace&lt;/p&gt;&#xA;&lt;p&gt;If the control were moved to the edit page I could easily write wysiwyg when needed and avoid it when it would mess up my post&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Thomas:&lt;/strong&gt; Yes&amp;hellip; it should be possible to tell WordPress that a given post should always open with WYSIWYG off (or on) whenever it is edited&amp;hellip; dismissing the default settings&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Jesper:&lt;/strong&gt; exactly!&lt;/p&gt;&#xA;&lt;p&gt;wysiwyg MUST be off by default because it&amp;rsquo;s darn destructive! (at least in the current versions of the wysiwyg editors)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Thomas:&lt;/strong&gt; I wonder if there exists some WP plugins out there that do this already&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Jesper:&lt;/strong&gt; Good question!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Thomas:&lt;/strong&gt; &amp;hellip; or even better doesn&amp;rsquo;t mess up custom code or HTML&lt;/p&gt;&#xA;&lt;p&gt;(I mean&amp;hellip; hacks WP so it doesn&amp;rsquo;t)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Jesper:&lt;/strong&gt; I hate the double/single quotes that WP replaces.&lt;/p&gt;&#xA;&lt;p&gt;All code examples stop working unless the author manually replaces:&lt;/p&gt;&#xA;&lt;p&gt;&amp;lsquo;(single quote) with &amp;amp;#039;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;(double quote) with &amp;amp;quot;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Thomas:&lt;/strong&gt; I think that there is a simple solution to the quote issue&amp;hellip; it must be fairly simple to change that&lt;/p&gt;&#xA;&lt;p&gt;*searching for a fix*&lt;/p&gt;&#xA;&lt;p&gt;Sent at 11:04 PM on Friday&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Thomas:&lt;/strong&gt; hmmm it seems to be hard to find&lt;/p&gt;&#xA;&lt;p&gt;Is the problem that you write a regular quote and WordPress translates it into a html entity or the other way around?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Jesper:&lt;/strong&gt; The problem is when posting code snippets, HTML or JavaScript for instance. The regular quote (double quote) is automatically translated to the angled double quotes &amp;ndash; the same illness as Word does by default.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s an illness, in my opinion.&lt;/p&gt;&#xA;&lt;p&gt;Leave it up to the user to actively change my text&lt;/p&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t spoil my code snippets by default.&lt;/p&gt;&#xA;&lt;p&gt;Making normal quotes in normal text pretty is just not a great tradeoff &amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Thomas:&lt;/strong&gt; depends&amp;hellip; the quotes them selves look great when wrapping sentences - but doesn&amp;rsquo;t work for code - I agree&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Cleanup Time -- Spam Filter Free Day</title>
+				<link>https://justaddwater.dk/2007/12/18/cleanup-time-spam-filter-free-day/</link>
+				<pubDate>Tue, 18 Dec 2007 10:55:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/12/18/cleanup-time-spam-filter-free-day/</guid>
+				<description>&lt;p&gt;1111 spam comments in the last 24 hours have been published on Justaddwater.dk. Just for the record, all of them are now deleted. The many spam comments has had no effect whatsoever with respect to Google PageRank or similar, since we kept &amp;lt;code&amp;gt;rel=&amp;ldquo;nofollow&amp;rdquo;&amp;lt;/code&amp;gt; on all links. Besides, we quickly removed all spam comments at the end of Spam Filter Free Day.&lt;/p&gt;&#xA;&lt;p&gt;137 new conversations in my mailbox telling me that 137 articles I wrote were hit by spam comments the last 24 hours.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Today is Spam Filter Free Day</title>
+				<link>https://justaddwater.dk/2007/12/15/today-is-spam-filter-free-day/</link>
+				<pubDate>Sat, 15 Dec 2007 00:29:35 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/12/15/today-is-spam-filter-free-day/</guid>
+				<description>&lt;p&gt;Saturday the 15th is Spam Filter Free Day here at justaddwater.dk. Why would we ever want to do something like that you ask? Well up until recently we received about 2-3000 spam comments each day so we thought we would draw attention to the wasted bandwidth, time and energy that all these spam comments consume. Not to speak of the large amount of hours with manually filtering all comments that our different spam filtering techniques free us from.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Spam Comments Dropped 95% Overnight</title>
+				<link>https://justaddwater.dk/2007/12/04/spam-comments-dropped-95-overnight/</link>
+				<pubDate>Tue, 04 Dec 2007 13:26:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/12/04/spam-comments-dropped-95-overnight/</guid>
+				<description>&lt;p&gt;It&amp;rsquo;s no secret that we will keep this blog &lt;a href=&#34;https://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/&#34;&gt;spam filter free&lt;/a&gt; on December 15th. For some strange reason we &lt;strong&gt;only had 127 spam comments in the last 27 hours&lt;/strong&gt;. This is a drop to just above 100 a day (as opposed to the previous level 2,000-3,000 per day), which translates to a 95% drop overnight.&lt;/p&gt;&#xA;&lt;p&gt;Thomas and I just had a conversation about what is going on. Could it be that spammers now give up after reading that comments here really give them no value (or pagerank)? Not only are links removed with Akismet, .htaccess files, blacklists and more. We also instantly remove the very few that slip through.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Letting Spam In For A Day Questions and Answers</title>
+				<link>https://justaddwater.dk/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/</link>
+				<pubDate>Thu, 29 Nov 2007 10:33:10 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/</guid>
+				<description>&lt;p&gt;Note that our &lt;a href=&#34;https://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/&#34;&gt;spam experiment&lt;/a&gt; scheduled for December 15th got mentioned by the Akismet Blog, Blogherald, and many other blogs.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Akismet Blog: &lt;a href=&#34;http://blog.akismet.com/2007/11/28/letting-spam-in-for-a-day/&#34;&gt;Letting Spam In For A Day&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Blogherald: &lt;a href=&#34;http://www.blogherald.com/2007/11/29/wordpress-wednesday-news-will-you-turn-off-akismet-wordpress-24-delayed-and-more-wordpress-news/&#34;&gt;Will you turn off Akismet&lt;/a&gt;?&lt;/li&gt;&#xA;&lt;li&gt;Follow along in Technorati blog reactions for Justaddwater.dk&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Also to answer some of the comments we got:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://binh.name/&#34;&gt;Binh Nguyen&lt;/a&gt;:&lt;/strong&gt;&lt;br&gt;&#xA;How about a bigger challenge? Keep everything else active and shut down only the spam protection.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;That&amp;rsquo;s a big challenge. But we actually tried that recently when &lt;a href=&#34;https://justaddwater.dk/2007/11/15/justaddwaterdk-hacked/&#34;&gt;Justaddwater.dk got hacked&lt;/a&gt;. The hacker used a security hole in an old version of Wordpress and to upload his malicious code, he disabled all plugins. I discovered that by discovering that Akismet (and all other plugins) was turned off.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Announcement: Spam Filter Free Day</title>
+				<link>https://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/</link>
+				<pubDate>Tue, 27 Nov 2007 11:18:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/</guid>
+				<description>&lt;p&gt;Get ready for a suicide mission: On this blog, we will remove our spam filter completely for one day, December 15th.&lt;/p&gt;&#xA;&lt;p&gt;Today we got our spam comment number 500,000. Pretty scary to think how much energy, computer power, network traffic is wasted on a completely useless activity: To spoil the content with irrelevant comments.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://justaddwater.dk/wp-content/uploads/2007/11/justaddwater-akismet-500941-spam-comments.png&#34; alt=&#34;justaddwater-akismet-500941-spam-comments.png&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Currently we get somewhere between 2000 and 3000 spam comments each day.&lt;/p&gt;&#xA;&lt;p&gt;The thing is, that Thomas and I are discussing: We don&amp;rsquo;t know exactly how much work our spam filter does for us&amp;hellip; Granted, 500,000 spam comments is a pretty high number. But we want to know how much pain this saves us for. How much blood and sweat do we.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Justaddwater.dk hacked</title>
+				<link>https://justaddwater.dk/2007/11/15/justaddwaterdk-hacked/</link>
+				<pubDate>Thu, 15 Nov 2007 00:28:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/11/15/justaddwaterdk-hacked/</guid>
+				<description>&lt;h3 id=&#34;the-non-technical-version&#34;&gt;The non-technical version:&lt;/h3&gt;&#xA;&lt;p&gt;Last Thursday we unfortunately had an intruder on Justaddwater.dk. The cracker used a flaw in our blogging software to gain administrative access to it. With this access the cracker placed a secret backdoor on the server.&lt;/p&gt;&#xA;&lt;p&gt;It seems that the intention of the cracker where to use our server to host illegal copies of movies as part of a larger pirate network. To our luck the technical skills of the cracker where very bad (&lt;em&gt;read: &lt;a href=&#34;http://en.wikipedia.org/wiki/Script_kiddie&#34; title=&#34;Wikipedia: Script Kiddie&#34;&gt;script kiddie&lt;/a&gt;&lt;/em&gt;) and the attempt to upload files to our server was not successful. The cracker therefore quickly gave up and did not try to access to backdoor afterwards.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability: Spam Comments Irritate Subscribers</title>
+				<link>https://justaddwater.dk/2007/07/10/blog-usability-spam-comments-irritate-subscribers/</link>
+				<pubDate>Tue, 10 Jul 2007 14:16:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/07/10/blog-usability-spam-comments-irritate-subscribers/</guid>
+				<description>&lt;p&gt;I am back from vacation and saw that Akismet has caught more than 22,000 spam comments over a two week period. That is roughly one spam comment every minute (65 comments each hour). Since February when we passed 100,000 spam comments, we have now passed a quarter million spam comments. (277,421 when I made the screenshot below).&lt;/p&gt;&#xA;&lt;p&gt;The number of daily spam comments has grown more than 400% over the last year.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ruby on Rails Checklist Now Public Available</title>
+				<link>https://justaddwater.dk/2007/05/11/ruby-on-rails-checklist-now-public-available/</link>
+				<pubDate>Fri, 11 May 2007 00:30:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/05/11/ruby-on-rails-checklist-now-public-available/</guid>
+				<description>&lt;p&gt;Today I&amp;rsquo;ve removed password protection on the article &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/&#34; title=&#34;Permanent Link: Protected: Prototyping Ruby on Rails Checklist to Get Started&#34;&gt;Prototyping Ruby on Rails Checklist to Get Started&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Sorry to have you waiting. There are two main reasons why I have kept it private:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;I wanted to check that the description worked well for me. And today I got my new laptop.&lt;/li&gt;&#xA;&lt;li&gt;It surprised me that a password protected article shows up on the front-page, RSS feeds, etc.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;As I found out the original file was published, I felt that I could not remove it even though I was not ready to publish entirely.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Spam Blog Posted 182 Articles in One Day</title>
+				<link>https://justaddwater.dk/2007/04/02/spam-blog-posted-182-articles-in-one-day/</link>
+				<pubDate>Mon, 02 Apr 2007 02:34:05 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/02/spam-blog-posted-182-articles-in-one-day/</guid>
+				<description>&lt;p&gt;We just got a trackback link from a spam blog linking to Thomas&amp;rsquo; &lt;a href=&#34;https://justaddwater.dk/2007/04/01/google-gives-you-free-internet/&#34;&gt;latest blog post&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At first sight, the trackback looked fairly real. Se screenshot below.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/spam-blog-comment-on-justaddwater.png&#34; title=&#34;spam-blog-comment-on-justaddwater-thumb.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/spam-blog-comment-on-justaddwater-thumb.png&#34; alt=&#34;spam-blog-comment-on-justaddwater-thumb.png&#34; width=&#34;300&#34; height=&#34;152&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Just one thing caught my eye: Who&amp;rsquo;s Jeremy?&lt;/p&gt;&#xA;&lt;p&gt;I went to the site &amp;ndash; it looked reasonable at a glance. A look at the categories (oh, it&amp;rsquo;s called &amp;ldquo;associates&amp;rdquo; but is placed where normal blogs have categories): &amp;ldquo;shop entertainment&amp;rdquo;, &amp;ldquo;shop outdoor sports&amp;rdquo;, etc for 18 categories &amp;ndash; all categories point away from the blog to external sites, for instance &lt;a href=&#34;https://www.shop4outdoorsports.com&#34;&gt;www.shop4outdoorsports.com&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>100,000 Blog Spam Comments</title>
+				<link>https://justaddwater.dk/2007/02/06/100000-blog-spam-comments/</link>
+				<pubDate>Tue, 06 Feb 2007 12:44:47 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/06/100000-blog-spam-comments/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Today justaddwater.dk got spam comment number 100,000.&lt;/strong&gt; But actually the real number is much higher since we have incorporated a couple of measures to catch the spam even before it reaches WordPress or &lt;a href=&#34;http://akismet.com/&#34; title=&#34;Tool for stopping comment and trackback spam&#34;&gt;Akismet&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/jaw-caught-spam-2007-02-06.png&#34; alt=&#34;Akisment Caught Spam Comments on justaddwater.dk&#34; width=&#34;463&#34; height=&#34;136&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;We have for example been &lt;a href=&#34;https://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/&#34; title=&#34;justaddwater.dk - Blog Usability: Avoid Spam Comments&#34;&gt;blocking certain keywords&lt;/a&gt; that we found where common in spam that slipped through Akismet, or we have been &lt;a href=&#34;https://justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/&#34; title=&#34;justaddwater.dk - Blog Usability: Avoid Spam Comments (Part 2)&#34;&gt;changing the standard WordPress URL for posting comments&lt;/a&gt;. Finally we have incorporated a little htaccess hack that validates the posters referral URL. This should of cause be our own domain justaddwater.dk, but many spammers actually put some garbage into this header field - and we can then easily block it directly in the Apache web server before it even reaches WordPress. &lt;ins&gt;UPDATE: We also allow empty referrals (thanks Håvard, for pointing this out)&lt;/ins&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability: Avoid Spam Comments (Part 2)</title>
+				<link>https://justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/</link>
+				<pubDate>Wed, 28 Jun 2006 19:26:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/spamcan-small2_resize.jpg&#34; alt=&#34;Can of SPAM&#34; align=&#34;right&#34; style=&#34;margin-left: 10px&#34; width=&#34;120&#34; height=&#34;115&#34;&gt;&#xA;In our previous article &lt;a href=&#34;https://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/&#34; title=&#34;justaddwater.dk: Blog usability: Avoid spam comments&#34;&gt;Blog usability: Avoid spam comments&lt;/a&gt; we discussed the two ways we currently where fighting spam comments on our blog:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Use Akismet for Wordpress&lt;/li&gt;&#xA;&lt;li&gt;Make a spam filter against BBCode like &amp;ldquo;[/url]&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The latter being a quick and dirty solution we had to implemented to deal with a lot of spam comments that for some reason where slipping though Akismet.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability: Avoid Spam Comments</title>
+				<link>https://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/</link>
+				<pubDate>Sat, 24 Jun 2006 23:58:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/</guid>
+				<description>&lt;p&gt;Since yesterday, the volume of spam comments has gone up even more. Now we get 150 spam comments every 12 hours. (&lt;a href=&#34;https://justaddwater.dk/2006/06/23/spam-comments-just-got-worse/&#34; title=&#34;Justaddwater.dk: Spam comments just got worse&#34;&gt;Yesterday it was 21 hours&lt;/a&gt;). I promised to tell about what countermeasures we have taken against spam comments.&lt;/p&gt;&#xA;&lt;p&gt;What has that to do with usability? Well, in my opinion, irrelevant comments removes focus from the relevant content on the page, and makes your article less useful because of the irrelevant content.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability: Too many RSS feeds</title>
+				<link>https://justaddwater.dk/2006/06/14/blog-usability-too-many-rss-feeds/</link>
+				<pubDate>Wed, 14 Jun 2006 14:51:52 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/14/blog-usability-too-many-rss-feeds/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/feed-icon-128x128.png&#34; alt=&#34;Large Feedicon&#34; title=&#34;Large Feedicon&#34; align=&#34;right&#34; style=&#34;margin-left: 1.5em&#34; width=&#34;128&#34; height=&#34;128&#34;&gt;&#xA;After reading &amp;ldquo;&lt;a href=&#34;http://nick.typepad.com/blog/2006/05/pick_a_format_a.html&#34; title=&#34;Nick Bradbury: Pick a Format (Any Format)&#34;&gt;Pick a Format (Any Format)&lt;/a&gt;&amp;rdquo; by Nick Bradbury (tip by: &lt;a href=&#34;http://www.jvoorhis.com/&#34; title=&#34;jvoorhis&#34;&gt;Jeremy Voorhis&lt;/a&gt; on &lt;a href=&#34;http://outside-thoughts.octopod.info/articles/2006/06/12/switching-to-mephisto&#34; title=&#34;Octoblog: Switching to Mephisto&#34;&gt;Octoblog&lt;/a&gt;) we must say that we totally agree. The point in the post is simple:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I keep running across sites that offer &lt;strong&gt;the same exact content&lt;/strong&gt; as an RSS feed &lt;em&gt;and&lt;/em&gt; an Atom feed.&lt;/p&gt;&#xA;&lt;p&gt;What&amp;rsquo;s the point of this? Making readers choose a feed format is like asking them to choose between an HTML and XHTML version of your site - technically there are differences, but end users shouldn&amp;rsquo;t have to care about this. They just want to subscribe to your words of wisdom without having to deal with the plumbing.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Justaddwater.dk WordPress Plugins</title>
+				<link>https://justaddwater.dk/2006/05/02/justaddwaterdk-wordpress-plugins/</link>
+				<pubDate>Tue, 02 May 2006 23:39:47 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/02/justaddwaterdk-wordpress-plugins/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;ve created a bunch of WordPress plugins for our justaddwater.dk blog. In the spirit of sharing I&amp;rsquo;ve made a couple of them available for download. My plan is to make all of them available as soon as they are ready for the public. I&amp;rsquo;ve created a page called &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/wordpress-plugins/&#34;&gt;WordPress Plugins&lt;/a&gt;&amp;rdquo; under justaddwater.dk where you always can find and download our latest plugins.&lt;/p&gt;&#xA;&lt;p&gt;Currently two plugins are available:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;JAW Duplicate Widgets&lt;/strong&gt; - Enables the duplication of a sidebar widget to be used more then once.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;JAW Popular Posts Widget&lt;/strong&gt; - Shows the most popular posts in the sidebar of the blog.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wordpress-plugins/&#34; title=&#34;WordPress Plugins&#34;&gt;Continue to the plugins download page »&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mullet Layout: A user-friendly front page</title>
+				<link>https://justaddwater.dk/2006/03/12/mullet-layout-a-user-friendly-front-page/</link>
+				<pubDate>Sun, 12 Mar 2006 22:40:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/03/12/mullet-layout-a-user-friendly-front-page/</guid>
+				<description>&lt;p&gt;Both Jesper and I have been quite busy working on Capgemini projects the last month + the server move two weeks ago, a new version of WordPress, a skiing vacation and a broken leg took most of my spare time. So the posting-frequency have dropped a little lately. But don&amp;rsquo;t fear we are still here ;)&lt;/p&gt;&#xA;&lt;p&gt;Anyway&amp;hellip; If you are a frequent reader and take a look at the front page sometimes, you might have noticed that we updated the layout quite a bit. Blogging software like WordPress usually shows the last 10 to 20 posts on the front page in full length. This tends to give a lot of attention to the latest post whereas previous posts quickly move below the fold and away from people&amp;rsquo;s attention. We quickly changed this default behavior to on only show an excerpt (or teaser if you like). The readers then had to click on the excerpt to read the full story - But this was not enough&amp;hellip;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability Improvements: What we&#39;ll Change to make this blog better</title>
+				<link>https://justaddwater.dk/2006/01/19/blog-usability-improvements-what-well-change-to-make-this-blog-better/</link>
+				<pubDate>Thu, 19 Jan 2006 11:34:03 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/19/blog-usability-improvements-what-well-change-to-make-this-blog-better/</guid>
+				<description>&lt;p&gt;To follow up on Thomas&amp;rsquo; post from yesterday about how to &lt;a href=&#34;https://justaddwater.dk/2006/01/18/blog-usability-improvements/&#34; title=&#34;Justaddwater.dk: Blog usability improvements&#34;&gt;improve usability on out-of-the-box wordpress blog&lt;/a&gt;, we decided to prioritize the &lt;del&gt;23&lt;/del&gt; 20 point list that we&amp;rsquo;ll work on. (Three items are already done since we started the list).&lt;/p&gt;&#xA;&lt;p&gt;There are several reasons why we should do this: Primarily, our time is limited as we both need time to do real work and be with our friends and families (this is kind of the unspoken reality of bloggers — if a blog suddenly goes silent, it&amp;rsquo;s usually because of that).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability Improvements</title>
+				<link>https://justaddwater.dk/2006/01/18/blog-usability-improvements/</link>
+				<pubDate>Wed, 18 Jan 2006 00:21:03 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/18/blog-usability-improvements/</guid>
+				<description>&lt;p&gt;Many blogs today use common blogging software like WordPress or Movable Type. Tools like these are very easy to set up and you will probably get your blog up and running with the default design within 10-15 minutes. This speed comes at a price though&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;At justaddwater.dk we use WordPress as our weapon of choice. We didn&amp;rsquo;t have a lot of time on our hands when initially setting up the blog and I have therefore for a while been re-thinking our design and especially how to improve on the usability we got out-of-the-box - or should I dare to say, didn&amp;rsquo;t get.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Weblog usability followup</title>
+				<link>https://justaddwater.dk/2006/01/17/weblog-usability-followup/</link>
+				<pubDate>Tue, 17 Jan 2006 00:41:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/17/weblog-usability-followup/</guid>
+				<description>&lt;p&gt;In the previous &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/01/09/mullet-style-blog-layout-and-complete-archive-page/&#34; title=&#34;Justaddwater.dk: Mullet-style blog layout and complete archive page&#34;&gt;Mullet-style blog layout and complete archive page&lt;/a&gt;&amp;rdquo; we had a look on the Mullet-style blog page that makes more content available on the fronpage, and also argued for replacing monthly archives with a single archive page.Danish &amp;ldquo;&lt;a href=&#34;http://www.brugervenligeblogs.dk/2006/01/er-weblogs-brugervenlige.html&#34; title=&#34;brugervenligeblogs.dk: er weblogs brugervenlige?&#34;&gt;brugervenligeblogs.dk&lt;/a&gt;&amp;rdquo; pointed me to a research document from July 2005: &lt;a href=&#34;http://www.catalystgroupdesign.com/people/press/blogpress.asp&#34; title=&#34;Catalyst Group Design - Blog Mainstream Market Penetration Likely Limited &#34;&gt;Blog Mainstream Market Penetration Likely Limited By Basic Usability Issues&lt;/a&gt; by Catalyst Group Design. The 19 page usability report is available as &lt;a href=&#34;http://www.catalystgroupdesign.com/cofactors/upload/Blog_usability_report.pdf&#34; title=&#34;PDF version of Catalyst Group Design: Blog Mainstream Market Penetration Likely Limited By Basic Usability Issues&#34;&gt;PDF (119KB)&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Wordpress Dashboard improvements: Five things I&#39;d like my blog software to do</title>
+				<link>https://justaddwater.dk/2006/01/12/blog-software-usability/</link>
+				<pubDate>Thu, 12 Jan 2006 22:39:45 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/12/blog-software-usability/</guid>
+				<description>&lt;p&gt;&lt;ins&gt;UPDATE: Owen&amp;rsquo;s comment pointed me to &lt;a href=&#34;http://blog.taragana.com/index.php/archive/angsumans-wordpress-20-dashboard-replacement-how-to-trim-the-fat-resource-hogging-wordpress-admin-dashboard/&#34;&gt;WordPress Admin Dashboard replacement&lt;/a&gt; which apparently adresses some of the issues I&amp;rsquo;m pointing out.&lt;/ins&gt;&lt;/p&gt;&#xA;&lt;p&gt;I like Wordpress Dashboard. The name suggests that it&amp;rsquo;s an overview of whats relevant to your blog. What&amp;rsquo;s happening. What&amp;rsquo;s popular. Who comments. What important updates are available. The Dashboard should work like in a car. The &lt;strong&gt;most important and relevant information should be visible at a glance&lt;/strong&gt;. Lets have a brief look at the dashboard.&lt;br&gt;&#xA;I suggest you only take a brief look to judge for your self whether you think the main objectives of the Dashboard page are met.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

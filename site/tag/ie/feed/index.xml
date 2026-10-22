@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ie on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/ie/</link>
+		<description>Recent content in Ie on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 05 Nov 2008 11:11:57 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/ie/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>IE CSS bug: Background-image Gap To Border</title>
+				<link>https://justaddwater.dk/2008/11/05/ie-css-bug-background-image-gap-to-border/</link>
+				<pubDate>Wed, 05 Nov 2008 11:11:57 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/11/05/ie-css-bug-background-image-gap-to-border/</guid>
+				<description>&lt;p&gt;Workaround needed for this annoying bug:&lt;/p&gt;&#xA;&lt;p&gt;Background-image is 1px away from border on buttons.&lt;/p&gt;&#xA;&lt;p&gt;I have buttons that are styled with border and background-image. Must work in IE7. But there is a small 1px gap between border and the background-image.&lt;/p&gt;&#xA;&lt;p&gt;Look at this screenshot from IE7:&lt;br&gt;&#xA;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.png&#34; alt=&#34;&#34; title=&#34;ie7css-flaw-background-image-on-buttons&#34; class=&#34;aligncenter size-full wp-image-964&#34; height=&#34;169&#34; width=&#34;500&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://justaddwater.dk/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.html&#34;&gt;ie7css-flaw-background-image-on-buttons&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Problem is that I have no idea if there is a workaround for this annoying bug. Also, my google searches find no relevant articles (apart from one hidden on &lt;a href=&#34;http://www.experts-exchange.com/Web_Development/Web_Languages-Standards/CSS/Q_23641611.html&#34;&gt;experts-exchange&lt;/a&gt; where I have no access).&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

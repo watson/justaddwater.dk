@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Security on Just Add Water</title>
+		<link>https://justaddwater.dk/category/security/</link>
+		<description>Recent content in Security on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 11 Aug 2007 20:12:47 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/security/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Videos: Innovation and User Interface Developments</title>
+				<link>https://justaddwater.dk/2007/08/11/videos-innovation-and-user-interface-developments/</link>
+				<pubDate>Sat, 11 Aug 2007 20:12:47 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/08/11/videos-innovation-and-user-interface-developments/</guid>
+				<description>&lt;p&gt;Two very interesting videos about Google&lt;/p&gt;&#xA;&lt;p&gt;The new innovative improvements to Google Maps&amp;hellip; View the &lt;a href=&#34;http://maps.google.com/help/maps/directions/index.html&#34;&gt;demo video&lt;/a&gt; (it&amp;rsquo;s just a few minutes):Via &lt;a href=&#34;http://www.jacobhage.dk/2007/08/02/google-maps-rykker-igen-igen/&#34;&gt;Jacob Hage&amp;rsquo;s blog&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;My favorite is the drag-and-drop replanning of routes. Danish competitors are lightyears behind here&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;If you have not seen it: Check out Douglas Merril (CIO at Google) talk about innovation at Google. I have embedded video here below.&lt;/p&gt;&#xA;&lt;p&gt;He is a very entertaining speaker. Seems like he has given this talk many times&amp;hellip;&lt;br&gt;&#xA;What are your favorite quotes?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Does Sony think their customers are morons?</title>
+				<link>https://justaddwater.dk/2007/04/16/does-sony-think-their-customers-are-morons/</link>
+				<pubDate>Mon, 16 Apr 2007 14:33:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/16/does-sony-think-their-customers-are-morons/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;I&amp;rsquo;m not pirating music or films, and I will gladly pay huge sums of money to huge world-wide record companies and film studios. But if they insist on protecting their publications with DRM, I will in turn insist only to pay half the price at the shop counter in return for less accessible content.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;It is no secret that DRM, or &lt;a href=&#34;http://en.wikipedia.org/wiki/Digital_Rights_Management&#34; title=&#34;Wikipedia: Digital Rights Management&#34;&gt;Digital Rights Management&lt;/a&gt;, have been used widely throughout the DVD and CD publishing world for some years now. DRM is not a technology in its own, but rather an umbrella-term used to cover the various technologies that exist, intended to prevent illegal copying of DVDs and CDs.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Secure AJAX Web Applications</title>
+				<link>https://justaddwater.dk/2006/09/10/secure-ajax-web-applications/</link>
+				<pubDate>Sun, 10 Sep 2006 21:49:02 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/10/secure-ajax-web-applications/</guid>
+				<description>&lt;p&gt;Scott Dietzen of Zimbra posted a decent article about &lt;a href=&#34;http://www.zimbra.com/blog/archives/2006/09/securing_ajax.html&#34; title=&#34;Zimbra blog: Securing Ajax&#34;&gt;security issues in AJAX web applications&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Ajax security considerations.&lt;/strong&gt; Subject to the additional precautions enumerated below, Ajax applications can be made as highly-secure as the web technologies upon which the Ajax model is based.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;The article mentions several issues and Scott has put some thoughts in how to secure their enterprise Outlook replacement, Zimbra.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Use SSL/TLS (i.e., HTTPS)&lt;/li&gt;&#xA;&lt;li&gt;No server-side interpretation of JavaScript or other client-submitted code&lt;/li&gt;&#xA;&lt;li&gt;Limited or no client-side interpretation of JavaScript within user data&lt;/li&gt;&#xA;&lt;li&gt;RESTful URLs: No HTTP GET requests modify data (only POST or PUT requests)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.zimbra.com/blog/archives/2006/09/securing_ajax.html&#34; title=&#34;Zimbra blog: Securing Ajax&#34;&gt;Zimbra blog: Securing Ajax&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

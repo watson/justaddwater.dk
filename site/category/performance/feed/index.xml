@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Performance on Just Add Water</title>
+		<link>https://justaddwater.dk/category/performance/</link>
+		<description>Recent content in Performance on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 11 Jan 2008 13:05:12 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/performance/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Dilemma -- Updated Numbers or Long Response Times</title>
+				<link>https://justaddwater.dk/2008/01/11/dilemma-updated-numbers-or-long-response-times/</link>
+				<pubDate>Fri, 11 Jan 2008 13:05:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/11/dilemma-updated-numbers-or-long-response-times/</guid>
+				<description>&lt;p&gt;Paypal showed me this splash screen when logging in:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/01/paypal-account-unsync-notice.png&#34; title=&#34;paypal-account-unsync-notice.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/01/paypal-account-unsync-notice-thumb.png&#34; alt=&#34;paypal-account-unsync-notice-thumb.png&#34; width=&#34;391&#34; height=&#34;275&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I think this is a useful design pattern that can be valuable to most of our clients dealing with time-sensitive data.&lt;/p&gt;&#xA;&lt;p&gt;It is time-consuming for an application to check if there are new payments on every request. This check is better off being uncoupled from the actual user request. Then, the check should be handled backend by a cron job or similar every second, minute, hour or whatever suits the data in the system.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Why Web Standards Matter (Case Study)</title>
+				<link>https://justaddwater.dk/2006/06/29/webstandards-case-study/</link>
+				<pubDate>Thu, 29 Jun 2006 16:03:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/29/webstandards-case-study/</guid>
+				<description>&lt;p&gt;Project managers often have a hard time understanding web standards and why they matter. In this case, my arguments made a perfect business case for the managers of a particular project.&lt;/p&gt;&#xA;&lt;p&gt;Recently I was called out to debug some javascript code that did not perform. There was really not a big problem in Firefox, but Internet Explorer hung using 20 seconds or more each time the script was activated by the user.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ticket systems: Worst user experience ever!</title>
+				<link>https://justaddwater.dk/2006/05/13/ticket-systems/</link>
+				<pubDate>Sat, 13 May 2006 00:15:13 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/13/ticket-systems/</guid>
+				<description>&lt;p&gt;Michael Heilemann wrote a rant on Billetlugen, a Danish company that sells tickets to concerts, etc. Two weeks ago they sold 85,000 tickets to Madonna&amp;rsquo;s only concert in scandinavia, August 24 in Horsens, Denmark. I had the worst user experience ever, and Billetlugen&amp;rsquo;s systems failed to sell me the tickets.&lt;/p&gt;&#xA;&lt;p&gt;We were on holiday in Italy but as my wife is a big Madonna fan, I called in vain to buy tickets. Here&amp;rsquo;s my experience:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>AJAX performance stats, ROI, and business value</title>
+				<link>https://justaddwater.dk/2006/01/14/ajax-performance-stats-roi-and-business-value/</link>
+				<pubDate>Sat, 14 Jan 2006 00:10:30 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/14/ajax-performance-stats-roi-and-business-value/</guid>
+				<description>&lt;p&gt;How do you build a system that can deliver and update content to 100,000 people simultaneously? Via &lt;a href=&#34;http://ajaxian.com/?p=735&#34; title=&#34;Ajax Reduces Load on MacRumors.com Servers&#34;&gt;Ajaxian.com&lt;/a&gt; I saw this article from MacRumors on what traffic they got when Steve Jobs delivered his keynote on MacWorld a few days ago.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;On January 10th, 2006, &lt;a href=&#34;http://www.macrumors.com/&#34;&gt;MacRumors.com&lt;/a&gt; successfully delivered live updates of the Macworld San Francisco Keynote speech to over 100,000 people simultaneously using the latest web technologies.&lt;/p&gt;&#xA;&lt;div style=&#34;margin-left: 2em; margin-right: 2em; font-size: smaller&#34;&gt;&#xA;&lt;p&gt;&lt;em&gt;&amp;ldquo;By far the best mac keynote coverage I have ever seen. No constant page refreshing. No &amp;lsquo;page will update every three minutes&amp;rsquo; even though they never do. I just let the page update every minute like it was supposed to. It was actually weird to get coverage without some sort of connection failure.&amp;rdquo; - MacRumors member, war&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

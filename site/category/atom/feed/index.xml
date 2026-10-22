@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Atom on Just Add Water</title>
+		<link>https://justaddwater.dk/category/atom/</link>
+		<description>Recent content in Atom on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 14 Jun 2006 14:51:52 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/atom/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Blog Usability: Too many RSS feeds</title>
+				<link>https://justaddwater.dk/2006/06/14/blog-usability-too-many-rss-feeds/</link>
+				<pubDate>Wed, 14 Jun 2006 14:51:52 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/14/blog-usability-too-many-rss-feeds/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/feed-icon-128x128.png&#34; alt=&#34;Large Feedicon&#34; title=&#34;Large Feedicon&#34; align=&#34;right&#34; style=&#34;margin-left: 1.5em&#34; width=&#34;128&#34; height=&#34;128&#34;&gt;&#xA;After reading &amp;ldquo;&lt;a href=&#34;http://nick.typepad.com/blog/2006/05/pick_a_format_a.html&#34; title=&#34;Nick Bradbury: Pick a Format (Any Format)&#34;&gt;Pick a Format (Any Format)&lt;/a&gt;&amp;rdquo; by Nick Bradbury (tip by: &lt;a href=&#34;http://www.jvoorhis.com/&#34; title=&#34;jvoorhis&#34;&gt;Jeremy Voorhis&lt;/a&gt; on &lt;a href=&#34;http://outside-thoughts.octopod.info/articles/2006/06/12/switching-to-mephisto&#34; title=&#34;Octoblog: Switching to Mephisto&#34;&gt;Octoblog&lt;/a&gt;) we must say that we totally agree. The point in the post is simple:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I keep running across sites that offer &lt;strong&gt;the same exact content&lt;/strong&gt; as an RSS feed &lt;em&gt;and&lt;/em&gt; an Atom feed.&lt;/p&gt;&#xA;&lt;p&gt;What&amp;rsquo;s the point of this? Making readers choose a feed format is like asking them to choose between an HTML and XHTML version of your site - technically there are differences, but end users shouldn&amp;rsquo;t have to care about this. They just want to subscribe to your words of wisdom without having to deal with the plumbing.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

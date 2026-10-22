@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Railsconf on Just Add Water</title>
+		<link>https://justaddwater.dk/category/railsconf/</link>
+		<description>Recent content in Railsconf on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 22 Sep 2007 02:12:12 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/railsconf/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>RailsConf Europe 2007 Recap</title>
+				<link>https://justaddwater.dk/2007/09/22/railsconf-europe-2007-recap/</link>
+				<pubDate>Sat, 22 Sep 2007 02:12:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/22/railsconf-europe-2007-recap/</guid>
+				<description>&lt;p&gt;I wanted this post to be named &amp;ldquo;Usability Lessons from RailsConf Europe 2007&amp;rdquo; — but realized that only some what I want to write below is about usability.&lt;/p&gt;&#xA;&lt;p&gt;So RailsConf Europe this year is over, and there are a few things i want to highlight from a conference that in general was a smash hit.&lt;/p&gt;&#xA;&lt;h3 id=&#34;usability-and-prototyping-fits-agile-development-style&#34;&gt;Usability and prototyping fits agile development style&lt;/h3&gt;&#xA;&lt;p&gt;Dave Thomas&amp;rsquo; keynote had a great section about art and the work of great artists. Michaelangelo and DaVinci usually worked with prototypes — paper prototypes — that allowed them to iterate fast and wild. Thomas wanted the audience to work in that way too. What a coincidence that we have been using prototyping as a key methodology at work, and for the last year and half with Ruby on rails.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf Live Notes: Testing Tutorial</title>
+				<link>https://justaddwater.dk/2007/09/17/railsconf-live-notes-testing-tutorial/</link>
+				<pubDate>Mon, 17 Sep 2007 17:05:18 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/17/railsconf-live-notes-testing-tutorial/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;m at RailsConf Europe here in Berlin, and now attending the full-day session &amp;ldquo;&lt;a href=&#34;http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736&#34;&gt;Ruby (and Rails) Testing Techniques: Charity Tutorial&lt;/a&gt; by Marcel Molina and Chad Fowler.&lt;/p&gt;&#xA;&lt;p&gt;Below are the live notes, I wrote with Mads Buus (we wrote the notes collaboratively with Google Docs, &lt;a href=&#34;http://docs.google.com/Doc?docid=az54pw3d9f_24hsvwnt&amp;amp;hl=en&#34;&gt;direct link&lt;/a&gt;).&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/jesper/1395418767/&#34;&gt;&lt;img src=&#34;http://farm2.static.flickr.com/1342/1395418767_1d23095952_m.jpg&#34; alt=&#34;IMG_3392_crop&#34; height=&#34;160&#34; width=&#34;240&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/jesper/1396313456/&#34;&gt;&lt;img src=&#34;http://farm2.static.flickr.com/1411/1396313456_e999c55dfe_m.jpg&#34; alt=&#34;IMG_3397&#34; height=&#34;160&#34; width=&#34;240&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Verifying your expectations.&lt;/li&gt;&#xA;&lt;li&gt;Guru reads the output&amp;rdquo; -testing (just printing stuff out to verify something)&lt;/li&gt;&#xA;&lt;li&gt;Testing is better: declare your expectations.&lt;/li&gt;&#xA;&lt;li&gt;Real value: Analysis, design process. Bonus: verification.&lt;/li&gt;&#xA;&lt;li&gt;If something is too hard to write, you&amp;rsquo;re probably doing it wrong (design is wrong)&lt;/li&gt;&#xA;&lt;li&gt;Red, green, refactoring. Write a test that fail, the implement until green.&lt;/li&gt;&#xA;&lt;li&gt;Red/green testing: Write code to make testing fail&amp;hellip; red. Then write just enough code to make test pass.&lt;/li&gt;&#xA;&lt;li&gt;Marcel&amp;rsquo;s loops coding/testing is 1-5 minutes. Possible to work with 20 second loops&lt;/li&gt;&#xA;&lt;li&gt;No &amp;lsquo;Code smells&amp;rsquo;, no comments. &amp;lsquo;method_missing&amp;rsquo; needs documentation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Your code should be so simple that you shouldnt put comments in your code. If it just says &amp;ldquo;test_foo&amp;rdquo; [new team members] have to do more brain processing.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Busy Preparing RailsConf Presentation</title>
+				<link>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</link>
+				<pubDate>Tue, 11 Sep 2007 14:31:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</guid>
+				<description>&lt;p&gt;For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.&lt;/p&gt;&#xA;&lt;img src=&#34;http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg&#34; alt=&#34;Railsconf speaker 2007&#34; height=&#34;125&#34; width=&#34;125&#34;&gt;&#xA;&#xA;&lt;p&gt;At the presentation we will introduce a Ruby on Rails plugin that can create the foundation for a local Rails app based on forms scraped from a remote application. In our case, an internal application used for timereporting in Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;My head is too ful of all the details in the presentation but fact is, that we&amp;rsquo;re running two trials on the presentation this Thursday the 13th in our Capgemini office in Copenhagen, Denmark.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf Talk Accepted: Prototyping, Hacking Enterprise Legacy Applications</title>
+				<link>https://justaddwater.dk/2007/06/08/railsconf-talk-accepted-prototyping-hacking-enterprise-legacy-applications/</link>
+				<pubDate>Fri, 08 Jun 2007 19:52:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/08/railsconf-talk-accepted-prototyping-hacking-enterprise-legacy-applications/</guid>
+				<description>&lt;p&gt;Woohoo. I got a response from O&amp;rsquo;Reilly that my talk for RailsConf in Berlin is accepted. I will be presenting with my colleague &lt;a href=&#34;http://www.upperbound.net/upperbound/show/HomePage&#34;&gt;Mads Buus&lt;/a&gt;, who&amp;rsquo;s also active in our &lt;a href=&#34;http://copenhagenrb.dk/&#34;&gt;Copenhagen Ruby user group&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/06/railsconf-2007-berlin-logo.png&#34; alt=&#34;railsconf-2007-berlin-logo.png&#34; width=&#34;566&#34; height=&#34;76&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Here is the talk proposal:&lt;/p&gt;&#xA;&lt;p&gt;Title: &lt;strong&gt;Screenscraping as a tool for changing the (legacy) world&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Conference: RailsConf Europe 2007&lt;br&gt;&#xA;Type/Duration: 45 Minute Conference Session&lt;br&gt;&#xA;Audience Level: Intermediate&lt;br&gt;&#xA;Audience Type: web developers, programmers&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Description Short:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Tired of your existing corporate legacy application? Show them you can do better! Learn how to make your own Rails version of a website with ugly UI, bad user feedback, no API.&lt;/p&gt;&#xA;&lt;p&gt;Use these tools and techniques to build your own, better, user interface on top of an old legacy backend.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf presentation notes</title>
+				<link>https://justaddwater.dk/2006/09/14/railsconf-presentation-notes/</link>
+				<pubDate>Thu, 14 Sep 2006 13:22:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/14/railsconf-presentation-notes/</guid>
+				<description>&lt;p&gt;Just a short note that I just published my first notes from the RailsConf keynote presentations. RailsConf ends tomorrow, Friday, and I expect that more notes will show up on our Rails related website: copenhagen.rb&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://copenhagenrb.dk/2006/9/14/railsconf-europe-session-overviews&#34;&gt;Copenhagenrb.dk: Railsconf Europe Session overview&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My Talk at Reboot8: Prototyping</title>
+				<link>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</link>
+				<pubDate>Thu, 01 Jun 2006 11:27:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</guid>
+				<description>&lt;p&gt;Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.&lt;/p&gt;&#xA;&lt;p&gt;Topic: Prototype driven development with Ruby on Rails, and demo of the application we made at Capgemini with the Danish public Agency of Companies and Commerce.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Presentation&lt;/strong&gt; (Powerpoint format) for download here:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt&#34;&gt;Prototype driven development with Ruby on Rails: Powerpoint version (1.11 MB)&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Agile on Just Add Water</title>
+		<link>https://justaddwater.dk/category/agile/</link>
+		<description>Recent content in Agile on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 22 Nov 2010 22:35:22 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/agile/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Rapid Prototyping With a Piece of Wood</title>
+				<link>https://justaddwater.dk/2010/11/22/rapid-prototyping-with-a-piece-of-wood/</link>
+				<pubDate>Mon, 22 Nov 2010 22:35:22 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/11/22/rapid-prototyping-with-a-piece-of-wood/</guid>
+				<description>&lt;p&gt;May I recommend Aza Raskins recent presentation on Rapid prototyping. He shares a lot of very insightful thoughts on how (and why) rapid prototyping is so important.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://player.vimeo.com/video/16527312&#34; width=&#34;400&#34; height=&#34;225&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://vimeo.com/16527312&#34;&gt;Rapid Prototyping with Aza Raskin&lt;/a&gt; from &lt;a href=&#34;http://vimeo.com/zerolab&#34;&gt;Dan Braghis&lt;/a&gt; on &lt;a href=&#34;http://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Aza Raskin, creative lead at Firefox, shares some tips and tricks about rapid prototyping at the Mozilla Drumbeat festival&lt;/p&gt;&#xA;&lt;p&gt;One of his points: &amp;ldquo;&lt;strong&gt;Aim to finish a usable artifact in a day. This helps you focus and scope.&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Rup vs Scrum vs Kanban</title>
+				<link>https://justaddwater.dk/2009/08/19/rup-vs-scrum-vs-kanban/</link>
+				<pubDate>Wed, 19 Aug 2009 22:28:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/08/19/rup-vs-scrum-vs-kanban/</guid>
+				<description>&lt;p&gt;For a presentation tomorrow, &lt;a href=&#34;http://www.upperbound.net/&#34; title=&#34;Mads Buus Westmark personal website: upperbound.net&#34;&gt;my colleague Mads&lt;/a&gt; decided to include this illustration that compares the number of &amp;ldquo;rules&amp;rdquo; in some of the most used software development philosophies.I think the visualization has it all:&lt;/p&gt;&#xA;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2009/08/rup-xp-scrum-kanban-300x198.png&#34; alt=&#34;rup-xp-scrum-kanban&#34; title=&#34;rup-xp-scrum-kanban&#34; class=&#34;aligncenter size-medium wp-image-1115&#34; height=&#34;198&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2009/08/rup-xp-scrum-kanban-300x198.png 300w, https://justaddwater.dk/wp-content/uploads/2009/08/rup-xp-scrum-kanban.png 815w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&#xA;&lt;div style=&#34;padding-left: 90px;&#34;&gt;&#xA;&lt;p&gt;RUP is pretty prescriptive – it has over 30 roles, over 20 activities, and over 70 artifacts. You aren’t supposed to use all of that though, you are supposed to select a suitable subset for your project. This seems to be hard in practice.&lt;/p&gt;&#xA;&lt;/div&gt;</description>
+			</item>
+			<item>
+				<title>Hitler&#39;s Final Agile Planning Meeting</title>
+				<link>https://justaddwater.dk/2009/04/29/hitlers-final-agile-planning-meeting/</link>
+				<pubDate>Wed, 29 Apr 2009 15:47:02 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/04/29/hitlers-final-agile-planning-meeting/</guid>
+				<description>&lt;p&gt;It all ends with the fatal Iteration#6 &amp;ndash; at least according to this video a colleague pointed me to.&lt;/p&gt;&#xA;&lt;p&gt;Video clip is taken from &amp;ldquo;The Downfall&amp;rdquo; and texted as if we were attending a daily scrum meeting during world war II.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Not Ready For Agile</title>
+				<link>https://justaddwater.dk/2008/06/19/not-ready-for-agile/</link>
+				<pubDate>Thu, 19 Jun 2008 23:06:17 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/06/19/not-ready-for-agile/</guid>
+				<description>&lt;p&gt;Pragmatic programmer Andy Hunt&amp;rsquo;s &amp;ldquo;&lt;a href=&#34;http://blog.toolshed.com/2008/06/stage-0-not-rea.html&#34;&gt;Stage 0: Not Ready For Agile&lt;/a&gt;&amp;rdquo; is a brilliant blog post where he ponders over counter-indicators for an agile organization. So if you see these, your organization is probably not agile.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You’re not ready for agile if you:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;are inflexible&lt;/strong&gt;. You’ve got a policy for everything. If it’s not in the book, it doesn’t exist. This is the way we’ve always done it.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;treat developers as a commodity&lt;/strong&gt;; a uniform, fungible resource. They are all alike. You can’t trust them to think for themselves, you’ve got to make the important decisions for them.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Go to Andy&amp;rsquo;s site to read the full 5 point list.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Scrum vs CMMI Level 5</title>
+				<link>https://justaddwater.dk/2008/03/30/scrum-vs-cmmi-level-5/</link>
+				<pubDate>Sun, 30 Mar 2008 20:17:48 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/30/scrum-vs-cmmi-level-5/</guid>
+				<description>&lt;p&gt;A final quote from Jeff Sutherlands presentation: &lt;a href=&#34;https://justaddwater.dk/2008/03/06/video-agile-and-scrum-tuning-by-jeff-sutherland/&#34;&gt;Agile and Scrum Tuning&lt;/a&gt; I wrote about recently.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The question is if there is anything else that can bring an organization to the same level of performance as Scrum.&lt;/p&gt;&#xA;&lt;p&gt;Right now I’m working with a CMM level 5 organisation. It took them seven years to get to level 5. Everybody is using the same process. All processes are monitored. They got so much data that I can ask them any question, and the will give me 3 answers from 3 different datasets.&lt;/p&gt;&#xA;&lt;p&gt;The thing about CMMI maternity levels is it’s designed to reduce rework. CMMI level 1 companies have about 50% of rework. That’s bugs and stuff that has to be redone because it’s not right.&lt;/p&gt;&#xA;&lt;p&gt;By the time you get to CMMI level 5 you have only 10% or less rework. You added about 10% of overhead for process management. You haven’t increased the productivity of the real work.&lt;/p&gt;&#xA;&lt;p&gt;So, they spent 7 years to eliminate — to bring their rework from 50% to 10%. It improved their productivity by about 25%.&lt;/p&gt;&#xA;&lt;p&gt;They then introduced Scrum. They immediately cut their defect rate by 40% (they were already very low). They cut their planning overhead by 80%. They doubled their productivity.&lt;/p&gt;&#xA;&lt;p&gt;And now they are bidding contracts out to the Defence Dept. in the US, for example. If they want waterfall it cost them 10 million, if they want Scrum it cost them 5 million.&lt;/p&gt;&#xA;&lt;p&gt;And they have only been doing it 6 months. I think they can go all the way like Toyota and get it twice as much. So what I can say is I have real data that shows that Scrum can take the most mature company in the world and fix it. And I haven’t seen anybody else that has that kind of data.&lt;/p&gt;&#xA;&lt;p&gt;I think that Scrum is like Toyota. Toyota has this team that go all over the world helping companies be better.&lt;/p&gt;&#xA;&lt;p&gt;They did this experiment couple of years ago. They said let’s find the most agile company in the United States. And they found this industrial process control company that won all kinds of agile awards.&lt;br&gt;&#xA;They sent the Toyota team in there. In six months, they doubled everything.&lt;/p&gt;&#xA;&lt;p&gt;Just like the Scrum example. They did everything I just described in the CMMI 5 example.&lt;/p&gt;&#xA;&lt;p&gt;So my point is that there is no company that Toyota can’t fix. I don’t care how good it is. And fixing it means they will double every metric in a positive way.&lt;/p&gt;&#xA;&lt;p&gt;And I think Scrum can do the same thing. It is based on the same concepts as lean manufacturing is.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Scrum Presentation Edit</title>
+				<link>https://justaddwater.dk/2008/03/27/scrum-presentation-edit/</link>
+				<pubDate>Thu, 27 Mar 2008 13:17:42 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/27/scrum-presentation-edit/</guid>
+				<description>&lt;p&gt;Jakob Scmidt Sørensen made an edited boiled down of his &lt;a href=&#34;https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/&#34;&gt;Internal Capgemini Scrum Presentation&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Thanks Jakob!&lt;/p&gt;&#xA;&lt;p&gt;The entire 38 minutes presentation is in Danish&lt;/p&gt;&#xA;&lt;p&gt;As a side note, we had quite some traffic from the Danish blog &amp;ldquo;Version 2&amp;rdquo; where Rasmus Knippel (an ex capgemini colleague) &lt;a href=&#34;http://www.version2.dk/artikel/6697&#34; title=&#34;Version 2 (Danish) - Kig ind i en virksomhed (Rasmus Knippel)&#34;&gt;wrote about the video&lt;/a&gt;. Rasmus found it quite unique that a larger company in Denmark would &amp;ldquo;broadcast&amp;rdquo; an internal presentation in this way. He also thinks that companies that allow this will put a certain confidence in the employees.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Where to find a giant, affordable touch screen?</title>
+				<link>https://justaddwater.dk/2008/03/14/where-to-find-a-giant-affordable-touch-screen/</link>
+				<pubDate>Fri, 14 Mar 2008 00:00:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/14/where-to-find-a-giant-affordable-touch-screen/</guid>
+				<description>&lt;p&gt;Time for a Lazyweb request.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://conferences.oreillynet.com/cs/railseurope2007/view/e_spkr/3896&#34;&gt;Mads&lt;/a&gt;, a colleague of mine did a fast prototype of a new application that we probably want to use as a tool in our agile projects. We&amp;rsquo;ll do a fast, digital version of a Scrum board (see image below)&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/03/burndown.png&#34; title=&#34;burndown.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/03/burndown.png&#34; alt=&#34;burndown.png&#34; width=&#34;673&#34; height=&#34;445&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;For the digital version, we&amp;rsquo;d like to project the scrum board on the wall, and be able to drag/drop tasks from one column to another. Here is a screenshot a preliminary version that hooks up to Trac and shows tickets for the sprint/milestone + a constantly updated burndown chart.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Internal Capgemini Scrum Presentation</title>
+				<link>https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/</link>
+				<pubDate>Sat, 08 Mar 2008 19:43:42 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/</guid>
+				<description>&lt;p&gt;If you understand Danish, then this internal presentation might be something for you.&lt;/p&gt;&#xA;&lt;p&gt;Capgemini Denmark lunchbag session explaining &amp;ldquo;What is Scrum&amp;rdquo;, &amp;ldquo;how to Scrum&amp;rdquo;, &amp;ldquo;Why Scrum&amp;rdquo;, recorded Friday March 7th.&lt;/p&gt;&#xA;&lt;p&gt;Presenter is my colleague Jakob Schmidt Sørensen, Capgemini Denmark. He asked me to help him out keep track of time and draw the burndown chart during the presentation.&lt;br&gt;&#xA;Note that the entire presentation is done on a scrumboard with a burndown chart being constantly updated during the 40 minute presentation. Actually, this was the rerun of a similar presentation one week earlier: The first one was quite popular and several people encouraged Jakob to redo the presentation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Scrum vs Outsourcing</title>
+				<link>https://justaddwater.dk/2008/03/07/scrum-vs-outsourcing/</link>
+				<pubDate>Fri, 07 Mar 2008 11:16:37 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/07/scrum-vs-outsourcing/</guid>
+				<description>&lt;p&gt;More from Jeff Sutherland (the video presentation i posted about yesterday). This time on outsourcing (sending to India) vs implementing Scrum locally.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://video.google.com/videoplay?docid=8795214308797356840&#34; title=&#34;Google video: Scrum Tuning: Lessons learned from Scrum implementation at Google&#34;&gt;Scrum Tuning: Lessons learned from Scrum implementation at Google&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;(example starts around 42 minutes into the presentation)&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Outsource $2million development&lt;/li&gt;&#xA;&lt;li&gt;Outsourcing costs $1.6M (industry data show 20% cost savings on average)&lt;/li&gt;&#xA;&lt;li&gt;Alternative: Introduce Scrum locally (240% improvement)&lt;/li&gt;&#xA;&lt;li&gt;Local Scrum costs $0.83M (which yields a 59% cost reduction)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Every company I introduced Scrum in (even one with 600 developers) more than doubled productivity. In fact, I don&amp;rsquo;t even view that as very good.&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s kind of a mediocre effect. A good implementation get&amp;rsquo;s a Toyota effect &amp;ndash; at least four times. [company name] get it ten times. 240% was what I got at my last company which had about 600 developers. That means I can take my 2 million Dollars and do it locally for 0.8. If I send it to an Indian team that is doing waterfall and pay 1.6 &amp;ndash; how dumb is that?&lt;/p&gt;&#xA;&lt;p&gt;Why would anybody do that?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;You would always wanna introduce good agility locally first&lt;/strong&gt;, and then go and insist that the Indian teams be agile &amp;ndash; and that&amp;rsquo;s what [xx] is doing &amp;ndash; they are converting all their Indian operation &amp;ndash; which is growing bigger than their US operation &amp;ndash; to Scrum.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Video: Agile and Scrum Tuning by Jeff Sutherland</title>
+				<link>https://justaddwater.dk/2008/03/06/video-agile-and-scrum-tuning-by-jeff-sutherland/</link>
+				<pubDate>Thu, 06 Mar 2008 22:29:20 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/06/video-agile-and-scrum-tuning-by-jeff-sutherland/</guid>
+				<description>&lt;p&gt;Scrum video presentation from Jeff Sutherland (speech from December 2006 but highly relevant). The presentation is really packet with great quotes and inspiration. I wonder if I ever will be motivated to work in traditional big waterfall projects again&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://video.google.com/videoplay?docid=8795214308797356840&#34; title=&#34;Google video: Scrum Tuning: Lessons learned from Scrum implementation at Google&#34;&gt;Scrum Tuning: Lessons learned from Scrum implementation at Google&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Working software is really the only measure of progress.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;It used to be only about 40% of requirements change in the average project in the industry. But in the 2003 report from Stanford that number moved up to between 60 and 65% of requirements change during a project. Google knows this, but some people are still trying to make a plan and then they create a change control group, which is the kiss of death for successful projects these days.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Great Quotes For The Agile Project Wall</title>
+				<link>https://justaddwater.dk/2008/02/24/great-quotes-for-the-agile-project-wall/</link>
+				<pubDate>Sun, 24 Feb 2008 21:24:24 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/02/24/great-quotes-for-the-agile-project-wall/</guid>
+				<description>&lt;p&gt;At a recent internal Capgemini tradeshow, we had the pleasure of using some great quotes that really benefit working the way I like the best: Small agile teams where we can show and tell &amp;ndash; make working software and prototypes very fast in close collaboration with clients.&lt;/p&gt;&#xA;&lt;p&gt;Mads and I decided to add a few quotes of our own on the list &amp;ndash; basically to provoke a bit internally. One of the provocations were to call us &amp;ldquo;Ruby on Rails pioneers&amp;rdquo;. The reason for that is actually that a Danish newspaper last year called us that when describing this way of working.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Selling Ruby, Rails, and Agile Project Management</title>
+				<link>https://justaddwater.dk/2008/02/02/selling-ruby-rails-and-agile-project-management/</link>
+				<pubDate>Sat, 02 Feb 2008 19:46:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/02/02/selling-ruby-rails-and-agile-project-management/</guid>
+				<description>&lt;p&gt;My colleague Mads and myself made an internal &amp;ldquo;sales show&amp;rdquo; for the way we use Ruby on Rails to deliver web projects that are fast, small, agile prototypes in close collaboration with clients.&lt;/p&gt;&#xA;&lt;p&gt;Here are a few photos from our internal Capgemini kickoff:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://flickr.com/photos/jesper/2235781106/&#34;&gt;&lt;img src=&#34;http://farm3.static.flickr.com/2199/2235781106_a33f82c80a_m.jpg&#34; alt=&#34;Mads and the fountains&#34;&gt;&#xA;&lt;/a&gt;&lt;br&gt;&#xA;The sign says &amp;ldquo;Test yourself: Project manager &amp;ndash; can you handle it&amp;rdquo;. Purpose: Show the difference between waterfall-like project management (left) and a more holistic approach (the fountain on the right)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Lean Software Development Video Mary Poppendieck</title>
+				<link>https://justaddwater.dk/2008/01/08/lean-software-development-video-mary-poppendieck/</link>
+				<pubDate>Tue, 08 Jan 2008 19:58:36 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/08/lean-software-development-video-mary-poppendieck/</guid>
+				<description>&lt;p&gt;Here are some great examples i jotted down when watching Mary Poppendieck&amp;rsquo;s presentation at Google: &amp;ldquo;&lt;a href=&#34;http://video.google.com/videoplay?docid=-5105910452864283694&#34;&gt;Competing on the basis of speed&lt;/a&gt;&amp;rdquo;. See my notes below.&lt;/p&gt;&#xA;&lt;p&gt;Complexity kills speed: Windows 95 took 350 developers, Vista took 3500 developers&lt;/p&gt;&#xA;&lt;p&gt;Make sure your project anticipates change:&lt;br&gt;&#xA;60-80% of all software is developed after first release to production&lt;/p&gt;&#xA;&lt;p&gt;Defer commitment.Wait till the latest possible moment to make the commitment. This makes sure you base your decision on the best information available. Example: Toyota develops 10 parallel motors for a given project and only 9-10 months before production, they take the decision which one to use in the final car.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Speed House Building Video, Teamwork and Collaboration</title>
+				<link>https://justaddwater.dk/2008/01/02/speed-house-building-video-teamwork-and-collaboration/</link>
+				<pubDate>Wed, 02 Jan 2008 21:48:00 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/02/speed-house-building-video-teamwork-and-collaboration/</guid>
+				<description>&lt;p&gt;You may know this video, where American construction workers compete to build a house as fast as possible.&lt;/p&gt;&#xA;&lt;p&gt;Colleagues of mine showed this video at a 50-60 people workshop for inspiration to teamwork and collaboration.&lt;/p&gt;&#xA;&lt;p&gt;I was really amazed when I first saw this video. It seems chaotic but is of course well prepared down to the tiniest detail. Also, it reminds me a bit like small ants running around.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Jeff Patton on Agile Development</title>
+				<link>https://justaddwater.dk/2006/10/10/uiconf-jeff-patton-agile-development/</link>
+				<pubDate>Tue, 10 Oct 2006 21:17:16 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/10/uiconf-jeff-patton-agile-development/</guid>
+				<description>&lt;p&gt;&lt;em&gt;[Live notes from UI Conf]&lt;/em&gt;&lt;br&gt;&#xA;My final thoughts: This is a power talk, and the full day tomorrow probably covers it better.&lt;/p&gt;&#xA;&lt;p&gt;Why agile development continues to grow in popularity&lt;/p&gt;&#xA;&lt;p&gt;Rare combination: Companies that are strong both on agile development and user experience.&lt;/p&gt;&#xA;&lt;p&gt;Wrong assumption. Agile is just about finishing something faster&lt;br&gt;&#xA;It isn&amp;rsquo;t just about finishing faster. It&amp;rsquo;s about finishing faster. I&amp;rsquo;ll explain some more about that later.&lt;/p&gt;&#xA;&lt;h3 id=&#34;greedines-short-sightednes-and-blame&#34;&gt;Greedines, short-sightednes and blame&lt;/h3&gt;&#xA;&lt;p&gt;Common things go wrong when projects go wrong.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

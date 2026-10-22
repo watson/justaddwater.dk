@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design for Browser Size — Not Screen Size · justaddwater.dk</title>
+<meta name="description" content="Update 2006-11-08: Baekdal has published numbers (hard evidence) on browser size. And a fun research video too. See &ldquo;Actual Browser Sizes (final)
+Jakob …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2006/08/14/blog-purpose/" rel="prev">Time to revise our blog purpose</a></div>
+<div class="alignright"><a href="/2006/08/24/ruby-on-rails-plugin-localize-your-rails-app/" rel="next">Ruby on Rails plugin: Localize your Rails app</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2006-08-17"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2006"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Best of Justaddwater"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Browser"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Usability"></span><span hidden data-pagefind-filter="category[data-v]" data-v="User Interface"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Jakob Nielsen discusses screen resolution and page layout in a recent Alertbox article. As usual, Jakob offers some decent facts and clear guidelines on which screen resolution to design for. I have the deepest respect for Jakob Nielsen and the work he does to make usability easier to understand and use for everybody. There is just one problem: Findings should focus on browser window size and not screen size."></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Aug 17"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="45"></span>
+<h2 data-pagefind-meta="title">Design for Browser Size — Not Screen Size</h2>
+<div class="entry">
+<p><em><strong>Update 2006-11-08:</strong> Baekdal has published numbers (hard evidence) on browser size. And a fun research video too. See &ldquo;<a href="/2006/10/31/actual-browser-sizes-final/">Actual Browser Sizes (final)</a></em></p>
+<p>Jakob Nielsen discusses screen resolution and page layout in a <a href="http://www.useit.com/alertbox/screen_resolution.html" title="Useit.com, Alertbox: Screen Resolution and Page Layout (July 31, 2006)">recent Alertbox article</a>.</p>
+<blockquote>
+<p>Optimize Web pages for 1024×768, but use a liquid layout that stretches well for any resolution, from 800×600 to 1280×1024.</p>
+</blockquote>
+<p>As usual, Jakob offers some decent facts and clear guidelines on which screen resolution to design for. I have the deepest respect for Jakob Nielsen and the work he does to make usability easier to understand and use for everybody. <strong>There is just one problem: Findings should focus on browser window size and not screen size.</strong> <small>(More precisely, browser content area, which we&rsquo;ll get back to shortly)</small></p>
+<blockquote>
+<p>Currently, about <strong>60%</strong> of all monitors are set at <strong>1024×768</strong> pixels. In comparison, only about <strong>17%</strong> use <strong>800×600</strong> so it&rsquo;s obviously less important to aim at perfection for these small-display users. What&rsquo;s equally obvious, however, is that you can&rsquo;t simply ignore 17% of your customer segment by providing a frozen layout that requires more screen space than they have available.</p>
+</blockquote>
+<p>People working professionally with web know the difference between screen size and browser content area, but to make it clear I wanted to illustrate that screen size is irrelevant in comparison to other more important metrics.</p>
+<p>To illustrate the difference, look at these examples that show the difference between screen size and browser content area.</p>
+<div align="center">
+<p><small><img src="/wp-content/uploads/2006/08/outerwindow-10241.png" alt="Screen size 1024x768" width="333" height="240">
+<br>
+1024×768 screen resolution gives 1004×598 usable content<br>
+area (maximized Internet Explorer window, Windows XP)</small></p>
+</div>
+<div align="center">
+<p><img src="/wp-content/uploads/2006/08/outerwindow-800.png" alt="Screen size 800x600" width="333" height="237">
+<br>
+<small>800×600 screen resolution gives only 778×430 usable content<br>
+area (maximized Internet Explorer window, Windows XP)</small></p>
+</div>
+<p>The figures show that the &ldquo;browser real estate&rdquo; available for actual content is smaller. This is what I call &ldquo;content area&rdquo;.</p>
+<p>You might notice that browser window height in the screenshots above is smaller than screen size. This is because of the Windows XP task bar that is 30 pixels high in the standard configuration.</p>
+<p>Likewise, the standard browser toolbar, statusbar, scrollbar subtracts an additional 22×140 pixels. (That&rsquo;s what sometimes is referred to as &ldquo;browser chrome&rdquo;. So, in general operating system and browser window consumes 22×170 pixels.</p>
+<p>Does this mean that we&rsquo;re safe if we optimize for 1004×598? Well, not entirely. Jakob mentions that</p>
+<blockquote>
+<p>screen sizes vary among users. Window size variability is even greater, since users don&rsquo;t always maximize their browsers (especially if they have large screens).</p>
+</blockquote>
+<p>I wanted to take this quote and the other facts from the article and show it in a tabular format:<small><br>
+</small></p>
+<div align="center">
+<table width="450" border="1">
+<tr>
+<th>Percentage</th>
+<th>Screen size</th>
+<th align="center">Maximized window</th>
+<th>Max available content area</th>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>640×480</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>17%</td>
+<td>800×600</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>60%</td>
+<td>1024×768</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>18%</td>
+<td>1200×1024 or more</td>
+<td>Not always</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Total: 97%</td>
+<td align="center"></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<div align="center">
+<p><small>Screen real-estate available for browser. Source: Jacob Nielsen&rsquo;s article </small><small><em>“<a href="http://www.useit.com/alertbox/screen_resolution.html">Screen resolution<br>
+and page layout</a>&rdquo;</em></small><small>. The blank fields show what is not mentioned explicitly in the article.</small></p>
+</div>
+<ul>
+<li>Percentage is the users that have the given screen size.</li>
+<li>Maximized window is how likely users are to run browser maximized (no other programs visible)</li>
+<li>Max available content area is the absolute largest area for content visible (when reserved pixels for operating system and browser is subtracted).</li>
+</ul>
+<p>My problem is that often people are not using a maximized browser, but a browser window that&rsquo;s actually smaller than the entire screen. An that&rsquo;s why speaking of screen size is irrelevant to other metrics, such as browser content area.</p>
+<h3 id="browser-rarely-maximized">Browser rarely maximized</h3>
+<p>18% of all web users who use big screens (above 1200×1024), including me (and most of my web developer colleagues). I also fit perfect on the other finding: I never surf with my browser maximized. Here is what my laptop screen looks like:</p>
+<div style="text-align: center">
+<p><img src="/wp-content/uploads/2006/08/outerwindow-14001.png" alt="Screen size 1400x1050" width="333" height="250">
+</p>
+</div>
+<div align="center">
+<p><small>1400×1050 screen resolution with a normal Internet Explorer</small><br>
+<small> window gives 941×1017 usable content area<br>
+</small></p>
+</div>
+<p>Notice that even though I have a wider screen, the actual browser window is smaller than a maximized browser on 1024×768.</p>
+<p>So to sum this up and fill in the missing data from Jakob&rsquo;s article:</p>
+<div align="center">
+<table width="450" border="1">
+<tr>
+<th></th>
+<th>Screen size</th>
+<th>Maximized window</th>
+<th>Max available content area</th>
+</tr>
+<tr>
+<td>3%</td>
+<td>640×480</td>
+<td>Always</td>
+<td>618×310</td>
+</tr>
+<tr>
+<td>17%</td>
+<td>800×600</td>
+<td>Always</td>
+<td>778×430</td>
+</tr>
+<tr>
+<td>60%</td>
+<td>1024×768</td>
+<td>Often</td>
+<td>1004×598</td>
+</tr>
+<tr>
+<td>18%</td>
+<td>1200×1024 or more</td>
+<td>Rarely</td>
+<td>1259×853 or more</td>
+</tr>
+<tr>
+<td>Total: 100%</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<div align="center">
+<p><small>Screen real-estate available for browser, based on findings by<br>
+Jakob Nielsen with added data by me.</small></p>
+</div>
+<h3 id="no-stats-on-browser-window-size">No stats on browser window size</h3>
+<p>Unfortunately, I know of no statistics on browser window size. Every major stat company and analytics tool measure screen size.</p>
+<p>My own experience (by watching people&rsquo;s browsing behavior) follow what Jakob has found. On smaller screens, people tend to maximize browser window.</p>
+<p>Jakob, I really hope that you update your findings with this adjustment, because it only adds to comfusion especially when working with clients that have not spent their entire working life on the web.</p>
+<h3 id="proposed-update-of-text">Proposed update of text</h3>
+<p>Therefore I decided to update all figures in the article so that it reflects browser content area in stead of window size.</p>
+<blockquote>
+<ul>
+<li><strong>Optimize for <em>1004×598</em></strong>, which is currently the most widely used <em>browser window size</em>. Of course, the general guideline is to optimize for your target audience&rsquo;s most common resolution, so the size will change in the future. It might even be a different size now, if, say, you&rsquo;re designing an intranet for a company that gives all employees big monitors.</li>
+<li><strong>Do <em>not</em> design solely for a specific monitor size</strong> because screen sizes vary among users. <em>Browser</em> window size variability is even greater, since users don&rsquo;t always maximize their browsers (especially if they have large screens).</li>
+<li><strong>Use a liquid layout</strong> that stretches to the current user&rsquo;s <em>browser</em> window size (that is, avoid frozen layouts that are always the same size).</li>
+</ul>
+<p><small><em>My modified version of Jakob Nielsen&rsquo;s Alertbox &ldquo;<a href="http://www.useit.com/alertbox/screen_resolution.html">Screen resolution and page layout</a>&rdquo;, July 31, 2006. My modifications: browser window size instead of screen size.</em></small></p>
+</blockquote>
+<p>I really wanted to put in a smaller number than 1004×598 in order to take the big-screen users into account. However, I really don&rsquo;t know any enough metrics to make a well-argumented decision.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Web designs should optimize for a maximum available browser window of 1000×600 pixels. As screens get better and bigger, users rarely maximize browser windows, which is why we&rsquo;re probably better off optimizing for a smaller window, such as 900×600.</p>
+<p>Still, the layout should be liquid so that content fill the users current browser content area, regardless of the size. Also, do not design for a specific browser window size, as it varies between users, especially users with large screens.</p>
+<p>I&rsquo;d like to hear your comments on this. Do you know of any metrics or study on browser window size? Any stat tools that actually measure the browser window size? What are your own experience with regards to browser window size that&rsquo;s used?</p>
+<p>For the user test I have been involved in, every test leader started by maximizing the browser window. That off course would bias any findings with regards to browser window size, so any observations from field studies and similar are welcome.</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/usability/" rel="tag">usability</a>, screen size, screen resolution, <a href="/tag/browser/" rel="tag">browser</a>, web design, liquid layout, window size, jakob nielsen, web statistics</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, August 17th, 2006 at 09:52 (GMT-1) and is filed under <a href="/category/best-of-justaddwater/" rel="category tag">Best of Justaddwater</a>, <a href="/category/browser/" rel="category tag">Browser</a>, <a href="/category/usability/" rel="category tag">Usability</a>, <a href="/category/user-interface/" rel="category tag">User Interface</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">45 Responses to &#8220;Design for Browser Size — Not Screen Size&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-10345">
+<cite><a href="http://www.snitker.com" class="url" rel="external">Thomas Visby Snitker</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10345" title="">August 17th, 2006 at 10:12 (GMT-1)</a> </small>
+<p>Thanks for putting the spot light on this topic, Jesper. It deserves more attention.<br>
+In my work as a usability specialist we&rsquo;re very rarely encouraged to look into this by our clients. So we have very little data. Maybe we should think of ways to stimulate the demand for this. We want data!<br>
+Cheers,<br>
+Thomas</p>
+</li>
+
+<li id="comment-10347">
+<cite><a href="http://www.baekdal.com" class="url" rel="external">Thomas Baekdal</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10347" title="">August 17th, 2006 at 10:54 (GMT-1)</a> </small>
+<p>Good article. I my preliminary study I have found that while some people do not maximize their browser size above 1024×768 (sorry 1004×598), there is still a huge amount that does.</p>
+<p>This creates a problem, because making a good site – even a liquid one – will be nearly impossible when you have to make one desig fit a width of 1004px vs. 1634px.</p>
+<p>It might be time to consider resolution dependent layout.</p>
+<p>Example (from themaninblue.com):<br>
+<a href="http://www.themaninblue.com/experiment/ResolutionLayout/">http://www.themaninblue.com/experiment/ResolutionLayout/</a></p>
+<p>&hellip;and the concept behind NY Times reader in Vista:<br>
+<a href="http://www.microsoft.com/presspass/press/2006/apr06/04-28TimesReaderPR.mspx">http://www.microsoft.com/presspass/press/2006/apr06/04-28TimesReaderPR.mspx</a></p>
+
+</li>
+
+<li class="alt" id="comment-10414">
+<cite><a href="http://www.bernth.dk/" class="url" rel="external">Michael Bernth</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10414" title="">August 17th, 2006 at 23:58 (GMT-1)</a> </small>
+<p>Thanks for a very good article, and thanks for pointing out that our headache is the size of the browser window and not the screen resolution!</p>
+<p>That said, there are still some points that were left out.</p>
+<p>I must admit I have some problems with the determination of the hight of the browser window. I find it next to impossible to give a sensible answer to that question.<br>
+There are simply to many variables. What browser is the reader using? What platform; PC, Mac, linux? Are icons displayed? Are they large or small? is it with or with out text? Do the readers have additional tools instal at the top, etc. The variables are legio.</p>
+<p>I think, that as a designer, one should think about providing the most amount of information regarding the site at the very top of the website, and through the design encourage the reader to scroll down the page.<br>
+I still have nightmares of clients who wanted the whole page to be shown without the user having to scroll. I know that was many years ago, but it still haunts me.</p>
+<p>The width of the browser window can also be determined by the way the Windows user has positioned their tool bar. Though the default is at the bottom of the screen, it can also be positioned to the left or to the right. And the size of the tool bar is also different, dependent on which version of Windows is being used. Also, is the tool bar hidden or not?<br>
+This might be an unusual problem, but it is something that can give the poor designer some headaches.<br>
+Not only can the tool bar affect the browser width, but also the height. This is relevant for both PC and Mac.<br>
+And then, think about sidebars. They differ in size from browser to browser.</p>
+<p>I think that a flexible design is a very good way to go, but it is not the holy grail. A fixed design can work very well. Look at <a href="https://www.zeldman.com">www.zeldman.com</a>. It works perfectly. I think most will be able to see that site the way it was designed to be seen, and it also provides the information it wants, perfectly. Hey even this site has a fixed size. I can dig the intellectual challenge in making a flexible design, but there really aren&rsquo;t any perfect solutions.</p>
+<p>I guess, what I&rsquo;m trying to say is; every project we encounters has different goals and it is our job to provide our clients with the best solution to their particular needs. We should not stare blindly at conventions or rules that might not be important to the task at hand. Use your creativity and your mind. Hey, that is what we are really being paid for.</p>
+
+</li>
+
+<li id="comment-10469">
+<cite><a href="http://www.keesmoerman.nl" class="url" rel="external">Kees Moerman</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10469" title="">August 18th, 2006 at 12:37 (GMT-1)</a> </small>
+<p>What is also often forgotten is that even more area might be lost due to for example the favorites/bookmarks sidebar. During normal browsing, I always have this active, further reducing real estate. At this moment, my screen resolution is 1600×1200, my browser window is 1221×906, but my active content area is 1010×750 (due to bookmarks and extra toolbars). Also on smaller screens, I have these bookmarks visible, so the current 1010 width is even optimistic.</p>
+<p>Btw nice to see such discussion on a site which itself has a fixed layout loosing lots of space in a near-empty right column.</p>
+
+</li>
+
+<li class="alt" id="comment-10493">
+<cite><a href="http://www.bernth.dk" class="url" rel="external">Michael Bernth</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10493" title="">August 18th, 2006 at 16:41 (GMT-1)</a> </small>
+<p>It seem these days, that a liquid layout is seen as the answer to all our prayer. As much as I like the idea, it sometimes comes across as horror vacui.<br>
+There is such a thing as negative space. It is a very useful tool for the graphic designer. It can be used to clearly define specific areas of information and tools. And it can make the design more harmonious and eye pleasing ,<br>
+And then there is the problem of readability. Long lines of text are more difficult to read than short ones. A lot of designer seems to totally ignore that. This could be avoided by using max-width, but then there is the lack bowser support. I don&rsquo;t know if it&rsquo;s supported by MSIE 7, but still, that doesn&rsquo;t keep people from using old and useless browsers.<br>
+What I&rsquo;m getting to is; using a fixed size design is not necessarily the work of the devil, if used thoughtfully.</p>
+</li>
+
+<li id="comment-10684">
+<cite><a href="http://mentalized.net" class="url" rel="external">Jakob S</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10684" title="">August 21st, 2006 at 12:13 (GMT-1)</a> </small>
+<p>Offspring of this conversation: <a href="http://mentalized.net/journal/2006/08/21/size_does_matter/">http://mentalized.net/journal/2006/08/21/size_does_matter/</a> – Looks like Movable Types trackback didn&rsquo;t work for some reason.</p>
+</li>
+
+<li class="alt" id="comment-10690">
+<cite>Arek</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10690" title="">August 21st, 2006 at 12:33 (GMT-1)</a> </small>
+<p>Web Developer Extension for Firefox<br>
+<a href="http://chrispederick.com/work/webdeveloper/">http://chrispederick.com/work/webdeveloper/</a></p>
+<p>has feature allowing to see viewport size with only one click.</p>
+
+</li>
+
+<li id="comment-10798">
+<cite><a href="http://devlonduthie.com/blog/2006/08/22/links-for-2006-08-22/" class="url" rel="external">devlon duthie » Blog Archive » links for 2006-08-22</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10798" title="">August 22nd, 2006 at 23:38 (GMT-1)</a> </small>
+<p>[&hellip;] justaddwater.dk | Design for Browser Size — Not Screen Size People working professionally with web know the difference between screen size and browser content area, but to make it clear I wanted to illustrate that screen size is irrelevant in comparison to other more important metrics. (tags: reference webdesign) [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-10931">
+<cite><a href="http://www.challengebusiness.com" class="url" rel="external">Kerry Dye</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-10931" title="">August 24th, 2006 at 16:33 (GMT-1)</a> </small>
+<p>As someone who uses a right hand toolbar on XP, what is *really* annoying is designs that read the screen size and optimise for that, meaning I have to scroll horizontally even though I&rsquo;ve got an actual viewport size of 1061 x 678. (Google Analytics is the main culprit I&rsquo;ve noticed at the moment).</p>
+</li>
+
+<li id="comment-11090">
+<cite><a href="http://www.mzwebdesign.de" class="url" rel="external">Manuel</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-11090" title="">August 26th, 2006 at 15:45 (GMT-1)</a> </small>
+<p>Nice article!</p>
+<p>In the last time I tend to use liquid layouts, combined with max-width.</p>
+<p>In my opinion is this a good compromise between flexibility and layout-control. Usually I set max-width to 1024px. Then I optimize the &ldquo;content layout&rdquo; for this width, so that most users get the &ldquo;best&rdquo; visual result.</p>
+<p>As Michael said above, IE 5/6 doesn&rsquo;t support max-width. This problem can be solved width expressions. I combine them with conditional comments to hide this code from other browsers and validators.</p>
+<p>But IE wouldn&rsquo;t be IE, if another hack wouldn&rsquo;t be necessary (*grrrr*). Because this dumb browser can&rsquo;t handle his own expressions correctly (!), it has to be set to quirks-mode. So let&rsquo;s put a xml-declaration on top of the xhtml-file and &hellip; unbelievable &hellip; it works! Hmmm, but now a new problem arises, because IE 6 will render the site as IE 5. Yes, the box-model-bug is still alive! But after solving &ldquo;some&rdquo; IE5-specific problems this odyssey should be over. ;-)</p>
+<p>You can see the &ldquo;liquid/max-width combination&rdquo; here: <a href="http://www.medien.fh-wiesbaden.de">http://www.medien.fh-wiesbaden.de</a></p>
+
+</li>
+
+<li class="alt" id="comment-11313">
+<cite>matthijs</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-11313" title="">August 29th, 2006 at 09:19 (GMT-1)</a> </small>
+<p>@manuel: as far as I know you don&rsquo;t have to put IE in quirks to get the expressions to work. At least, haven&rsquo;t had any problems myself. So either I&rsquo;m very lucky or you&rsquo;re very unlucky.</p>
+<p>I have had some problems with specific numbers in the expression causing race conditions in IE and freezing the browser, but after changing the numbers a bit will solved that.</p>
+
+</li>
+
+<li id="comment-11376">
+<cite><a href="http://www.mzwebdesign.de" class="url" rel="external">Manuel</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-11376" title="">August 29th, 2006 at 21:42 (GMT-1)</a> </small>
+<p>@matthijs: Yes, in principle expressions work in standard mode too, but especially with min-/max-width, IE doesn&rsquo;t run stable. Differing values in the expression might work, but under some conditions not.</p>
+<p>I found out that the safest way is to put IE in quirks mode, but as you mentioned, in some cases changing the values can be successful too. Well, I hope in some years we don&rsquo;t have to use any of these ugly hacks ;-)</p>
+
+</li>
+
+<li class="alt" id="comment-11759">
+<cite><a href="http://justaddwater.dk/2006/09/02/browser-size/" class="url" rel="external">justaddwater.dk | Browser Size</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-11759" title="">September 2nd, 2006 at 14:30 (GMT-1)</a> </small>
+<p>[&hellip;] I asked for numbers confirming my thoughts recently in “Design for Browser Size — Not Screen Size“. [&hellip;]</p>
+</li>
+
+<li id="comment-11958">
+<cite><a href="http://www.blogherald.com/2006/09/04/screen-versus-window-size-and-the-never-ending-debate-on-usability/" class="url" rel="external">Screen versus window size and the never ending debate on usability at The Blog Herald</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-11958" title="">September 4th, 2006 at 17:25 (GMT-1)</a> </small>
+<p>[&hellip;] Jesper Ronn-Jensen has two very readable posts up, the first actually being a response to Nielsen’s thoughts on optimizing sites for 1024×768 pixel resolutions. Ronn-Jensen sure has a point that it all comes down to how big the window is – not the screen’s resolution. He thinks people doesn’t maximize when sitting on bigger screens with higher resolutions, which makes sense to me. I don’t want a huge window with a small site sitting lonely in the middle, nor do I want to read text over my 21″ widescreen – that’s plain horrible. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-12238">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-12238" title="">September 7th, 2006 at 09:14 (GMT-1)</a> </small>
+<p>Molly (reply to spam-like comment recieved here earlier today).</p>
+<p>I deleted your comment because it looks like spam: I understand you are glad for a certain webdesign company, but please add more relevance to the subject matter, that all readers can benefit from. Or your comment is deleted.</p>
+<p>Note that the comments we mark as spam are submitted to Akismet (collective spam filter). Most likely your similar spam comments will be automatically blocked on other sites that use Akismet as well.</p>
+
+</li>
+
+<li id="comment-18050">
+<cite><a href="http://justaddwater.dk/2006/10/11/uiconf-luke-wroblewski-visual-design/" class="url" rel="external">justaddwater.dk | UI Conf: Luke Wroblewski on Visual Design in the Development Process</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-18050" title="">October 11th, 2006 at 16:02 (GMT-1)</a> </small>
+<p>[&hellip;] Screen resolution: I work with things that scale appropriately from 800×600 to 1024×768. Above that, it’s not optimized. Recently i had to design for an organization with only 256 colors. “IT will not let them upgrade. It’s a security risk” [Jesper’s note: this is interesting related to my recent article “Design for browser size — not screen size“] [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-20775">
+<cite><a href="http://mentalized.net/journal/2006/10/25/firefox_2_dot_oh/index.php" class="url" rel="external">Journal</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-20775" title="">October 25th, 2006 at 22:22 (GMT-1)</a> </small>
+<p><strong>Firefox 2 dot oh&hellip;</strong></p>
+<p>Firefox 2.0 has been released. Go get it. Now. First impressions Looks like subscribing to feeds got a whole lot friendlier. This is what it looks like for my feed: Sure beats the more or less raw XML you used&hellip;&hellip;</p>
+
+</li>
+
+<li id="comment-22401">
+<cite><a href="http://justaddwater.dk/2006/10/31/actual-browser-sizes-final/" class="url" rel="external">justaddwater.dk | Actual Browser Sizes (final)</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-22401" title="">October 31st, 2006 at 21:38 (GMT-1)</a> </small>
+<p>[&hellip;] The numbers are in! Jesper first asked the question in “Design for Browser Size — Not Screen Size” and quickly after Thomas Baekdal of baekdal.com took up the challenge. After publishing his preliminary results he have now unveiled the final report: The report finds, among other things, that the majority of people browse maximized or very close to it. That Mac user have bigger screens, but their browser are the same size as on any other platform. And, in order to support 95% of your visitors, you need to design for a maximum size of 776×424px. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-25082">
+<cite>Me</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-25082" title="">November 8th, 2006 at 22:33 (GMT-1)</a> </small>
+<p>people should start designing for mobile-sized screens, like 320×240.<br>
+one, it makes sites easy to navigate on a phone/PDA. and two, people will start using there TV&rsquo;s to browse more &amp; more, and content will need to be easily controllable from the couch.</p>
+</li>
+
+<li id="comment-25706">
+<cite><a href="http://mypunchbowl.wordpress.com/2006/11/10/designing-for-browser-size/" class="url" rel="external">Designing for browser size « MyPunchblog</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-25706" title="">November 10th, 2006 at 14:07 (GMT-1)</a> </small>
+<p>[&hellip;] I think you’ll find that this article provides some nice insights into this issue. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-31541">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-31541" title="">November 24th, 2006 at 00:19 (GMT-1)</a> </small>
+<p>Very nice measurement tool at Browsersize.com:<br>
+<a href="http://whatsmy.browsersize.com/">whatsmy.browsersize.com</a></p>
+<p><img src="/wp-content/uploads/2006/11/browsersize-com-screenshot.png" alt="whatsmy.browsersize.com screenshot" width="416" height="527">
+</p>
+
+</li>
+
+<li id="comment-32925">
+<cite><a href="http://www.klp.com.au/" class="url" rel="external">Kevin Futter</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-32925" title="">November 28th, 2006 at 09:20 (GMT-1)</a> </small>
+<p>At the risk of seeming lazy, I&rsquo;ll post here an amended copy of what I&rsquo;ve just posted on 456 Berea Street:</p>
+<p>The whole browser maximised/not maximised dichotomy tends to fall along platform lines. Most Windows users browser maximised, most Mac users do not. Why? Because the maximise UI widgets behave differently on each platform. The behaviour of the Windows maximise button encourages full-screen display (for most apps, not just browsers), because its maximised state is exactly that – full screen minus the task bar.</p>
+<p>On the Mac, the maximise button just toggles between the two last-used window sizes. One of those is possibly full-screen, but will generally not extend behind the dock if it&rsquo;s exposed. I&rsquo;ve always felt that there really is no such thing as &lsquo;maximised&rsquo; on the Mac, given that applications don&rsquo;t exist in their own visual space, like they do on Windows. You almost always get some part of the desktop exposed on a Mac. It becomes very easy simply to drag the window narrower, whereas on Windows in &lsquo;maximised&rsquo; mode, you don&rsquo;t even have access to the window resize widget.</p>
+<p>I actually mostly use Windows at home, and mostly Mac at work, and I find myself an exponent of this very dichotomy. On Windows, I browse almost exclusively maximised @ 1600×1200. On the Mac, where I sometimes have the luxury of a second 20” screen, it&rsquo;s almost never completely maximised. Non-maximised apps tend to feel weird on the PC, but I&rsquo;d expect that&rsquo;s just me.</p>
+<p>I guess my point is that I don&rsquo;t think it&rsquo;s as simple as saying that users do or don&rsquo;t browse the web with their browsers maximised, and then base design decisions off that &lsquo;conclusion&rsquo;. However, I certainly agree that fluid or jello layouts neatly sidestep the entire issue and are philosophically the right approach to designing for the web.</p>
+
+</li>
+
+<li class="alt" id="comment-36214">
+<cite><a href="http://justaddwater.dk/2006/12/07/blog-usability-our-most-popular-content/" class="url" rel="external">justaddwater.dk | Blog Usability: Our Most Popular Content</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-36214" title="">December 7th, 2006 at 14:02 (GMT-1)</a> </small>
+<p>[&hellip;] Design for Browser Size — Not Screen Size [&hellip;]</p>
+</li>
+
+<li id="comment-100445">
+<cite>don arnoldy</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-100445" title="">March 9th, 2007 at 22:19 (GMT-1)</a> </small>
+<p>I am very glad to read this [and Thomas Baekdal&rsquo;s] article&ndash; they move the discourse in the proper direction. There is, however, one additional measure that needs to be accounted for&ndash;type size.</p>
+<p>Print designers have long known that there is an optimal relationship between type size and column width. A simple rule-of-thumb for this is that the optimal line length is 12em.</p>
+<p>I wonder wether the choice to maximize or not maximize is influenced by the user&rsquo;s default font size setting or the font size choices thrust upon them by web designers.</p>
+
+</li>
+
+<li class="alt" id="comment-100649">
+<cite><a href="http://franchu.net/2007/03/10/el-tamano-importa-disenar-webs-para-la-ventana-del-navegador/" class="url" rel="external">Franchu’s lair » El tamaño importa - Diseñar webs para la ventana del navegador</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-100649" title="">March 10th, 2007 at 02:54 (GMT-1)</a> </small>
+<p>[&hellip;] desgracia, el Sr. Nielsen parece olvidar o ignorar un detalle muy imporante que se comenta en el blog de Jesper: hay que diseñar para un ancho de ventana en vez de para un ancho de pantalla. Esto es así debido [&hellip;]</p>
+</li>
+
+<li id="comment-101405">
+<cite><a href="http://cosassencillas.wordpress.com/2007/03/11/disenar-webs-para-la-ventana-del-navegador/" class="url" rel="external">Diseñar webs para la ventana del navegador « Cosas sencillas</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-101405" title="">March 11th, 2007 at 07:24 (GMT-1)</a> </small>
+<p>[&hellip;] desgracia, el Sr. Nielsen parece olvidar o ignorar un detalle muy imporante que se comenta en el blog de Jesper: hay que diseñar para un ancho de ventana en vez de para un ancho de pantalla. Esto es así debido [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-102900">
+<cite><a href="http://www.blindell.se" class="url" rel="external">Gabriel</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-102900" title="">March 13th, 2007 at 14:03 (GMT-1)</a> </small>
+<p>I agree with Michael Bernth: although liquid design solve display problems on smaller screens, the same approach is not applicable on wide ones. Having to read long lines is a horrible dilemma that must be avoided at all costs, as well as having to scroll sideways.</p>
+<p>The way I see it, there must exist two solutions &ndash; one utilized on narrow screens, and another for wider screens. However, this must be constructed using Javascript and with it arises problems. What happens if the user has disabled Javascript? Or if a browser doesn&rsquo;t support the code? Is this a worse problem than that of long lines?</p>
+<p>To wit, constructing websites that are adequately displayable an a vast enough array of screens is difficult and requires lots of planning. A lot more than some anticipates, and taking a liquid-only design is not the (as one stated) the Holy Graal of web developers.</p>
+
+</li>
+
+<li id="comment-113362">
+<cite><a href="http://www.natural-innovations.com/" class="url" rel="external">Walter Ian Kaye</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-113362" title="">March 24th, 2007 at 01:54 (GMT-1)</a> </small>
+<p>My preferred browser window width is 512px, which is just enough for 80 columns of 9pt Monaco (a monospaced font on the Mac). So on a Mac Plus that would be maximized, but not on my PowerBook which is 1152×768. Yes, with a screen width of 1152px, my window is 512px. My attitude: &ldquo;If a page don&rsquo;t fit, it ain&rsquo;t worth readin&rsquo;.&rdquo; No page on Earth is worth more of my screen real estate &ndash; not even my own. My own pages are liquid, and can squeeze down to just a few hundred pixels wide (including the graphical header, thanks to creative use of background image). Wrapping to window width is a feature, not a bug. It is a natural strength of HTML, and should not be subverted. The Web was designed to be device independent, which *obviously* means browser-width independent. Anyone who doesn&rsquo;t see that, doesn&rsquo;t &ldquo;get&rdquo; the Web and should not be designing for it. &ldquo;If you can&rsquo;t stand the Web heat, get out of the HTML kitchen.&rdquo;</p>
+</li>
+
+<li class="alt" id="comment-128700">
+<cite><a href="http://www.linkage.nl/" class="url" rel="external">Erick</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-128700" title="">April 19th, 2007 at 22:06 (GMT-1)</a> </small>
+<p>What I do not seem to understand is how images should behave with a &rsquo;liquid layout&rsquo;?!?</p>
+<p>Let&rsquo;s say you have an image sized 600x300pixels&hellip;This is how it should look when visited with a 1024×768 resolutioned screen. But when a bigger screen, let&rsquo;s say 1280×1024 will watch it, the image should be bigger&hellip;Or not?</p>
+<p>Should you have different images for different resolutions?</p>
+<p>I just don&rsquo;t get this whole story when it comes to images&hellip;?! When it is all text a &rsquo;liquid layout&rsquo; seems logical en easy&hellip;But with images? Will everything be liquid &rsquo;except&rsquo; the image? I wonder because I have learned that a width and a height need to be added to a tag otherwise it will not validate&hellip;So&hellip;How will I get the width and height of images to be &rsquo;liquid’?</p>
+<p>Please enlighten me like I&rsquo;m a chimp&hellip;</p>
+
+</li>
+
+<li id="comment-171013">
+<cite><a href="http://www.wiredpixels.com/blog/?p=13" class="url" rel="external">Herding Monkeys » 1024 designs are the equivalent of unwanted pop-up windows</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-171013" title="">June 13th, 2007 at 22:42 (GMT-1)</a> </small>
+<p>[&hellip;] Other references Here’s a guy who probably summed it up better than I did in my impromptu review – <a href="http://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/">http://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/</a> [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-229790">
+<cite><a href="http://ref.amfdesigner.com/2007/08/09/design-for-browser-size-not-screen-size/" class="url" rel="external">amf | ref » Design for Browser Size - Not Screen Size</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-229790" title="">August 9th, 2007 at 23:12 (GMT-1)</a> </small>
+<p>[&hellip;] Link [&hellip;]</p>
+</li>
+
+<li id="comment-253463">
+<cite><a href="http://information-technology-writer.com" class="url" rel="external">Tana</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-253463" title="">September 9th, 2007 at 23:17 (GMT-1)</a> </small>
+<p>Great article! I am dealing with usability just from time to time but I am always keen to learn new things!</p>
+</li>
+
+<li class="alt" id="comment-316510">
+<cite>lawrence</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-316510" title="">October 26th, 2007 at 03:21 (GMT-1)</a> </small>
+<p>Hi ya,&hellip; thought you should know&hellip; there is a typo &hellip;&lsquo;confusion&rsquo; instead of &lsquo;comfusion&rsquo;</p>
+<p>found in this paragraph</p>
+<p>&ldquo;Jakob, I really hope that you update your findings with this adjustment, because it only adds to comfusion especially when working with clients that have not spent their entire working life on the web.&rdquo;</p>
+<p>cheers</p>
+
+</li>
+
+<li id="comment-327762">
+<cite><a href="http://www.louiseventris.com/writings/?p=56" class="url" rel="external">louise ventris » Blog Archive » links for 2007-11-02</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-327762" title="">November 3rd, 2007 at 09:59 (GMT-1)</a> </small>
+<p>[&hellip;] justaddwater.dk | Design for Browser Size — Not Screen Size Article on designing for browser size, specifies screen and content sizes (tags: design) [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-387507">
+<cite><a href="http://www.altiss.co.uk" class="url" rel="external">Mary Stanton</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-387507" title="">January 3rd, 2008 at 16:58 (GMT-1)</a> </small>
+<p>Really informative article. Thanks</p>
+</li>
+
+<li id="comment-390039">
+<cite><a href="http://www.mikes-webdesign.co.uk" class="url" rel="external">mike sherwin</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-390039" title="">January 17th, 2008 at 21:24 (GMT-1)</a> </small>
+<p>Agree Erick.</p>
+<p>Sure 1024*768 will be the next 800*600 but nothing ever stays still, colour was the new black and white, high defintion will be the next colour.</p>
+<p>Everything changes ;-))</p>
+
+</li>
+
+<li class="alt" id="comment-390054">
+<cite><a href="http://www.linkage.nl/2008/" class="url" rel="external">Erick S.</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-390054" title="">January 17th, 2008 at 23:18 (GMT-1)</a> </small>
+<p>Mike,<br>
+What exactly do you mean with the following:<br>
+&ldquo;reductions for toolbars etc&rdquo;</p>
+<p>Is there a standard way to keep this in mind?</p>
+
+</li>
+
+<li id="comment-390141">
+<cite><a href="http://www.mikes-webdesign.co.uk" class="url" rel="external">mike sherwin</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-390141" title="">January 18th, 2008 at 12:32 (GMT-1)</a> </small>
+<p>Hi Erick</p>
+<p>No standard way as such as everyone will have different browser set ups. I think the solution is to work well within 1024*768 e.g. pixels wide and if aiming to fit full height with no vertical scroll on a maximised 1024*768 window then say 570 pixels high.</p>
+<p>As folk mention above it&rsquo;s difficult to call exactly due to monitors, browser set ups. I simply aim to work well within 1024*768. It may mean some white space but I kind of like that&hellip;</p>
+
+</li>
+
+<li class="alt" id="comment-390149">
+<cite><a href="http://www.linkage.nl/2008/" class="url" rel="external">Erick S.</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-390149" title="">January 18th, 2008 at 14:27 (GMT-1)</a> </small>
+<p>Sometimes I use the &lsquo;webdeveloper toolbar&rsquo; within Firefox, but quickly close this again after usage, cause the &lsquo;Navigation Toolbar&rsquo; and the &lsquo;Bookmarks Toolbar&rsquo; allready take up a lot of space.</p>
+<p>Also it doesn&rsquo;t seem possible to remove the bar that holds the tabs&hellip;Or is there?</p>
+<p>Everybody has got something with their browserwindow, of course also things not mentioned here, and it is impossible to keep everybody happy.</p>
+<p>Some just will have to scroll&hellip;Others will just have to increase textsize to their likings&hellip;And some should just buy a monitor of this time.</p>
+<p>&hellip;I will continue my exporations with 1024×768 in mind for the time being.</p>
+<p>(thanks Mike!)</p>
+
+</li>
+
+<li id="comment-423408">
+<cite><a href="http://tdhedengren.com/blog/thoughts-on-design/" class="url" rel="external">Thoughts on design | tdhedengren</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-423408" title="">June 12th, 2008 at 18:42 (GMT-1)</a> </small>
+<p>[&hellip;] derived from three great posts, from usability guru Jakob Nielsen and Jesper Ronn-Jensen’s two recent posts on the [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-489158">
+<cite><a href="http://sysolution.wordpress.com/2009/09/15/links-for-2009-09-15/" class="url" rel="external">links for 2009-09-15 « sySolution</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489158" title="">September 15th, 2009 at 17:01 (GMT-1)</a> </small>
+<p>[&hellip;] justaddwater.dk | Design for Browser Size — Not Screen Size (tags: browser resolution) [&hellip;]</p>
+</li>
+
+<li id="comment-490351">
+<cite>Drew Clarke</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-490351" title="">October 23rd, 2009 at 14:30 (GMT-1)</a> </small>
+<p>Is there a chance that this very useful article can be updated and mobile screens included please?</p>
+<p>Thanks</p>
+
+</li>
+
+<li class="alt" id="comment-493219">
+<cite><a href="http://blog.melon-media.de/usability-browser-size-und-seitenlayout/" class="url" rel="external">Usability: Browser Size und Seitenlayout » melon|media Internetagentur</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-493219" title="">February 27th, 2010 at 15:35 (GMT-1)</a> </small>
+<p>[&hellip;] Rønn-Jensen formulierte diese wichtige Feststellung in seinem Artikel “Design for Browser Size — Not Screen Size“. Ferner verdeutlicht er, dass für die Gestaltung einer Website die Bildschirmauflösung [&hellip;]</p>
+</li>
+
+<li id="comment-498041">
+<cite><a href="http://venkatblog.com/?p=18" class="url" rel="external">Web Browser Compatibility | Venkat&#39;s Blog</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-498041" title="">July 16th, 2010 at 17:06 (GMT-1)</a> </small>
+<p>[&hellip;] <a href="http://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/">http://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/</a> (Jesper) [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-501322">
+<cite><a href="http://www.butlerhouse.net/rick-butler/blog/ux-designers-quick-reference.html" class="url" rel="external">UX Designer’s Quick Reference | butlerhouse</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-501322" title="">October 18th, 2010 at 01:10 (GMT-1)</a> </small>
+<p>[&hellip;] Design for Browser Size – Not Screen Size – Jesper Ronn-Jensen [&hellip;]</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

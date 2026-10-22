@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Setup on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/setup/</link>
+		<description>Recent content in Setup on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 12 Nov 2010 11:19:43 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/setup/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Fixed Strange Hudson Slave OutOfMemoryError</title>
+				<link>https://justaddwater.dk/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/</link>
+				<pubDate>Fri, 12 Nov 2010 11:19:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/</guid>
+				<description>&lt;p&gt;At a current project I am working on, we use Hudson and Maven to build our Java code. Strangely, one of the slaves constantly failed with an OutOfMemory error. We tried two obvious fixes. The first did not work:&lt;/p&gt;&#xA;&lt;p&gt;Not working strategy: To append memory params on the job itself. We modified the job inside Hudson configuration and added &lt;code&gt;-Xmx512m -XX:MaxPermSize=256m&lt;/code&gt; to the MAVEN_OPTS field in the &amp;ldquo;build&amp;rdquo; section of the job configuration.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

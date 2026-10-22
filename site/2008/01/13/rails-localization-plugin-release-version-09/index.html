@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rails Localization Plugin Release Version 0.9 · justaddwater.dk</title>
+<meta name="description" content="Just a quick note to tell that I released version 0.9 of the L10n-simplified plugin. It has been a year since last release, but I had nohurry since the last …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/01/11/dilemma-updated-numbers-or-long-response-times/" rel="prev">Dilemma — Updated Numbers or Long Response Times</a></div>
+<div class="alignright"><a href="/2008/01/17/bad-usability-calendar-2008/" rel="next">Bad Usability Calendar 2008</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-01-13"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Ruby on Rails"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Just a quick note to tell that I released version 0.9 of the L10n-simplified plugin. It has been a year since last release, but I had nohurry since the last version already fit for Rails 2.0. One of the nice changes for this release is that you can now set your localized language in the [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 13"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="13"></span>
+<h2 data-pagefind-meta="title">Rails Localization Plugin Release Version 0.9</h2>
+<div class="entry">
+<p>Just a quick note to tell that I released version 0.9 of the L10n-simplified plugin. It has been a year since last release, but I had nohurry since the last version already fit for Rails 2.0.</p>
+<p>One of the nice changes for this release is that you can now set your localized language in the environment.rb file like this:</p>
+<blockquote>
+<p>L10N_LANG = :da #or whatever language/locale you wish</p>
+</blockquote>
+<p><a href="http://rubyforge.org/frs/?group_id=2074&amp;release_id=18106">Download the relase 0.9 from Rubyforge</a></p>
+<h3 id="supported-languages">Supported languages</h3>
+<p>* Czech<br>
+* Danish<br>
+* Dutch<br>
+* English (for running test cases and comparing to normal texts)<br>
+* Finnish<br>
+* French<br>
+* French (Canadian)<br>
+* German<br>
+* Italian<br>
+* Korean<br>
+* Norwegian<br>
+* Portugese<br>
+* Russian<br>
+* Serbian<br>
+* Spanish<br>
+* Spanish (argentinian)<br>
+* Swedish<br>
+* Swedish Chef, and<br>
+* Pirate talk (just for the fun of it)<br>
+* any other language you want. Just dump your translation in the /lib folder</p>
+<h3 id="full-changelog">Full changelog:</h3>
+<blockquote>
+<p>* &mdash; release 0.9 (2008-01-13) &mdash;<br>
+* Possible to set language in environment.rb: L10N_LANG = :de<br>
+* UTF-8 database charset configuration is default in Rails 1.2+ and 2.0, so not needed in plugin more.<br>
+* L10n-Simplified plugin also available as gem from this release<br>
+* Moved changelog from README to separate file changelog.txt<br>
+* Removed duplicate line from lang_de.rb<br>
+* Russian translation (thanks Denis Pankratov)<br>
+* Corrected German date/time format (thanks Christian W Zuckschwerdt)<br>
+* Added Portugese translation (thanks Carlos Afonso)<br>
+* Italian translation adjustments (thanks Michele Franzin)<br>
+* Fixed translation error in Swedish translation (thanks Ingemar Edsborn)<br>
+* Czech translation by Karel Minařík<br>
+* French lang file updated (thanks Bruno Michel)<br>
+* Added Serbian (thanks Slobodan Kovacevic)<br>
+* Lang_it file must be UTF-8 encoded (thanks Fabio Bonelli)<br>
+* Added rake task for creating a release &ldquo;rake package&rdquo;<br>
+* Fixed rake task for generating rdoc in UTF-8 format<br>
+* Added Norwegian (thanks Fredrik Bach)</p>
+</blockquote>
+<h3 id="more-info">More info:</h3>
+<ul>
+<li>Justaddwater: <a href="/2006/08/24/ruby-on-rails-plugin-localize-your-rails-app/" title="Permanent Link to Ruby on Rails plugin: Localize your Rails app">Ruby on Rails plugin: Localize your Rails app</a> (Aug 2006)</li>
+<li>Rubyforge <a href="http://rubyforge.org/projects/l10n-simplified/">Localization Simplified homepage</a> (<a href="http://rubyforge.org/frs/?group_id=2074&amp;release_id=18106">download release 0.9</a>)</li>
+<li>Rails Wiki: <a href="http://wiki.rubyonrails.com/rails/pages/InternationalizationComparison">InternationalizationComparison</a></li>
+<li>Agilewebdevelopment plugin page: <a href="http://agilewebdevelopment.com/plugins/localization_simplified">L10N-Simplified</a> (remember to vote)</li>
+</ul>
+
+
+<p><small>Technorati Tags: <a href="/tag/ruby-on-rails/" rel="tag">ruby on rails</a>, rails plugin, simple localization, l10n, i18n, internationalization, danish, swedish, dutch, spanish, german, swedish chef, pirate talk, pirate day, translation</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Sunday, January 13th, 2008 at 22:26 (GMT-1) and is filed under <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">13 Responses to &#8220;Rails Localization Plugin Release Version 0.9&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-400505">
+<cite>Hans</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-400505" title="">March 5th, 2008 at 16:24 (GMT-1)</a> </small>
+<p>I am using localization_simplified and tries to combine it with the plugin Localization. They work very well together and result in both localization of application strings in the views and localization of inbuilt strings.<br>
+However in order for the user to select language after login I would like to be able to set the language in localization_simplified from the controller. Is that possible ? Any thoughts on how that could be done ?</p>
+</li>
+
+<li id="comment-400506">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-400506" title="">March 5th, 2008 at 16:36 (GMT-1)</a> </small>
+<p>@Hans: No way to change files dynamically as of present.</p>
+<p>The lang file is required into the code. If you were to change that, you should change the load structure.</p>
+<p>First, each lang-file should load it&rsquo;s own namespace. Then you should be able to select language on a per-request basis.</p>
+<p>You are welcome to give it a try. If you find a way to do it, I&rsquo;m open to putting it into the next version &ndash; as long as it won&rsquo;t slow down the plugin exteremely</p>
+
+</li>
+
+<li class="alt" id="comment-420014">
+<cite>lolo</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420014" title="">May 23rd, 2008 at 23:06 (GMT-1)</a> </small>
+<p>In Rails 2.1.0 RC1, I&rsquo;m getting &ldquo;uninitialized constant Rails::Plugin::L10N_LANG (NameError)&rdquo;. Setting the constant in environment.rb (or initializers/something.rb) doesn&rsquo;t help. This helps:</p>
+<p>L10N_LANG = :languagecode</p>
+<p>( = instead of ||= ) in init.rb</p>
+
+</li>
+
+<li id="comment-420512">
+<cite><a href="http://www.rahman.dk" class="url" rel="external">Hasan Rahman</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420512" title="">May 26th, 2008 at 20:19 (GMT-1)</a> </small>
+<p>Great plugin! Just what I needed, keep it up.</p>
+</li>
+
+<li class="alt" id="comment-420708">
+<cite>Hans</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420708" title="">May 27th, 2008 at 16:28 (GMT-1)</a> </small>
+<p>Iolo is correct. Init file should be changed to L10N_LANG = :languagecode in order to work</p>
+<p>It is a great plugin, but I have some problem with using it as in the error messages the variable or attribute names are not translated.<br>
+I tried to do that by using my own version of full_messages incorporating localization translation method, but failed as I not know when and where you change from the original messsage to the translated<br>
+Any idea how to separate out the name of the attributes</p>
+
+</li>
+
+<li id="comment-420744">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420744" title="">May 27th, 2008 at 20:44 (GMT-1)</a> </small>
+<p>@lolo and @Hans. I would gladly fix init.rb right away, but before I do, help me out with this:</p>
+<p>I really prefer if the plugin could be overwritten later with a recent version. And plugins work best if we can keep them pristine with no project specific changes. Therefore I wanted to be able to place the settings like L10N_LANG in more appropriate places.</p>
+<p>Any suggestions on how I could honor that principle and still make the code work &lsquo;out of the box&rsquo;?</p>
+
+</li>
+
+<li class="alt" id="comment-420748">
+<cite>Hans</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420748" title="">May 27th, 2008 at 21:22 (GMT-1)</a> </small>
+<p>maybe you can solve it as in the localization plugin. They has an attribute in there localisation module named lang and you can set that attribute Localization.lang=:se in your controller. Maybe it could be possible to set LocalizationSimplified.l10n_lang in an controller.<br>
+How about my problem concerning translating the attribute names</p>
+</li>
+
+<li id="comment-420755">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420755" title="">May 27th, 2008 at 22:48 (GMT-1)</a> </small>
+<p>Hans, feel free to submit a patch for your suggestion &ndash; currently i&rsquo;m almost off on vacation (later this week). I&rsquo;ll gladly commit any patches I recieve Thursday at the latest.</p>
+<p>Concerning translation of attribute names, that feature is not implemented in LocalizationSimplified.In a previous project, I used Danish model + attribute names and added the proper pluralization rules in inflections.</p>
+<p>That worked fine, so that&rsquo;s an option if you can live with translated model/attributes.</p>
+
+</li>
+
+<li class="alt" id="comment-420850">
+<cite>Hans</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420850" title="">May 28th, 2008 at 18:59 (GMT-1)</a> </small>
+<p>I don&rsquo;t dare to use localized attribute names in the models as rails and ruby are based on English conventions. I therefore prefer another solution that performs the translation as the last step before displaying the word. However, this solution is more like a fix and there should be better solutions. Anyhow, here is my path, that works for me. More pathes may follow regarding the other parts of your plugin as date etc.</p>
+<p>def error_messages_for(*params)<br>
+options = params.last.is_a?(Hash) ? params.pop.symbolize_keys : {}<br>
+objects = params.collect {|object_name| instance_variable_get(“@#{object_name}”) }.compact<br>
+count = objects.inject(0) {|sum, object| sum + object.errors.count }<br>
+unless count.zero?<br>
+html = {}<br>
+[:id, :class].each do |key|<br>
+if options.include?(key)<br>
+value = options[key]<br>
+html[key] = value unless value.blank?<br>
+else<br>
+html[key] = &rsquo;errorExplanation&rsquo;<br>
+end<br>
+end<br>
+messages = ActiveRecord:: Errors.default_error_messages<br>
+header_message = format( messages[:error_header],<br>
+pluralize(count, messages[:error_translation]),<br>
+(options[:object_name] ||<br>
+params.first).to_s.gsub(“_”, “ &ldquo;))<br>
+error_messages = objects.map {|object| object.errors.full_messages.map {|msg| content_tag(:li, msg) } }</p>
+<p># Patch do translate variablenames with localisation plugin<br>
+# Own error messages (:message =&gt; Example) had to be translated in the validation specification (:message =&gt; _(Example))<br>
+# error_messages_string=error_messages.join(&rsquo;%&rsquo;)<br>
+error_messages.each_index do |ix|<br>
+error_messages[ix].each_index do |jx|<br>
+objects.each do |object|<br>
+object.attributes.each_key do |attribute|<br>
+variable=attribute.humanize<br>
+translated_variable=_(variable) #Translation method in Localization plugin<br>
+error_messages[ix][jx]=error_messages[ix][jx].gsub(variable,translated_variable)<br>
+error_messages[ix][jx]= error_messages[ix][jx].gsub(&lsquo;confirmation&rsquo;,_(&lsquo;confirmation&rsquo;)) #Fix to handle password confirmation, that not is an attribute ?<br>
+end<br>
+end<br>
+end<br>
+end<br>
+# end patch</p>
+<p>content_tag(:div,<br>
+content_tag(options[:header_tag] || :h2, header_message) &lt;&lt;<br>
+content_tag(:p, messages[:error_subheader]) &lt;&lt;<br>
+content_tag(:ul, error_messages),<br>
+html<br>
+)<br>
+else<br>
+&lsquo;&rsquo;<br>
+end<br>
+end<br>
+end</p>
+
+</li>
+
+<li id="comment-421056">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-421056" title="">May 30th, 2008 at 01:16 (GMT-1)</a> </small>
+<p>Hans. thanks a lot for the patch &ndash; i&rsquo;m very sorry i did not manage to commit your patch before my vacation.</p>
+<p>I will give you commit access to the repository and want you to commit this patch in (as i&rsquo;m on my way on vacation). Unfortunately i do not know your Rubyforge user account name. Please send me.</p>
+<p>This way you will also have access to commit in future patches. (this is actually the idea of Rubinius&rsquo; Evan Phoenix and i am very inspired by opening up the code to everybody interesting to contributing :)</p>
+
+</li>
+
+<li class="alt" id="comment-421137">
+<cite>Hans</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-421137" title="">May 30th, 2008 at 09:52 (GMT-1)</a> </small>
+<p>Hi !<br>
+Do I just add my patch as a file or are there more formal ways to add the patch?<br>
+My Rubyforge user account is marmolin.</p>
+<p>I will now try to make it possible to change language dynamically, I do not really know how as I hope to find a solution that can work as an option, without changing your original plugin too much. I am just looking at rubys possibilities for dynamic compilation.<br>
+Do you have any suggestions ?</p>
+
+</li>
+
+<li id="comment-421168">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-421168" title="">May 30th, 2008 at 12:25 (GMT-1)</a> </small>
+<p>@hans</p>
+<p>i have now added you on RubyForge as administrator (along with casperfabricius).</p>
+<p>You don\t have to add a patch&hellip; just apply it in the relevant file(s). Also, make sure to add the commit comment + date + author in the changelog file as well when you commit</p>
+<p>Thanks a lot for putting effort into it :)</p>
+
+</li>
+
+<li class="alt" id="comment-487489">
+<cite>Mosfet</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-487489" title="">July 13th, 2009 at 20:06 (GMT-1)</a> </small>
+<p>Webrick server can now launch, but an error occurs in an edit rendering:</p>
+<p>ArgumentError in Opes#edit</p>
+<p>Showing app/views/opes/edit.html.erb where line #13 raised:</p>
+<p>wrong number of arguments (4 for 3)<br>
+Extracted source (around line #13):</p>
+<p>10: Date de relevé<br>
+11:<br>
+12:<br>
+13: Date de l&rsquo;opération<br>
+14: Montant<br>
+15: Libellé<br>
+16:<br>
+RAILS_ROOT: /Users/admin/Documents/Rails/MyMoney</p>
+<p>Application Trace | Framework Trace | Full Trace<br>
+/Users/admin/Documents/Rails/MyMoney/vendor/rails/actionpack/lib/action_view/helpers/date_helper.rb:964:in `date_select&rsquo;<br>
+/Users/admin/Documents/Rails/MyMoney/vendor/rails/actionpack/lib/action_view/helpers/date_helper.rb:964:in `date_select&rsquo;<br>
+/Users/admin/Documents/Rails/MyMoney/app/views/opes/edit.html.erb:13:in `_run_erb_app47views47opes47edit46html46erb&rsquo;<br>
+/Users/admin/Documents/Rails/MyMoney/app/views/opes/edit.html.erb:12:in `_run_erb_app47views47opes47edit46html46erb’</p>
+<p>Any idea?</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

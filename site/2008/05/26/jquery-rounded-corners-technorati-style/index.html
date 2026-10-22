@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JQuery Rounded Corners (Technorati Style) · justaddwater.dk</title>
+<meta name="description" content="If you ever use rounded corners the Technorati way, here is some additional code I created recently.
+Usually I add four non-semantic elements to each corner of …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/05/20/invited-to-expert-workshop-future-of-internet/" rel="prev">Invited to Expert Workshop: Future of Internet</a></div>
+<div class="alignright"><a href="/2008/05/28/public-danish-data-rest-interface/" rel="next">Public Danish Data REST Interface</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-05-26"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="justaddwater.dk"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="If you ever use rounded corners the Technorati way, here is some additional code I created recently. Usually I add four non-semantic elements to each corner of a div box to round: HTML for the box: &lt;div class=”round”&gt; &lt;h2&gt;..&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;..&lt;/li&gt; .. &lt;/ul&gt; &lt;b class=”cn tr”&gt;&lt;/b&gt; &lt;b class=”cn br”&gt;&lt;/b&gt; &lt;b class=”cn tl”&gt;&lt;/b&gt; &lt;b class=”cn bl”&gt;&lt;/b&gt; [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="May 26"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="4"></span>
+<h2 data-pagefind-meta="title">JQuery Rounded Corners (Technorati Style)</h2>
+<div class="entry">
+<p>If you ever use <a href="/2007/02/15/rounded-corners-the-technorati-way/">rounded corners the Technorati way</a>, here is some additional code I created recently.</p>
+<p>Usually I add four non-semantic elements to each corner of a div box to round:<br>
+HTML for the box:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;round&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h2</span>&gt;..&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">li</span>&gt;..&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>    ..
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">b</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn tr&#34;</span>&gt;&lt;/<span style="color:#f92672">b</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">b</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn br&#34;</span>&gt;&lt;/<span style="color:#f92672">b</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">b</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn tl&#34;</span>&gt;&lt;/<span style="color:#f92672">b</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">b</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn bl&#34;</span>&gt;&lt;/<span style="color:#f92672">b</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>Well, what if you could just write:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;round&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><p>So that the round corners magic was separated semantically away from the HTML code?. This is how you can do it.</p>
+<p>The trick is to add the b-elements with jquery. This way i&rsquo;ll append the rounded corners as an extra bonus for enhanced clients understanding javascript.</p>
+<p>Create a file named roundcorners.js</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Add rounded corners to all div elements with class=&#34;round&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Adds corners the &#34;technorati way&#34;, described on
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// http://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// requires you to set class=&#34;round&#34; on div or similar elements
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// also works on images, which it wraps in a div element to add the
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// necessary content
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">round_corners</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;b class=&#34;cn tl&#34;&gt;&lt;/b&gt;&lt;b class=&#34;cn tr&#34;&gt;&lt;/b&gt;&lt;b class=&#34;cn bl&#34;&gt;&lt;/b&gt;&lt;b class=&#34;cn br&#34;&gt;&lt;/b&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.round&#39;</span>).<span style="color:#a6e22e">addClass</span>(<span style="color:#e6db74">&#34;boxc&#34;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#a6e22e">str</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>( <span style="color:#66d9ef">function</span>(){<span style="color:#a6e22e">round_corners</span>();});
+</span></span></code></pre></div><p>Create a file named roundcorners.css:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">relative</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">cn</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">background</span>:<span style="color:#66d9ef">transparent</span> url(<span style="color:#e6db74">roundwhite.png</span>) <span style="color:#66d9ef">no-repeat</span> <span style="color:#66d9ef">scroll</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">%</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">tl</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">background-position</span>:<span style="color:#66d9ef">left</span> <span style="color:#66d9ef">top</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">tr</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">background-position</span>:<span style="color:#66d9ef">right</span> <span style="color:#66d9ef">top</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">right</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">bl</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">background-position</span>:<span style="color:#66d9ef">left</span> <span style="color:#66d9ef">bottom</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">left</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">br</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">background-position</span>:<span style="color:#66d9ef">right</span> <span style="color:#66d9ef">bottom</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">right</span>:<span style="color:#ae81ff">-1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">*</span> <span style="color:#f92672">html</span> .<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">bl</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">-2</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">*</span> <span style="color:#f92672">html</span> .<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">br</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">-2</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">*</span> <span style="color:#f92672">html</span> .<span style="color:#a6e22e">boxc</span> <span style="color:#f92672">b</span>.<span style="color:#a6e22e">cn</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">background-image</span>:url(<span style="color:#e6db74">roundwhite.gif</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">font-size</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Put the two image files in the same directory as roundcorners.css:<br>
+<a href="http://static.technorati.com/static/css/img/corners/white.png">roundwhite.png</a>, <a href="http://static.technorati.com/static/css/img/corners/white.gif">roundwhite.gif</a></p>
+<p>Now in your HTML file header, add references to load JQuery, the css and js file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;jquery.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;roundcorners.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;roundcorners.css&#34;</span>&gt;&lt;/<span style="color:#f92672">link</span>&gt;
+</span></span></code></pre></div><p>Finally, add css class &ldquo;round&rdquo; to any div on your page.</p>
+<p>I put the code up on Github =&gt; <a href="http://github.com/jesperronn/jquery-round-corners/tree">jesperronn/jquery-round-corners</a> . Looking forward to patches and improvements :)<br>
+I would also like a modification that can do the same but works with prototype. Has anybody seen something that does that?</p>
+
+
+<p><small>Technorati Tags: technorati, round, corners, jquery, unobtrusive, <a href="/tag/javascript/" rel="tag">javascript</a>, <a href="/tag/library/" rel="tag">library</a>, <a href="/tag/github/" rel="tag">github</a></small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, May 26th, 2008 at 17:11 (GMT-1) and is filed under <a href="/category/justaddwater.dk/" rel="category tag">justaddwater.dk</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">4 Responses to &#8220;JQuery Rounded Corners (Technorati Style)&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-420650">
+<cite><a href="http://mentalized.net" class="url" rel="external">Jakob S</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420650" title="">May 27th, 2008 at 10:35 (GMT-1)</a> </small>
+<p>Or if your rounded corners aren&rsquo;t mission critical they can be made using CSS:</p>
+<p>.round {<br>
+-webkit-border-radius: 10px;<br>
+-moz-border-radius: 10px /* as of Firefox 3, they even look good there */<br>
+}</p>
+<p>Progressive enhancement rocks – but sucks for those on lesser browsers, so if your boss/client is in that camp, you&rsquo;ll probably have to settle for the Javascript method – or the more verbose HTML + CSS method Jesper outlines at the beginning.</p>
+
+</li>
+
+<li id="comment-463347">
+<cite><a href="http://sploy.de" class="url" rel="external">Chris</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-463347" title="">January 3rd, 2009 at 11:31 (GMT-1)</a> </small>
+<p>I hope that there will be a solution with CSS which works in every browser in the near future, than we can all skip the alternatives, but the jquery solution looks pretty good (like everything which is done with jquery *love it*). Thanks!</p>
+</li>
+
+<li class="alt" id="comment-475508">
+<cite><a href="http://mo.notono.us" class="url" rel="external">Oskar Austegard</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-475508" title="">March 2nd, 2009 at 22:24 (GMT-1)</a> </small>
+<p>Just curious: why do you use the b tag (which you point out as deprecated in a later post)?</p>
+</li>
+
+<li id="comment-476823">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-476823" title="">March 9th, 2009 at 12:16 (GMT-1)</a> </small>
+<p>@Oskar Austegard: using the deprecated b tag was a solution that Tantek Celik and Eric Meyer used on Technorati&hellip; They used a deprecated tag to say that this tag carried no semantic meaning. Read more about Tantek&rsquo;s explanation in the related post <a href="/2007/02/15/rounded-corners-the-technorati-way/" title="Permanent Link: Rounded Corners the Technorati Way">Rounded Corners the Technorati Way</a></p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

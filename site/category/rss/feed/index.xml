@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>RSS on Just Add Water</title>
+		<link>https://justaddwater.dk/category/rss/</link>
+		<description>Recent content in RSS on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 14 Jun 2006 14:51:52 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/rss/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Blog Usability: Too many RSS feeds</title>
+				<link>https://justaddwater.dk/2006/06/14/blog-usability-too-many-rss-feeds/</link>
+				<pubDate>Wed, 14 Jun 2006 14:51:52 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/14/blog-usability-too-many-rss-feeds/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/feed-icon-128x128.png&#34; alt=&#34;Large Feedicon&#34; title=&#34;Large Feedicon&#34; align=&#34;right&#34; style=&#34;margin-left: 1.5em&#34; width=&#34;128&#34; height=&#34;128&#34;&gt;&#xA;After reading &amp;ldquo;&lt;a href=&#34;http://nick.typepad.com/blog/2006/05/pick_a_format_a.html&#34; title=&#34;Nick Bradbury: Pick a Format (Any Format)&#34;&gt;Pick a Format (Any Format)&lt;/a&gt;&amp;rdquo; by Nick Bradbury (tip by: &lt;a href=&#34;http://www.jvoorhis.com/&#34; title=&#34;jvoorhis&#34;&gt;Jeremy Voorhis&lt;/a&gt; on &lt;a href=&#34;http://outside-thoughts.octopod.info/articles/2006/06/12/switching-to-mephisto&#34; title=&#34;Octoblog: Switching to Mephisto&#34;&gt;Octoblog&lt;/a&gt;) we must say that we totally agree. The point in the post is simple:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I keep running across sites that offer &lt;strong&gt;the same exact content&lt;/strong&gt; as an RSS feed &lt;em&gt;and&lt;/em&gt; an Atom feed.&lt;/p&gt;&#xA;&lt;p&gt;What&amp;rsquo;s the point of this? Making readers choose a feed format is like asking them to choose between an HTML and XHTML version of your site - technically there are differences, but end users shouldn&amp;rsquo;t have to care about this. They just want to subscribe to your words of wisdom without having to deal with the plumbing.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>E-mail vs. RSS</title>
+				<link>https://justaddwater.dk/2006/04/04/e-mail-vs-rss/</link>
+				<pubDate>Tue, 04 Apr 2006 22:39:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/04/e-mail-vs-rss/</guid>
+				<description>&lt;p&gt;Syndicated feeds in form of RSS or Atom is the hot way of getting news from around the world delivered instantly and dynamically to your desktop. Previously a user could only do so by registering for an e-mail newsletter.&lt;/p&gt;&#xA;&lt;p&gt;Believe it or not some people don&amp;rsquo;t have a news aggregator installed. They might not even know of the free online news aggregators like for instance Google Reader. Maybe they don&amp;rsquo;t feel safe with this new technology or maybe they simply just don&amp;rsquo;t care. Whatever the reason we should still consider offering them the old school newsletter send by regular e-mail alongside the news feed offer.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Weblog usability followup</title>
+				<link>https://justaddwater.dk/2006/01/17/weblog-usability-followup/</link>
+				<pubDate>Tue, 17 Jan 2006 00:41:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/17/weblog-usability-followup/</guid>
+				<description>&lt;p&gt;In the previous &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/01/09/mullet-style-blog-layout-and-complete-archive-page/&#34; title=&#34;Justaddwater.dk: Mullet-style blog layout and complete archive page&#34;&gt;Mullet-style blog layout and complete archive page&lt;/a&gt;&amp;rdquo; we had a look on the Mullet-style blog page that makes more content available on the fronpage, and also argued for replacing monthly archives with a single archive page.Danish &amp;ldquo;&lt;a href=&#34;http://www.brugervenligeblogs.dk/2006/01/er-weblogs-brugervenlige.html&#34; title=&#34;brugervenligeblogs.dk: er weblogs brugervenlige?&#34;&gt;brugervenligeblogs.dk&lt;/a&gt;&amp;rdquo; pointed me to a research document from July 2005: &lt;a href=&#34;http://www.catalystgroupdesign.com/people/press/blogpress.asp&#34; title=&#34;Catalyst Group Design - Blog Mainstream Market Penetration Likely Limited &#34;&gt;Blog Mainstream Market Penetration Likely Limited By Basic Usability Issues&lt;/a&gt; by Catalyst Group Design. The 19 page usability report is available as &lt;a href=&#34;http://www.catalystgroupdesign.com/cofactors/upload/Blog_usability_report.pdf&#34; title=&#34;PDF version of Catalyst Group Design: Blog Mainstream Market Penetration Likely Limited By Basic Usability Issues&#34;&gt;PDF (119KB)&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Yahoo! alerts to support RSS</title>
+				<link>https://justaddwater.dk/2005/12/02/yahoo-alerts-mail-rss/</link>
+				<pubDate>Fri, 02 Dec 2005 11:11:10 +0000</pubDate>
+				<guid>https://justaddwater.dk/2005/12/02/yahoo-alerts-mail-rss/</guid>
+				<description>&lt;p&gt;Podtech has an &lt;a href=&#34;http://www.podtech.net/?p=229&#34;&gt;exclusive interview&lt;/a&gt; about Yahoo! and pushing RSS to their 227 million email users. Yahoo! has built RSS into their alerts services at alerts.yahoo.com and furthermore they&amp;rsquo;ve built an RSS reader into their email service. Other bloggers have more about this including &lt;a href=&#34;http://www.techcrunch.com/2005/11/29/rss-is-now-integrated-into-yahoo-mail-and-alerts/&#34;&gt;Techcrunch&lt;/a&gt;, &lt;a href=&#34;http://gigaom.com/2005/11/30/oddposts-rss-lives-again-in-yahoo-mail/&#34;&gt;Om Malik&lt;/a&gt;, &lt;a href=&#34;http://blog.programmableweb.com/?p=161&#34;&gt;John Musser&lt;/a&gt;, &lt;a href=&#34;http://www.businessblogwire.com/2005/11/yahoo_rss_email_folder_can_hel.html&#34;&gt;BusinessBlogWire&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s an excerpt where Scott Gatz from Yahoo! talks about the alerts service:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;our research shows that about 31% of Internet users are using RSS whether they know it or not. It seemed like a natural progression. If we really wanted to provide users with what they want in one convenient package, to figure out how we more effectively integrate that across the Yahoo network. Where are the places that users want to see us integrate RSS? That is what we are really excited to talk about today is two new big launches where we have integrated RSS. The first is in our Alerts product.&lt;/p&gt;&#xA;&lt;p&gt;Our Alerts product At Alerts at Yahoo.com allows people to go and sign up and subscribe to real time alerts for all sorts of things — if a stock price reaches a certain limit, if your favorite sports team has won the game, it runs the gambit for all the different types of alerts you can get. Isn’t this a perfect place to integrate RSS? Wouldn’t it be amazing if any RSS feed on the Internet could be made into an alert?&lt;/p&gt;&#xA;&lt;p&gt;What if the moment an RSS feed were updated you can get an SMS alert to your mobile phone, you can an instant message alert in Yahoo messenger or maybe we can even send you an email…as those updates happen. Whether that’s a blog that you track… maybe the blog only posts once every three weeks or so.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

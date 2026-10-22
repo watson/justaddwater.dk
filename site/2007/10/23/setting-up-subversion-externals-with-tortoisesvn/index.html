@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setting Up Subversion Externals With TortoiseSVN · justaddwater.dk</title>
+<meta name="description" content="Just a tip I spent some time on figuring out: Found information today on how to use TortoiseSVN to manage svn:externals. I&rsquo;m working on a big project …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/10/22/firefox-tip-for-framebuster-javascript/" rel="prev">Firefox Tip For Framebuster JavaScript</a></div>
+<div class="alignright"><a href="/2007/10/24/what-its-like-to-be-a-usability-geek/" rel="next">What It’s Like To Be A Usability Geek</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-10-23"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Just a tip I spent some time on figuring out: Found information today on how to use TortoiseSVN to manage svn:externals. I’m working on a big project where we need many different branches and parts to use the same css and images libraries throughout all subprojects. I had to Google to get the information on [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Oct 23"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="15"></span>
+<h2 data-pagefind-meta="title">Setting Up Subversion Externals With TortoiseSVN</h2>
+<div class="entry">
+<p>Just a tip I spent some time on figuring out: Found information today on how to use TortoiseSVN to manage svn:externals. I&rsquo;m working on a big project where we need many different branches and parts to use the same css and images libraries throughout all subprojects.</p>
+<p>I had to Google to get the information on how to set it up Here is how to do it with TortoiseSVN (i&rsquo;m using windows XP):</p>
+<ol>
+<li>Right click on the project folder. Select &ldquo;TortoiseSVN&rdquo;&gt;&ldquo;Properties&rdquo; <img src="/wp-content/uploads/2007/10/tortoisesvn-properties.png" alt="tortoisesvn-properties.png" width="464" height="393">
+</li>
+<li>Now add the property to the dialog. Press add and fill in the following: Property name: &ldquo;svn:externals&rdquo; css http://project_name/master/css images http://project_name/master/images <img src="/wp-content/uploads/2007/10/tortoisesvn-properties-add-svn-externals.png" alt="tortoisesvn-properties-add-svn-externals.png" width="615" height="363">
+ Any number of spaces will do between folder name and url. Remember line break between each project folder that needs to be checked out here.</li>
+<li>Press OK in both dialogs. The properties are now set. <img src="/wp-content/uploads/2007/10/tortoisesvn-properties-svn-externals-added.png" alt="tortoisesvn-properties-svn-externals-added.png" width="553" height="283">
+</li>
+<li>On next &ldquo;svn update&rdquo;, the external folders will be added and continuously updated.</li>
+</ol>
+<p>Originally I wanted to do this for quite some time ago, and found info on how to do it with &ldquo;svn propedit&rdquo;. For some strange reason, it fails (can&rsquo;t open external editor from command line).</p>
+<p>More info: SVN book <a href="http://svnbook.red-bean.com/en/1.0/ch07s02.html#svn-ch-7-sect-2.3.6">section on svn:external</a></p>
+
+
+<p><small>Technorati Tags: <a href="/tag/svn/" rel="tag">svn</a>, svn:externals, propedit, tortoise</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, October 23rd, 2007 at 09:23 (GMT-1) and is filed under <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">15 Responses to &#8220;Setting Up Subversion Externals With TortoiseSVN&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-311282">
+<cite><a href="http://ref.amfdesigner.com/2007/10/23/setting-up-subversion-externals-with-tortoisesvn/" class="url" rel="external">amf | ref » Setting Up Subversion Externals With TortoiseSVN</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-311282" title="">October 23rd, 2007 at 19:18 (GMT-1)</a> </small>
+<p>[&hellip;] Link [&hellip;]</p>
+</li>
+
+<li id="comment-401716">
+<cite><a href="http://www.elinx.ca" class="url" rel="external">Kumana</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-401716" title="">March 11th, 2008 at 23:40 (GMT-1)</a> </small>
+<p>Thank you. I was looking for it and you have explained it in a very simple way.</p>
+</li>
+
+<li class="alt" id="comment-419618">
+<cite>Satya</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-419618" title="">May 21st, 2008 at 18:17 (GMT-1)</a> </small>
+<p>Right to the point, with out un-necessary details.</p>
+<p>Thank&rsquo;s</p>
+
+</li>
+
+<li id="comment-433133">
+<cite><a href="http://www.wageeasy.com.au" class="url" rel="external">Steve Forbes</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-433133" title="">July 31st, 2008 at 05:39 (GMT-1)</a> </small>
+<p>Hi Jesper, thanks for this tip .. I had been trying to edit some existing svn:externals and not having any luck via the svn propset or propedit commands. Using your tip and TortoiseSVN worked perfectly first time. Mange tak, Steve</p>
+</li>
+
+<li class="alt" id="comment-448315">
+<cite>Peter</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-448315" title="">September 22nd, 2008 at 08:42 (GMT-1)</a> </small>
+<p>Thanks for the tip. Had similar setup in CVS, and this was first site I found – straight to the point and easy to follow.</p>
+</li>
+
+<li id="comment-455857">
+<cite><a href="http://blog.project-eid.org/articles/svn-externals-using-tortoisesvn/" class="url" rel="external">SVN Externals for CSE Repo using TortoiseSVN</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-455857" title="">November 12th, 2008 at 17:36 (GMT-1)</a> </small>
+<p>[&hellip;] though this can be done with any SVN client (including the geekey command line client). Thanks to this and this, now things are working [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-459700">
+<cite>Ray</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-459700" title="">December 16th, 2008 at 03:04 (GMT-1)</a> </small>
+<p>Just as a side note – issues with errors using &ldquo;svn propedit&rdquo; is related to the SVN_EDITOR environment variable not being set. On *nix you&rsquo;d use something like &ldquo;export SVN_EDITOR=vim&rdquo; &amp; on Windows you create a Environment variable pointing SVN_EDITOR to notepad or whatever.</p>
+<p>I&rsquo;d still way prefer TSVN though :)</p>
+
+</li>
+
+<li id="comment-476375">
+<cite>Osdalme</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-476375" title="">March 7th, 2009 at 21:32 (GMT-1)</a> </small>
+<p>How can I use TortoiseSVN to manage svn:externals only for one file?, not for the complete folder.<br>
+For example:<br>
+External file: http://server/svn/project/trunk/scripts/functions.js<br>
+Branch file: \MyProject\scripts\functions.js</p>
+</li>
+
+<li class="alt" id="comment-478795">
+<cite><a href="http://felizk.dk/?p=194" class="url" rel="external">FeLiZk » Blog Archive » SVN Externals</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-478795" title="">March 18th, 2009 at 23:55 (GMT-1)</a> </small>
+<p>[&hellip;] Ligesom ignore, som jeg ofte bruger til at undgå at committe bin og obj mapper, så er externals en egenskab på en SVN mappe. Det er temmelig simpelt at bruge og proceduren er beskrevet fantastisk for TortoiseSVN på bloggen justaddwater.dk af Jesper Rønn-Jensen. [&hellip;]</p>
+</li>
+
+<li id="comment-486548">
+<cite><a href="http://devmanic.wordpress.com/2009/05/19/setting-up-subversion-externals-with-tortoisesvn/" class="url" rel="external">Setting Up Subversion Externals With TortoiseSVN « Devmanic – Software Development Mania</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-486548" title="">May 20th, 2009 at 00:34 (GMT-1)</a> </small>
+<p>[&hellip;] via justaddwater.dk | Setting Up Subversion Externals With TortoiseSVN. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-490121">
+<cite>Wayne</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-490121" title="">October 16th, 2009 at 07:11 (GMT-1)</a> </small>
+<p>Just what I was looking for. I tried and failed to get the ^/ etc. features to work but a direct link does the trick fine. Thanks Jesper for taking the trouble to document this.</p>
+</li>
+
+<li id="comment-490131">
+<cite>Edward Cieslik</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-490131" title="">October 16th, 2009 at 13:17 (GMT-1)</a> </small>
+<p>Hello Jesper.</p>
+<p>I think you could clarify this a little more:</p>
+<p>1. Right click on the project folder [in which you want to create the externals folder] etc.</p>
+<p>2. Now add the property to the dialog. Press add and fill in the following:<br>
+Property name: “svn:externals”/<br>
+[The following lines take the following form:<br>
+nameOfFolderYouWantToCreate [space] urlOfSourceFolder]<br>
+e.g.<br>
+css http://project_name/master/css<br>
+images http://project_name/master/images</p>
+<p>I found your advice difficult to understand for someone who has never done anything with externals before.</p>
+<p>Thanks.</p>
+
+</li>
+
+<li class="alt" id="comment-490624">
+<cite>Andy</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-490624" title="">November 3rd, 2009 at 13:18 (GMT-1)</a> </small>
+<p>Hi,</p>
+<p>How do I go about adding externals with a space in the directory name? Is this possible?</p>
+<p>e.g. http://myproject//myFolder/test folder</p>
+<p>thanks</p>
+<p>Andy</p>
+
+</li>
+
+<li id="comment-491123">
+<cite>Marc</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-491123" title="">November 24th, 2009 at 18:17 (GMT-1)</a> </small>
+<p>Here&rsquo;s a quote from the TSVN doc:</p>
+<p>&lsquo;URLs must be properly escaped or they will not work, e.g. you must replace each space with %20&rsquo;</p>
+<p>I hope it helps!</p>
+
+</li>
+
+<li class="alt" id="comment-549526">
+<cite><a href="http://www.nutt.net" class="url" rel="external">Ryan</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-549526" title="">October 23rd, 2011 at 16:12 (GMT-1)</a> </small>
+<p>Thanks for this. I was trying to move some folders from a working folder into a new repository and then bring them back in as an external. This post made it much easier than what I was trying to do.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

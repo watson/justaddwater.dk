@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iPhoto 11 performance tuning tips, revised · justaddwater.dk</title>
+<meta name="description" content="My iPhoto library with 6000&#43; family photos was running slow on my macbook. So I looked for performance tuning tips on the net.
+Here are the adjusted tip, which …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2013/06/19/generate-css-sprite-for-all-worlds-flags/" rel="prev">Generate CSS sprite for all world’s flags</a></div>
+<div class="alignright"><a href="/2015/01/21/rewrite-authoremail-in-git-history/" rel="next">Rewrite author/email in git history</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2014-03-09"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2014"></span><span hidden data-pagefind-filter="category[data-v]" data-v="justaddwater.dk"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="My iPhoto library with 6000&#43; family photos was running slow on my macbook. So I looked for performance tuning tips on the net. Here are the adjusted tip, which works for me. This Apple support thread mentioned 3 tips: Upgrade RAM Turn off visual bling in overview pages Vacuum iPhoto database file Could not do anything with [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Mar 9"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">iPhoto 11 performance tuning tips, revised</h2>
+<div class="entry">
+<p>My iPhoto library with 6000+ family photos was running slow on my macbook. So I looked for performance tuning tips on the net.</p>
+<p>Here are the adjusted tip, which works for me.</p>
+<p> </p>
+<p>This <a href="https://discussions.apple.com/thread/3012995?start=60&amp;tstart=0">Apple support  thread</a> mentioned 3 tips:</p>
+<ol>
+<li>Upgrade RAM</li>
+<li>Turn off visual bling in overview pages</li>
+<li>Vacuum iPhoto database file </li>
+</ol>
+<p>Could not do anything with tip 1 today (and I presume I cannot update the RAM on this 2012 macbook air)</p>
+<p>Tip2 works: Go into settings &gt; &ldquo;appearance&rdquo; and turn off &ldquo;Outline&rdquo; and &ldquo;Drop shadow&rdquo; in the overviews.</p>
+<p>Tip3 needs adjustment. Originally *.db files were only in top folder &rsquo; ~/Pictures/iPhoto\ Library/’</p>
+<p> </p>
+<p>Adjusted command to vacuum iPhoto database files:</p>
+<p> </p>
+<pre tabindex="0"><code>cd ~/Pictures/iPhoto\ Library/ &amp;&amp;  for dbase in `find . -name &#39;*.db&#39;`; do sqlite3 $dbase &#34;vacuum;&#34;; done
+</code></pre>
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Sunday, March 9th, 2014 at 20:41 (GMT-1) and is filed under <a href="/category/justaddwater.dk/" rel="category tag">justaddwater.dk</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

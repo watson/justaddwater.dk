@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Git on Just Add Water</title>
+		<link>https://justaddwater.dk/category/git/</link>
+		<description>Recent content in Git on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 02 Nov 2016 20:40:32 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/git/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Git extract folder from project with history and tags</title>
+				<link>https://justaddwater.dk/2016/11/02/git-extract-folder-from-project-with-history-and-tags/</link>
+				<pubDate>Wed, 02 Nov 2016 20:40:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2016/11/02/git-extract-folder-from-project-with-history-and-tags/</guid>
+				<description>&lt;p&gt;This is a short note regarding the use of &lt;code&gt;git filter-branch&lt;/code&gt; when you want to split a git repository and preserve the history.&lt;/p&gt;&#xA;&lt;p&gt;I had some issues in finding the correct parameters. In case this also can help others, you can find the command here.&lt;/p&gt;&#xA;&lt;p&gt;In case you are not yet familiar with the possibilities of &lt;code&gt;git filter-branch&lt;/code&gt;, I suggest you look into the  &lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#The-Nuclear-Option:-filter-branch&#34;&gt;Git book: Rewriting history&lt;/a&gt;, which has a good introduction to the command.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Git tip to remove remote branches already merged</title>
+				<link>https://justaddwater.dk/2016/08/25/git-tip-to-remove-remote-branches-already-merged/</link>
+				<pubDate>Thu, 25 Aug 2016 10:54:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2016/08/25/git-tip-to-remove-remote-branches-already-merged/</guid>
+				<description>&lt;p&gt;Let&amp;rsquo;s talk about source control and an efficient way of using Git.&lt;/p&gt;&#xA;&lt;p&gt;I like the projects where you have a &lt;code&gt;master&lt;/code&gt; branch and a few feature branches, which are actively being worked upon. Only a few branches are present at a given time, and this is less confusing for the contributors in the repository.&lt;/p&gt;&#xA;&lt;p&gt;A couple of times I have been on a project where old branches were not cleaned up.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Change history of SVN repository</title>
+				<link>https://justaddwater.dk/2015/04/15/change-history-of-svn-repository/</link>
+				<pubDate>Wed, 15 Apr 2015 23:06:48 +0000</pubDate>
+				<guid>https://justaddwater.dk/2015/04/15/change-history-of-svn-repository/</guid>
+				<description>&lt;p&gt;Somebody asked me if it&amp;rsquo;s possible to change history of an SVN repository like you can do in Git.&lt;/p&gt;&#xA;&lt;p&gt;The easiest parts to change are:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;commit date&lt;/li&gt;&#xA;&lt;li&gt;commit log message&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;With this, you can easily modify time stamps if, for instance, your svn server clock is wrong.&lt;/p&gt;&#xA;&lt;h2 id=&#34;step-1-modify-repository-to-accept-property-changes&#34;&gt;Step 1: Modify repository to accept property changes&lt;/h2&gt;&#xA;&lt;p&gt;Make sure your svn repository accepts property changes. (commit dates and messages are just properties which are basically unversioned).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Rewrite author/email in git history</title>
+				<link>https://justaddwater.dk/2015/01/21/rewrite-authoremail-in-git-history/</link>
+				<pubDate>Wed, 21 Jan 2015 15:25:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2015/01/21/rewrite-authoremail-in-git-history/</guid>
+				<description>&lt;p&gt;After my harddisk crashed and I reinstalled the machine recently, I misconfigured my Git to set EMAIL as email address.&lt;/p&gt;&#xA;&lt;p&gt;This made Git history look horrible, with incorrect email, image. By accident I even wrote an incorrect name at one point.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09-300x265.png&#34; alt=&#34;git history github&#34; class=&#34;aligncenter size-medium wp-image-1734&#34; height=&#34;265&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09-300x265.png 300w, https://justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09.png 898w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Note the missing image.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Now it turns out my git repository was full of EMAIL instead of my correct email address.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Collection of useful Git Tips to get started</title>
+				<link>https://justaddwater.dk/2011/09/30/collection-of-useful-git-tips-to-get-started/</link>
+				<pubDate>Fri, 30 Sep 2011 19:44:17 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/09/30/collection-of-useful-git-tips-to-get-started/</guid>
+				<description>&lt;p&gt;I thought it was time to collect some of my most useful findings when working with Git.&lt;/p&gt;&#xA;&lt;p&gt;These are typically from situations where I found a useful way, which I wanted to jot down. Also I have answered and asked some questions on StackOverflow. The good thing about it, is that I am always able to find it again this way.&lt;/p&gt;&#xA;&lt;p&gt;Justaddwater.dk posts:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/&#34; title=&#34;Permanent Link to How to make Git ignore files that already exist in your project&#34;&gt;How to make Git ignore files that already exist in your project&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2009/09/30/spoken-git-commit-log-%e2%80%94-another-annoyance-at-the-office/&#34; title=&#34;Permanent Link to Spoken Git Commit Log — Another Annoyance at the Office&#34;&gt;Spoken Git Commit Log — Another Annoyance at the Office&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/&#34; title=&#34;Permanent Link to How to add Git Pull Shortcut to Different Github Branches&#34;&gt;How to add Git Pull Shortcut to Different Github Branches&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/&#34; title=&#34;Permanent Link to Using Git for SVN Repositories Workflow&#34;&gt;Using Git for SVN Repositories Workflow&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2009/02/21/using-local-file-based-git-server-laziness/&#34; title=&#34;Permanent Link to Using Local File-based Git — Server Laziness&#34;&gt;Using Local File-based Git — Server Laziness&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;StackOverflow posts:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How to make Git ignore files that already exist in your project</title>
+				<link>https://justaddwater.dk/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/</link>
+				<pubDate>Mon, 07 Dec 2009 13:28:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/</guid>
+				<description>&lt;p&gt;For a project I&amp;rsquo;m working on, I had to change some files with personal settings, and the files kept showing up with a &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Adding files to .gitignore that are already tracked does not work. (and it&amp;rsquo;s actually pretty well documented in the documentation). In stead, it&amp;rsquo;s possible to use this command:&lt;/p&gt;&#xA;&lt;p&gt;git update-index &amp;ndash;assume-unchanged [filename(s)]&lt;/p&gt;&#xA;&lt;p&gt;From &lt;a href=&#34;http://www.kernel.org/pub/software/scm/git/docs/git-update-index.html&#34;&gt;git-update-index manual page&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;pre&gt;&lt;code&gt;--assume-unchanged&#xA;--no-assume-unchanged&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;When these flags are specified, the object names recorded for the paths are not updated. Instead, these options set and unset the &amp;ldquo;assume unchanged&amp;rdquo; bit for the paths.&lt;/p&gt;&#xA;&lt;p&gt;When the &amp;ldquo;assume unchanged&amp;rdquo; bit is on, git stops checking the working tree files for possible modifications, so you need to manually unset the bit to tell git when you change the working tree file. This is sometimes helpful when working with a big project on a filesystem that has very slow lstat(2) system call (e.g. cifs).&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Spoken Git Commit Log — Another Annoyance at the Office</title>
+				<link>https://justaddwater.dk/2009/09/30/spoken-git-commit-log-%E2%80%94-another-annoyance-at-the-office/</link>
+				<pubDate>Wed, 30 Sep 2009 10:23:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/30/spoken-git-commit-log-%E2%80%94-another-annoyance-at-the-office/</guid>
+				<description>&lt;p&gt;Here is a short one-liner that really annoyed my colleagues today.&lt;br&gt;&#xA;I set my mac to read aloud all changes in the repository since yesterday:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt; git  log --pretty=format:&amp;quot;%an commit %s, %ad.&amp;quot; --date=relative --since=yesterday |say&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;if you remove the &amp;ldquo;say&amp;rdquo; command in the end it&amp;rsquo;s actually pretty readable:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;pagerbak commit VA17, 34 minutes ago.&#xA;pagerbak commit VA17 - Not used, 35 minutes ago.&#xA;therikss commit , 48 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 56 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 56 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 57 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 57 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 57 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 57 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 58 minutes ago.&#xA;pagerbak commit Library update. Axis2 updated, 58 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 59 minutes ago.&#xA;pagerbak commit New certificates, VA17, Library update, Checkstyle, 60 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 61 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 62 minutes ago.&#xA;pagerbak commit ?, 63 minutes ago.&#xA;pagerbak commit Checkstyle configuration, 63 minutes ago.&#xA;pagerbak commit Added a few extra SAML2 related methods for VA17, 64 minutes ago.&#xA;nstrandb commit fixes, 75 minutes ago.&#xA;nstrandb commit fixes, 75 minutes ago.&#xA;pagerbak commit VA17 Login for existing user work., 76 minutes ago.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;While reading it aloud seems pretty evil and intriguing, it was actually bit of a laugh at the office.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How to add Git Pull Shortcut to Different Github Branches</title>
+				<link>https://justaddwater.dk/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/</link>
+				<pubDate>Sun, 23 Aug 2009 23:42:45 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;UPDATE 9 hours later: Changed to &amp;ldquo;remote = origin&amp;rdquo; to the specific branch &amp;ldquo;remote = dean&amp;rdquo; which works!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Short explanation on how to pull changes from different Git repositories into your local Git repository.&lt;/p&gt;&#xA;&lt;p&gt;Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, the remote repository is automatically added so you can do a simple git pull (instead of the verbose version &amp;ldquo;git pull origin master&amp;rdquo;)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Using Git for SVN Repositories Workflow</title>
+				<link>https://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/</link>
+				<pubDate>Mon, 09 Mar 2009 14:52:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/</guid>
+				<description>&lt;p&gt;For the last months I have been using Git to work with my Subversion repositories. Besides from &lt;a href=&#34;https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/&#34; title=&#34;justaddwater.dk | Git Side Benefit: Reducing Disk Usage&#34;&gt;reducing disk usage&lt;/a&gt;, Git also makes my work slightly faster and independent of network access &amp;ndash; I can make commits to repository which is sync&amp;rsquo;ed later when I get online.&lt;/p&gt;&#xA;&lt;p&gt;One challenge though: Using branches&lt;/p&gt;&#xA;&lt;p&gt;I ran into some pitfalls when using branches in Subversion repository. Here is a quick guide to how I setup and work with svn branches in git-svn.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

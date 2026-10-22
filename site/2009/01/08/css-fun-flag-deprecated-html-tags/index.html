@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS Fun: Flag Deprecated HTML Tags · justaddwater.dk</title>
+<meta name="description" content="Here is a little fun CSS snippet that helped me identify deprecated HTML on a recent project. Put these lines into the CSS file of your website:
+/* Watch out …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/12/17/time-to-revise-our-comment-policy/" rel="prev">Time To Revise Our Comment Policy</a></div>
+<div class="alignright"><a href="/2009/01/14/intranet-inspiration/" rel="next">Intranet Inspiration</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-01-08"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="CSS"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Standards"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v=""></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 8"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="2"></span>
+<h2 data-pagefind-meta="title">CSS Fun: Flag Deprecated HTML Tags</h2>
+<div class="entry">
+<p>Here is a little fun CSS snippet that helped me identify deprecated HTML on a recent project. Put these lines into the CSS file of your website:</p>
+<blockquote>
+<p><br>
+<code>/* Watch out for invalid/deprecated HTML in CMS */</code><br>
+<code>b{font-size: x-large; background-color: fuchsia; color: yellow; font-weight: normal;}</code><br>
+<code>i{font-size: x-large; background-color: lime; color: blue; font-style: normal}</code><br>
+<code>font{background-color: aqua; color: red}</code><br>
+<code>b,i,font{text-decoration: blink;}</code></p>
+</blockquote>
+<p><a href="/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif"><img src="/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif" alt="" title="blink-and-flag-deprecated-font-b-i-tags" class="alignnone size-full wp-image-991" height="165" width="249">
+</a></p>
+<p>This was really useful for identifying dirty HTML that was generated from a Microsoft-based CMS.</p>
+<p>Coloring and blinking text makes the editors aware that something is wrong. Two major advantages for this approach:</p>
+<ul>
+<li>Instant attention on HTML validation errors (also for non-developers)</li>
+<li>Developers spend less time on hunting down invalid HTML that constantly sneaks into the web application.</li>
+</ul>
+<p>These lines may also be useful to you &ndash; unless you are able to guard your HTML before it&rsquo;s inserted in your application (something that was not possible at this project).</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, January 8th, 2009 at 11:47 (GMT-1) and is filed under <a href="/category/css/" rel="category tag">CSS</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>, <a href="/category/web-standards/" rel="category tag">Web Standards</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to &#8220;CSS Fun: Flag Deprecated HTML Tags&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-464587">
+<cite><a href="http://webignition.net" class="url" rel="external">Jon Cram</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-464587" title="">January 8th, 2009 at 13:11 (GMT-1)</a> </small>
+<p>A great idea!</p>
+<p>It might be better to differentiate between deprecated elements and the deprecated /use/ of elements.</p>
+<p>The HTML 4.01 specs contain a list of elements, with those deprecated marked as such: <a href="http://www.w3.org/TR/REC-html40/index/elements.html">http://www.w3.org/TR/REC-html40/index/elements.html</a></p>
+<p>You&rsquo;ll notice that the list of elements doesn&rsquo;t mark &lsquo;i&rsquo; and &lsquo;b&rsquo; as deprecated. It is not that &lsquo;i&rsquo; and &lsquo;b&rsquo; have been deprecated, more than their /use/ has been cautioned against.</p>
+<p>There are use cases supporting the need for &lsquo;i&rsquo; to italicise a piece of text instead of using CSS to achieve the same visual effect.</p>
+<p>A good example is the use of italics when presenting a book title within text. We can&rsquo;t use &rsquo;em&rsquo; because we don&rsquo;t want to emphasise the title, we merely want to use italics in following with the conventions of print. There are more justifications for this, but that would start getting too off-topic.</p>
+<p>Back to my main point: use one form of colouring for deprecated elements (ones you can be certain should not be there) and a different form of colouring for commonly misused elements (which /probably/ shouldn&rsquo;t be there, but might actually be correctly used).</p>
+
+</li>
+
+<li id="comment-467194">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-467194" title="">January 20th, 2009 at 11:46 (GMT-1)</a> </small>
+<p>Jack Clarke wrote:</p>
+<blockquote>
+<p>Jack Clarke<br>
+http:// technewsline.net/ | <a href="mailto:clark31@mail.com">clark31@mail.com</a> | 75.177.28.174</p>
+<p>Pretty cool, it would be fun to have a tool that will do the same thing on on any site – I think you’d be surprised how much deprecated HTML is still in use.</p>
+</blockquote>
+<p>Actually, you could easily add this into a greasemonkey script or similar.</p>
+<p>PS. I marked your original comment as spam because it&rsquo;s refering to a product/SEO site. See our <a href="/2008/12/17/time-to-revise-our-comment-policy/">revised blog comment policy</a>.</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

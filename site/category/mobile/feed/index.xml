@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Mobile on Just Add Water</title>
+		<link>https://justaddwater.dk/category/mobile/</link>
+		<description>Recent content in Mobile on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 28 Jun 2006 10:13:32 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/mobile/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Mobile Web Best Practices</title>
+				<link>https://justaddwater.dk/2006/06/28/mobile-web-best-practices/</link>
+				<pubDate>Wed, 28 Jun 2006 10:13:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/28/mobile-web-best-practices/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3C&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/w3c_home.png&#34; alt=&#34;W3C Icon&#34; title=&#34;W3C Icon&#34; align=&#34;left&#34; style=&#34;margin: 5px 8px 0pt 0pt&#34; width=&#34;72&#34; height=&#34;48&#34;&gt;&#xA;&lt;/a&gt;Yesterday the W3C released a Candidate Recommendation document called &amp;ldquo;&lt;a href=&#34;http://www.w3.org/TR/2006/CR-mobile-bp-20060627/&#34; title=&#34;W3C: Mobile Web Best Practices 1.0&#34;&gt;Mobile Web Best Practices 1.0&lt;/a&gt;&amp;rdquo;. With this document W3C is offering a set of guidelines to help web developers deliver a better user experience to mobile users.&lt;/p&gt;&#xA;&lt;p&gt;The deadline for providing feedback to W3C is the 27th of August 2006 and all developers are encouraged to try it out.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

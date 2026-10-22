@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Web Server on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/web-server/</link>
+		<description>Recent content in Web Server on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 13 Mar 2009 10:45:05 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/web-server/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Web Server Power Calculation</title>
+				<link>https://justaddwater.dk/2009/03/13/web-server-power-calculation/</link>
+				<pubDate>Fri, 13 Mar 2009 10:45:05 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/03/13/web-server-power-calculation/</guid>
+				<description>&lt;p&gt;In our company&amp;rsquo;s basement a small server room where we put a few sandbox machines we use for quickly starting up projects, simple project and version control management. Over the time, quite a few of our clients have benefited from this setup as it can create instant project infrastructure.&lt;/p&gt;&#xA;&lt;p&gt;But what is the cost of having these machines here?&lt;/p&gt;&#xA;&lt;p&gt;Servers: Old HP desktop workstations from 2003. By the time they were state-of-the art workstations used by developers working on virtual machines. Now that everybody uses laptops, we set some of these machines up in our server room and have had immense benefit from them in the last 18 months or so.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

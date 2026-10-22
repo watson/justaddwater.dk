@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>W on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/w/</link>
+		<description>Recent content in W on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 05 Oct 2010 22:47:32 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/w/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>GWT relevant snippets for IntelliJ Idea editor</title>
+				<link>https://justaddwater.dk/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/</link>
+				<pubDate>Tue, 05 Oct 2010 22:47:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/</guid>
+				<description>&lt;p&gt;I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it&amp;rsquo;s a very short list.&lt;/p&gt;&#xA;&lt;p&gt;Snippet 1: Live template to bootstrap a class to use UI binder logic. Very useful when converting existing (pre gwt 2.0) Java classes to UI binder pattern, which gives better separation of logic and view.&lt;/p&gt;&#xA;&lt;p&gt;Snippet 2: Create new UiBinder.ui.xml file. Intellij has support for creating entire new java class + uibinder file. That is useful for new classes, but most often I find myself converting an existing class, and needed this shortcut for that.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

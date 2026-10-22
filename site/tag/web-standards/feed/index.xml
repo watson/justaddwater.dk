@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Web Standards on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/web-standards/</link>
+		<description>Recent content in Web Standards on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 12 Mar 2010 11:20:55 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/web-standards/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Why WebStandards Matter</title>
+				<link>https://justaddwater.dk/2010/03/12/1291/</link>
+				<pubDate>Fri, 12 Mar 2010 11:20:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/03/12/1291/</guid>
+				<description>&lt;p&gt;I just revisited &amp;ldquo;Why Web Standards Matter (Case Study)&amp;rdquo;, that I wrote on the background of a customer problem back in 2006. The points are actually relevant event with the more recent and faster browser versions that we have today.&lt;/p&gt;&#xA;&lt;p&gt;I did a small change to express my opinion better. Changed &amp;ldquo;JavaScript should generally be avoided&amp;rdquo; to &amp;ldquo;Don&amp;rsquo;t use JavaScript for general page layout rendering&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Here is the modified advice from the article:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>CSS Styling Buttons Problem with Underlined Text</title>
+				<link>https://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</link>
+				<pubDate>Wed, 16 Sep 2009 10:32:56 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</guid>
+				<description>&lt;p&gt;I ran into the challenge the other day to style a&amp;lt;button&amp;gt; element to make it look like a link (with underline and everything).&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately, the &amp;lt;button&amp;gt; element does not react to text-decoration: underline;&lt;/p&gt;&#xA;&lt;p&gt;But according to &lt;a href=&#34;http://csscreator.com/node/25902&#34; title=&#34;CSS Forum: [Solved?] Doctype prevents underline in button input&#34;&gt;a discussion at the CSS Creator forum&lt;/a&gt;, there is a way out:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I was just messing around with it and for some reason this doesn&amp;rsquo;t work:&lt;br&gt;&#xA;&lt;code&gt;input {text-decoration:underline;}&lt;/code&gt;&lt;br&gt;&#xA;but this does:&lt;br&gt;&#xA;&lt;code&gt;input {text-decoration:underline;float:left;}&lt;/code&gt;&lt;br&gt;&#xA;and&lt;br&gt;&#xA;&lt;code&gt;input{text-decoration:underline;display:block;}&lt;/code&gt;&lt;br&gt;&#xA;and&lt;br&gt;&#xA;&lt;code&gt;input{text-decoration:underline;position:absolute;}&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t ask me&amp;hellip; I can&amp;rsquo;t explain this one.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</title>
+				<link>https://justaddwater.dk/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/</link>
+				<pubDate>Wed, 02 Sep 2009 15:23:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/</guid>
+				<description>&lt;p&gt;I was reading up on the good old HTML specification and discovered a feature I had always wanted &amp;ndash; and it&amp;rsquo;s already there:&lt;br&gt;&#xA;Creating widths of columns that will work like percentages, but will also pay attention to any small, fixed-width columns.&lt;/p&gt;&#xA;&lt;p&gt;Take a look at HTML&amp;rsquo;s proportional widths and amount alignment features.&lt;/p&gt;&#xA;&lt;p&gt;Look at this from HTML specification of &amp;lt;COL&amp;gt; elements:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Authors may specify column widths in three ways:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fixed&lt;/strong&gt;&lt;br&gt;&#xA;A fixed width specification is given in pixels (e.g., &lt;code&gt; width&lt;/code&gt;=&amp;ldquo;30&amp;rdquo;). A fixed-width specification enables incremental rendering.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Percentage&lt;/strong&gt;&lt;br&gt;&#xA;A percentage specification (e.g., &lt;code&gt;width&lt;/code&gt;=&amp;ldquo;20%&amp;rdquo;) is based on the percentage of the horizontal space available to the table (between the current left and right margins, including floats). Note that this space does not depend on the table itself, and thus percentage specifications enable incremental rendering.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Proportional&lt;/strong&gt;&lt;br&gt;&#xA;Proportional specifications (e.g., &lt;code&gt;width&lt;/code&gt;=&amp;ldquo;3*&amp;rdquo;) refer to portions of the horizontal space &lt;em&gt;required&lt;/em&gt; by a table. If the table width is given a fixed value via the &lt;code&gt;width&lt;/code&gt; attribute of the &lt;a href=&#34;http://www.w3.org/TR/html4/struct/tables.html#edef-TABLE&#34;&gt;&lt;code&gt;TABLE&lt;/code&gt;&lt;/a&gt; element, user agents may render the table incrementally even with proportional columns.However, if the table does not have a fixed width, user agents must receive all table data before they can determine the horizontal space required by the table. Only then may this space be allotted to proportional columns.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>HTML Guide Textmate Snippets Open Sourced</title>
+				<link>https://justaddwater.dk/2009/02/25/html-guide-textmate-snippets-open-sourced/</link>
+				<pubDate>Wed, 25 Feb 2009 16:38:02 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/02/25/html-guide-textmate-snippets-open-sourced/</guid>
+				<description>&lt;p&gt;One year ago I published &amp;ldquo;&lt;a href=&#34;../2008/02/08/design-guide-or-html-markup-guide/&#34; title=&#34;Permanent Link: Design Guide or HTML Markup Guide&#34;&gt;Design Guide or HTML Markup Guide&lt;/a&gt;&amp;rdquo; with link to the HTML guide we did for the biggest Danish business internet portal.&lt;/p&gt;&#xA;&lt;p&gt;The HTML guide is a really useful tool for every public authority that must deliver applications for the portal.&lt;/p&gt;&#xA;&lt;p&gt;As a help for my own work back then, I created &lt;a href=&#34;http://github.com/jesperronn/virk_dk_htmlsnippets/tree/master&#34;&gt;virk_dk_htmlsnippets&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h2 id=&#34;snippets-available&#34;&gt;Snippets available&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;skel&lt;/code&gt;(tab) &amp;ndash; creates HTML skeleton in blank file. Adds correct doctype, head, body and container divs required for the virk.dk html to show correctly.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;fieldset&lt;/code&gt;(tab) Groups of form elements. Use where you would have used ordinary fieldsets. See HTML guide » &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/form-fieldset.html&#34;&gt;Form grupper (fieldsets)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;button&lt;/code&gt;(tab) &amp;ndash; submit button and other buttons. See HTML guide » &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/buttons.html&#34;&gt;Knapper&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;inputcheck&lt;/code&gt;(tab) &amp;ndash; standard checkbox with label and group&lt;br&gt;&#xA;&lt;code&gt;inputtext&lt;/code&gt;(tab) &amp;ndash; text field&lt;br&gt;&#xA;&lt;code&gt;select&lt;/code&gt;(tab) &amp;ndash; select element&lt;/p&gt;&#xA;&lt;p&gt;Usage examples see HTML guide &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/form-simple.html&#34;&gt;Simple form elementer&lt;/a&gt;, &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/form-special.html&#34;&gt;Særlige form elementer&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;table&lt;/code&gt;(tab) &amp;ndash; table element. See HTML guide » &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/tables.html&#34;&gt;Tabeller&lt;/a&gt;&lt;br&gt;&#xA;&lt;code&gt;td&lt;/code&gt;(tab) &amp;ndash; table cell inside table row.&lt;br&gt;&#xA;&lt;code&gt;th&lt;/code&gt;(tab) &amp;ndash; table header cell inside table row.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Design Guide or HTML Markup Guide</title>
+				<link>https://justaddwater.dk/2008/02/08/design-guide-or-html-markup-guide/</link>
+				<pubDate>Fri, 08 Feb 2008 13:47:41 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/02/08/design-guide-or-html-markup-guide/</guid>
+				<description>&lt;p&gt;At a recent project, there was a requirement to describe the CSS used on a site, as a documentation, other developers could use. We decided to go a bit further &amp;ndash; not only documenting the CSS classes &amp;ndash; but making a guide that developers could find easy to use. Also we wanted developers with little or no CSS knowledge to be able to use the guide.&lt;/p&gt;&#xA;&lt;p&gt;The usual design guide that dictates colors for headings, which images to use for bullet lists, margins between elements, line-heights, etc. When it comes to implementing the actual markup, &lt;strong&gt;the usual design guide is no help for developers&lt;/strong&gt; when the first page is up on the website.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

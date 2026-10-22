@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>E-Commerce on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/e-commerce/</link>
+		<description>Recent content in E-Commerce on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 21 Sep 2009 23:02:12 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/e-commerce/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Sell More: Add Next Steps To Your Status Messages</title>
+				<link>https://justaddwater.dk/2009/09/21/sell-more-add-next-steps-to-your-status-messages/</link>
+				<pubDate>Mon, 21 Sep 2009 23:02:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/21/sell-more-add-next-steps-to-your-status-messages/</guid>
+				<description>&lt;p&gt;Sometimes, when doing web development, we forget that not everybody are as familiar with the web jargon as ourselves.&lt;/p&gt;&#xA;&lt;p&gt;This example from Pixum (internet photo developer) shows a good detail:&lt;/p&gt;&#xA;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2009/09/pixum-status-message-with-shopping-cart-affordance-crop1.png&#34; alt=&#34;pixum-status-message-with-shopping-cart-affordance-crop&#34; title=&#34;pixum-status-message-with-shopping-cart-affordance-crop&#34; class=&#34;aligncenter size-full wp-image-1149&#34; height=&#34;210&#34; width=&#34;443&#34;&gt;&#xA;&#xA;&lt;div style=&#34;text-align: center;&#34;&gt;&#xA;&lt;p&gt;The status message from Pixum gives immediate feedback that makes it easy to go to next step&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Note that the status message contains a link to the shopping basket to provide easy way to purchase. This design decision will probably decrease number of abandoned shopping carts.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

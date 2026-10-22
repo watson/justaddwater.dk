@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ignore on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/ignore/</link>
+		<description>Recent content in Ignore on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 07 Dec 2009 13:28:34 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/ignore/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>How to make Git ignore files that already exist in your project</title>
+				<link>https://justaddwater.dk/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/</link>
+				<pubDate>Mon, 07 Dec 2009 13:28:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/</guid>
+				<description>&lt;p&gt;For a project I&amp;rsquo;m working on, I had to change some files with personal settings, and the files kept showing up with a &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Adding files to .gitignore that are already tracked does not work. (and it&amp;rsquo;s actually pretty well documented in the documentation). In stead, it&amp;rsquo;s possible to use this command:&lt;/p&gt;&#xA;&lt;p&gt;git update-index &amp;ndash;assume-unchanged [filename(s)]&lt;/p&gt;&#xA;&lt;p&gt;From &lt;a href=&#34;http://www.kernel.org/pub/software/scm/git/docs/git-update-index.html&#34;&gt;git-update-index manual page&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;pre&gt;&lt;code&gt;--assume-unchanged&#xA;--no-assume-unchanged&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;When these flags are specified, the object names recorded for the paths are not updated. Instead, these options set and unset the &amp;ldquo;assume unchanged&amp;rdquo; bit for the paths.&lt;/p&gt;&#xA;&lt;p&gt;When the &amp;ldquo;assume unchanged&amp;rdquo; bit is on, git stops checking the working tree files for possible modifications, so you need to manually unset the bit to tell git when you change the working tree file. This is sometimes helpful when working with a big project on a filesystem that has very slow lstat(2) system call (e.g. cifs).&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
+</rss>

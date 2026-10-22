@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How To add “Open folder in Textmate” to Finder Context Menu · justaddwater.dk</title>
+<meta name="description" content="I wanted to add a menu item in Finder&rsquo;s context menu that would open the selected folder in Textmate.
+A google search suggested the method described by K. …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/" rel="prev">How to make Git ignore files that already exist in your project</a></div>
+<div class="alignright"><a href="/2009/12/09/how-to-recover-deleted-subversion-branch/" rel="next">How To Recover Deleted Subversion Branch</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-12-08"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="OS X"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I wanted to add a menu item in Finder’s context menu that would open the selected folder in Textmate. A google search suggested the method described by K. Adam Christensen on his blog: “Opening a directory in TextMate from Finder”. However, from the documentation, I learned that that method is now outdated. Snow Leopard users [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Dec 8"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="7"></span>
+<h2 data-pagefind-meta="title">How To add “Open folder in Textmate” to Finder Context Menu</h2>
+<div class="entry">
+<p>I wanted to add a menu item in Finder&rsquo;s context menu that would open the selected folder in Textmate.<br>
+<a href="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.24.20-AM.png"><img src="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.24.20-AM-289x300.png" alt="Textmate context menu item: Open selected folder in  Textmate" title="Textmate context menu item: Open selected folder in  Textmate" class="aligncenter size-medium wp-image-1253" height="300" width="289" srcset="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.24.20-AM-289x300.png 289w, /wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.24.20-AM.png 366w" sizes="(max-width: 289px) 100vw, 289px">
+</a></p>
+<p>A google search suggested the method described by K. Adam Christensen on his blog: &ldquo;<a href="http://shifteleven.com/articles/2006/09/17/opening-a-directory-in-textmate-from-finder">Opening a directory in TextMate from Finder</a>&rdquo;. However, from the documentation, I learned that that method is now outdated. Snow Leopard users should use &ldquo;Services&rdquo; and not &ldquo;workflow&rdquo; for setting this up.</p>
+<p>Here is what I did:</p>
+<p>Open Automator.app.</p>
+<p>From the menu item &ldquo;File&rdquo; &gt; &ldquo;New&rdquo; choose &ldquo;Services&rdquo;</p>
+<p><a href="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.22.00-AM.png"><img src="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.22.00-AM-300x280.png" alt="Automator-File-New-Service" title="Automator-File-New-Service" class="aligncenter size-medium wp-image-1254" height="280" width="300" srcset="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.22.00-AM-300x280.png 300w, /wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.22.00-AM.png 546w" sizes="(max-width: 300px) 100vw, 300px">
+</a></p>
+<p>Now there are 3 steps to be filled out like so:</p>
+<p><a href="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.23.23-AM.png"><img src="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.23.23-AM-300x152.png" alt="Automator final setup for &#34;open in textmate&#34; Finder.app context menu itm" title="Automator final setup for &#34;open in textmate&#34; Finder.app context menu itm" class="aligncenter size-medium wp-image-1255" height="152" width="300" srcset="/wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.23.23-AM-300x152.png 300w, /wp-content/uploads/2009/12/Screen-shot-2009-12-08-at-10.23.23-AM.png 881w" sizes="(max-width: 300px) 100vw, 300px">
+</a><br>
+First, edit the top so that &ldquo;Service recieves selected: <strong>files or folders</strong> in <strong>Finder.app</strong>&rdquo;.</p>
+<p>Second, add the action &ldquo;Get Selected Finder Items&rdquo; from the left column (use the search field to find, then drag selected into the right work area).</p>
+<p>Third, add the action &ldquo;Run Shell Script&rdquo; to your service. Fill in the following command:</p>
+<p>cat | xargs mate</p>
+<p>Finally, choose &ldquo;File&rdquo; &gt; &ldquo;Save&hellip;&rdquo; and give it a name like &ldquo;Open in Textmate&rdquo;</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, December 8th, 2009 at 10:44 (GMT-1) and is filed under <a href="/category/os-x/" rel="category tag">OS X</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">7 Responses to &#8220;How To add “Open folder in Textmate” to Finder Context Menu&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-491481">
+<cite><a href="http://www.joealba.com/" class="url" rel="external">Joe Alba</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-491481" title="">December 8th, 2009 at 18:58 (GMT-1)</a> </small>
+<p>Great tip! I&rsquo;ve been looking for this feature for a while now.</p>
+<p>But for some reason, it isn&rsquo;t working for me. I followed the steps, but this service does not appear when I right-click a folder.</p>
+<p>I checked my ~/Library/Services folder, and the service I created was saved as &lsquo;Open in TextMate.workflow&rsquo;</p>
+<p>Got any tips that could help me out? Does your service wind up with the .workflow extension also?</p>
+<p>(I&rsquo;m running Snow Leopard &ndash; upgraded from Leopard, not a fresh install.)</p>
+
+</li>
+
+<li id="comment-491507">
+<cite><a href="http://blog.danielpietzsch.com" class="url" rel="external">Daniel</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-491507" title="">December 11th, 2009 at 01:38 (GMT-1)</a> </small>
+<p>Nice tip, but somehow the folder or file I selected in Finder appears twice in the Textmate drawer. Do you have the same problem?</p>
+</li>
+
+<li class="alt" id="comment-491591">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-491591" title="">December 16th, 2009 at 21:38 (GMT-1)</a> </small>
+<p>@Daniel. Actually yes I have the same problem. Please let me know if you come up with a fix !</p>
+</li>
+
+<li id="comment-503678">
+<cite>Adam</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-503678" title="">December 6th, 2010 at 03:54 (GMT-1)</a> </small>
+<p>To fix the &ldquo;double&rdquo; loading issue:</p>
+<p>In the &ldquo;Run Shell Script&rdquo; Automator action, in the &ldquo;Pass Input&rdquo; drop down, change from &ldquo;to stdin&rdquo; to &ldquo;as arguments&rdquo;</p>
+<p>Change the script:</p>
+<p>FROM:<br>
+cat | xargs mate</p>
+<p>TO:<br>
+mate $1</p>
+
+</li>
+
+<li class="alt" id="comment-505906">
+<cite><a href="http://twitter.com/humantorch" class="url" rel="external">Scott</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-505906" title="">January 3rd, 2011 at 11:10 (GMT-1)</a> </small>
+<p>Thanks Adam, that solved the double-loading issue for me as well.</p>
+<p>Also, for whatever reason, the workflow wasn&rsquo;t picking up my $PATH variable, so I actually had to enter:</p>
+<p>/usr/local/bin/mate $1</p>
+<p>as the shell script. Other than that, though, works like a charm!</p>
+
+</li>
+
+<li id="comment-506860">
+<cite><a href="http://blog.elinkmedia.net.au/2011/01/08/open-folder-in-textmate/" class="url" rel="external">Open folder in Textmate | Elink Media</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-506860" title="">January 8th, 2011 at 12:25 (GMT-1)</a> </small>
+<p>[&hellip;] <a href="http://justaddwater.dk/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/">http://justaddwater.dk/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/</a> Share this article [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-531548">
+<cite>Henrique</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-531548" title="">July 25th, 2011 at 16:23 (GMT-1)</a> </small>
+<p>Great tip!</p>
+<p>Using what Adam and Scott sad, but with the argument surrounded by double quotes avoiding problems with path that contain spaces.</p>
+<p>/usr/local/bin/mate &ldquo;$1&rdquo;</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

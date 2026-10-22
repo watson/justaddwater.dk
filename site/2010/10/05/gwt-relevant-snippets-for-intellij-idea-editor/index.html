@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GWT relevant snippets for IntelliJ Idea editor · justaddwater.dk</title>
+<meta name="description" content="I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it&rsquo;s a very …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2010/10/01/successful-approach-to-user-experience/" rel="prev">Successful Approach to User Experience</a></div>
+<div class="alignright"><a href="/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/" rel="next">Fixed Strange Hudson Slave OutOfMemoryError</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2010-10-05"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2010"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it’s a very short list. Snippet 1: Live template to bootstrap a class to use UI binder logic. Very useful when converting existing (pre gwt 2.0) Java classes to UI [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Oct 5"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">GWT relevant snippets for IntelliJ Idea editor</h2>
+<div class="entry">
+<p>I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it&rsquo;s a very short list.</p>
+<p>Snippet 1: Live template to bootstrap a class to use UI binder logic. Very useful when converting existing (pre gwt 2.0) Java classes to UI binder pattern, which gives better separation of logic and view.</p>
+<p>Snippet 2: Create new UiBinder.ui.xml file. Intellij has support for creating entire new java class + uibinder file. That is useful for new classes, but most often I find myself converting an existing class, and needed this shortcut for that.</p>
+<p><em>com.google.gwt.template.binder.java — <a href="https://gist.github.com/612402">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/* add this to IntelliJ Idea &#34;File&gt;Settings&gt; Live templates&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Abbreviation: binder
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Group:        user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Description:  GWT UiBinder bootstrapping on existing class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@com.google.gwt.uibinder.client.UiTemplate</span>(<span style="color:#e6db74">&#34;$CLASS$.ui.xml&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Binder</span> <span style="color:#66d9ef">extends</span> com.<span style="color:#a6e22e">google</span>.<span style="color:#a6e22e">gwt</span>.<span style="color:#a6e22e">uibinder</span>.<span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">UiBinder</span><span style="color:#f92672">&lt;</span>com.<span style="color:#a6e22e">google</span>.<span style="color:#a6e22e">gwt</span>.<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">ui</span>.<span style="color:#a6e22e">HTMLPanel</span>,$CLASS$<span style="color:#f92672">&gt;</span> {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Binder ourUiBinder <span style="color:#f92672">=</span> GWT.<span style="color:#a6e22e">create</span>(Binder.<span style="color:#a6e22e">class</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//public $CLASS$() {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//    com.google.gwt.user.client.ui.HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//}</span>
+</span></span></code></pre></div><p><em>com.google.gwt.template.file.uibinder.xml — <a href="https://gist.github.com/612402">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  add this to IntelliJ Idea &#34;File &gt; Settings &gt; File templates&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  &#34;Templates&#34; tab
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  Name:      GWT UI binder
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  Extension: xml
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;ui:UiBinder</span> <span style="color:#a6e22e">xmlns:ui=</span><span style="color:#e6db74">&#39;urn:ui:com.google.gwt.uibinder&#39;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:g=</span><span style="color:#e6db74">&#39;urn:import:com.google.gwt.user.client.ui&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">&lt;</span>${ROOT_TAG_NAME}&gt;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">&lt;</span>/${ROOT_TAG_NAME}&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/ui:UiBinder&gt;</span>
+</span></span></code></pre></div>
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, October 5th, 2010 at 22:47 (GMT-1) and is filed under <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

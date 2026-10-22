@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Justaddwater.dk hacked · justaddwater.dk</title>
+<meta name="description" content="The non-technical version: Last Thursday we unfortunately had an intruder on Justaddwater.dk. The cracker used a flaw in our blogging software to gain …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/11/13/usability-work-on-internal-capgemini-application/" rel="prev">Usability work on internal capgemini application</a></div>
+<div class="alignright"><a href="/2007/11/18/blue-beanie-day-a-day-for-web-standards-and-accessibility/" rel="next">Blue Beanie Day – A day for Web Standards and Accessibility</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-11-15"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="justaddwater.dk"></span><span hidden data-pagefind-filter="category[data-v]" data-v="WordPress"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="The non-technical version: Last Thursday we unfortunately had an intruder on Justaddwater.dk. The cracker used a flaw in our blogging software to gain administrative access to it. With this access the cracker placed a secret backdoor on the server. It seems that the intention of the cracker where to use our server to host illegal [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Thomas"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Nov 15"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="18"></span>
+<h2 data-pagefind-meta="title">Justaddwater.dk hacked</h2>
+<div class="entry">
+<h3 id="the-non-technical-version">The non-technical version:</h3>
+<p>Last Thursday we unfortunately had an intruder on Justaddwater.dk. The cracker used a flaw in our blogging software to gain administrative access to it. With this access the cracker placed a secret backdoor on the server.</p>
+<p>It seems that the intention of the cracker where to use our server to host illegal copies of movies as part of a larger pirate network. To our luck the technical skills of the cracker where very bad (<em>read: <a href="http://en.wikipedia.org/wiki/Script_kiddie" title="Wikipedia: Script Kiddie">script kiddie</a></em>) and the attempt to upload files to our server was not successful. The cracker therefore quickly gave up and did not try to access to backdoor afterwards.</p>
+<p>We have now upgraded our blogging software to the newest version effectively closing the security hole and have reverted his (or hers?) changes and damage to the system.</p>
+<p>We have tried to track his every move in our system, but cannot guarantee that he at some point didn&rsquo;t get a copy of all our commenter&rsquo;s e-mail addresses. We are pretty sure he was not after this information, and it does seem like he did not retrieve them, but we are not a 100% sure.</p>
+<p>I know some of you use unique e-mail addresses when writing comments on our blog. If you are such a person and ever get any spam on this unique e-mail address, we would very much like to <a href="/contact-us/" title="Contact Justaddwater.dk">hear from you</a>.</p>
+<p>To those of you who subscribe to our newsletter, you can rest assure that your e-mail addresses where never in any danger. They are safely kept at our service-providers and the intruder have not had access to them.</p>
+<p>For more information on how we store user information see our <a href="/privacy/">Privacy Policy</a>.</p>
+<h3 id="info-to-fellow-wordpress-users">Info to fellow WordPress users</h3>
+<p>The versions of WordPress affected by this security issue are:</p>
+<ul>
+<li>The entire version 2.1.x branch</li>
+<li>In the 2.0.x branch, every version below 2.0.11 is affected</li>
+</ul>
+<p>If you are still running WordPress version 2.1.x we urge you to quickly upgrade to a newer version (2.2 or above). If you are running the older 2.0.x branch you can upgrade to version 2.0.11.</p>
+<h3 id="all-the-technical-goodies">All the technical goodies</h3>
+<p><a href="http://trac.wordpress.org/ticket/4322" title="WordPress Trac: #4322 (Sql injection blind fishing exploit)">The bug in question</a> is a serious SQL injection bug affecting <code>/wp-admin/admin-ajax.php</code> where the attacker can perform any SQL command on your WordPress database (including wiping it out completely!).</p>
+<p>In our case the cracker &ldquo;only&rdquo; used it to gain administrative WordPress access and updated the WordPress &ldquo;upload_path&rdquo; to point to the servers <code>/tmp</code> directory. He then uploaded a PHP script to this folder and added it as a WordPress plugin by manipulating the &ldquo;active_plugins&rdquo; option in WordPress. The purpose of this plugin was to lay dormant until a call to a specific URL was detected. This secret URL would then render a backdoor interface instead of the regular justaddwater.dk. You can see the backdoor interface by clicking the thumbnail below:</p>
+<p><a href="/wp-content/uploads/justaddwater-hacked.png" title="justaddwater-hacked.png"><img src="/wp-content/uploads/justaddwater-hacked.thumbnail.png" alt="justaddwater-hacked.png" width="55" height="128">
+</a></p>
+<p>After looking at the Apache log files we can see what the cracker actually did to gain access and what he used that access to do.</p>
+<p>First he made a very strange call:</p>
+<pre><code>&quot;GET /wp-includes/js/tinymce/wp-mce-help.php HTTP/1.0&quot; 200 7411 &quot;-&quot; &quot;-&quot;
+</code></pre>
+<p>I have no idea why he called this URL first. My guess first was that this was a way of detecting which version of WordPress we where running, but after investigating I can see that this file exists also in versions not affected by the bug.</p>
+<p>Secondly he called the URL affected by the SQL injection bug several times (actually 159!):</p>
+<pre><code>&quot;POST /wp-admin/admin-ajax.php HTTP/1.1&quot; 200 2 &quot;-&quot; &quot;Mozilla/4.0 (compatible; windows 5.1)&quot;
+</code></pre>
+<p>Every call looks the same except for the size of the response in bytes following the 200 response code (in the above log entry it&rsquo;s 2, but sometimes it would be 298 or 299). It would have been during these calls that the cracker gained administrative access to WordPress. The cracker also created a new post that he would later use as a placeholder for the PHP script he where to upload.</p>
+<p>Now followed 8 calls to options.php:</p>
+<pre><code>&quot;POST /wp-admin/options.php HTTP/1.0&quot; 200 1248 &quot;http://justaddwater.dk/wp-admin/options.php&quot; &quot;Opera&quot;
+</code></pre>
+<p>Notice how the user-agent changes all the time. This could be different scripts running, set to identify them selfs differently. My guess is that he used these calls to change the &ldquo;upload_path&rdquo; option and the &ldquo;active_plugins&rdquo; option. He could have done this via SQL injection though.</p>
+<p>Then came 10 calls to upload.php, the script used to upload pictures etc. to posts:</p>
+<pre><code>&quot;POST /wp-admin/upload.php?style=inline&amp;amp;tab=upload&amp;amp;post_id=-1 HTTP/1.0&quot; 200 1150 &quot;http://justaddwater.dk/upload.php?style=inline&amp;amp;tab=upload&amp;amp;post_id=-1&quot; &quot;Opera&quot;
+</code></pre>
+<p>My guess is that he used these calls to upload the backdoor script to /tmp. Why he needed 10 I don&rsquo;t know.</p>
+<p>Then came another 15 calls to options.php:</p>
+<pre><code>&quot;POST /wp-admin/options.php HTTP/1.0&quot; 200 1230 &quot;http://justaddwater.dk/wp-admin/options.php&quot; &quot;Opera&quot;
+</code></pre>
+<p>It&rsquo;s not quite obvious why he made these last calls, except to maybe clean up something he made earlier.</p>
+<p>Now came a very strange call to upgrade.php that I can&rsquo;t figure out why he made:</p>
+<pre><code>&quot;GET /wp-admin/upgrade.php?step=1 HTTP/1.0&quot; 200 1172 &quot;-&quot; &quot;-&quot;
+</code></pre>
+<p>This script is used to upgrade the WordPress database after installing a new version of WordPress. He might have used some of the previous requests to prepare an &ldquo;upgrade&rdquo; script that he could then run this way, but why didn&rsquo;t he just use the SQL injection technique from before?</p>
+<p>Finally he accessed his newly created backdoor, looked inside our <code>/wp-content</code> folder, did 3 POSTS (that I suspect where file-upload attempts) and then left never to be seen again.</p>
+
+
+<p><small>Technorati Tags: script kiddie, hacking, hacker, cracker, WordPress, security, justaddwater.dk, <a href="/tag/bug/" rel="tag">bug</a>, blogging software, hacked, vulnerability, apache, log files</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Thomas Watson Steen
+on Thursday, November 15th, 2007 at 00:28 (GMT-1) and is filed under <a href="/category/justaddwater.dk/" rel="category tag">justaddwater.dk</a>, <a href="/category/wordpress/" rel="category tag">WordPress</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">18 Responses to &#8220;Justaddwater.dk hacked&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-346056">
+<cite><a href="http://germworks.net/blog/" class="url" rel="external">Jermayn Parker</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-346056" title="">November 15th, 2007 at 02:07 (GMT-1)</a> </small>
+<p>Im thinking that my GermWorks website has also been hacked as I now get an error message saying that the database is not connected :(</p>
+</li>
+
+<li id="comment-376096">
+<cite><a href="http://heavy-blog.com/" class="url" rel="external">HeavyGod</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-376096" title="">November 27th, 2007 at 10:53 (GMT-1)</a> </small>
+<p>Really good and really interesting post. I expect (and other readers maybe :)) new useful posts from you!<br>
+Good luck and successes in blogging!</p>
+</li>
+
+<li class="alt" id="comment-379078">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-379078" title="">November 28th, 2007 at 21:11 (GMT-1)</a> </small>
+<p>The same thing happened to Al Gore recently. See The Register:</p>
+<p><a href="http://www.theregister.co.uk/2007/11/27/climate_change_hack/">http://www.theregister.co.uk/2007/11/27/climate_change_hack/</a></p>
+<p>(via <a href="http://photomatt.net/2007/11/27/al-gore-hacked/">http://photomatt.net/2007/11/27/al-gore-hacked/</a> )</p>
+
+</li>
+
+<li id="comment-379804">
+<cite><a href="http://justaddwater.dk/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/" class="url" rel="external">justaddwater.dk | Letting Spam In For A Day Questions and Answers</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-379804" title="">November 29th, 2007 at 10:34 (GMT-1)</a> </small>
+<p>[&hellip;] a big challenge. But we actually tried that recently when Justaddwater.dk got hacked. The hacker used a security hole in an old version of WordPress and to upload his malicious code, [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-399490">
+<cite><a href="http://www.sakuraui.com" class="url" rel="external">Dmitriy Salko</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-399490" title="">March 1st, 2008 at 09:19 (GMT-1)</a> </small>
+<p>Really very informative post, I am using older version of wordpress for my 3 blogs (linux,php and seo). I also need to upgrade my wordpress version to ensure the security of my blogs.</p>
+<p>Thanks much for the great info&hellip;</p>
+
+</li>
+
+<li id="comment-403760">
+<cite><a href="http://www.100tools.com" class="url" rel="external">ViewMyUserAgent</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-403760" title="">March 23rd, 2008 at 22:11 (GMT-1)</a> </small>
+<p>Wow. I didn&rsquo;t even know flaws like this were possible in WorldPress.</p>
+<p>I&rsquo;m not technical&hellip;what kind of background would someone need to detect this kind of intrusion? I&rsquo;d like to have my site checked, but don&rsquo;t know where to look.</p>
+
+</li>
+
+<li class="alt" id="comment-405091">
+<cite><a href="http://blog.emptyway.com/2008/03/30/wordpress-25-and-security/" class="url" rel="external">Wordpress 2.5 and Security - The Empty Way</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-405091" title="">March 30th, 2008 at 22:08 (GMT-1)</a> </small>
+<p>[&hellip;] Justaddwater.dk hacked [&hellip;]</p>
+</li>
+
+<li id="comment-418474">
+<cite><a href="http://www.neox.net/w/2008/05/16/wordpress-blog-hacked-with-admin-ajaxphp-vulnerability/" class="url" rel="external">Hana &amp; Sarah’s blog » Wordpress blog hacked with admin-ajax.php vulnerability</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-418474" title="">May 16th, 2008 at 06:36 (GMT-1)</a> </small>
+<p>[&hellip;] Justaddwater.dk hacked [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-419555">
+<cite><a href="http://www.travelforumz.com/blog/" class="url" rel="external">steve</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-419555" title="">May 21st, 2008 at 11:14 (GMT-1)</a> </small>
+<p>Sorry about the intrusion, Thomas, and better luck with the site in the future. What I can add is to make a copy of the db as often as possible.. sites will always be cracked, so it is important to be able to restore. There is a plugin to send a backup of the db via email and worth looking into.</p>
+<p>Other than that, the debugging /hack tracing skills of yours are impressive. Thanks for the detailed explanation.</p>
+<p>steve</p>
+
+</li>
+
+<li id="comment-420397">
+<cite><a href="http://www.skoogo.com" class="url" rel="external">Navier</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420397" title="">May 26th, 2008 at 00:43 (GMT-1)</a> </small>
+<p>This is quite informative. I&rsquo;m sorry about the hacking incident, I&rsquo;ve personally gotten hacked by random people across the net multiple times in my forum . I used Vbulletin&ndash;I realize that I had to update almost immediately when Vbulletin came out.</p>
+<p>But it&rsquo;s great that you can actually diagnose your hacked hole!</p>
+
+</li>
+
+<li class="alt" id="comment-423125">
+<cite><a href="http://www.itsupportheroes.co.uk" class="url" rel="external">IT Support Guy</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-423125" title="">June 10th, 2008 at 10:44 (GMT-1)</a> </small>
+<p>This shows the importance of regularly checking your logs for signs of suspicious activity against a baseline. I wish someone would release a simple hosted service (like statcounter) that would identify anomalies like this in realtime.</p>
+<p>-Kris</p>
+
+</li>
+
+<li id="comment-432020">
+<cite><a href="http://www.dilutedreality.com" class="url" rel="external">Diluted Reality</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-432020" title="">July 25th, 2008 at 02:59 (GMT-1)</a> </small>
+<p>I use WP version 2.5 for my blog. Has anybody ever heard of this happening in this version? I see they just came out with a 2.6. I will upgrade immediately just in case. Thans for the info!</p>
+</li>
+
+<li class="alt" id="comment-433839">
+<cite><a href="http://www.utkusoft.com" class="url" rel="external">Utkusoft</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-433839" title="">August 4th, 2008 at 14:45 (GMT-1)</a> </small>
+<p>I use wp versiyon 2.6.It seems very safe ;)</p>
+</li>
+
+<li id="comment-434545">
+<cite><a href="http://www.passoversite.org" class="url" rel="external">pass over</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-434545" title="">August 8th, 2008 at 18:06 (GMT-1)</a> </small>
+<p>nice article, gonna try it ;)</p>
+</li>
+
+<li class="alt" id="comment-464940">
+<cite><a href="http://barrang.com.au/" class="url" rel="external">linux consultant</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-464940" title="">January 10th, 2009 at 04:56 (GMT-1)</a> </small>
+<p>google and wordpress are getting better at stopping these crackers. the worst ones are where everyhting seems normal to you, but to google, there are 100 links to spam sites. wordpress are making it easier to upgrade, and google will attempt to notify you if they detect any malicious ocde.</p>
+</li>
+
+<li id="comment-465918">
+<cite><a href="http://www.bauer-power.net" class="url" rel="external">Paul Bauer</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-465918" title="">January 16th, 2009 at 00:37 (GMT-1)</a> </small>
+<p>Wow that sucks. Glad to know you were able to close the security hole though.</p>
+</li>
+
+<li class="alt" id="comment-471840">
+<cite><a href="http://www.msamir.net" class="url" rel="external">linux administrator</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-471840" title="">February 10th, 2009 at 02:49 (GMT-1)</a> </small>
+<p>It is normal to find such this attacker. i think you must give care for the www apache server and also about the injections technice</p>
+</li>
+
+<li id="comment-490280">
+<cite><a href="http://maulanariezky.info/" class="url" rel="external">Riezky Maulana</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-490280" title="">October 21st, 2009 at 13:17 (GMT-1)</a> </small>
+<p>WordPress is new update available, in version 2.8.5 more security issue fixed&hellip;</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/thomas.jpg" title="Photograph of author Thomas Watson Steen" alt="Photograph of author Thomas Watson Steen"></p><p>Working the web since 1995, Thomas Watson Steen is a web standards and usability expert. He is a partner in the company '3dbyggeri danmark', a new IT start-up in Denmark specializing in consulting and IT services to the construction sector.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

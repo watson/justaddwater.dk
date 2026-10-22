@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Maven on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/maven/</link>
+		<description>Recent content in Maven on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 20 Jan 2012 22:37:59 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/maven/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Maven mirrorOf * in settings.xml breaks the build</title>
+				<link>https://justaddwater.dk/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/</link>
+				<pubDate>Fri, 20 Jan 2012 22:37:59 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/</guid>
+				<description>&lt;p&gt;In our maven3 pom.xml files for a particular project, we have defined a reference to an internal Nexus repository. Since we are behind a firewall, the Nexus repository also has to be mirror of the outside world. I discovered that this &lt;strong&gt;generic &amp;lt;mirrorOf&amp;gt; from my settings.xml is actually evil&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;!-- settings.xml --&amp;gt;&#xA;&amp;lt;mirrors&amp;gt;&#xA;  &amp;lt;mirror&amp;gt;&#xA;    &amp;lt;id&amp;gt;insideFirewallRepo&amp;lt;/id&amp;gt;&#xA;    &amp;lt;mirrorOf&amp;gt;*&amp;lt;/mirrorOf&amp;gt;&#xA;    &amp;lt;name&amp;gt;Mirror of the world outside.&amp;lt;/name&amp;gt;&#xA;    &amp;lt;url&amp;gt;http://nexus_url/nexus/content/groups/public/&amp;lt;/url&amp;gt;&#xA;  &amp;lt;/mirror&amp;gt;&#xA;&amp;lt;/mirrors&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The reason for this being evil was our project pom files which had the following references&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

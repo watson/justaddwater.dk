@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textmate Snippet: Convert HTML entities for viewing code · justaddwater.dk</title>
+<meta name="description" content="Happy New Year everybody. Here is a tiny Textmate or E-Texteditor Snippet: Convert HTML entities for viewing code. I created this recently for a HTML cookbook …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/12/21/map-with-positions-in-css/" rel="prev">Usability of Map With Positions in CSS</a></div>
+<div class="alignright"><a href="/2008/01/01/avoid-innovation-the-word-use-better-words-instead/" rel="next">Avoid Innovation (The Word) — Use Better Words Instead</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-01-01"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Software"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Happy New Year everybody. Here is a tiny Textmate or E-Texteditor Snippet: Convert HTML entities for viewing code. I created this recently for a HTML cookbook on a project, where we made HTML pages showing HTML example code. It converts &amp; to &amp; &lt; to &lt; &gt; to &gt; That’s it. Basically, I made a [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 1"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="5"></span>
+<h2 data-pagefind-meta="title">Textmate Snippet: Convert HTML entities for viewing code</h2>
+<div class="entry">
+<p>Happy New Year everybody. Here is a tiny Textmate or E-Texteditor Snippet: Convert HTML entities for viewing code. I created this recently for a HTML cookbook on a project, where we made HTML pages showing HTML example code. It converts</p>
+<ul>
+<li>&amp; to &amp;amp;</li>
+<li>&lt; to &amp;lt;</li>
+<li>&gt; to &amp;gt;</li>
+</ul>
+<p><a href="/wp-content/uploads/2007/12/e-texteditor-bundle-editor-convert-html-entities.png" title="e-texteditor-bundle-editor-convert-html-entities.png"><img src="/wp-content/uploads/2007/12/e-texteditor-bundle-editor-convert-html-entities-thumb.png" alt="e-texteditor-bundle-editor-convert-html-entities-thumb.png" width="445" height="399">
+</a></p>
+<p>That&rsquo;s it. Basically, I made a copy of one of the more complex snippets and simplified it. Recently, it has been a real time-saver for me despite it&rsquo;s simplicity.</p>
+<p>In text here is the snippet:</p>
+<p>Save:<br>
+Nothing</p>
+<p>Environment:<br>
+Cygwin (generic)</p>
+<p>Input:<br>
+[Selected Text] or [Document]</p>
+<p>Output:<br>
+Replace Selected Text</p>
+<p>Activation:<br>
+[Key Equivalent] Ctrl-Shift-6</p>
+<p>Scope Selector:<br>
+text.html</p>
+<p>Code:<br>
+#!/usr/bin/env ruby
+# By Jesper Rønn-Jensen, 2007-12-19 (Last update: 2007-12-19)
+# escape &amp;,&lt;,&gt; to show in HTML pages
+$KCODE = ‘U’</p>
+<pre><code>$char_to_entity = { }
+File.open(&amp;quot;#{ENV[&amp;#039;TM_BUNDLE_SUPPORT&amp;#039;]}/entities.txt&amp;quot;).read.scan(/^(\d+)\t(.+)$/) do |key, value|
+  $char_to_entity[[key.to_i].pack(&amp;#039;U&amp;#039;)] = value
+end
+
+def encode (text)
+  text.gsub(/[&amp;lt;&amp;gt;&amp;amp;]/) do |ch|
+    ent = $char_to_entity[ch]
+    ent ? &amp;quot;&amp;amp;#{ent};&amp;quot; : sprintf(&amp;quot;%02X;&amp;quot;, ch.unpack(&amp;quot;U&amp;quot;)[0])
+  end
+end
+
+print encode(STDIN.read)
+</code></pre>
+<p>The blog software messes up single/double quotes, so here is a link to the raw snippet file which I put in <code>/Bundles/HTML.tmbundle/Commands</code>. <small>On my E-texteditor/Windows install that is <code>C:\Documents and Settings\[username]\Application Data\e</code><br>
+<code>\Bundles\HTML.tmbundle\Commands . </code></small></p>
+<p><strong>Here it is for you to download:</strong><br>
+<a href="/wp-content/uploads/2007/12/entities-convert-html-for-html-output.tmCommand" title="entities-convert-html-for-html-output.tmCommand">entities-convert-html-for-html-output.tmCommand</a><br>
+(last update: 2007-01-01)</p>
+<p>I was very close to modify it further to wrap selection in &lt;pre&gt;&lt;/pre&gt; element, (because I always use the code that way). But decided not to: It&rsquo;s only a keyboard shortcut more to wrap the selection:</p>
+<p>Alt-Shift-W: Wrap selection in Open/Close Tag</p>
+<p>PS. The editor usually messes up on some of the escaped HTML characters. Please refer to the attached file for the correct version. And please let me know if you find errors in the markup.</p>
+
+
+<p><small>Technorati Tags: e-texteditor, <a href="/tag/textmate/" rel="tag">textmate</a>, bundle, snippet, command, convert, <a href="/tag/html/" rel="tag">html</a>, entities</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, January 1st, 2008 at 12:44 (GMT-1) and is filed under <a href="/category/software/" rel="category tag">Software</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">5 Responses to &#8220;Textmate Snippet: Convert HTML entities for viewing code&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-387104">
+<cite><a href="http://arjaneising.nl" class="url" rel="external">Arjan</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-387104" title="">January 1st, 2008 at 21:51 (GMT-1)</a> </small>
+<p>Nice, so basically it does the same as any server-side HTML stripping function, but then in your HTML editor? Weird that this isn&rsquo;t a standard feature within an HTML editor&hellip;</p>
+<p>By the way, it is better to wrap code in both a <code>pre</code> and <code>code</code> element, like this: <code>&lt;pre&gt;&lt;code&gt;[the code]&lt;/code&gt;&lt;/pre&gt;</code>. In the next version of HTML, HTML5, there will e an element named <code>blockcode</code> to do this job. There are also small JavaScripts that can syntaxhighlight the code, if you use a <code>class</code>-name to indicate the language.</p>
+
+</li>
+
+<li id="comment-387236">
+<cite>Geoff</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-387236" title="">January 2nd, 2008 at 19:18 (GMT-1)</a> </small>
+<p>@Arjan Like TextMate, the e application basically provides you with a the editor (along with a few basic services); most of the power and flexibility comes from the bundles, which you can (as this command illustrates) customize to your heart&rsquo;s content.</p>
+</li>
+
+<li class="alt" id="comment-432158">
+<cite>Katu</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-432158" title="">July 25th, 2008 at 22:37 (GMT-1)</a> </small>
+<p>Great blog love the kid Facepalming in your Logo! I am gonna post this site over programminghelp.com. Thanks man!</p>
+</li>
+
+<li id="comment-435233">
+<cite>Trevor</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-435233" title="">August 12th, 2008 at 23:10 (GMT-1)</a> </small>
+<p>Where do I get entities.txt? It&rsquo;s required by the code, but I don&rsquo;t have it.</p>
+</li>
+
+<li class="alt" id="comment-492953">
+<cite><a href="http://supergeekery.com" class="url" rel="external">John</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-492953" title="">February 17th, 2010 at 23:31 (GMT-1)</a> </small>
+<p>I&rsquo;m new at TextMate, but this command sounds perfect. I&rsquo;m having the same issue as Trevor. I get the error:</p>
+<p>/tmp/temp_textmate.Ife6jm:6:in `initialize&rsquo;: No such file or directory – /entities.txt (Errno::ENOENT)<br>
+from /tmp/temp_textmate.Ife6jm:6:in `open&rsquo;<br>
+from /tmp/temp_textmate.Ife6jm:6</p>
+<p>It seems to want a file called &ldquo;entities.txt&rdquo;.</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

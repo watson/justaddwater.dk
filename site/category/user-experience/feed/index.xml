@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>User Experience on Just Add Water</title>
+		<link>https://justaddwater.dk/category/user-experience/</link>
+		<description>Recent content in User Experience on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 04 Feb 2010 22:56:23 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/user-experience/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Mac Harddisk Upgrade Usability Improvements</title>
+				<link>https://justaddwater.dk/2010/02/04/mac-harddisk-upgrade-usability-improvements/</link>
+				<pubDate>Thu, 04 Feb 2010 22:56:23 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/02/04/mac-harddisk-upgrade-usability-improvements/</guid>
+				<description>&lt;p&gt;Blogging for the first time in a long time from my wife&amp;rsquo;s computer, because I&amp;rsquo;m installing my brand new Intel SSD hard drive in my macbook.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/02/intel_160gb_ssd.jpg&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2010/02/intel_160gb_ssd-150x150.jpg&#34; alt=&#34;intel_160gb_ssd&#34; title=&#34;intel_160gb_ssd&#34; class=&#34;aligncenter size-thumbnail wp-image-1265&#34; height=&#34;150&#34; width=&#34;150&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2010/02/intel_160gb_ssd-150x150.jpg 150w, https://justaddwater.dk/wp-content/uploads/2010/02/intel_160gb_ssd.jpg 550w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Oddly enough I ran into a few things during the install process that I think Apple could improve in their interface. (using Snow Leopard)&lt;/p&gt;&#xA;&lt;h2 id=&#34;apple-should-recognize-a-new-unformatted-disk-inserted-and-show-an-install-guide&#34;&gt;Apple should recognize a new unformatted disk inserted and show an install guide&lt;/h2&gt;&#xA;&lt;p&gt;I took out the old disk, inserted the new one, and booted the machine. After 1-2 minutes of nothing, a big folder with a questionmark appeared in the middle of the screen &amp;ndash; blinking. No helpful text (no text at all). Just one big blinking questionmark on top of a folder.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Sell More: Add Next Steps To Your Status Messages</title>
+				<link>https://justaddwater.dk/2009/09/21/sell-more-add-next-steps-to-your-status-messages/</link>
+				<pubDate>Mon, 21 Sep 2009 23:02:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/21/sell-more-add-next-steps-to-your-status-messages/</guid>
+				<description>&lt;p&gt;Sometimes, when doing web development, we forget that not everybody are as familiar with the web jargon as ourselves.&lt;/p&gt;&#xA;&lt;p&gt;This example from Pixum (internet photo developer) shows a good detail:&lt;/p&gt;&#xA;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2009/09/pixum-status-message-with-shopping-cart-affordance-crop1.png&#34; alt=&#34;pixum-status-message-with-shopping-cart-affordance-crop&#34; title=&#34;pixum-status-message-with-shopping-cart-affordance-crop&#34; class=&#34;aligncenter size-full wp-image-1149&#34; height=&#34;210&#34; width=&#34;443&#34;&gt;&#xA;&#xA;&lt;div style=&#34;text-align: center;&#34;&gt;&#xA;&lt;p&gt;The status message from Pixum gives immediate feedback that makes it easy to go to next step&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Note that the status message contains a link to the shopping basket to provide easy way to purchase. This design decision will probably decrease number of abandoned shopping carts.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Comments working again</title>
+				<link>https://justaddwater.dk/2009/06/14/comments-working-again/</link>
+				<pubDate>Sun, 14 Jun 2009 17:06:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/06/14/comments-working-again/</guid>
+				<description>&lt;p&gt;Thanks to one of our dear readers we just discovered a bug in our commenting system that basically meant that you could not leave a comment on any of our posts. This has now been fixed and you can now again tell us your thoughts.&lt;/p&gt;&#xA;&lt;p&gt;Of cause we should have noticed, since the amount of spam had dropped to zero. But now that we are receiving thousands of spam comments once again we know that everything is ok ;)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>I can&#39;t get an AdSense account</title>
+				<link>https://justaddwater.dk/2009/05/16/i-cant-get-an-adsense-account/</link>
+				<pubDate>Sat, 16 May 2009 16:31:18 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/05/16/i-cant-get-an-adsense-account/</guid>
+				<description>&lt;p&gt;This is one of the most dissatisfying customer experiences I&amp;rsquo;ve had in a long, long time.&lt;/p&gt;&#xA;&lt;div style=&#34;text-align: center;&#34;&gt;&#xA;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2009/05/picture-6.png&#34; alt=&#34;Google AdSense logo&#34; title=&#34;Google AdSense logo&#34; class=&#34;size-full wp-image-1070 aligncenter&#34; height=&#34;88&#34; width=&#34;345&#34;&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;I&amp;rsquo;m managing a website for a customer and they want to have the AdSense program running on their site. Piece of cake I thought&amp;hellip; First off I created a new AdSense account for the domain with my customers contact information and linked it to my own Google Account. I used my own Google Account because I didn&amp;rsquo;t wanted to bother my customer with the technical setup e-mails I expected to arrive. So my thought was to transfer the AdSense account to him at a later stage. BIG MISTAKE! That&amp;rsquo;s not possible.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ten Principles Of Google User Experience</title>
+				<link>https://justaddwater.dk/2008/06/26/ten-principles-of-google-user-experience/</link>
+				<pubDate>Thu, 26 Jun 2008 09:57:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/06/26/ten-principles-of-google-user-experience/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/2008/02/15/how-i-keep-informed-without-my-rss-reader-killing-me/&#34; title=&#34;Justaddwater.dk: How I keep Informed Without My RSS Reader Killing Me  (Feb 15)&#34;&gt;Jungle drums&lt;/a&gt; pointed me to the &lt;a href=&#34;http://www.google.com/intl/en/corporate/ux.html&#34;&gt;brilliant usability principles posted by Google&lt;/a&gt;. I decided to quote them below here, because it would be interesting to see what changes will be applied over time.&lt;/p&gt;&#xA;&lt;p&gt;Furthermore, the principles are really, really good and deserve attention. I like that there is room for performance specific measurements (&amp;ldquo;every millisecond counts&amp;rdquo;) because long response times drive people nuts. I&amp;rsquo;m also glad they put in &amp;ldquo;Engage beginners and attract experts&amp;rdquo;: Discoverablility and progressive disclosure are important principles that can help ensure simplicity in the interface so the novice users are not frightened by too many options.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Dilemma -- Updated Numbers or Long Response Times</title>
+				<link>https://justaddwater.dk/2008/01/11/dilemma-updated-numbers-or-long-response-times/</link>
+				<pubDate>Fri, 11 Jan 2008 13:05:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/11/dilemma-updated-numbers-or-long-response-times/</guid>
+				<description>&lt;p&gt;Paypal showed me this splash screen when logging in:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/01/paypal-account-unsync-notice.png&#34; title=&#34;paypal-account-unsync-notice.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/01/paypal-account-unsync-notice-thumb.png&#34; alt=&#34;paypal-account-unsync-notice-thumb.png&#34; width=&#34;391&#34; height=&#34;275&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I think this is a useful design pattern that can be valuable to most of our clients dealing with time-sensitive data.&lt;/p&gt;&#xA;&lt;p&gt;It is time-consuming for an application to check if there are new payments on every request. This check is better off being uncoupled from the actual user request. Then, the check should be handled backend by a cron job or similar every second, minute, hour or whatever suits the data in the system.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Undo — Not Confirmation — End of Discussion</title>
+				<link>https://justaddwater.dk/2007/09/27/undo-not-confirmation-end-of-discussion/</link>
+				<pubDate>Thu, 27 Sep 2007 09:19:36 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/27/undo-not-confirmation-end-of-discussion/</guid>
+				<description>&lt;p&gt;Asa Raskin has made a really useful example of how to implement undo easily in user interfaces. Here&amp;rsquo;s the example file (linked directly to a page at his company Humanized). Try deleting some items and then press undo.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://humanized.com/weblog/images/resources/undo/todo.html&#34;&gt;Embedded content: http://humanized.com/weblog/images/resources/undo/todo.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Note how there is no confirmation when you delete and the items can come back pressing undo.&lt;/p&gt;&#xA;&lt;p&gt;I really like this approach, and have long been pushing for a similar approach in projects I have worked with recently.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>DVD Harddisk Recorder Makes My Thumbs Hurt</title>
+				<link>https://justaddwater.dk/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/</link>
+				<pubDate>Mon, 03 Sep 2007 11:46:10 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/</guid>
+				<description>&lt;p&gt;Last week our old DVD player stopped working, and we decided it was time for a technological quantum leap.&lt;/p&gt;&#xA;&lt;img src=&#34;http://www.amitech.dk/includes/images/54736.jpg&#34; alt=&#34;Amitech 736&#34; title=&#34;Amitech 736&#34; height=&#34;167&#34; width=&#34;250&#34;&gt;&#xA;&#xA;&lt;p&gt;So I ordered this DVD/harddisk recorder: &lt;a href=&#34;http://www.amitech.dk/includes/webprodukt/hifi2/harddiskRecorder/index736.asp&#34;&gt;Amitech 736&lt;/a&gt; with all the right buzzword features:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;DVD player/recorder&lt;/li&gt;&#xA;&lt;li&gt;Built-in harddisk (I ordered the 250GB version)&lt;/li&gt;&#xA;&lt;li&gt;Digital tuner as a supplement to the analog tuner (better quality of recordings)&lt;/li&gt;&#xA;&lt;li&gt;One touch recording of programs&lt;/li&gt;&#xA;&lt;li&gt;Timer controlled programs&lt;/li&gt;&#xA;&lt;li&gt;Good looking&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;features-vs-user-experience&#34;&gt;Features vs user experience&lt;/h2&gt;&#xA;&lt;p&gt;While the feature list was just what we needed, I wanted to put it in context with how it&amp;rsquo;s used in our home. The DVD is primarily for my 3 year old son Victor, so he can watch Bob the Builder, Koala Brothers, Postman Pat, Noddy, Curious George, etc., and occasionally cartoons recorded from morning television.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Crop or Resize Alternative: Stretch Your Images</title>
+				<link>https://justaddwater.dk/2007/08/27/crop-or-resize-alternative-stretch-your-images/</link>
+				<pubDate>Mon, 27 Aug 2007 23:09:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/08/27/crop-or-resize-alternative-stretch-your-images/</guid>
+				<description>&lt;p&gt;This video by Dr. Ariel Shamir from Siggraph 2007 demonstates an alternative to traditional cropping vs. resizing of images. As images on web pages target many different screen sizes, this alternative describes a way to measure the least significan lines in a photo and &amp;ldquo;stretch&amp;rdquo; images along these lines.&lt;/p&gt;&#xA;&lt;p&gt;What an interesting video. It will probably take quite a few years before this can be achieved by web browsers. I&amp;rsquo;m thinking that it will probably require an entire new image format to describe images that the browser can stretch.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Netbank Log Off When Navigating on Page</title>
+				<link>https://justaddwater.dk/2007/08/14/netbank-log-off-when-navigating-on-page/</link>
+				<pubDate>Tue, 14 Aug 2007 12:14:51 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/08/14/netbank-log-off-when-navigating-on-page/</guid>
+				<description>&lt;p&gt;I just realized that the netbank I use logs me off when I request a page which the bank defined as &amp;ldquo;outside the netbank&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;In my case I was at the net bank page watching my account. I pressed &amp;ldquo;search&amp;rdquo; to search for how to find the IBAN/BIC/SWIFT code for international transfer of money.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;This action was enough for the netbank software to get insulted, and it immediately slammed the door behind me and logged me off.&lt;/strong&gt; (The screenshot says &amp;ldquo;Log on&amp;rdquo; in top left corner).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Passifying Active Users: Register Required Upfront</title>
+				<link>https://justaddwater.dk/2007/07/26/passifying-active-users-register-required-upfront/</link>
+				<pubDate>Thu, 26 Jul 2007 00:01:14 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/07/26/passifying-active-users-register-required-upfront/</guid>
+				<description>&lt;p&gt;A colleague of mine &amp;amp;mdash; and I don&amp;rsquo;t consider him lazy &amp;amp;mdash; told me today, that he would refrain from participating in a product forum because he had to register as a user. In his opinion, it was &lt;a href=&#34;http://www.axialis.net/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=4;t=000352&#34;&gt;an interesting debate&lt;/a&gt; of a product missing an essential feature. An employee from the company had already promised that the feature be in the next version, but another question was coming up &amp;amp;mdash; when would the next release be?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Reboot Conversation: Past, Present, Future of Interaction Design</title>
+				<link>https://justaddwater.dk/2007/06/01/reboot-conversation-past-present-future-of-interaction-design/</link>
+				<pubDate>Fri, 01 Jun 2007 19:26:35 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/01/reboot-conversation-past-present-future-of-interaction-design/</guid>
+				<description>&lt;p&gt;Reboot was very good this year, and after meeting people like Mathias Müller-Prove (works with user experience on &lt;a href=&#34;http://openoffice.org&#34;&gt;OpenOffice&lt;/a&gt; and &lt;a href=&#34;http://www.reboot.dk/artefact-1993-en.html&#34; title=&#34;Reboot presentation: A duel between desktop and web applications&#34;&gt;did another presentation&lt;/a&gt;), Matthew (works in &lt;a href=&#34;http://allpeers.com/&#34;&gt;AllPeers&lt;/a&gt; &amp;amp;mdash; a company that does an interestning firefox plugin, that I unfortunately never got a demo of).&lt;/p&gt;&#xA;&lt;p&gt;This inspired me to have a conversation about &amp;ldquo;&lt;a href=&#34;http://www.reboot.dk/artefact-2617-en.html&#34; title=&#34;Reboot conversation: The humane interface&#34;&gt;the humane interface&lt;/a&gt;&amp;rdquo;&amp;hellip; In the light of Jef Raskin&amp;rsquo;s book The Humane Interface to discuss the past, present and future of interaction design, human computer interaction and related stuff.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>AJAX and Web2.0 User Experience Bad For Traffic Counts</title>
+				<link>https://justaddwater.dk/2007/04/23/ajax-and-web20-user-experience-bad-for-traffic-counts/</link>
+				<pubDate>Mon, 23 Apr 2007 22:24:41 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/23/ajax-and-web20-user-experience-bad-for-traffic-counts/</guid>
+				<description>&lt;p&gt;Back in December I read somewhere that MySpace had taken over the position as the most visited website from Yahoo.&lt;/p&gt;&#xA;&lt;p&gt;The sheer numbers of pageviews and visitors were gigantic, in November, Comscore reported:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;News Corp.&amp;rsquo;s MySpace recorded 38.7 billion U.S. page views last month, compared with 38.1 billion for Yahoo, according to comScore Media Metrix. MySpace&amp;rsquo;s growth was 2% over October and triple the 12.5 billion recorded in November 2005.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Does Sony think their customers are morons?</title>
+				<link>https://justaddwater.dk/2007/04/16/does-sony-think-their-customers-are-morons/</link>
+				<pubDate>Mon, 16 Apr 2007 14:33:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/16/does-sony-think-their-customers-are-morons/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;I&amp;rsquo;m not pirating music or films, and I will gladly pay huge sums of money to huge world-wide record companies and film studios. But if they insist on protecting their publications with DRM, I will in turn insist only to pay half the price at the shop counter in return for less accessible content.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;It is no secret that DRM, or &lt;a href=&#34;http://en.wikipedia.org/wiki/Digital_Rights_Management&#34; title=&#34;Wikipedia: Digital Rights Management&#34;&gt;Digital Rights Management&lt;/a&gt;, have been used widely throughout the DVD and CD publishing world for some years now. DRM is not a technology in its own, but rather an umbrella-term used to cover the various technologies that exist, intended to prevent illegal copying of DVDs and CDs.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Bad Usability Calendar 2007 in Danish</title>
+				<link>https://justaddwater.dk/2007/02/09/bad-usability-calendar-2007-in-danish/</link>
+				<pubDate>Fri, 09 Feb 2007 10:48:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/09/bad-usability-calendar-2007-in-danish/</guid>
+				<description>&lt;p&gt;Thomas Baekdal and I have translated and are now publishing Bad Usability Calendar 2007 in Danish.&lt;/p&gt;&#xA;&lt;p&gt;I can highly recommend using this calendar in projects as wallpaper. But good luck on using it for actual planning.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/bad-usability-calendar-2007-danish-dk-screenshot.jpg&#34; alt=&#34;Screenshot of Danish Bad Usability Calendar (dårlig brugervenlighed kalender 2007)&#34; width=&#34;488&#34; height=&#34;170&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;This year&amp;rsquo;s version contains advice regarding AJAX, overwhelming use of graphics, advertising, and much more.&lt;/p&gt;&#xA;&lt;h3 id=&#34;download-bad-usability-calendar-2007&#34;&gt;Download Bad Usability Calendar 2007&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://iallenkelhet.no/nedlast/bad_usability_calendar_07_english_A3.pdf&#34;&gt;English&lt;/a&gt; &lt;small&gt;(560KB PDF)&lt;/small&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.iallenkelhet.no/nedlast/bad_usability_calendar_07_norsk_A3.pdf&#34;&gt;Norwegian&lt;/a&gt; &lt;small&gt;(1.2 MB PDF)&lt;/small&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/bad_usability_calendar_07-da-opt.pdf&#34; title=&#34;Download Bad Usability Calendar (Danish version)&#34;&gt;Danish&lt;/a&gt; &lt;small&gt;(3.3 MB PDF)&lt;/small&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Related articles:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Bad Usability Calendar 2007 Finally Ready</title>
+				<link>https://justaddwater.dk/2007/01/27/bad-usability-calendar-2007-finally-ready/</link>
+				<pubDate>Sat, 27 Jan 2007 09:57:31 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/01/27/bad-usability-calendar-2007-finally-ready/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;ve been waiting for this with excitement: Eidar and the rest of NetLife Research in Norway have finally &lt;a href=&#34;http://www.iallenkelhet.no/bad-usability-calendar-2007-is-here&#34;&gt;released the 2007 version of Bad Usability Calendar&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Direct download: &lt;a href=&#34;http://iallenkelhet.no/nedlast/bad_usability_calendar_07_english_A3.pdf&#34;&gt;Bad Usability Calendar 2007&lt;/a&gt; (1.2 MB PDF)&lt;/p&gt;&#xA;&lt;p&gt;Very nice to see that the calendar actually is released under a Creative Commons license, so you can translate it into you native language as long as you keep the reference to NetLife Research.&lt;/p&gt;&#xA;&lt;p&gt;Related posts:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2006/10/16/bad-usability-calendar/&#34; title=&#34;Permanent Link: Bad Usability Calendar&#34;&gt;Bad Usability Calendar&lt;/a&gt; (2006)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/2006/11/10/bad-usability-calendar-2007-open-for-proposals/&#34; title=&#34;Permanent Link: Bad Usability Calendar 2007 open for proposals&#34;&gt;Bad Usability Calendar 2007 open for proposals&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability: Our Most Popular Content</title>
+				<link>https://justaddwater.dk/2006/12/07/blog-usability-our-most-popular-content/</link>
+				<pubDate>Thu, 07 Dec 2006 14:00:33 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/12/07/blog-usability-our-most-popular-content/</guid>
+				<description>&lt;p&gt;At Justaddwater, we&amp;rsquo;re introducing a new category: &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/category/best-of-justaddwater/&#34;&gt;Best of Justaddwater&lt;/a&gt;&amp;rdquo;. Alexander, the Chief Happiness Officer, came up with a &lt;a href=&#34;http://positivesharing.com/2006/12/my-favorites/&#34;&gt;&amp;ldquo;best of&amp;rdquo;-category&lt;/a&gt;, that I think any blog could benefit from. Absolutely a brilliant idea.&lt;/p&gt;&#xA;&lt;p&gt;At the moment, we want this to completely replace our experiment with a wordpress plugin for measuring popular posts. (&lt;a href=&#34;http://alexking.org/projects/wordpress/popularity-contest&#34;&gt;Popularity Contest&lt;/a&gt; has a number of bugs that skew the popularity numbers for us). The manual work required for estimating what content is popular is OK with us, as long as it gives a better user experience for you, dear reader.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Paradox of Choice — Barry Schwartz Video</title>
+				<link>https://justaddwater.dk/2006/11/24/paradox-of-choice-barry-schwartz-video/</link>
+				<pubDate>Fri, 24 Nov 2006 14:12:20 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/11/24/paradox-of-choice-barry-schwartz-video/</guid>
+				<description>&lt;p&gt;The most influential talk I have heard this year is &lt;a href=&#34;http://www.swarthmore.edu/SocSci/bschwar1/&#34;&gt;Barry Schwartz&lt;/a&gt; on the paradox of choice. I cannot recommend this talk enough, so I was thrilled to see that Barry did a similar talk that&amp;rsquo;s available on Google Video.&lt;/p&gt;&#xA;&lt;p&gt;Google TechTalks April 27, 2006 Barry Schwartz &lt;a href=&#34;http://video.google.com/videoplay?docid=6127548813950043200&#34;&gt;Paradox of Choice&lt;/a&gt; (one hour video). If you&amp;rsquo;re in a hurry, you can skip the first 3 minutes to where his talk begins.&lt;/p&gt;&#xA;&lt;p&gt;The content of his talk has really influenced my daily work in many ways. Especially because his points are directly translated to choices in user interfaces and how too many choices affects user experience.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>88% never use personalization</title>
+				<link>https://justaddwater.dk/2006/11/13/88-never-use-personalization/</link>
+				<pubDate>Mon, 13 Nov 2006 17:17:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/11/13/88-never-use-personalization/</guid>
+				<description>&lt;p&gt;I conducted a little research today on our intranet. We have a links list that can be personalized to your preference.&lt;/p&gt;&#xA;&lt;p&gt;It turns out that 88% never use it. Of 4,264 users, only 524 people have edited their links list. That&amp;rsquo;s 12% that uses (or at least have used it at some point).&lt;/p&gt;&#xA;&lt;p&gt;I am no exception to the majority. Why should I add a link to my personalized list? The only fair reason is to bookmark an intranet page that&amp;rsquo;s hard to find.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Bad Usability Calendar 2007 open for proposals</title>
+				<link>https://justaddwater.dk/2006/11/10/bad-usability-calendar-2007-open-for-proposals/</link>
+				<pubDate>Fri, 10 Nov 2006 09:37:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/11/10/bad-usability-calendar-2007-open-for-proposals/</guid>
+				<description>&lt;p&gt;Our Norwegian friends at Netlife Research have opened for suggestions to next years Bad Usability Calendar. I already used the &lt;a href=&#34;https://justaddwater.dk/2006/10/16/bad-usability-calendar/&#34; title=&#34;Justaddwater.dk: Bad Usability Calendar 2006&#34;&gt;2006 calendar with great impact&lt;/a&gt; in my professional engagements, and I&amp;rsquo;m really looking forward to next year&amp;rsquo;s version.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;To make a calendar for 2007 that has the same level of unusual unusefulness, we would like your feedback.&lt;/p&gt;&#xA;&lt;p&gt;Give us your best examples of bad usability!&lt;/p&gt;&#xA;&lt;p&gt;The best idea will get an honourable mention, as well as a numbered limited edition of the 2007 Bad Usability Calendar. All suggestions that make the final cut will get a prize.&lt;/p&gt;&#xA;&lt;p&gt;If you need inspiration, check out the Bad Usability Calendars for &lt;a href=&#34;http://www.netliferesearch.com/files/kalender_netlife_V3_mai2005.jpg&#34;&gt;2005&lt;/a&gt;(jpg), and &lt;a href=&#34;http://www.netliferesearch.com/files/kalender_2006_eng_A3.pdf&#34;&gt;2006&lt;/a&gt; (pdf). Thank you in advance for all your help.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Bad Usability Calendar</title>
+				<link>https://justaddwater.dk/2006/10/16/bad-usability-calendar/</link>
+				<pubDate>Mon, 16 Oct 2006 10:07:44 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/16/bad-usability-calendar/</guid>
+				<description>&lt;p&gt;Perfect wallpaper for any project room. The Bad Usability Calendar from Norwegian company &lt;a href=&#34;http://www.netliferesearch.com/&#34;&gt;Netlife Research&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At UI 11 last week I was fortunate to meet Eidar (&lt;a href=&#34;http://flickr.com/photos/jesper/267203608/&#34;&gt;photo&lt;/a&gt;) from Netlife Research. His usability firm made a Bad Usability Calendar, which is absolutely fantastic. I&amp;rsquo;m putting the link here directly, as their pages are in Norwegian.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Bad Usability Calendar 2006 (&lt;a href=&#34;http://www.netliferesearch.com/files/kalender_2006_eng_A3.pdf&#34;&gt;Direct link, English version, 886 kb PDF&lt;/a&gt;)&lt;/strong&gt;, &lt;small&gt;[&lt;a href=&#34;http://www.netliferesearch.com/article.php?articleID=170&#34;&gt;link to page&lt;/a&gt;]&lt;/small&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/10/screenshot-bad-usability-calendar1.png&#34; alt=&#34;Bad usability calendar 2006 screenshot&#34; width=&#34;400&#34; height=&#34;268&#34;&gt;&#xA;&lt;br&gt;&#xA;They also did a &lt;a href=&#34;http://www.netliferesearch.com/article.php?articleID=138&#34;&gt;similar calender for 2005&lt;/a&gt;, but unfortunately only in Norwegian.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mobile Web Best Practices</title>
+				<link>https://justaddwater.dk/2006/06/28/mobile-web-best-practices/</link>
+				<pubDate>Wed, 28 Jun 2006 10:13:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/28/mobile-web-best-practices/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3C&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/w3c_home.png&#34; alt=&#34;W3C Icon&#34; title=&#34;W3C Icon&#34; align=&#34;left&#34; style=&#34;margin: 5px 8px 0pt 0pt&#34; width=&#34;72&#34; height=&#34;48&#34;&gt;&#xA;&lt;/a&gt;Yesterday the W3C released a Candidate Recommendation document called &amp;ldquo;&lt;a href=&#34;http://www.w3.org/TR/2006/CR-mobile-bp-20060627/&#34; title=&#34;W3C: Mobile Web Best Practices 1.0&#34;&gt;Mobile Web Best Practices 1.0&lt;/a&gt;&amp;rdquo;. With this document W3C is offering a set of guidelines to help web developers deliver a better user experience to mobile users.&lt;/p&gt;&#xA;&lt;p&gt;The deadline for providing feedback to W3C is the 27th of August 2006 and all developers are encouraged to try it out.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Ten reaffirmations from London @media 2006</title>
+				<link>https://justaddwater.dk/2006/06/25/ten-reaffirmations-from-london-media-2006/</link>
+				<pubDate>Sun, 25 Jun 2006 00:56:13 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/25/ten-reaffirmations-from-london-media-2006/</guid>
+				<description>&lt;p&gt;Hi, this is Luis Villa, Thomas and Jesper&amp;rsquo;s former colleague at Capgemini Spain. They couldn&amp;rsquo;t make it to @media in London last week, so they asked me to give a summary of the event.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.vivabit.com/atmedia2006/&#34;&gt;London @media 2006&lt;/a&gt; was a Conference about &lt;em&gt;frontend&lt;/em&gt; and web user interface in all its dimensions: strategy, design and building and after attending the &lt;a href=&#34;http://www.w3.org/2006/03/TP2006-participants.html&#34;&gt;W3C Technical Plenary at Cannes&lt;/a&gt; — more technical — it was the chance to see &lt;a href=&#34;http://www.vivabit.com/atmedia2006/speakers/&#34;&gt;other people&lt;/a&gt; that have most influenced the user experience on the web and talking with them. Really, it felt like a rock concert full of fans.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Definition of User Experience Revisited</title>
+				<link>https://justaddwater.dk/2006/06/21/user-experience-revisited/</link>
+				<pubDate>Wed, 21 Jun 2006 14:43:08 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/21/user-experience-revisited/</guid>
+				<description>&lt;p&gt;Since last time I wrote on the &lt;a href=&#34;https://justaddwater.dk/2006/01/15/user-experience-clear-and-easy-to-use-definition-needed/&#34; title=&#34;Justaddwater.dk: User Experience. Clear and easy-to-use definition needed&#34;&gt;various definitions of user experience&lt;/a&gt;, Bryce Glass, Mike Kuniavsky and Thomas Baekdal have made excellent points on the subject of providing a single, clear understandable definition of user experience.&lt;/p&gt;&#xA;&lt;p&gt;Also, I attended Jesse James Garrett&amp;rsquo;s seminar (&amp;quot;&lt;a href=&#34;http://www.adaptivepath.com/events/2006/may3/&#34; title=&#34;Adaptive Path event: Defining the user experience&#34;&gt;defining the user experience&lt;/a&gt;&amp;quot; - &lt;a href=&#34;https://justaddwater.dk/2006/05/31/user-experience-notes/&#34; title=&#34;Justaddwater.dk: Elements of User Experience, my notes&#34;&gt;my notes&lt;/a&gt;) last month, and got a better understanding of how Jesse&amp;rsquo;s original thoughts on user experience were defined.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

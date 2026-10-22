@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Business Case on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/business-case/</link>
+		<description>Recent content in Business Case on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 12 Mar 2010 11:20:55 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/business-case/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Why WebStandards Matter</title>
+				<link>https://justaddwater.dk/2010/03/12/1291/</link>
+				<pubDate>Fri, 12 Mar 2010 11:20:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/03/12/1291/</guid>
+				<description>&lt;p&gt;I just revisited &amp;ldquo;Why Web Standards Matter (Case Study)&amp;rdquo;, that I wrote on the background of a customer problem back in 2006. The points are actually relevant event with the more recent and faster browser versions that we have today.&lt;/p&gt;&#xA;&lt;p&gt;I did a small change to express my opinion better. Changed &amp;ldquo;JavaScript should generally be avoided&amp;rdquo; to &amp;ldquo;Don&amp;rsquo;t use JavaScript for general page layout rendering&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Here is the modified advice from the article:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>XML on Just Add Water</title>
+		<link>https://justaddwater.dk/category/xml/</link>
+		<description>Recent content in XML on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 10 Apr 2006 18:01:25 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/xml/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>XMLHttpRequest soon becoming W3C standard</title>
+				<link>https://justaddwater.dk/2006/04/10/xmlhttprequest-soon-becoming-w3c-standard/</link>
+				<pubDate>Mon, 10 Apr 2006 18:01:25 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/10/xmlhttprequest-soon-becoming-w3c-standard/</guid>
+				<description>&lt;p&gt;I just found out (&lt;a href=&#34;http://borkweb.com/story/xmlhttprequest-object-w3c-working-draft&#34; title=&#34;BorkWeb: XMLHttpRequest Object W3C Working Draft&#34;&gt;via BorkWeb&lt;/a&gt;) that the W3C is looking to standardizing the XMLHttpRequest object which is the foundation for all AJAX based applications.&lt;/p&gt;&#xA;&lt;p&gt;Today this object is implemented by all the major browsers. But because there is no standard dictating how this object should behave, the implementations are a bid different. That in turn means that web-developers the world over have to deal with browser compatibility issues (and we all remember to good old days of web-development in the 90&amp;rsquo;s right?).&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

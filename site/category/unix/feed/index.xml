@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Unix on Just Add Water</title>
+		<link>https://justaddwater.dk/category/unix/</link>
+		<description>Recent content in Unix on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 17 Jun 2008 14:54:11 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/unix/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Find Occurences of Text String in Files</title>
+				<link>https://justaddwater.dk/2008/06/17/find-occurences-of-text-string-in-files/</link>
+				<pubDate>Tue, 17 Jun 2008 14:54:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/06/17/find-occurences-of-text-string-in-files/</guid>
+				<description>&lt;p&gt;I had to search for occurences of string in particular files, and using Cygwin i did the following:&lt;/p&gt;&#xA;&lt;p&gt;find all files that ends on .js, .html or .ascx:&lt;br&gt;&#xA;&lt;code&gt;$ find -regextype posix-extended -regex &amp;quot;.+\.(js|html?|ascx)$&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Then search for lines that contain the following javascript construction &lt;code&gt;for( var x in object)&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;I ended up with this regular expression to match the javascript: &lt;code&gt;/for\s?\(.+?\bin\b.+?\)/&lt;/code&gt;. Although not strictly necessary, i test for word-boundaries around &lt;code&gt;&amp;quot;in&amp;quot;&lt;/code&gt; &amp;ndash; it would be sufficient just to use spaces like this &lt;code&gt;&amp;quot; in &amp;quot;&lt;/code&gt;. For grep to eat this its pack with parameters that show filename (-H), line number (-n), only matching part of line (-o), and use Pearl compatible regexps (-P):&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

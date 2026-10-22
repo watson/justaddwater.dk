@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>JavaScript on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/javascript/</link>
+		<description>Recent content in JavaScript on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 14 Jun 2012 11:42:53 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/javascript/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Count number of jobs in Hudson</title>
+				<link>https://justaddwater.dk/2012/06/14/count-number-of-jobs-in-hudson/</link>
+				<pubDate>Thu, 14 Jun 2012 11:42:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/06/14/count-number-of-jobs-in-hudson/</guid>
+				<description>&lt;p&gt;I wanted to count the number of jobs running on a Hudson server (continuous integration) at work.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;This javascript counts the number of lines in the table with all jobs:&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;document.getElementById(&amp;ldquo;projectstatus&amp;rdquo;).children[0].children.length&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Or save this as a browser toolbar bookmarklet:&lt;/p&gt;&#xA;&lt;p&gt;Name: #HudsonJobs&lt;br&gt;&#xA; javascript:(function(e){alert(document.getElementById(&amp;ldquo;projectstatus&amp;rdquo;).children[0].children.length);e.preventDefault()})()&lt;/p&gt;&#xA;&lt;p&gt;This line finds the table with id=&amp;ldquo;projectstatus&amp;rdquo;, and counts the TR elements inside of it&amp;rsquo;s TBODY.&lt;/p&gt;&#xA;&lt;p&gt;At work it said 445 lines, including the table header.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Which means that this hudson server has configured 444 jobs.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Introducing Tiny JavaScript Number Formatter</title>
+				<link>https://justaddwater.dk/2008/08/18/introducing-tiny-javascript-number-formatter/</link>
+				<pubDate>Mon, 18 Aug 2008 10:50:25 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/08/18/introducing-tiny-javascript-number-formatter/</guid>
+				<description>&lt;p&gt;For a current project, I created a tiny number formatter that inserts thousand delimiters in a string:&lt;/p&gt;&#xA;&lt;p&gt;10000 to 10,000 etc.&lt;/p&gt;&#xA;&lt;p&gt;Just add css class=&amp;ldquo;numberformat currency&amp;rdquo; to a text field, and it will be formatted automatically.&lt;/p&gt;&#xA;&lt;p&gt;It is based on the &lt;a href=&#34;http://prototypejs.org&#34;&gt;Prototype JavaScript library&lt;/a&gt;. You can get it from it&amp;rsquo;s GitHub repository page. Feel free to add or alter the functionality. Releasing under Creative Commons license.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://creativecommons.org/licenses/by-sa/3.0/&#34;&gt;&lt;img src=&#34;http://i.creativecommons.org/l/by-sa/3.0/88x31.png&#34; alt=&#34;Creative Commons License&#34;&gt;&#xA;&lt;/a&gt;&lt;br&gt;&#xA;This work is licensed under a &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/3.0/&#34;&gt;Creative Commons Attribution-Share Alike 3.0 Unported License&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Adding Deprecation Warning in JavaScript Console</title>
+				<link>https://justaddwater.dk/2008/07/17/adding-deprecation-warning-in-javascript-console/</link>
+				<pubDate>Thu, 17 Jul 2008 13:10:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/07/17/adding-deprecation-warning-in-javascript-console/</guid>
+				<description>&lt;p&gt;I used this quick trick today to help me clean up and refactor some javascript functions today:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;if (&amp;quot;console&amp;quot; in window)&#xA;  console.warn(&#39;DEPRECATED function call to &#39;+ arguments.callee&#xA;  +&#39;\nCalled by:\n&#39;+ arguments.callee.caller );&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Which results in a fine deprecation warning in the console:&lt;br&gt;&#xA;&lt;a href=&#34;http://justaddwater.dk/wp-content/uploads/2008/07/firebug-javascript-caller-callee-debugger-warning.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/07/firebug-javascript-caller-callee-debugger-warning.png&#34; alt=&#34;&#34; title=&#34;firebug-javascript-caller-callee-debugger-warning&#34; class=&#34;alignnone size-full wp-image-941&#34; height=&#34;249&#34; width=&#34;500&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;There is plenty of space for improvement here. Feel free to use or tamper &amp;hellip; but please post any alternative suggestions here as a comment.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Firefox Tip For Framebuster JavaScript</title>
+				<link>https://justaddwater.dk/2007/10/22/firefox-tip-for-framebuster-javascript/</link>
+				<pubDate>Mon, 22 Oct 2007 13:30:06 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/10/22/firefox-tip-for-framebuster-javascript/</guid>
+				<description>&lt;p&gt;I have for long been struggling with an internal legacy application that wraps the content page in a frameset. Very annoying because I have spent some time to reverse engineer a poor-mans API to the application.&lt;/p&gt;&#xA;&lt;p&gt;Problem: An inline &amp;ldquo;reverse&amp;rdquo; framebuster script that makes sure that everything is nicely(?) wrapped in the frameset. As you see it&amp;rsquo;s included inline in the HTML.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Language&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Javascript&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;application_url&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;parent&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;frames&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;parent&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;frames&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;FrameMain&amp;#39;&lt;/span&gt;) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      document.&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;replace&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    document.&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;replace&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;/script&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;One thing is I never understood the thing about putting everything in a frameset. In this case, I have not been able to change the code. But as I have to use the application every now and then, the big question is:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Speaking on Just Add Water</title>
+		<link>https://justaddwater.dk/category/speaking/</link>
+		<description>Recent content in Speaking on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 28 May 2008 21:31:26 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/speaking/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Public Danish Data REST Interface</title>
+				<link>https://justaddwater.dk/2008/05/28/public-danish-data-rest-interface/</link>
+				<pubDate>Wed, 28 May 2008 21:31:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/05/28/public-danish-data-rest-interface/</guid>
+				<description>&lt;p&gt;Christian Dalager and I did an internal Capgemini SmartLunch presentation about REST interfaces in the public Danish sector. REST interface is great news for those in favor of easy-to-integrate, scalable SOA interfaces, and REST services is actually used more than SOAP, XMLRPC, etc. in companies offering multiple interfaces to their data (Amazon, Yahoo, Google, Ebay, Microsoft and more).&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://en.itst.dk/hd_logo_en_191_89.gif&#34; alt=&#34;Danish National IT and Telecom Agency logo&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The Danish National IT and Telecom Agency has published some really useful data as a REST interface (although they haven&amp;rsquo;t committed themselves yet to make the service permanent). The published data is a complete dataset for Denmark which includes:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf Europe 2007 Recap</title>
+				<link>https://justaddwater.dk/2007/09/22/railsconf-europe-2007-recap/</link>
+				<pubDate>Sat, 22 Sep 2007 02:12:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/22/railsconf-europe-2007-recap/</guid>
+				<description>&lt;p&gt;I wanted this post to be named &amp;ldquo;Usability Lessons from RailsConf Europe 2007&amp;rdquo; — but realized that only some what I want to write below is about usability.&lt;/p&gt;&#xA;&lt;p&gt;So RailsConf Europe this year is over, and there are a few things i want to highlight from a conference that in general was a smash hit.&lt;/p&gt;&#xA;&lt;h3 id=&#34;usability-and-prototyping-fits-agile-development-style&#34;&gt;Usability and prototyping fits agile development style&lt;/h3&gt;&#xA;&lt;p&gt;Dave Thomas&amp;rsquo; keynote had a great section about art and the work of great artists. Michaelangelo and DaVinci usually worked with prototypes — paper prototypes — that allowed them to iterate fast and wild. Thomas wanted the audience to work in that way too. What a coincidence that we have been using prototyping as a key methodology at work, and for the last year and half with Ruby on rails.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Busy Preparing RailsConf Presentation</title>
+				<link>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</link>
+				<pubDate>Tue, 11 Sep 2007 14:31:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</guid>
+				<description>&lt;p&gt;For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.&lt;/p&gt;&#xA;&lt;img src=&#34;http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg&#34; alt=&#34;Railsconf speaker 2007&#34; height=&#34;125&#34; width=&#34;125&#34;&gt;&#xA;&#xA;&lt;p&gt;At the presentation we will introduce a Ruby on Rails plugin that can create the foundation for a local Rails app based on forms scraped from a remote application. In our case, an internal application used for timereporting in Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;My head is too ful of all the details in the presentation but fact is, that we&amp;rsquo;re running two trials on the presentation this Thursday the 13th in our Capgemini office in Copenhagen, Denmark.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Videos: Innovation and User Interface Developments</title>
+				<link>https://justaddwater.dk/2007/08/11/videos-innovation-and-user-interface-developments/</link>
+				<pubDate>Sat, 11 Aug 2007 20:12:47 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/08/11/videos-innovation-and-user-interface-developments/</guid>
+				<description>&lt;p&gt;Two very interesting videos about Google&lt;/p&gt;&#xA;&lt;p&gt;The new innovative improvements to Google Maps&amp;hellip; View the &lt;a href=&#34;http://maps.google.com/help/maps/directions/index.html&#34;&gt;demo video&lt;/a&gt; (it&amp;rsquo;s just a few minutes):Via &lt;a href=&#34;http://www.jacobhage.dk/2007/08/02/google-maps-rykker-igen-igen/&#34;&gt;Jacob Hage&amp;rsquo;s blog&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;My favorite is the drag-and-drop replanning of routes. Danish competitors are lightyears behind here&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;If you have not seen it: Check out Douglas Merril (CIO at Google) talk about innovation at Google. I have embedded video here below.&lt;/p&gt;&#xA;&lt;p&gt;He is a very entertaining speaker. Seems like he has given this talk many times&amp;hellip;&lt;br&gt;&#xA;What are your favorite quotes?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf Talk Accepted: Prototyping, Hacking Enterprise Legacy Applications</title>
+				<link>https://justaddwater.dk/2007/06/08/railsconf-talk-accepted-prototyping-hacking-enterprise-legacy-applications/</link>
+				<pubDate>Fri, 08 Jun 2007 19:52:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/08/railsconf-talk-accepted-prototyping-hacking-enterprise-legacy-applications/</guid>
+				<description>&lt;p&gt;Woohoo. I got a response from O&amp;rsquo;Reilly that my talk for RailsConf in Berlin is accepted. I will be presenting with my colleague &lt;a href=&#34;http://www.upperbound.net/upperbound/show/HomePage&#34;&gt;Mads Buus&lt;/a&gt;, who&amp;rsquo;s also active in our &lt;a href=&#34;http://copenhagenrb.dk/&#34;&gt;Copenhagen Ruby user group&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/06/railsconf-2007-berlin-logo.png&#34; alt=&#34;railsconf-2007-berlin-logo.png&#34; width=&#34;566&#34; height=&#34;76&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Here is the talk proposal:&lt;/p&gt;&#xA;&lt;p&gt;Title: &lt;strong&gt;Screenscraping as a tool for changing the (legacy) world&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Conference: RailsConf Europe 2007&lt;br&gt;&#xA;Type/Duration: 45 Minute Conference Session&lt;br&gt;&#xA;Audience Level: Intermediate&lt;br&gt;&#xA;Audience Type: web developers, programmers&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Description Short:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Tired of your existing corporate legacy application? Show them you can do better! Learn how to make your own Rails version of a website with ugly UI, bad user feedback, no API.&lt;/p&gt;&#xA;&lt;p&gt;Use these tools and techniques to build your own, better, user interface on top of an old legacy backend.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Reboot Conversation: Past, Present, Future of Interaction Design</title>
+				<link>https://justaddwater.dk/2007/06/01/reboot-conversation-past-present-future-of-interaction-design/</link>
+				<pubDate>Fri, 01 Jun 2007 19:26:35 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/01/reboot-conversation-past-present-future-of-interaction-design/</guid>
+				<description>&lt;p&gt;Reboot was very good this year, and after meeting people like Mathias Müller-Prove (works with user experience on &lt;a href=&#34;http://openoffice.org&#34;&gt;OpenOffice&lt;/a&gt; and &lt;a href=&#34;http://www.reboot.dk/artefact-1993-en.html&#34; title=&#34;Reboot presentation: A duel between desktop and web applications&#34;&gt;did another presentation&lt;/a&gt;), Matthew (works in &lt;a href=&#34;http://allpeers.com/&#34;&gt;AllPeers&lt;/a&gt; &amp;amp;mdash; a company that does an interestning firefox plugin, that I unfortunately never got a demo of).&lt;/p&gt;&#xA;&lt;p&gt;This inspired me to have a conversation about &amp;ldquo;&lt;a href=&#34;http://www.reboot.dk/artefact-2617-en.html&#34; title=&#34;Reboot conversation: The humane interface&#34;&gt;the humane interface&lt;/a&gt;&amp;rdquo;&amp;hellip; In the light of Jef Raskin&amp;rsquo;s book The Humane Interface to discuss the past, present and future of interaction design, human computer interaction and related stuff.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Why AJAX Failed (Then Succeeded)</title>
+				<link>https://justaddwater.dk/2007/01/31/why-ajax-failed-then-succeeded/</link>
+				<pubDate>Wed, 31 Jan 2007 14:28:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/01/31/why-ajax-failed-then-succeeded/</guid>
+				<description>&lt;p&gt;E-Week has notes from &amp;ldquo;Google&amp;rsquo;s Bosworth&amp;rdquo; (which must be &lt;a href=&#34;http://en.wikipedia.org/wiki/Adam_Bosworth&#34;&gt;Adam Bosworth&lt;/a&gt;, formerly employed at Microsoft and working on the IE4 team).&lt;/p&gt;&#xA;&lt;p&gt;Below some notable quotes on AJAX. I really like his style a lot. Also, I can recommend &lt;a href=&#34;http://www.itconversations.com/shows/detail571.html&#34; title=&#34;ITConversations: Adam Bosworth -&amp;lt;br&amp;gt;&#xA;Database Requirements in the Age of Scalable Services&#34;&gt;his talk from 2005 on high performance systems&lt;/a&gt; (via IT conversations), where he mentions that one Google blog has experienced up to 120,000 hits per second.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf presentation notes</title>
+				<link>https://justaddwater.dk/2006/09/14/railsconf-presentation-notes/</link>
+				<pubDate>Thu, 14 Sep 2006 13:22:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/14/railsconf-presentation-notes/</guid>
+				<description>&lt;p&gt;Just a short note that I just published my first notes from the RailsConf keynote presentations. RailsConf ends tomorrow, Friday, and I expect that more notes will show up on our Rails related website: copenhagen.rb&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://copenhagenrb.dk/2006/9/14/railsconf-europe-session-overviews&#34;&gt;Copenhagenrb.dk: Railsconf Europe Session overview&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Presentation for corporate weblogging event</title>
+				<link>https://justaddwater.dk/2006/06/13/weblog-event/</link>
+				<pubDate>Tue, 13 Jun 2006 07:30:08 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/13/weblog-event/</guid>
+				<description>&lt;p&gt;This morning we&amp;rsquo;re speaking in about corporate weblogs in Copenhagen, Denmark. It’s hosted by the &lt;a href=&#34;http://www.itb.dk/site.asp?p=51&#34;&gt;Danish IT Industry Association&lt;/a&gt;, and We’ll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;The presentation is in Danish. More info on previous blog post &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/&#34; title=&#34;Permanent Link: Speaking on Corporate Weblogging event&#34;&gt;Speaking on Corporate Weblogging event&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Powerpoint version: &lt;a href=&#34;https://justaddwater.dk/wp-content/pres_2006-06-13_blogging.ppt&#34; title=&#34;Capgemini justaddwater.dk blogging 2006-06-13, 2.1MB Powerpoint presentation&#34;&gt;Capgemini og Justaddwater.dk&lt;/a&gt; (2.1MB)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>reboot8 roundup</title>
+				<link>https://justaddwater.dk/2006/06/06/reboot8-roundup/</link>
+				<pubDate>Tue, 06 Jun 2006 15:27:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/06/reboot8-roundup/</guid>
+				<description>&lt;p&gt;Last weeks &lt;a href=&#34;http://reboot.dk&#34;&gt;reboot8&lt;/a&gt; conference in Copenhagen is over, and it&amp;rsquo;s time to get back to work. There were some very good talks but it&amp;rsquo;s the audience that makes reboot a special event. The highlights of my reboot were the talks from &lt;a href=&#34;http://www.benhammersley.com/Ben/Talks.html&#34;&gt;Ben Hammersley&lt;/a&gt;, &lt;a href=&#34;http://blog.jjg.net&#34;&gt;Jesse James Garret&lt;/a&gt;, &lt;a href=&#34;http://doc.weblogs.com/whoIsDoc&#34;&gt;Doc Searls&lt;/a&gt; and &lt;a href=&#34;http://adactio.com/articles/1132/&#34;&gt;Jeremy Keith&lt;/a&gt; (who was asked by &lt;a href=&#34;http://www.w3.org/People/howcome/&#34;&gt;Håkan Wium Lie&lt;/a&gt; if there was anything he&amp;rsquo;d like him to add to the HTML A element).&lt;/p&gt;&#xA;&lt;h3 id=&#34;my-presentation-on-rapid-prototyping&#34;&gt;My presentation on rapid prototyping&lt;/h3&gt;&#xA;&lt;p&gt;For weeks I had been looking forward to presenting &lt;a href=&#34;https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/&#34;&gt;my talk on rapid prototyping&lt;/a&gt; and do a demo of an application we did in Capgemini. It went fairly well. No technical flaws, I also got a little extra time so there was time for questions.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My Talk at Reboot8: Prototyping</title>
+				<link>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</link>
+				<pubDate>Thu, 01 Jun 2006 11:27:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</guid>
+				<description>&lt;p&gt;Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.&lt;/p&gt;&#xA;&lt;p&gt;Topic: Prototype driven development with Ruby on Rails, and demo of the application we made at Capgemini with the Danish public Agency of Companies and Commerce.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Presentation&lt;/strong&gt; (Powerpoint format) for download here:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt&#34;&gt;Prototype driven development with Ruby on Rails: Powerpoint version (1.11 MB)&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Reboot8 Program Finally Ready</title>
+				<link>https://justaddwater.dk/2006/05/30/reboot8-program/</link>
+				<pubDate>Tue, 30 May 2006 00:22:48 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/30/reboot8-program/</guid>
+				<description>&lt;p&gt;[updated with Friday program]&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been very curious with respect to the conference program for reboot8 next week. Especially because &lt;a href=&#34;https://justaddwater.dk/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/&#34; title=&#34;Justaddwater.dk: speaking at reboot8 about Rails and rapid prototyping&#34;&gt;I&amp;rsquo;ll be giving a short talk&lt;/a&gt; there.&lt;/p&gt;&#xA;&lt;p&gt;I see from the &lt;a href=&#34;http://reboot.dk/wiki/Program&#34; title=&#34;Reboot: program &#34;&gt;Program page&lt;/a&gt; that now there &lt;strong&gt;is a program available&lt;/strong&gt; for &lt;del&gt;Thursday at least&lt;/del&gt; &lt;ins&gt;the entire conference&lt;/ins&gt;. I just mailed Thomas Madsen-Mygdal to ask if the other half of the program is on the way. Also, it seems like &lt;a href=&#34;http://binarybonsai.com/archives/2006/04/27/reboot-80-google-calendar/&#34; title=&#34;Binary Bonsai: reboot 8 google calendar&#34;&gt;Michael Heliemanns Google Calendar&lt;/a&gt; is not yet updated with the schedule (at least not in my Google Calendar).&lt;br&gt;&#xA;I&amp;rsquo;ll be speaking in the &amp;ldquo;demos&amp;rdquo; section somewhere between 16.45 and 17.30.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Speaking on Corporate Weblogging event</title>
+				<link>https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/</link>
+				<pubDate>Mon, 15 May 2006 10:14:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/</guid>
+				<description>&lt;p&gt;June 13, Thomas and I are invited to speak at an event about corporate weblogs in Copenhagen, Denmark. It&amp;rsquo;s hosted by the &lt;a href=&#34;http://www.itb.dk/site.asp?p=51&#34;&gt;Danish IT Industry Association&lt;/a&gt;, and We&amp;rsquo;ll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini. Also, there will be a chance to hear &lt;a href=&#34;http://bootstrapping.net/&#34;&gt;Thomas Madsen-Mygdal&lt;/a&gt;, &lt;a href=&#34;http://asynkron.dk&#34;&gt;Andreas Johannsen&lt;/a&gt; and the CEO of Sun, Denmark Peter Rindsig (&lt;a href=&#34;http://www.google.com/search?hl=en&amp;amp;q=%22peter+rindsig%22+blog&#34;&gt;who hasn&amp;rsquo;t got a blog&lt;/a&gt;).&lt;br&gt;&#xA;If you want to attend the event, you can find more details (in Danish) in &lt;a href=&#34;http://www.itb.dk/site.asp?p=853&amp;amp;aid=47&#34; title=&#34;ITB.dk kalender: corporate weblogs&#34;&gt;the program&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Speaking at reboot8 about Rails and rapid prototyping</title>
+				<link>https://justaddwater.dk/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/</link>
+				<pubDate>Thu, 11 May 2006 13:08:29 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/</guid>
+				<description>&lt;p&gt;I&amp;rsquo;m thrilled to announce that I&amp;rsquo;ll be giving a brief talk at &lt;a href=&#34;http://reboot.dk/&#34; title=&#34;reboot8.0 June 1-2 2006, Copenhagen, Denmark&#34;&gt;reboot8.0&lt;br&gt;&#xA;&lt;/a&gt;about Rails and rapid prototyping. This is in Copenhagen, Denmark on June 1 or 2.&lt;br&gt;&#xA;&lt;a href=&#34;http://bootstrapping.net/&#34; title=&#34;Bootstrapping.net: Thomas Madsen-Mygdal&#39;s blog&#34;&gt;Thomas Madsen-Mygdal&lt;/a&gt; (of reboot) looked for short demos of web applications, which is what I&amp;rsquo;ll do:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;reboot is this year gonna be showcasing 15-20 5 minute demos. Demos of new products, opensource projects, standardization projects, art, movements, etc. People doing interesting things with the Internet in Europe in the most simple core sense.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Speaking on usability and rapid prototyping</title>
+				<link>https://justaddwater.dk/2006/05/10/speaking-on-usability-and-rapid-prototyping/</link>
+				<pubDate>Wed, 10 May 2006 11:50:33 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/10/speaking-on-usability-and-rapid-prototyping/</guid>
+				<description>&lt;p&gt;For those of you in Denmark in the Copenhagen area.&lt;/p&gt;&#xA;&lt;p&gt;May 19 I&amp;rsquo;m speaking about rapid prototyping to make usability testing earlier and more often. The focus will be on the benefits and the business value user testing creates early in the process, so at this event, there&amp;rsquo;s really no focus on &lt;a href=&#34;https://justaddwater.dk/2006/04/12/rails-prototyping/&#34; title=&#34;justaddwater.dk: Ruby on Rails as rapid prototyping tool&#34;&gt;Ruby on Rails as the prototyping tool&lt;/a&gt; (but you can refer to my earlier post about that).&lt;br&gt;&#xA;From Snitker &amp;amp; Co&amp;rsquo;s newsletter that is sent out today: (in Danish)&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Automation on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/automation/</link>
+		<description>Recent content in Automation on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 23 Jan 2012 15:00:53 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/automation/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Batch Screenshots with webkit2png</title>
+				<link>https://justaddwater.dk/2012/01/23/batch-screenshots-with-webkit2png/</link>
+				<pubDate>Mon, 23 Jan 2012 15:00:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/01/23/batch-screenshots-with-webkit2png/</guid>
+				<description>&lt;p&gt;For projects I sometimes have lots of screenshots which I have to repeat whenever I change subtle things in the CSS or HTML.&lt;/p&gt;&#xA;&lt;p&gt;I ended up creating this little handy script based on webkit2png (download source)&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env sh&#xA;HOST=&amp;#34;http://localhost:8080/myproject/viewer&amp;#34;&#xA;/usr/bin/python webkit2png -F -o &amp;#34;01dashboard&amp;#34; $HOST/dashboard&#xA;/usr/bin/python webkit2png -F -o &amp;#34;02showdetail&amp;#34; $HOST/detail&#xA;/usr/bin/python webkit2png -F -o &amp;#34;03listpage&amp;#34; $HOST/list&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This created the following 3 files in my directory:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ls -1&#xA;01dashboard.png&#xA;02showdetail.png&#xA;03listpage.png&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Really simple and easy to use.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

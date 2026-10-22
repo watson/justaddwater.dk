@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ui11 on Just Add Water</title>
+		<link>https://justaddwater.dk/category/ui11/</link>
+		<description>Recent content in Ui11 on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 24 Nov 2006 14:12:20 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/ui11/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Paradox of Choice — Barry Schwartz Video</title>
+				<link>https://justaddwater.dk/2006/11/24/paradox-of-choice-barry-schwartz-video/</link>
+				<pubDate>Fri, 24 Nov 2006 14:12:20 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/11/24/paradox-of-choice-barry-schwartz-video/</guid>
+				<description>&lt;p&gt;The most influential talk I have heard this year is &lt;a href=&#34;http://www.swarthmore.edu/SocSci/bschwar1/&#34;&gt;Barry Schwartz&lt;/a&gt; on the paradox of choice. I cannot recommend this talk enough, so I was thrilled to see that Barry did a similar talk that&amp;rsquo;s available on Google Video.&lt;/p&gt;&#xA;&lt;p&gt;Google TechTalks April 27, 2006 Barry Schwartz &lt;a href=&#34;http://video.google.com/videoplay?docid=6127548813950043200&#34;&gt;Paradox of Choice&lt;/a&gt; (one hour video). If you&amp;rsquo;re in a hurry, you can skip the first 3 minutes to where his talk begins.&lt;/p&gt;&#xA;&lt;p&gt;The content of his talk has really influenced my daily work in many ways. Especially because his points are directly translated to choices in user interfaces and how too many choices affects user experience.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: My Higlights from UI11</title>
+				<link>https://justaddwater.dk/2006/10/18/ui-conf-my-higlights-from-ui11/</link>
+				<pubDate>Wed, 18 Oct 2006 17:12:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/18/ui-conf-my-higlights-from-ui11/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://www.uie.com/events/uiconf/2006/&#34;&gt;UI11&lt;/a&gt; is over and I headed back to Denmark to digest the insightful presentations. The conference had many highlights and it was truly inspirational to meet so many bright people.Some highlights are worth mentioning.&lt;/p&gt;&#xA;&lt;h3 id=&#34;fantastic-speakers&#34;&gt;Fantastic speakers&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Meeting Luke Wroblewski&lt;/strong&gt; made me realize there is much to being a successful designer than just graphical design. Most of his presentation was centered around understanding the business logic, processes, analysis of data. Though I&amp;rsquo;m not a graphical designer, that made me realize why I tend to be involved in business analysis when I&amp;rsquo;m on a project.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Josh Porter on recommendation engines</title>
+				<link>https://justaddwater.dk/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/</link>
+				<pubDate>Thu, 12 Oct 2006 22:16:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/</guid>
+				<description>&lt;p&gt;[Jesper&amp;rsquo;s note: It will be interesting to see how this maps to Jakob Nielsen&amp;rsquo;s old ideas about &lt;a href=&#34;http://www.useit.com/alertbox/990905.html&#34;&gt;reputation managers&lt;/a&gt;.]&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/jesper/268008424/&#34; title=&#34;Photo Sharing&#34;&gt;&lt;img src=&#34;http://static.flickr.com/82/268008424_dd9859a898_t.jpg&#34; alt=&#34;Josh Porter presenting&#34; height=&#34;100&#34; width=&#34;67&#34;&gt;&#xA;&lt;/a&gt;&lt;br&gt;&#xA;Netflix example:&lt;/p&gt;&#xA;&lt;p&gt;Wall-Mart went head to head with Netflix and lost. They are now linking to Netflix&lt;/p&gt;&#xA;&lt;p&gt;* 4 million subscribers 10 months ago&lt;br&gt;&#xA;* 60,000 titles, 40,000 of which are rented every day&lt;br&gt;&#xA;* 2/3 of movies rented come from recommendations&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The movies we recommend generate more satisfaction than (new releases)&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Jared Spool</title>
+				<link>https://justaddwater.dk/2006/10/12/ui-conf-jared-spool/</link>
+				<pubDate>Thu, 12 Oct 2006 17:44:46 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/12/ui-conf-jared-spool/</guid>
+				<description>&lt;p&gt;[Jesper&amp;rsquo;s note: There is actually a lot of this that I decided not to jot down. Jared said that his talk is available on Google Video. However, I couldn&amp;rsquo;t find it]&lt;/p&gt;&#xA;&lt;p&gt;Scent of information. Like predator hunting, people hunt for information. The &amp;ldquo;scent&amp;rdquo; users pick up is actually trigger words.&lt;/p&gt;&#xA;&lt;p&gt;Example: A short link from &amp;ldquo;Neutrogena&amp;rdquo; link text &amp;ldquo;SOS&amp;rdquo; which doesn&amp;rsquo;t work. It doesn&amp;rsquo;t contain trigger words.&lt;/p&gt;&#xA;&lt;p&gt;Try to swap the sitemap for the homepage!&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Barry Schwartz, the paradox of choice</title>
+				<link>https://justaddwater.dk/2006/10/12/barry-schwartz-the-paradox-of-choice/</link>
+				<pubDate>Thu, 12 Oct 2006 15:23:51 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/12/barry-schwartz-the-paradox-of-choice/</guid>
+				<description>&lt;p&gt;&lt;em&gt;[Jesper&amp;rsquo;s live notes from UI Conf. Barry Schwartz really has some deep insightful psychological points, that we can actually use in our daily work as usability professionals.&lt;/em&gt;&lt;br&gt;&#xA;&lt;em&gt;His main point is that more choices actually makes choosing harder and sometimes can paralyze people. In contradiction to traditional research, he argues that, the more choices you present people to, the less satisified people will eventually be.]&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Update: I recommend the &lt;a href=&#34;http://lukew.com/ff/entry.asp?419&#34; title=&#34;Luke W: UI11: The Paradox of Choice&#34;&gt;notes from Luke Wroblewski&lt;/a&gt; if you like s short prosa of Barry Schwartz&amp;rsquo; presentation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Luke Wroblewski on Visual Design in the Development Process</title>
+				<link>https://justaddwater.dk/2006/10/11/uiconf-luke-wroblewski-visual-design/</link>
+				<pubDate>Wed, 11 Oct 2006 23:01:59 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/11/uiconf-luke-wroblewski-visual-design/</guid>
+				<description>&lt;p&gt;&lt;em&gt;[Live notes from UI Conf]&lt;/em&gt;&lt;br&gt;&#xA;Luke Wroblewski&lt;br&gt;&#xA;&lt;a href=&#34;http://www.flickr.com/photos/jesper/267101293/&#34; title=&#34;Photo Sharing&#34;&gt;&lt;img src=&#34;http://static.flickr.com/111/267101293_28f7b8b5b0_s.jpg&#34; alt=&#34;Lukew&#34; height=&#34;75&#34; width=&#34;75&#34;&gt;&#xA;&lt;/a&gt;&lt;br&gt;&#xA;Management &amp;ldquo;i hate purple&amp;rdquo; - the visceral side with immediate reaction. look-and-feel level.&lt;/p&gt;&#xA;&lt;p&gt;But there is a deeper Structural, visual side. Structure underlining level.&lt;/p&gt;&#xA;&lt;p&gt;Example: airport map. This example i use over and over again.&lt;br&gt;&#xA;* no airplanes&lt;br&gt;&#xA;* every single color is as saturated as can be&lt;br&gt;&#xA;* small toggle arrows hide important symbol explanation&lt;/p&gt;&#xA;&lt;p&gt;rework:&lt;br&gt;&#xA;* primary purpose: see airplane traffic&lt;br&gt;&#xA;* airport map is background&lt;br&gt;&#xA;* same color map&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Jeff Patton on Agile Development</title>
+				<link>https://justaddwater.dk/2006/10/10/uiconf-jeff-patton-agile-development/</link>
+				<pubDate>Tue, 10 Oct 2006 21:17:16 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/10/uiconf-jeff-patton-agile-development/</guid>
+				<description>&lt;p&gt;&lt;em&gt;[Live notes from UI Conf]&lt;/em&gt;&lt;br&gt;&#xA;My final thoughts: This is a power talk, and the full day tomorrow probably covers it better.&lt;/p&gt;&#xA;&lt;p&gt;Why agile development continues to grow in popularity&lt;/p&gt;&#xA;&lt;p&gt;Rare combination: Companies that are strong both on agile development and user experience.&lt;/p&gt;&#xA;&lt;p&gt;Wrong assumption. Agile is just about finishing something faster&lt;br&gt;&#xA;It isn&amp;rsquo;t just about finishing faster. It&amp;rsquo;s about finishing faster. I&amp;rsquo;ll explain some more about that later.&lt;/p&gt;&#xA;&lt;h3 id=&#34;greedines-short-sightednes-and-blame&#34;&gt;Greedines, short-sightednes and blame&lt;/h3&gt;&#xA;&lt;p&gt;Common things go wrong when projects go wrong.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Gerry McGovern on Search engine optimization</title>
+				<link>https://justaddwater.dk/2006/10/10/uiconf-gerry-mcgovern-seo/</link>
+				<pubDate>Tue, 10 Oct 2006 17:59:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/10/uiconf-gerry-mcgovern-seo/</guid>
+				<description>&lt;p&gt;AOL clicks related to search result position.&lt;/p&gt;&#xA;&lt;p&gt;Important lesson: If you&amp;rsquo;re not in the first ten results you don&amp;rsquo;t exist&lt;br&gt;&#xA;1st on list: 42%&lt;br&gt;&#xA;2nd 12%&lt;br&gt;&#xA;3rd 8%&lt;/p&gt;&#xA;&lt;p&gt;They prefer to get the wrong results quickly rather than to waste time finding the right result.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;North pole:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;More people have been to the North Pole than there have been at search result 5,000&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;(creates a laugh in the room)&lt;/p&gt;&#xA;&lt;h3 id=&#34;on-search-engine-optimization-seo&#34;&gt;On Search Engine Optimization (SEO)&lt;/h3&gt;&#xA;&lt;p&gt;Google banned the BMW website. (because of shady search engine optimization).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: Jeffrey Eisenberg on Top activities of Design &amp; Usability Teams</title>
+				<link>https://justaddwater.dk/2006/10/10/uiconf-jeffrey-eisenberg/</link>
+				<pubDate>Tue, 10 Oct 2006 16:18:37 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/10/uiconf-jeffrey-eisenberg/</guid>
+				<description>&lt;p&gt;From UI 11 Conference, Cambridge, Boston October 10, 2006.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m sitting in on Jeffrey Eisenbergs sample presentation, which is a compressed version of yesterdays all-day talk. He started off with an example from godaddy.com&lt;/p&gt;&#xA;&lt;p&gt;Godaddy spent 5 million this year buying airtime for a superbowl commercial.&lt;br&gt;&#xA;TV commercial: hopefully this &lt;a href=&#34;http://www.godaddy.com/gdshop/superbowl05/landing.asp?se=%2B&#34;&gt;direct link&lt;/a&gt; works. (Otherwise choose &amp;ldquo;superbowl 2006&amp;rdquo; and enter access password to start).&lt;/p&gt;&#xA;&lt;p&gt;* Commercial ends with &amp;ldquo;There is more at godaddy.com&amp;rdquo;&lt;br&gt;&#xA;* 1100% increased traffic on homepage&lt;br&gt;&#xA;* 35% increased sales&lt;br&gt;&#xA;&amp;ldquo;I&amp;rsquo;m not saying this doesn&amp;rsquo;t work, I&amp;rsquo;m just saying there is some money left on the table&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>UI Conf: David Malouf and Bill Scott on AJAX</title>
+				<link>https://justaddwater.dk/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/</link>
+				<pubDate>Mon, 09 Oct 2006 15:40:10 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/</guid>
+				<description>&lt;p&gt;David Malouf and Bill Scott: Designing Powerful Web Apps with Ajax&lt;br&gt;&#xA;&lt;a href=&#34;http://www.flickr.com/photos/jesper/265346636/&#34; title=&#34;Photo Sharing&#34;&gt;&lt;img src=&#34;http://static.flickr.com/79/265346636_c34ea54d3a_m.jpg&#34; alt=&#34;David Malouf and Bill Scott on UI Conf&#34; height=&#34;160&#34; width=&#34;240&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;From UI 11 Conference, Cambridge, Boston October 9, 2006. David&amp;rsquo;s and Bills &lt;a href=&#34;http://billwscott.com/share/presentations/ui11/&#34;&gt;presentation notes available&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Macromedia coined the term &amp;ldquo;Rich Internet Application&amp;rdquo; originally because they wanted to create buzz around Macromedia Flash MX.&lt;/p&gt;&#xA;&lt;p&gt;Usability tests often raise the Q: &amp;ldquo;Why doesn&amp;rsquo;t this work like my windows desktop&amp;rdquo;. So emulation of desktop behaviours.&lt;br&gt;&#xA;* trees&lt;br&gt;&#xA;* panels&lt;br&gt;&#xA;* drag and drop&lt;br&gt;&#xA;* spinner&lt;br&gt;&#xA;* slider&lt;br&gt;&#xA;* form validation&lt;br&gt;&#xA;* context menu&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Attending UI11 Conference next week</title>
+				<link>https://justaddwater.dk/2006/10/03/attending-ui11-conference-next-week/</link>
+				<pubDate>Tue, 03 Oct 2006 13:22:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/03/attending-ui11-conference-next-week/</guid>
+				<description>&lt;p&gt;Update: All notes collected in the category &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/category/eventsseminars/ui11/&#34;&gt;UI11&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Next week I will be in Cambridge, Massachussets attending &lt;a href=&#34;http://www.uie.com/events/uiconf/2006/&#34;&gt;User Interface 11 Conference&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I plan to post my notes here on the blog, but don&amp;rsquo;t expect them to be as extensive as the ones &lt;a href=&#34;http://copenhagenrb.dk/2006/9/14/railsconf-europe-session-overviews&#34; title=&#34;Railsconf notes on copenhagenrb.dk&#34;&gt;I posted from RailsConf&lt;/a&gt;. Maybe more like my notes from &lt;a href=&#34;https://justaddwater.dk/notes-elements-of-user-experience/&#34;&gt;Jesse James Garret&amp;rsquo;s workshop in Copenhagen&lt;/a&gt;. I&amp;rsquo;ll update this post with links to my notes when available.&lt;/p&gt;&#xA;&lt;p&gt;It was a tough dilemma to choose between the various tracks on the conference. Here is my selections:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

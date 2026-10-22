@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Errors on Just Add Water</title>
+		<link>https://justaddwater.dk/category/errors/</link>
+		<description>Recent content in Errors on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 19 Oct 2007 16:02:56 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/errors/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Google Power Tool for Webmasters</title>
+				<link>https://justaddwater.dk/2007/10/19/google-power-tool-for-webmasters/</link>
+				<pubDate>Fri, 19 Oct 2007 16:02:56 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/10/19/google-power-tool-for-webmasters/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/10/tools2.gif&#34; alt=&#34;Google Webmaster Tools logo&#34; style=&#34;margin: 0pt 0pt 1em 1em; float: right&#34;&gt;&#xA;If you run a blog or any other website for that matter, you might want to check out &lt;a href=&#34;http://www.google.com/webmasters/&#34;&gt;Google Webmaster Central&lt;/a&gt; - in particular their &lt;a href=&#34;http://www.google.com/webmasters/tools/&#34;&gt;Google Webmaster Tool&lt;/a&gt; - if you haven&amp;rsquo;t already seen it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Google Webmaster Tool is a great tool for webmasters who want to see and manage how Google crawls their site(s).&lt;/strong&gt; If you have a Google ID you can add all the sites that you control to a dashboard. From here you can see intimate details for each site. After adding justaddwater.dk I found that Google was encountering some HTTP errors when crawling our site. This of cause is very important since other users unfortunately also encounter these errors.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Lenovo Power Supply Almost Caught Fire</title>
+				<link>https://justaddwater.dk/2007/10/08/lenovo-power-supply-almost-caught-fire/</link>
+				<pubDate>Mon, 08 Oct 2007 12:33:00 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/10/08/lenovo-power-supply-almost-caught-fire/</guid>
+				<description>&lt;p&gt;I have mentioned before usability issues of my Lenovo Thinkpad T60p computer. Usability issues is one thing. Another—and potential deadly—thing happened Saturday evening at home. This is what I write to our internal support and expect them to forward.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Saturday evening I put the power plug in the laptop to recharge. I came back to the room (our home office) 10 minutes later and saw the computer not charging. I noticed a high frequent sound and traced it to the power supply, which was incredibly hot, and smelled bad. I immediately unplugged it.&lt;/p&gt;&#xA;&lt;p&gt;I have no exact temperature for the power supply, it felt like holding on a hot cup of coffe. Also the cord itself felt softer than usual because of the hot temperature. I have marked on the cord a mark, where the weight of the power supply pressed a mark into the cord.&lt;/p&gt;&#xA;&lt;p&gt;I am convinced that if I had not seen what happened, the power supply would have set the entire room on fire.&lt;/p&gt;&#xA;&lt;p&gt;For some strange reason, the power supply is working again the day after.&lt;/p&gt;&#xA;&lt;p&gt;Technical details from the power supply and PC&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lenovo AC Adapter 90W 20V rev H&lt;/li&gt;&#xA;&lt;li&gt;Serial number: 11S92P1107Z1ZD2L73W8P6&lt;/li&gt;&#xA;&lt;li&gt;P/N 92P1108&lt;/li&gt;&#xA;&lt;li&gt;PA-1900-08I&lt;/li&gt;&#xA;&lt;li&gt;(used for my Lenovo Thinkpad T60p widescreen type &amp;ldquo;8742-CTO&amp;rdquo;, S/N &amp;ldquo;L3-A8843 07/04&amp;rdquo;, Product id &amp;ldquo;8742Y18&amp;rdquo;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Question for Lenovo:&lt;/p&gt;&#xA;&lt;p&gt;How can you convince me that it&amp;rsquo;s safe to use the power supply and put it back in the wood shelf in my home office?&lt;/p&gt;&#xA;&lt;p&gt;Is this periodical error something that could potentionally happen to the other power supply I use?&lt;/p&gt;&#xA;&lt;p&gt;Thanks in advance for taking time to answer my questions professionally and seriously.&lt;/p&gt;&#xA;&lt;p&gt;/Jesper Rønn-Jensen&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Debugging CSS: My Best Productivity Tip Ever</title>
+				<link>https://justaddwater.dk/2007/04/30/debugging-css-my-best-productivity-tip-ever/</link>
+				<pubDate>Mon, 30 Apr 2007 00:07:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/30/debugging-css-my-best-productivity-tip-ever/</guid>
+				<description>&lt;p&gt;Firebug keeps surprising me. I&amp;rsquo;ve recently been working on code for several web designs and this little trick helped me to understand existing HTML and CSS much faster. Just to give an example I use our Justaddwater RSS feed page (but could be any page).&lt;/p&gt;&#xA;&lt;p&gt;Before you start, &lt;a href=&#34;http://www.getfirebug.com/&#34;&gt;get Firebug&lt;/a&gt; for Firefox (if you haven&amp;rsquo;t got it already).&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Press F12 and the Firebug window appears below in the browser window&lt;/li&gt;&#xA;&lt;li&gt;Start the HTML inspector and mouse over any element, you want to learn about. &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector.png&#34; title=&#34;firebug-css-tip-start-html-inspector.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector-thumb.png&#34; alt=&#34;firebug-css-tip-start-html-inspector-thumb.png&#34; width=&#34;448&#34; height=&#34;332&#34;&gt;&#xA;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Now, you can see the HTML, the hierachy,and the CSS rules. For me it has been very useful, that overridden CSS rules are marked with strikethrough text. That&amp;rsquo;s a very handy information when CSS specificity plays in with a trick or two.&lt;/li&gt;&#xA;&lt;li&gt;Press escape to stop inspector mode, and move mouse down to CSS rules.&lt;/li&gt;&#xA;&lt;li&gt;Mouse over the CSS rules reveal a small icon to toggle the line. See screenshot animation below.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/firebug-css-bugfix-toggle.gif&#34; alt=&#34;firebug-css-bugfix-toggle.gif&#34;&gt;&#xA;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Hillarious Error: &#34;No Error Message Found&#34;</title>
+				<link>https://justaddwater.dk/2007/03/05/hillarious-error-no-error-message-found/</link>
+				<pubDate>Mon, 05 Mar 2007 14:57:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/03/05/hillarious-error-no-error-message-found/</guid>
+				<description>&lt;p&gt;ACD See systems tells me this error message when I follow a link to an invoice.&lt;/p&gt;&#xA;&lt;p&gt;Very funny that there is an error message telling me &amp;ldquo;no error message found&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/03/acdsystems-no-error-message-found.png&#34; title=&#34;acdsystems-no-error-message-found.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/03/acdsystems-no-error-message-found-thumbnail.png&#34; alt=&#34;acdsystems-no-error-message-found-thumbnail.png&#34; width=&#34;382&#34; height=&#34;154&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I purchased an upgrade ACDSee license almost 2 months ago, but this is what happens when I try to follow the link in the invoice.&lt;/p&gt;&#xA;&lt;p&gt;One good thing, however. Very handy for the developers and tech support to have an error codes shown. In this way, error messages are more traceable if an error happens.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Google Mail Downtime</title>
+				<link>https://justaddwater.dk/2007/02/07/google-mail-downtime/</link>
+				<pubDate>Wed, 07 Feb 2007 14:19:13 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/07/google-mail-downtime/</guid>
+				<description>&lt;p&gt;Right now, Google Mail disappeared just as I was about to send an email.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/gmail-service-unavailable.png&#34; alt=&#34;GMail service unavailable (google server down)&#34; width=&#34;448&#34; height=&#34;231&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;And I thought this would never happen!&lt;/p&gt;&#xA;&lt;p&gt;(2 minutes later the service is up and running again)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; Two things happened after going online again.&lt;/p&gt;&#xA;&lt;p&gt;I found out my mail was actually sent before the server went down (so I ended up sending the mail twice)&lt;/p&gt;&#xA;&lt;p&gt;According to the chat window in GMail, I&amp;rsquo;m now logged out. But I can still view, send mail and perform any other action in GMail. See screenshot below.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Why Web Standards Matter (Case Study)</title>
+				<link>https://justaddwater.dk/2006/06/29/webstandards-case-study/</link>
+				<pubDate>Thu, 29 Jun 2006 16:03:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/29/webstandards-case-study/</guid>
+				<description>&lt;p&gt;Project managers often have a hard time understanding web standards and why they matter. In this case, my arguments made a perfect business case for the managers of a particular project.&lt;/p&gt;&#xA;&lt;p&gt;Recently I was called out to debug some javascript code that did not perform. There was really not a big problem in Firefox, but Internet Explorer hung using 20 seconds or more each time the script was activated by the user.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Misleading Error Messages - Litteraly!</title>
+				<link>https://justaddwater.dk/2006/06/20/misleading-error-messages-litteraly/</link>
+				<pubDate>Tue, 20 Jun 2006 11:46:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/20/misleading-error-messages-litteraly/</guid>
+				<description>&lt;p&gt;We all know that giving the user a correct error message is essential. It is important that the message is clearly visible and written in a way so that there is no doubt what the problem is.&lt;/p&gt;&#xA;&lt;p&gt;Today I was updating my profile photo on Technorati (the current one was of the little fellow in the top banner of this site, and the new was the same that I use on this blog).&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

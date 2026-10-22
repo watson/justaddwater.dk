@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forgotten Subversion Commands, Undo, Merge Branches and More · justaddwater.dk</title>
+<meta name="description" content="In a current project I use a lot of Subversion (svn) from the command-line.
+Subversion recently has lost terrain to Git for several reasons. But actually, svn …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2012/06/20/jim-webber-on-qcon-new-york/" rel="prev">Jim Webber on qCon New York</a></div>
+<div class="alignright"><a href="/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/" rel="next">PhantomJS 1.7 build for Linux 64 bit</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2012-06-28"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2012"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="In a current project I use a lot of Subversion (svn) from the command-line. Subversion recently has lost terrain to Git for several reasons. But actually, svn is capable of doing many of the things I love from Git. Here are some less known commands I find extremely helpful. Undo last commit svn merge -r HEAD:PREV . This commands [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jun 28"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">Forgotten Subversion Commands, Undo, Merge Branches and More</h2>
+<div class="entry">
+<p>In a current project I use a lot of Subversion (svn) from the command-line.</p>
+<p>Subversion recently has lost terrain to Git for several reasons. But actually, svn is capable of doing many of the things I love from Git.</p>
+<p>Here are some less known commands I find extremely helpful.</p>
+<p> </p>
+<h3 id="undo-last-commit">Undo last commit</h3>
+<p>svn merge -r HEAD:PREV .</p>
+<p>This commands merges in the changes required to go from latest version (HEAD) and back to the previous (PREV).</p>
+<p>It also makes sense to view latest commit comment, and possibly include the revision number/description in your new commit message.</p>
+<p>svn log &ndash;limit 1</p>
+<p>After this, you should to an <code>svn status</code> and (if you are satisfied with the result), then commit:</p>
+<p>svn commit -m &ldquo;reverted accidentally committed previous version&rdquo;</p>
+<p>More info: <a href="http://stackoverflow.com/questions/747713/subversion-retract-accidental-checkin/747758#747758">http://stackoverflow.com/questions/747713/subversion-retract-accidental-checkin/</a></p>
+<h3 id="view-files-changed-since-last-update">View files changed since last update</h3>
+<p>svn st -u</p>
+<p>The -u flag gives  an overview of <strong>what has been updated on the server.</strong> This is what IDEs like Eclipse and IntelliJ do behind the scenes.</p>
+<p>I have seen much confusion caused when <code>svn log</code> will not show what changed on the server. In case you need more info, then investigate the changes with</p>
+<p>svn log -r BASE:HEAD</p>
+<p>As opposed to <code>svn log</code>, this command actually shows log messages on the server.</p>
+<p>and if you need the list of files changed:</p>
+<p>svn diff -r xxx:HEAD &ndash;summarize</p>
+<p>Where xxx represents the version number of BASE (and you can get it with <code>svn info</code>)</p>
+<p>More info: <a href="http://stackoverflow.com/questions/1444005/displaying-a-list-of-files-that-have-changed-since-last-changeset-in-svn">http://stackoverflow.com/questions/1444005/displaying-a-list-of-files-that-have-changed-since-last-changeset-in-svn</a></p>
+<h3 id="merge-to-branch-from-trunk">Merge to branch from trunk</h3>
+<p>After branching, it&rsquo;s easy to keep up-to-date with changes of the trunk. Just go to the branch, and merge all from trunk, like this:</p>
+<pre tabindex="0"><code>cd branch
+svn merge ^/trunk
+</code></pre><p> </p>
+<p>where as of Subversion 1.6, the  caret &ldquo;^&rdquo; is a handy annotation for the base repository url.</p>
+<p>After this merge, you can just commit the changes with a standard comment that changes have been merge.</p>
+<p> </p>
+<p> </p>
+<h3 id="merge-from-trunk-to-current-branch">Merge from trunk to current branch</h3>
+<p>In this case I want to merge all changes from trunk to a specific branch. (I am doing this daily to keep my branch updated). First step is to find the branch split point:</p>
+<pre tabindex="0"><code>$ svn log --stop-on-copy | tail -n 4
+r1769 | jesper | 2012-05-09 11:07:45 +0200 (Wed, 09 May 2012) | 1 line
+Adding the new branch in subversion
+------------------------------------------------------------------------
+</code></pre><p>So, the revision number is &ldquo;1769&rdquo;, which marks the first split point of the branch.</p>
+<p>We now have a way to target all trunk changes with a higher revision number than &ldquo;1769&rdquo;.</p>
+<p>The merge command is then:</p>
+<pre tabindex="0"><code> svn merge -r 1769:HEAD ^/trunk .
+</code></pre><p> </p>
+<p> </p>
+<p> </p>
+<p>If that matters I am using svn 1.6.</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, June 28th, 2012 at 20:42 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

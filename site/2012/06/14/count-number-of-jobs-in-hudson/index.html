@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Count number of jobs in Hudson · justaddwater.dk</title>
+<meta name="description" content="I wanted to count the number of jobs running on a Hudson server (continuous integration) at work.
+This javascript counts the number of lines in the table with …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2012/02/24/get-started-using-advanced-webfonts-today/" rel="prev">Get started using advanced web fonts today</a></div>
+<div class="alignright"><a href="/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/" rel="next">Mortgage-driven development vs Behaviour-driven development</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2012-06-14"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2012"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Small script to count the number of jobs on a Hudson server — with JavaScript"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jun 14"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">Count number of jobs in Hudson</h2>
+<div class="entry">
+<p>I wanted to count the number of jobs running on a Hudson server (continuous integration) at work.</p>
+<p> </p>
+<p>This javascript counts the number of lines in the table with all jobs:</p>
+<p> </p>
+<p>document.getElementById(&ldquo;projectstatus&rdquo;).children[0].children.length</p>
+<p> </p>
+<p>Or save this as a browser toolbar bookmarklet:</p>
+<p>Name: #HudsonJobs<br>
+ javascript:(function(e){alert(document.getElementById(&ldquo;projectstatus&rdquo;).children[0].children.length);e.preventDefault()})()</p>
+<p>This line finds the table with id=&ldquo;projectstatus&rdquo;, and counts the TR elements inside of it&rsquo;s TBODY.</p>
+<p>At work it said 445 lines, including the table header.</p>
+<p> </p>
+<p>Which means that this hudson server has configured 444 jobs.</p>
+<p> </p>
+<p>That&rsquo;s insane!</p>
+<p> </p>
+<p>How many jobs are on your Hudson servers?</p>
+<p> </p>
+<p>(I am currently relying on the html structure for Hudson version 2.1.2. It may work for other versions as well)</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, June 14th, 2012 at 11:42 (GMT-1) and is filed under <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

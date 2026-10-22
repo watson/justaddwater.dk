@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Git extract folder from project with history and tags · justaddwater.dk</title>
+<meta name="description" content="This is a short note regarding the use of git filter-branch when you want to split a git repository and preserve the history.
+I had some issues in finding the …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2016/08/25/git-tip-to-remove-remote-branches-already-merged/" rel="prev">Git tip to remove remote branches already merged</a></div>
+
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2016-11-02"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2016"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="git"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="`git filter-branch` will extract a folder from a shared repository and rewrite history. This tip shows you by example. And also how to rewrite tags in the new repos."></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Nov 2"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="1"></span>
+<h2 data-pagefind-meta="title">Git extract folder from project with history and tags</h2>
+<div class="entry">
+<p>This is a short note regarding the use of <code>git filter-branch</code> when you want to split a git repository and preserve the history.</p>
+<p>I had some issues in finding the correct parameters. In case this also can help others, you can find the command here.</p>
+<p>In case you are not yet familiar with the possibilities of <code>git filter-branch</code>, I suggest you look into the  <a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#The-Nuclear-Option:-filter-branch">Git book: Rewriting history</a>, which has a good introduction to the command.</p>
+<p>Now, to start you should clone the repository you want to change (since you will completely rewrite history in the new repos).</p>
+<p> </p>
+<p>In short, without further explanation:</p>
+<p>ORIG=path_to_original_repos<br>
+DEST=destination_of_rewritten_repos<br>
+DIR=directory_you_want_to_extract_from_ORIG</p>
+<p>git clone $ORIG $DEST &amp;&amp; \\
+cd $DEST &amp;&amp; \\
+git filter-branch &ndash;prune-empty &ndash;tag-name-filter cat &ndash;subdirectory-filter $DIR &ndash; &ndash;all</p>
+<p>A few notes:</p>
+<ul>
+<li><code>--prune-empty</code> will remove all commits that has no relation to the folder you extract</li>
+<li><code>--tag-name-filter cat</code> will also rewrite any tags you put on the commits that are rewritten</li>
+<li><code>--subdirectory-filter</code> takes a foldername as parameter, but I needed to add <code>-- --all</code> to make it work</li>
+</ul>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Wednesday, November 2nd, 2016 at 20:40 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">One Response to &#8220;Git extract folder from project with history and tags&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-661565">
+<cite>Geert Verschaeve</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-661565" title="">November 19th, 2016 at 08:42 (GMT-1)</a> </small>
+<p>I&rsquo;ve been having problems with Git every I started applying it, especially because a mistake is quickly made. That said, I love how easy it is to undo mistakes. So thanks for the &ldquo;— –all comment&rdquo;, I&rsquo;ve just tested it and to be honest, didn&rsquo;t even know I could split AND preserve the history.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

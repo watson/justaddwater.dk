@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Hudson on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/hudson/</link>
+		<description>Recent content in Hudson on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 14 Jun 2012 11:42:53 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/hudson/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Count number of jobs in Hudson</title>
+				<link>https://justaddwater.dk/2012/06/14/count-number-of-jobs-in-hudson/</link>
+				<pubDate>Thu, 14 Jun 2012 11:42:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/06/14/count-number-of-jobs-in-hudson/</guid>
+				<description>&lt;p&gt;I wanted to count the number of jobs running on a Hudson server (continuous integration) at work.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;This javascript counts the number of lines in the table with all jobs:&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;document.getElementById(&amp;ldquo;projectstatus&amp;rdquo;).children[0].children.length&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Or save this as a browser toolbar bookmarklet:&lt;/p&gt;&#xA;&lt;p&gt;Name: #HudsonJobs&lt;br&gt;&#xA; javascript:(function(e){alert(document.getElementById(&amp;ldquo;projectstatus&amp;rdquo;).children[0].children.length);e.preventDefault()})()&lt;/p&gt;&#xA;&lt;p&gt;This line finds the table with id=&amp;ldquo;projectstatus&amp;rdquo;, and counts the TR elements inside of it&amp;rsquo;s TBODY.&lt;/p&gt;&#xA;&lt;p&gt;At work it said 445 lines, including the table header.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Which means that this hudson server has configured 444 jobs.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Challenges Configuring Hudson Emails</title>
+				<link>https://justaddwater.dk/2011/03/10/challenges-configuring-hudson-emails/</link>
+				<pubDate>Thu, 10 Mar 2011 22:01:03 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/03/10/challenges-configuring-hudson-emails/</guid>
+				<description>&lt;p&gt;My recent Stackoverflow question &lt;a href=&#34;http://stackoverflow.com/questions/5181502/how-to-use-hudson-parameterized-build-values-in-an-email&#34;&gt;How to use Hudson “Parameterized Build” values in an email&lt;/a&gt; earned me the &amp;ldquo;tumbleweed&amp;rdquo; badge because it had almost no views (39 in a week), got no answers and no votes. Therefore I decided to offer 200 of my reputation points for a usable answer.&lt;/p&gt;&#xA;&lt;p&gt;But despite the high bounty of 200 geek points, i doubt that anybody notices it: The question is buried back at fourth page, near the bottom of 193 other bounty questions.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Fixed Strange Hudson Slave OutOfMemoryError</title>
+				<link>https://justaddwater.dk/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/</link>
+				<pubDate>Fri, 12 Nov 2010 11:19:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/</guid>
+				<description>&lt;p&gt;At a current project I am working on, we use Hudson and Maven to build our Java code. Strangely, one of the slaves constantly failed with an OutOfMemory error. We tried two obvious fixes. The first did not work:&lt;/p&gt;&#xA;&lt;p&gt;Not working strategy: To append memory params on the job itself. We modified the job inside Hudson configuration and added &lt;code&gt;-Xmx512m -XX:MaxPermSize=256m&lt;/code&gt; to the MAVEN_OPTS field in the &amp;ldquo;build&amp;rdquo; section of the job configuration.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

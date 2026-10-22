@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IE 7, web standards and CSS support · justaddwater.dk</title>
+<meta name="description" content="The Internet Explorer team is preparing to ship the next major version of the world&rsquo;s most popular browser. The IE team has written an update on which CSS …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2006/08/24/ruby-on-rails-plugin-localize-your-rails-app/" rel="prev">Ruby on Rails plugin: Localize your Rails app</a></div>
+<div class="alignright"><a href="/2006/09/02/browser-size/" rel="next">Browser Size — Actual Numbers</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2006-08-28"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2006"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Browser"></span><span hidden data-pagefind-filter="category[data-v]" data-v="CSS"></span><span hidden data-pagefind-filter="category[data-v]" data-v="User Interface"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Standards"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="The Internet Explorer team is preparing to ship the next major version of the world’s most popular browser. The IE team has written an update on which CSS bugfixes that will make it into the final release. Update of existing CSS on websites Before we get to that rather long list, I feel it’s important [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Aug 28"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="8"></span>
+<h2 data-pagefind-meta="title">IE 7, web standards and CSS support</h2>
+<div class="entry">
+<p>The Internet Explorer team is preparing to ship the next major version of the world&rsquo;s most popular browser. The IE team has written an update on which CSS bugfixes that will make it into the final release.</p>
+<h3 id="update-of-existing-css-on-websites">Update of existing CSS on websites</h3>
+<p>Before we get to that rather long list, I feel it&rsquo;s important to know what will change from the web developer&rsquo;s point of view. The update list is a must read to anybody responsible for a website rendered in web standards mode (so called &ldquo;<a href="http://www.quirksmode.org/css/quirksmode.html" title="Peter Paul koch: CSS: Quirks mode and strict mode">strict mode</a>&rdquo;). For IE7 backwards compatibility, changes are not applied in quirksmode.</p>
+<p>Personally and professionally I&rsquo;ve been using strict mode for a long time (as it made IE6 pages look more like Firefox pages), and that means that I probably have to check my previous pages with IE7, at least to make sure that they don&rsquo;t rely on any of the bugs mentioned below.</p>
+<p>To sum it up your pages are probably safe and renders the same way in IE7 as in IE6 in the following situations:</p>
+<ul>
+<li>If they render in quirks mode</li>
+<li>If they render in strict mode but don&rsquo;t rely on the bugs below to filter out information from IE</li>
+</ul>
+<p>So the safest thing is probably to check existing CSS files for use of the bugs that the IE team fixed in IE7.</p>
+<h3 id="css-bugs-fixed">CSS bugs fixed</h3>
+<p>On IE blog, the following list of <a href="http://blogs.msdn.com/ie/archive/2006/08/22/712830.aspx" title="IEBlog: Details on our CSS changes for IE7">CSS bugs that IE7 will fix</a>:</p>
+<blockquote>
+<p><strong>Here is the list of CSS features and changes for IE7:</strong></p>
+<p><strong>Bugs we fixed</strong></p>
+<ul>
+<li>All bugs on <a href="http://www.positioniseverything.net/explorer.html">positioniseverything.net</a> except the “escaping floats” bug (which is planned for the future)
+<ul>
+<li><a href="http://www.positioniseverything.net/explorer/peekaboo.html">Peekaboo Bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/expandingboxbug.html">Internet Explorer and Expanding Box Problem</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/percentages.html">Quirky Percentages</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/lineheightbug.html">Line-height bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/border-chaos.html">Border Chaos</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/ie-listbug.html">Disappearing List-Background bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/guillotine.html">Guillotine Bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/unscrollable.html">Unscrollable Content bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/dup-characters.html">Duplicate Characters Bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/italicbug-ie.html">IE and Italics</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/doubled-margin.html">Doubled Float-Margin bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/floatIndent.html">Duplicate Indent bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/threepxtest.html">Three pixel text jog</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/creep.html">Creeping Text bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/firstletter.html">Missing First letter bug</a></li>
+<li><a href="http://www.positioniseverything.net/explorer/inlinelist.html">Phantom box bug</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>Details on some of the other bugs (from sources other than the positioniseverything.net list) that we fixed:</strong></p>
+<ul>
+<li>Overflow now works correctly! (That means boxes do not automatically grow any more.)</li>
+<li>Parser bugs: * html, _property and /**/ comment bug</li>
+<li>Select control: CSS style-able and not always on top</li>
+<li>Auto-sizing of absolute positioned element with width:auto and right &amp; left (great for 3 column layouts)</li>
+<li>Addressed many relative positioning issues</li>
+<li>Addressed many absolute positioned issues</li>
+<li>% calculations for height/width for abs positioned elements <a href="http://channel9.msdn.com/ShowPost.aspx?PostID=191182">http://channel9.msdn.com/ShowPost.aspx?PostID=191182</a></li>
+<li>&lt; ?xml&gt; prolog no longer causes quirks mode</li>
+<li>HTML element truly independent of the Body (now gets its own width, height etc.)</li>
+<li>1 px dotted borders no longer render as dashed</li>
+<li>Bottom margin bug on hover does not collapse margins</li>
+<li>Several negative margin issues fixed</li>
+<li>Recalc issues including relative positioning and/or negative margins are fixed now</li>
+<li>CLSID attribute of
+tag no longer limited to 128 characters</li>
+<li>:first-letter whitespace bug described in <a href="http://blogs.msdn.com/ie/archive/2005/09/02/460115.aspx">http://blogs.msdn.com/ie/archive/2005/09/02/460115.aspx</a> fixed</li>
+<li>Descendant selector now works properly for grand children when combined with other selectors</li>
+<li>First-line and first-letter now applies when there is no space between word :first-line and opening brace {</li>
+<li>Pseudo-classes now are working as expected if selector is excluded</li>
+<li>The :link selector works now for anchor tag with href set to bookmark</li>
+<li>Addressed !important issues</li>
+<li>PositionIsEverything <a href="http://www.positioniseverything.net/piefecta-rigid.html">piefecta-rigid</a>.htm now works</li>
+<li>List-item whitespace bug fixed</li>
+<li>Fixed Absolutely <a href="http://positioniseverything.net/abs_relbugs.html">Buggy</a> II</li>
+<li>Absolute positioned elements now use always correct containing block for positioning and size information</li>
+<li>Nested block elements now respect all overflow declarations (hidden, scroll, etc)</li>
+<li>Fixed the opposing offset problem (absolute positioned element whit all four top, bottom left and right are present)</li>
+<li>tags nested within LI elements will no longer add extra bottom margin when hover occurs</li>
+<li>We no longer lose the image aspect ratio on refresh</li>
+<li>Cleaned up our ident parsing according to CSS2.1 rules</li>
+<li>Fixed parsing bugs for multi- class selectors and class selectors that are combined with id selectors</li>
+<li>And many more</li>
+</ul>
+<p><strong>We also extended our existing implementations to comply with W3C specifications:</strong></p>
+<ul>
+<li>Enable :hover on all elements not just on</li>
+<li>Background-attachment: fixed works on all elements – so <a href="http://meyerweb.com/eric/css/edge/complexspiral/glassy.html">Eric Meyer’s complexspiral demo</a> works</li>
+<li>Improved
+fallback</li>
+</ul>
+<p><strong>Finally, we added new features from CSS2.1:</strong></p>
+<ul>
+<li>Min/max width/height support (also for images, which did not work in IE7b2)</li>
+<li>Transparent borders</li>
+<li>Fixed positioning support</li>
+<li>Selectors: first-child, adjacent, attribute, child
+<ul>
+<li>A couple of CSS 3 attribute selectors: prefix, suffix and substring since we were working already in the code base (also the general sibling selector)</li>
+</ul>
+</li>
+<li>Alpha channel PNG support (Not a CSS feature but too important for designers to not call it out)</li>
+</ul>
+</blockquote>
+<h3 id="web-standards-support-web-development-nirvana">Web standards support: Web development Nirvana</h3>
+<p>The better support of web standards is a major leap forward to web developers and website responsibles. This is a step towards &ldquo;web development Nirvana&rdquo; where a website only has to be written in one way. No browser specific hacks or quirks are needed in web development nirvana, because all browsers (eventually) understand HTML and CSS the same way.</p>
+<p>However, even IE7 web standards support is a giant improvement over IE6, there are still a long way to go before we can acheive that ultimate goal. According to Nate Koecheley of Yahoo!, there are currently over 10,000 different combinations browser versions and operating systems (see <a href="/2006/04/11/golden-nuggets-for-describing-browser-support/" title="Permanent Link to Golden nuggets for describing browser support">Golden nuggets for describing browser support</a>). So there is still plenty of work for anybody who understands browser quirks, bugs, hacks and anomalies of different browsers on different platforms.</p>
+<h3 id="test-ie7-and-ie6-side-by-side">Test IE7 and IE6 side by side</h3>
+<p>I have previously written about how to run <a href="/2006/02/03/ie7-beta-running-side-by-side-with-ie6/" title="Permanent Link to IE7 beta running side by side with IE6">IE7 beta side by side with IE6</a>. But according to Jon Galloway (inventor of the trick), this only works up to <a href="http://weblogs.asp.net/jgalloway/archive/2005/12/28/434132.aspx" title="Jon Galloway: IE7 Standalone Launch Script">before IE7 Beta 3</a>. But the good thing is that he is working on an update.</p>
+<p>I hope to learn that somebody are able to &ldquo;flip around&rdquo; this solution (so that we can get IE 6 to run as standalone in the same way as IE3, IE4, IE5, IE5.5). Please let us know if you already know how to do that trick.</p>
+<p><strong>Update: <a href="/2006/09/28/all-ie-browsers-standalone-on-same-pc/" title="Justaddwater.dk: All IE Browsers Standalone On Same PC">All IE Browsers Standalone On Same PC</a> (September 28, 2006) solves the problem.</strong></p>
+
+
+<p><small>Technorati Tags: internet explorer, ie 7, <a href="/tag/microsoft/" rel="tag">microsoft</a>, <a href="/tag/browser/" rel="tag">browser</a>, <a href="/tag/css/" rel="tag">css</a>, standalone, <a href="/tag/web-standards/" rel="tag">web standards</a>, strict mode, quirks mode</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, August 28th, 2006 at 09:29 (GMT-1) and is filed under <a href="/category/browser/" rel="category tag">Browser</a>, <a href="/category/css/" rel="category tag">CSS</a>, <a href="/category/user-interface/" rel="category tag">User Interface</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>, <a href="/category/web-standards/" rel="category tag">Web Standards</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">8 Responses to &#8220;IE 7, web standards and CSS support&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-11227">
+<cite>Rasmus</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-11227" title="">August 28th, 2006 at 11:10 (GMT-1)</a> </small>
+<p>Internet Explorer 7 Release Candidate 1 in standalone mode:<br>
+<a href="http://tredosoft.com/IE7_standalone">http://tredosoft.com/IE7_standalone</a></p>
+</li>
+
+<li id="comment-11228">
+<cite>Rasmus</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-11228" title="">August 28th, 2006 at 11:27 (GMT-1)</a> </small>
+<p>Oh and by the way, you can get IE6 in standalone mode:<br>
+<a href="http://browsers.evolt.org/?ie/32bit/standalone">http://browsers.evolt.org/?ie/32bit/standalone</a></p>
+</li>
+
+<li class="alt" id="comment-16206">
+<cite><a href="http://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/" class="url" rel="external">justaddwater.dk | All IE Browsers Standalone On Same PC</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-16206" title="">September 28th, 2006 at 10:31 (GMT-1)</a> </small>
+<p>[&hellip;] Yousif Al Saif of Tredosoft is probably best known for the IE7 standalone browser installer that can run isolated on a Windows machine without disturbing the version already installed. I wrote about this in “IE7, web standards and css support“. [&hellip;]</p>
+</li>
+
+<li id="comment-276416">
+<cite><a href="http://www.pixel-templates.com" class="url" rel="external">mediaVinci</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-276416" title="">October 1st, 2007 at 15:58 (GMT-1)</a> </small>
+<p>The web page below uses an iframe using a height with a 100% value. The web page renders fine in Mozilla Firefox, Apple Safari, Opera and many other browsers. IE7 is the only web browser that has severe difficulties in displaying the iFrame and its content correctly.</p>
+<p><a href="http://www.history-of-aviation.com/poster/1919-1932/POSTER-C-BFW-U12-01/index.php">http://www.history-of-aviation.com/poster/1919-1932/POSTER-C-BFW-U12-01/index.php</a></p>
+<p>The web page was developed in compliance with css standards. It is a real pain to see that IE7 is still not following the css rules of web standards. I believe IE developers have still some work to do here.</p>
+<p>My 2c,</p>
+<p>Marc Klein<br>
+mediaVinci – The art of invention</p>
+
+</li>
+
+<li class="alt" id="comment-403856">
+<cite><a href="http://www.bubbila.com/frameit/" class="url" rel="external">Bubbila</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-403856" title="">March 24th, 2008 at 13:55 (GMT-1)</a> </small>
+<p>Sweet tutorial, just what I have been looking for.<br>
+I have added you to Stumbleupon.</p>
+</li>
+
+<li id="comment-426187">
+<cite>Umar</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-426187" title="">June 25th, 2008 at 12:50 (GMT-1)</a> </small>
+<p>i have dropdownlist in Asp.net 2.0 and i want to change its border.By defualt there is no such property to change the border for this control. i use css but the border visible in Fire Fox 3 not in Internet Explorer 7. Whereas IE7 supported the border-color property.Any advice regarding the issue is highly appriciated. Thanks in advance.</p>
+</li>
+
+<li class="alt" id="comment-428780">
+<cite>Roger</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-428780" title="">July 7th, 2008 at 08:41 (GMT-1)</a> </small>
+<p>Hi there, I noticed that you mentioned &ldquo;Select control: CSS style-able and not always on top “ is fixed in IE7, but the border-width and border-color still doesn&rsquo;t work for IE7, is there any way to get around that? Thanks.</p>
+</li>
+
+<li id="comment-484154">
+<cite><a href="http://web-3.es/2009/04/%c2%bfasi-que-querias-saber-de-css/" class="url" rel="external">WEB 3.0 » Blog Archive » ¿Así que querías saber (casi todo) de CSS?</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-484154" title="">April 18th, 2009 at 03:35 (GMT-1)</a> </small>
+<p>[&hellip;] IE7, Web Standards and CSS Support – Jesper Ronn-Jensen [&hellip;]</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

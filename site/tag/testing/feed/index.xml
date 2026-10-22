@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Testing on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/testing/</link>
+		<description>Recent content in Testing on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 28 Sep 2012 09:54:39 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/testing/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>PhantomJS 1.7 build for Linux 64 bit</title>
+				<link>https://justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/</link>
+				<pubDate>Fri, 28 Sep 2012 09:54:39 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/</guid>
+				<description>&lt;p&gt;At a project I work on, we needed PhantomJS to run from a Redhat Fedora 64 bit machine.&lt;/p&gt;&#xA;&lt;p&gt;Since phantomJs is just released this week, I needed to build it myself.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;I post this link to the binary in case it can benefit others.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://dl.dropbox.com/u/54307969/phantomjs-1.7.0-linux-x86_64.tar.gz&#34;&gt;PhantomJs 1.7.0 built on Linux Redhat Fedora 64 bit&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;PhantomJS is a fantastic tool for automating tests, since it is a headless browser which we wrapped in our automation framework to run javascript based tests very fast and easily.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Capgemini SmartLunch: Cucumber for Automated Acceptance Testing</title>
+				<link>https://justaddwater.dk/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing/</link>
+				<pubDate>Tue, 27 Apr 2010 13:27:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing/</guid>
+				<description>&lt;p&gt;Today I did an internal presentation on how we used Cucumber as testing framework on several recent occasions.&lt;/p&gt;&#xA;&lt;p&gt;The presentation was held in our usual Capgemini SmartLunch format: People can eat and learn in their lunchbreak. External visitors are welcome. Duration 30-45 minutes including questions.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.pdf&#34;&gt;pres 2010-04-27-cucumber&lt;/a&gt; (573KB pdf format)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.key_.zip&#34;&gt;pres 2010-04-27-cucumber.key&lt;/a&gt; (782KB keynote format)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
+</rss>

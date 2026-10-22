@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WordPress Dashboard improvements: Five things I’d like my blog software to do · justaddwater.dk</title>
+<meta name="description" content="UPDATE: Owen&rsquo;s comment pointed me to WordPress Admin Dashboard replacement which apparently adresses some of the issues I&rsquo;m pointing out.
+I like …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2006/01/12/justaddwaterdk-december-2005-statistics/" rel="prev">Justaddwater.dk December 2005 Statistics</a></div>
+<div class="alignright"><a href="/2006/01/14/ajax-performance-stats-roi-and-business-value/" rel="next">AJAX performance stats, ROI, and business value</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2006-01-12"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2006"></span><span hidden data-pagefind-filter="category[data-v]" data-v="AJAX"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Blogging"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Links"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Statistics"></span><span hidden data-pagefind-filter="category[data-v]" data-v="WordPress"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I like WordPress Dashboard. The name suggests that it’s an overview of whats relevant to your blog. What’s happening. What’s popular. Who comments. What important updates are available. The Dashboard should work like in a car. The most important and relevant information should be visible at a glance. Lets have a brief look at the dashboard.
+I suggest you only take a brief look to judge for your self whether you think the main objectives of the Dashboard page are met.
+
+Click on the screenshot above for and look for 5 seconds only. Then ask yourself what you could remember from the page. Yup you just tried a 5 second usability test."></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 12"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="12"></span>
+<h2 data-pagefind-meta="title">WordPress Dashboard improvements: Five things I’d like my blog software to do</h2>
+<div class="entry">
+<p><ins>UPDATE: Owen&rsquo;s comment pointed me to <a href="http://blog.taragana.com/index.php/archive/angsumans-wordpress-20-dashboard-replacement-how-to-trim-the-fat-resource-hogging-wordpress-admin-dashboard/">WordPress Admin Dashboard replacement</a> which apparently adresses some of the issues I&rsquo;m pointing out.</ins></p>
+<p>I like WordPress Dashboard. The name suggests that it&rsquo;s an overview of whats relevant to your blog. What&rsquo;s happening. What&rsquo;s popular. Who comments. What important updates are available. The Dashboard should work like in a car. The <strong>most important and relevant information should be visible at a glance</strong>. Lets have a brief look at the dashboard.<br>
+I suggest you only take a brief look to judge for your self whether you think the main objectives of the Dashboard page are met.</p>
+<p><a href="/wp-content/uploads/2006/01/screenshot%20WordPress%20dashboard%201137074448414.png" title="Wordpress Dashboard for Justaddwater.dk"><img src="/wp-content/uploads/2006/01/screenshot%20WordPress%20dashboard%201137074448414.thumbnail.png" alt="Wordpress Dashboard for Justaddwater.dk" height="96" width="62">
+</a></p>
+<p>Click on the screenshot above for and look for 5 seconds only. Then ask yourself what you could remember from the page. Yup you just tried a <a href="http://www.uie.com/articles/five_second_test/">5 second usability test</a>.</p>
+<h3 id="what-works">What works</h3>
+<p>The top left section &ldquo;Welcome to WordPress&rdquo; contains a brief overview for the most relevant actions to administer the weblog (write a post, update profile, etc.). This is added from version 2.0 and works well as an appetizer (especially for newbies).</p>
+<p>&ldquo;Latest activity&rdquo; is a good headline that immediately gets my attention. I can see things happening: posts, comments, incoming links. Very good, as I think this sums up what I&rsquo;d like to know from a dashboard-view. However, I don&rsquo;t think that &ldquo;latest activity&rdquo; contains what it should to give me the complete overview.</p>
+<h3 id="what-i-think-should-improve">What I think should improve</h3>
+<ol>
+<li><strong>Incoming links should show ALL incoming links.</strong> The dashboard already has a box labeled &ldquo;incoming links&rdquo;, but it doesn&rsquo;t show any referring URLs. Referring URLs (or link referrals) are registered by a browser as the page that link to the current page. In my opinion, referring URLs are of great value, as we want to know who link to us and how users get to know our website. I recently wrote that even in <a href="/2006/01/08/google-analytics-trick-how-to-view-referring-urls/" title="Google Analytics trick: How to view referring URLs">Google Analytics this feature is hard to find</a>. &ldquo;Incoming links&rdquo; should show both trackbacks AND referring URLs. Most browsers send information as HTTP header &ldquo;Referer&rdquo; when they request the page.</li>
+<li><strong>Add recent searches to activity list</strong>. What are people searching for on my blog. Luckily we have a web-server access log that can tell me, but it requires digging and parsing a file on a regular basis. The dashboard has information recent trackback links and comments. It would be appropriate to add a list with recent searches.</li>
+<li><strong>Update the Dashboard when something interesting happens.</strong> Ajax calls to the web server could keep &ldquo;Latest Activity&rdquo; up-to-date whenever a comment is posted, searches and trackbacks are performed. Also the display could update when my partner posts a new article on the site.</li>
+<li><strong>Clean up the dashboard. Remove things that are not relevant to me.</strong> In particular, i think &ldquo;Other WordPress News&rdquo; are too dominant (although placed in the bottom below the fold). Only a few of the news are directly WordPress related. Other WordPress News could easily be replaced by a link to planet.wordpress.org (from which the news are taken). After all, this will lead to faster response times, and will probably make the Dashboard more relevant to users like myself that wonders what on earth &ldquo;Owen Winkler: I didn&rsquo;t do it&rdquo; has to do with my blog.</li>
+<li><strong>Add latest drafts to Dashboard</strong>. Maybe it&rsquo;s just me. Usually I&rsquo;m working on 2-3 stories that I save as drafts. I think that these should be on the dashboard as well.</li>
+</ol>
+<p>Here&rsquo;s a quick mockup of the changes i propose.</p>
+<p><a href="/wp-content/uploads/2006/01/screenshot%20WordPress%20dashboard%20modified%20halfsize.png" title="Wordpress dashboard modified. Click to view larger image"><img src="/wp-content/uploads/2006/01/screenshot%20WordPress%20dashboard%20modified%20halfsize.png" alt="screenshot wordpress dashboard with improvements" title="screenshot wordpress dashboard with improvements" width="477" height="574">
+</a></p>
+
+
+<p><small>Technorati Tags: wordpress, <a href="/tag/blogging/" rel="tag">blogging</a>, <a href="/tag/search/" rel="tag">search</a>, <a href="/tag/usability/" rel="tag">usability</a>, google analytics, ajax, dashboard, wordpress dashboard</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, January 12th, 2006 at 22:39 (GMT-1) and is filed under <a href="/category/ajax/" rel="category tag">AJAX</a>, <a href="/category/blogging/" rel="category tag">Blogging</a>, <a href="/category/links/" rel="category tag">Links</a>, <a href="/category/web-statistics/" rel="category tag">Web Statistics</a>, <a href="/category/wordpress/" rel="category tag">WordPress</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">12 Responses to &#8220;WordPress Dashboard improvements: Five things I’d like my blog software to do&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-65">
+<cite><a href="http://asymptomatic.net" class="url" rel="external">Owen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-65" title="">January 13th, 2006 at 00:41 (GMT-1)</a> </small>
+<p>Ah, but if you clicked on the &ldquo;Owen Winkler: I didn&rsquo;t do it&rdquo; link, you could see whether it <em>is</em> related to your blog. ;)</p>
+<p>Having one of the hnadful of WordPress-related-topics-only feeds on Planet WordPress, I&rsquo;d like to think that my posts would be more read. But I&rsquo;m willing to concede that maybe my feed isn&rsquo;t relevant for everyone.</p>
+<p>I&rsquo;ve been thinking about doing something about the Dashboard situation over the past week. Maybe one of my yet-to-come posts that appears in your Dashboard will help you solve your problems.</p>
+<p><a href="http://blog.taragana.com/index.php/archive/wordpress-15-hack-how-to-trim-the-fat-resource-hogging-admin-dashboard-version-2/">Until then&hellip;</a> Even so, I hope you still stop by my site for a read now and then.</p>
+
+</li>
+
+<li id="comment-66">
+<cite><a href="http://visitjesper.homeip.net" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-66" title="">January 13th, 2006 at 15:16 (GMT-1)</a> </small>
+<p>Hey Owen. No pun intended. I merely chose your post because I could not get the connection between my Dashboard and your blog post article. Sometimes posts occur in a completely different context where the title must explain more about the content in the post.</p>
+<p>In this instance, I have absolutely no clue what that title is doing on my Dashboard. I guess I should have picked on another of the posts, but my point is still that all of them should be removed as they are only occasionally relevant. And for sure, I&rsquo;m not picking on you, I can assure you that!</p>
+<p>By the way, I might want to check out your <a href="http://dev.wp-plugins.org/wiki/GeoPlugin">Geo plugin</a> while we&rsquo;re at it.</p>
+
+</li>
+
+<li class="alt" id="comment-67">
+<cite><a href="http://www.uie.com/brainsparks" class="url" rel="external">Jared Spool</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-67" title="">January 13th, 2006 at 19:05 (GMT-1)</a> </small>
+<p>Jesper, you really want <a href="http://measuremap.com/">MeasureMap</a>. It does most of what you&rsquo;re asking for.</p>
+</li>
+
+<li id="comment-70">
+<cite><a href="http://visitjesper.homeip.net" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-70" title="">January 14th, 2006 at 13:39 (GMT-1)</a> </small>
+<p>Jared, I have an eye on MeasureMap, but unfortunately it&rsquo;s still in closed beta. Besides I would rather my existing product change than to experiment with a new one. My top priority is still that I think Google should change a few things in the tool (and I think there&rsquo;s room for it without really out-competing MeasureMap).</p>
+<p>As a matter of fact, I wrote a post recently (<a href="/2006/01/08/google-analytics-trick-how-to-view-referring-urls/" title="Google Analytics trick: How to view referring URLs">using Google Analytics to view referring URLs</a>). That tells me that there is plenty of room to improve in some of the web-based statistics tools.</p>
+<p>With regards to the Dashboard your point i valid and I would like to add that i expect Dashboard functionality and statistics functionality to converge in the future.</p>
+<p>For instance, we see this in cars already. Some cars measure average fuel consumption, calculate miles left in tank, etc. (That&rsquo;s what they do in Denmark and the rest of Europe. What&rsquo;s it like in the US where fuel prices are roughly one third of Europe?)<br>
+I probably go more into detail in a later post on what could improvee in Google Analytics.</p>
+
+</li>
+
+<li class="alt" id="comment-78">
+<cite><a href="http://justaddwater.dk/2006/01/16/web-users-judge-sites-instantly/" class="url" rel="external">justaddwater.dk | Web Users Judge Sites Instantly</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-78" title="">January 16th, 2006 at 13:25 (GMT-1)</a> </small>
+<p>[&hellip;] We have in a previous post talked about this sort quick test before, usually referred to as a 5-second-usabilty-test (though this study shortens it even further). [&hellip;]</p>
+</li>
+
+<li id="comment-82">
+<cite><a href="http://justaddwater.dk/2006/01/17/added-measuremap-web-statistics/" class="url" rel="external">justaddwater.dk | Added MeasureMap web statistics</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-82" title="">January 17th, 2006 at 16:43 (GMT-1)</a> </small>
+<p>[&hellip;] We just started using MeasureMap and have added it to this blog after Jared Spool recommended it in a comment. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-83">
+<cite><a href="http://justaddwater.dk/2006/01/17/added-measuremap-web-statistics/" class="url" rel="external">justaddwater.dk | Added MeasureMap web statistics</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-83" title="">January 17th, 2006 at 16:43 (GMT-1)</a> </small>
+<p>[&hellip;] We just started using MeasureMap and have added it to this blog after Jared Spool recommended it in a comment. [&hellip;]</p>
+</li>
+
+<li id="comment-1094">
+<cite><a href="http://justaddwater.dk/2006/02/15/google-improves-webstat-by-measuremap-acquisition/" class="url" rel="external">justaddwater.dk | Google improves webstat by MeasureMap acquisition</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-1094" title="">February 15th, 2006 at 10:24 (GMT-1)</a> </small>
+<p>[&hellip;] Previously, I have complained about lacking features of Google Analytics, when Jared Spool suggested us to take a look on Measure Map. We’re using both Measure Map and Google Analytics on these pages, and it’s surprising how different they are. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-8426">
+<cite><a href="http://nitin.coolfreepage.com" class="url" rel="external">Nitin Patel</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-8426" title="">July 13th, 2006 at 17:48 (GMT-1)</a> </small>
+<p>It seems also to work with the Sage plug-in for Firefox.</p>
+</li>
+
+<li id="comment-394487">
+<cite><a href="http://www.google.ca" class="url" rel="external">Jim Mirkalami</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-394487" title="">February 8th, 2008 at 10:22 (GMT-1)</a> </small>
+<p>I have been visiting this site a lot lately, so i thought it is a good idea to show my appreciation with a comment.</p>
+<p>Thanks,<br>
+Jim Mirkalami</p>
+
+</li>
+
+<li class="alt" id="comment-407096">
+<cite><a href="http://www.thewebmasterresources.info" class="url" rel="external">Joe Cole</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-407096" title="">April 4th, 2008 at 14:13 (GMT-1)</a> </small>
+<p>I use Search Meter plugin to show the searching history. I think it&rsquo;s very usefull</p>
+</li>
+
+<li id="comment-410408">
+<cite><a href="http://torgexpert.com" class="url" rel="external">Hauttsaxycads</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-410408" title="">April 14th, 2008 at 00:52 (GMT-1)</a> </small>
+<p>Бесплатно обучаю работе с аукцином eBay. Работа на дому.<br>
+Хотите зарабатывать по $2000 в мес. или даже $100 в день?<br>
+У Вас есть возможность это сделать.<br>
+Предлагаем Вам бесплатную программу обучения торговли и заработка на<br>
+аукционе eBay.<br>
+Ссылка для получения бесплатных книг с методами торговли:<br>
+<a href="http://torgexpert.com/pr.htm">http://torgexpert.com/pr.htm</a></p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RailsConf Live Notes: Testing Tutorial · justaddwater.dk</title>
+<meta name="description" content="I&rsquo;m at RailsConf Europe here in Berlin, and now attending the full-day session &ldquo;Ruby (and Rails) Testing Techniques: Charity Tutorial by Marcel …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/09/14/should-a-blog-have-a-privacy-policy/" rel="prev">Should a blog have a Privacy Policy?</a></div>
+<div class="alignright"><a href="/2007/09/22/railsconf-europe-2007-recap/" rel="next">RailsConf Europe 2007 Recap</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-09-17"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Events/seminars"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Railsconf"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Ruby on Rails"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Live notes from RailsConf Europe 2007 testing tutorial by Chad Fowler and Marcel Molina.
+"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Sep 17"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">RailsConf Live Notes: Testing Tutorial</h2>
+<div class="entry">
+<p>I&rsquo;m at RailsConf Europe here in Berlin, and now attending the full-day session &ldquo;<a href="http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736">Ruby (and Rails) Testing Techniques: Charity Tutorial</a> by Marcel Molina and Chad Fowler.</p>
+<p>Below are the live notes, I wrote with Mads Buus (we wrote the notes collaboratively with Google Docs, <a href="http://docs.google.com/Doc?docid=az54pw3d9f_24hsvwnt&amp;hl=en">direct link</a>).</p>
+<p><a href="http://www.flickr.com/photos/jesper/1395418767/"><img src="http://farm2.static.flickr.com/1342/1395418767_1d23095952_m.jpg" alt="IMG_3392_crop" height="160" width="240">
+</a></p>
+<p><a href="http://www.flickr.com/photos/jesper/1396313456/"><img src="http://farm2.static.flickr.com/1411/1396313456_e999c55dfe_m.jpg" alt="IMG_3397" height="160" width="240">
+</a></p>
+<p> </p>
+<ul>
+<li>Verifying your expectations.</li>
+<li>Guru reads the output&rdquo; -testing (just printing stuff out to verify something)</li>
+<li>Testing is better: declare your expectations.</li>
+<li>Real value: Analysis, design process. Bonus: verification.</li>
+<li>If something is too hard to write, you&rsquo;re probably doing it wrong (design is wrong)</li>
+<li>Red, green, refactoring. Write a test that fail, the implement until green.</li>
+<li>Red/green testing: Write code to make testing fail&hellip; red. Then write just enough code to make test pass.</li>
+<li>Marcel&rsquo;s loops coding/testing is 1-5 minutes. Possible to work with 20 second loops</li>
+<li>No &lsquo;Code smells&rsquo;, no comments. &lsquo;method_missing&rsquo; needs documentation</li>
+</ul>
+<p>Your code should be so simple that you shouldnt put comments in your code. If it just says &ldquo;test_foo&rdquo; [new team members] have to do more brain processing.</p>
+<p>Nick: think of my self as a spec writer more than a programmer</p>
+<p>Red/green refactor<br>
+* refactor your tests before</p>
+<p>flunk &ldquo;not implemented&rdquo; is cool because i can see that it&rsquo;s</p>
+<p>RSpec makes &ldquo;not implemented&rdquo; yellow so it doesn&rsquo;t mix up with the red</p>
+<p>Marcel: Eventually we re all going to be small talk programmers. Ruby is the entry drug</p>
+<p>class PokerException &lt; Exception<br>
+end<br>
+doesnt need right now. always add later. Removed</p>
+<p>Chad: i really work in small increments</p>
+<p>Marcel: at the beginning i did &ldquo;existing? tests&rdquo;<br>
+&hellip;and within 15 minutes that test becomes so non valuable.</p>
+<p>Chad: I challenge you to write long method names &hellip; at least for a day or two<br>
+When you follow that style, your code will be cleaner and healthier</p>
+<p>Write flunking test to identify an assumptions<br>
+def test_all_validation_are_run<br>
+flunk &lsquo;we probably want to create a validation test case for this&rsquo;<br>
+end</p>
+<p>Chad: Have you run your other test recently?</p>
+<p>Chad: Id like to have only one test failing at a time</p>
+<p><a href="http://www.flickr.com/photos/jesper/1395426465/"><img src="http://farm2.static.flickr.com/1192/1395426465_0bd1d6a2d0_m.jpg" alt="IMG_3403" height="160" width="240">
+</a></p>
+<p>Mads: Instead of fixing the design, we wirte more tests. Are we thinking too much about test than the code?<br>
+Chad: now, were running into friction. and frictions tell us tu stop and think about the design</p>
+<p>&mdash; break &mdash;</p>
+<p>(my comment: the discussions her usually get into details with &ldquo;business-logic&rdquo;)</p>
+<p>test helper function<br>
+card_with(options) is subverting the benefit of the tests as long as Marcel uses that in the test file only.</p>
+<p>replaced with<br>
+validate_card_with(options)<br>
+Card.new(options).validate<br>
+end</p>
+<p>Later:<br>
+validate_number_card_with(options)</p>
+<p>NumberCard.new(options).validate<br>
+end</p>
+<p>Another point:<br>
+card.numbers.sort_by{rand}.first</p>
+<p>Private methods in Test::Unit<br>
+doesnt impact Test::Unit<br>
+but the fact is that the reader of the code can ignore them below the private</p>
+<p>Chad: TDD enables you to delay difficult decisions.. &hellip; and you keep delaying them, and it ends up that you never have to take the difficult decisions</p>
+<p>def self.foo<br>
+end<br>
+or<br>
+class &lt;&lt; self<br>
+def foo<br>
+end<br>
+end</p>
+<p>M: Visually the latter is better. Easier to grasp overview of the class. Also when you add private methods later, there are more sections of your class</p>
+<p>AgileTalk &ldquo;just print all names of your test methods&rdquo; (not found by me on google)<br>
+rake task</p>
+<p>&ldquo;Test everything that could possibly break&rdquo; quote by kent beck.<br>
+That domain spsecific understanding grows over time. So if something weird with card number 11 happens, then you should probably add a test case for number 11.</p>
+<p>&mdash;-lunch break&mdash;-<br>
+&ldquo;if it&rsquo;s strip poker I can see why we implement base class&rdquo;</p>
+<p>$: = LOAD_PATH<br>
+$: .unshift File.dirname(__FILE__)<br>
+Adding current directory onto our loadpath</p>
+<p>DR. Jekyll and Mr hyde<br>
+The good Dr. Jekyll writes a test, then laugh at Mr Hyde (the lazy programmer) and force him to implement the smallest amount of code to make it pass</p>
+<p>Incremental refactoring: Even if you are able to see more steps ahead, you should do Incremental refactoring and test on the way.</p>
+<p>Moving from low-level to high-level</p>
+<p>Metrics for measuring test quality</p>
+<p>rake test:ratio (marcels own)<br>
+Code to Test Ratio: 1:1.28</p>
+<p>Rcov<br>
+issue: sometimes reports false negatives (example lines not covered &ldquo;end..end..end&rdquo;)<br>
+c0, c1, c2 coverage<br>
+Line number counting</p>
+<p>code to Test ratio and Rcov used together is very good indicators.</p>
+<p>Heckle can go into those examaples with more loops on the same line<br>
+if foo &amp;&amp; bar &amp;&amp; baz</p>
+<p>end<br>
+Here Hecle will go in and modify bar until test breaks</p>
+<p>Now into the highl-level<br>
+require &lsquo;flexmock&rsquo;<br>
+require &lsquo;flexmock/test_unit&rsquo;<br>
+(Jim Weirich (co?)authored it and we tend to use libraries he wrote)</p>
+<p>class GameTest<br>
+attr_reader :game<br>
+def setup<br>
+@game = flexmock(&lsquo;Game&rsquo;)<br>
+@dealer = flexmock(&lsquo;Dealer&rsquo;)<br>
+@player1 = flexmock(&lsquo;Player&rsquo;)<br>
+@player2 = flexmock(&lsquo;Player&rsquo;)<br>
+end</p>
+<p>Chad (again): &ldquo;it would be interesting to run just what you have and see what it does&rdquo;</p>
+<p>player.should_receive(:join).once.ordered.with(game)<br>
+player.should_receive(:bet).once.ordered</p>
+<p>partial mock<br>
+from<br>
+@game = flexmock(&lsquo;Game&rsquo;)<br>
+to<br>
+@game = flexmock(Game.new)<br>
+mocks if methods are not implemented.</p>
+<p>to<br>
+@game = flexmock(Game).new_instances<br>
+difference??</p>
+<p>&mdash;..<br>
+fixtures<br>
+pain to deal with, and not so explicit</p>
+<p>it makes sense to mock up and never hit the db</p>
+<p>class Person &lt; ActiveRecord::Base<br>
+end</p>
+<p>####test file below:<br>
+flexmock(Person).should_recdeive(:find).with(:first).and_return(admin_for)<br>
+#&hellip; valid_person definde helper method</p>
+<p>assert_equal admin_for_company, Person.admin</p>
+<p>Marcel<br>
+valid_user_attibutes<br>
+create_valid_user<br>
+create_valid_user_with_company<br>
+#always methods parametrized to be overridden</p>
+<p>Marcel: For 2 years, fixtures made me angry with rails</p>
+<p>Chad: We only hate it because its not as good as the rest of Rails, but it&rsquo;s better than what we had before</p>
+<p>===RSpec===<br>
+Test::Unit leads to one test per method in your code</p>
+<p>Test usually takes longer.<br>
+b vs t Behaviours versus testing: So<br>
+=&gt; good Test Driven Development with the word &ldquo;test&rdquo; removed from it</p>
+<p>Is your name Dan, by any chance? Did you coin the term BDD, by any chance?</p>
+<p>rspec is a specification framework</p>
+<p>tools more implemented and more into textmate<br>
+rake test:spec</p>
+<p>it [string]<br>
+not passing a block is an unimplemented spec</p>
+<p>Its developed way more actively than Test::Unit and it&rsquo;s also the tooling around it</p>
+<p>RSpec generators (general opinion) they are probably too long</p>
+<p>=== Jesper&rsquo;s notes below:===</p>
+<p>Windows shortcuts for E-texteditor</p>
+<ul>
+<li>CTRL+R run test file we&rsquo;re working in.</li>
+<li>CTRL+Shift+R run test in focus</li>
+<li>deft + tab &ldquo;def test_ &hellip; end&rdquo;</li>
+</ul>
+<p>Idea for &ldquo;deft&rdquo; shortcut: replace all spaces as-you-type with underscores</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/railsconf/" rel="tag">railsconf</a>, berlin, marcel molina, chad fowler, <a href="/tag/testing/" rel="tag">testing</a>, copenhagenrb</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, September 17th, 2007 at 17:05 (GMT-1) and is filed under <a href="/category/events/seminars/" rel="category tag">Events/seminars</a>, <a href="/category/railsconf/" rel="category tag">Railsconf</a>, <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

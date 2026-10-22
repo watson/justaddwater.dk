@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textmate Path Modification — Ruby Version Issues · justaddwater.dk</title>
+<meta name="description" content="I had some issues with Ruby on my macbook after upgrading Ruby from 1.8.6 to 1.8.7.
+This was a problem in Textmate as it still picked up the old version and …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/03/09/using-git-for-svn-repositories-workflow/" rel="prev">Using Git for SVN Repositories Workflow</a></div>
+<div class="alignright"><a href="/2009/03/13/web-server-power-calculation/" rel="next">Web Server Power Calculation</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-03-10"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="justaddwater.dk"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I had some issues with Ruby on my macbook after upgrading Ruby from 1.8.6 to 1.8.7. This was a problem in Textmate as it still picked up the old version and ignored $PATH i set in my .profile. Thanks to fast and excellent help from Allan Odgaard and others in the ##Textmate IRC channel. The [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Mar 10"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="5"></span>
+<h2 data-pagefind-meta="title">Textmate Path Modification — Ruby Version Issues</h2>
+<div class="entry">
+<p>I had some issues with Ruby on my macbook after upgrading Ruby from 1.8.6 to 1.8.7.</p>
+<p>This was a problem in Textmate as it still picked up the old version and ignored $PATH i set in my .profile.</p>
+<p>Thanks to fast and excellent help from Allan Odgaard and others in the ##Textmate IRC channel.</p>
+<p>The main point is that if you modify your $PATH you should probably also set a variable in Textmate reflecting that change. Otherwise you may end up with Textmate running an old version of a program like I did.</p>
+<img src="/wp-content/uploads/2009/03/textmate-preferences-advanced-path.png" alt="" title="textmate-preferences-advanced-path" class="alignnone size-full wp-image-1045" height="253" width="450">
+
+<p>Note also that there is some help on the Textmate Wiki: &ldquo;<a href="http://wiki.macromates.com/Troubleshooting/RubyVersionIssue">RubyVersionIssue</a>&rdquo; with a link to the suggestion Alan mentions above (<a href="http://manual.macromates.com/en/shell_commands#search_path">setting path for Finder</a> in environment.plist).</p>
+<pre tabindex="0"><code>Pasted as Plain Text by peterhaza
+Description: No description
+URL: http://rafb.net/p/mlsekL34.html
+
+March 6th 2009
+11:25 jesperronn: Hi everybody (new to the IRC channel) I know this has been 
+up millions of times: Ruby version issues!
+11:26 jesperronn: My problem is basically the same as described: wrong (old) 
+ruby version picked up by Textmate
+11:26 jesperronn: I tried the suggestion that was linked (setting up 
+~/.MacOSX/environment.plist and adding new ruby path)
+11:27 jesperronn: Could somebody give me some troubleshooting help?
+11:29 malesca: jesperronn: Did you reboot after changing environment.plist?
+11:29 malesca: path?
+11:29 inner_six: Your search path is incorrect. See 
+http://manual.macromates.com/en/shell_commands#search_path and be sure to 
+read the last paragraph about ~/.MacOSX/environment.plist (used for shebang 
+scripts)
+11:29 jesperronn: Yes I did reboot
+11:30 jesperronn: (although it says logout/login in the wiki page)
+11:30 jesperronn: After the reboot the test suggested actually changed result
+11:30 jesperronn: #!/bin/sh echo &#34;$PATH&#34;
+11:31 jesperronn: result was: /usr/bin:/bin:/usr/sbin:/sbin
+11:31 jesperronn: sorry for the smilies...:(
+11:31 jesperronn: it changed to /Users/jesper/Library/Application 
+Support/TextMate/Pristine 
+Copy/Support/bin/CocoaDialog.app/Contents/MacOS:/Library/Frameworks/Python.fra
+mework/Versions/Current/bin:/usr/local/apache2/bin:/usr/local/mysql/bin:/Users
+/jesper/bin:/usr/local/bin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/b
+in:/usr/X11/bin:/Users/jesper/Library/Application Support/TextMate/Pristine 
+Copy/Support/bin
+11:31 jesperronn: which is the correct from .profile
+11:32 jesperronn: And &#34;ruby --version&#34; now gives me the new correct version 
+1.8.7
+11:33 jesperronn: So it works when running snippets in plain text via CTRL-R
+11:33 jesperronn: Now the issue is still there for my .rb file
+11:34 jesperronn: The .rb file starts with #!/usr/bin/env ruby
+11:35 jesperronn: and running Command-R tells me the version is the old 1.8.6 
+(located at /usr/bin/ruby)
+11:35 jesperronn: So how do I change this behaviour on Ruby files??????
+11:37 jesperronn: inner_six: there is no difference in the ruby version 
+picked up if I remove the shebang
+11:37 jesperronn: inner_six: i already added the environment.plist on my 
+machine
+11:39 perdiy: jesperronn: Have you set TM_RUBY?
+11:40 jesperronn: perdix: how do I check that? (i probably have not)
+11:40 perdix: jesperronn: Check Preferences → Advanced → Shell Variables 
+11:41 jesperronn: thanks perdix. No it&#39;s not set
+11:41 jesperronn: perdix: what do you suggest I do?
+11:42 perdix: jesperronn: Not sure…
+11:44 perdix: Just so I understand you correctly: entering ‘ruby --version’ 
+and hitting ⌃R says it’s ruby 1.8.7, but creating a Ruby file containing 
+‘puts RUBY_VERSION’ and hitting ⌘R says it’s ruby 1.8.6?
+11:46 jesperronn: perdix: Thats exactly what i did!
+11:46 jesperronn: and the exact reults i got
+11:48 perdix: Sorry, then I have no idea. You could set TM_RUBY to the full 
+path to the ruby executable you want to run (in the mentioned prefpane), but 
+that’s a workaround.
+11:49 perdix: Or wait for someone more knowledgeable to come online…
+11:52 jesperronn: perdix: hehe thanks for your suggestions.. I tried to set 
+TM_RUBY to /usr/local/bin/ruby (no Textmate restart). That actually gave an 
+extremely strange error. 
+11:53 jesperronn: Blank white &#34;run&#34; window only with this text: 
+/tmp/temp_textmate.azBvzx: line 6: : command not found
+12:02 perdix: jesperronn: Huh. Does `$TM_RUBY --version`, ⌃R work?
+12:12 allan: jesperronn: the test with #!/bin/sh gave another result because 
+I think you forgot to select BOTH lines
+12:12 allan: jesperronn: instead of editing environment.plist try set PATH in 
+TM’s preferences
+12:12 allan: TM_RUBY will not help you since it is your script (using ‘env’) 
+that needs the correct ruby
+12:13 allan: so only setting PATH properly can fix this
+12:13 allan: your second error must be because you set TM_RUBY to something 
+non-existing
+12:39 jesperronn: allan: where do I set PATH in preferences? 
+12:40 jesperronn: allan: do you mean set a shell variable &#34;PATH&#34; in the 
+advanced preferences&gt;shell variables?
+12:45 allan: jesperronn: yes
+12:45 jesperronn: allan: I can see that setting a shell variable PATH in 
+advanced preferences actually works! 
+12:45 jesperronn: Why is this not different &#39;out of the box&#39; 
+12:45 allan: jesperronn: what do you mean?
+12:45 allan: that TextMate should know how you want PATH setup?
+12:45 allan: because that is impossible
+12:45 allan: and it _does_ work out of the box
+12:45 jesperronn: yes
+12:46 allan: it just does not work with custom ruby installs
+12:46 allan: emphasis here on custom ;)
+12:46 jesperronn: OK
+12:46 jesperronn: I actually tried to remove the ruby 1.8.6 after upgrading 
+but i had to undo because it gave me problems running ruby inside textmate...
+12:47 jesperronn: Maybe it\s just my limitted knowledge of Textmate internals
+12:47 jesperronn: Thanks a lot for help, allan, perdix and inner_six!
+12:48 allan: jesperronn: essentially it’s pretty simple: PATH tells what 
+locations programs should shell for commands (and what order)
+12:49 allan: so if you want to install something new yet still keep the 
+system version (recommended) then just install it wherever you want and put 
+that location first in the PATH variable
+12:49 allan: that environment.plist failed for you is likely due to a typo on 
+your part
+12:49 allan: that is the system-supported way to set environment variables 
+for all apps launched by Finder though
+12:50 allan: where Terminal runs a shell so it additionally has the profile 
+files
+12:50 allan: and TextMate has the Preferences → Advanced…
+12:50 jesperronn: allan: what I do not understand is why to use 
+environment.plist and not .profile or similar
+12:51 jesperronn: So the error on my side is probably that I added path 
+settings to .profile
+12:51 allan: jesperronn: .profile is for your shell
+12:51 allan: i.e. only bash etc. will execute .profile
+12:51 allan: so it works when what you launch from TM goes via bash
+12:51 allan: but not when it is run w/o a shell
+12:52 allan: this is analogical to asking in #bash why you have to setup 
+stuff in .profile when you have Preferences → Advanced → Shell Variables in 
+TextMate ;)
+12:52 jesperronn: So for me to learn a lesson here: I should always use 
+environment.plist and remove all custom $PATH adjustments in .profile
+12:52 allan: jesperronn: it doesn’t really matter
+12:53 allan: really, only shell and TextMate care about PATH
+12:53 allan: so whether you set it locally for each of the two apps or 
+globally makes little difference
+12:53 allan: and in a shell context editing .profile is probably easier
+12:53 allan: plus does not require re-login to have changes take effect
+12:53 allan: also, in .profile you can have “code”
+12:54 allan: e.g. you can add to your PATH, conditionally set something etc.
+12:54 allan: where environment.plist is 100% declarative
+</code></pre><p>PS. Thanks to Peter Haza (phˆ) for digging up the archived conversation.</p>
+<p>PPS. Note to self: Clean transscript from irrelevant status changes with: cat tmp.txt |grep -v &ldquo;has left&rdquo;|grep -v &ldquo;has joined&rdquo; | grep -v &ldquo;is now known as&rdquo;</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, March 10th, 2009 at 11:47 (GMT-1) and is filed under <a href="/category/justaddwater.dk/" rel="category tag">justaddwater.dk</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">5 Responses to &#8220;Textmate Path Modification — Ruby Version Issues&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-477007">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-477007" title="">March 10th, 2009 at 11:57 (GMT-1)</a> </small>
+<p>BTW&hellip; IRC and the clients I briefly tried had a big barrier of getting started. So I ended up using the web-based client Mibbit, which I was able to use immediately</p>
+<p><a href="https://www.mibbit.com">www.mibbit.com</a></p>
+<p><img src="/wp-content/uploads/2009/03/mibbit-screenshot-freenode-textmate.png" alt="" title="mibbit-screenshot-freenode-textmate" width="447" height="358">
+</p>
+
+</li>
+
+<li id="comment-477508">
+<cite><a href="http://www.littmanbros.com/kichler-lighting.html" class="url" rel="external">Kichler Lighting</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-477508" title="">March 13th, 2009 at 04:23 (GMT-1)</a> </small>
+<p>that is a weird issue. nice work figuring it out. i hope something crazy like that doesn&rsquo;t happen to me.</p>
+</li>
+
+<li class="alt" id="comment-484820">
+<cite>Ami Mahloof</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-484820" title="">April 25th, 2009 at 03:11 (GMT-1)</a> </small>
+<p>Thank you so much!!!!!!!</p>
+<p>you save my project so much time&hellip;. i was on the verge of uninstalling all my ruby gems and ruby and rails and textmate, since textmate was acting up i thought that bacause i changed my ruby path to /opt/local/bin it messsed up every thing</p>
+<p>I am so greatful!!! thank you again</p>
+<p>Ami</p>
+
+</li>
+
+<li id="comment-485450">
+<cite>Denny</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-485450" title="">May 6th, 2009 at 20:15 (GMT-1)</a> </small>
+<p>Thanks for this post. Setting the PATH in TM&rsquo;s preferences is easy enough, but I also don&rsquo;t understand why it&rsquo;s not reading my .bash_profile. The docs seem to indicate it should, and I actually had it working yesterday. But I came in this morning and TM wasn&rsquo;t seeing it anymore.</p>
+</li>
+
+<li class="alt" id="comment-485715">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-485715" title="">May 9th, 2009 at 22:15 (GMT-1)</a> </small>
+<p>@Denny wrote:</p>
+<blockquote>
+<p>I also don’t understand why it’s not reading my .bash_profile. The docs seem to indicate it should, and I actually had it working yesterday.</p>
+</blockquote>
+<p>Allan gave his version of a reply to your question</p>
+<blockquote>
+<p>12:53 allan: really, only shell and TextMate care about PATH so whether you set it locally for each of the two apps or globally makes little difference and in a shell context editing .profile is probably easier plus does not require re-login to have changes take effect also, in .profile you can have “code”. e.g. you can add to your PATH, conditionally set something etc. where environment.plist is 100% declarative</p>
+</blockquote>
+<p>BTW, you should definitely write on the IRC channel where you found it in the docs, and perhaps propose a better wording. Adressing the incorrect parts will eventually make this a better world :)</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

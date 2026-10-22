@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Groovy on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/groovy/</link>
+		<description>Recent content in Groovy on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 20 Apr 2010 12:25:23 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/groovy/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Groovy for Hudson console</title>
+				<link>https://justaddwater.dk/2010/04/20/groovy-for-hudson-console/</link>
+				<pubDate>Tue, 20 Apr 2010 12:25:23 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/20/groovy-for-hudson-console/</guid>
+				<description>&lt;p&gt;Hudson continuous integration server has a console which is good for testing scripts and access to commands that your Hudson jobs need.&lt;/p&gt;&#xA;&lt;p&gt;The hudson console only let&amp;rsquo;s you run Groovy script. To run commands on the machine, Groovy has the method &lt;code&gt;&amp;quot;string&amp;quot;.execute()&lt;/code&gt;. So now I can use this snippet to test versions of Ruby, JRuby, etc:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;def commands = [&amp;quot;ruby --version&amp;quot;, &amp;quot;gem environment&amp;quot;, &amp;quot;which ruby&amp;quot;, &amp;quot;which gem&amp;quot;, &amp;quot;jruby --version&amp;quot;]&#xA;&#xA;commands.each{&#xA;  run(it)&#xA;}&#xA;&#xA;def run(cmd) {&#xA;  //def proc = commands[1].execute()&#xA;  def proc = cmd.execute()&#xA;  proc.waitFor()&#xA;&#xA;  // Obtain status and output&#xA;  println &amp;quot;return code: ${ proc.exitValue()}&amp;quot;&#xA;  println &amp;quot;stderr: ${proc.err.text}&amp;quot;&#xA;  println &amp;quot;stdout: ${proc.in.text}&amp;quot; // *out* from the external program is *in* for groovy&#xA;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Example borrowed from and shrinkwrapped from &lt;a href=&#34;http://groovy.codehaus.org/JN1015-Collections&#34;&gt;groovy.codehaus.org/JN1015-Collections&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

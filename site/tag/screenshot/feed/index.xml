@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Screenshot on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/screenshot/</link>
+		<description>Recent content in Screenshot on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 23 Jan 2012 15:00:53 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/screenshot/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Batch Screenshots with webkit2png</title>
+				<link>https://justaddwater.dk/2012/01/23/batch-screenshots-with-webkit2png/</link>
+				<pubDate>Mon, 23 Jan 2012 15:00:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/01/23/batch-screenshots-with-webkit2png/</guid>
+				<description>&lt;p&gt;For projects I sometimes have lots of screenshots which I have to repeat whenever I change subtle things in the CSS or HTML.&lt;/p&gt;&#xA;&lt;p&gt;I ended up creating this little handy script based on webkit2png (download source)&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env sh&#xA;HOST=&amp;#34;http://localhost:8080/myproject/viewer&amp;#34;&#xA;/usr/bin/python webkit2png -F -o &amp;#34;01dashboard&amp;#34; $HOST/dashboard&#xA;/usr/bin/python webkit2png -F -o &amp;#34;02showdetail&amp;#34; $HOST/detail&#xA;/usr/bin/python webkit2png -F -o &amp;#34;03listpage&amp;#34; $HOST/list&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This created the following 3 files in my directory:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ls -1&#xA;01dashboard.png&#xA;02showdetail.png&#xA;03listpage.png&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Really simple and easy to use.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Download Pages -- IE vs. Firefox</title>
+				<link>https://justaddwater.dk/2008/08/28/download-pages-ie-vs-firefox/</link>
+				<pubDate>Thu, 28 Aug 2008 13:49:10 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/08/28/download-pages-ie-vs-firefox/</guid>
+				<description>&lt;p&gt;Here are two different download paradigms presented by &lt;a href=&#34;http://www.mozilla-europe.org/en/firefox/&#34;&gt;Firefox download page&lt;/a&gt; and &lt;a href=&#34;http://www.microsoft.com/windows/internet-explorer/beta/worldwide-sites.aspx?icid=ie8_asdf123&#34;&gt;Microsoft Internet Explorer 8 download page&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-ie8-download-crop.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-ie8-download-crop-300x260.png&#34; alt=&#34;Internet explorer 8 download page&#34; title=&#34;28-08-2008-ie8-download-crop&#34; class=&#34;size-medium wp-image-954&#34; height=&#34;260&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-ie8-download-crop-300x260.png 300w, https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-ie8-download-crop.png 445w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Internet explorer 8 download page&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;(&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-ie8-download-full.png&#34;&gt;full size&lt;/a&gt;)&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-getfirefox-crop.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-getfirefox-crop-300x226.png&#34; alt=&#34;Firefox download page&#34; title=&#34;28-08-2008-getfirefox-crop&#34; class=&#34;size-medium wp-image-952&#34; height=&#34;226&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-getfirefox-crop-300x226.png 300w, https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-getfirefox-crop.png 445w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Firefox download page&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;(&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-getfirefox-full.png&#34;&gt;full size&lt;/a&gt;)&lt;/p&gt;&#xA;&lt;p&gt;It is interesting to see the difference in prioritation of the actions. Microsoft makes all download actions equally important. Which results in 20 download icons that all fight to drag attention.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Qlockwise on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/qlockwise/</link>
+		<description>Recent content in Qlockwise on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 13 Nov 2007 21:35:34 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/qlockwise/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Usability work on internal capgemini application</title>
+				<link>https://justaddwater.dk/2007/11/13/usability-work-on-internal-capgemini-application/</link>
+				<pubDate>Tue, 13 Nov 2007 21:35:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/11/13/usability-work-on-internal-capgemini-application/</guid>
+				<description>&lt;p&gt;I have recently been working with usability an internal timereporting system in Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;Due to time and scope limitations, there has been focus on the &amp;ldquo;low hanging fruit&amp;rdquo;. Here are some screenshots that I used originally to point out usability issues:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/11/timereporting-total-issues-large.png&#34; title=&#34;timereporting-total-issues&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/11/timereporting-total-issues-thumbnail.png&#34; alt=&#34;timereporting-total-issues-thumbnail.png&#34; width=&#34;448&#34; height=&#34;331&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;(click on image for large version)&lt;/p&gt;&#xA;&lt;p&gt;Lessons learned&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Screenshots:&lt;/strong&gt; Addressing usability issues directly on screenshots is a low-cost, effective way of communicating. Also it gives other team members a tool to show to the superusers/ambassadors, in order to explain the problems.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Constraints:&lt;/strong&gt; The usability improvements have suffered from many constraints: Choice of technology, choice of very complex existing data model, lockdown to a very old design that required all action buttons located at a menubar on the top of the screen.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Legacy design decisions:&lt;/strong&gt; Not redesigning but trying to keep the pages appear the same is a limitation that made us drop quite a lot of the usability improvements. So it was a shame that it was not possible to convince the project owner to be more free on the design: Fixed width and more focus on the primary actions would have been good.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Using statistics to underpin our conclusions&lt;/strong&gt; was very effective. We had stats from 98,000 timereports submitted by 3,500 people in 5 companies in 4 countries. We used these statistics to base some of the conclusions on: Which fields could be hidden by default? How many projects did people usually choose from, etc.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Behaviour over opinions:&lt;/strong&gt; The statistics were very effective, focusing the different organizations to work in the same direction: Previous there had been discussion over the theme: &amp;ldquo;But our organisation /team /project is special&amp;rdquo;. They stopped because the numbers could prove that some organisations thought all employees did a certain thing always. The numbers could prove that only for instance 30% of the employees had the issue. So we could argue that changing would only benefit 30% and hurt 70%.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;There will probably be more improvements in the usability area, but for now, this was what we were able to do with the limited amount of time, resources and wishes for usability improvements that were possible.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

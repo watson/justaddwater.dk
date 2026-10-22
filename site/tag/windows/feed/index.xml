@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Windows on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/windows/</link>
+		<description>Recent content in Windows on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 12 Jul 2011 21:34:10 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/windows/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Windows delete all tmp files command</title>
+				<link>https://justaddwater.dk/2011/07/12/windows-delete-all-tmp-files-command/</link>
+				<pubDate>Tue, 12 Jul 2011 21:34:10 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/07/12/windows-delete-all-tmp-files-command/</guid>
+				<description>&lt;p&gt;Just a quick note to self about this tip i found. It is a Windows (XP) helpful command line snippet that removes all your temporary files.&lt;/p&gt;&#xA;&lt;p&gt;Delete all files in temp folder:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;DEL /F /S /Q %TEMP%&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Taken from the &amp;ldquo;&lt;a href=&#34;http://ss64.com/nt/del.htm&#34;&gt;A-Z Index of the Windows CMD command line&lt;/a&gt;&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Easy delete all .svn Subfolders in Windows Explorer</title>
+				<link>https://justaddwater.dk/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/</link>
+				<pubDate>Tue, 01 Mar 2011 11:08:51 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/</guid>
+				<description>&lt;p&gt;I had to repair a flawed Subversion repository recently (not all files were committed). I had my local repository checked out. This was the flawed part, containing only parts of the folders and files it should.&lt;/p&gt;&#xA;&lt;p&gt;Then, I got a zip file from the machine where it was working. Problem: It contained .svn folders from the other developer. So to merge these i did the following workflow:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Delete all .svn folders from other developer&amp;rsquo;s zip&lt;/li&gt;&#xA;&lt;li&gt;Move other developers folder over on top of my local install.&lt;/li&gt;&#xA;&lt;li&gt;Commit all missing files&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Of course this will only work if there are no .svn folders in other developer&amp;rsquo;s file, because then svn authentication, paths, etc. will be messed up, and commit will fail.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Windows SVN pre-commit-hook</title>
+				<link>https://justaddwater.dk/2010/06/10/windows-svn-pre-commit-hook/</link>
+				<pubDate>Thu, 10 Jun 2010 09:23:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/06/10/windows-svn-pre-commit-hook/</guid>
+				<description>&lt;p&gt;At a current project I work on, we use a Windows server to run our subversion repository.&lt;/p&gt;&#xA;&lt;p&gt;I wanted to set up the pre-commit hook so that commits with empty comment are automatically rejected.&lt;/p&gt;&#xA;&lt;p&gt;All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal).&lt;/p&gt;&#xA;&lt;p&gt;Here is a the pre-commit hook rewritten as a windows .bat file.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;pre-commit.bat — &lt;a href=&#34;https://gist.github.com/432704&#34;&gt;gist on GitHub&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

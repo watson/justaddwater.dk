@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Handy JavaScript Cookie Editor · justaddwater.dk</title>
+<meta name="description" content="2 years ago I wrote a small javascript to view, edit and delete cookies.
+The really cool thing about this user interface is the inline editing of cookie names …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/01/27/bad-usability-calendar-2007-finally-ready/" rel="prev">Bad Usability Calendar 2007 Finally Ready</a></div>
+<div class="alignright"><a href="/2007/01/31/why-ajax-failed-then-succeeded/" rel="next">Why AJAX Failed (Then Succeeded)</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-01-29"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="JavaScript"></span><span hidden data-pagefind-filter="category[data-v]" data-v="justaddwater.dk"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="2 years ago I wrote a small javascript to view, edit and delete cookies. The really cool thing about this user interface is the inline editing of cookie names and values. I really like the principle that you hover the value that you inspect, can see that it’s editable. Then click directly and the text [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 29"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="9"></span>
+<h2 data-pagefind-meta="title">Handy JavaScript Cookie Editor</h2>
+<div class="entry">
+<p>2 years ago I wrote a small javascript to view, edit and delete cookies.</p>
+<p>The really cool thing about this user interface is the <strong>inline editing of cookie names and values</strong>. I really like the principle that you hover the value that you inspect, can see that it&rsquo;s editable. Then click directly and the text is converted to a text field that is automatically saved when you leave the field.</p>
+<p>Andrei from New York wrote me and reminded me the handy little cookie editor, so after making some minor modifications, I decided to republish it.</p>
+<p>Well, actually, I&rsquo;ve spent some hours getting more and more puzzled on some bugs and limitations in the code.</p>
+<p>I won&rsquo;t hesitate anymore, but rather give you the tool including some known issues. Please feel free to make suggestions or fix.</p>
+<h3 id="known-issues">Known issues:</h3>
+<p>All cookies set with the tool expires end-of-session. This could be easily fixed, but I&rsquo;d like to implement it in a way so that it works elegantly and simple in the user interface.</p>
+<p>Cookies with domain set differently cannot be edited or deleted. This is a problem on many big portal sites. For instance, all cookies on Yahoo! are set for <code>.yahoo.com</code>. But the front-page is located at <code>www.yahoo.com</code> (the www subdomain of yahoo.com), which means that my tool is not allowed to edit or remove the cookie.</p>
+<p><strong>Goto next page and bookmark this link in your browser: <a href="/wp-content/uploads/2007/01/cookieeditor.html" title="cookieeditor.html">cookie editor page with bookmarklet</a>.</strong></p>
+
+
+<p><small>Technorati Tags: <a href="/tag/javascript/" rel="tag">javascript</a>, bookmarklet, favelet, cookie editor, cookies, <a href="/tag/editor/" rel="tag">editor</a>, cookie</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, January 29th, 2007 at 23:50 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/javascript/" rel="category tag">JavaScript</a>, <a href="/category/justaddwater.dk/" rel="category tag">justaddwater.dk</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">9 Responses to &#8220;Handy JavaScript Cookie Editor&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-72576">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-72576" title="">January 29th, 2007 at 23:58 (GMT-1)</a> </small>
+<p>Hmm. Something went wrong as i posted. Probably because of single quotes or other &ldquo;dangerous&rdquo; signs in the bookmarklet.</p>
+<p>Looking through the source reveals some mysteries:</p>
+<p>First 3 single quotes are just fine. After that, every single quote is translated to &amp;8216; and &amp;8217;. The ending double-quote is then translated into &amp;8221; which evenually breaks this post. I will reorder the post right now to it breaks less.</p>
+
+</li>
+
+<li id="comment-72601">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-72601" title="">January 30th, 2007 at 00:17 (GMT-1)</a> </small>
+<p>Original source file available here:<br>
+<a href="http://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.js">http://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.js</a></p>
+<p>File with link you can bookmark:<br>
+<a href="http://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.html">http://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.html</a></p>
+
+</li>
+
+<li class="alt" id="comment-72935">
+<cite><a href="http://www.baekdal.com" class="url" rel="external">Thomas Baekdal</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-72935" title="">January 30th, 2007 at 11:25 (GMT-1)</a> </small>
+<p>Does not work in IE7. The pop-up blocker stops it from opening :)</p>
+</li>
+
+<li id="comment-72990">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-72990" title="">January 30th, 2007 at 12:38 (GMT-1)</a> </small>
+<p>Thomas:<br>
+I saw noticed the annoyance. And there should probably be an adjustment as to how the window is opened. Any ideas, suggestions, examples of what would work?</p>
+<p>Quick workaround is to &ldquo;temporarily allow popups from this site&rdquo; in the IE7 information bar.</p>
+
+</li>
+
+<li class="alt" id="comment-73121">
+<cite><a href="http://www.baekdal.com" class="url" rel="external">Thomas Baekdal</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-73121" title="">January 30th, 2007 at 15:43 (GMT-1)</a> </small>
+<p>Instead of opening a window, one way might to add a DIV on the page that includes the information (and is placed above whatever is on the page).</p>
+</li>
+
+<li id="comment-73160">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-73160" title="">January 30th, 2007 at 16:35 (GMT-1)</a> </small>
+<p>With respect to opening a new window, I prefer a cookie viewer/editor to live in its own window. Changes in cookies will affect all windows/sessions to the given website, so that&rsquo;s why.</p>
+<p>Also I like that I can reload the webpage and keep the cookie window open. Which again are arguments for a seperate window for the cookie editor.</p>
+
+</li>
+
+<li class="alt" id="comment-73315">
+<cite><a href="http://arjaneising.nl" class="url" rel="external">Arjan Eising</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-73315" title="">January 30th, 2007 at 22:53 (GMT-1)</a> </small>
+<p>Heey thanks! This bookmarklet just does what the Webdeveloper toolbar doesn&rsquo;t&hellip;</p>
+</li>
+
+<li id="comment-85772">
+<cite><a href="http://www.auldridges.com" class="url" rel="external">Jim</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-85772" title="">February 17th, 2007 at 18:49 (GMT-1)</a> </small>
+<p>&ldquo;Please feel free to make suggestions&rdquo;</p>
+<p>I wrote a <a href="http://jaaulde.com/test_bed/cookieLib/">JavaScript cookie handling library</a> that you could take a look at if you still felt your tool needed some corrections. While I don&rsquo;t see anyway to overcome the cross domain restrictions, I think you could easily modify the cookie expirations.</p>
+<p>Jim</p>
+
+</li>
+
+<li class="alt" id="comment-425822">
+<cite><a href="http://www.myictel.co.cc" class="url" rel="external">Louis</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-425822" title="">June 23rd, 2008 at 20:33 (GMT-1)</a> </small>
+<p>Hi Jesper</p>
+<p>Thanks for your great Bookmarklet, I&rsquo;ve been collecting some for a few years but your&rsquo;s is really useful.</p>
+<p>Here&rsquo;s a question I am hoping you (or one of your readers) might be able to assist with:</p>
+<p>I&rsquo;m running a blog which links to a referral program which uses a cookie:</p>
+<p><a href="http://www.ictel.co.za/11405">http://www.ictel.co.za/11405</a><br>
+(where 11405 is saved as the cookie called &ldquo;rewardcookie&rdquo;)</p>
+<p>check it out with your cookie editor bookmarklet</p>
+<p>Is there a way for me to write this cookie while the user is reading my blog at wordpress or another blogging service (currently wordpress)<br>
+before they visit <a href="https://www.ictel.co.za/11405">www.ictel.co.za/11405</a> ?</p>
+<p>The reason that I ask is that I have seen a few people contacting me through my blog saying that they joined my &ldquo;income network&rdquo; , but in fact they did not.</p>
+<p>They read the blog and remembered the site ictel.co.za, and didn&rsquo;t click through directly from my blog, thus not writing the reward cookie (dispite my best efforts to make them do so&hellip;)</p>
+<p>If I am able to push this rewardcookie from my different blogs about the service or possibly online adverts that would be great.</p>
+<p>Do you know if this is possible, and how this can be doen either in javascript or through a online ad?</p>
+<p>Any comments / or other methods as well as caveats about this approach will be much appreciated.</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

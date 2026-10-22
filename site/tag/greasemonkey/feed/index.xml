@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Greasemonkey on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/greasemonkey/</link>
+		<description>Recent content in Greasemonkey on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 23 Sep 2009 12:28:46 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/greasemonkey/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Internal Apps In Firefox</title>
+				<link>https://justaddwater.dk/2009/09/23/internal-apps-in-firefox/</link>
+				<pubDate>Wed, 23 Sep 2009 12:28:46 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/23/internal-apps-in-firefox/</guid>
+				<description>&lt;p&gt;This post is probably highly irrelevant unless you work at Capgemini and want to use the &lt;a href=&#34;http://applications.capgemini.se/&#34;&gt;internal nordic applications&lt;/a&gt; in Firefox.&lt;/p&gt;&#xA;&lt;p&gt;Read on if you want to access systems like CTR (time reporting), Event calendar, Skills database, PDR, Project forms or similar applications in Firefox.&lt;/p&gt;&#xA;&lt;p&gt;Problem is that the systems are not accessible at all if you&amp;rsquo;re not logged in. The reason is some extremely malformed HTML. Here is the entire content of the HTML page sent out:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Greasemonkey Debugging Tips: How to Determine Why your Script Is Not Running</title>
+				<link>https://justaddwater.dk/2009/09/18/greasemonkey-debugging-tips-how-to-determine-why-your-script-is-not-running/</link>
+				<pubDate>Fri, 18 Sep 2009 22:27:03 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/18/greasemonkey-debugging-tips-how-to-determine-why-your-script-is-not-running/</guid>
+				<description>&lt;p&gt;After running into some trouble with getting a Greasemonkey to work, I just wanted to share this list with you of things to look out for when your Greasemonkey script does not seem to run. What are the common pitfalls you see around. I&amp;rsquo;ll gladly add them here.&lt;/p&gt;&#xA;&lt;p&gt;I am trying to get a Greasemonkey script to run on a page. But it does not. How do you debug scripts?&lt;br&gt;&#xA;What are the smallest possible baby-steps to start a new Greasemonkey script?&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruby on Rails · justaddwater.dk</title>
+<meta name="description" content="Usability, web development and blogging, 2005–2016. An archive.">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="home-bg">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="narrowcolumn">
+
+<h2 class="pagetitle">Posts Tagged &#8216;Ruby on Rails&#8217;</h2>
+<div class="navigation">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>
+
+<div class="post">
+	<h3 id="post-1128"><a href="/2009/09/01/selection-groups-in-rails-made-less-cumbersome/" rel="bookmark" title="Permanent Link to Selection Groups in Rails made less cumbersome">Selection Groups in Rails made less cumbersome</a></h3>
+	<small>Tuesday, September 1st, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>I made this addition today after (once again) struggling with option groups for a nested Rails model. My solution: create a new tag for FormOptionsHelper: grouped_select http://gist.github.com/179075 form_options_helper_to_add_grouped_select.rb — gist on GitHub ### lib/form_options_helper.rb require ‘action_view/helpers/form_helper’ module ActionView module Helpers module FormOptionsHelper ## def grouped_select(object, method, choices, options = {}, html_options = {}) InstanceTag.new(object, method, [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/code/" rel="tag">Code</a>, <a href="/tag/rails/" rel="tag">rails</a>, <a href="/tag/ruby-on-rails/" rel="tag">Ruby on Rails</a>, <a href="/tag/web-development/" rel="tag">Web Development</a><br /> Posted in <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a> | <span>Comments Off<span class="screen-reader-text"> on Selection Groups in Rails made less cumbersome</span></span></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1098"><a href="/2009/05/29/shorthand-to-clean-up-installed-rubygems-but-dont-cleanup-rails/" rel="bookmark" title="Permanent Link to Shorthand to clean up installed Rubygems (but don’t cleanup Rails)">Shorthand to clean up installed Rubygems (but don’t cleanup Rails)</a></h3>
+	<small>Friday, May 29th, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>I trimmed my installed Rubygems on my local development machine. The command “`sudo gem cleanup`” is just for that. Only problem: What about my older Rails apps that require a specific version of Rails, ActiveRecord, etc.? My solution: `gem list –no-versions | grep -v “^active” | grep -v “^action” | grep -v “^rails$” | xargs [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/rails/" rel="tag">rails</a>, <a href="/tag/ruby-on-rails/" rel="tag">Ruby on Rails</a>, <a href="/tag/rubygems/" rel="tag">Rubygems</a><br /> Posted in <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>, <a href="/category/web-development/" rel="category tag">Web Development</a> | <span>Comments Off<span class="screen-reader-text"> on Shorthand to clean up installed Rubygems (but don&#39;t cleanup Rails)</span></span></p>
+</div>
+
+<div class="post">
+	<h3 id="post-1036"><a href="/2009/02/25/html-guide-textmate-snippets-open-sourced/" rel="bookmark" title="Permanent Link to HTML Guide Textmate Snippets Open Sourced">HTML Guide Textmate Snippets Open Sourced</a></h3>
+	<small>Wednesday, February 25th, 2009 by Jesper Rønn-Jensen</small>
+	<div class="entry">
+		<p>One year ago I published “Design Guide or HTML Markup Guide” with link to the HTML guide we did for the biggest Danish business internet portal. The HTML guide is a really useful tool for every public authority that must deliver applications for the portal. As a help for my own work back then, I [&hellip;]</p>
+	</div>
+	<p class="postmetadata">Tags: <a href="/tag/htmlguide/" rel="tag">htmlguide</a>, <a href="/tag/portals/" rel="tag">portals</a>, <a href="/tag/productivity/" rel="tag">Productivity</a>, <a href="/tag/ruby-on-rails/" rel="tag">Ruby on Rails</a>, <a href="/tag/virk.dk/" rel="tag">virk.dk</a>, <a href="/tag/web-development/" rel="tag">Web Development</a>, <a href="/tag/web-standards/" rel="tag">Web Standards</a><br /> Posted in <a href="/category/web-development/" rel="category tag">Web Development</a>, <a href="/category/web-standards/" rel="category tag">Web Standards</a> | <span>Comments Off<span class="screen-reader-text"> on HTML Guide Textmate Snippets Open Sourced</span></span></p>
+</div>
+
+
+<div class="navigation">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>
+
+</div>
+<div id="sidebar"><ul>
+<li id="search-2" class="widget widget_search"><form method="get" id="searchform" action="/search/">
+<div><input type="text" value="" name="q" id="s">
+<input type="submit" id="searchsubmit" value="Search">
+</div>
+</form>
+</li>
+<li id="text-1" class="widget widget_text"><h2 class="widgettitle">Authors</h2>
+<div class="textwidget"><p>This blog is written by Jesper R&oslash;nn-Jensen from NineConsult and Thomas Watson Steen from 3dbyggeri danmark.</p>
+<p><a href="/about-the-authors/">About the authors</a></p></div>
+</li>
+<li id="text-2" class="widget widget_text"><h2 class="widgettitle">Subscribe to this Blog</h2>
+<div class="textwidget"><p>
+Subscribe <a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=520581">by e-mail</a> or get our feed directly to your feed reader:
+</p>
+<p style="text-align: center">
+<a href="/feed/" title="Subscribe to our feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"></a>
+</p></div>
+</li>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+<ul>
+<li class="page_item page-item-93"><a href="/contact-us/">Contact us</a></li>
+<li class="page_item page-item-57"><a href="/blogtools/">Justaddwater.dk tools page</a></li>
+<li class="page_item page-item-235"><a href="/wordpress-plugins/">WordPress Plugins</a></li>
+<li class="page_item page-item-388"><a href="/passionate-users-printing/">Creating Passionate Users website printing problems solved in CSS</a></li>
+<li class="page_item page-item-276"><a href="/notes-elements-of-user-experience/">Jesper&#8217;s Notes, &quot;Elements of User Experience&quot;</a></li>
+</ul>
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

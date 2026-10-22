@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dilemma — Updated Numbers or Long Response Times · justaddwater.dk</title>
+<meta name="description" content="Paypal showed me this splash screen when logging in:
+I think this is a useful design pattern that can be valuable to most of our clients dealing with …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/01/08/lean-software-development-video-mary-poppendieck/" rel="prev">Lean Software Development Video Mary Poppendieck</a></div>
+<div class="alignright"><a href="/2008/01/13/rails-localization-plugin-release-version-09/" rel="next">Rails Localization Plugin Release Version 0.9</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-01-11"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Performance"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Usability"></span><span hidden data-pagefind-filter="category[data-v]" data-v="User experience"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Paypal showed me this splash screen when logging in: I think this is a useful design pattern that can be valuable to most of our clients dealing with time-sensitive data. It is time-consuming for an application to check if there are new payments on every request. This check is better off being uncoupled from the [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 11"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="2"></span>
+<h2 data-pagefind-meta="title">Dilemma — Updated Numbers or Long Response Times</h2>
+<div class="entry">
+<p>Paypal showed me this splash screen when logging in:</p>
+<p><a href="/wp-content/uploads/2008/01/paypal-account-unsync-notice.png" title="paypal-account-unsync-notice.png"><img src="/wp-content/uploads/2008/01/paypal-account-unsync-notice-thumb.png" alt="paypal-account-unsync-notice-thumb.png" width="391" height="275">
+</a></p>
+<p>I think this is a useful design pattern that can be valuable to most of our clients dealing with time-sensitive data.</p>
+<p>It is time-consuming for an application to check if there are new payments on every request. This check is better off being uncoupled from the actual user request. Then, the check should be handled backend by a cron job or similar every second, minute, hour or whatever suits the data in the system.</p>
+<p>The Paypal example has these advantages:</p>
+<ul>
+<li>Faster response times &ndash; does not wait for a backend account check</li>
+<li>Server less sensitive for extreme load because each request uses less cpu power</li>
+<li>Server can handle more users because each request ends faster</li>
+</ul>
+<p>Any other pros or cons you like to add?</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/usability/" rel="tag">usability</a>, performance, <a href="/tag/user-experience/" rel="tag">user experience</a>, paypal, response time</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Friday, January 11th, 2008 at 13:05 (GMT-1) and is filed under <a href="/category/performance/" rel="category tag">Performance</a>, <a href="/category/usability/" rel="category tag">Usability</a>, <a href="/category/user-experience/" rel="category tag">User experience</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to &#8220;Dilemma — Updated Numbers or Long Response Times&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-389214">
+<cite>Lee Aylward</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-389214" title="">January 12th, 2008 at 01:52 (GMT-1)</a> </small>
+<p>One con that comes to mind is that with a cron job you would end up generating a Recent Activity list for people who aren&rsquo;t going to be visiting the site any time soon. I rarely check my papal account, so it seems incredibly wasteful for them to generate any lists for me or people like me (of which I predict there are millions).</p>
+</li>
+
+<li id="comment-457991">
+<cite><a href="http://www.zapatosfiesta.es" class="url" rel="external">zapatos fiesta</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-457991" title="">November 30th, 2008 at 15:34 (GMT-1)</a> </small>
+<p>update numbers use to be the best choice.</p>
+<p>its true that the crisis make everythign harder but we should forget that people should have all the information posible.</p>
+<p>eveybody should get more culture and this is a little step to get it</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

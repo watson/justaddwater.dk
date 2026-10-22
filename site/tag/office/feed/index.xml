@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Office on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/office/</link>
+		<description>Recent content in Office on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 05 Jan 2011 20:41:43 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/office/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Automatic Excel Time Format Without Colon in Input</title>
+				<link>https://justaddwater.dk/2011/01/05/automatic-excel-time-format-without-colon-in-input/</link>
+				<pubDate>Wed, 05 Jan 2011 20:41:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/01/05/automatic-excel-time-format-without-colon-in-input/</guid>
+				<description>&lt;p&gt;For a simple Excel sheet time reporting, i needed to enter hours every day for arrival and departure time.&lt;/p&gt;&#xA;&lt;p&gt;Excel is not so smart about the time format. For instance I need to enter &amp;ldquo;9:00&amp;rdquo; for nine in the morning. I wanted just to enter &amp;ldquo;900&amp;rdquo;, and let the excel sheet format the data correctly itself.&lt;/p&gt;&#xA;&lt;p&gt;I found a working solution on PC Mag: &amp;ldquo;&lt;a href=&#34;http://www.pcmag.com/article2/0,2817,2316755,00.asp&#34;&gt;Easy Date and Time Entry in Excel Tips&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Speaking on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/speaking/</link>
+		<description>Recent content in Speaking on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 27 Apr 2010 13:27:55 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/speaking/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Capgemini SmartLunch: Cucumber for Automated Acceptance Testing</title>
+				<link>https://justaddwater.dk/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing/</link>
+				<pubDate>Tue, 27 Apr 2010 13:27:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing/</guid>
+				<description>&lt;p&gt;Today I did an internal presentation on how we used Cucumber as testing framework on several recent occasions.&lt;/p&gt;&#xA;&lt;p&gt;The presentation was held in our usual Capgemini SmartLunch format: People can eat and learn in their lunchbreak. External visitors are welcome. Duration 30-45 minutes including questions.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.pdf&#34;&gt;pres 2010-04-27-cucumber&lt;/a&gt; (573KB pdf format)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.key_.zip&#34;&gt;pres 2010-04-27-cucumber.key&lt;/a&gt; (782KB keynote format)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Internal Capgemini Scrum Presentation</title>
+				<link>https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/</link>
+				<pubDate>Sat, 08 Mar 2008 19:43:42 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/</guid>
+				<description>&lt;p&gt;If you understand Danish, then this internal presentation might be something for you.&lt;/p&gt;&#xA;&lt;p&gt;Capgemini Denmark lunchbag session explaining &amp;ldquo;What is Scrum&amp;rdquo;, &amp;ldquo;how to Scrum&amp;rdquo;, &amp;ldquo;Why Scrum&amp;rdquo;, recorded Friday March 7th.&lt;/p&gt;&#xA;&lt;p&gt;Presenter is my colleague Jakob Schmidt Sørensen, Capgemini Denmark. He asked me to help him out keep track of time and draw the burndown chart during the presentation.&lt;br&gt;&#xA;Note that the entire presentation is done on a scrumboard with a burndown chart being constantly updated during the 40 minute presentation. Actually, this was the rerun of a similar presentation one week earlier: The first one was quite popular and several people encouraged Jakob to redo the presentation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Busy Preparing RailsConf Presentation</title>
+				<link>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</link>
+				<pubDate>Tue, 11 Sep 2007 14:31:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</guid>
+				<description>&lt;p&gt;For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.&lt;/p&gt;&#xA;&lt;img src=&#34;http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg&#34; alt=&#34;Railsconf speaker 2007&#34; height=&#34;125&#34; width=&#34;125&#34;&gt;&#xA;&#xA;&lt;p&gt;At the presentation we will introduce a Ruby on Rails plugin that can create the foundation for a local Rails app based on forms scraped from a remote application. In our case, an internal application used for timereporting in Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;My head is too ful of all the details in the presentation but fact is, that we&amp;rsquo;re running two trials on the presentation this Thursday the 13th in our Capgemini office in Copenhagen, Denmark.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Presentation for corporate weblogging event</title>
+				<link>https://justaddwater.dk/2006/06/13/weblog-event/</link>
+				<pubDate>Tue, 13 Jun 2006 07:30:08 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/13/weblog-event/</guid>
+				<description>&lt;p&gt;This morning we&amp;rsquo;re speaking in about corporate weblogs in Copenhagen, Denmark. It’s hosted by the &lt;a href=&#34;http://www.itb.dk/site.asp?p=51&#34;&gt;Danish IT Industry Association&lt;/a&gt;, and We’ll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;The presentation is in Danish. More info on previous blog post &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/&#34; title=&#34;Permanent Link: Speaking on Corporate Weblogging event&#34;&gt;Speaking on Corporate Weblogging event&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Powerpoint version: &lt;a href=&#34;https://justaddwater.dk/wp-content/pres_2006-06-13_blogging.ppt&#34; title=&#34;Capgemini justaddwater.dk blogging 2006-06-13, 2.1MB Powerpoint presentation&#34;&gt;Capgemini og Justaddwater.dk&lt;/a&gt; (2.1MB)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My Talk at Reboot8: Prototyping</title>
+				<link>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</link>
+				<pubDate>Thu, 01 Jun 2006 11:27:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</guid>
+				<description>&lt;p&gt;Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.&lt;/p&gt;&#xA;&lt;p&gt;Topic: Prototype driven development with Ruby on Rails, and demo of the application we made at Capgemini with the Danish public Agency of Companies and Commerce.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Presentation&lt;/strong&gt; (Powerpoint format) for download here:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt&#34;&gt;Prototype driven development with Ruby on Rails: Powerpoint version (1.11 MB)&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Speaking on Corporate Weblogging event</title>
+				<link>https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/</link>
+				<pubDate>Mon, 15 May 2006 10:14:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/</guid>
+				<description>&lt;p&gt;June 13, Thomas and I are invited to speak at an event about corporate weblogs in Copenhagen, Denmark. It&amp;rsquo;s hosted by the &lt;a href=&#34;http://www.itb.dk/site.asp?p=51&#34;&gt;Danish IT Industry Association&lt;/a&gt;, and We&amp;rsquo;ll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini. Also, there will be a chance to hear &lt;a href=&#34;http://bootstrapping.net/&#34;&gt;Thomas Madsen-Mygdal&lt;/a&gt;, &lt;a href=&#34;http://asynkron.dk&#34;&gt;Andreas Johannsen&lt;/a&gt; and the CEO of Sun, Denmark Peter Rindsig (&lt;a href=&#34;http://www.google.com/search?hl=en&amp;amp;q=%22peter+rindsig%22+blog&#34;&gt;who hasn&amp;rsquo;t got a blog&lt;/a&gt;).&lt;br&gt;&#xA;If you want to attend the event, you can find more details (in Danish) in &lt;a href=&#34;http://www.itb.dk/site.asp?p=853&amp;amp;aid=47&#34; title=&#34;ITB.dk kalender: corporate weblogs&#34;&gt;the program&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

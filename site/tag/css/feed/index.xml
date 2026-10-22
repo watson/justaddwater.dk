@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>CSS on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/css/</link>
+		<description>Recent content in CSS on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 21 Oct 2009 14:29:17 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/css/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Script identifying CSS shorthand possibilities</title>
+				<link>https://justaddwater.dk/2009/10/21/script-identifying-css-shorthand-possibilities/</link>
+				<pubDate>Wed, 21 Oct 2009 14:29:17 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/10/21/script-identifying-css-shorthand-possibilities/</guid>
+				<description>&lt;p&gt;For my own convenience I created this script to identify css files where colors like #aaaaaa can be rewritten in the short form #aaa&lt;/p&gt;&#xA;&lt;p&gt;(saves bandwith, but can also make it easier to identify similar colors)&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;grep -nE &#39;#([0-9a-f])\1([0-9a-f])\2([0-9a-f])\3&#39; **/*.css&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;output from a random project:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;css/actions.css:19:  color: #000000;&#xA;css/actions.css:38:  color: #000000 !important;&#xA;css/actions.css:53:  color: #ffffff !important;&#xA;css/admin.css:90:   color: #cccccc;&#xA;css/admin.css:94:   color: #aaaaaa !important;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>Print CSS Background Logo Hack</title>
+				<link>https://justaddwater.dk/2009/09/29/print-css-background-logo-hack/</link>
+				<pubDate>Tue, 29 Sep 2009 11:08:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/29/print-css-background-logo-hack/</guid>
+				<description>&lt;p&gt;I learned this nice little hack to bypass the standard browser setting that normally prevents background images from being printed.&lt;/p&gt;&#xA;&lt;p&gt;The hack makes use of converting the background-image to a list item with an image.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;/* Hack, to trick the browser to print another logo &#xA;   Unfortunetaly, Firefox on Windows doesn&#39;t show logo on print &#xA;    — see Mozilla bug 133490 for further details */&#xA;#header {&#xA;  display: list-item; &#xA;  list-style-image: url(../images/logo_print.gif); &#xA;  list-style-position: inside;&#xA;    margin: 0 !important;&#xA;  padding: 0 !important;&#xA;    height: 50pt;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;This way, you don&amp;rsquo;t have to fall back to inserting an image tag in your HTML for the logo. Instead, just have an a element that contains the corporate logo text, and nothing all.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>CSS Styling Buttons Problem with Underlined Text</title>
+				<link>https://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</link>
+				<pubDate>Wed, 16 Sep 2009 10:32:56 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</guid>
+				<description>&lt;p&gt;I ran into the challenge the other day to style a&amp;lt;button&amp;gt; element to make it look like a link (with underline and everything).&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately, the &amp;lt;button&amp;gt; element does not react to text-decoration: underline;&lt;/p&gt;&#xA;&lt;p&gt;But according to &lt;a href=&#34;http://csscreator.com/node/25902&#34; title=&#34;CSS Forum: [Solved?] Doctype prevents underline in button input&#34;&gt;a discussion at the CSS Creator forum&lt;/a&gt;, there is a way out:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I was just messing around with it and for some reason this doesn&amp;rsquo;t work:&lt;br&gt;&#xA;&lt;code&gt;input {text-decoration:underline;}&lt;/code&gt;&lt;br&gt;&#xA;but this does:&lt;br&gt;&#xA;&lt;code&gt;input {text-decoration:underline;float:left;}&lt;/code&gt;&lt;br&gt;&#xA;and&lt;br&gt;&#xA;&lt;code&gt;input{text-decoration:underline;display:block;}&lt;/code&gt;&lt;br&gt;&#xA;and&lt;br&gt;&#xA;&lt;code&gt;input{text-decoration:underline;position:absolute;}&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t ask me&amp;hellip; I can&amp;rsquo;t explain this one.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>IE CSS bug: Background-image Gap To Border</title>
+				<link>https://justaddwater.dk/2008/11/05/ie-css-bug-background-image-gap-to-border/</link>
+				<pubDate>Wed, 05 Nov 2008 11:11:57 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/11/05/ie-css-bug-background-image-gap-to-border/</guid>
+				<description>&lt;p&gt;Workaround needed for this annoying bug:&lt;/p&gt;&#xA;&lt;p&gt;Background-image is 1px away from border on buttons.&lt;/p&gt;&#xA;&lt;p&gt;I have buttons that are styled with border and background-image. Must work in IE7. But there is a small 1px gap between border and the background-image.&lt;/p&gt;&#xA;&lt;p&gt;Look at this screenshot from IE7:&lt;br&gt;&#xA;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.png&#34; alt=&#34;&#34; title=&#34;ie7css-flaw-background-image-on-buttons&#34; class=&#34;aligncenter size-full wp-image-964&#34; height=&#34;169&#34; width=&#34;500&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://justaddwater.dk/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.html&#34;&gt;ie7css-flaw-background-image-on-buttons&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Problem is that I have no idea if there is a workaround for this annoying bug. Also, my google searches find no relevant articles (apart from one hidden on &lt;a href=&#34;http://www.experts-exchange.com/Web_Development/Web_Languages-Standards/CSS/Q_23641611.html&#34;&gt;experts-exchange&lt;/a&gt; where I have no access).&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Configuration on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/configuration/</link>
+		<description>Recent content in Configuration on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 10 Mar 2011 22:01:03 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/configuration/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Challenges Configuring Hudson Emails</title>
+				<link>https://justaddwater.dk/2011/03/10/challenges-configuring-hudson-emails/</link>
+				<pubDate>Thu, 10 Mar 2011 22:01:03 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/03/10/challenges-configuring-hudson-emails/</guid>
+				<description>&lt;p&gt;My recent Stackoverflow question &lt;a href=&#34;http://stackoverflow.com/questions/5181502/how-to-use-hudson-parameterized-build-values-in-an-email&#34;&gt;How to use Hudson “Parameterized Build” values in an email&lt;/a&gt; earned me the &amp;ldquo;tumbleweed&amp;rdquo; badge because it had almost no views (39 in a week), got no answers and no votes. Therefore I decided to offer 200 of my reputation points for a usable answer.&lt;/p&gt;&#xA;&lt;p&gt;But despite the high bounty of 200 geek points, i doubt that anybody notices it: The question is buried back at fourth page, near the bottom of 193 other bounty questions.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

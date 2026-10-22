@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resolve Symlinks When Copying Files With Rsync · justaddwater.dk</title>
+<meta name="description" content="In a project I&rsquo;m working on there is a structure where images and css are common for some of the subprojects. One folder has static pages for testing HTML …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/10/05/tiny-script-to-extract-html-structure-from-page/" rel="prev">Extract HTML Structure From Page With Simple Script</a></div>
+<div class="alignright"><a href="/2009/10/21/script-identifying-css-shorthand-possibilities/" rel="next">Script identifying CSS shorthand possibilities</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-10-15"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="In a project I’m working on there is a structure where images and css are common for some of the subprojects. One folder has static pages for testing HTML &#43; CSS layout. This folder has some symlinks to the /css folder and /images folder. Now, on my Mac during normal development, this works perfectly. But [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Oct 15"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="2"></span>
+<h2 data-pagefind-meta="title">Resolve Symlinks When Copying Files With Rsync</h2>
+<div class="entry">
+<p>In a project I&rsquo;m working on there is a structure where images and css are common for some of the subprojects. One folder has static pages for testing HTML + CSS layout. This folder has some symlinks to the /css folder and /images folder.</p>
+<p>Now, on my Mac during normal development, this works perfectly. But I also wanted to access the static HTML files via my virtual windows machine. And I cannot follow the unix symlinks from my virtual windows machine!</p>
+<p>My solution was to copy the files to another folder with rsync, which can then resolve the symlink into real files.</p>
+<pre><code>#!/bin/sh
+# set -x
+# Script will copy contents of current dir (except the files defined in _exclude_list)
+# into it's own separate folder. It will also expand symlinks so that windows users
+# can use the script directly
+# Created 2009-10-14 by Jesper Rønn-Jensen
+echo &quot;.*
+_*&quot; &gt; _exclude_list.txt
+
+cd `dirname $0`
+BASE=`pwd -P`
+DEST=`dirname ~/src/htmlguide` #remember trailing slash of parent
+FLAGS=' -av --exclude-from _exclude_list.txt --delete'
+
+rsync $FLAGS --copy-dirlinks $BASE $DEST/ #remember trailing slash at destination
+</code></pre>
+<p>The rsync flag <code>--copy-dirlinks</code> does the magic by expanding all symlinks and copying the files. Besides from that, I make sure to <code>--delete</code> files no longer present in the source folder.</p>
+<p>I decided to use rsync in stead of for example a webserver, as this approach is more portable, and I can then zip the static files or deploy them elsewhere.</p>
+<p>If you want to improve on the script, feel free to <a href="http://gist.github.com/210796">fork it on github gist 210796</a>.</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, October 15th, 2009 at 10:58 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to &#8220;Resolve Symlinks When Copying Files With Rsync&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-490244">
+<cite><a href="http://www.webpagefx.com" class="url" rel="external">Frank Lynch</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-490244" title="">October 20th, 2009 at 15:02 (GMT-1)</a> </small>
+<p>i think it would be better to create two different folder for codes and for stuffs (images and libraries), and then merge them to one, and then access it from server, that will be great idea to differ them.</p>
+</li>
+
+<li id="comment-593869">
+<cite>James Dowling</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-593869" title="">March 9th, 2012 at 04:18 (GMT-1)</a> </small>
+<p>Hi Jesper,</p>
+<p>I found this post looking for the &ndash;copy-dirlinks flag. Unfortunately, whatever post-processor is being used on thsi blog is outputting non-ascii dashes and I ended up with the following output:</p>
+<p>rsync: -\#342\#200\#223copy-dirlinks: unknown option</p>
+<p>Perhaps you could update this post to use ascii minus instead, so others don&rsquo;t run into this problem.</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Htmlguide on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/htmlguide/</link>
+		<description>Recent content in Htmlguide on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 25 Feb 2009 16:38:02 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/htmlguide/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>HTML Guide Textmate Snippets Open Sourced</title>
+				<link>https://justaddwater.dk/2009/02/25/html-guide-textmate-snippets-open-sourced/</link>
+				<pubDate>Wed, 25 Feb 2009 16:38:02 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/02/25/html-guide-textmate-snippets-open-sourced/</guid>
+				<description>&lt;p&gt;One year ago I published &amp;ldquo;&lt;a href=&#34;../2008/02/08/design-guide-or-html-markup-guide/&#34; title=&#34;Permanent Link: Design Guide or HTML Markup Guide&#34;&gt;Design Guide or HTML Markup Guide&lt;/a&gt;&amp;rdquo; with link to the HTML guide we did for the biggest Danish business internet portal.&lt;/p&gt;&#xA;&lt;p&gt;The HTML guide is a really useful tool for every public authority that must deliver applications for the portal.&lt;/p&gt;&#xA;&lt;p&gt;As a help for my own work back then, I created &lt;a href=&#34;http://github.com/jesperronn/virk_dk_htmlsnippets/tree/master&#34;&gt;virk_dk_htmlsnippets&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h2 id=&#34;snippets-available&#34;&gt;Snippets available&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;skel&lt;/code&gt;(tab) &amp;ndash; creates HTML skeleton in blank file. Adds correct doctype, head, body and container divs required for the virk.dk html to show correctly.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;fieldset&lt;/code&gt;(tab) Groups of form elements. Use where you would have used ordinary fieldsets. See HTML guide » &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/form-fieldset.html&#34;&gt;Form grupper (fieldsets)&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;button&lt;/code&gt;(tab) &amp;ndash; submit button and other buttons. See HTML guide » &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/buttons.html&#34;&gt;Knapper&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;inputcheck&lt;/code&gt;(tab) &amp;ndash; standard checkbox with label and group&lt;br&gt;&#xA;&lt;code&gt;inputtext&lt;/code&gt;(tab) &amp;ndash; text field&lt;br&gt;&#xA;&lt;code&gt;select&lt;/code&gt;(tab) &amp;ndash; select element&lt;/p&gt;&#xA;&lt;p&gt;Usage examples see HTML guide &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/form-simple.html&#34;&gt;Simple form elementer&lt;/a&gt;, &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/form-special.html&#34;&gt;Særlige form elementer&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;table&lt;/code&gt;(tab) &amp;ndash; table element. See HTML guide » &lt;a href=&#34;http://xmltools2.oio.dk/virk/htmlguide/tables.html&#34;&gt;Tabeller&lt;/a&gt;&lt;br&gt;&#xA;&lt;code&gt;td&lt;/code&gt;(tab) &amp;ndash; table cell inside table row.&lt;br&gt;&#xA;&lt;code&gt;th&lt;/code&gt;(tab) &amp;ndash; table header cell inside table row.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Design Guide or HTML Markup Guide</title>
+				<link>https://justaddwater.dk/2008/02/08/design-guide-or-html-markup-guide/</link>
+				<pubDate>Fri, 08 Feb 2008 13:47:41 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/02/08/design-guide-or-html-markup-guide/</guid>
+				<description>&lt;p&gt;At a recent project, there was a requirement to describe the CSS used on a site, as a documentation, other developers could use. We decided to go a bit further &amp;ndash; not only documenting the CSS classes &amp;ndash; but making a guide that developers could find easy to use. Also we wanted developers with little or no CSS knowledge to be able to use the guide.&lt;/p&gt;&#xA;&lt;p&gt;The usual design guide that dictates colors for headings, which images to use for bullet lists, margins between elements, line-heights, etc. When it comes to implementing the actual markup, &lt;strong&gt;the usual design guide is no help for developers&lt;/strong&gt; when the first page is up on the website.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Jenkins on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/jenkins/</link>
+		<description>Recent content in Jenkins on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 14 Jun 2012 11:42:53 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/jenkins/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Count number of jobs in Hudson</title>
+				<link>https://justaddwater.dk/2012/06/14/count-number-of-jobs-in-hudson/</link>
+				<pubDate>Thu, 14 Jun 2012 11:42:53 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/06/14/count-number-of-jobs-in-hudson/</guid>
+				<description>&lt;p&gt;I wanted to count the number of jobs running on a Hudson server (continuous integration) at work.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;This javascript counts the number of lines in the table with all jobs:&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;document.getElementById(&amp;ldquo;projectstatus&amp;rdquo;).children[0].children.length&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Or save this as a browser toolbar bookmarklet:&lt;/p&gt;&#xA;&lt;p&gt;Name: #HudsonJobs&lt;br&gt;&#xA; javascript:(function(e){alert(document.getElementById(&amp;ldquo;projectstatus&amp;rdquo;).children[0].children.length);e.preventDefault()})()&lt;/p&gt;&#xA;&lt;p&gt;This line finds the table with id=&amp;ldquo;projectstatus&amp;rdquo;, and counts the TR elements inside of it&amp;rsquo;s TBODY.&lt;/p&gt;&#xA;&lt;p&gt;At work it said 445 lines, including the table header.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Which means that this hudson server has configured 444 jobs.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

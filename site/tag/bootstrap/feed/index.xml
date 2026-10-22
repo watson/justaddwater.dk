@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Bootstrap on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/bootstrap/</link>
+		<description>Recent content in Bootstrap on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 28 Apr 2010 11:55:26 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/bootstrap/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Seeding Rails App With RESTful Address Data</title>
+				<link>https://justaddwater.dk/2010/04/28/seeding-rails-app-with-restful-address-data/</link>
+				<pubDate>Wed, 28 Apr 2010 11:55:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/28/seeding-rails-app-with-restful-address-data/</guid>
+				<description>&lt;p&gt;Grabbing data from Restful webservices has never been easier. I use this code in the Rails /db/seeds.rb file to grab data from the Danish webservice with addresses, municipalities, regions, etc.&lt;/p&gt;&#xA;&lt;p&gt;I decided to import the data into a local database to ensure it could work offline.&lt;/p&gt;&#xA;&lt;p&gt;Code from &lt;code&gt;/db/seeds.rb&lt;/code&gt; file:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gist.github.com/382105&#34;&gt;View gist 382105 on GitHub&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now I can access municipalities in a grouped selectbox like so in the view code:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

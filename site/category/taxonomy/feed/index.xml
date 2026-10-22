@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Taxonomy on Just Add Water</title>
+		<link>https://justaddwater.dk/category/taxonomy/</link>
+		<description>Recent content in Taxonomy on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 19 Apr 2007 12:13:14 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/taxonomy/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Tag your e-mails with Thunderbird 2</title>
+				<link>https://justaddwater.dk/2007/04/19/tag-your-e-mails-with-thunderbird-2/</link>
+				<pubDate>Thu, 19 Apr 2007 12:13:14 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/19/tag-your-e-mails-with-thunderbird-2/</guid>
+				<description>&lt;p&gt;One of the cornerstones in Web 2.0 are the &lt;a href=&#34;http://en.wikipedia.org/wiki/Folksonomy&#34; title=&#34;Wikipedia: Folksonomy&#34;&gt;folksonomy&lt;/a&gt;, a user generated taxonomy, popularly referred to as &lt;strong&gt;tags&lt;/strong&gt;. Google made tags popular (&lt;a href=&#34;http://mail.google.com/mail/help/why_gmail.html#label&#34; title=&#34;About Gmail: Labels&#34;&gt;they call them labels&lt;/a&gt;) when they launched Gmail (taxonomy) and the online bookmark service del.icio.us &lt;a href=&#34;http://del.icio.us/help/tags&#34; title=&#34;del.icio.us help: What are tags?&#34;&gt;gave us tags&lt;/a&gt; + social network = folksonomy.&lt;/p&gt;&#xA;&lt;p&gt;Today Mozilla launched their e-mail client &amp;lsquo;Mozilla Thunderbird 2&amp;rsquo; just 12 days after the launch of release candidate 1! One the the main new features is tags, a feature I&amp;rsquo;ve been waiting and hoping for for many years now. I&amp;rsquo;ve never understood why none of the major e-mail client developers Microsoft or Mozilla got this into their clients before. For me it just seems so obvious. But here it is.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

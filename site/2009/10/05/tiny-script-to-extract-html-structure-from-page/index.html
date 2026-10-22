@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extract HTML Structure From Page With Simple Script · justaddwater.dk</title>
+<meta name="description" content="I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It&rsquo;s pretty …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/10/02/useful-usability-tips/" rel="prev">Useful Usability Tips</a></div>
+<div class="alignright"><a href="/2009/10/15/resolve-symlinks-when-copying-files-with-rsync/" rel="next">Resolve Symlinks When Copying Files With Rsync</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-10-05"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It’s pretty straight-forward from scratch. To follow the Don’t Repeat Yourself principle, I created a script to make it a one-liner. Just run `ruby parsepage.rb [url] [css_selector]` Feel free to [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Oct 5"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="3"></span>
+<h2 data-pagefind-meta="title">Extract HTML Structure From Page With Simple Script</h2>
+<div class="entry">
+<p>I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It&rsquo;s pretty straight-forward from scratch.</p>
+<p>To follow the Don&rsquo;t Repeat Yourself principle, I created a script to make it a one-liner. Just run <code>ruby parsepage.rb [url] [css_selector]</code></p>
+<p>Feel free to use and modify the code (which i put on GitHub so you can fork and pull from it): <a href="http://gist.github.com/199558">http://gist.github.com/199558</a></p>
+<p><em>parsepage.rb — <a href="https://gist.github.com/199558">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env ruby</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Script that wraps grabbing and selecting stuff from HTML page via CSS selectors</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Created 2009-10-01 by Jesper Rønn-Jensen, www.justaddwater.dk</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># For usage, run parsepage.rb without arguments.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Feel free to modify, fork and improve as long as you commit your changes back to me :)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">usage</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&lt;&lt;-EOF #.gsub(&#39;    &#39;, &#39;&#39;)
+</span></span></span><span style="display:flex;"><span>    <span style="color:#f92672">===</span> <span style="color:#66d9ef">USAGE</span> <span style="color:#f92672">===</span>
+</span></span><span style="display:flex;"><span>    parsepage<span style="color:#f92672">.</span>rb <span style="color:#f92672">[</span>uri<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>css_selector<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">===</span> example <span style="color:#f92672">===</span>
+</span></span><span style="display:flex;"><span>    parsepage<span style="color:#f92672">.</span>rb <span style="color:#e6db74">&#34;http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/&#34;</span> <span style="color:#e6db74">&#34;h3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    U<span style="color:#f92672">=</span><span style="color:#e6db74">http</span>:<span style="color:#e6db74">//</span>www<span style="color:#f92672">.</span>smashingmagazine<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span><span style="color:#ae81ff">2009</span><span style="color:#f92672">/</span><span style="color:#ae81ff">09</span><span style="color:#f92672">/</span><span style="color:#ae81ff">24</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span><span style="color:#f92672">-</span>useful<span style="color:#f92672">-</span>usability<span style="color:#f92672">-</span>findings<span style="color:#f92672">-</span><span style="color:#f92672">and</span><span style="color:#f92672">-</span>guidelines<span style="color:#f92672">/</span>
+</span></span><span style="display:flex;"><span>    parsepage<span style="color:#f92672">.</span>rb $U <span style="color:#e6db74">&#34;h1,h2,h3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">===</span> <span style="color:#66d9ef">OPTIONS</span> <span style="color:#f92672">===</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--</span>text<span style="color:#f92672">-</span>only      lists only text from matching elements
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--</span>list<span style="color:#f92672">-</span>html      lists all matches as <span style="color:#66d9ef">HTML</span> <span style="color:#f92672">&lt;</span>li<span style="color:#f92672">&gt;</span> elements
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--</span>count          <span style="color:#66d9ef">Count</span> number of matches
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">EOF</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print usage <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">ARGV</span><span style="color:#f92672">.</span>empty?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>puts <span style="color:#66d9ef">ARGV</span><span style="color:#f92672">.</span>inspect
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#34;rubygems&#34;</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#34;nokogiri&#34;</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#34;open-uri&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>doc <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nokogiri</span><span style="color:#f92672">::</span><span style="color:#66d9ef">HTML</span>(open(<span style="color:#66d9ef">ARGV</span><span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span>))
+</span></span><span style="display:flex;"><span>matches <span style="color:#f92672">=</span>  doc<span style="color:#f92672">.</span>css(<span style="color:#66d9ef">ARGV</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;no matches found&#34;</span> <span style="color:#66d9ef">if</span> matches<span style="color:#f92672">.</span>empty?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">ARGV</span><span style="color:#f92672">.</span>include?(<span style="color:#e6db74">&#39;--text-only&#39;</span>))
+</span></span><span style="display:flex;"><span>  result <span style="color:#f92672">&lt;&lt;</span> matches<span style="color:#f92672">.</span>map{<span style="color:#f92672">|</span>element<span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>element<span style="color:#f92672">.</span>text<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elsif</span>  (<span style="color:#66d9ef">ARGV</span><span style="color:#f92672">.</span>include?(<span style="color:#e6db74">&#39;--html-list&#39;</span>))
+</span></span><span style="display:flex;"><span>  result <span style="color:#f92672">&lt;&lt;</span> matches<span style="color:#f92672">.</span>map{<span style="color:#f92672">|</span>element<span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;&lt;li&gt;</span><span style="color:#e6db74">#{</span>element<span style="color:#f92672">.</span>text<span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;li&gt;&#34;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>  result <span style="color:#f92672">&lt;&lt;</span> matches<span style="color:#f92672">.</span>to_s
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;TOTAL (</span><span style="color:#e6db74">#{</span>matches<span style="color:#f92672">.</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74"> match</span><span style="color:#e6db74">#{</span><span style="color:#e6db74">&#39;es&#39;</span> <span style="color:#66d9ef">if</span> matches<span style="color:#f92672">.</span>size <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> found for &#39;</span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">ARGV</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;)&#34;</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">ARGV</span><span style="color:#f92672">.</span>include?(<span style="color:#e6db74">&#39;--count&#39;</span>))
+</span></span><span style="display:flex;"><span>puts result<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># TODO stuff that would be great to support</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># * support for local files</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># * refactor so this could be used to return a Nokogiri object with selection via irb</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span></code></pre></div><p>I created the script because I wanted to extract headings from a recent article. You could also use it for creating table of contents or similar.</p>
+<h2 id="usage-examples">Usage examples</h2>
+<pre><code>$ U=http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/
+$ parsepage.rb $U &quot;h3&quot; --html-list
+#=&gt;
+  &lt;li&gt;1. Form Labels Work Best Above The Field&lt;li&gt;
+  &lt;li&gt;2. Users Focus On Faces&lt;li&gt;
+  &lt;li&gt;3. Quality Of Design Is An Indicator Of Credibility&lt;li&gt;
+  &lt;li&gt;4. Most Users Do Not Scroll&lt;li&gt;
+  &lt;li&gt;5. Blue Is The Best Color For Links&lt;li&gt;
+  &lt;li&gt;6. The Ideal Search Box Is 27-Characters Wide&lt;li&gt;
+  &lt;li&gt;7. White Space Improves Comprehension&lt;li&gt;
+  &lt;li&gt;8. Effective User Testing Doesn’t Have To Be Extensive&lt;li&gt;
+  &lt;li&gt;9. Informative Product Pages Help You Stand Out&lt;li&gt;
+  &lt;li&gt;10. Most Users Are Blind To Advertising&lt;li&gt;
+  &lt;li&gt;Bonus: Findings From Our Case-Studies&lt;li&gt;
+  &lt;li&gt;Other Resources&lt;li&gt;
+  &lt;li&gt;Sponsors&lt;li&gt;
+  &lt;li&gt;Smashing Links&lt;li&gt;
+  &lt;li&gt;Stay in touch&lt;li&gt;
+  &lt;li&gt;Popular Posts&lt;li&gt;
+  &lt;li&gt;All Posts&lt;li&gt;
+  &lt;li&gt;Blogroll&lt;li&gt;
+
+$ parsepage.rb $U &quot;h1&quot; --text-only
+#=&gt;
+  Smashing Magazine we smash you with the information that will make your life easier. really.
+  10 Useful Usability Findings and Guidelines
+
+$ parsepage.rb $U &quot;h1:first-child&quot;
+#=&gt;
+&lt;h1 class=&quot;title&quot;&gt;&lt;a href=&quot;http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/&quot; rel=&quot;bookmark&quot; title=&quot;10 Useful Usability Findings and Guidelines&quot;&gt;10 Useful Usability Findings and Guidelines&lt;/a&gt;&lt;/h1&gt;
+</code></pre>
+<p>Let me know if you find it useful. I&rsquo;ll happily update script with any general contributions.</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, October 5th, 2009 at 13:00 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">3 Responses to &#8220;Extract HTML Structure From Page With Simple Script&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-489778">
+<cite><a href="http://codercaste.com" class="url" rel="external">Spyros</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489778" title="">October 6th, 2009 at 23:01 (GMT-1)</a> </small>
+<p>Thanx for the script, it will definately come in handy.</p>
+</li>
+
+<li id="comment-489916">
+<cite><a href="http://technokyle.com" class="url" rel="external">TechnoKyle</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489916" title="">October 10th, 2009 at 17:51 (GMT-1)</a> </small>
+<p>Cool! Definitely useful if you want to copy the site design by knowing the structure of the page</p>
+</li>
+
+<li class="alt" id="comment-490512">
+<cite><a href="http://www.scottrobertsweb.com" class="url" rel="external">Scott Roberts</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-490512" title="">October 29th, 2009 at 21:20 (GMT-1)</a> </small>
+<p>Now, will this simply make the bulleted list shown above, or give you the underlying HTML code behind it?</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rails tip: Scaffold lists more usable · justaddwater.dk</title>
+<meta name="description" content="You might wonder what a code example is doing here in a blog about usability and web standards. As you might know, Thomas and I are both web developers, and …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2006/05/18/elements-of-user-experience-copenhagen-may-31st/" rel="prev">Elements of User Experience, Copenhagen, May 31st</a></div>
+<div class="alignright"><a href="/2006/05/22/attending-railsconf-europe/" rel="next">Attending RailsConf Europe, London, September</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2006-05-19"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2006"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Ruby on Rails"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Usability"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="You might wonder what a code example is doing here in a blog about usability and web standards. As you might know, Thomas and I are both web developers, and we’re really obsessed about making usable web applications. What better way than to share code for things that make web apps more usable. Thomas has [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="May 19"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="1"></span>
+<h2 data-pagefind-meta="title">Rails tip: Scaffold lists more usable</h2>
+<div class="entry">
+<p>You might wonder what a code example is doing here in a blog about usability and web standards. As you might know, Thomas and I are both web developers, and we&rsquo;re really obsessed about <strong>making usable web applications</strong>.</p>
+<p>What better way than to share code for things that make web apps more usable. Thomas has already <a href="/2006/05/02/justaddwaterdk-wordpress-plugins/" title="Justaddwater.dk WordPress Plugins">shared code that we use for this blog</a> to make it more usable <small>(and I know there is more to come!)</small>.</p>
+<p>This tip is regarding scaffolding code in Ruby on Rails (which we use in Capgemini). The problem is that usually your data model contains <strong>so many attributes, that it wrecks the list view totally</strong>. There are so many horisontal columns in the table that it&rsquo;s impossible to see all columns on the screen, you get horizontal scroll. And even worse: The actions (view, edit, destroy) are completely hidden.</p>
+<p>From usability, we know that we should assist the user&rsquo;s focus on what&rsquo;s important on this page. In a list view, the primary task is to choose the right row to work on. To support this, we should <strong>hide all columns irrelevant to the task</strong>.</p>
+<h2 id="ruby-on-rails">Ruby on Rails</h2>
+<p>In Ruby on Rails, I did that by customizing the columns I wanted to view.</p>
+<p>In the model I add a new method <code>self.</code><strong><code>simple_content_columns</code></strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">simple_content_columns</span>
+</span></span><span style="display:flex;"><span>  column_names <span style="color:#f92672">=</span> <span style="color:#e6db74">%w{company_number name address}</span>
+</span></span><span style="display:flex;"><span>  columns <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> c <span style="color:#66d9ef">in</span> self<span style="color:#f92672">.</span>content_columns <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    columns <span style="color:#f92672">&lt;</span> <span style="color:#f92672">&lt;</span> c <span style="color:#66d9ef">if</span> column_names<span style="color:#f92672">.</span>include?(c<span style="color:#f92672">.</span>name)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  columns
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Then in the list view I change from &ldquo;model.content_columns&rdquo; to &ldquo;model.simple_content_columns&rdquo; in the file: file &ldquo;_list.rhtml&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>table<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>tr<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">% for </span> column <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">Company</span><span style="color:#f92672">.</span>simple_content_columns <span style="color:#e6db74">%&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;th&gt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74">%= column.human_name %&gt;&lt;/th&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt; % end %&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;/tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt; % for company in @companies %&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt;tr&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &lt; % for column in Company.simple_content_columns %&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;td&gt;&lt; %=</span>h company<span style="color:#f92672">.</span>send(column<span style="color:#f92672">.</span>name) <span style="color:#e6db74">%&gt;&lt;/td&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span> <span style="color:#e6db74">% end </span> <span style="color:#f92672">%&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[...]</span>
+</span></span></code></pre></div><p>The only thing I modified in the view file was to replace <code>Company.content_columns</code> with <code>Company.</code><strong><code>simple_</code></strong><code>content_columns</code>.</p>
+<p>It&rsquo;s not particularly pretty, but it works. If you want something more fancy, you could take a look at the &ldquo;<a href="http://wiki.rubyonrails.org/rails/pages/Scaffolding+Extensions+Plugin">scaffolding extension</a>&rdquo; plugin for Rails. I look forward to your improvements/suggestions/comments.\</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/ruby-on-rails/" rel="tag">ruby on rails</a>, tip, <a href="/tag/usability/" rel="tag">usability</a>, listings</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Friday, May 19th, 2006 at 11:56 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>, <a href="/category/usability/" rel="category tag">Usability</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">One Response to &#8220;Rails tip: Scaffold lists more usable&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-317359">
+<cite>Rohit Kataria</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-317359" title="">October 26th, 2007 at 23:49 (GMT-1)</a> </small>
+<p>Great suggestion. Just can&rsquo;t thank you enough.</p>
+<p>Regards<br>
+Rohit</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

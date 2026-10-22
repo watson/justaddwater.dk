@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Find on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/find/</link>
+		<description>Recent content in Find on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 29 Sep 2011 21:42:50 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/find/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Chrome &#34;find in page&#34; with smart search in unicode characters</title>
+				<link>https://justaddwater.dk/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/</link>
+				<pubDate>Thu, 29 Sep 2011 21:42:50 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/</guid>
+				<description>&lt;p&gt;Look at this chrome search for the Danish letter &amp;ldquo;æ&amp;rdquo; in a page.&lt;br&gt;&#xA;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/Unicode-UTF-8-character-table-chrome-search-for-danish-letter-%C3%A6.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/Unicode-UTF-8-character-table-chrome-search-for-danish-letter-%c3%a6-300x76.png&#34; alt=&#34;&#34; title=&#34;Unicode-UTF-8-character-table-chrome-search-for-danish-letter-æ&#34; class=&#34;aligncenter size-medium wp-image-1511&#34; height=&#34;76&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/Unicode-UTF-8-character-table-chrome-search-for-danish-letter-%C3%A6-300x76.png 300w, https://justaddwater.dk/wp-content/uploads/2011/09/Unicode-UTF-8-character-table-chrome-search-for-danish-letter-%C3%A6.png 688w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Notice how Chrome actually also shows occurrences of &amp;ldquo;ae&amp;rdquo; when searching for &amp;ldquo;æ&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;The same thing goes when searching for &amp;ldquo;Ø&amp;rdquo;, &amp;ldquo;Ö&amp;rdquo; or similar accents: They will show occurences of &amp;ldquo;o&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Usability wise, I think this is a rather good principle for end-user solutions, just like Google Chrome. But, but. As an advanced user, i would like to know if i can turn it off? Not as a general setting. Because the usecase would be that you search, and find too much. Based on this, if you search for something with accented characters, a new checkbox should appear. My suggestion (mockup):&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How to Remove Trailing Space from source files</title>
+				<link>https://justaddwater.dk/2009/11/26/remove-trailing-space-from-source-files/</link>
+				<pubDate>Thu, 26 Nov 2009 15:10:40 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/11/26/remove-trailing-space-from-source-files/</guid>
+				<description>&lt;p&gt;When it comes to source code, i am a perfectionist. I cant stand to see trailing whitespace, interchanged tabs/spaces, etc.&lt;/p&gt;&#xA;&lt;p&gt;This Stackoverflow user asked &lt;a href=&#34;http://stackoverflow.com/questions/149057/how-to-removing-trailing-whitespace-of-all-files-recursively&#34;&gt;How To Remove Trailing Whitespace Of All Files Recursively&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This reply helped me to work around the fact that \s and \t are not supported in the mac version of sed:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;find dir -type f -print0 | xargs -0 sed -i .bak -E &amp;ldquo;s/[[:space:]]*$//&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;So using [:space:] can actually work for both tabs and spaces.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

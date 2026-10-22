@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Browser on Just Add Water</title>
+		<link>https://justaddwater.dk/category/browser/</link>
+		<description>Recent content in Browser on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 29 Sep 2011 21:42:50 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/browser/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Chrome &#34;find in page&#34; with smart search in unicode characters</title>
+				<link>https://justaddwater.dk/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/</link>
+				<pubDate>Thu, 29 Sep 2011 21:42:50 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/</guid>
+				<description>&lt;p&gt;Look at this chrome search for the Danish letter &amp;ldquo;æ&amp;rdquo; in a page.&lt;br&gt;&#xA;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/Unicode-UTF-8-character-table-chrome-search-for-danish-letter-%C3%A6.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/Unicode-UTF-8-character-table-chrome-search-for-danish-letter-%c3%a6-300x76.png&#34; alt=&#34;&#34; title=&#34;Unicode-UTF-8-character-table-chrome-search-for-danish-letter-æ&#34; class=&#34;aligncenter size-medium wp-image-1511&#34; height=&#34;76&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/Unicode-UTF-8-character-table-chrome-search-for-danish-letter-%C3%A6-300x76.png 300w, https://justaddwater.dk/wp-content/uploads/2011/09/Unicode-UTF-8-character-table-chrome-search-for-danish-letter-%C3%A6.png 688w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Notice how Chrome actually also shows occurrences of &amp;ldquo;ae&amp;rdquo; when searching for &amp;ldquo;æ&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;The same thing goes when searching for &amp;ldquo;Ø&amp;rdquo;, &amp;ldquo;Ö&amp;rdquo; or similar accents: They will show occurences of &amp;ldquo;o&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Usability wise, I think this is a rather good principle for end-user solutions, just like Google Chrome. But, but. As an advanced user, i would like to know if i can turn it off? Not as a general setting. Because the usecase would be that you search, and find too much. Based on this, if you search for something with accented characters, a new checkbox should appear. My suggestion (mockup):&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Internal Apps In Firefox</title>
+				<link>https://justaddwater.dk/2009/09/23/internal-apps-in-firefox/</link>
+				<pubDate>Wed, 23 Sep 2009 12:28:46 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/09/23/internal-apps-in-firefox/</guid>
+				<description>&lt;p&gt;This post is probably highly irrelevant unless you work at Capgemini and want to use the &lt;a href=&#34;http://applications.capgemini.se/&#34;&gt;internal nordic applications&lt;/a&gt; in Firefox.&lt;/p&gt;&#xA;&lt;p&gt;Read on if you want to access systems like CTR (time reporting), Event calendar, Skills database, PDR, Project forms or similar applications in Firefox.&lt;/p&gt;&#xA;&lt;p&gt;Problem is that the systems are not accessible at all if you&amp;rsquo;re not logged in. The reason is some extremely malformed HTML. Here is the entire content of the HTML page sent out:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>IE CSS Bug: Limited @include Statements</title>
+				<link>https://justaddwater.dk/2008/07/01/ie-css-bug-limited-include-statements/</link>
+				<pubDate>Tue, 01 Jul 2008 14:57:14 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/07/01/ie-css-bug-limited-include-statements/</guid>
+				<description>&lt;p&gt;I found out that Internet explorer only interprets 32 @include statements in CSS for a webpage. The rest is silently ignored.&lt;/p&gt;&#xA;&lt;p&gt;Tested with IE7. Has anybody tried this with IE8?&lt;/p&gt;&#xA;&lt;p&gt;For more info see:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.agum.com/web/2008/03/11/internet-explorer-issue-maximum-of-32-css-import/&#34; title=&#34;Agnum.com: Internet Explorer issue - maximum of 32 CSS @import&#34;&gt;Internet Explorer issue - maximum of 32 CSS @import&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;PS. Silent ignorance is just about the worst form for ignorance when coding. The least they could do was to display an error in the error console.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Firefox Tip For Framebuster JavaScript</title>
+				<link>https://justaddwater.dk/2007/10/22/firefox-tip-for-framebuster-javascript/</link>
+				<pubDate>Mon, 22 Oct 2007 13:30:06 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/10/22/firefox-tip-for-framebuster-javascript/</guid>
+				<description>&lt;p&gt;I have for long been struggling with an internal legacy application that wraps the content page in a frameset. Very annoying because I have spent some time to reverse engineer a poor-mans API to the application.&lt;/p&gt;&#xA;&lt;p&gt;Problem: An inline &amp;ldquo;reverse&amp;rdquo; framebuster script that makes sure that everything is nicely(?) wrapped in the frameset. As you see it&amp;rsquo;s included inline in the HTML.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Language&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Javascript&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;application_url&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;parent&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;frames&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;parent&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;frames&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;FrameMain&amp;#39;&lt;/span&gt;) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      document.&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;replace&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    document.&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;replace&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;/script&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;One thing is I never understood the thing about putting everything in a frameset. In this case, I have not been able to change the code. But as I have to use the application every now and then, the big question is:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mobile User Experience:Trying Out Opera Mini</title>
+				<link>https://justaddwater.dk/2007/06/28/mobile-user-experiencetrying-out-opera-mini/</link>
+				<pubDate>Thu, 28 Jun 2007 23:27:25 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/28/mobile-user-experiencetrying-out-opera-mini/</guid>
+				<description>&lt;p&gt;While being on vacation in beautiful Toscana, Italy, i&amp;rsquo;m trying out the Opera Mini browser on my Nokia 6233 cell phone. It is actually possible to use the blog administration software on the browser (log in, navigate, write posts, etc.)&lt;/p&gt;&#xA;&lt;p&gt;But it sure is not easy! There are lots of issues in the interface that easily leads to catastrophic accidents: For instance, i just lost half an hour worth of typing because i accidentally hit the back button. Normally i get a warning (&amp;ldquo;Are you sure&amp;hellip;&amp;rdquo;), but apparently that warning does not work on the Opera Mini browser. HTML is tedious: I could use some kind of snippet library with at least p + a tags, and how do i enter a line break? Furthermore, i can see only two lines of text (8-10 words) at any time in the text area where i write this text. Absolutely horrific for reviewing text and really really annoying that there is blank space on the screen for probably six more lines of text!&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Actual Browser Sizes (final)</title>
+				<link>https://justaddwater.dk/2006/10/31/actual-browser-sizes-final/</link>
+				<pubDate>Tue, 31 Oct 2006 21:38:25 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/31/actual-browser-sizes-final/</guid>
+				<description>&lt;p&gt;The numbers are in! Jesper first asked the question in &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/&#34; title=&#34;Design for Browser Size — Not Screen Size&#34;&gt;Design for Browser Size — Not Screen Size&lt;/a&gt;&amp;rdquo; and quickly after Thomas Baekdal of &lt;a href=&#34;http://baekdal.com/&#34; title=&#34;Baekdal.com - The Goal is Pretty Simple&#34;&gt;baekdal.com&lt;/a&gt; took up the challenge. After publishing &lt;a href=&#34;http://www.baekdal.com/articles/Usability/actual-browser-size-preliminary&#34; title=&#34;Actual Browser Sizes - Preview&#34;&gt;his preliminary results&lt;/a&gt; he have now unveiled &lt;a href=&#34;http://www.baekdal.com/reports/actual-browser-sizes/&#34; title=&#34;Actual Browser Sizes (final)&#34;&gt;&lt;strong&gt;the final report&lt;/strong&gt;&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The report finds, among other things, that the majority of people browse maximized or very close to it. That Mac user have bigger screens, but their browser are the same size as on any other platform. And, in order to support 95% of your visitors, you need to design for a maximum size of 776x424px.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Firefox 2 tip: autocomplete in search box</title>
+				<link>https://justaddwater.dk/2006/10/30/firefox-2-tip-autocomplete-in-search-box/</link>
+				<pubDate>Mon, 30 Oct 2006 11:38:45 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/30/firefox-2-tip-autocomplete-in-search-box/</guid>
+				<description>&lt;p&gt;As Firefox 2 is set to release this Tuesday, I just want to share this neat trick with you.&lt;/p&gt;&#xA;&lt;p&gt;Use the Google search box in top right corner as a simple calculator. This is really handy for fast lookups, calculations, word definitions, currency conversions.&lt;/p&gt;&#xA;&lt;p&gt;In short, you can use all features &lt;a href=&#34;http://www.google.com/intl/en/help/features.html&#34;&gt;Google makes accessible from their search field&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/10/firefox2-autocomplete-math.png&#34; alt=&#34;firefox2-autocomplete-math.png&#34; width=&#34;323&#34; height=&#34;83&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/10/firefox2-autocomplete-celcius.png&#34; alt=&#34;firefox2-autocomplete-celcius.png&#34; width=&#34;297&#34; height=&#34;103&#34;&gt;&#xA;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>IE7 Accessibility: Magnification</title>
+				<link>https://justaddwater.dk/2006/10/25/ie7-accessibility-magnification/</link>
+				<pubDate>Wed, 25 Oct 2006 18:28:51 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/10/25/ie7-accessibility-magnification/</guid>
+				<description>&lt;p&gt;It just occurred to me that the new Internet Explorer 7 ships with a zoom tool.&lt;/p&gt;&#xA;&lt;p&gt;In other/older browsers (even the new Firefox 2 which was just released yesterday) zoom can only achieved natively by increasing or decreasing the text size - and that is only if the text size is not written in pixels.&lt;/p&gt;&#xA;&lt;p&gt;IE7 still have the old text size in-/decrease functionality but have also added a regular zoom tool:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>All IE Browsers Standalone On Same PC</title>
+				<link>https://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/</link>
+				<pubDate>Thu, 28 Sep 2006 10:29:57 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/</guid>
+				<description>&lt;p&gt;Yousif Al Saif of Tredosoft is probably best known for the &lt;a href=&#34;http://tredosoft.com/IE7_standalone&#34;&gt;IE7 standalone&lt;/a&gt; browser installer that can run isolated on a Windows machine without disturbing the version already installed. I wrote about this in &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/08/28/ie-7-web-standards-and-css-support/&#34;&gt;IE7, web standards and css support&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Now he posted an article that makes it dead simple to run multiple Internet Explorers. It&amp;rsquo;s a simple one-click installer that makes you choose any of the following versions of IE:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Browser Size — Actual Numbers</title>
+				<link>https://justaddwater.dk/2006/09/02/browser-size/</link>
+				<pubDate>Sat, 02 Sep 2006 14:30:39 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/02/browser-size/</guid>
+				<description>&lt;p&gt;I asked for numbers confirming my thoughts recently in &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/&#34; title=&#34;Permanent Link to Design for Browser Size — Not Screen Size&#34;&gt;Design for Browser Size — Not Screen Size&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;First Jakob Skjerning (&lt;a href=&#34;http://mentalized.net/journal/2006/08/21/size_does_matter/&#34; title=&#34;Jakob Skjerning: Size does Matter&#34;&gt;mentalized.net&lt;/a&gt;), and now &lt;a href=&#34;http://www.baekdal.com/articles/Usability/actual-browser-size-preliminary/&#34; title=&#34;Baekdal.com: Actual Browser Sizes - Preview&#34;&gt;Thomas Baekdal published his preliminary results&lt;/a&gt;. Great to see some thorough work done in this highly important area where pretty much no stat tool or measuring service have ever been.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>IE 7, web standards and CSS support</title>
+				<link>https://justaddwater.dk/2006/08/28/ie-7-web-standards-and-css-support/</link>
+				<pubDate>Mon, 28 Aug 2006 09:29:04 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/08/28/ie-7-web-standards-and-css-support/</guid>
+				<description>&lt;p&gt;The Internet Explorer team is preparing to ship the next major version of the world&amp;rsquo;s most popular browser. The IE team has written an update on which CSS bugfixes that will make it into the final release.&lt;/p&gt;&#xA;&lt;h3 id=&#34;update-of-existing-css-on-websites&#34;&gt;Update of existing CSS on websites&lt;/h3&gt;&#xA;&lt;p&gt;Before we get to that rather long list, I feel it&amp;rsquo;s important to know what will change from the web developer&amp;rsquo;s point of view. The update list is a must read to anybody responsible for a website rendered in web standards mode (so called &amp;ldquo;&lt;a href=&#34;http://www.quirksmode.org/css/quirksmode.html&#34; title=&#34;Peter Paul koch: CSS: Quirks mode and strict mode&#34;&gt;strict mode&lt;/a&gt;&amp;rdquo;). For IE7 backwards compatibility, changes are not applied in quirksmode.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Design for Browser Size — Not Screen Size</title>
+				<link>https://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/</link>
+				<pubDate>Thu, 17 Aug 2006 09:52:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/08/17/design-for-browser-size-not-screen-size/</guid>
+				<description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Update 2006-11-08:&lt;/strong&gt; Baekdal has published numbers (hard evidence) on browser size. And a fun research video too. See &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/10/31/actual-browser-sizes-final/&#34;&gt;Actual Browser Sizes (final)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Jakob Nielsen discusses screen resolution and page layout in a &lt;a href=&#34;http://www.useit.com/alertbox/screen_resolution.html&#34; title=&#34;Useit.com, Alertbox: Screen Resolution and Page Layout (July 31, 2006)&#34;&gt;recent Alertbox article&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Optimize Web pages for 1024x768, but use a liquid layout that stretches well for any resolution, from 800x600 to 1280x1024.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;As usual, Jakob offers some decent facts and clear guidelines on which screen resolution to design for. I have the deepest respect for Jakob Nielsen and the work he does to make usability easier to understand and use for everybody. &lt;strong&gt;There is just one problem: Findings should focus on browser window size and not screen size.&lt;/strong&gt; &lt;small&gt;(More precisely, browser content area, which we&amp;rsquo;ll get back to shortly)&lt;/small&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Why Web Standards Matter (Case Study)</title>
+				<link>https://justaddwater.dk/2006/06/29/webstandards-case-study/</link>
+				<pubDate>Thu, 29 Jun 2006 16:03:01 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/29/webstandards-case-study/</guid>
+				<description>&lt;p&gt;Project managers often have a hard time understanding web standards and why they matter. In this case, my arguments made a perfect business case for the managers of a particular project.&lt;/p&gt;&#xA;&lt;p&gt;Recently I was called out to debug some javascript code that did not perform. There was really not a big problem in Firefox, but Internet Explorer hung using 20 seconds or more each time the script was activated by the user.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Free Service: See your website in different browsers</title>
+				<link>https://justaddwater.dk/2006/04/22/free-service-see-your-website-in-different-browsers/</link>
+				<pubDate>Sat, 22 Apr 2006 15:45:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/22/free-service-see-your-website-in-different-browsers/</guid>
+				<description>&lt;p&gt;A free online service called &lt;a href=&#34;http://browsershots.org/&#34;&gt;Browsershots&lt;/a&gt; has just launched (still beta). You provide it with a URI and it will take real screenshots in different browsers of that page.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2006/04/browsershots.png&#34; alt=&#34;Browsershots.org website screenshot&#34; width=&#34;437&#34; height=&#34;272&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Currently you get screenshots from the following browser brands:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Epiphany 1.4.8&lt;/li&gt;&#xA;&lt;li&gt;Firefox 1.0.4&lt;/li&gt;&#xA;&lt;li&gt;Firefox 1.5.0&lt;/li&gt;&#xA;&lt;li&gt;Galeon 1.3.20&lt;/li&gt;&#xA;&lt;li&gt;Konqueror 3.3&lt;/li&gt;&#xA;&lt;li&gt;Mozilla 1.7.8&lt;/li&gt;&#xA;&lt;li&gt;MSIE 6.0&lt;/li&gt;&#xA;&lt;li&gt;MSIE 7.0 Beta&lt;/li&gt;&#xA;&lt;li&gt;Opera 8.50&lt;/li&gt;&#xA;&lt;li&gt;Safari 2.0&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can even choose multiple screen resolutions as well.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Golden nuggets for describing browser support</title>
+				<link>https://justaddwater.dk/2006/04/11/golden-nuggets-for-describing-browser-support/</link>
+				<pubDate>Tue, 11 Apr 2006 13:06:50 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/11/golden-nuggets-for-describing-browser-support/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://developer.yahoo.net/yui/articles/gbs/gbs.html&#34;&gt;Yahoo! Developer Network: Graded Browser Support&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Super article by Nate Koechley of Yahoo!. He has done an excellent job for describing Yahoo!&amp;rsquo;s different grades of browser support. For those of you who wonder why not all browsers get the same code. They do. They just interpret it differently. This is what makes front-end web development so hard.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Support does not mean that everybody gets the same thing. Expecting two users using different browser software to have an identical experience fails to embrace or acknowledge the heterogeneous essence of the Web. In fact, requiring the same experience for all users creates a barrier to participation. Availability and accessibility of content should be our key priority.&lt;/p&gt;&#xA;&lt;p&gt;Consider television. At the core: TV distributes information. A hand-cranked emergency radio is capable of receiving television audio transmissions. It would be counter-productive to prevent access to this content, even though it’s a fringe experience.&lt;/p&gt;&#xA;&lt;p&gt;Some viewers still have black-and-white televisions. Broadcasting only in black-and-white — the “lowest common denominator” approach — ensures a shared experience but benefits no one. Excluding the black-and-white television owners — the “you must be this tall to ride” approach — provides no benefit either.&lt;/p&gt;&#xA;&lt;p&gt;An appropriate support strategy allows every user to consume as much visual and interactive richness as their environment can support. This approach—commonly referred to as &lt;em&gt;progressive enhancement&lt;/em&gt; — builds a rich experience on top of an accessible core, without compromising that core.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>XMLHttpRequest soon becoming W3C standard</title>
+				<link>https://justaddwater.dk/2006/04/10/xmlhttprequest-soon-becoming-w3c-standard/</link>
+				<pubDate>Mon, 10 Apr 2006 18:01:25 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/04/10/xmlhttprequest-soon-becoming-w3c-standard/</guid>
+				<description>&lt;p&gt;I just found out (&lt;a href=&#34;http://borkweb.com/story/xmlhttprequest-object-w3c-working-draft&#34; title=&#34;BorkWeb: XMLHttpRequest Object W3C Working Draft&#34;&gt;via BorkWeb&lt;/a&gt;) that the W3C is looking to standardizing the XMLHttpRequest object which is the foundation for all AJAX based applications.&lt;/p&gt;&#xA;&lt;p&gt;Today this object is implemented by all the major browsers. But because there is no standard dictating how this object should behave, the implementations are a bid different. That in turn means that web-developers the world over have to deal with browser compatibility issues (and we all remember to good old days of web-development in the 90&amp;rsquo;s right?).&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>IE7 beta running side by side with IE6</title>
+				<link>https://justaddwater.dk/2006/02/03/ie7-beta-running-side-by-side-with-ie6/</link>
+				<pubDate>Fri, 03 Feb 2006 21:05:31 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/02/03/ie7-beta-running-side-by-side-with-ie6/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Update: &lt;a href=&#34;https://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/&#34; title=&#34;Justaddwater.dk: All IE Browsers Standalone On Same PC&#34;&gt;All IE Browsers Standalone On Same PC&lt;/a&gt; (September 28, 2006) solves the problem.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the comments of &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/01/25/multiple-versions-of-ie-in-one-windows-pc-prepare-for-ie7/&#34; title=&#34;Justaddwater.dk: Multiple versions of IE in one Windows PC - Prepare for IE7&#34;&gt;Multiple versions of IE in one Windows PC&lt;/a&gt;&amp;rdquo; I could see that other people also had problems with the suggestion to make IE6 standalone.&lt;/p&gt;&#xA;&lt;p&gt;Jon Galloway has the solution: Run IE7 as standalone and keep IE6 as the default browser. I have tried it out for a couple of days and could not get it to work until he posted a followup, &lt;a href=&#34;http://weblogs.asp.net/jgalloway/archive/2005/12/28/434132.aspx&#34; title=&#34;Jon Galloway: IE7 Standalone Launch Script&#34;&gt;IE7 Standalone Launch Script&lt;/a&gt;:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Multiple versions of IE in one Windows PC - Prepare for IE7</title>
+				<link>https://justaddwater.dk/2006/01/25/multiple-versions-of-ie-in-one-windows-pc-prepare-for-ie7/</link>
+				<pubDate>Wed, 25 Jan 2006 14:29:29 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/25/multiple-versions-of-ie-in-one-windows-pc-prepare-for-ie7/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Update 2006-09-28: &lt;a href=&#34;https://justaddwater.dk/2006/09/28/all-ie-browsers-standalone-on-same-pc/&#34; title=&#34;Justaddwater.dk: All IE Browsers Standalone On Same PC&#34;&gt;All IE Browsers Standalone On Same PC&lt;/a&gt; (September 28, 2006) solves the problem.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;UPDATE 2006-02-03: The method described below will sometimes not work. To run IE7 and IE6 side-by-side, see the new post &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/02/03/ie7-beta-running-side-by-side-with-ie6/&#34; title=&#34;Justaddwater.dk: IE7 beta running side by side with IE6&#34;&gt;IE7 beta running side by side with IE6&lt;/a&gt;&amp;rdquo;. For older versions of IE, this still works and you could safely continue as described below&lt;/strong&gt;, &lt;small&gt;(but you should acknowledge that this is still &amp;ldquo;unsupported&amp;rdquo;, and is likely to make Internet Explorer less stable)&lt;/small&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Firefox keyboard secret shortcut to remove text from page</title>
+				<link>https://justaddwater.dk/2006/01/16/firefox-keyboard-secret-shortcut-to-remove-text-from-page/</link>
+				<pubDate>Mon, 16 Jan 2006 23:16:54 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/01/16/firefox-keyboard-secret-shortcut-to-remove-text-from-page/</guid>
+				<description>&lt;p&gt;Do you use Firefox? Accidentally I discovered this keyboard shortcut.&lt;br&gt;&#xA;CTRL + SHIFT + double-click on some text.&lt;br&gt;&#xA;The text dissapears! It seems to work on ordinary text, no links.&lt;/p&gt;&#xA;&lt;p&gt;I &lt;a href=&#34;http://www.google.com/search?q=firefox+ctrl+shift+doubleclick&#34; title=&#34;Google Search - firefox ctrl shift doubleclick&#34;&gt;searched Google&lt;/a&gt;, I looked in &lt;a href=&#34;http://lesliefranke.com/sandbox/ref/firefoxcheatsheet.html&#34; title=&#34;LeslieFranke: Mozilla Firefox Cheat Sheet&#34;&gt;LeslieFranke firefox cheatsheet&lt;/a&gt;. Couldn&amp;rsquo;t find anything on it. Is this &lt;strong&gt;a bug or a feature?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Last month, &lt;a href=&#34;https://justaddwater.dk/2006/01/12/justaddwaterdk-december-2005-statistics/&#34; title=&#34;Justaddwater.dk December 2005 statistics&#34;&gt;Justaddwater users were split equally between Firefox and Internet Explorer&lt;/a&gt;, which means half of you can see this little odd behaviour.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

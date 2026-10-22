@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Development on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/development/</link>
+		<description>Recent content in Development on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 05 Oct 2010 22:47:32 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/development/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>GWT relevant snippets for IntelliJ Idea editor</title>
+				<link>https://justaddwater.dk/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/</link>
+				<pubDate>Tue, 05 Oct 2010 22:47:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/</guid>
+				<description>&lt;p&gt;I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it&amp;rsquo;s a very short list.&lt;/p&gt;&#xA;&lt;p&gt;Snippet 1: Live template to bootstrap a class to use UI binder logic. Very useful when converting existing (pre gwt 2.0) Java classes to UI binder pattern, which gives better separation of logic and view.&lt;/p&gt;&#xA;&lt;p&gt;Snippet 2: Create new UiBinder.ui.xml file. Intellij has support for creating entire new java class + uibinder file. That is useful for new classes, but most often I find myself converting an existing class, and needed this shortcut for that.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>.NET tips for my development environment</title>
+				<link>https://justaddwater.dk/2008/10/09/net-tips-for-my-development-environment/</link>
+				<pubDate>Thu, 09 Oct 2008 13:21:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/10/09/net-tips-for-my-development-environment/</guid>
+				<description>&lt;p&gt;At a recent project I had to work in a full-blown .NET environment. Here are some of the tips I collected from my colleagues.&lt;/p&gt;&#xA;&lt;p&gt;Visual Studio&lt;br&gt;&#xA;I added the methods below in the Macro editor (Tools &amp;gt; Macros &amp;gt; Macros IDE)&lt;/p&gt;&#xA;&lt;p&gt;Stop the build on error. When an error occurs I am notified instantly and able to fix faster.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-vb&#34; data-lang=&#34;vb&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;REM Stop the build process when the first error is encountered&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;Private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BuildEvents_OnBuildProjConfigDone&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; Project &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; ProjectConfig &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; Platform &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; SolutionConfig &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; Success &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Boolean&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;Handles&lt;/span&gt; BuildEvents.OnBuildProjConfigDone&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;If&lt;/span&gt; Success &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Then&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;The build failed...cancel any further builds.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            DTE.ExecuteCommand(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Build.Cancel&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;If&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Timestamp on build complete. This is a great helper because I usually don&amp;rsquo;t waste braincycles on keeping track on when I last build the code. The timestamp occurs below the output which makes it instantly clear if it is necessary to rebuild. This usually saves 10-20 daily rebuilds each wasting one to four minutes.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

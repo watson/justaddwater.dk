@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to add Git Pull Shortcut to Different Github Branches · justaddwater.dk</title>
+<meta name="description" content="UPDATE 9 hours later: Changed to &ldquo;remote = origin&rdquo; to the specific branch &ldquo;remote = dean&rdquo; which works!
+Short explanation on how to pull …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/08/19/rup-vs-scrum-vs-kanban/" rel="prev">Rup vs Scrum vs Kanban</a></div>
+<div class="alignright"><a href="/2009/08/28/the-quick-way-to-creating-disabled-state-icon-with-photoshop/" rel="next">The Quick Way to Creating Disabled State Icon With Photoshop</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-08-23"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="git"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="UPDATE 9 hours later: Changed to “remote = origin” to the specific branch “remote = dean” which works! Short explanation on how to pull changes from different Git repositories into your local Git repository. Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Aug 23"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">How to add Git Pull Shortcut to Different Github Branches</h2>
+<div class="entry">
+<p><strong>UPDATE 9 hours later: Changed to &ldquo;remote = origin&rdquo; to the specific branch &ldquo;remote = dean&rdquo; which works!</strong></p>
+<p>Short explanation on how to pull changes from different Git repositories into your local Git repository.</p>
+<p>Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, the remote repository is automatically added so you can do a simple git pull (instead of the verbose version &ldquo;git pull origin master&rdquo;)</p>
+<p>Now, let&rsquo;s say you&rsquo;d like to pull changes from another branch/fork on Github:</p>
+<blockquote>
+<p>git remote add dean git://github.com/dstrelau/webrat.git<br>
+git co -b dean<br>
+git pull dean master</p>
+</blockquote>
+<p>Git pull dean master will work. but &ldquo;git pull&rdquo; gives the following message:</p>
+<blockquote>
+<p>[<del>/othercode/webrat (master)] ➔ git co dean<br>
+Switched to branch &lsquo;dean&rsquo;<br>
+[</del>/othercode/webrat (dean)] ➔ git pull<br>
+You asked me to pull without telling me which branch you<br>
+want to merge with, and &lsquo;branch.dean.merge&rsquo; in<br>
+your configuration file does not tell me either.    Please<br>
+specify which branch you want to merge on the command line and<br>
+try again (e.g. &lsquo;git pull &lt;repository&gt; &lt;refspec&gt;&rsquo;).<br>
+See git-pull(1) for details.</p>
+<p>If you often merge with the same branch, you may want to<br>
+configure the following variables in your configuration<br>
+file:</p>
+<p>branch.dean.remote = &lt;nickname&gt;<br>
+branch.dean.merge = &lt;remote-ref&gt;<br>
+remote.&lt;nickname&gt;.url = &lt;url&gt;<br>
+remote.&lt;nickname&gt;.fetch = &lt;refspec&gt;</p>
+<p>See git-config(1) for details.</p>
+</blockquote>
+<h2 id="solution-to-get-the-shorthand-git-pull-to-work">Solution to get the shorthand &ldquo;git pull&rdquo; to work:</h2>
+<p>Add the following section to [project_dir]/.git/config</p>
+<blockquote>
+<p>[branch &ldquo;dean&rdquo;]<br>
+remote = dean<br>
+merge = refs/heads/master</p>
+</blockquote>
+<p>So my ./git/config file now looks like this:</p>
+<blockquote>
+<p>[core]<br>
+repositoryformatversion = 0<br>
+filemode = true<br>
+bare = false<br>
+logallrefupdates = true<br>
+ignorecase = true<br>
+[remote &ldquo;origin&rdquo;]<br>
+url = git://github.com/brynary/webrat.git<br>
+fetch = +refs/heads/*:refs/remotes/origin/*<br>
+[branch &ldquo;master&rdquo;]<br>
+remote = origin<br>
+merge = refs/heads/master<br>
+[remote &ldquo;jonas&rdquo;]<br>
+url = git://github.com/jnicklas/webrat.git<br>
+fetch = +refs/heads/*:refs/remotes/jonas/*<br>
+[branch &ldquo;jonas&rdquo;]<br>
+remote = jonas<br>
+merge = refs/heads/master<br>
+[remote &ldquo;dean&rdquo;]<br>
+url = git://github.com/dstrelau/webrat.git<br>
+fetch = +refs/heads/*:refs/remotes/dean/*<br>
+[branch &ldquo;dean&rdquo;]<br>
+remote = dean<br>
+merge = refs/heads/master<br>
+[branch &ldquo;orig&rdquo;]<br>
+remote = origin<br>
+merge = refs/heads/master</p>
+</blockquote>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Sunday, August 23rd, 2009 at 23:42 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

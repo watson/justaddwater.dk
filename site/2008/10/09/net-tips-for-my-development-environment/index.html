@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>.NET tips for my development environment · justaddwater.dk</title>
+<meta name="description" content="At a recent project I had to work in a full-blown .NET environment. Here are some of the tips I collected from my colleagues.
+Visual Studio
+I added the methods …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/08/28/download-pages-ie-vs-firefox/" rel="prev">Download Pages — IE vs. Firefox</a></div>
+<div class="alignright"><a href="/2008/11/05/ie-css-bug-background-image-gap-to-border/" rel="next">IE CSS bug: Background-image Gap To Border</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-10-09"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="At a recent project I had to work in a full-blown .NET environment. Here are some of the tips I collected from my colleagues. Visual Studio I added the methods below in the Macro editor (Tools &gt; Macros &gt; Macros IDE) Stop the build on error. When an error occurs I am notified instantly and [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Oct 9"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="1"></span>
+<h2 data-pagefind-meta="title">.NET tips for my development environment</h2>
+<div class="entry">
+<p>At a recent project I had to work in a full-blown .NET environment. Here are some of the tips I collected from my colleagues.</p>
+<p>Visual Studio<br>
+I added the methods below in the Macro editor (Tools &gt; Macros &gt; Macros IDE)</p>
+<p>Stop the build on error. When an error occurs I am notified instantly and able to fix faster.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span>    <span style="color:#75715e">REM Stop the build process when the first error is encountered
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">BuildEvents_OnBuildProjConfigDone</span>(<span style="color:#66d9ef">ByVal</span> Project <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> ProjectConfig <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> Platform <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> SolutionConfig <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> Success <span style="color:#f92672">As</span> <span style="color:#66d9ef">Boolean</span>) <span style="color:#66d9ef">Handles</span> BuildEvents.OnBuildProjConfigDone
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">If</span> Success <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&#39;The build failed...cancel any further builds.
+</span></span></span><span style="display:flex;"><span>            DTE.ExecuteCommand(<span style="color:#e6db74">&#34;Build.Cancel&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p>Timestamp on build complete. This is a great helper because I usually don&rsquo;t waste braincycles on keeping track on when I last build the code. The timestamp occurs below the output which makes it instantly clear if it is necessary to rebuild. This usually saves 10-20 daily rebuilds each wasting one to four minutes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-vb" data-lang="vb"><span style="display:flex;"><span>    <span style="color:#75715e">REM Output timestamp in build panel on build complete
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">BuildEvents_OnBuildDone</span>(<span style="color:#66d9ef">ByVal</span> Scope <span style="color:#f92672">As</span> EnvDTE.vsBuildScope, <span style="color:#66d9ef">ByVal</span> Action <span style="color:#f92672">As</span> EnvDTE.vsBuildAction) <span style="color:#66d9ef">Handles</span> BuildEvents.OnBuildDone
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Dim</span> win <span style="color:#f92672">As</span> Window <span style="color:#f92672">=</span> DTE.Windows.Item(EnvDTE.Constants.vsWindowKindOutput)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Dim</span> ow <span style="color:#f92672">As</span> OutputWindow <span style="color:#f92672">=</span> win.Object
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Dim</span> owPane <span style="color:#f92672">As</span> OutputWindowPane
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">For</span> i <span style="color:#f92672">As</span> <span style="color:#66d9ef">Integer</span> <span style="color:#f92672">=</span> 1 <span style="color:#66d9ef">To</span> ow.OutputWindowPanes.Count
+</span></span><span style="display:flex;"><span>            owPane <span style="color:#f92672">=</span> ow.OutputWindowPanes.Item(i)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">If</span> owPane.Name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Build&#34;</span> <span style="color:#66d9ef">Then</span>
+</span></span><span style="display:flex;"><span>                owPane.Activate()
+</span></span><span style="display:flex;"><span>                owPane.OutputString(DateTime.Now.ToString)
+</span></span><span style="display:flex;"><span>                owPane.OutputString(Environment.NewLine)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">If</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Next</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+</span></span></code></pre></div><p>Creating/copying websites in IIS. (Local Windows XP development). In our project we had to add a handful of different websites. Using the helper tool called &ldquo;adsutil.vbs&rdquo; in Inetpub/AdminScripts can help:</p>
+<pre tabindex="0"><code>cd C:\Inetpub\AdminScripts\
+CScript adsutil.vbs enum w3svc /p
+</code></pre><p>This gives you a list of each website with an index, that you can use for copying websites. This way, you add only one website, and then copy it. Much easier.<br>
+<code>CScript adsutil.vbs copy W3SVC/1 W3SVC/2</code></p>
+<p>Now you have added a new site and all you have to do is go into the IIS Manager and configure it. You can configure the site from the command prompt as well, but usually it&rsquo;s a one-time effort and it&rsquo;s faster to do that from the manager.</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Thursday, October 9th, 2008 at 13:21 (GMT-1) and is filed under <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">One Response to &#8220;.NET tips for my development environment&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-461472">
+<cite>t_moriarty</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-461472" title="">December 24th, 2008 at 05:38 (GMT-1)</a> </small>
+<p>I use the Rock Scroll plug in for Visual Studio. It is an extended scroll bar for code files.</p>
+<p><a href="http://www.hanselman.com/blog/IntroducingRockScroll.aspx">http://www.hanselman.com/blog/IntroducingRockScroll.aspx</a></p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

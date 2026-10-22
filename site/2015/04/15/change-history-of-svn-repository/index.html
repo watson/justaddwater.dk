@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Change history of SVN repository · justaddwater.dk</title>
+<meta name="description" content="Somebody asked me if it&rsquo;s possible to change history of an SVN repository like you can do in Git.
+The easiest parts to change are:
+commit date commit log …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2015/03/29/easter-egg-css-circles/" rel="prev">Easter egg CSS circles</a></div>
+<div class="alignright"><a href="/2015/12/13/ruby-make-list-minimum-length/" rel="next">Ruby make list minimum length</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2015-04-15"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2015"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="git"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Somebody asked me if it’s possible to change history of an SVN repository like you can do in Git. The easiest parts to change are: commit date commit log message With this, you can easily modify time stamps if, for instance, your svn server clock is wrong. Step 1: Modify repository to accept property changes [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Apr 15"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">Change history of SVN repository</h2>
+<div class="entry">
+<p>Somebody asked me if it&rsquo;s possible to change history of an SVN repository like you can do in Git.</p>
+<p>The easiest parts to change are:</p>
+<ul>
+<li>commit date</li>
+<li>commit log message</li>
+</ul>
+<p>With this, you can easily modify time stamps if, for instance, your svn server clock is wrong.</p>
+<h2 id="step-1-modify-repository-to-accept-property-changes">Step 1: Modify repository to accept property changes</h2>
+<p>Make sure your svn repository accepts property changes. (commit dates and messages are just properties which are basically unversioned).</p>
+<p>For your repository, you need to make sure the hook file <code>pre-revprop-change</code> exists, is executable and has exit code 0. An easy way is to write a file which always exists with code 0:</p>
+<p># write this file to <code>repository_directory/hooks/pre-revprop-change</code></p>
+<pre tabindex="0"><code>#!/usr/bin/env sh
+exit 0
+</code></pre><h2 id="step-2change-date-on-the-revision-you-want"> Step 2: change date on the revision you want:</h2>
+<p>In this example I will set the date for revision 1 to May 1st, 1981.</p>
+<pre tabindex="0"><code>svn propset --revprop -r 1 svn:date &#34;1981-05-01T10:00:00.000000Z&#34;
+</code></pre><p><code>svn propset</code> command will set certain properties. You can set many properties, and in this example we manipulate <code>svn:date</code>. If we want to change the log message, we can use <code>svn:log</code>.</p>
+<p>I deliberately chose a date from before SVN was made. Subversion is from 2001, so this commit is now made 20 years before SVN was out.</p>
+<h2 id="all-combined">All combined</h2>
+<p>I created a combined script, which has has the steps mentioned above, and also iterates to change all dates in a repository:</p>
+<p> </p>
+<p> </p>
+<p><em>svn_create.sh — <a href="https://gist.github.com/jesperronn/174cea58433d2f06968f">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># set -x</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># script here will create new subversion repository (file based).</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># then it will make 10 commits</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Then we will manipulate the commit dates of the ten commits</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>START_FOLDER<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>REPO<span style="color:#f92672">=</span>repo02
+</span></span><span style="display:flex;"><span>WD<span style="color:#f92672">=</span>working2
+</span></span><span style="display:flex;"><span>HOOKFILE<span style="color:#f92672">=</span>$REPO/hooks/pre-revprop-change
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># svn repository</span>
+</span></span><span style="display:flex;"><span>svnadmin create $REPO
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;#!/usr/bin/env bash&#39;</span> &gt; $HOOKFILE
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;exit 0&#39;</span> &gt;&gt; $HOOKFILE
+</span></span><span style="display:flex;"><span>chmod +x $HOOKFILE
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#checkout a working copy</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd <span style="color:#e6db74">&#34;</span>$START_FOLDER<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svn checkout <span style="color:#e6db74">&#34;file://</span>$START_FOLDER<span style="color:#e6db74">/</span>$REPO<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$WD<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>cd <span style="color:#e6db74">&#34;</span>$START_FOLDER<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>cd <span style="color:#e6db74">&#34;</span>$WD<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>touch README.txt
+</span></span><span style="display:flex;"><span>svn add README.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>   echo <span style="color:#e6db74">&#34;line </span>$i<span style="color:#e6db74">&#34;</span> &gt;&gt; README.txt
+</span></span><span style="display:flex;"><span>   svn ci -m <span style="color:#e6db74">&#34;commit number </span>$i<span style="color:#e6db74"> (originally created </span><span style="color:#66d9ef">$(</span>date +<span style="color:#e6db74">&#34;%Y-%m-%d %T&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svn update
+</span></span><span style="display:flex;"><span>svn log
+</span></span></code></pre></div><p><em>svn_modify.sh — <a href="https://gist.github.com/jesperronn/174cea58433d2f06968f">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># We have 10 commits in a repository. Lets set commit dates to May 1st, 1981-1990</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># set -x</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>START_FOLDER<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>WD<span style="color:#f92672">=</span>working2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd <span style="color:#e6db74">&#34;</span>$START_FOLDER<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>cd <span style="color:#e6db74">&#34;</span>$WD<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  YEAR<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;1980 + </span>$i<span style="color:#e6db74">&#34;</span> | bc <span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>  svn propset --revprop -r $i  svn:date <span style="color:#e6db74">&#34;</span>$YEAR<span style="color:#e6db74">-05-01T10:00:00.000000Z&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svn update
+</span></span></code></pre></div><h3 id="the-result">The result</h3>
+<p>The result is a fine modified commit history which could look like this</p>
+<pre tabindex="0"><code>$ svn log
+r10 | jesper | 1990-05-01 12:00:00 +0200 (Tue, 01 May 1990) | 1 line
+commit number 10 (originally created 2015-04-15 22:21:35)
+------------------------------------------------------------------------
+r9 | jesper | 1989-05-01 12:00:00 +0200 (Mon, 01 May 1989) | 1 line
+commit number 9 (originally created 2015-04-15 22:21:34)
+------------------------------------------------------------------------
+r8 | jesper | 1988-05-01 12:00:00 +0200 (Sun, 01 May 1988) | 1 line
+commit number 8 (originally created 2015-04-15 22:21:33)
+------------------------------------------------------------------------
+r7 | jesper | 1987-05-01 12:00:00 +0200 (Fri, 01 May 1987) | 1 line
+commit number 7 (originally created 2015-04-15 22:21:32)
+------------------------------------------------------------------------
+r6 | jesper | 1986-05-01 12:00:00 +0200 (Thu, 01 May 1986) | 1 line
+commit number 6 (originally created 2015-04-15 22:21:31)
+------------------------------------------------------------------------
+r5 | jesper | 1985-05-01 12:00:00 +0200 (Wed, 01 May 1985) | 1 line
+commit number 5 (originally created 2015-04-15 22:21:30)
+------------------------------------------------------------------------
+r4 | jesper | 1984-05-01 12:00:00 +0200 (Tue, 01 May 1984) | 1 line
+commit number 4 (originally created 2015-04-15 22:21:29)
+------------------------------------------------------------------------
+r3 | jesper | 1983-05-01 12:00:00 +0200 (Sun, 01 May 1983) | 1 line
+commit number 3 (originally created 2015-04-15 22:21:28)
+------------------------------------------------------------------------
+r2 | jesper | 1982-05-01 12:00:00 +0200 (Sat, 01 May 1982) | 1 line
+commit number 2 (originally created 2015-04-15 22:21:27)
+------------------------------------------------------------------------
+r1 | jesper | 1981-05-01 12:00:00 +0200 (Fri, 01 May 1981) | 1 line
+commit number 1 (originally created 2015-04-15 22:21:26)
+------------------------------------------------------------------------
+</code></pre><h2 id="more-info">More info</h2>
+<ul>
+<li>SVN book <a href="http://svnbook.red-bean.com/en/1.7/svn.ref.reposhooks.pre-revprop-change.html">chapter on &ldquo;pre-revprop-change&rdquo;</a></li>
+<li>Rooot.net &ldquo;<a href="http://www.rooot.net/en/development/code/16-change-svn-commit-log-date.html">Change a SVN commit log message or date</a>&rdquo;</li>
+<li>Stackoverflow: <a href="http://stackoverflow.com/questions/692851/can-i-go-back-and-edit-comments-on-an-svn-checkin">Can I go back and edit comments on an SVN checkin?</a></li>
+<li>Stackoverflow: <a href="http://stackoverflow.com/questions/633353/change-the-timestamp-of-a-svn-revision">Change the timestamp of a SVN revision</a></li>
+</ul>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Wednesday, April 15th, 2015 at 23:06 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

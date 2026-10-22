@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Productivity on Just Add Water</title>
+		<link>https://justaddwater.dk/category/productivity/</link>
+		<description>Recent content in Productivity on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 11 Aug 2011 12:23:16 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/productivity/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Make IntelliJ highlight usages</title>
+				<link>https://justaddwater.dk/2011/08/11/make-intellij-highlight-usages/</link>
+				<pubDate>Thu, 11 Aug 2011 12:23:16 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/08/11/make-intellij-highlight-usages/</guid>
+				<description>&lt;p&gt;By default, Eclipse highlights usage of a word, if you double click it. But IntelliJ IDEA can also do that.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/?p=1480&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2011/08/intellij-highlight-usages-example-annotated-crop1.png&#34; alt=&#34;&#34; title=&#34;intellij-highlight-usages-example-annotated-crop&#34; class=&#34;aligncenter size-full wp-image-1487&#34; height=&#34;323&#34; width=&#34;595&#34;&gt;&#xA;&lt;br&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;It is a very convenient feature, which highlights all occurrences of the word you place the cursor in.&lt;/p&gt;&#xA;&lt;p&gt;To turn it on, just go to &amp;ldquo;File&amp;gt;Settings&amp;rdquo; window.&lt;/p&gt;&#xA;&lt;p&gt;Check &amp;ldquo;Highlight usages of element at caret&amp;rdquo; under &amp;ldquo;IDE Settings &amp;gt; Editor&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2011/08/intellij-highlight-usages-of-element-at-caret-crop.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2011/08/intellij-highlight-usages-of-element-at-caret-crop-300x152.png&#34; alt=&#34;&#34; title=&#34;intellij-highlight-usages-of-element-at-caret-crop&#34; class=&#34;aligncenter size-medium wp-image-1483&#34; height=&#34;152&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2011/08/intellij-highlight-usages-of-element-at-caret-crop-300x152.png 300w, https://justaddwater.dk/wp-content/uploads/2011/08/intellij-highlight-usages-of-element-at-caret-crop.png 927w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Rapid Prototyping With a Piece of Wood</title>
+				<link>https://justaddwater.dk/2010/11/22/rapid-prototyping-with-a-piece-of-wood/</link>
+				<pubDate>Mon, 22 Nov 2010 22:35:22 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/11/22/rapid-prototyping-with-a-piece-of-wood/</guid>
+				<description>&lt;p&gt;May I recommend Aza Raskins recent presentation on Rapid prototyping. He shares a lot of very insightful thoughts on how (and why) rapid prototyping is so important.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://player.vimeo.com/video/16527312&#34; width=&#34;400&#34; height=&#34;225&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://vimeo.com/16527312&#34;&gt;Rapid Prototyping with Aza Raskin&lt;/a&gt; from &lt;a href=&#34;http://vimeo.com/zerolab&#34;&gt;Dan Braghis&lt;/a&gt; on &lt;a href=&#34;http://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Aza Raskin, creative lead at Firefox, shares some tips and tricks about rapid prototyping at the Mozilla Drumbeat festival&lt;/p&gt;&#xA;&lt;p&gt;One of his points: &amp;ldquo;&lt;strong&gt;Aim to finish a usable artifact in a day. This helps you focus and scope.&lt;/strong&gt;&amp;rdquo;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Lessons Learned from Pixar</title>
+				<link>https://justaddwater.dk/2010/04/28/lessons-learned-from-pixar-2/</link>
+				<pubDate>Wed, 28 Apr 2010 09:46:29 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/28/lessons-learned-from-pixar-2/</guid>
+				<description>&lt;p&gt;I took Jeff Atwodd&amp;rsquo;s advice and watched Ed Catmull of Pixar: &amp;ldquo;Keep your crises small&amp;rdquo;. A presentation about lessons learned from successes and crises at Pixar.&lt;/p&gt;&#xA;&lt;p&gt;A central quote:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;If you give a good idea to a mediocre group, they&amp;rsquo;ll screw it up. &lt;strong&gt;If you give a mediocre idea to a good group, they&amp;rsquo;ll fix it.&lt;/strong&gt; Or they&amp;rsquo;ll throw it away and come up with something else.&lt;/p&gt;&#xA;&lt;p&gt;We think of &amp;lsquo;an idea&amp;rsquo; – for movies, for products. It&amp;rsquo;s usually thought of as some singular thing. But the reality of these successful movies – as with all &lt;strong&gt;successful products – that they have got thousands of ideas&lt;/strong&gt;. It&amp;rsquo;s all sorts of things necessary to make the film successful. And you have to &lt;strong&gt;get most of them right to be successful&lt;/strong&gt;. That is why you need a team that works well together.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Great Quotes For The Agile Project Wall</title>
+				<link>https://justaddwater.dk/2008/02/24/great-quotes-for-the-agile-project-wall/</link>
+				<pubDate>Sun, 24 Feb 2008 21:24:24 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/02/24/great-quotes-for-the-agile-project-wall/</guid>
+				<description>&lt;p&gt;At a recent internal Capgemini tradeshow, we had the pleasure of using some great quotes that really benefit working the way I like the best: Small agile teams where we can show and tell &amp;ndash; make working software and prototypes very fast in close collaboration with clients.&lt;/p&gt;&#xA;&lt;p&gt;Mads and I decided to add a few quotes of our own on the list &amp;ndash; basically to provoke a bit internally. One of the provocations were to call us &amp;ldquo;Ruby on Rails pioneers&amp;rdquo;. The reason for that is actually that a Danish newspaper last year called us that when describing this way of working.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How I keep Informed Without My RSS Reader Killing Me</title>
+				<link>https://justaddwater.dk/2008/02/15/how-i-keep-informed-without-my-rss-reader-killing-me/</link>
+				<pubDate>Fri, 15 Feb 2008 11:54:40 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/02/15/how-i-keep-informed-without-my-rss-reader-killing-me/</guid>
+				<description>&lt;p&gt;I got this question today from Lars Pind, who is a brilliant former developer now coaching other software developers:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;6. Which blogs or websites do you read to keep up-to-date at work?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;And i realized that i have just had more than 6 months of RSS reader boycot (inspired by Peter Krantz). Until recently, my reader statistics looked like this:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/02/google-reader-trend-jespers-reading-ban-2007-10-03-crop.png&#34; title=&#34;google-reader-trend-jespers-reading-ban-2007-10-03-crop.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/02/google-reader-trend-jespers-reading-ban-2007-10-03-crop.png&#34; alt=&#34;google-reader-trend-jespers-reading-ban-2007-10-03-crop.png&#34; width=&#34;694&#34; height=&#34;225&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/02/google-reader-trend-jespers-reading-ban-2007-10-03.png&#34; title=&#34;google-reader-trend-jespers-reading-ban-2007-10-03.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/02/google-reader-trend-jespers-reading-ban-2007-10-03.thumbnail.png&#34; alt=&#34;google-reader-trend-jespers-reading-ban-2007-10-03.png&#34; width=&#34;128&#34; height=&#34;94&#34;&gt;&#xA;&lt;/a&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2008/02/google-reader-trend-jespers-reading-ban.png&#34; title=&#34;google-reader-trend-jespers-reading-ban.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2008/02/google-reader-trend-jespers-reading-ban.thumbnail.png&#34; alt=&#34;google-reader-trend-jespers-reading-ban.png&#34; width=&#34;128&#34; height=&#34;95&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Here is my answer to Lars&amp;rsquo; question:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Lean Software Development Video Mary Poppendieck</title>
+				<link>https://justaddwater.dk/2008/01/08/lean-software-development-video-mary-poppendieck/</link>
+				<pubDate>Tue, 08 Jan 2008 19:58:36 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/08/lean-software-development-video-mary-poppendieck/</guid>
+				<description>&lt;p&gt;Here are some great examples i jotted down when watching Mary Poppendieck&amp;rsquo;s presentation at Google: &amp;ldquo;&lt;a href=&#34;http://video.google.com/videoplay?docid=-5105910452864283694&#34;&gt;Competing on the basis of speed&lt;/a&gt;&amp;rdquo;. See my notes below.&lt;/p&gt;&#xA;&lt;p&gt;Complexity kills speed: Windows 95 took 350 developers, Vista took 3500 developers&lt;/p&gt;&#xA;&lt;p&gt;Make sure your project anticipates change:&lt;br&gt;&#xA;60-80% of all software is developed after first release to production&lt;/p&gt;&#xA;&lt;p&gt;Defer commitment.Wait till the latest possible moment to make the commitment. This makes sure you base your decision on the best information available. Example: Toyota develops 10 parallel motors for a given project and only 9-10 months before production, they take the decision which one to use in the final car.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Speed House Building Video, Teamwork and Collaboration</title>
+				<link>https://justaddwater.dk/2008/01/02/speed-house-building-video-teamwork-and-collaboration/</link>
+				<pubDate>Wed, 02 Jan 2008 21:48:00 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/02/speed-house-building-video-teamwork-and-collaboration/</guid>
+				<description>&lt;p&gt;You may know this video, where American construction workers compete to build a house as fast as possible.&lt;/p&gt;&#xA;&lt;p&gt;Colleagues of mine showed this video at a 50-60 people workshop for inspiration to teamwork and collaboration.&lt;/p&gt;&#xA;&lt;p&gt;I was really amazed when I first saw this video. It seems chaotic but is of course well prepared down to the tiniest detail. Also, it reminds me a bit like small ants running around.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Innovative — but hidden — Text Field Interaction</title>
+				<link>https://justaddwater.dk/2007/09/11/innovative-but-hidden-text-field-interaction/</link>
+				<pubDate>Tue, 11 Sep 2007 13:57:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/11/innovative-but-hidden-text-field-interaction/</guid>
+				<description>&lt;p&gt;You might know this example. It works this way in Adobe Photoshop.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;Drag to adjust numberic value&lt;/strong&gt;&lt;br&gt;&#xA;Mouseover the input box, hold down Cmd + drag left or right to increase / decrease. Hold down Cmd + Opt or Shift key and drag can change the value in decimal or 10 interval. This shortcut works in all dialog palettes.&lt;br&gt;&#xA;&lt;img src=&#34;http://www.webdesignerwall.com/wp-content/uploads/2007/09/shortcuts-6.gif&#34; alt=&#34;screenshot&#34; title=&#34;screenshot&#34; height=&#34;123&#34; width=&#34;361&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Copied from WebdesignWall&amp;rsquo;s &amp;ldquo;&lt;a href=&#34;http://www.webdesignerwall.com/tutorials/photoshop-secret-shortcuts/&#34;&gt;Photoshop secret shortcuts&lt;/a&gt;&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Very interesting interaction design here. Obviously, the fields here are not a web application, but it inspires me to think about raising the bar for web apps. So this is not just a text field. You can of course write text in it normally. Now, pressing Cmd key (or CTRL on Windows) makes it possible to slide through values. Furthemore it&amp;rsquo;s still possible to click the drop-down symbol next to the field. This will reveal a regular slider, that also can be dragged.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Powerful Text Editor Released</title>
+				<link>https://justaddwater.dk/2007/08/08/powerful-text-editor-released/</link>
+				<pubDate>Wed, 08 Aug 2007 12:13:24 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/08/08/powerful-text-editor-released/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://e-texteditor.com/&#34;&gt;E-texteditor&lt;/a&gt; just got out of beta. &lt;a href=&#34;http://www.e-texteditor.com/forum/search.php?search_author=jesperrr&#34;&gt;I have actively contributed&lt;/a&gt; with improvement suggestions and error reports, as this editor has all needed features for rapid web devlopment, and has potential to become even better.&lt;/p&gt;&#xA;&lt;p&gt;I suggest you check out the inspiring screencast and perhaps buy a trial if you like it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.e-texteditor.com/index.html&#34; title=&#34;E-texteditor homepage with screenshot&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/e-texteditor-homepage.png&#34; alt=&#34;e-texteditor-homepage.png&#34; width=&#34;453&#34; height=&#34;428&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;More info:&lt;/p&gt;&#xA;&lt;p&gt;E-Texteditor website: &lt;a href=&#34;http://e-texteditor.com/&#34;&gt;e-texteditor.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Justaddwater.dk: &lt;a href=&#34;https://justaddwater.dk/2007/04/28/e-texteditor-for-windows/&#34; title=&#34;Permanent Link to E-Texteditor For Windows&#34;&gt;E-Texteditor For Windows&lt;/a&gt; (April 2007)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Say No as often as you say Yes</title>
+				<link>https://justaddwater.dk/2007/07/31/say-no-as-often-as-you-say-yes/</link>
+				<pubDate>Tue, 31 Jul 2007 10:03:47 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/07/31/say-no-as-often-as-you-say-yes/</guid>
+				<description>&lt;p&gt;I wanted to post this for a while. But it&amp;rsquo;s definitely worth a mention if you&amp;rsquo;re working with software development. &lt;a href=&#34;http://www.cameronmoll.com/archives/000643.html&#34;&gt;&lt;br&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.cameronmoll.com/archives/000643.html&#34;&gt;Cameron Moll: 10 things I learned in 6 months&lt;/a&gt; (Nov, 2005):&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;6. Say ‘no’ as often as you say ‘yes’. [&amp;hellip;] Realize that every project you say ‘yes’ to inevitably locks up time that may or may not be better spent elsewhere in terms of project revenue, portfolio depth, and overall work satisfaction.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Photoshop Productivity Tip: Rounded Corners on Images</title>
+				<link>https://justaddwater.dk/2007/07/27/photoshop-productivity-tip-rounded-corners-on-images/</link>
+				<pubDate>Fri, 27 Jul 2007 10:22:42 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/07/27/photoshop-productivity-tip-rounded-corners-on-images/</guid>
+				<description>&lt;p&gt;I had to ask my old colleague and friend &lt;a href=&#34;http://www.bernth.dk/&#34; title=&#34;Michael Bernth homepage&#34;&gt;Michael Bernth&lt;/a&gt; for help today for a Photoshop tip.&lt;/p&gt;&#xA;&lt;p&gt;I wanted to round the corners of an image with the shape of a rounded rectangle.&lt;/p&gt;&#xA;&lt;p&gt;Here is an easy way (I&amp;rsquo;m using Photoshop CS1):&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Start with an image in a separate layer. Create a new set (folder), and put the image into it. &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/07/photoshop-mask-create-new-set.png&#34; title=&#34;photoshop-mask-create-new-set.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/07/photoshop-mask-create-new-set.png&#34; alt=&#34;photoshop-mask-create-new-set.png&#34; width=&#34;396&#34; height=&#34;338&#34;&gt;&#xA;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Create the shape that will form the borders of the image. I&amp;rsquo;m using the &amp;ldquo;rounded rectangles tool&amp;rdquo;. &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/07/photoshop-mask-create-rounded-shape.png&#34; title=&#34;photoshop-mask-create-rounded-shape.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/07/photoshop-mask-create-rounded-shape.png&#34; alt=&#34;photoshop-mask-create-rounded-shape.png&#34; width=&#34;541&#34; height=&#34;223&#34;&gt;&#xA;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;CTRL + click the layer to select layer transparency&lt;/li&gt;&#xA;&lt;li&gt;Hide layer with shape, still preserving the selection&lt;/li&gt;&#xA;&lt;li&gt;Select the folder by clicking once on the set in layer list &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/07/photoshop-mask-select-folder.png&#34; title=&#34;photoshop-mask-select-folder.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/07/photoshop-mask-select-folder.png&#34; alt=&#34;photoshop-mask-select-folder.png&#34; width=&#34;521&#34; height=&#34;204&#34;&gt;&#xA;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Choose &amp;ldquo;Layer&amp;rdquo; &amp;gt; &amp;ldquo;Add layer mask&amp;rdquo; &amp;gt; &amp;ldquo;Reveal selection&amp;rdquo; &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/07/photoshop-mask-add-layer-mask-reveal-selection.png&#34; title=&#34;photoshop-mask-add-layer-mask-reveal-selection.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/07/photoshop-mask-add-layer-mask-reveal-selection.png&#34; alt=&#34;photoshop-mask-add-layer-mask-reveal-selection.png&#34; width=&#34;547&#34; height=&#34;374&#34;&gt;&#xA;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Finished result:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Agile Tip: Use Assumptions To Keep Momentum</title>
+				<link>https://justaddwater.dk/2007/06/11/agile-tip-use-assumptions-to-keep-momentum/</link>
+				<pubDate>Mon, 11 Jun 2007 09:09:19 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/06/11/agile-tip-use-assumptions-to-keep-momentum/</guid>
+				<description>&lt;p&gt;Here is some agile methodology worth paying attention to, &lt;strong&gt;stating that even wrong decisions allow developers to keep momentum and push a project forward&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;gt; If we decide not to make any decisions we lose 10 times $822, for a total of $8,220&lt;br&gt;&#xA;&amp;gt; per week. Let me say that again: blanket indecision loses $8,220 per week; making&lt;br&gt;&#xA;&amp;gt; decisions (including bad ones) loses $1,680 per week. That&amp;rsquo;s a difference of $6,540&lt;br&gt;&#xA;&amp;gt; per week.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s actually a pretty powerful argument for doing everything possible to lower the perceived cost of making a decision for managers or customers. Perceived cost is that fear-driven idea that if you make a certain decision, you&amp;rsquo;ll be stuck with the results forever if it doesn&amp;rsquo;t work out, due to the high cost of changing it.&lt;/p&gt;&#xA;&lt;p&gt;This is exactly the problem that Agile methods were designed to solve. By reducing the perceived cost, we encourage our customers to make more timely decisions, learn from them, and adjust as needed without incurring high costs.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Replacement for Standard Windows Console</title>
+				<link>https://justaddwater.dk/2007/04/30/replacement-for-standard-windows-console/</link>
+				<pubDate>Mon, 30 Apr 2007 11:48:28 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/30/replacement-for-standard-windows-console/</guid>
+				<description>&lt;p&gt;The standard windows command window (console) sucks for several usability reasons:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Standard windows keyboard shortcuts don&amp;rsquo;t work. It&amp;rsquo;s not possible to copy/paste without using a special menu.&lt;/li&gt;&#xA;&lt;li&gt;This special menu is best accessible with the mouse (or a long range of shortcuts)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Compare how it should be&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;CTRL + V&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;With how it is in the standard console:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;ALT + SHIFT + space&lt;/p&gt;&#xA;&lt;p&gt;E (for edit)&lt;/p&gt;&#xA;&lt;p&gt;P (for paste)&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Which means that my everyday work becomes very tedious than it has to be. Copy is even worse because you first have to put the editor into &amp;ldquo;mark&amp;rdquo; mode to make a selection before you do the ALT+SHIFT+space, then E, then C = even more time-consuming.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Debugging CSS: My Best Productivity Tip Ever</title>
+				<link>https://justaddwater.dk/2007/04/30/debugging-css-my-best-productivity-tip-ever/</link>
+				<pubDate>Mon, 30 Apr 2007 00:07:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/30/debugging-css-my-best-productivity-tip-ever/</guid>
+				<description>&lt;p&gt;Firebug keeps surprising me. I&amp;rsquo;ve recently been working on code for several web designs and this little trick helped me to understand existing HTML and CSS much faster. Just to give an example I use our Justaddwater RSS feed page (but could be any page).&lt;/p&gt;&#xA;&lt;p&gt;Before you start, &lt;a href=&#34;http://www.getfirebug.com/&#34;&gt;get Firebug&lt;/a&gt; for Firefox (if you haven&amp;rsquo;t got it already).&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Press F12 and the Firebug window appears below in the browser window&lt;/li&gt;&#xA;&lt;li&gt;Start the HTML inspector and mouse over any element, you want to learn about. &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector.png&#34; title=&#34;firebug-css-tip-start-html-inspector.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector-thumb.png&#34; alt=&#34;firebug-css-tip-start-html-inspector-thumb.png&#34; width=&#34;448&#34; height=&#34;332&#34;&gt;&#xA;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Now, you can see the HTML, the hierachy,and the CSS rules. For me it has been very useful, that overridden CSS rules are marked with strikethrough text. That&amp;rsquo;s a very handy information when CSS specificity plays in with a trick or two.&lt;/li&gt;&#xA;&lt;li&gt;Press escape to stop inspector mode, and move mouse down to CSS rules.&lt;/li&gt;&#xA;&lt;li&gt;Mouse over the CSS rules reveal a small icon to toggle the line. See screenshot animation below.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/firebug-css-bugfix-toggle.gif&#34; alt=&#34;firebug-css-bugfix-toggle.gif&#34;&gt;&#xA;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>E-Texteditor For Windows</title>
+				<link>https://justaddwater.dk/2007/04/28/e-texteditor-for-windows/</link>
+				<pubDate>Sat, 28 Apr 2007 00:55:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/28/e-texteditor-for-windows/</guid>
+				<description>&lt;p&gt;I have been looking a fast, intuitive editor for my Windows laptop.&lt;/p&gt;&#xA;&lt;p&gt;Now I stopped looking. E-texteditor for windows is very intuitive and easy to use. I highly recommend watching the screencast (a short tour of some of the best features). Although it&amp;rsquo;s still in beta, it seems so much better than the alternatives.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m using it for HTML, CSS, JavaScript, Ruby on Rails editing. And it just works.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.e-texteditor.com/index.html&#34; title=&#34;E-texteditor homepage with screenshot&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/e-texteditor-homepage.png&#34; alt=&#34;e-texteditor-homepage.png&#34; width=&#34;453&#34; height=&#34;428&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Howto Create a Temporary Local Subversion Repository</title>
+				<link>https://justaddwater.dk/2007/04/26/howto-create-a-temporary-local-subversion-repository/</link>
+				<pubDate>Thu, 26 Apr 2007 21:30:08 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/26/howto-create-a-temporary-local-subversion-repository/</guid>
+				<description>&lt;p&gt;UPDATE May 1st, 2007 (forgot the two final steps 8 and 9).&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve run into the situation a couple of times where I get started on a client&amp;rsquo;s office, but due to delays and politics it takes time to get a proper versioning control server set up.&lt;/p&gt;&#xA;&lt;p&gt;It turned out to be easy when I figured out the where to find the details on it. I&amp;rsquo;m running windows XP, don&amp;rsquo;t know how this differs on other operating systems.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<script type="text/javascript" src="http://justaddwater.dk/wp-content/uploads/2006/03/prototype.js" ></script>
+	<title></title>
+<style type="text/css">
+table{
+	width:300px;
+	border:1px dashed red;
+}
+td{
+	vertical-align: top;
+	background-color: #dfc;
+	height: 10px;	/* table cell does not obey this height */
+  /*	display: block; */ /* this one is obeyed by Firefox but ignored by IE */
+}
+</style>
+</head>
+
+<body>
+
+<table class="slimTable">	
+<tr>
+	<td>1. start cell not much content</td>
+	<td>2. second cell has insanely long content that I know will always wrap</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+var s = ['<div style="height:18px;text-overflow: ellipsis; overflow:hidden; width: 100%">', '</div>' ];
+var c,b=[],a = $A(document.getElementsByClassName('slimTable'))
+a.each( function(table){
+	c = $A(table.getElementsByTagName('td'))
+	c.each( function(node){
+		b[b.length] = node;
+	});
+	c = null;
+});
+
+b.each( function(node) { node.innerHTML=s[0] + node.innerHTML + s[1]; } );
+
+</script>
+
+
+			
+</body>
+</html>

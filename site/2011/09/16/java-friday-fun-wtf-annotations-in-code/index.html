@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java Friday Fun: @WTF annotations in code · justaddwater.dk</title>
+<meta name="description" content="Time for a little geeky gimmick. Some developers see and express a lot of &ldquo;WTF??&rdquo; while trying to understand code
+IN this spirit, i created a quick …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2011/08/11/make-intellij-highlight-usages/" rel="prev">Make IntelliJ highlight usages</a></div>
+<div class="alignright"><a href="/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/" rel="next">Chrome “find in page” with smart search in unicode characters</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2011-09-16"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2011"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Java"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="Time for a little geeky gimmick. Some developers see and express a lot of “WTF??” while trying to understand code IN this spirit, i created a quick @WTF annotation for Java. Besides being completely useless (its removed at compile time), its only purpose is to give developers a new way to express themselves in code. [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Sep 16"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="4"></span>
+<h2 data-pagefind-meta="title">Java Friday Fun: @WTF annotations in code</h2>
+<div class="entry">
+<p>Time for a little geeky gimmick. Some developers see and express a lot of &ldquo;WTF??&rdquo; while trying to understand code</p>
+<p><a href="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg"><img src="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg" alt="" title="focus-shift-cartoon-wtf-per-minute-wtfm" class="aligncenter size-medium wp-image-1493" height="282" width="300" srcset="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg 300w, /wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg 500w" sizes="(max-width: 300px) 100vw, 300px">
+</a></p>
+<p>IN this spirit, i created a quick @WTF annotation for Java.</p>
+<p>Besides being completely useless (its removed at compile time), its only purpose is to give developers a new way to express themselves in code.</p>
+<p><em>WTF.java — <a href="https://gist.github.com/1222965">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Retention</span>(RetentionPolicy.<span style="color:#a6e22e">SOURCE</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Target</span>({ElementType.<span style="color:#a6e22e">TYPE</span>, ElementType.<span style="color:#a6e22e">FIELD</span>, ElementType.<span style="color:#a6e22e">METHOD</span>, ElementType.<span style="color:#a6e22e">CONSTRUCTOR</span>, ElementType.<span style="color:#a6e22e">LOCAL_VARIABLE</span>})
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#a6e22e">@interface</span> WTF {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * Optionally specify &lt;code&gt;explain&lt;/code&gt;, and write why you dont understand this annotated element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    String <span style="color:#a6e22e">explain</span>() <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * Optionally add &lt;code&gt;explanation&lt;/code&gt;, and to explain why and how the element should be used
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Deprecated</span>
+</span></span><span style="display:flex;"><span>    String  <span style="color:#a6e22e">explanation</span>() <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The cartoon states &ldquo;The only valid measurement of code quality: WTFs/minute&rdquo;. With the &lt;code&gt;@WTF&lt;/code&gt; annotations, I would like to take it a little further. By annotating the code, you can actually encourage colleagues to help you fix it.</p>
+<p>The best fix for WTF-code is of course to refactor, so that it becomes readable.</p>
+<p>Interesting article:</p>
+<p><a href="http://www.gridshore.nl/2008/03/29/how-wtfs-improve-code-quality-awareness/">http://www.gridshore.nl/2008/03/29/how-wtfs-improve-code-quality-awareness/</a></p>
+<p>The original cartoon strip:  <a href="http://www.osnews.com/story/19266/WTFs_m">http://www.osnews.com/story/19266/WTFs_m</a></p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Friday, September 16th, 2011 at 21:52 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/java/" rel="category tag">Java</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">4 Responses to &#8220;Java Friday Fun: @WTF annotations in code&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-542339">
+<cite><a href="http://climbingtip.blogspot.com/" class="url" rel="external">Aaron</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-542339" title="">September 21st, 2011 at 00:11 (GMT-1)</a> </small>
+<p>Fun idea. And a good article you linked to. Thanks!</p>
+</li>
+
+<li id="comment-542576">
+<cite>Labelle</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-542576" title="">September 21st, 2011 at 17:17 (GMT-1)</a> </small>
+<p>WTFs/minute – nice. Last week I was running at least 10WTF&rsquo;s/minute, methinks.</p>
+</li>
+
+<li class="alt" id="comment-543922">
+<cite><a href="http://www.matthempsell.com.au" class="url" rel="external">Matt Hempsell</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-543922" title="">September 25th, 2011 at 16:10 (GMT-1)</a> </small>
+<p>Great Very funny, i will have to pass this on to some of my geeky friends.</p>
+</li>
+
+<li id="comment-544065">
+<cite><a href="http://www.dericcainphotography.com" class="url" rel="external">Deric Cain</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-544065" title="">September 26th, 2011 at 02:02 (GMT-1)</a> </small>
+<p>I am going to shoot a link to all of my coding buddies about this one. Nice job and humorous.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

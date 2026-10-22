@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Agile on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/agile/</link>
+		<description>Recent content in Agile on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 29 Apr 2009 15:47:02 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/agile/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Hitler&#39;s Final Agile Planning Meeting</title>
+				<link>https://justaddwater.dk/2009/04/29/hitlers-final-agile-planning-meeting/</link>
+				<pubDate>Wed, 29 Apr 2009 15:47:02 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/04/29/hitlers-final-agile-planning-meeting/</guid>
+				<description>&lt;p&gt;It all ends with the fatal Iteration#6 &amp;ndash; at least according to this video a colleague pointed me to.&lt;/p&gt;&#xA;&lt;p&gt;Video clip is taken from &amp;ldquo;The Downfall&amp;rdquo; and texted as if we were attending a daily scrum meeting during world war II.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Scrum Presentation Edit</title>
+				<link>https://justaddwater.dk/2008/03/27/scrum-presentation-edit/</link>
+				<pubDate>Thu, 27 Mar 2008 13:17:42 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/27/scrum-presentation-edit/</guid>
+				<description>&lt;p&gt;Jakob Scmidt Sørensen made an edited boiled down of his &lt;a href=&#34;https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/&#34;&gt;Internal Capgemini Scrum Presentation&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Thanks Jakob!&lt;/p&gt;&#xA;&lt;p&gt;The entire 38 minutes presentation is in Danish&lt;/p&gt;&#xA;&lt;p&gt;As a side note, we had quite some traffic from the Danish blog &amp;ldquo;Version 2&amp;rdquo; where Rasmus Knippel (an ex capgemini colleague) &lt;a href=&#34;http://www.version2.dk/artikel/6697&#34; title=&#34;Version 2 (Danish) - Kig ind i en virksomhed (Rasmus Knippel)&#34;&gt;wrote about the video&lt;/a&gt;. Rasmus found it quite unique that a larger company in Denmark would &amp;ldquo;broadcast&amp;rdquo; an internal presentation in this way. He also thinks that companies that allow this will put a certain confidence in the employees.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Internal Capgemini Scrum Presentation</title>
+				<link>https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/</link>
+				<pubDate>Sat, 08 Mar 2008 19:43:42 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/</guid>
+				<description>&lt;p&gt;If you understand Danish, then this internal presentation might be something for you.&lt;/p&gt;&#xA;&lt;p&gt;Capgemini Denmark lunchbag session explaining &amp;ldquo;What is Scrum&amp;rdquo;, &amp;ldquo;how to Scrum&amp;rdquo;, &amp;ldquo;Why Scrum&amp;rdquo;, recorded Friday March 7th.&lt;/p&gt;&#xA;&lt;p&gt;Presenter is my colleague Jakob Schmidt Sørensen, Capgemini Denmark. He asked me to help him out keep track of time and draw the burndown chart during the presentation.&lt;br&gt;&#xA;Note that the entire presentation is done on a scrumboard with a burndown chart being constantly updated during the 40 minute presentation. Actually, this was the rerun of a similar presentation one week earlier: The first one was quite popular and several people encouraged Jakob to redo the presentation.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

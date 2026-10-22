@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Internal on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/internal/</link>
+		<description>Recent content in Internal on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 11 May 2009 14:18:45 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/internal/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>IT frustration and counter-productive applications</title>
+				<link>https://justaddwater.dk/2009/05/11/it-frustration-and-counter-productive-applications/</link>
+				<pubDate>Mon, 11 May 2009 14:18:45 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/05/11/it-frustration-and-counter-productive-applications/</guid>
+				<description>&lt;p&gt;Frustrated by internal systems! I just finished writing a page for our intranet. But now I ended up &lt;strong&gt;frustrated with no article published&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;First attempt&lt;/strong&gt;: After spending 10 minutes writing I pressed &amp;ldquo;save and exit&amp;rdquo;. but the article never changed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Second attempt&lt;/strong&gt;: Spent another 10 minutes writing. In the review I pressed Command+backspace to delete to start of line. Unfortunately, the webpage interpreted this as &amp;ldquo;back&amp;rdquo;, and since the Microsoft based system operates on the same URL, it effectively deleted my entire text. (pressing &amp;ldquo;forward&amp;rdquo; brought up the old text)&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

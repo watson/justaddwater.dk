@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Workflow on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/workflow/</link>
+		<description>Recent content in Workflow on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 09 Mar 2009 14:52:11 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/workflow/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Using Git for SVN Repositories Workflow</title>
+				<link>https://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/</link>
+				<pubDate>Mon, 09 Mar 2009 14:52:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/</guid>
+				<description>&lt;p&gt;For the last months I have been using Git to work with my Subversion repositories. Besides from &lt;a href=&#34;https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/&#34; title=&#34;justaddwater.dk | Git Side Benefit: Reducing Disk Usage&#34;&gt;reducing disk usage&lt;/a&gt;, Git also makes my work slightly faster and independent of network access &amp;ndash; I can make commits to repository which is sync&amp;rsquo;ed later when I get online.&lt;/p&gt;&#xA;&lt;p&gt;One challenge though: Using branches&lt;/p&gt;&#xA;&lt;p&gt;I ran into some pitfalls when using branches in Subversion repository. Here is a quick guide to how I setup and work with svn branches in git-svn.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

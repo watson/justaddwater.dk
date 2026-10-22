@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Presentation on Just Add Water</title>
+		<link>https://justaddwater.dk/category/presentation/</link>
+		<description>Recent content in Presentation on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 28 Apr 2010 09:46:29 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/presentation/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Lessons Learned from Pixar</title>
+				<link>https://justaddwater.dk/2010/04/28/lessons-learned-from-pixar-2/</link>
+				<pubDate>Wed, 28 Apr 2010 09:46:29 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/28/lessons-learned-from-pixar-2/</guid>
+				<description>&lt;p&gt;I took Jeff Atwodd&amp;rsquo;s advice and watched Ed Catmull of Pixar: &amp;ldquo;Keep your crises small&amp;rdquo;. A presentation about lessons learned from successes and crises at Pixar.&lt;/p&gt;&#xA;&lt;p&gt;A central quote:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;If you give a good idea to a mediocre group, they&amp;rsquo;ll screw it up. &lt;strong&gt;If you give a mediocre idea to a good group, they&amp;rsquo;ll fix it.&lt;/strong&gt; Or they&amp;rsquo;ll throw it away and come up with something else.&lt;/p&gt;&#xA;&lt;p&gt;We think of &amp;lsquo;an idea&amp;rsquo; – for movies, for products. It&amp;rsquo;s usually thought of as some singular thing. But the reality of these successful movies – as with all &lt;strong&gt;successful products – that they have got thousands of ideas&lt;/strong&gt;. It&amp;rsquo;s all sorts of things necessary to make the film successful. And you have to &lt;strong&gt;get most of them right to be successful&lt;/strong&gt;. That is why you need a team that works well together.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Capgemini SmartLunch: Cucumber for Automated Acceptance Testing</title>
+				<link>https://justaddwater.dk/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing/</link>
+				<pubDate>Tue, 27 Apr 2010 13:27:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/04/27/capgemini-smartlunch-cucumber-for-automated-acceptance-testing/</guid>
+				<description>&lt;p&gt;Today I did an internal presentation on how we used Cucumber as testing framework on several recent occasions.&lt;/p&gt;&#xA;&lt;p&gt;The presentation was held in our usual Capgemini SmartLunch format: People can eat and learn in their lunchbreak. External visitors are welcome. Duration 30-45 minutes including questions.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.pdf&#34;&gt;pres 2010-04-27-cucumber&lt;/a&gt; (573KB pdf format)&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/04/pres-2010-04-27-cucumber.key_.zip&#34;&gt;pres 2010-04-27-cucumber.key&lt;/a&gt; (782KB keynote format)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Public Danish Data REST Interface</title>
+				<link>https://justaddwater.dk/2008/05/28/public-danish-data-rest-interface/</link>
+				<pubDate>Wed, 28 May 2008 21:31:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/05/28/public-danish-data-rest-interface/</guid>
+				<description>&lt;p&gt;Christian Dalager and I did an internal Capgemini SmartLunch presentation about REST interfaces in the public Danish sector. REST interface is great news for those in favor of easy-to-integrate, scalable SOA interfaces, and REST services is actually used more than SOAP, XMLRPC, etc. in companies offering multiple interfaces to their data (Amazon, Yahoo, Google, Ebay, Microsoft and more).&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://en.itst.dk/hd_logo_en_191_89.gif&#34; alt=&#34;Danish National IT and Telecom Agency logo&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The Danish National IT and Telecom Agency has published some really useful data as a REST interface (although they haven&amp;rsquo;t committed themselves yet to make the service permanent). The published data is a complete dataset for Denmark which includes:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Scrum Presentation Edit</title>
+				<link>https://justaddwater.dk/2008/03/27/scrum-presentation-edit/</link>
+				<pubDate>Thu, 27 Mar 2008 13:17:42 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/27/scrum-presentation-edit/</guid>
+				<description>&lt;p&gt;Jakob Scmidt Sørensen made an edited boiled down of his &lt;a href=&#34;https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/&#34;&gt;Internal Capgemini Scrum Presentation&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Thanks Jakob!&lt;/p&gt;&#xA;&lt;p&gt;The entire 38 minutes presentation is in Danish&lt;/p&gt;&#xA;&lt;p&gt;As a side note, we had quite some traffic from the Danish blog &amp;ldquo;Version 2&amp;rdquo; where Rasmus Knippel (an ex capgemini colleague) &lt;a href=&#34;http://www.version2.dk/artikel/6697&#34; title=&#34;Version 2 (Danish) - Kig ind i en virksomhed (Rasmus Knippel)&#34;&gt;wrote about the video&lt;/a&gt;. Rasmus found it quite unique that a larger company in Denmark would &amp;ldquo;broadcast&amp;rdquo; an internal presentation in this way. He also thinks that companies that allow this will put a certain confidence in the employees.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Internal Capgemini Scrum Presentation</title>
+				<link>https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/</link>
+				<pubDate>Sat, 08 Mar 2008 19:43:42 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/03/08/internal-capgemini-scrum-presentation/</guid>
+				<description>&lt;p&gt;If you understand Danish, then this internal presentation might be something for you.&lt;/p&gt;&#xA;&lt;p&gt;Capgemini Denmark lunchbag session explaining &amp;ldquo;What is Scrum&amp;rdquo;, &amp;ldquo;how to Scrum&amp;rdquo;, &amp;ldquo;Why Scrum&amp;rdquo;, recorded Friday March 7th.&lt;/p&gt;&#xA;&lt;p&gt;Presenter is my colleague Jakob Schmidt Sørensen, Capgemini Denmark. He asked me to help him out keep track of time and draw the burndown chart during the presentation.&lt;br&gt;&#xA;Note that the entire presentation is done on a scrumboard with a burndown chart being constantly updated during the 40 minute presentation. Actually, this was the rerun of a similar presentation one week earlier: The first one was quite popular and several people encouraged Jakob to redo the presentation.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Busy Preparing RailsConf Presentation</title>
+				<link>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</link>
+				<pubDate>Tue, 11 Sep 2007 14:31:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/11/busy-preparing-railsconf-presentation/</guid>
+				<description>&lt;p&gt;For the last days, Mads and myself have been working hard on our RailsConf presentation Tuesday next week.&lt;/p&gt;&#xA;&lt;img src=&#34;http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg&#34; alt=&#34;Railsconf speaker 2007&#34; height=&#34;125&#34; width=&#34;125&#34;&gt;&#xA;&#xA;&lt;p&gt;At the presentation we will introduce a Ruby on Rails plugin that can create the foundation for a local Rails app based on forms scraped from a remote application. In our case, an internal application used for timereporting in Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;My head is too ful of all the details in the presentation but fact is, that we&amp;rsquo;re running two trials on the presentation this Thursday the 13th in our Capgemini office in Copenhagen, Denmark.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>RailsConf presentation notes</title>
+				<link>https://justaddwater.dk/2006/09/14/railsconf-presentation-notes/</link>
+				<pubDate>Thu, 14 Sep 2006 13:22:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/09/14/railsconf-presentation-notes/</guid>
+				<description>&lt;p&gt;Just a short note that I just published my first notes from the RailsConf keynote presentations. RailsConf ends tomorrow, Friday, and I expect that more notes will show up on our Rails related website: copenhagen.rb&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://copenhagenrb.dk/2006/9/14/railsconf-europe-session-overviews&#34;&gt;Copenhagenrb.dk: Railsconf Europe Session overview&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Presentation for corporate weblogging event</title>
+				<link>https://justaddwater.dk/2006/06/13/weblog-event/</link>
+				<pubDate>Tue, 13 Jun 2006 07:30:08 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/13/weblog-event/</guid>
+				<description>&lt;p&gt;This morning we&amp;rsquo;re speaking in about corporate weblogs in Copenhagen, Denmark. It’s hosted by the &lt;a href=&#34;http://www.itb.dk/site.asp?p=51&#34;&gt;Danish IT Industry Association&lt;/a&gt;, and We’ll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini.&lt;/p&gt;&#xA;&lt;p&gt;The presentation is in Danish. More info on previous blog post &amp;ldquo;&lt;a href=&#34;https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/&#34; title=&#34;Permanent Link: Speaking on Corporate Weblogging event&#34;&gt;Speaking on Corporate Weblogging event&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Powerpoint version: &lt;a href=&#34;https://justaddwater.dk/wp-content/pres_2006-06-13_blogging.ppt&#34; title=&#34;Capgemini justaddwater.dk blogging 2006-06-13, 2.1MB Powerpoint presentation&#34;&gt;Capgemini og Justaddwater.dk&lt;/a&gt; (2.1MB)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My Talk at Reboot8: Prototyping</title>
+				<link>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</link>
+				<pubDate>Thu, 01 Jun 2006 11:27:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</guid>
+				<description>&lt;p&gt;Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.&lt;/p&gt;&#xA;&lt;p&gt;Topic: Prototype driven development with Ruby on Rails, and demo of the application we made at Capgemini with the Danish public Agency of Companies and Commerce.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Presentation&lt;/strong&gt; (Powerpoint format) for download here:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/pres%202006-06-01%20reboot.ppt&#34; title=&#34;Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails&#34;&gt;&lt;/a&gt; &lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt&#34;&gt;Prototype driven development with Ruby on Rails: Powerpoint version (1.11 MB)&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Speaking on Corporate Weblogging event</title>
+				<link>https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/</link>
+				<pubDate>Mon, 15 May 2006 10:14:09 +0000</pubDate>
+				<guid>https://justaddwater.dk/2006/05/15/speaking-on-corporate-weblogging-event/</guid>
+				<description>&lt;p&gt;June 13, Thomas and I are invited to speak at an event about corporate weblogs in Copenhagen, Denmark. It&amp;rsquo;s hosted by the &lt;a href=&#34;http://www.itb.dk/site.asp?p=51&#34;&gt;Danish IT Industry Association&lt;/a&gt;, and We&amp;rsquo;ll be speaking on the experiences with this blog and how it relates to our jobs at Capgemini. Also, there will be a chance to hear &lt;a href=&#34;http://bootstrapping.net/&#34;&gt;Thomas Madsen-Mygdal&lt;/a&gt;, &lt;a href=&#34;http://asynkron.dk&#34;&gt;Andreas Johannsen&lt;/a&gt; and the CEO of Sun, Denmark Peter Rindsig (&lt;a href=&#34;http://www.google.com/search?hl=en&amp;amp;q=%22peter+rindsig%22+blog&#34;&gt;who hasn&amp;rsquo;t got a blog&lt;/a&gt;).&lt;br&gt;&#xA;If you want to attend the event, you can find more details (in Danish) in &lt;a href=&#34;http://www.itb.dk/site.asp?p=853&amp;amp;aid=47&#34; title=&#34;ITB.dk kalender: corporate weblogs&#34;&gt;the program&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

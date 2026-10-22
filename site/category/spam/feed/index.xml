@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Spam on Just Add Water</title>
+		<link>https://justaddwater.dk/category/spam/</link>
+		<description>Recent content in Spam on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 14 Jun 2009 17:06:34 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/spam/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Comments working again</title>
+				<link>https://justaddwater.dk/2009/06/14/comments-working-again/</link>
+				<pubDate>Sun, 14 Jun 2009 17:06:34 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/06/14/comments-working-again/</guid>
+				<description>&lt;p&gt;Thanks to one of our dear readers we just discovered a bug in our commenting system that basically meant that you could not leave a comment on any of our posts. This has now been fixed and you can now again tell us your thoughts.&lt;/p&gt;&#xA;&lt;p&gt;Of cause we should have noticed, since the amount of spam had dropped to zero. But now that we are receiving thousands of spam comments once again we know that everything is ok ;)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Cleanup Time -- Spam Filter Free Day</title>
+				<link>https://justaddwater.dk/2007/12/18/cleanup-time-spam-filter-free-day/</link>
+				<pubDate>Tue, 18 Dec 2007 10:55:58 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/12/18/cleanup-time-spam-filter-free-day/</guid>
+				<description>&lt;p&gt;1111 spam comments in the last 24 hours have been published on Justaddwater.dk. Just for the record, all of them are now deleted. The many spam comments has had no effect whatsoever with respect to Google PageRank or similar, since we kept &amp;lt;code&amp;gt;rel=&amp;ldquo;nofollow&amp;rdquo;&amp;lt;/code&amp;gt; on all links. Besides, we quickly removed all spam comments at the end of Spam Filter Free Day.&lt;/p&gt;&#xA;&lt;p&gt;137 new conversations in my mailbox telling me that 137 articles I wrote were hit by spam comments the last 24 hours.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Today is Spam Filter Free Day</title>
+				<link>https://justaddwater.dk/2007/12/15/today-is-spam-filter-free-day/</link>
+				<pubDate>Sat, 15 Dec 2007 00:29:35 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/12/15/today-is-spam-filter-free-day/</guid>
+				<description>&lt;p&gt;Saturday the 15th is Spam Filter Free Day here at justaddwater.dk. Why would we ever want to do something like that you ask? Well up until recently we received about 2-3000 spam comments each day so we thought we would draw attention to the wasted bandwidth, time and energy that all these spam comments consume. Not to speak of the large amount of hours with manually filtering all comments that our different spam filtering techniques free us from.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Spam Comments Dropped 95% Overnight</title>
+				<link>https://justaddwater.dk/2007/12/04/spam-comments-dropped-95-overnight/</link>
+				<pubDate>Tue, 04 Dec 2007 13:26:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/12/04/spam-comments-dropped-95-overnight/</guid>
+				<description>&lt;p&gt;It&amp;rsquo;s no secret that we will keep this blog &lt;a href=&#34;https://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/&#34;&gt;spam filter free&lt;/a&gt; on December 15th. For some strange reason we &lt;strong&gt;only had 127 spam comments in the last 27 hours&lt;/strong&gt;. This is a drop to just above 100 a day (as opposed to the previous level 2,000-3,000 per day), which translates to a 95% drop overnight.&lt;/p&gt;&#xA;&lt;p&gt;Thomas and I just had a conversation about what is going on. Could it be that spammers now give up after reading that comments here really give them no value (or pagerank)? Not only are links removed with Akismet, .htaccess files, blacklists and more. We also instantly remove the very few that slip through.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Letting Spam In For A Day Questions and Answers</title>
+				<link>https://justaddwater.dk/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/</link>
+				<pubDate>Thu, 29 Nov 2007 10:33:10 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/11/29/letting-spam-in-for-a-day-questions-and-answers/</guid>
+				<description>&lt;p&gt;Note that our &lt;a href=&#34;https://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/&#34;&gt;spam experiment&lt;/a&gt; scheduled for December 15th got mentioned by the Akismet Blog, Blogherald, and many other blogs.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Akismet Blog: &lt;a href=&#34;http://blog.akismet.com/2007/11/28/letting-spam-in-for-a-day/&#34;&gt;Letting Spam In For A Day&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Blogherald: &lt;a href=&#34;http://www.blogherald.com/2007/11/29/wordpress-wednesday-news-will-you-turn-off-akismet-wordpress-24-delayed-and-more-wordpress-news/&#34;&gt;Will you turn off Akismet&lt;/a&gt;?&lt;/li&gt;&#xA;&lt;li&gt;Follow along in Technorati blog reactions for Justaddwater.dk&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Also to answer some of the comments we got:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://binh.name/&#34;&gt;Binh Nguyen&lt;/a&gt;:&lt;/strong&gt;&lt;br&gt;&#xA;How about a bigger challenge? Keep everything else active and shut down only the spam protection.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;That&amp;rsquo;s a big challenge. But we actually tried that recently when &lt;a href=&#34;https://justaddwater.dk/2007/11/15/justaddwaterdk-hacked/&#34;&gt;Justaddwater.dk got hacked&lt;/a&gt;. The hacker used a security hole in an old version of Wordpress and to upload his malicious code, he disabled all plugins. I discovered that by discovering that Akismet (and all other plugins) was turned off.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Announcement: Spam Filter Free Day</title>
+				<link>https://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/</link>
+				<pubDate>Tue, 27 Nov 2007 11:18:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/</guid>
+				<description>&lt;p&gt;Get ready for a suicide mission: On this blog, we will remove our spam filter completely for one day, December 15th.&lt;/p&gt;&#xA;&lt;p&gt;Today we got our spam comment number 500,000. Pretty scary to think how much energy, computer power, network traffic is wasted on a completely useless activity: To spoil the content with irrelevant comments.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://justaddwater.dk/wp-content/uploads/2007/11/justaddwater-akismet-500941-spam-comments.png&#34; alt=&#34;justaddwater-akismet-500941-spam-comments.png&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Currently we get somewhere between 2000 and 3000 spam comments each day.&lt;/p&gt;&#xA;&lt;p&gt;The thing is, that Thomas and I are discussing: We don&amp;rsquo;t know exactly how much work our spam filter does for us&amp;hellip; Granted, 500,000 spam comments is a pretty high number. But we want to know how much pain this saves us for. How much blood and sweat do we.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Spam Commenters Are Wasting Brainpower</title>
+				<link>https://justaddwater.dk/2007/09/06/spam-commenters-are-wasting-brainpower/</link>
+				<pubDate>Thu, 06 Sep 2007 10:19:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/09/06/spam-commenters-are-wasting-brainpower/</guid>
+				<description>&lt;p&gt;Imagine the amount of collective brainpower idiotic spammers waste on creative ideas for new ways to get past spam filters.&lt;/p&gt;&#xA;&lt;p&gt;This one was caught in the moderation queue (and would probably be caught with Akismet otherwise). For entertainment purposes, here is the text I recieved:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Anikrichard | &lt;a href=&#34;mailto:anlikivanna.80@mail.ru&#34;&gt;anlikivanna.80@mail.ru&lt;/a&gt; | wwwwww.com | IP: 72.9.235.218&lt;/p&gt;&#xA;&lt;p&gt;hello , my name is Richard and I know you get a lot of spammy comments ,&lt;br&gt;&#xA;I can help you with this problem . I know a lot of spammers and I will ask them not to post on your site. It will reduce the volume of spam by 30-50% .In return Id like to ask you to put a link to my site on the index page of your site. The link will be small and your visitors will hardly notice it , its just done for higher rankings in search engines. Contact me icq 454528835 or write me tedirectory(at)yahoo.com , i will give you my site url and you will give me yours if you are interested. thank you&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Blog Usability: Spam Comments Irritate Subscribers</title>
+				<link>https://justaddwater.dk/2007/07/10/blog-usability-spam-comments-irritate-subscribers/</link>
+				<pubDate>Tue, 10 Jul 2007 14:16:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/07/10/blog-usability-spam-comments-irritate-subscribers/</guid>
+				<description>&lt;p&gt;I am back from vacation and saw that Akismet has caught more than 22,000 spam comments over a two week period. That is roughly one spam comment every minute (65 comments each hour). Since February when we passed 100,000 spam comments, we have now passed a quarter million spam comments. (277,421 when I made the screenshot below).&lt;/p&gt;&#xA;&lt;p&gt;The number of daily spam comments has grown more than 400% over the last year.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Spam Blog Posted 182 Articles in One Day</title>
+				<link>https://justaddwater.dk/2007/04/02/spam-blog-posted-182-articles-in-one-day/</link>
+				<pubDate>Mon, 02 Apr 2007 02:34:05 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/02/spam-blog-posted-182-articles-in-one-day/</guid>
+				<description>&lt;p&gt;We just got a trackback link from a spam blog linking to Thomas&amp;rsquo; &lt;a href=&#34;https://justaddwater.dk/2007/04/01/google-gives-you-free-internet/&#34;&gt;latest blog post&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At first sight, the trackback looked fairly real. Se screenshot below.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/spam-blog-comment-on-justaddwater.png&#34; title=&#34;spam-blog-comment-on-justaddwater-thumb.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/spam-blog-comment-on-justaddwater-thumb.png&#34; alt=&#34;spam-blog-comment-on-justaddwater-thumb.png&#34; width=&#34;300&#34; height=&#34;152&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Just one thing caught my eye: Who&amp;rsquo;s Jeremy?&lt;/p&gt;&#xA;&lt;p&gt;I went to the site &amp;ndash; it looked reasonable at a glance. A look at the categories (oh, it&amp;rsquo;s called &amp;ldquo;associates&amp;rdquo; but is placed where normal blogs have categories): &amp;ldquo;shop entertainment&amp;rdquo;, &amp;ldquo;shop outdoor sports&amp;rdquo;, etc for 18 categories &amp;ndash; all categories point away from the blog to external sites, for instance &lt;a href=&#34;https://www.shop4outdoorsports.com&#34;&gt;www.shop4outdoorsports.com&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>100,000 Blog Spam Comments</title>
+				<link>https://justaddwater.dk/2007/02/06/100000-blog-spam-comments/</link>
+				<pubDate>Tue, 06 Feb 2007 12:44:47 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/02/06/100000-blog-spam-comments/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Today justaddwater.dk got spam comment number 100,000.&lt;/strong&gt; But actually the real number is much higher since we have incorporated a couple of measures to catch the spam even before it reaches WordPress or &lt;a href=&#34;http://akismet.com/&#34; title=&#34;Tool for stopping comment and trackback spam&#34;&gt;Akismet&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/02/jaw-caught-spam-2007-02-06.png&#34; alt=&#34;Akisment Caught Spam Comments on justaddwater.dk&#34; width=&#34;463&#34; height=&#34;136&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;We have for example been &lt;a href=&#34;https://justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/&#34; title=&#34;justaddwater.dk - Blog Usability: Avoid Spam Comments&#34;&gt;blocking certain keywords&lt;/a&gt; that we found where common in spam that slipped through Akismet, or we have been &lt;a href=&#34;https://justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/&#34; title=&#34;justaddwater.dk - Blog Usability: Avoid Spam Comments (Part 2)&#34;&gt;changing the standard WordPress URL for posting comments&lt;/a&gt;. Finally we have incorporated a little htaccess hack that validates the posters referral URL. This should of cause be our own domain justaddwater.dk, but many spammers actually put some garbage into this header field - and we can then easily block it directly in the Apache web server before it even reaches WordPress. &lt;ins&gt;UPDATE: We also allow empty referrals (thanks Håvard, for pointing this out)&lt;/ins&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

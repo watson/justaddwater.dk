@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Java on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/java/</link>
+		<description>Recent content in Java on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 18 Jan 2012 13:37:24 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/java/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>IntelliJ Structural Search to Convert from JUnit3 to Junit4</title>
+				<link>https://justaddwater.dk/2012/01/18/intellij-structural-search-to-convert-from-junit3-to-junit4/</link>
+				<pubDate>Wed, 18 Jan 2012 13:37:24 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/01/18/intellij-structural-search-to-convert-from-junit3-to-junit4/</guid>
+				<description>&lt;p&gt;Just a quick tip for intellij users. For an old project i wanted to convert JUnit 3 testcases to JUnit4 format. Most stuff was already in place, but after the conversion, i found that some of the old &amp;ldquo;assertTrue&amp;rdquo;, &amp;ldquo;assertFalse&amp;rdquo;, and &amp;ldquo;assertEquals&amp;rdquo; statements were failing.&lt;/p&gt;&#xA;&lt;p&gt;So i ended up with some short search/replace, which are really handy in IntelliJ.&lt;/p&gt;&#xA;&lt;h2 id=&#34;replace-asserttrue-and-assertfalse-with-assertthat&#34;&gt;Replace &amp;ldquo;assertTrue&amp;rdquo; and &amp;ldquo;assertFalse&amp;rdquo; with &amp;ldquo;assertThat&amp;rdquo;&lt;/h2&gt;&#xA;&lt;p&gt;Search template&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;assertTrue($msg$, $actual$);&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Replacement template:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Java Friday Fun: @WTF annotations in code</title>
+				<link>https://justaddwater.dk/2011/09/16/java-friday-fun-wtf-annotations-in-code/</link>
+				<pubDate>Fri, 16 Sep 2011 21:52:08 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/09/16/java-friday-fun-wtf-annotations-in-code/</guid>
+				<description>&lt;p&gt;Time for a little geeky gimmick. Some developers see and express a lot of &amp;ldquo;WTF??&amp;rdquo; while trying to understand code&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg&#34; alt=&#34;&#34; title=&#34;focus-shift-cartoon-wtf-per-minute-wtfm&#34; class=&#34;aligncenter size-medium wp-image-1493&#34; height=&#34;282&#34; width=&#34;300&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg 300w, https://justaddwater.dk/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg 500w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;IN this spirit, i created a quick @WTF annotation for Java.&lt;/p&gt;&#xA;&lt;p&gt;Besides being completely useless (its removed at compile time), its only purpose is to give developers a new way to express themselves in code.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;WTF.java — &lt;a href=&#34;https://gist.github.com/1222965&#34;&gt;gist on GitHub&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Retention&lt;/span&gt;(RetentionPolicy.&lt;span style=&#34;color:#a6e22e&#34;&gt;SOURCE&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Target&lt;/span&gt;({ElementType.&lt;span style=&#34;color:#a6e22e&#34;&gt;TYPE&lt;/span&gt;, ElementType.&lt;span style=&#34;color:#a6e22e&#34;&gt;FIELD&lt;/span&gt;, ElementType.&lt;span style=&#34;color:#a6e22e&#34;&gt;METHOD&lt;/span&gt;, ElementType.&lt;span style=&#34;color:#a6e22e&#34;&gt;CONSTRUCTOR&lt;/span&gt;, ElementType.&lt;span style=&#34;color:#a6e22e&#34;&gt;LOCAL_VARIABLE&lt;/span&gt;})&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;@interface&lt;/span&gt; WTF {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;/**&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * Optionally specify &amp;lt;code&amp;gt;explain&amp;lt;/code&amp;gt;, and write why you dont understand this annotated element&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String &lt;span style=&#34;color:#a6e22e&#34;&gt;explain&lt;/span&gt;() &lt;span style=&#34;color:#66d9ef&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;/**&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * Optionally add &amp;lt;code&amp;gt;explanation&amp;lt;/code&amp;gt;, and to explain why and how the element should be used&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Deprecated&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String  &lt;span style=&#34;color:#a6e22e&#34;&gt;explanation&lt;/span&gt;() &lt;span style=&#34;color:#66d9ef&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The cartoon states &amp;ldquo;The only valid measurement of code quality: WTFs/minute&amp;rdquo;. With the &amp;lt;code&amp;gt;@WTF&amp;lt;/code&amp;gt; annotations, I would like to take it a little further. By annotating the code, you can actually encourage colleagues to help you fix it.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Fixed Strange Hudson Slave OutOfMemoryError</title>
+				<link>https://justaddwater.dk/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/</link>
+				<pubDate>Fri, 12 Nov 2010 11:19:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/</guid>
+				<description>&lt;p&gt;At a current project I am working on, we use Hudson and Maven to build our Java code. Strangely, one of the slaves constantly failed with an OutOfMemory error. We tried two obvious fixes. The first did not work:&lt;/p&gt;&#xA;&lt;p&gt;Not working strategy: To append memory params on the job itself. We modified the job inside Hudson configuration and added &lt;code&gt;-Xmx512m -XX:MaxPermSize=256m&lt;/code&gt; to the MAVEN_OPTS field in the &amp;ldquo;build&amp;rdquo; section of the job configuration.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>GWT relevant snippets for IntelliJ Idea editor</title>
+				<link>https://justaddwater.dk/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/</link>
+				<pubDate>Tue, 05 Oct 2010 22:47:32 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/</guid>
+				<description>&lt;p&gt;I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it&amp;rsquo;s a very short list.&lt;/p&gt;&#xA;&lt;p&gt;Snippet 1: Live template to bootstrap a class to use UI binder logic. Very useful when converting existing (pre gwt 2.0) Java classes to UI binder pattern, which gives better separation of logic and view.&lt;/p&gt;&#xA;&lt;p&gt;Snippet 2: Create new UiBinder.ui.xml file. Intellij has support for creating entire new java class + uibinder file. That is useful for new classes, but most often I find myself converting an existing class, and needed this shortcut for that.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

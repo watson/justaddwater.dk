@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Nokogiri on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/nokogiri/</link>
+		<description>Recent content in Nokogiri on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 05 Oct 2009 13:00:41 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/nokogiri/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Extract HTML Structure From Page With Simple Script</title>
+				<link>https://justaddwater.dk/2009/10/05/tiny-script-to-extract-html-structure-from-page/</link>
+				<pubDate>Mon, 05 Oct 2009 13:00:41 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/10/05/tiny-script-to-extract-html-structure-from-page/</guid>
+				<description>&lt;p&gt;I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It&amp;rsquo;s pretty straight-forward from scratch.&lt;/p&gt;&#xA;&lt;p&gt;To follow the Don&amp;rsquo;t Repeat Yourself principle, I created a script to make it a one-liner. Just run &lt;code&gt;ruby parsepage.rb [url] [css_selector]&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Feel free to use and modify the code (which i put on GitHub so you can fork and pull from it): &lt;a href=&#34;http://gist.github.com/199558&#34;&gt;http://gist.github.com/199558&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

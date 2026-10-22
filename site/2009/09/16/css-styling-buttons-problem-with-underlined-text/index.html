@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS Styling Buttons Problem with Underlined Text · justaddwater.dk</title>
+<meta name="description" content="I ran into the challenge the other day to style a&lt;button&gt; element to make it look like a link (with underline and everything).
+Unfortunately, the …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/" rel="prev">2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</a></div>
+<div class="alignright"><a href="/2009/09/18/greasemonkey-debugging-tips-how-to-determine-why-your-script-is-not-running/" rel="next">Greasemonkey Debugging Tips: How to Determine Why your Script Is Not Running</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-09-16"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="CSS"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Standards"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I ran into the challenge the other day to style a&lt;button&gt; element to make it look like a link (with underline and everything). Unfortunately, the &lt;button&gt; element does not react to text-decoration: underline; But according to a discussion at the CSS Creator forum, there is a way out: I was just messing around with it [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Sep 16"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="1"></span>
+<h2 data-pagefind-meta="title">CSS Styling Buttons Problem with Underlined Text</h2>
+<div class="entry">
+<p>I ran into the challenge the other day to style a&lt;button&gt; element to make it look like a link (with underline and everything).</p>
+<p>Unfortunately, the &lt;button&gt; element does not react to text-decoration: underline;</p>
+<p>But according to <a href="http://csscreator.com/node/25902" title="CSS Forum: [Solved?] Doctype prevents underline in button input">a discussion at the CSS Creator forum</a>, there is a way out:</p>
+<blockquote>
+<p>I was just messing around with it and for some reason this doesn&rsquo;t work:<br>
+<code>input {text-decoration:underline;}</code><br>
+but this does:<br>
+<code>input {text-decoration:underline;float:left;}</code><br>
+and<br>
+<code>input{text-decoration:underline;display:block;}</code><br>
+and<br>
+<code>input{text-decoration:underline;position:absolute;}</code></p>
+<p>Don&rsquo;t ask me&hellip; I can&rsquo;t explain this one.</p>
+</blockquote>
+<p>Interesting!</p>
+<p>I ended up implementing it as <code>display:inline-block;</code> which also works fine. Here is my final rules for styling buttons as links</p>
+<pre tabindex="0"><code>.clickable, button.tertiary, input.tertiary{
+  color: #339;
+  text-decoration: underline;
+  display: inline-block; /* else underline won&#39;t work */
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  padding: 0;
+}
+.clickable:hover, button.tertiary:hover, input.tertiary:hover{
+  text-decoration: underline;
+  color: #669;
+}
+</code></pre>
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Wednesday, September 16th, 2009 at 10:32 (GMT-1) and is filed under <a href="/category/css/" rel="category tag">CSS</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>, <a href="/category/web-standards/" rel="category tag">Web Standards</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">One Response to &#8220;CSS Styling Buttons Problem with Underlined Text&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-489509">
+<cite><a href="http://www.look.co.uk" class="url" rel="external">Paula</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489509" title="">September 28th, 2009 at 17:03 (GMT-1)</a> </small>
+<p>Does this work across all browsers?</p>
+<p>It sounds a little hacky&hellip;</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

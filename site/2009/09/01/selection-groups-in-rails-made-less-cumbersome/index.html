@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selection Groups in Rails made less cumbersome · justaddwater.dk</title>
+<meta name="description" content="I made this addition today after (once again) struggling with option groups for a nested Rails model.
+My solution: create a new tag for FormOptionsHelper: …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/08/28/the-quick-way-to-creating-disabled-state-icon-with-photoshop/" rel="prev">The Quick Way to Creating Disabled State Icon With Photoshop</a></div>
+<div class="alignright"><a href="/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/" rel="next">2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-09-01"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Ruby on Rails"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I made this addition today after (once again) struggling with option groups for a nested Rails model. My solution: create a new tag for FormOptionsHelper: grouped_select http://gist.github.com/179075 form_options_helper_to_add_grouped_select.rb — gist on GitHub ### lib/form_options_helper.rb require ‘action_view/helpers/form_helper’ module ActionView module Helpers module FormOptionsHelper ## def grouped_select(object, method, choices, options = {}, html_options = {}) InstanceTag.new(object, method, [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Sep 1"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">Selection Groups in Rails made less cumbersome</h2>
+<div class="entry">
+<p>I made this addition today after (once again) struggling with option groups for a nested Rails model.</p>
+<p>My solution: create a new tag for FormOptionsHelper: grouped_select</p>
+<p><a href="http://gist.github.com/179075">http://gist.github.com/179075</a></p>
+<p><em>form_options_helper_to_add_grouped_select.rb — <a href="https://gist.github.com/179083">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e">### lib/form_options_helper.rb </span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;action_view/helpers/form_helper&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">module</span> ActionView
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">module</span> Helpers
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">module</span> FormOptionsHelper
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">##</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">grouped_select</span>(object, method, choices, options <span style="color:#f92672">=</span> {}, html_options <span style="color:#f92672">=</span> {})
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">InstanceTag</span><span style="color:#f92672">.</span>new(object, method, self, options<span style="color:#f92672">.</span>delete(<span style="color:#e6db74">:object</span>))<span style="color:#f92672">.</span>to_grouped_select_tag(choices, options, html_options)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InstanceTag</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">FormOptionsHelper</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_grouped_select_tag</span>(choices, options, html_options)
+</span></span><span style="display:flex;"><span>        html_options <span style="color:#f92672">=</span> html_options<span style="color:#f92672">.</span>stringify_keys
+</span></span><span style="display:flex;"><span>        add_default_name_and_id(html_options)
+</span></span><span style="display:flex;"><span>        value <span style="color:#f92672">=</span> value(object)
+</span></span><span style="display:flex;"><span>        selected_value <span style="color:#f92672">=</span> options<span style="color:#f92672">.</span>has_key?(<span style="color:#e6db74">:selected</span>) ? options<span style="color:#f92672">[</span><span style="color:#e6db74">:selected</span><span style="color:#f92672">]</span> : value
+</span></span><span style="display:flex;"><span>        disabled_value <span style="color:#f92672">=</span> options<span style="color:#f92672">.</span>has_key?(<span style="color:#e6db74">:disabled</span>) ? options<span style="color:#f92672">[</span><span style="color:#e6db74">:disabled</span><span style="color:#f92672">]</span> : <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>        content_tag(<span style="color:#e6db74">&#34;select&#34;</span>, add_options(grouped_options_for_select(choices, <span style="color:#e6db74">:selected</span> <span style="color:#f92672">=&gt;</span> selected_value, <span style="color:#e6db74">:disabled</span> <span style="color:#f92672">=&gt;</span> disabled_value), options, selected_value), html_options)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FormBuilder</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">grouped_select</span>(method, choices, options <span style="color:#f92672">=</span> {}, html_options <span style="color:#f92672">=</span> {})
+</span></span><span style="display:flex;"><span>        @template<span style="color:#f92672">.</span>grouped_select(@object_name, method, choices, objectify_options(options), @default_options<span style="color:#f92672">.</span>merge(html_options))
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### config/environment.rb</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;form_options_helper&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### app/models/expense_type.rb </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExpenseType</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ActiveRecord</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Base</span>
+</span></span><span style="display:flex;"><span>  validates_uniqueness_of <span style="color:#e6db74">:name</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#returns grouped options split in &#39;popular&#39; and &#39;all&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">groups</span>
+</span></span><span style="display:flex;"><span>    all_types <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>all<span style="color:#f92672">.</span>map{<span style="color:#f92672">|</span>t<span style="color:#f92672">|</span> <span style="color:#f92672">[</span>t<span style="color:#f92672">.</span>name, t<span style="color:#f92672">.</span>id<span style="color:#f92672">]</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;popular&#39;</span>, all_types<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">..</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]]</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;all&#39;</span>, all_types<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### app/views/expense_report/_expense_item.rb</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>li class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;expense_item&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#e6db74">%= expense.grouped_select :expense_type_id, ExpenseType.groups, {:include_blank =</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">true</span>}, {<span style="color:#e6db74">:class</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;expense_type&#39;</span>} <span style="color:#e6db74">%&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  ...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/li&gt;</span>
+</span></span></code></pre></div>
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, September 1st, 2009 at 14:50 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

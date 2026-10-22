@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Rest on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/rest/</link>
+		<description>Recent content in Rest on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 28 May 2008 21:31:26 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/rest/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Public Danish Data REST Interface</title>
+				<link>https://justaddwater.dk/2008/05/28/public-danish-data-rest-interface/</link>
+				<pubDate>Wed, 28 May 2008 21:31:26 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/05/28/public-danish-data-rest-interface/</guid>
+				<description>&lt;p&gt;Christian Dalager and I did an internal Capgemini SmartLunch presentation about REST interfaces in the public Danish sector. REST interface is great news for those in favor of easy-to-integrate, scalable SOA interfaces, and REST services is actually used more than SOAP, XMLRPC, etc. in companies offering multiple interfaces to their data (Amazon, Yahoo, Google, Ebay, Microsoft and more).&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://en.itst.dk/hd_logo_en_191_89.gif&#34; alt=&#34;Danish National IT and Telecom Agency logo&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The Danish National IT and Telecom Agency has published some really useful data as a REST interface (although they haven&amp;rsquo;t committed themselves yet to make the service permanent). The published data is a complete dataset for Denmark which includes:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

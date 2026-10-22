@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Print CSS Background Logo Hack · justaddwater.dk</title>
+<meta name="description" content="I learned this nice little hack to bypass the standard browser setting that normally prevents background images from being printed.
+The hack makes use of …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/09/28/bash-or-ruby-for-removing-multiple-trac-spam-tickets/" rel="prev">Bash or Ruby for removing multiple Trac Spam Tickets</a></div>
+<div class="alignright"><a href="/2009/09/30/spoken-git-commit-log-%E2%80%94-another-annoyance-at-the-office/" rel="next">Spoken Git Commit Log — Another Annoyance at the Office</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-09-29"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="CSS"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I learned this nice little hack to bypass the standard browser setting that normally prevents background images from being printed. The hack makes use of converting the background-image to a list item with an image. `/* Hack, to trick the browser to print another logo Unfortunetaly, Firefox on Windows doesn’t show logo on print — [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Sep 29"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="8"></span>
+<h2 data-pagefind-meta="title">Print CSS Background Logo Hack</h2>
+<div class="entry">
+<p>I learned this nice little hack to bypass the standard browser setting that normally prevents background images from being printed.</p>
+<p>The hack makes use of converting the background-image to a list item with an image.</p>
+<pre><code>/* Hack, to trick the browser to print another logo 
+   Unfortunetaly, Firefox on Windows doesn't show logo on print 
+    — see Mozilla bug 133490 for further details */
+#header {
+  display: list-item; 
+  list-style-image: url(../images/logo_print.gif); 
+  list-style-position: inside;
+    margin: 0 !important;
+  padding: 0 !important;
+    height: 50pt;
+}
+</code></pre>
+<p>This way, you don&rsquo;t have to fall back to inserting an image tag in your HTML for the logo. Instead, just have an a element that contains the corporate logo text, and nothing all.</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Tuesday, September 29th, 2009 at 11:08 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/css/" rel="category tag">CSS</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">8 Responses to &#8220;Print CSS Background Logo Hack&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-489680">
+<cite><a href="http://wcs.wayne.edu/blog/2009/10/03/friday-links-the-edition-2/" class="url" rel="external">Wayne State Web Communications Blog » Blog Archive » [Friday Links] The Edition</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489680" title="">October 3rd, 2009 at 15:01 (GMT-1)</a> </small>
+<p>[&hellip;] Print CSS Background Logo Hack [&hellip;]</p>
+</li>
+
+<li id="comment-489690">
+<cite><a href="http://BuckeyeTalkBack.com" class="url" rel="external">Steve</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489690" title="">October 3rd, 2009 at 23:00 (GMT-1)</a> </small>
+<p>Have you seen your rss feed lately?<br>
+It has 50 links to Viagra sites. I am not sure if this is on purpose or your site has been hacked.</p>
+</li>
+
+<li class="alt" id="comment-489733">
+<cite>KMB</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489733" title="">October 5th, 2009 at 08:42 (GMT-1)</a> </small>
+<p>I second Steve. It&rsquo;s full of spam.</p>
+</li>
+
+<li id="comment-492580">
+<cite><a href="http://bbkent.co.uk/" class="url" rel="external">B B Kent</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-492580" title="">February 5th, 2010 at 13:18 (GMT-1)</a> </small>
+<p>Thanks Jesper, a useful tip.</p>
+</li>
+
+<li class="alt" id="comment-493369">
+<cite><a href="http://www.amaday.de" class="url" rel="external">Hans-Joachim Reinecke</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-493369" title="">March 5th, 2010 at 19:39 (GMT-1)</a> </small>
+<p>Mange Tak, Japser,<br>
+solved a bad problem easily because I wanted to include a small forrest picture at the printouts and got collisions with our div structure.<br>
+Greetings to Danmark where I spent my holidays near Hvide Sande several times by-and-by in the last century.<br>
+Hans-Joachim from Regensburg, Tyskland</p>
+</li>
+
+<li id="comment-526671">
+<cite><a href="http://picastopixels.wordpress.com/2011/06/15/print-css-hack-for-background-images/" class="url" rel="external">print css hack for background images | picas to pixels</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-526671" title="">June 15th, 2011 at 05:43 (GMT-1)</a> </small>
+<p>[&hellip;] Thank you Jesper Rønn-Jensen! [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-532075">
+<cite><a href="http://www.da-ict.co.uk" class="url" rel="external">Dave</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-532075" title="">July 31st, 2011 at 20:12 (GMT-1)</a> </small>
+<p>Thanks for this, when you think about it it is so simple but before reading your solution I was pulling my hair out trying to have a basic image in the print css swopping out the embedded image from the webpage.</p>
+<p>Thanks again!</p>
+
+</li>
+
+<li id="comment-548996">
+<cite><a href="http://www.dotnetkicks.com/submit?url=http%3a%2f%2fwww.gajotres.com%2fpost%2f2011%2f10%2f11%2faspnet-45-Async-Performance-Understanding-the-Costs-of-Async-and-Await.aspx&amp;title=Asp.net&#43;4.5&#43;Async&#43;Pe" class="url" rel="external">asp.net</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-548996" title="">October 18th, 2011 at 02:37 (GMT-1)</a> </small>
+<p><strong>asp.net&hellip;</strong></p>
+<p>[&hellip;]justaddwater.dk | Print CSS Background Logo Hack[&hellip;]&hellip;</p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

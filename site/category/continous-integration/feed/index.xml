@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Continous Integration on Just Add Water</title>
+		<link>https://justaddwater.dk/category/continous-integration/</link>
+		<description>Recent content in Continous Integration on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 28 Sep 2012 09:54:39 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/continous-integration/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>PhantomJS 1.7 build for Linux 64 bit</title>
+				<link>https://justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/</link>
+				<pubDate>Fri, 28 Sep 2012 09:54:39 +0000</pubDate>
+				<guid>https://justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/</guid>
+				<description>&lt;p&gt;At a project I work on, we needed PhantomJS to run from a Redhat Fedora 64 bit machine.&lt;/p&gt;&#xA;&lt;p&gt;Since phantomJs is just released this week, I needed to build it myself.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;I post this link to the binary in case it can benefit others.&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://dl.dropbox.com/u/54307969/phantomjs-1.7.0-linux-x86_64.tar.gz&#34;&gt;PhantomJs 1.7.0 built on Linux Redhat Fedora 64 bit&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;PhantomJS is a fantastic tool for automating tests, since it is a headless browser which we wrapped in our automation framework to run javascript based tests very fast and easily.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Challenges Configuring Hudson Emails</title>
+				<link>https://justaddwater.dk/2011/03/10/challenges-configuring-hudson-emails/</link>
+				<pubDate>Thu, 10 Mar 2011 22:01:03 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/03/10/challenges-configuring-hudson-emails/</guid>
+				<description>&lt;p&gt;My recent Stackoverflow question &lt;a href=&#34;http://stackoverflow.com/questions/5181502/how-to-use-hudson-parameterized-build-values-in-an-email&#34;&gt;How to use Hudson “Parameterized Build” values in an email&lt;/a&gt; earned me the &amp;ldquo;tumbleweed&amp;rdquo; badge because it had almost no views (39 in a week), got no answers and no votes. Therefore I decided to offer 200 of my reputation points for a usable answer.&lt;/p&gt;&#xA;&lt;p&gt;But despite the high bounty of 200 geek points, i doubt that anybody notices it: The question is buried back at fourth page, near the bottom of 193 other bounty questions.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Fixed Strange Hudson Slave OutOfMemoryError</title>
+				<link>https://justaddwater.dk/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/</link>
+				<pubDate>Fri, 12 Nov 2010 11:19:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/</guid>
+				<description>&lt;p&gt;At a current project I am working on, we use Hudson and Maven to build our Java code. Strangely, one of the slaves constantly failed with an OutOfMemory error. We tried two obvious fixes. The first did not work:&lt;/p&gt;&#xA;&lt;p&gt;Not working strategy: To append memory params on the job itself. We modified the job inside Hudson configuration and added &lt;code&gt;-Xmx512m -XX:MaxPermSize=256m&lt;/code&gt; to the MAVEN_OPTS field in the &amp;ldquo;build&amp;rdquo; section of the job configuration.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

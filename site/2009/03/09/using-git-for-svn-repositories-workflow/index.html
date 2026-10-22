@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using Git for SVN Repositories Workflow · justaddwater.dk</title>
+<meta name="description" content="For the last months I have been using Git to work with my Subversion repositories. Besides from reducing disk usage, Git also makes my work slightly faster and …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/02/25/html-guide-textmate-snippets-open-sourced/" rel="prev">HTML Guide Textmate Snippets Open Sourced</a></div>
+<div class="alignright"><a href="/2009/03/10/textmate-path-modification-ruby-version-issues/" rel="next">Textmate Path Modification — Ruby Version Issues</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-03-09"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="git"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="For the last months I have been using Git to work with my Subversion repositories. Besides from reducing disk usage, Git also makes my work slightly faster and independent of network access — I can make commits to repository which is sync’ed later when I get online. One challenge though: Using branches I ran into [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Mar 9"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="8"></span>
+<h2 data-pagefind-meta="title">Using Git for SVN Repositories Workflow</h2>
+<div class="entry">
+<p>For the last months I have been using Git to work with my Subversion repositories. Besides from <a href="/2009/01/17/git-side-benefit-reducing-disk-usage/" title="justaddwater.dk | Git Side Benefit: Reducing Disk Usage">reducing disk usage</a>, Git also makes my work slightly faster and independent of network access &ndash; I can make commits to repository which is sync&rsquo;ed later when I get online.</p>
+<p>One challenge though: Using branches</p>
+<p>I ran into some pitfalls when using branches in Subversion repository. Here is a quick guide to how I setup and work with svn branches in git-svn.</p>
+<h3 id="useful-git-svn-command-cheatsheet">Useful git-svn command cheatsheet</h3>
+<p>For the lazy reader, let&rsquo;s just start with the compressed cheatsheet :)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git svn clone -s <span style="color:#f92672">[</span>url_to_svn_repository<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>project_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git branch -a <span style="color:#75715e">#show all branches local(git) and remote(svn)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git svn info <span style="color:#75715e">#show svn details (also URL)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#create local Git branch that mirrors remote svn branch</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git checkout -b local/RELEASE-0.12 RELEASE-0.12 <span style="color:#75715e">#will connect with a remote svn branch named &#39;RELEASE-0.12&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git svn dcommit --dry-run <span style="color:#75715e"># -n will show which svn branch you will commit into:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#=&amp;gt; Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git svn rebase <span style="color:#75715e"># pull changes from svn repository</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git svn dcommit <span style="color:#75715e"># push your local git commits to svn repository</span>
+</span></span></code></pre></div><h3 id="step-1-clone-your-repository-with-trunk-branches-and-tags">Step 1: Clone your repository with trunk, branches and tags</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git svn clone -s <span style="color:#f92672">[</span>url_to_svn_repository<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>project_name<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>The -s flag is important: It tells git to clone a standard svn layout with /trunk, /tags, /branches. NOTE that you have to use this -s flag to work with branches! Very important :)</p>
+<p>Example: The Trac code repository has this layout by default. To make a git clone we do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone -s http://svn.edgewall.org/repos/trac trac.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Initialized empty Git repository in /Users/jesper/othercode/trac.git/.git/
+</span></span><span style="display:flex;"><span>A    svntrac/__init__.py
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>M    trac/admin/console.py
+</span></span><span style="display:flex;"><span>r7937 <span style="color:#f92672">=</span> 2aab87158be06edb1a1931240a453cac762c4615 <span style="color:#f92672">(</span>trunk<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Auto packing your repository <span style="color:#66d9ef">for</span> optimum performance. You may also
+</span></span><span style="display:flex;"><span>run <span style="color:#e6db74">&#34;git gc&#34;</span> manually. See <span style="color:#e6db74">&#34;git help gc&#34;</span> <span style="color:#66d9ef">for</span> more information.
+</span></span><span style="display:flex;"><span>Counting objects: 13630, <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>Compressing objects: 100% <span style="color:#f92672">(</span>13146/13146<span style="color:#f92672">)</span>, <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>Writing objects: 100% <span style="color:#f92672">(</span>13630/13630<span style="color:#f92672">)</span>, <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>Total <span style="color:#ae81ff">13630</span> <span style="color:#f92672">(</span>delta 10584<span style="color:#f92672">)</span>, reused <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>delta 0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Removing duplicate objects: 100% <span style="color:#f92672">(</span>256/256<span style="color:#f92672">)</span>, <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>Checked out HEAD:
+</span></span><span style="display:flex;"><span>http://svn.edgewall.org/repos/trac/trunk r7937
+</span></span></code></pre></div><p>SVN info shows the remote svn url:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd trac.git/
+</span></span><span style="display:flex;"><span>git svn info
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Path: .
+</span></span><span style="display:flex;"><span>URL: http://svn.edgewall.org/repos/trac/trunk
+</span></span><span style="display:flex;"><span>Repository Root: http://svn.edgewall.org/repos/trac
+</span></span><span style="display:flex;"><span>Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2
+</span></span><span style="display:flex;"><span>Revision: <span style="color:#ae81ff">7937</span>
+</span></span><span style="display:flex;"><span>Node Kind: directory
+</span></span><span style="display:flex;"><span>Schedule: normal
+</span></span><span style="display:flex;"><span>Last Changed Author: rblank
+</span></span><span style="display:flex;"><span>Last Changed Rev: <span style="color:#ae81ff">7937</span>
+</span></span><span style="display:flex;"><span>Last Changed Date: 2009-03-07 03:52:37 +0100 <span style="color:#f92672">(</span>Sat, <span style="color:#ae81ff">07</span> Mar 2009<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h3 id="step-2-create-local-branch-to-mirror-svn-branch">Step 2: Create local branch to mirror svn branch</h3>
+<p><code>git branch -a</code> shows all branches and tags (both local and remote ones)</p>
+<p>Use <code>git branch -a</code> to see all remote branches:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch -a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>* master
+</span></span><span style="display:flex;"><span>0.10-stable
+</span></span><span style="display:flex;"><span>0.11-stable
+</span></span><span style="display:flex;"><span>cboos-dev
+</span></span><span style="display:flex;"><span>cmlenz-dev
+</span></span><span style="display:flex;"><span>debian
+</span></span><span style="display:flex;"><span>debian-dev
+</span></span><span style="display:flex;"><span>jonas-dev
+</span></span><span style="display:flex;"><span>tags/debian
+</span></span><span style="display:flex;"><span>tags/debian-dev
+</span></span><span style="display:flex;"><span>tags/trac-0.10
+</span></span><span style="display:flex;"><span>tags/trac-0.10.1
+</span></span><span style="display:flex;"><span>tags/trac-0.10.2
+</span></span><span style="display:flex;"><span>tags/trac-0.10.3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>trunk
+</span></span><span style="display:flex;"><span>utopiste-dev
+</span></span></code></pre></div><p>Create local branch with same name as remote branch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout -b local/0.11-stable 0.11-stable
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Switched to a new branch <span style="color:#e6db74">&#34;local/0.11-stable&#34;</span>
+</span></span></code></pre></div><h3 id="step-3-verify-you-are-on-new-branch">Step 3: verify you are on new branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git svn dcommit --dry-run
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...
+</span></span></code></pre></div><p>(or git svn info)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git svn info
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git svn info
+</span></span><span style="display:flex;"><span>Path: .
+</span></span><span style="display:flex;"><span>URL: http://svn.edgewall.org/repos/trac/branches/0.11-stable
+</span></span><span style="display:flex;"><span>Repository Root: http://svn.edgewall.org/repos/trac
+</span></span><span style="display:flex;"><span>Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2
+</span></span><span style="display:flex;"><span>Revision: <span style="color:#ae81ff">7930</span>
+</span></span><span style="display:flex;"><span>Node Kind: directory
+</span></span><span style="display:flex;"><span>Schedule: normal
+</span></span><span style="display:flex;"><span>Last Changed Author: rblank
+</span></span><span style="display:flex;"><span>Last Changed Rev: <span style="color:#ae81ff">7930</span>
+</span></span><span style="display:flex;"><span>Last Changed Date: 2009-03-03 00:41:48 +0100 <span style="color:#f92672">(</span>Tue, <span style="color:#ae81ff">03</span> Mar 2009<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h3 id="step-4-work-with-code">Step 4: work with code</h3>
+<p>now you are free to work on the local branch: &rsquo;local/0.11-stable&rsquo;. Hack on and commit to git with commands like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git add filename
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#39;my commit comment&#39;</span>
+</span></span></code></pre></div><p>Repeat as much as you like. There are two strategies: Work on the master branch and then commit to the svn branch later.</p>
+<h3 id="step-5-commit-to-svn">Step 5: commit to svn</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git svn rebase <span style="color:#75715e">#to pull changes from svn before commit</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git svn dcommit
+</span></span></code></pre></div><p>If you get an error like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git svn dcommit
+</span></span><span style="display:flex;"><span>Cannot dcommit with a dirty index.  Commit your changes first, or stash them with <span style="color:#e6db74">`</span>git stash<span style="color:#960050;background-color:#1e0010">&#39;</span>.
+</span></span><span style="display:flex;"><span>at /usr/local/libexec/git-core//git-svn line <span style="color:#ae81ff">431</span>
+</span></span></code></pre></div><p>Just do what it says:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git stash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git svn dcommit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git stash apply
+</span></span></code></pre></div><p>The last line gets your dirty files back in your working directory.<br>
+Applying change to multiple branches</p>
+<p>Assume your change now is applied to the branch &lsquo;0.11-stable&rsquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout master
+</span></span><span style="display:flex;"><span>git log --1
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#=&amp;gt; shows log of your latest commit</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#To apply these changes to Trunk, now you should change branch and merge:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git checkout local/0.11-stable
+</span></span><span style="display:flex;"><span>git merge master <span style="color:#75715e">#will merge changes to the current branch (local/0.11-stable) from trunk/master.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git svn dcommit <span style="color:#75715e">#to commit the merged changes into the svn repository</span>
+</span></span></code></pre></div><h3 id="related-posts">Related posts:</h3>
+<p>* <a href="/2009/02/21/using-local-file-based-git-server-laziness/" title="justaddwater.dk | Using Local File-based Git — Server Laziness">Using Local File-based Git — Server Laziness</a> (Feb 21st)<br>
+* <a href="/2009/01/17/git-side-benefit-reducing-disk-usage/" title="justaddwater.dk | Git Side Benefit: Reducing Disk Usage">Git Side Benefit: Reducing Disk Usage</a> (Jan 17th)<br>
+* Dr Nic&rsquo;s Gitify command: <a href="http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/">Going offline without your favourite Subversion repository?</a> (Nov 2007)</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, March 9th, 2009 at 14:52 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/git/" rel="category tag">git</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">8 Responses to &#8220;Using Git for SVN Repositories Workflow&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-476970">
+<cite>Simon B.</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-476970" title="">March 10th, 2009 at 08:08 (GMT-1)</a> </small>
+<p>Excellent article! I&rsquo;m bookmarking it :)<br>
+Some corrections needed though: &ndash;dry-run is showing with only one leading dash, blamed be your blog editor?</p>
+<p>&gt;The last line gets your dirty files back in your repository.<br>
+Isn&rsquo;t that rather &ldquo;back in your working directory&rdquo;?</p>
+<p>And in the last step I&rsquo;m confused. It seems you&rsquo;re taking news from the svn repo&rsquo;s 0.11 branch and putting them into the svn repo&rsquo;s Trunk branch, together with any local changes you&rsquo;ve made? But following the flow of your example before that gives an impression your changes in the git repo are not related to the from-0.11-to-trunk merge, so they really should go as separate commits? Or dcommits&hellip; :)</p>
+
+</li>
+
+<li id="comment-477014">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-477014" title="">March 10th, 2009 at 12:56 (GMT-1)</a> </small>
+<p>@Simon B. thanks for your comments</p>
+<p>&ndash;dry-run is with double dashes but WordPress has decided to change it. Thomas and I might apply a patch but it&rsquo;s a very annoying default for WordPress</p>
+<p>I changed the line to end with &ldquo;&hellip;back in your working directory&rdquo; &ndash; nice catch!</p>
+<p>The last step. I changed the wording so that the workflow implied I worked on Trunk and merged from trunk to branch. I think that makes it a little easier to understand.</p>
+<p>Besides, what I might wanted to do was creating a separate Git branch for a change &ndash; say &ldquo;git checkout -b bug_35&rdquo;</p>
+<p>And then merge that branch into both trunk and the release branch.</p>
+
+</li>
+
+<li class="alt" id="comment-477015">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-477015" title="">March 10th, 2009 at 13:00 (GMT-1)</a> </small>
+<p>This blog post also explains git/svn branch workflow pretty well:<br>
+<a href="http://ariya.blogspot.com/2008/04/quick-start-using-git-for-windows-with.html">Quick Start: using git (for Windows) with Google Code Project Hosting</a> by Ariya Hidayat</p>
+</li>
+
+<li id="comment-477297">
+<cite><a href="http://www.pedant.dk" class="url" rel="external">Jacob Andresen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-477297" title="">March 11th, 2009 at 20:43 (GMT-1)</a> </small>
+<p>Cool article! I did not know that git could do this. Thanks :)</p>
+</li>
+
+<li class="alt" id="comment-486141">
+<cite>Matthew</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-486141" title="">May 14th, 2009 at 07:19 (GMT-1)</a> </small>
+<p>git&rsquo;s decentralized features are ideal for someone leading up the kernel of Linux. With commit-ers to linux kernal&rsquo;s 22,000+ files from around the world, this makes the decentralized model of git the best fit. i.e. for Linus Torvalds Kernel group.</p>
+<p>git implementation experience for the repository I administer has shown a full week needed for repository migration. The subversion repository(s) and all the right branches need to migrate into git. Then build scripts need factoring. The second week of migration is in progress but it looks like its pretty will complete.</p>
+<p>In the vast majority of source code management configurations (including what I recently used successfully with svn), there needs to be a central server anyway. So what is gained by pushing the decentralized git to behave as a centralized server.</p>
+<p>True the merging algorithms are better with git, but that&rsquo;s a hard sell against the considerable costs. My git colleagues say I&rsquo;m still in the anger stage of the svn grieving process: denial, anger, bargaining, acceptance.</p>
+
+</li>
+
+<li id="comment-487325">
+<cite>stephen</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-487325" title="">July 3rd, 2009 at 08:42 (GMT-1)</a> </small>
+<p>Im messing around with git and svn at the minute i have an empty trunk on my svn and then i branched it to make it</p>
+<p>trunk<br>
+branches/sprint_1</p>
+<p>then i cloned it in git svn with branches / tags / trunk</p>
+<p>and worked in my branches/sprint_1 then did dcommit now everything is in branches/sprint_1 on my svn as i expected but now i want to put that on the trunk, however svn head is point to branches/sprint_1</p>
+<p>when i do<br>
+git checkout master and then git merge sprint_1 the git svn info show the url has changed form /trunk to /branches/sprint_1</p>
+<p>any idea on how i get get /branches/sprint_1 onto the trunk when trunk is behind in the revision</p>
+<p>cheers</p>
+
+</li>
+
+<li class="alt" id="comment-488536">
+<cite>benson margulies</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488536" title="">August 24th, 2009 at 02:10 (GMT-1)</a> </small>
+<p>There seems to be a giant disagreement about the safety of the following workflow:</p>
+<p>1) git svn init with the full set of branch and tag args.<br>
+2) git branch to create a local branch<br>
+3) git checkout the local branch<br>
+4) do work<br>
+5) git checkout master<br>
+6) git merge local branch<br>
+7) git dcommit</p>
+<p>What&rsquo;s your belief?</p>
+
+</li>
+
+<li id="comment-489925">
+<cite>Erik Peterson</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489925" title="">October 11th, 2009 at 03:45 (GMT-1)</a> </small>
+<p>@benson<br>
+I use the same workflow you present and its worked well for me. Our svn repos don&rsquo;t have much branching. So I simply keep the svn trunk in sync with git master.</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

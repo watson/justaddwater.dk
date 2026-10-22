@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Converting UTF-8 Data to Outlook Compatible Charset · justaddwater.dk</title>
+<meta name="description" content="A problem in a current Rails app just found a decent solution, as Danish letters like æøå did not show up decently. It turned out (surprise) that Outlook had a …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2007/11/20/how-to-run-javascript-from-watir-scripts/" rel="prev">How to Run JavaScript From Watir Scripts</a></div>
+<div class="alignright"><a href="/2007/11/27/announcement-spam-filter-free-day/" rel="next">Announcement: Spam Filter Free Day</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2007-11-21"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2007"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Code"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Ruby on Rails"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="A problem in a current Rails app just found a decent solution, as Danish letters like æøå did not show up decently. It turned out (surprise) that Outlook had a problem accepting UTF-8 charset. On the Meeting model in the Rails app I want to save to calendar in an Outlook compatible format. We solved [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Nov 21"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="5"></span>
+<h2 data-pagefind-meta="title">Converting UTF-8 Data to Outlook Compatible Charset</h2>
+<div class="entry">
+<p>A problem in a current Rails app just found a decent solution, as Danish letters like æøå did not show up decently. It turned out (surprise) that Outlook had a problem accepting UTF-8 charset.</p>
+<p>On the Meeting model in the Rails app I want to save to calendar in an Outlook compatible format. We solved it like this by converting from UTF-8 to ISO-8859-1 when creating the icalendar event.</p>
+<p>meeting.rb:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;icalendar&#39;</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;date&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meeting</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ActiveRecord</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Base</span>
+</span></span><span style="display:flex;"><span>  belongs_to <span style="color:#e6db74">:room</span>
+</span></span><span style="display:flex;"><span>  belongs_to <span style="color:#e6db74">:journal</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_event</span>
+</span></span><span style="display:flex;"><span>    event <span style="color:#f92672">=</span> <span style="color:#66d9ef">Icalendar</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Event</span><span style="color:#f92672">.</span>new
+</span></span><span style="display:flex;"><span>    event<span style="color:#f92672">.</span>summary <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Møde &#34;</span> <span style="color:#f92672">+</span> (journal<span style="color:#f92672">.</span>number <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;no number..&#34;</span>)
+</span></span><span style="display:flex;"><span>    event<span style="color:#f92672">.</span>description <span style="color:#f92672">=</span> description<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    event<span style="color:#f92672">.</span>klass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;PUBLIC&#34;</span>
+</span></span><span style="display:flex;"><span>    event<span style="color:#f92672">.</span>start <span style="color:#f92672">=</span> start<span style="color:#f92672">.</span>to_datetime
+</span></span><span style="display:flex;"><span>    event<span style="color:#f92672">.</span>end <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>end<span style="color:#f92672">.</span>to_datetime
+</span></span><span style="display:flex;"><span>    event<span style="color:#f92672">.</span>location <span style="color:#f92672">=</span> meeting<span style="color:#f92672">.</span>room<span style="color:#f92672">.</span>name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> meeting<span style="color:#f92672">.</span>room<span style="color:#f92672">.</span>address
+</span></span><span style="display:flex;"><span>    event
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>And meetings_controller.rb:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;icalendar&#39;</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;iconv&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MeetingsController</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationController</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Icalendar</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">show</span>
+</span></span><span style="display:flex;"><span>    @courtmeeting <span style="color:#f92672">=</span> <span style="color:#66d9ef">Courtmeeting</span><span style="color:#f92672">.</span>find(params<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span>    respond_to <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>format<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>      format<span style="color:#f92672">.</span>html <span style="color:#75715e"># show.html.erb</span>
+</span></span><span style="display:flex;"><span>      format<span style="color:#f92672">.</span>xml  { render <span style="color:#e6db74">:xml</span>  <span style="color:#f92672">=&gt;</span> @courtmeeting }
+</span></span><span style="display:flex;"><span>      format<span style="color:#f92672">.</span>ical { render <span style="color:#e6db74">:text</span> <span style="color:#f92672">=&gt;</span> render_to_ical(<span style="color:#f92672">[</span>@courtmeeting<span style="color:#f92672">]</span>)  }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">render_to_ical</span>(courtmeetings)
+</span></span><span style="display:flex;"><span>    headers<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;text/calendar; charset=ISO-8859-1&#34;</span>
+</span></span><span style="display:flex;"><span>    cal <span style="color:#f92672">=</span> <span style="color:#66d9ef">Calendar</span><span style="color:#f92672">.</span>new
+</span></span><span style="display:flex;"><span>    courtmeetings<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>meeting<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>      cal<span style="color:#f92672">.</span>add_event(meeting<span style="color:#f92672">.</span>to_event)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Iconv</span><span style="color:#f92672">.</span>iconv(<span style="color:#e6db74">&#39;ISO-8859-1&#39;</span>, <span style="color:#e6db74">&#39;UTF-8&#39;</span>, cal<span style="color:#f92672">.</span>to_ical)<span style="color:#f92672">.</span>to_s
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Very simple, yet very effective way to have your meetings exposed to Outlook in a way that solves the character encoding problems.</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/ruby/" rel="tag">ruby</a>, <a href="/tag/ruby-on-rails/" rel="tag">ruby on rails</a>, charset, encoding, utf-8, latin-1, iso-8859-1, iconv</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Wednesday, November 21st, 2007 at 15:30 (GMT-1) and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">5 Responses to &#8220;Converting UTF-8 Data to Outlook Compatible Charset&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-410832">
+<cite><a href="http://www.ncode.nl/" class="url" rel="external">Jorrit Schippers</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-410832" title="">April 14th, 2008 at 16:33 (GMT-1)</a> </small>
+<p>This article suggests that Outlook 2003 is incapable of accepting UTF-8 messages. This is not true. It might be a component between the originating mailserver and Outlook that mangles the contents, as I have experienced myself. To be on the safe side, use Content-Transfer-Encoding: quoted-printable (and encode the contents accordingly)</p>
+</li>
+
+<li id="comment-419890">
+<cite><a href="http://poncostuff.com/" class="url" rel="external">thomas</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-419890" title="">May 23rd, 2008 at 05:26 (GMT-1)</a> </small>
+<p>Hew what about outlook 2007 ? but character encoding problems ? Thanks for your info man ! Help Me</p>
+</li>
+
+<li class="alt" id="comment-479811">
+<cite><a href="http://www.gaming-network.com" class="url" rel="external">Simon</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-479811" title="">March 23rd, 2009 at 14:28 (GMT-1)</a> </small>
+<p>We have this problem on Outlook 2007, we send the body as UTF-8 with the correct encoding type in header, but Outlook views it as not UTF-8.</p>
+</li>
+
+<li id="comment-509869">
+<cite>Jack Heath</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-509869" title="">February 1st, 2011 at 14:52 (GMT-1)</a> </small>
+<p>This issue was related to the system not reading the correct encoding for the file. It was a common bug in 2003 which may carry over to Outlook 2007/2010 emails sent from an unpatched 2003 client in text format. To resolve it, I just opened an email (any email will work) and added then encoding option to the quick-bar, then I selected UTF-8 as an encoding option. Once done, Outlook will add UTF-8 to the list and be able to autos-elect between both UTF-Western and UTF-8 formats.</p>
+</li>
+
+<li class="alt" id="comment-511724">
+<cite><a href="http://www.anibaltrejo.com" class="url" rel="external">Anibal Trejo</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-511724" title="">February 19th, 2011 at 14:58 (GMT-1)</a> </small>
+<p>Thanks! Ive used part of this info to solve Outlook problem reading my html generated signature. Since i have spanish with accents on it, Outlook was translating accented characters into rubbish. :)</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

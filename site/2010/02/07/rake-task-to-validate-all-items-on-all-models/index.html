@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rake Task To Validate All Items on All Models · justaddwater.dk</title>
+<meta name="description" content="I wanted a way to see if somebody had entered &ldquo;illegal&rdquo; data into loaded fixtures. So I wrote this simple rake task. It&rsquo;s also useful to run …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2010/02/04/mac-harddisk-upgrade-usability-improvements/" rel="prev">Mac Harddisk Upgrade Usability Improvements</a></div>
+<div class="alignright"><a href="/2010/03/12/1291/" rel="next">Why WebStandards Matter</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2010-02-07"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2010"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Ruby on Rails"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I wanted a way to see if somebody had entered “illegal” data into loaded fixtures. So I wrote this simple rake task. It’s also useful to run as you add more validations to your files. validate_models.rake — gist on GitHub #put this file in /lib/tasks and run `rake db:models:validate` #created 2010-02-07 by Jesper Rønn-Jensen require [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Feb 7"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="0"></span>
+<h2 data-pagefind-meta="title">Rake Task To Validate All Items on All Models</h2>
+<div class="entry">
+<p>I wanted a way to see if somebody had entered &ldquo;illegal&rdquo; data into loaded fixtures. So I wrote this simple rake task. It&rsquo;s also useful to run as you add more validations to your files.</p>
+<p><em>validate_models.rake — <a href="https://gist.github.com/297427">gist on GitHub</a></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e">#put this file in /lib/tasks and run `rake db:models:validate`</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#created 2010-02-07 by Jesper Rønn-Jensen</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;find&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>namespace <span style="color:#e6db74">:db</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  namespace <span style="color:#e6db74">:models</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    desc <span style="color:#e6db74">&#39;Dumps all models into fixtures.&#39;</span>
+</span></span><span style="display:flex;"><span>    task <span style="color:#e6db74">:validate</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">:environment</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>      models <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">Find</span><span style="color:#f92672">.</span>find(<span style="color:#66d9ef">RAILS_ROOT</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/app/models&#39;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>path<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">unless</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>directory?(path) <span style="color:#66d9ef">then</span> models <span style="color:#f92672">&lt;&lt;</span> path<span style="color:#f92672">.</span>match(<span style="color:#e6db74">/(\w+).rb/</span>)<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>      puts <span style="color:#e6db74">&#34;Found models: &#34;</span> <span style="color:#f92672">+</span> models<span style="color:#f92672">.</span>join(<span style="color:#e6db74">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>      errors <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>      models<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>m<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>        puts <span style="color:#e6db74">&#34;Validating </span><span style="color:#e6db74">#{</span>m<span style="color:#f92672">.</span>camelize<span style="color:#e6db74">}</span><span style="color:#e6db74"> items&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#        m.camelize.constantize.transaction do</span>
+</span></span><span style="display:flex;"><span>          m<span style="color:#f92672">.</span>camelize<span style="color:#f92672">.</span>constantize<span style="color:#f92672">.</span>all<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>item<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> item<span style="color:#f92672">.</span>valid?
+</span></span><span style="display:flex;"><span>              print <span style="color:#e6db74">&#34;.&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>              print <span style="color:#e6db74">&#34;E&#34;</span>
+</span></span><span style="display:flex;"><span>              errors <span style="color:#f92672">&lt;&lt;</span> item
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#        end#end transaction</span>
+</span></span><span style="display:flex;"><span>        puts <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>      errors<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>item<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>        puts <span style="color:#e6db74">&#34;ERROR in </span><span style="color:#e6db74">#{</span>item<span style="color:#f92672">.</span>inspect<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span><span style="color:#75715e">#end task</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div>
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Sunday, February 7th, 2010 at 14:13 (GMT-1) and is filed under <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+<p class="nocomments">Comments are closed.</p>
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

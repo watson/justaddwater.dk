@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolbox — locating problems in HTML · justaddwater.dk</title>
+<meta name="description" content="I decided to make a little toolbox that&rsquo;s easy to apply on web pages, when investigating problems with web pages. Basically, it&rsquo;s the tools I used …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2006/09/14/railsconf-presentation-notes/" rel="prev">RailsConf presentation notes</a></div>
+<div class="alignright"><a href="/2006/09/18/technique/" rel="next">Technique — locating problems in HTML</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2006-09-18"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2006"></span><span hidden data-pagefind-filter="category[data-v]" data-v="HTML"></span><span hidden data-pagefind-filter="category[data-v]" data-v="JavaScript"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Development"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Standards"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I decided to make a little toolbox that’s easy to apply on web pages, when investigating problems with web pages. Basically, it’s the tools I used when investigating the case I described in “Why web standards matter (case study)” I decided to split this into two posts. This first one is about the toolbox. The [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Sep 18"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="3"></span>
+<h2 data-pagefind-meta="title">Toolbox — locating problems in HTML</h2>
+<div class="entry">
+<p>I decided to make a little toolbox that&rsquo;s easy to apply on web pages, when investigating problems with web pages. Basically, it&rsquo;s the tools I used when investigating the case I described in &ldquo;<a href="/2006/06/29/webstandards-case-study/">Why web standards matter (case study)</a>&rdquo;</p>
+<p>I decided to split this into two posts. This first one is about the toolbox. The second part is about the <a href="/2006/09/18/technique">investigation technique</a> (available separately).</p>
+<h3 id="firefox-extensions-for-the-toolbox">Firefox Extensions for the toolbox</h3>
+<p>I use Firefox for the investigation. It has the best web developer tools and bookmarklet support. <a href="http://www.getfirefox.com">Get firefox</a>.</p>
+<ol>
+<li><a href="http://users.skynet.be/mgueury/mozilla/">HTML Validator (based on Tidy)</a>. HTML validation errors and warnings immediately in the status bar on the page you watch. Indispensible when aiming for standards compatible websites.</li>
+<li><a href="http://www.joehewitt.com/software/firebug/">Firebug</a>. JavaScript errors and warnings immediately in the status bar.</li>
+<li>Firefox <a href="http://www.chrispederick.com/work/webdeveloper/">Web Developer Toolbar</a>. Has a lot of handy tools, among others the ability to turn off CSS stylesheets.</li>
+</ol>
+<p>For a more indepth description of Firefox extensions, refer to my previous post from last year: <a href="/2005/11/30/web-developers-collection-of-browser-tools">Web developer&rsquo;s collection of browser tools</a>.</p>
+<h3 id="javascript-bookmarklets">JavaScript bookmarklets</h3>
+<p>Bookmarklets are small JavaScript snippets, that is stored as a bookmark and executed on any page. I prepared a collection useful for investigating web standards issues.</p>
+<p>Import all at once (separate HTML page):</p>
+<div style="text-align:center">
+<p><strong><a href="/wp-content/uploads/2006/09/web-standards-investigation-tools.html">Web Standards Investigation Tools (WSIT) HTML page</a></strong><br>
+<small>(last updated 2006-09-18)</small></p>
+</div>
+<p>Instruction:</p>
+<ol>
+<li>Save the linked HTML page locally</li>
+<li>Open Firefox Bookmark Manager (Bookmarks &gt; Manage Bookmarks)</li>
+<li>Choose File &gt; Import …</li>
+<li>Import bookmarks into &ldquo;Bookmarks Toolbar Folder&rdquo; for easy access to them.</li>
+</ol>
+<p>The bookmark above contains the following bookmarklets. I list them with a &ldquo;shortname&rdquo;</p>
+<ol>
+<li><strong>Page Info</strong> (contains key figures about content to markup ratio, total code weight and number of image elements. Shortname: pInfo</li>
+<li><strong>Mouse Over DOM Inspector 2</strong>. Turned on, you simply hover any element to learn about attributes, children and ancestors. Probably the easiest way to investigate a HTML page. Shortname: modi2</li>
+<li><strong>JavaScript Shell</strong>. Opens a JavaScript Shell and allows it to access the current page. Shortname: Shell</li>
+</ol>
+<p>A few other bookmarklets that I use frequently for furthter investigations, but they are not used in my description.</p>
+<ol start="4">
+<li><strong>JavaScript Variables</strong>. Displays all JavaScript variables and functions. Shortname: JS vars</li>
+<li><strong>Cookie editor</strong>. View, delete and edit cookies. (Will be available later due to a server crash).</li>
+<li><strong>Table number rows</strong>. Numbers each table row (makes it easy to see if tables are used for layout). Shortname: Trow</li>
+</ol>
+<h3 id="more-info-about-the-bookmarklets">More info about the bookmarklets.</h3>
+<p><a href="http://slayeroffice.com/?c=/content/tools/pagenfo.html" title="Slayeroffice.com: Page Info">Page Info</a> and <a href="http://slayeroffice.com/tools/modi/v2.0/modi_help.html" title="Slayeroffice.com: MODI2">Mouse Over DOM inspector</a> are part of Steve Chipman&rsquo;s bookmarklet collection &ldquo;<a href="http://slayeroffice.com/?c=/content/tools/suite.html" title="Slayeroffice.com: Favelet Suite">Favelet Suite</a>&rdquo; which is definately worth a mention.</p>
+<p>JavaScript Shell, JS Variables and Table number row are from Jesse Ruderman&rsquo;s indispensable <a href="http://squarefree.com/bookmarklets/">webdevelopers bookmarklet collection</a> (which you can <a href="http://squarefree.com/bookmarklets/importall.html">download as one file</a>)</p>
+<p>The Cookie editor is my own invention. Will be available later as I will move it to a new server.</p>
+<h3 id="summary">Summary</h3>
+<p>These are the basic tools that have been helpful for me when investigating web standards related issues in web pages. The toolbox here is complimented with the page describing the technique for locating problems in HTML.</p>
+<p>Related reading:</p>
+<ul>
+<li><a href="/2006/09/18/technique">technique for locating problems in HTML</a></li>
+<li><a href="/2006/06/29/webstandards-case-study/">Why web standards matter (case study)</a></li>
+</ul>
+
+
+<p><small>Technorati Tags: <a href="/tag/javascript/" rel="tag">javascript</a>, bookmarklet, toolbox, webstandards, <a href="/tag/web-standards/" rel="tag">web standards</a></small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Monday, September 18th, 2006 at 22:35 (GMT-1) and is filed under <a href="/category/html/" rel="category tag">HTML</a>, <a href="/category/javascript/" rel="category tag">JavaScript</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>, <a href="/category/web-standards/" rel="category tag">Web Standards</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">3 Responses to &#8220;Toolbox — locating problems in HTML&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-15712">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Thomas Watson Steen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-15712" title="">September 25th, 2006 at 14:01 (GMT-1)</a> </small>
+<p>Just wanted to add this very nice Firefox extension that I find very usefull:<br>
+<a href="https://addons.mozilla.org/firefox/2104/">https://addons.mozilla.org/firefox/2104/</a></p>
+<p>CSSViewer, when enabled, gives you a mouseover feature that displays an info-box with the CSS styles that applies to the current element under the mouse.</p>
+
+</li>
+
+<li id="comment-101567">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-101567" title="">March 11th, 2007 at 13:55 (GMT-1)</a> </small>
+<p>For the next update I will also add this <a href="http://www.phpied.com/quirks-bookmarklet/">bookmarklet to show quirksmode/standards mode</a> of the rendering engine.</p>
+</li>
+
+<li class="alt" id="comment-114919">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-114919" title="">March 26th, 2007 at 12:20 (GMT-1)</a> </small>
+<p>I will also add Andy Budd&rsquo;s bookmarklet for adding a layout grid to the page body:</p>
+<p><a href="http://www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/">http://www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/</a></p>
+
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

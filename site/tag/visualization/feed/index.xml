@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Visualization on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/visualization/</link>
+		<description>Recent content in Visualization on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 24 May 2010 22:33:15 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/visualization/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Interesting visualization of Money Flow</title>
+				<link>https://justaddwater.dk/2010/05/24/interesting-visualization-of-money-flow/</link>
+				<pubDate>Mon, 24 May 2010 22:33:15 +0000</pubDate>
+				<guid>https://justaddwater.dk/2010/05/24/interesting-visualization-of-money-flow/</guid>
+				<description>&lt;p&gt;It is often said that an image is worth a thousand words. New York Times is a good resource for interesting visualization on current topics. The article on &lt;a href=&#34;http://www.nytimes.com/interactive/2010/05/02/weekinreview/02marsh.html&#34;&gt;Europe&amp;rsquo;s Web of Debt&lt;/a&gt; is rather good at conveying a lot of information on the recent European Debt crisis. The width of the arrows and circles represents size of debt.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2010/05/nytimes-european-debt-visualization-02marsh-image-custom1-v3.gif&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2010/05/nytimes-european-debt-visualization-02marsh-image-custom1-v3-300x296.gif&#34; alt=&#34;&#34; title=&#34;nytimes european debt visualization 02marsh-image-custom1-v3&#34; class=&#34;aligncenter size-medium wp-image-1350&#34; height=&#34;296&#34; width=&#34;300&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Earlier this year New York Times brought another interesting visualization: &lt;a href=&#34;http://www.nytimes.com/interactive/2010/01/10/nyregion/20100110-netflix-map.html&#34;&gt;A Peek Into Netflix [rental] Queues&lt;/a&gt;, where you can explore where (by US postnumber) any top 100 movie gets rented. A standard US map is overlaid with a heatmap of the data, and combined with excerpts from the movie reviews. Very amusing.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Software on Just Add Water</title>
+		<link>https://justaddwater.dk/category/software/</link>
+		<description>Recent content in Software on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 13 Aug 2009 14:17:55 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/software/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Remove smileys in messenger program (iChat for mac)</title>
+				<link>https://justaddwater.dk/2009/08/13/remove-smileys-in-messenger-program-ichat-for-mac/</link>
+				<pubDate>Thu, 13 Aug 2009 14:17:55 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/08/13/remove-smileys-in-messenger-program-ichat-for-mac/</guid>
+				<description>&lt;p&gt;It has long annoyed me that there is no intuitive, straightforward way to disable smileys in chat programs.&lt;/p&gt;&#xA;&lt;p&gt;Today I found that these two commands can do it for iChat for mac:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;$ cd /Applications/iChat.app/Contents/Resources/English.lproj/&lt;br&gt;&#xA;$ mv SmileyTable.plist SmileyTable.plist.bak&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Restart iChat. (tip from MacOSXhints.com: &lt;a href=&#34;http://www.macosxhints.com/article.php?story=20050522145205539&#34;&gt;Disable graphical smileys in iChat 3.0&lt;/a&gt; but it works for me on Mac OS X 10.5.8 with iChat 4.0.8 (619).&lt;/p&gt;&#xA;&lt;p&gt;Now my conversations look like this:&lt;br&gt;&#xA;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2009/08/ichat-messenger-with-smileys-disabled-218x300.png&#34; alt=&#34;ichat-messenger-with-smileys-disabled&#34; title=&#34;ichat-messenger-with-smileys-disabled&#34; class=&#34;aligncenter size-medium wp-image-1108&#34; height=&#34;300&#34; width=&#34;218&#34; srcset=&#34;https://justaddwater.dk/wp-content/uploads/2009/08/ichat-messenger-with-smileys-disabled-218x300.png 218w, https://justaddwater.dk/wp-content/uploads/2009/08/ichat-messenger-with-smileys-disabled.png 320w&#34; sizes=&#34;(max-width: 218px) 100vw, 218px&#34;&gt;&#xA;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Find Occurences of Text String in Files</title>
+				<link>https://justaddwater.dk/2008/06/17/find-occurences-of-text-string-in-files/</link>
+				<pubDate>Tue, 17 Jun 2008 14:54:11 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/06/17/find-occurences-of-text-string-in-files/</guid>
+				<description>&lt;p&gt;I had to search for occurences of string in particular files, and using Cygwin i did the following:&lt;/p&gt;&#xA;&lt;p&gt;find all files that ends on .js, .html or .ascx:&lt;br&gt;&#xA;&lt;code&gt;$ find -regextype posix-extended -regex &amp;quot;.+\.(js|html?|ascx)$&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Then search for lines that contain the following javascript construction &lt;code&gt;for( var x in object)&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;I ended up with this regular expression to match the javascript: &lt;code&gt;/for\s?\(.+?\bin\b.+?\)/&lt;/code&gt;. Although not strictly necessary, i test for word-boundaries around &lt;code&gt;&amp;quot;in&amp;quot;&lt;/code&gt; &amp;ndash; it would be sufficient just to use spaces like this &lt;code&gt;&amp;quot; in &amp;quot;&lt;/code&gt;. For grep to eat this its pack with parameters that show filename (-H), line number (-n), only matching part of line (-o), and use Pearl compatible regexps (-P):&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Textmate Snippet: Convert HTML entities for viewing code</title>
+				<link>https://justaddwater.dk/2008/01/01/e-texteditor-snippet-convert-html-entities-for-viewing-code/</link>
+				<pubDate>Tue, 01 Jan 2008 12:44:49 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/01/01/e-texteditor-snippet-convert-html-entities-for-viewing-code/</guid>
+				<description>&lt;p&gt;Happy New Year everybody. Here is a tiny Textmate or E-Texteditor Snippet: Convert HTML entities for viewing code. I created this recently for a HTML cookbook on a project, where we made HTML pages showing HTML example code. It converts&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;amp; to &amp;amp;amp;&lt;/li&gt;&#xA;&lt;li&gt;&amp;lt; to &amp;amp;lt;&lt;/li&gt;&#xA;&lt;li&gt;&amp;gt; to &amp;amp;gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/12/e-texteditor-bundle-editor-convert-html-entities.png&#34; title=&#34;e-texteditor-bundle-editor-convert-html-entities.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/12/e-texteditor-bundle-editor-convert-html-entities-thumb.png&#34; alt=&#34;e-texteditor-bundle-editor-convert-html-entities-thumb.png&#34; width=&#34;445&#34; height=&#34;399&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s it. Basically, I made a copy of one of the more complex snippets and simplified it. Recently, it has been a real time-saver for me despite it&amp;rsquo;s simplicity.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>My First Rant Discussion -- Ever</title>
+				<link>https://justaddwater.dk/2007/12/13/my-first-rant-discussion-ever/</link>
+				<pubDate>Thu, 13 Dec 2007 14:25:24 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/12/13/my-first-rant-discussion-ever/</guid>
+				<description>&lt;p&gt;How do you manage to help discussions being constructive and treating people with mutual respect? I just had this strange experience. You pay $34.95 for a text editor, and suddenly you&amp;rsquo;re allowed to yell and swear aththe developers. WHAT?&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m an eager follower on the &lt;a href=&#34;http://www.e-texteditor.com/forum/&#34;&gt;E-texteditor forum&lt;/a&gt; as it is a good place to follow along and report bugs. This way, the editor can mature as fast as possible and an open forum can help the process of making visible which bugs are the most annoying. Most of the tiny usability improvements, new ideas and bugs are reported and confirmed in the forum.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Powerful Text Editor Released</title>
+				<link>https://justaddwater.dk/2007/08/08/powerful-text-editor-released/</link>
+				<pubDate>Wed, 08 Aug 2007 12:13:24 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/08/08/powerful-text-editor-released/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://e-texteditor.com/&#34;&gt;E-texteditor&lt;/a&gt; just got out of beta. &lt;a href=&#34;http://www.e-texteditor.com/forum/search.php?search_author=jesperrr&#34;&gt;I have actively contributed&lt;/a&gt; with improvement suggestions and error reports, as this editor has all needed features for rapid web devlopment, and has potential to become even better.&lt;/p&gt;&#xA;&lt;p&gt;I suggest you check out the inspiring screencast and perhaps buy a trial if you like it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.e-texteditor.com/index.html&#34; title=&#34;E-texteditor homepage with screenshot&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/e-texteditor-homepage.png&#34; alt=&#34;e-texteditor-homepage.png&#34; width=&#34;453&#34; height=&#34;428&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;More info:&lt;/p&gt;&#xA;&lt;p&gt;E-Texteditor website: &lt;a href=&#34;http://e-texteditor.com/&#34;&gt;e-texteditor.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Justaddwater.dk: &lt;a href=&#34;https://justaddwater.dk/2007/04/28/e-texteditor-for-windows/&#34; title=&#34;Permanent Link to E-Texteditor For Windows&#34;&gt;E-Texteditor For Windows&lt;/a&gt; (April 2007)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>E-Texteditor For Windows</title>
+				<link>https://justaddwater.dk/2007/04/28/e-texteditor-for-windows/</link>
+				<pubDate>Sat, 28 Apr 2007 00:55:38 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/04/28/e-texteditor-for-windows/</guid>
+				<description>&lt;p&gt;I have been looking a fast, intuitive editor for my Windows laptop.&lt;/p&gt;&#xA;&lt;p&gt;Now I stopped looking. E-texteditor for windows is very intuitive and easy to use. I highly recommend watching the screencast (a short tour of some of the best features). Although it&amp;rsquo;s still in beta, it seems so much better than the alternatives.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m using it for HTML, CSS, JavaScript, Ruby on Rails editing. And it just works.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.e-texteditor.com/index.html&#34; title=&#34;E-texteditor homepage with screenshot&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/04/e-texteditor-homepage.png&#34; alt=&#34;e-texteditor-homepage.png&#34; width=&#34;453&#34; height=&#34;428&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

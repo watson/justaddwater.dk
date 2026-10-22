@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Microsoft on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/microsoft/</link>
+		<description>Recent content in Microsoft on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 05 Jan 2011 20:41:43 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/microsoft/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Automatic Excel Time Format Without Colon in Input</title>
+				<link>https://justaddwater.dk/2011/01/05/automatic-excel-time-format-without-colon-in-input/</link>
+				<pubDate>Wed, 05 Jan 2011 20:41:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2011/01/05/automatic-excel-time-format-without-colon-in-input/</guid>
+				<description>&lt;p&gt;For a simple Excel sheet time reporting, i needed to enter hours every day for arrival and departure time.&lt;/p&gt;&#xA;&lt;p&gt;Excel is not so smart about the time format. For instance I need to enter &amp;ldquo;9:00&amp;rdquo; for nine in the morning. I wanted just to enter &amp;ldquo;900&amp;rdquo;, and let the excel sheet format the data correctly itself.&lt;/p&gt;&#xA;&lt;p&gt;I found a working solution on PC Mag: &amp;ldquo;&lt;a href=&#34;http://www.pcmag.com/article2/0,2817,2316755,00.asp&#34;&gt;Easy Date and Time Entry in Excel Tips&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>.NET tips for my development environment</title>
+				<link>https://justaddwater.dk/2008/10/09/net-tips-for-my-development-environment/</link>
+				<pubDate>Thu, 09 Oct 2008 13:21:43 +0000</pubDate>
+				<guid>https://justaddwater.dk/2008/10/09/net-tips-for-my-development-environment/</guid>
+				<description>&lt;p&gt;At a recent project I had to work in a full-blown .NET environment. Here are some of the tips I collected from my colleagues.&lt;/p&gt;&#xA;&lt;p&gt;Visual Studio&lt;br&gt;&#xA;I added the methods below in the Macro editor (Tools &amp;gt; Macros &amp;gt; Macros IDE)&lt;/p&gt;&#xA;&lt;p&gt;Stop the build on error. When an error occurs I am notified instantly and able to fix faster.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-vb&#34; data-lang=&#34;vb&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;REM Stop the build process when the first error is encountered&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;Private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BuildEvents_OnBuildProjConfigDone&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; Project &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; ProjectConfig &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; Platform &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; SolutionConfig &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;String&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;ByVal&lt;/span&gt; Success &lt;span style=&#34;color:#f92672&#34;&gt;As&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Boolean&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;Handles&lt;/span&gt; BuildEvents.OnBuildProjConfigDone&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;If&lt;/span&gt; Success &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Then&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;&amp;#39;The build failed...cancel any further builds.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            DTE.ExecuteCommand(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Build.Cancel&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;If&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;End&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;Sub&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Timestamp on build complete. This is a great helper because I usually don&amp;rsquo;t waste braincycles on keeping track on when I last build the code. The timestamp occurs below the output which makes it instantly clear if it is necessary to rebuild. This usually saves 10-20 daily rebuilds each wasting one to four minutes.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

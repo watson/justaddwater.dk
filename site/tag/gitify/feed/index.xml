@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Gitify on Just Add Water</title>
+		<link>https://justaddwater.dk/tag/gitify/</link>
+		<description>Recent content in Gitify on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 17 Jan 2009 14:28:52 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/tag/gitify/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Git Side Benefit: Reducing Disk Usage</title>
+				<link>https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/</link>
+				<pubDate>Sat, 17 Jan 2009 14:28:52 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/</guid>
+				<description>&lt;p&gt;A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed.&lt;br&gt;&#xA;I created two checkouts of a svn project &amp;ndash; one using traditional svn and one using git (which can actually clone a svn repos &amp;ndash; see explanation below).&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;~/my-projects&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;  du -hd &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; berammelse berammelse.git &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; dokboks dokboks.git       &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; intrastat intrastat.git   &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; kompetenceregister k2.git &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; ourpeople ourpeople.git   &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; let0004 let0004.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;43M berammelse&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;38M berammelse.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;63M dokboks&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;11M dokboks.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;53M intrastat&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;34M intrastat.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;144M    kompetenceregister&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;47M kompetenceregister.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;118M    ourpeople&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;151M    ourpeople.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;163M    let0004&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;98M let0004.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For any project I tried this, Git uses significantly less disk space. It&amp;rsquo;s just a side effect, I know. But more important: The git version has all the logfile history offline and that makes rolling forward/back much faster :)&lt;br&gt;&#xA;FYI i&amp;rsquo;m using my version of &lt;a href=&#34;http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/%20%20&#34;&gt;Dr. Nic&amp;rsquo;s &amp;ldquo;gitify&amp;rdquo;&lt;/a&gt; command that wraps a &amp;ldquo;git svn&amp;rdquo; command. This way I can use git locally and then re-commit into svn when done.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

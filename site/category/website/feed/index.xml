@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Website on Just Add Water</title>
+		<link>https://justaddwater.dk/category/website/</link>
+		<description>Recent content in Website on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 13 Mar 2009 10:45:05 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/website/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Web Server Power Calculation</title>
+				<link>https://justaddwater.dk/2009/03/13/web-server-power-calculation/</link>
+				<pubDate>Fri, 13 Mar 2009 10:45:05 +0000</pubDate>
+				<guid>https://justaddwater.dk/2009/03/13/web-server-power-calculation/</guid>
+				<description>&lt;p&gt;In our company&amp;rsquo;s basement a small server room where we put a few sandbox machines we use for quickly starting up projects, simple project and version control management. Over the time, quite a few of our clients have benefited from this setup as it can create instant project infrastructure.&lt;/p&gt;&#xA;&lt;p&gt;But what is the cost of having these machines here?&lt;/p&gt;&#xA;&lt;p&gt;Servers: Old HP desktop workstations from 2003. By the time they were state-of-the art workstations used by developers working on virtual machines. Now that everybody uses laptops, we set some of these machines up in our server room and have had immense benefit from them in the last 18 months or so.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Netbank Log Off When Navigating on Page</title>
+				<link>https://justaddwater.dk/2007/08/14/netbank-log-off-when-navigating-on-page/</link>
+				<pubDate>Tue, 14 Aug 2007 12:14:51 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/08/14/netbank-log-off-when-navigating-on-page/</guid>
+				<description>&lt;p&gt;I just realized that the netbank I use logs me off when I request a page which the bank defined as &amp;ldquo;outside the netbank&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;In my case I was at the net bank page watching my account. I pressed &amp;ldquo;search&amp;rdquo; to search for how to find the IBAN/BIC/SWIFT code for international transfer of money.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;This action was enough for the netbank software to get insulted, and it immediately slammed the door behind me and logged me off.&lt;/strong&gt; (The screenshot says &amp;ldquo;Log on&amp;rdquo; in top left corner).&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

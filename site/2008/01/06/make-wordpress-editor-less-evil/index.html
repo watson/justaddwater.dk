@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make WordPress Editor Less Evil · justaddwater.dk</title>
+<meta name="description" content="This Friday, Jesper and I had a chat about things we don&rsquo;t like about the current WordPress WYSIWYG editor. In particular when trying to write code …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2008/01/03/usability-of-pagination-links/" rel="prev">Usability of Pagination Links</a></div>
+<div class="alignright"><a href="/2008/01/08/lean-software-development-video-mary-poppendieck/" rel="next">Lean Software Development Video Mary Poppendieck</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2008-01-06"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2008"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Usability"></span><span hidden data-pagefind-filter="category[data-v]" data-v="WordPress"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="This Friday, Jesper and I had a chat about things we don’t like about the current WordPress WYSIWYG editor. In particular when trying to write code examples in our posts: Jesper: One change I really would appreciate in the next WordPress would be the ability to shift wysiwyg/code editor directly on the edit page (Now [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Thomas"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jan 6"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="70"></span>
+<h2 data-pagefind-meta="title">Make WordPress Editor Less Evil</h2>
+<div class="entry">
+<p>This Friday, Jesper and I had a chat about things we don&rsquo;t like about the current WordPress WYSIWYG editor. In particular when trying to write code examples in our posts:</p>
+<blockquote>
+<p><strong>Jesper:</strong> One change I really would appreciate in the next WordPress would be the ability to shift wysiwyg/code editor directly on the edit page</p>
+<p>(Now we have to change it on the user prefs page)</p>
+<p><strong>Thomas:</strong> now = today</p>
+<p><strong>Jesper:</strong> aggreed! the sooner the better!</p>
+<p>I would like always to put my setting to wysiwyg off and turn it on when editing a post individually. Too often I have burnt my fingers and messed up posts containing code, blockquotes or formatted whitespace</p>
+<p>If the control were moved to the edit page I could easily write wysiwyg when needed and avoid it when it would mess up my post</p>
+<p><strong>Thomas:</strong> Yes&hellip; it should be possible to tell WordPress that a given post should always open with WYSIWYG off (or on) whenever it is edited&hellip; dismissing the default settings</p>
+<p><strong>Jesper:</strong> exactly!</p>
+<p>wysiwyg MUST be off by default because it&rsquo;s darn destructive! (at least in the current versions of the wysiwyg editors)</p>
+<p><strong>Thomas:</strong> I wonder if there exists some WP plugins out there that do this already</p>
+<p><strong>Jesper:</strong> Good question!</p>
+<p><strong>Thomas:</strong> &hellip; or even better doesn&rsquo;t mess up custom code or HTML</p>
+<p>(I mean&hellip; hacks WP so it doesn&rsquo;t)</p>
+<p><strong>Jesper:</strong> I hate the double/single quotes that WP replaces.</p>
+<p>All code examples stop working unless the author manually replaces:</p>
+<p>&lsquo;(single quote) with &amp;#039;</p>
+<p>&ldquo;(double quote) with &amp;quot;</p>
+<p><strong>Thomas:</strong> I think that there is a simple solution to the quote issue&hellip; it must be fairly simple to change that</p>
+<p>*searching for a fix*</p>
+<p>Sent at 11:04 PM on Friday</p>
+<p><strong>Thomas:</strong> hmmm it seems to be hard to find</p>
+<p>Is the problem that you write a regular quote and WordPress translates it into a html entity or the other way around?</p>
+<p><strong>Jesper:</strong> The problem is when posting code snippets, HTML or JavaScript for instance. The regular quote (double quote) is automatically translated to the angled double quotes &ndash; the same illness as Word does by default.</p>
+<p>It&rsquo;s an illness, in my opinion.</p>
+<p>Leave it up to the user to actively change my text</p>
+<p>Don&rsquo;t spoil my code snippets by default.</p>
+<p>Making normal quotes in normal text pretty is just not a great tradeoff &hellip;</p>
+<p><strong>Thomas:</strong> depends&hellip; the quotes them selves look great when wrapping sentences – but doesn&rsquo;t work for code – I agree</p>
+</blockquote>
+<p>After this chat I did some googling and found – as I expected – that we are not alone when it comes to the angled quote issue. The quote replacement is actually called &ldquo;Smart Quotes&rdquo; in WordPress, and there is a good discussion on the topic over at <a href="http://wordpress.org/support/topic/125038" title="Please give us the option to turn of smart 'quotes'">WordPress Support</a>.</p>
+<p>I also found a very good blog-article on the subject by Aaron Russell called &ldquo;<a href="http://www.milienzo.com/2007/09/06/trials-and-tribulations-of-using-wordpress-to-display-code-syntax/">Trials and tribulations of using WordPress to display code syntax</a>&rdquo;.</p>
+<h3 id="what-we-want">What we want&hellip;</h3>
+<p>The most optimal solution would be a WordPress plugin that simply disables smart quotes inside &lt;code&gt;&hellip;&lt;/code&gt; blocks. To top it of it should also escape the &amp;, &gt; and &lt; characters.</p>
+<h3 id="can-you-help">Can you help?</h3>
+<p>Do you know any plugins that actually do what we would like? Any settings we overlook in WordPress? If not, I guess we will have to convince somebody into changing a future WordPress version.</p>
+
+
+<p><small>Technorati Tags: wordpress, <a href="/tag/editor/" rel="tag">editor</a>, wysiwyg, quotes, <a href="/tag/code/" rel="tag">code</a>, <a href="/tag/usability/" rel="tag">usability</a>, source code</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Thomas Watson Steen
+on Sunday, January 6th, 2008 at 19:26 (GMT-1) and is filed under <a href="/category/usability/" rel="category tag">Usability</a>, <a href="/category/wordpress/" rel="category tag">WordPress</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">70 Responses to &#8220;Make WordPress Editor Less Evil&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-405313">
+<cite><a href="http://holderhomes.org" class="url" rel="external">Home Builder</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-405313" title="">April 1st, 2008 at 11:02 (GMT-1)</a> </small>
+<p>Michael,</p>
+<p>Thanks for the plug in. I also hate the WYSIWYG editor that word press uses. I would much rather hand code everything. I usually keep a copy of each post on my computer with the original code so I can copy and paste it into WP if I need to edit a post and not worry about it getting screwed up.</p>
+
+</li>
+
+<li id="comment-409787">
+<cite><a href="http://grafik-dizayn.com" class="url" rel="external">Emre Yashin</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-409787" title="">April 11th, 2008 at 17:48 (GMT-1)</a> </small>
+<p>I think there was an option in WordPress admin area to turn off WYSIWYG editor. (wow it was hard to code the editors name :)) or maybe i am mistaking it with another script. still it&rsquo;s worth to check again.</p>
+</li>
+
+<li class="alt" id="comment-415954">
+<cite><a href="http://www.markblah.com" class="url" rel="external">Mark Blaszczyk</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-415954" title="">May 4th, 2008 at 18:03 (GMT-1)</a> </small>
+<p>hey cool cheers planning to put some code snippits soon on my blog also, thanks for sharing.</p>
+</li>
+
+<li id="comment-416063">
+<cite><a href="http://www.wordpressthemespark.com/" class="url" rel="external">n252</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-416063" title="">May 5th, 2008 at 01:54 (GMT-1)</a> </small>
+<p>is there any WordPress WYSIWYG addon to change default WYSIWYG ?</p>
+</li>
+
+<li class="alt" id="comment-416449">
+<cite><a href="http://www.hexdizayn.com/" class="url" rel="external">Tasarim</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-416449" title="">May 6th, 2008 at 05:46 (GMT-1)</a> </small>
+<p>Michael,</p>
+<p>Thanks for the plug in. I also hate the WYSIWYG editor that word press uses. I would much rather hand code everything&hellip; :)</p>
+
+</li>
+
+<li id="comment-416586">
+<cite><a href="http://www.ekleizle.com" class="url" rel="external">Ekleizle</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-416586" title="">May 6th, 2008 at 17:18 (GMT-1)</a> </small>
+<p>yeah i dont like that wp version.<br>
+i hope they make it better !</p>
+</li>
+
+<li class="alt" id="comment-417347">
+<cite><a href="http://www.edevelopernetwork.com" class="url" rel="external">Lion head</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-417347" title="">May 10th, 2008 at 00:47 (GMT-1)</a> </small>
+<p>open the instal folder find editor and then comment it<br>
+you can even replace it fck editor its better than word press editor</p>
+</li>
+
+<li id="comment-417434">
+<cite><a href="http://rem-bud.ru" class="url" rel="external">Weno</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-417434" title="">May 10th, 2008 at 17:38 (GMT-1)</a> </small>
+<p>Thanks for plugin , but i don&rsquo;t understand how install it</p>
+</li>
+
+<li class="alt" id="comment-417453">
+<cite><a href="http://www.sohbetx.com" class="url" rel="external">EKoL</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-417453" title="">May 10th, 2008 at 20:27 (GMT-1)</a> </small>
+<p>Thanks for information</p>
+</li>
+
+<li id="comment-417609">
+<cite><a href="http://en.shematic.net" class="url" rel="external">Kpraldr</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-417609" title="">May 11th, 2008 at 20:10 (GMT-1)</a> </small>
+<p>Thanks for the plug in. I read the article with pleasure.</p>
+</li>
+
+<li class="alt" id="comment-417612">
+<cite><a href="http://electronic-projects.org.ua" class="url" rel="external">Roman Linker</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-417612" title="">May 11th, 2008 at 20:21 (GMT-1)</a> </small>
+<p>Thanks for information. I also hate the wysiwyg editor that word press uses.</p>
+</li>
+
+<li id="comment-417613">
+<cite><a href="http://innetworking.org.ua" class="url" rel="external">Serhio Ramper</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-417613" title="">May 11th, 2008 at 20:23 (GMT-1)</a> </small>
+<p>Hallo, very interesting article. I completely agree with Kpraldr.</p>
+</li>
+
+<li class="alt" id="comment-417614">
+<cite><a href="http://pyrotecnics.org.ua" class="url" rel="external">Inna Garter</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-417614" title="">May 11th, 2008 at 20:31 (GMT-1)</a> </small>
+<p>I olso keep a copy of each post on my computer with the original code.</p>
+</li>
+
+<li id="comment-417928">
+<cite><a href="http://profithunter.ru" class="url" rel="external">Bogdan</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-417928" title="">May 13th, 2008 at 14:21 (GMT-1)</a> </small>
+<p>I have a &ldquo;quote&rdquo; issue as well. Does Michael&rsquo;s plugin work?</p>
+</li>
+
+<li class="alt" id="comment-418088">
+<cite><a href="http://www.planetmike.com" class="url" rel="external">Michael Clark</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-418088" title="">May 14th, 2008 at 13:59 (GMT-1)</a> </small>
+<p>Hi, My CodeQuote plugin has a few bugs in it. Grumble, grumble. I need to sit down and work out the problems. Basically, if you have multiple lines you are needing to quote, my plugin fails, or at least doesn&rsquo;t work completely. :(</p>
+</li>
+
+<li id="comment-418628">
+<cite><a href="http://www.crane-machinery.com/" class="url" rel="external">Alan Crane</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-418628" title="">May 17th, 2008 at 01:33 (GMT-1)</a> </small>
+<p>Do i need to install the plugin on a server?<br>
+I only have a abc.wordpress.com – the free blog!<br>
+How can i use plugins?</p>
+</li>
+
+<li class="alt" id="comment-419619">
+<cite><a href="http://poncostuff.com" class="url" rel="external">kerrys</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-419619" title="">May 21st, 2008 at 18:18 (GMT-1)</a> </small>
+<p>Thanks for the plug in. I read the article with pleasure. But How can i use plugins?</p>
+</li>
+
+<li id="comment-419739">
+<cite><a href="http://www.westcounty.com/outsourcing.htm" class="url" rel="external">Tim</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-419739" title="">May 22nd, 2008 at 06:57 (GMT-1)</a> </small>
+<p>I would appreciate some reviews on Michael&rsquo;s plugin if anyone has used it.<br>
+Thanks<br>
+<a href="http://www.westcounty.com/outsourcing.htm">Plugin</a></p>
+</li>
+
+<li class="alt" id="comment-419800">
+<cite><a href="http://www.learnfobia.com" class="url" rel="external">John Elar</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-419800" title="">May 22nd, 2008 at 16:39 (GMT-1)</a> </small>
+<p>This is a great post. It is a very nice blog too. I add it to my favorites. Thank you</p>
+</li>
+
+<li id="comment-419921">
+<cite><a href="http://www.skoogo.com" class="url" rel="external">Navier</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-419921" title="">May 23rd, 2008 at 10:03 (GMT-1)</a> </small>
+<p>Hi,</p>
+<p>Do you really need a plugin to escape the &ldquo;&amp;, &gt; and &lt;&rdquo; characters?</p>
+<p>I use wordpress myself, and with some PHP this can be done quite easily.</p>
+<p>Anyway, i think the wordpress editor is cumbersome :/</p>
+
+</li>
+
+<li class="alt" id="comment-420558">
+<cite><a href="http://charactersnaruto.com" class="url" rel="external">naruto characters</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-420558" title="">May 27th, 2008 at 01:46 (GMT-1)</a> </small>
+<p>Some people can be mean and this is the way of the world while other people are quite nice. This is a very long and interesting article please keep up the great work on bloggin.</p>
+</li>
+
+<li id="comment-421182">
+<cite><a href="http://www.siset.com/" class="url" rel="external">Siset</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-421182" title="">May 30th, 2008 at 14:36 (GMT-1)</a> </small>
+<p>wysiwyg editor that word press use is sucks</p>
+</li>
+
+<li class="alt" id="comment-421763">
+<cite><a href="http://www.trabzonsports.com" class="url" rel="external">trabzonspor</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-421763" title="">June 2nd, 2008 at 16:44 (GMT-1)</a> </small>
+<p>Thanks for the plug in. I read the article with pleasure.</p>
+</li>
+
+<li id="comment-422752">
+<cite><a href="http://www.outblu.com" class="url" rel="external">Snowalker</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-422752" title="">June 8th, 2008 at 20:33 (GMT-1)</a> </small>
+<p>Personal I like the smart quotes&hellip; Of course if you want more freedom in editing your post that plugin is very useful.</p>
+</li>
+
+<li class="alt" id="comment-422772">
+<cite><a href="http://www.ourfreeads.co.uk" class="url" rel="external">Classifieds Steve</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-422772" title="">June 8th, 2008 at 22:07 (GMT-1)</a> </small>
+<p>Yeah I quite like it too, but the extras you can do with the plugin make it well worth while.</p>
+</li>
+
+<li id="comment-423419">
+<cite><a href="http://regards.sotovichok.com/" class="url" rel="external">Brenda Quiles</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-423419" title="">June 12th, 2008 at 22:26 (GMT-1)</a> </small>
+<p>Who know good wordpress plugin for working with images?</p>
+</li>
+
+<li class="alt" id="comment-425345">
+<cite><a href="http://cardzone.ru" class="url" rel="external">Card</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-425345" title="">June 21st, 2008 at 17:35 (GMT-1)</a> </small>
+<p>Brenda Quiles, for my point of view, the best plugin for working with images is ImageManager</p>
+</li>
+
+<li id="comment-425611">
+<cite><a href="http://thehawaiianlife.com" class="url" rel="external">Jeremy G.</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-425611" title="">June 22nd, 2008 at 15:32 (GMT-1)</a> </small>
+<p>I&rsquo;d say try out CodeQuote, it&rsquo;s worked nicely for me, but I do agree that I wish WP would just fix this issue rather than us having to use a band aid.</p>
+</li>
+
+<li class="alt" id="comment-425799">
+<cite><a href="http://www.getqlt.com" class="url" rel="external">Techy Bob at Quantum Leap Technologies</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-425799" title="">June 23rd, 2008 at 17:44 (GMT-1)</a> </small>
+<p>I tried CodeQuote last night and it seems to work well.</p>
+<p>Thank you very much for sharing.</p>
+<p>P.S. – Does anyone know if/when WP plans to support full blown SQL server.</p>
+<p>Regards,</p>
+<p>Bob</p>
+
+</li>
+
+<li id="comment-425987">
+<cite><a href="http://musicmadd.blogspot.com/" class="url" rel="external">Bob Dunn</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-425987" title="">June 24th, 2008 at 17:13 (GMT-1)</a> </small>
+<p>I could never understand why wordpress has that horrible WYSIWYG editor. I think that WP should be making things more easy for users. I found it all a bit too difficult which is why I ended up using blogger, which I know is terrible but at least anyone can use it.</p>
+</li>
+
+<li class="alt" id="comment-426534">
+<cite><a href="http://www.dishituponline.info/" class="url" rel="external">Nick Caverson</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-426534" title="">June 27th, 2008 at 02:03 (GMT-1)</a> </small>
+<p>Ha, these comments are a joke&hellip; I mean, does anyone have anything of substance to say here. Everyone is chiming in and saying the have a blog and it&rsquo;s a problem but there is no substance whatsoever. Can someone that understands this completely please answer Thomas&rsquo; question.</p>
+<p>Do you know any plugins that actually do what we would like? Any settings we overlook in WordPress?</p>
+<p>Stop all the pointless chatter just so you can say you commented, grab some juice and run. Somebody answer Thomas&rsquo; question or shut the hell up.</p>
+
+</li>
+
+<li id="comment-427263">
+<cite><a href="http://voucherfrenzy.co.uk/" class="url" rel="external">Discount Code Boy</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-427263" title="">June 30th, 2008 at 16:50 (GMT-1)</a> </small>
+<p>The WYSIWYG editor was ok for general editing but the CodeQoute makes posting to my discount code site soooooo much easier :)</p>
+<p>Thanks for the plugin</p>
+
+</li>
+
+<li class="alt" id="comment-427534">
+<cite><a href="http://bargainlaptopcomputershop.com/" class="url" rel="external">mike @ bargain laptop computer shop</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-427534" title="">July 1st, 2008 at 22:13 (GMT-1)</a> </small>
+<p>Has anyone used Michaels plug in yet?</p>
+<p>I actually like the wysywig editor since I learned how to use WP with it. the only challenge is when I try to embed a you tube.</p>
+<p>for that I need to disable, then re enable.</p>
+
+</li>
+
+<li id="comment-429165">
+<cite><a href="http://www.kurye34.com" class="url" rel="external">kurye</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-429165" title="">July 9th, 2008 at 15:16 (GMT-1)</a> </small>
+<p>thanks you messages</p>
+</li>
+
+<li class="alt" id="comment-432719">
+<cite><a href="http://www.outblu.com" class="url" rel="external">vince</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-432719" title="">July 28th, 2008 at 23:28 (GMT-1)</a> </small>
+<p>I like the quotes&hellip; whatever it&rsquo;s needed a new plug-in based on more buttons because a lot of us aren&rsquo;t web designers.</p>
+</li>
+
+<li id="comment-432873">
+<cite><a href="http://www.traditionalirishgifts.com/guinness-merchandise-2/" class="url" rel="external">guinness gifts</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-432873" title="">July 29th, 2008 at 16:31 (GMT-1)</a> </small>
+<p>I&rsquo;ve tried Michaels plugin and it works fine for me.</p>
+</li>
+
+<li class="alt" id="comment-432950">
+<cite><a href="http://www.gradquotes.net" class="url" rel="external">Graduation Quotes</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-432950" title="">July 30th, 2008 at 02:31 (GMT-1)</a> </small>
+<p>CodeQuote is a good plugin not the top of the line but sufficient for what I needed.<br>
+Thanks!</p>
+</li>
+
+<li id="comment-433404">
+<cite>Someone</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-433404" title="">August 1st, 2008 at 16:14 (GMT-1)</a> </small>
+<p>&ldquo;Users&rdquo; &gt; &ldquo;Your Profile&rdquo; &gt; &ldquo;Use the visual editor when writing&rdquo; (turn it off).</p>
+</li>
+
+<li class="alt" id="comment-433445">
+<cite><a href="http://getdrumbeat.com" class="url" rel="external">matt @ cheap drum sets</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-433445" title="">August 1st, 2008 at 20:44 (GMT-1)</a> </small>
+<p>to the question of which plugins seem to work well, I always use all-in-one-seo pack, as it gives alot of functionality for seo&rsquo;ing a WP blog.</p>
+<p>Another one that I use and I like is What Would Seth Godin do. It allows you to put in anything you want and it shows up on every page.</p>
+<p>Lastly, one I hear that works well, although still looking for is related post plug in. That one will find older posts on your blog and list them with related keywords. It helps add more content to the post, and can get readers to more aged posts.</p>
+
+</li>
+
+<li id="comment-433615">
+<cite><a href="http://www.anchorpointdesignsd.com" class="url" rel="external">Don</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-433615" title="">August 2nd, 2008 at 23:31 (GMT-1)</a> </small>
+<p>I&rsquo;ve used the plugin too, works fine here&hellip;</p>
+</li>
+
+<li class="alt" id="comment-434566">
+<cite><a href="http://thebookwhiz.com" class="url" rel="external">kim | The book Whiz</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-434566" title="">August 8th, 2008 at 23:00 (GMT-1)</a> </small>
+<p>Hey all,</p>
+<p>I have a blog that is on WP 2.6, and I was able to insert a you tube vid in to the html yesterday, no problems.</p>
+<p>The new update may have solved the issue.</p>
+<p>kim</p>
+
+</li>
+
+<li id="comment-434617">
+<cite><a href="http://imsobored.info/" class="url" rel="external">Bookmark</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-434617" title="">August 9th, 2008 at 14:19 (GMT-1)</a> </small>
+<p>I think they&rsquo;ve made improvements in the WP 2.6 version. However, like others above me, I still like to code by hand. What Lion head said is interesting&hellip; You can take out the editor and replace the WYSIWYG editor?! I need to check that out&hellip;</p>
+</li>
+
+<li class="alt" id="comment-438743">
+<cite><a href="http://comoemagrecerrapido.com" class="url" rel="external">Como Emagrecer Rapido</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-438743" title="">August 28th, 2008 at 03:42 (GMT-1)</a> </small>
+<p>I use a plugin to execute php in the pages of the blog, and display a google map. When I do posts I always use the WSIWYG editor and of course, when I go into the pages to edit them all the code goes away. What I do here is open a post, disable the WYSIWYG editor and then go to edit the page! That feature with the setting saved for each post and page would be great!</p>
+</li>
+
+<li id="comment-446629">
+<cite><a href="http://www.thehipzone.co.uk" class="url" rel="external">tony</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-446629" title="">September 14th, 2008 at 11:38 (GMT-1)</a> </small>
+<p>I haven&rsquo;t edited any of post till now but I think new WordPress is now free of such things. i shall be checking it by editing some of post in new wordpress2.6.2. Anyhow I always write content in MS Word then copy it to Notepad and then transfer it to WordPress. The problem I have with wordpress is its image manipulation. That should be handled fairly and am not satisfied by their current manipulation.</p>
+</li>
+
+<li class="alt" id="comment-448080">
+<cite><a href="http://www.sevgisohbet.com/" class="url" rel="external">sohbet</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-448080" title="">September 20th, 2008 at 11:05 (GMT-1)</a> </small>
+<p>Brenda Quiles, for my point of view, the best plugin for working with images is ImageManager</p>
+</li>
+
+<li id="comment-448869">
+<cite><a href="http://thegroovychick.com" class="url" rel="external">sharon</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-448869" title="">September 26th, 2008 at 10:46 (GMT-1)</a> </small>
+<p>Yes, I agree with tony that 2.6.2 has taken care of those issues. I gotta learn coding, for me wysisyg is a crutch!</p>
+</li>
+
+<li class="alt" id="comment-453701">
+<cite><a href="http://www.pabloruiz.com" class="url" rel="external">Pablo Ruiz</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-453701" title="">October 25th, 2008 at 01:45 (GMT-1)</a> </small>
+<p>I think the latest version of WP has resolved some of the WYSIWYG editor problems. I would agree that blogger is much easier to for the person who doesn&rsquo;t code.</p>
+</li>
+
+<li id="comment-457020">
+<cite>Neal</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-457020" title="">November 21st, 2008 at 20:01 (GMT-1)</a> </small>
+<p>WordPress editor can be confusing at times. I rather use themes that have some kind of back end management system. I dont know much about wordpress and thats why I do that .</p>
+</li>
+
+<li class="alt" id="comment-457496">
+<cite><a href="http://www.theonlinemlmblueprint.com" class="url" rel="external">Mike Rutkowski</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-457496" title="">November 26th, 2008 at 08:34 (GMT-1)</a> </small>
+<p>Does anyone know if there is a way to disable smart quotes within Word itself?</p>
+<p>I write articles for ezinearticles in word first, then copy and paste into ezine&rsquo;s interface. All formatting comes over fine, except the damn smart-quotes, which I have to go back and remove by hand.</p>
+<p>BTW, FCKeditor works pretty well for me, other than some minor spacing issues that happen, much better than default interface&hellip;</p>
+
+</li>
+
+<li id="comment-460470">
+<cite><a href="http://www.geeks-in-route.com" class="url" rel="external">Geeks-In-Route</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-460470" title="">December 20th, 2008 at 06:06 (GMT-1)</a> </small>
+<p>The following link will tell you how to disable smart quotes: <a href="http://ezinearticles.com/?Microsoft-Word-Smart-Quotes-and-Article-Marketers-Dont-Mix&amp;id=15624">http://ezinearticles.com/?Microsoft-Word-Smart-Quotes-and-Article-Marketers-Dont-Mix&amp;id=15624</a></p>
+<p>I have also pasted the info below.</p>
+<p>How To Disable Microsoft Word’s Smart Quotes:</p>
+<p>1. On the Tools menu, click AutoCorrect Options, then click the AutoFormat As You Type tab.</p>
+<p>2. Under Replace as you type, select or clear the &ldquo;Straight quotes&rdquo; with &ldquo;smart quotes&rdquo; check box.</p>
+<p>Alternatively, you can copy your entire MS Word document over to a non Microsoft text editor (EditPlus, UltraEdit, TextPad, etc) and do a simple search and replace. Search and replace the smart quotes into standard quotes, apostrophe’s, dashes and dots if applicable.</p>
+
+</li>
+
+<li class="alt" id="comment-460579">
+<cite><a href="http://www.takasel.com" class="url" rel="external">Takasel</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-460579" title="">December 20th, 2008 at 19:19 (GMT-1)</a> </small>
+<p>Anyhow I always write content in MS Word then copy it to Notepad and then transfer it to WordPress</p>
+</li>
+
+<li id="comment-460593">
+<cite><a href="http://www.lyricsofsong.net" class="url" rel="external">lyricsofsong</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-460593" title="">December 20th, 2008 at 20:15 (GMT-1)</a> </small>
+<p>for my point of view, the best plugin for working with images is ImageManage</p>
+</li>
+
+<li class="alt" id="comment-460933">
+<cite><a href="http://usdrumreview.com" class="url" rel="external">Jack Drum</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-460933" title="">December 22nd, 2008 at 12:46 (GMT-1)</a> </small>
+<p>You can use a different WY editor or just try to turn off the use the visual editor when writing option at pour profile.</p>
+</li>
+
+<li id="comment-464395">
+<cite><a href="http://www.tomelloso.com/" class="url" rel="external">Tomelloso</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-464395" title="">January 7th, 2009 at 23:01 (GMT-1)</a> </small>
+<p>The latest version of WP resolved some issues with editor problems.</p>
+</li>
+
+<li class="alt" id="comment-465834">
+<cite><a href="http://www.ilanlarim.org" class="url" rel="external">ilan</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-465834" title="">January 15th, 2009 at 13:35 (GMT-1)</a> </small>
+<p>I think the latest version of WP has resolved some of the WYSIWYG editor problems. I would agree that blogger is much easier to for the person who doesn’t code.</p>
+</li>
+
+<li id="comment-465835">
+<cite><a href="http://www.aleynamasaj.net" class="url" rel="external">masaj</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-465835" title="">January 15th, 2009 at 13:36 (GMT-1)</a> </small>
+<p>Yes, I agree with tony that 2.6.2 has taken care of those issues. I gotta learn coding, for me wysisyg is a crutch!</p>
+</li>
+
+<li class="alt" id="comment-468027">
+<cite><a href="http://www.oyunperisi.info" class="url" rel="external">oyun perisi</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-468027" title="">January 24th, 2009 at 22:38 (GMT-1)</a> </small>
+<p>Brenda Quiles, for my point of view, the best plugin for working with images is ImageManager</p>
+</li>
+
+<li id="comment-469144">
+<cite><a href="http://clupmania.org/forum/msn-nick-f-31.html" class="url" rel="external">Msn Nick</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-469144" title="">January 29th, 2009 at 19:21 (GMT-1)</a> </small>
+<p>my point of view is number one wordpress i like to wordpress thak you wp :p</p>
+</li>
+
+<li class="alt" id="comment-469184">
+<cite><a href="http://www.tradecredit.co.uk" class="url" rel="external">Trade Credit</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-469184" title="">January 30th, 2009 at 05:28 (GMT-1)</a> </small>
+<p>Great article. I&rsquo;m new to WP and it&rsquo;s editor is a bit difficult to use for me. This would help me a bit. Thank you for the awesome post. Appreciate the work.</p>
+</li>
+
+<li id="comment-469206">
+<cite><a href="http://www.oyunia.com" class="url" rel="external">oyunlar</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-469206" title="">January 30th, 2009 at 11:43 (GMT-1)</a> </small>
+<p>for my point of view, the best plugin for working with images is ImageManage</p>
+</li>
+
+<li class="alt" id="comment-471519">
+<cite><a href="http://thomasfallen.com" class="url" rel="external">thomas fallen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-471519" title="">February 8th, 2009 at 05:11 (GMT-1)</a> </small>
+<p>I gave up editing online via the wordpress editor. Too many times have I lost a post because of some weird bug or crash. There&rsquo;s plenty of offline editors around, I use one of those.</p>
+</li>
+
+<li id="comment-473881">
+<cite><a href="http://www.weathertitewindowsofatlanta.com/energy-efficient-windows-save-hundreds/" class="url" rel="external">Energy Efficient Windows Save Hundreds | Atlanta, GA | WeathertiteWindowsOfAtlanta.com</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-473881" title="">February 20th, 2009 at 13:29 (GMT-1)</a> </small>
+<p>[&hellip;] I want to take some time right now and give a shout out to someone who has made my life easier by showing me how to make my wordpress text editor less evil. [&hellip;]</p>
+</li>
+
+<li class="alt" id="comment-474650">
+<cite><a href="http://www.iflexion.com/services/software_testing.php" class="url" rel="external">Web application testing Guru</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-474650" title="">February 24th, 2009 at 14:22 (GMT-1)</a> </small>
+<p>Michael Clark, thanks for your link.<br>
+It&rsquo;s one of the problems I&rsquo;m facing every day working with my blogs.<br>
+And, you know, it&rsquo;s always not enough time to knuckle down and search for a proper solution. But today I stumbled upon your post and I&rsquo;m really lucky having one problem less. Thanks. :)</p>
+</li>
+
+<li id="comment-477447">
+<cite><a href="http://mrintech.com" class="url" rel="external">Mrinmay Bhattacharjee</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-477447" title="">March 12th, 2009 at 17:42 (GMT-1)</a> </small>
+<p>Thanks for the writeup and link :)</p>
+</li>
+
+<li class="alt" id="comment-478508">
+<cite><a href="http://kolaykek.com" class="url" rel="external">Kolay Kek Tarifleri</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-478508" title="">March 17th, 2009 at 20:19 (GMT-1)</a> </small>
+<p>Nice work. I had old version of WordPress and always wanted to solve this problem. Thanks.</p>
+</li>
+
+<li id="comment-478534">
+<cite><a href="http://www.pislikherif.com" class="url" rel="external">pherif</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-478534" title="">March 17th, 2009 at 22:38 (GMT-1)</a> </small>
+<p>Michael,</p>
+<p>Thanks for the plug in. I also hate the WYSIWYG editor that word press uses. I would much rather hand code everything. I usually keep a copy of each post on my computer with the original code so I can copy and paste it into WP if I need to edit a post and not worry about it getting screwed up.</p>
+
+</li>
+
+<li class="alt" id="comment-486680">
+<cite><a href="http://nesmedyahabervideoyunseoyarismasi.wordpress.com/" class="url" rel="external">&#34;NesMedya Haber Video Oyun Seo Yarışması&#34;</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-486680" title="">June 14th, 2009 at 23:23 (GMT-1)</a> </small>
+<p>Great article. I’m new to WP and it’s editor is a bit difficult to use for me.</p>
+</li>
+
+<li id="comment-486794">
+<cite><a href="http://sulumitsretsambew-id.com/" class="url" rel="external">sulumits retsambew</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-486794" title="">June 16th, 2009 at 10:31 (GMT-1)</a> </small>
+<p>The latest version of WP resolved some issues with editor problems.</p>
+<p>I am agree with this poster.</p>
+
+</li>
+
+<li class="alt" id="comment-487127">
+<cite><a href="http://stevz.com/" class="url" rel="external">Buzz News</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-487127" title="">June 21st, 2009 at 13:20 (GMT-1)</a> </small>
+<p>I used to use an offline editor such as ms word before I post an article. But there is a hidden visual editor in wordpress, I saw it on the net. There&rsquo;s a shortcut and when you press it the visual editor pops up. It would make the job much easier.</p>
+</li>
+
+<li id="comment-487331">
+<cite>wordpress user</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-487331" title="">July 4th, 2009 at 02:34 (GMT-1)</a> </small>
+<p>i know about two larger wpmu blog networks where the visual editor is a constant source of uncontrollable errors, which the users themselves cannot see or fix because the code view shows some terrible mixup hiding tags and copy and paste metadata trash. try and send it to the w3c validator. this piece of software sucks badly. the wikipedia editor works much better .</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/thomas.jpg" title="Photograph of author Thomas Watson Steen" alt="Photograph of author Thomas Watson Steen"></p><p>Working the web since 1995, Thomas Watson Steen is a web standards and usability expert. He is a partner in the company '3dbyggeri danmark', a new IT start-up in Denmark specializing in consulting and IT services to the construction sector.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

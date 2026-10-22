@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of · justaddwater.dk</title>
+<meta name="description" content="I was reading up on the good old HTML specification and discovered a feature I had always wanted &ndash; and it&rsquo;s already there:
+Creating widths of …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2009/09/01/selection-groups-in-rails-made-less-cumbersome/" rel="prev">Selection Groups in Rails made less cumbersome</a></div>
+<div class="alignright"><a href="/2009/09/16/css-styling-buttons-problem-with-underlined-text/" rel="next">CSS Styling Buttons Problem with Underlined Text</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2009-09-02"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2009"></span><span hidden data-pagefind-filter="category[data-v]" data-v="HTML"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Web Standards"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="I was reading up on the good old HTML specification and discovered a feature I had always wanted — and it’s already there:
+Creating widths of columns that will work like percentages, but will also pay attention to any small, fixed-width columns.
+Take a look at HTML’s proportional widths and amount alignment features."></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Sep 2"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="15"></span>
+<h2 data-pagefind-meta="title">2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</h2>
+<div class="entry">
+<p>I was reading up on the good old HTML specification and discovered a feature I had always wanted &ndash; and it&rsquo;s already there:<br>
+Creating widths of columns that will work like percentages, but will also pay attention to any small, fixed-width columns.</p>
+<p>Take a look at HTML&rsquo;s proportional widths and amount alignment features.</p>
+<p>Look at this from HTML specification of &lt;COL&gt; elements:</p>
+<blockquote>
+<p>Authors may specify column widths in three ways:</p>
+<p><strong>Fixed</strong><br>
+A fixed width specification is given in pixels (e.g., <code> width</code>=&ldquo;30&rdquo;). A fixed-width specification enables incremental rendering.</p>
+<p><strong>Percentage</strong><br>
+A percentage specification (e.g., <code>width</code>=&ldquo;20%&rdquo;) is based on the percentage of the horizontal space available to the table (between the current left and right margins, including floats). Note that this space does not depend on the table itself, and thus percentage specifications enable incremental rendering.</p>
+<p><strong>Proportional</strong><br>
+Proportional specifications (e.g., <code>width</code>=&ldquo;3*&rdquo;) refer to portions of the horizontal space <em>required</em> by a table. If the table width is given a fixed value via the <code>width</code> attribute of the <a href="http://www.w3.org/TR/html4/struct/tables.html#edef-TABLE"><code>TABLE</code></a> element, user agents may render the table incrementally even with proportional columns.However, if the table does not have a fixed width, user agents must receive all table data before they can determine the horizontal space required by the table. Only then may this space be allotted to proportional columns.</p>
+</blockquote>
+<p>Proportional widths! Nice. This means that you can create tables like this example (i have swapped the original HTML4 style to lowercase XHTML):</p>
+<blockquote>
+<p>Once the (visual) user agent has received the table&rsquo;s data: the available horizontal space will be alloted by the user agent as follows: First the user agent will allot 30 pixels to columns one and two. Then, the minimal space required for the third column will be reserved. <strong>The remaining horizontal space will be divided into six equal portions (since 2* + 1* + 3* = 6 portions)</strong>. Column four (2*) will receive two of these portions, column five (1*) will receive one, and column six (3*) will receive three.</p>
+<p>&lt;table&gt;<br>
+&lt;colgroup&gt;<br>
+  &lt;col width=&ldquo;30&rdquo;/&gt;<br>
+&lt;colgroup&gt;<br>
+  &lt;col width=&ldquo;30&rdquo;/&gt;<br>
+  &lt;col width=&ldquo;0*&rdquo;/&gt;<br>
+  &lt;col width=&ldquo;2*&rdquo;/&gt;<br>
+&lt;colgroup align=&ldquo;center&rdquo;&gt;<br>
+  &lt;col width=&ldquo;1*&rdquo;/&gt;<br>
+  &lt;col width=&ldquo;3*&rdquo; align=&ldquo;char&rdquo; char=”:”/&gt;<br>
+&lt;thead&gt;<br>
+&lt;tr&gt;&lt;td&gt; &hellip;<br>
+&hellip;rows&hellip;<br>
+&lt;/table&gt;</p>
+</blockquote>
+<p>This leaves me with one big question: How is browser support for &lt;col width=&ldquo;2*&rdquo;&gt; ????</p>
+<p>BONUS: Did you notice the little align feature &lsquo;align=&ldquo;char&rdquo; char=”:” &rsquo; so that you can correctly align your decimal amounts? I was not aware of that either!</p>
+<p>More info in W3C&rsquo;s HTML4 specification &ldquo;<a href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.4.4">Calculating the widths of columns</a>&rdquo;</p>
+
+
+
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Wednesday, September 2nd, 2009 at 15:23 (GMT-1) and is filed under <a href="/category/html/" rel="category tag">HTML</a>, <a href="/category/web-standards/" rel="category tag">Web Standards</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">15 Responses to &#8220;2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-488842">
+<cite>Chris</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488842" title="">September 3rd, 2009 at 11:37 (GMT-1)</a> </small>
+<p>As far as I know no browser supports align=&ldquo;char&rdquo; &ndash; do you have other information?</p>
+</li>
+
+<li id="comment-488854">
+<cite><a href="http://www.divrad.com/index.php/radiologists/" class="url" rel="external">Keegan</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488854" title="">September 3rd, 2009 at 23:03 (GMT-1)</a> </small>
+<p>I&rsquo;ve never used this before but I want to try it very soon. Thank you for the post</p>
+</li>
+
+<li class="alt" id="comment-488857">
+<cite><a href="http://freeringbacktoness.blogspot.com" class="url" rel="external">free ringback tones</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488857" title="">September 3rd, 2009 at 23:51 (GMT-1)</a> </small>
+<p>im need this tutorial thankss!!!</p>
+</li>
+
+<li id="comment-488866">
+<cite><a href="http://ReverseCellPhones.org" class="url" rel="external">Reverse Cell Phones</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488866" title="">September 4th, 2009 at 07:16 (GMT-1)</a> </small>
+<p>Proporational is new to me. I will have to use next time it makes sense.</p>
+</li>
+
+<li class="alt" id="comment-488868">
+<cite><a href="http://www.workgroup.co.in" class="url" rel="external">Maneesh Bhati</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488868" title="">September 4th, 2009 at 13:55 (GMT-1)</a> </small>
+<p>I like ur stuff on the HTML. I have to use it and then see what happens. Thanks for the info.</p>
+</li>
+
+<li id="comment-488881">
+<cite><a href="http://www.consumercourtforum.in/" class="url" rel="external">Consumer forum</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488881" title="">September 5th, 2009 at 10:55 (GMT-1)</a> </small>
+<p>Learning HTML is not so easy, but i am very confident that going through your post will help many people to know how easy it is. You have very well explained all the elements beautifully.</p>
+</li>
+
+<li class="alt" id="comment-488906">
+<cite><a href="http://qpew.com" class="url" rel="external">Toppy</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488906" title="">September 6th, 2009 at 10:09 (GMT-1)</a> </small>
+<p>This is a great find. I&rsquo;d guess the reason its not more widely known is compatibility issues. Any update on your findings about that?</p>
+</li>
+
+<li id="comment-488937">
+<cite><a href="http://www.marcusevans.com/marcusevans-scam/index.asp" class="url" rel="external">Angeline @ marcus evans scam</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488937" title="">September 7th, 2009 at 04:01 (GMT-1)</a> </small>
+<p>I&rsquo;m nt aware of the Browser support for column 2*. If you get to know please share with us.</p>
+<p>Angeline @ marcus evans scam</p>
+
+</li>
+
+<li class="alt" id="comment-488944">
+<cite><a href="http://www.ingateros.com/" class="url" rel="external">Rusli Zainal sang Visioner</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488944" title="">September 7th, 2009 at 10:06 (GMT-1)</a> </small>
+<p>ops lose comment<br>
+thank a lot of information. may be useful. continue to increase the quantity and quality of your writing. the more qualified you are writing all the more delighted visitors to come back to visit. success always for you.</p>
+<p>regard,<br>
+<a href="http://www.ingateros.com/2009/06/rusli-zainal-sang-visioner.html">rusli zainal sang visioner</a></p>
+
+</li>
+
+<li id="comment-488954">
+<cite><a href="http://www.fashno.com" class="url" rel="external">Fashno</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488954" title="">September 7th, 2009 at 12:47 (GMT-1)</a> </small>
+<p>Hello, First of all thank you for Providing great information about the HTML. THis will surely help newbies who want to know about the HTMl, im basically a Web Designing student, So i always do google searchs for the HTML tutorials, Etc and now found your site/blog and its GOOD</p>
+</li>
+
+<li class="alt" id="comment-488955">
+<cite><a href="http://www.seoworkgroup.com/" class="url" rel="external">SEO Workgroup</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488955" title="">September 7th, 2009 at 12:47 (GMT-1)</a> </small>
+<p>Thanks for sharing. I’ve never used this before but I want to try it very soon. Thank you for the post &amp; the sharing on HTML.</p>
+</li>
+
+<li id="comment-488959">
+<cite><a href="http://animemmorpgs.blogspot.com" class="url" rel="external">Anime Games</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488959" title="">September 7th, 2009 at 16:57 (GMT-1)</a> </small>
+<p>is this also applicable to HTML5, HTML 5.0 is not a big hit but you know that transition is also another consideration</p>
+</li>
+
+<li class="alt" id="comment-488963">
+<cite><a href="http://www.flockoffigurines.com" class="url" rel="external">Figurine</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-488963" title="">September 7th, 2009 at 23:44 (GMT-1)</a> </small>
+<p>Great information, written in a style everyone can understand. Thanks Jesper</p>
+</li>
+
+<li id="comment-489017">
+<cite><a href="http://www.wallpaperstop.com" class="url" rel="external">Derek Dorian</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489017" title="">September 10th, 2009 at 13:28 (GMT-1)</a> </small>
+<p>lol<br>
+i never heard this before<br>
+though i am gonna cross broswer check before testing it</p>
+</li>
+
+<li class="alt" id="comment-489485">
+<cite><a href="http://shamanpvp.net" class="url" rel="external">Shaman PVP</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-489485" title="">September 28th, 2009 at 05:13 (GMT-1)</a> </small>
+<p>I love the idea of proportional tables, but how well supported is this among the various browsers?</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

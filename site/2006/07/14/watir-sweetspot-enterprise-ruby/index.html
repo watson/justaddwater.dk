@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watir: Another sweetspot for Enterprise Ruby · justaddwater.dk</title>
+<meta name="description" content="There are many speculations regarding Ruby (the programming language) and it&rsquo;s ready-ness for enterprise use. The other day, a colleague of mine found an …">
+<link rel="alternate" type="application/rss+xml" href="/feed/" title="Just Add Water">
+<link rel="stylesheet" href="/site.min.css">
+</head>
+
+<body class="bg-wide">
+<div id="page">
+<div id="header"><div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">&ldquo;I would love to change the world,<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but they won&rsquo;t give me the source code.&rdquo;</div>
+</div></div>
+<div id="content" class="widecolumn">
+
+
+
+<div class="navigation">
+<div class="alignleft">&laquo; <a href="/2006/07/05/justaddwaterdk-photoshoot/" rel="prev">Justaddwater.dk photoshoot</a></div>
+<div class="alignright"><a href="/2006/08/09/irregular-publishing-frequency/" rel="next">Blog Usability: Irregular Publishing Frequency</a> &raquo;</div>
+</div>
+<div style="clear:both"></div>
+<div class="post" data-pagefind-body>
+<span hidden data-pagefind-meta="date[data-v]" data-pagefind-sort="date[data-v]" data-v="2006-07-14"></span><span hidden data-pagefind-filter="year[data-v]" data-v="2006"></span><span hidden data-pagefind-filter="category[data-v]" data-v="Businesscase"></span><span hidden data-pagefind-meta="excerpt[data-v]" data-v="There are many speculations regarding Ruby (the programming language) and it’s ready-ness for enterprise use. The other day, a colleague of mine found an absolutely sweet spot: Automated testing via the browser interface. Watir stands for “Web Application Testing in Ruby”, you write a few lines of Ruby that fires up Internet Explorer, and then [&hellip;]"></span><span hidden data-pagefind-meta="author[data-v]" data-v="Jesper"></span><span hidden data-pagefind-meta="short[data-v]" data-v="Jul 14"></span><span hidden data-pagefind-meta="comments[data-v]" data-v="6"></span>
+<h2 data-pagefind-meta="title">Watir: Another sweetspot for Enterprise Ruby</h2>
+<div class="entry">
+<p>There are many speculations regarding Ruby (the programming language) and it&rsquo;s ready-ness for enterprise use. The other day, a colleague of mine found an absolutely sweet spot: Automated testing via the browser interface.</p>
+<p><a href="http://wtr.rubyforge.org/" title="Watir: ">Watir</a> stands for &ldquo;Web Application Testing in Ruby&rdquo;, you write a few lines of Ruby that fires up Internet Explorer, and then clicks around, fills in form fields, submits, etc.</p>
+<p>My colleague used a couple of hours to write a few lines to integration test a complex system for a financial customer. He modified it to repeat the same test in three different environments and via timers found out that one of the environments performed very badly.</p>
+<p>I saw my colleague demo it yesterday, and both testers and developers present were absolutely impressed by the jar-dropping demo. Comments: &ldquo;We could have used this much earlier&rdquo;, &ldquo;Despite that I don&rsquo;t know Ruby, It&rsquo;s easy to understand what it does&rdquo;. Everybody in the project room went around smiling (<a href="http://loudthinking.com/" title="Loudthinking: David Heinemeier Hansson">David Heinemeier</a> would probably say &ldquo;happy&rdquo;)</p>
+<p>It&rsquo;s nothing new that automated browser testing can be done, but when I ask about the alternatives, I&rsquo;m told that they&rsquo;re too complex to get started with, and sometimes take forever to set up.</p>
+<p>Watir gets started with just four lines of code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;watir&#39;</span>
+</span></span><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;watir/WindowHelper&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Watir</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ie <span style="color:#f92672">=</span> <span style="color:#66d9ef">IE</span><span style="color:#f92672">.</span>new
+</span></span><span style="display:flex;"><span>ie<span style="color:#f92672">.</span>goto(test_site) 
+</span></span></code></pre></div><p>In my opinion, Watir + Ruby is a winnner. So easy to get started. So great payoff for a small amount of time invested. Jaw-dropping reactions on developers and testers that don&rsquo;t even know Ruby. It&rsquo;s a definite winner.</p>
+
+
+<p><small>Technorati Tags: <a href="/tag/ruby/" rel="tag">ruby</a>, enterprise, <a href="/tag/business-case/" rel="tag">business case</a>, watir</small></p>
+
+<p class="postmetadata alt" data-pagefind-ignore>
+<small>
+This entry was posted by Jesper Rønn-Jensen
+on Friday, July 14th, 2006 at 11:18 (GMT-1) and is filed under <a href="/category/businesscase/" rel="category tag">Businesscase</a>.
+You can follow any responses to this entry through the <a href="/feed/">RSS 2.0</a> feed.
+Both comments and pings are currently closed.
+</small>
+</p>
+
+</div>
+</div>
+
+
+
+<h3 id="comments">6 Responses to &#8220;Watir: Another sweetspot for Enterprise Ruby&#8221;</h3>
+<ol class="commentlist">
+
+<li class="alt" id="comment-8583">
+<cite>Heiko</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-8583" title="">July 18th, 2006 at 09:53 (GMT-1)</a> </small>
+<p>Hi!</p>
+<p>Selenium is also easy and good.<br>
+<a href="http://www.openqa.org/selenium/">http://www.openqa.org/selenium/</a></p>
+<p>+</p>
+<p><a href="http://jameleon.sourceforge.net/">http://jameleon.sourceforge.net/</a></p>
+<p><a href="http://sahi.sourceforge.net/">http://sahi.sourceforge.net/</a></p>
+<p>Heiko</p>
+
+</li>
+
+<li id="comment-8741">
+<cite>Tobias H. Michaelsen</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-8741" title="">July 22nd, 2006 at 21:14 (GMT-1)</a> </small>
+<p>You should also check out Scott Hanselman&rsquo;s <a href="http://www.hanselman.com/blog/IntroducingWatirMakerRecordingForRubybasedWatir.aspx">WatirMaker</a>. It is a recording program for generating runy scripts for Watir automatically. It is written in C# and is Windows-only. But a <a href="http://www.hanselman.com/blog/WatirMakerWrittenAgainInRuby.aspx" title="Ruby version of WatirMaker">Ruby version</a> has also been made.</p>
+</li>
+
+<li class="alt" id="comment-8742">
+<cite>Tobias H. Michaelsen</cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-8742" title="">July 22nd, 2006 at 21:17 (GMT-1)</a> </small>
+<p>&ldquo;runy script&rdquo; – argh! :) Should have been &ldquo;Ruby&rdquo;</p>
+</li>
+
+<li id="comment-8746">
+<cite><a href="http://justaddwater.dk/" class="url" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-8746" title="">July 22nd, 2006 at 21:48 (GMT-1)</a> </small>
+<p>Thanks for the comments.</p>
+<p>After spending some more time working with Watir, this is great news that you can record them. Thanks for letting me know, I&rsquo;ll look into that first thing Monday morning!</p>
+
+</li>
+
+<li class="alt" id="comment-9259">
+<cite><a href="http://blog.olle.ter.dk" class="url" rel="external">Olle Jonsson</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-9259" title="">August 3rd, 2006 at 13:42 (GMT-1)</a> </small>
+<p>I found <a href="http://olle.ter.dk/blog/?p=213" title="Watir, Ruby and more">an old post at my blog</a>, almost a complete mirror of these sentiments.</p>
+<p>As a lone consultant, I had to celebrate its genius alone. :-)</p>
+
+</li>
+
+<li id="comment-363871">
+<cite><a href="http://justaddwater.dk/2007/11/20/how-to-run-javascript-from-watir-scripts/" class="url" rel="external">justaddwater.dk | How to Run JavaScript From Watir Scripts</a></cite> Says:
+<br />
+<small class="commentmetadata"><a href="#comment-363871" title="">November 20th, 2007 at 21:12 (GMT-1)</a> </small>
+<p>[&hellip;] What’s Watir? Read “Watir: Another sweetspot for Enterprise Ruby” [&hellip;]</p>
+</li>
+
+</ol>
+
+
+
+
+</div>
+<div id="sidebar"><ul>
+<li id="about-the-author" class="widget JAWAuthorWidgets_aboutTheAuthorWidget"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img src="/images/jesper.jpg" title="Photograph of author Jesper Rønn-Jensen" alt="Photograph of author Jesper Rønn-Jensen"></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+
+</li>
+</ul></div>
+<hr>
+<div id="footer"><p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br>
+justaddwater.dk static archive 2005&ndash;2026 <a href="/about-the-authors/">About the authors</a>
+</p></div>
+</div>
+</body>
+</html>

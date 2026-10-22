@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Hardware on Just Add Water</title>
+		<link>https://justaddwater.dk/category/hardware/</link>
+		<description>Recent content in Hardware on Just Add Water</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 06 Nov 2007 00:26:39 +0000</lastBuildDate>
+		
+			<atom:link href="https://justaddwater.dk/category/hardware/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Lenovo Thinkpad Silent Fan</title>
+				<link>https://justaddwater.dk/2007/11/06/lenovo-thinkpad-silent-fan/</link>
+				<pubDate>Tue, 06 Nov 2007 00:26:39 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/11/06/lenovo-thinkpad-silent-fan/</guid>
+				<description>&lt;p&gt;Since I got my Lenovo Thinkpad T60p I have always wondered why the fan kept running away (even just after booting).&lt;/p&gt;&#xA;&lt;p&gt;Turns out there is a program to manipulate the speed of the fan: tpfancontrol&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://justaddwater.dk/wp-content/uploads/2007/11/thinkpad-fancontrol-for-t60p.png&#34; title=&#34;thinkpad-fancontrol-for-t60p.png&#34;&gt;&lt;img src=&#34;https://justaddwater.dk/wp-content/uploads/2007/11/thinkpad-fancontrol-for-t60p-small.png&#34; alt=&#34;thinkpad-fancontrol-for-t60p-small.png&#34; width=&#34;400&#34; height=&#34;400&#34;&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;With this, you can tune your fan speed and follow the temparature readings at the right.&lt;/p&gt;&#xA;&lt;p&gt;Using this program permanently is probably a bad idea to do since Lenovo will probably void any guarantee on your computer. To spare you from the inconvenience of testing I did a brief test run of the program:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Lenovo Power Supply Almost Caught Fire</title>
+				<link>https://justaddwater.dk/2007/10/08/lenovo-power-supply-almost-caught-fire/</link>
+				<pubDate>Mon, 08 Oct 2007 12:33:00 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/10/08/lenovo-power-supply-almost-caught-fire/</guid>
+				<description>&lt;p&gt;I have mentioned before usability issues of my Lenovo Thinkpad T60p computer. Usability issues is one thing. Another—and potential deadly—thing happened Saturday evening at home. This is what I write to our internal support and expect them to forward.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Saturday evening I put the power plug in the laptop to recharge. I came back to the room (our home office) 10 minutes later and saw the computer not charging. I noticed a high frequent sound and traced it to the power supply, which was incredibly hot, and smelled bad. I immediately unplugged it.&lt;/p&gt;&#xA;&lt;p&gt;I have no exact temperature for the power supply, it felt like holding on a hot cup of coffe. Also the cord itself felt softer than usual because of the hot temperature. I have marked on the cord a mark, where the weight of the power supply pressed a mark into the cord.&lt;/p&gt;&#xA;&lt;p&gt;I am convinced that if I had not seen what happened, the power supply would have set the entire room on fire.&lt;/p&gt;&#xA;&lt;p&gt;For some strange reason, the power supply is working again the day after.&lt;/p&gt;&#xA;&lt;p&gt;Technical details from the power supply and PC&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lenovo AC Adapter 90W 20V rev H&lt;/li&gt;&#xA;&lt;li&gt;Serial number: 11S92P1107Z1ZD2L73W8P6&lt;/li&gt;&#xA;&lt;li&gt;P/N 92P1108&lt;/li&gt;&#xA;&lt;li&gt;PA-1900-08I&lt;/li&gt;&#xA;&lt;li&gt;(used for my Lenovo Thinkpad T60p widescreen type &amp;ldquo;8742-CTO&amp;rdquo;, S/N &amp;ldquo;L3-A8843 07/04&amp;rdquo;, Product id &amp;ldquo;8742Y18&amp;rdquo;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Question for Lenovo:&lt;/p&gt;&#xA;&lt;p&gt;How can you convince me that it&amp;rsquo;s safe to use the power supply and put it back in the wood shelf in my home office?&lt;/p&gt;&#xA;&lt;p&gt;Is this periodical error something that could potentionally happen to the other power supply I use?&lt;/p&gt;&#xA;&lt;p&gt;Thanks in advance for taking time to answer my questions professionally and seriously.&lt;/p&gt;&#xA;&lt;p&gt;/Jesper Rønn-Jensen&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Lenovo Problem: No Wireless Reconnect After Standby</title>
+				<link>https://justaddwater.dk/2007/07/25/lenovo-problem-no-wireless-reconnect-after-standby/</link>
+				<pubDate>Wed, 25 Jul 2007 10:43:12 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/07/25/lenovo-problem-no-wireless-reconnect-after-standby/</guid>
+				<description>&lt;p&gt;Warning to our frequent readers: This is not about usability or webstandards.&lt;/p&gt;&#xA;&lt;p&gt;I wrote about &lt;a href=&#34;https://justaddwater.dk/2007/05/17/new-laptop-with-better-defaults/&#34;&gt;issues with my Lenovo T60p laptop&lt;/a&gt; recently, and have made a guide to eliminate one of the most annoying problems I ever had with a PC:&lt;/p&gt;&#xA;&lt;p&gt;After standby, the computer was &lt;strong&gt;unable to reconnect to the wireless network&lt;/strong&gt;. As this is a corporate computer, several of my colleagues experienced the same problem.&lt;/p&gt;&#xA;&lt;p&gt;Bad thing is that it&amp;rsquo;s very hard to report this to Lenovo, and I must express my surprise they can ship and sell a laptop where it by default can&amp;rsquo;t connect to wireless after standby.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>New Laptop With Better Defaults</title>
+				<link>https://justaddwater.dk/2007/05/17/new-laptop-with-better-defaults/</link>
+				<pubDate>Thu, 17 May 2007 00:40:27 +0000</pubDate>
+				<guid>https://justaddwater.dk/2007/05/17/new-laptop-with-better-defaults/</guid>
+				<description>&lt;p&gt;&lt;ins&gt;&lt;strong&gt;Update: CPU fan speed can be controlled. See updated notes below&amp;hellip;(2007-11-06)&lt;/strong&gt;&lt;/ins&gt;&lt;br&gt;&#xA;I got a new laptop from work last week. Swapped the old Dell D600 in for a sparkling new (IBM) Lenovo Thinkpad T60p. I really like the new one. Things I have noted for now:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Much brighter and better screen&lt;/li&gt;&#xA;&lt;li&gt;Lovely keyboard which is a pleasure to use&lt;/li&gt;&#xA;&lt;li&gt;Funky gestures for the Touchpad&lt;/li&gt;&#xA;&lt;li&gt;&lt;del&gt;CPU fan always running&lt;/del&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;lovely-keyboard--but&#34;&gt;Lovely Keyboard &amp;hellip; but&amp;hellip;&lt;/h3&gt;&#xA;&lt;p&gt;In general, the keyboard is really a pleasure to use. The keys have perfect weight and just right feedback. It makes a tiny clicking sound but not too clicky like the old Dell. In general the keys are good positioned and not too close (although there is an inch of unused space on each side of the keyboard. This space had been better used if it were used to put more space between essential groups of characters. (some of the buttons I hit Here are some of the buttons I hit in error occationally (which indicates that keys are too tight in that area):&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
