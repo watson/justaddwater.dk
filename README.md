@@ -193,6 +193,77 @@ To test a project URL prefix:
 .venv/bin/python scripts/verify.py --site _site --base-path /justaddwater.dk
 ```
 
+## Compare the archive with the original capture
+
+The independent auditor checks **every URL in `.cache/capture.json`**, including
+HTML downloads, assets and failed captures. It does not import the converter's
+cleanup code. Exact recovery records explain known changes; unexpected prose,
+missing comments, changed links, broken local targets, fragment links, differing
+downloads, malformed feeds and remaining legacy UI problems are reported.
+Both versions receive health checks, so a bug faithfully copied from WordPress
+can still appear as an inherited problem.
+
+```sh
+.venv/bin/pip install -r requirements-audit.txt
+.venv/bin/python scripts/audit.py
+```
+
+Open `.cache/audit/index.html` for a filterable report and per-URL text/resource
+diffs. `.cache/audit/report.json` contains all results, evidence and coverage.
+The report is local and excluded from Git and the published site. A fresh clone
+needs the original `.cache/` capture to perform these comparisons; the script
+reports missing evidence rather than silently accepting it.
+`data/audit-summary.json` records the first complete run, its coverage and the
+confirmed items needing review. The auditor reports findings without editing
+the archived site.
+
+For screenshots, pixel differences and Chromium health checks on **all captured
+HTML pages**:
+
+```sh
+npm ci
+npx playwright install chromium
+.venv/bin/python scripts/audit.py --browser
+```
+
+Alternatively, use an installed Chrome with
+`--browser-executable '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'`.
+The browser runs in isolated contexts with network requests intercepted and
+served from local files. Uncaptured dependencies and external players are blocked
+and listed. Clone HTML uses GitHub Pages' UTF-8 response charset; original
+responses retain their captured content types. Recovered external images are labeled as reconstructed dependencies;
+they are not presented as original response snapshots. No forms are submitted.
+This offline pass cannot determine whether a third-party video currently plays.
+Controls are inspected, not exercised; existing demo interaction checks remain
+separate. The runner uses Playwright's
+[context routing](https://playwright.dev/docs/api/class-browsercontext#browser-context-route)
+and [page screenshots](https://playwright.dev/docs/api/class-page#page-screenshot).
+
+Screenshots use a 1280 × 900 viewport and extend to the page's full height, capped
+at 50,000 pixels. Horizontal overflow and any cap are explicit findings. JPEG
+screenshots are compared at 480-pixel width with a 45/255 luminance tolerance;
+more than 1% differing pixels creates a visual review item. This is a prioritizing
+signal: intentional repairs and missing replay dependencies also change pixels.
+The raw text diff and original/clone screenshots remain available even for
+expected changes. Browser results are resumable and invalidated by changes to
+HTML, dependency bytes, configuration, browser version or the runner.
+
+Useful options:
+
+- `--match '/2007/09/27/'` or `--limit 10`: a clearly labeled partial run.
+- `--site _site --base-path /justaddwater.dk`: audit the deployment build.
+- `--browser-workers 4`: control browser concurrency (default 3, maximum 8).
+- `--report-only`: rebuild the HTML/JSON report from saved evidence.
+- `--refresh`: fetch originals with two GET workers into a separate `live/`
+  snapshot and report changes since capture. The original cache is never replaced.
+- `--fail-on-unexplained`: return a nonzero status for unexplained differences.
+
+Unexplained findings require investigation; they are not automatically declared
+regressions. Generated clone-only pages are listed separately, and `verify.py`
+continues to check their links and expected content. The comparison is optional
+and is not part of deployment CI, which must work without the private capture
+cache or the original server.
+
 ## Licensing
 
 See [LICENSE.md](LICENSE.md). The original theme explicitly carries a GPL notice.
