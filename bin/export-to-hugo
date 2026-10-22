@@ -128,9 +128,19 @@ def shortcodes(t):
     t = re.sub(r"\[/?caption[^\]]*\]", "", t)
     t = gists(t)
     t = blockquote_pre(t)
-    t = re.sub(r'<iframe[^>]*src="([^"]+)"[^>]*>.*?</iframe>',
+    t = re.sub(r'<iframe(?![^>]*src="https?://(?:player\.vimeo\.com|www\.youtube\.com)/)[^>]*src="([^"]+)"[^>]*>.*?</iframe>',
                r'<p><a href="\1">Embedded content: \1</a></p>', t, flags=re.I | re.S)
     return t
+
+def protect_iframes(html):
+    """Video iframes (Vimeo/YouTube, upgraded to https) stay real iframes; pandoc would drop them."""
+    frames = []
+    def keep(m):
+        a = lambda n: (re.search(n + r'="([^"]*)"', m.group(0)) or [0, ""])[1]
+        src = a("src").replace("http://", "https://", 1)
+        frames.append('<iframe src="%s" width="%s" height="%s" frameborder="0" allowfullscreen></iframe>' % (src, a("width") or 400, a("height") or 225))
+        return "<p>PPIFRAME%dPP</p>" % (len(frames) - 1)
+    return re.sub(r"<iframe\b[^>]*>\s*</iframe>", keep, html, flags=re.I), frames
 
 CONTAINER = r"(?:table|dl|ul|ol|pre|form|blockquote|div|figure|object|script|style|iframe|p|h[1-6])"
 TAG = re.compile(r"<(/?)(%s)\b[^>]*?(/?)>" % CONTAINER, re.I)
@@ -306,6 +316,7 @@ def to_md(html, post=False):
         html = re.sub(r"<p\b([^>]*\s(?:align|style)=[^>]*)>(.*?)</p>", r"<div\1>\2</div>", html, flags=re.I | re.S)
         html = re.sub(r"</?small\b[^>]*>", lambda m: "PPSMALLCLOSEPP" if m.group(0)[1] == "/" else "PPSMALLOPENPP", html, flags=re.I)
         html = re.sub(r"</?ins\b[^>]*>", lambda m: "PPINSCLOSEPP" if m.group(0)[1] == "/" else "PPINSOPENPP", html, flags=re.I)
+    html, frames = protect_iframes(html)
     html, div_tags = protect_styled_divs(html)
     r = subprocess.run(["pandoc", "-f", "html", "-t", "gfm-raw_html", "--wrap=none"],
                        input=html, capture_output=True, text=True)
@@ -313,6 +324,7 @@ def to_md(html, post=False):
     md = restore_styled_divs(md, div_tags)
     md = restore_tables(md, tabs)
     md = md.replace("PPSMALLOPENPP", "<small>").replace("PPSMALLCLOSEPP", "</small>").replace("PPINSOPENPP", "<ins>").replace("PPINSCLOSEPP", "</ins>")
+    for i, fr in enumerate(frames): md = md.replace("PPIFRAME%dPP" % i, fr)
     for i, sc in enumerate(imgs): md = md.replace("PPIMG%dPP" % i, sc)
     md = re.sub(r"(?m)^\\[ \t]*$\n?", "", md)      # lone hard breaks beside block elements
     md = re.sub(r"\\\n(?=\n)", "\n", md)          # hard break at paragraph end

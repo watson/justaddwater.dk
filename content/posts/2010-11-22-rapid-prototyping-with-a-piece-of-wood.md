@@ -11,7 +11,7 @@ author: "jesper"
 
 May I recommend Aza Raskins recent presentation on Rapid prototyping. He shares a lot of very insightful thoughts on how (and why) rapid prototyping is so important.
 
-[Embedded content: http://player.vimeo.com/video/16527312](http://player.vimeo.com/video/16527312)
+<iframe src="https://player.vimeo.com/video/16527312" width="400" height="225" frameborder="0" allowfullscreen></iframe>
 
 [Rapid Prototyping with Aza Raskin](http://vimeo.com/16527312) from [Dan Braghis](http://vimeo.com/zerolab) on [Vimeo](http://vimeo.com).
 
