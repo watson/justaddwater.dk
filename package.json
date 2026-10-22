@@ -2,6 +2,7 @@
   "name": "justaddwater-tools",
   "private": true,
   "devDependencies": {
+    "pagefind": "1.5.2",
     "playwright": "1.62.1",
     "pngjs": "7.0.0"
   },

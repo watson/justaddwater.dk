@@ -5,6 +5,7 @@
 #   bin/dev stop      stop the server
 #   bin/dev restart   stop, rebuild with `hugo --gc --quiet`, then start
 #   bin/dev status    show whether the server is running
+#   bin/dev reindex   rebuild the Pagefind search index into static/pagefind/
 #
 # PORT overrides the port (default 1313). Non-default ports use their own
 # pid/log files: logs/hugo-server-<PORT>.{pid,log}.
@@ -26,7 +27,7 @@ help_text() {
   cat <<EOT
 bin/dev - run the Hugo dev server for this site (live-reloads content, layouts, assets)
 
-Usage: bin/dev [start|stop|restart|status|help]
+Usage: bin/dev [start|stop|restart|status|reindex|help]
 
 Commands:
   start    start the server in the background on port $PORT, wait until it
@@ -36,6 +37,10 @@ Commands:
            or hugo.toml aborts here with the real error), then start again.
            Needed after hugo.toml or new layouts/ directories change.
   status   show whether the server is up (exit 0 = up, 1 = down)
+  reindex  build the site to tmp/search-site, run Pagefind there and write the
+           bundle to static/pagefind/ (git-ignored; served by hugo server, which
+           otherwise has no search index). start/restart run it if the index is
+           missing / always. Re-run after content changes. See docs/search.md.
   help     show this help (also -h, --help)
 
 Environment:
@@ -73,6 +78,15 @@ recorded_pid() {
   return 0
 }
 
+cmd_reindex() {
+  [ -x node_modules/.bin/pagefind ] || { echo "pagefind missing: run 'yarn install'" >&2; return 1; }
+  rm -rf tmp/search-site
+  hugo --gc --quiet --destination tmp/search-site >/dev/null || { echo "reindex: hugo build failed" >&2; return 1; }
+  rm -rf tmp/search-site/pagefind static/pagefind
+  node_modules/.bin/pagefind --site tmp/search-site --output-path static/pagefind
+  rm -rf tmp/search-site
+}
+
 cmd_start() {
   local pids
   pids="$(listening_pids)"
@@ -90,6 +104,7 @@ cmd_start() {
   rm -f "$PID_FILE"
 
   mkdir -p logs
+  [ -d static/pagefind ] || cmd_reindex || echo "warning: search index not built (bin/dev reindex)" >&2
   echo "Starting Hugo server on port $PORT (log: $LOG_FILE)..."
   nohup hugo server --port "$PORT" --disableFastRender >>"$LOG_FILE" 2>&1 &
   local pid=$!
@@ -182,6 +197,7 @@ cmd_restart() {
     exit 1
   fi
   echo "Build succeeded."
+  cmd_reindex || echo "warning: search index not built" >&2
 
   cmd_start
 }
@@ -224,6 +240,7 @@ case "${1:-start}" in
   stop)    cmd_stop ;;
   restart) cmd_restart ;;
   status)  cmd_status ;;
+  reindex) cmd_reindex ;;
   help|-h|--help) help_text ;;
   *)      usage; exit 2 ;;
 esac

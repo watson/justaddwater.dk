@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ if eq .RelPermalink "/archive/" }}
-<form method="get" id="searchform" action="/">
-<div><input type="text" value="" name="s" id="s">
+<form method="get" id="searchform" action="/search/">
+<div><input type="text" value="" name="q" id="s">
 <input type="submit" id="searchsubmit" value="Search">
 </div>
 </form>
@@ -15,15 +15,17 @@
 </div>
 <div style="clear:both"></div>
 {{ end }}
-<div class="post">
-<h2>{{ partial "tt.html" .Title }}</h2>
+{{- /* Pagefind: only posts are indexed (docs/search.md); comments sit outside .post */ -}}
+<div class="post"{{ if eq .Type "posts" }} data-pagefind-body{{ end }}>
+{{ if eq .Type "posts" }}<span hidden data-pagefind-meta="date[data-v]" data-v="{{ .Date.Format "2006-01-02" }}"></span><span hidden data-pagefind-filter="year[data-v]" data-v="{{ .Date.Format "2006" }}"></span>{{ range .Params.categories }}<span hidden data-pagefind-filter="category[data-v]" data-v="{{ . }}"></span>{{ end }}{{ end }}
+<h2{{ if eq .Type "posts" }} data-pagefind-meta="title"{{ end }}>{{ partial "tt.html" .Title }}</h2>
 <div class="entry">
 {{ partial "tx.html" (dict "s" .Content "plain" false) }}
 {{ if eq .RelPermalink "/archive/" }}{{ partial "archive-lists.html" . }}{{ end }}
 {{ with .Params.technorati }}<p><small>Technorati Tags: {{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $p := site.GetPage (printf "/tags/%s" ($t | urlize)) }}{{ if $p }}<a href="{{ $p.RelPermalink }}" rel="tag">{{ $t }}</a>{{ else }}{{ $t }}{{ end }}{{ end }}</small></p>{{ end }}
 {{ if eq .Type "posts" }}
 {{- /* as on the original, the meta box sits inside .entry (the original ticket-systems post also has a stray <ol /> around it: one page, not replicated) */ -}}
-<p class="postmetadata alt">
+<p class="postmetadata alt" data-pagefind-ignore>
 <small>
 This entry was posted by {{ with index hugo.Data.authors (.Params.author | default "jesper") }}{{ .name }}{{ end }}
 on {{ .Date.Format "Monday" }}, {{ partial "ordinal-date.html" .Date }} at {{ .Date.Format "15:04" }} (GMT-1){{ with .Params.categories }} and is filed under {{ range $i, $c := . }}{{ if $i }}, {{ end }}<a href="/category/{{ $c | urlize }}/" rel="category tag">{{ $c }}</a>{{ end }}{{ end }}.

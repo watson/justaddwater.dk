@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{- /* Hand-written search page (docs/search.md). Not indexed: no data-pagefind-body here. */ -}}
+<h2 class="pagetitle">{{ .Title }}</h2>
+<noscript><p>Search needs JavaScript.</p></noscript>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<div id="search"></div>
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  var ui = new PagefindUI({ element: '#search', showSubResults: false, showImages: false, resetStyles: false, translations: { placeholder: 'Search the posts' } });
+  var q = new URLSearchParams(location.search).get('q');
+  if (q) { ui.triggerSearch(q); var s = document.getElementById('s'); if (s) s.value = q; }
+});
+</script>
+{{ end }}

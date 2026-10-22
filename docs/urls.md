@@ -12,6 +12,7 @@
 | `/category/<parent>/<child>/` (webstandards, eventsseminars) | `/category/<child>/` (flat) | redirected |
 | `/category/books|odd|uncategorized/`, unused tags | `/category/` | no posts; 302 / dropped |
 | `/?p=ID` | permalink via `static/_redirects` query rules (Netlify/CF Pages) | redirected (453 rules) |
+| `/?s=term` | `/search/?q=term` (Pagefind, see `docs/search.md`) via `_redirects` query rule | redirected |
 | `/archive` | `/archive/` | redirected |
 | `/sitemap.xml`, `/robots.txt` | emitted by Hugo | preserved |
 | `.../function.file-exists/` attachment pages, WP 404s from the mirror log, `/wp-json`, `/wp-admin`, `/comments/feed/` content | none | dropped |

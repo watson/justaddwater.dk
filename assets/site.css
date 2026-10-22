@@ -726,3 +726,8 @@ a img {
 
 /* headings after a left-aligned photo paragraph clear it (original had inline clear:both on those h3) */
 .entry p:has(> img[align=left]) ~ h3{clear:both}
+
+/* search page (Pagefind default UI) */
+#search{--pagefind-ui-scale:.85;--pagefind-ui-primary:#333;--pagefind-ui-text:#333;--pagefind-ui-background:#fff;--pagefind-ui-border:#ccc;--pagefind-ui-font:"Lucida Grande",Verdana,Arial,sans-serif;margin:1em 0}
+#search .pagefind-ui__result-link{color:#06c}
+#search ul,#search ol{list-style:none;margin:0;padding:0}#search li{list-style:none;margin:0}#search input,#search button{font-family:inherit}

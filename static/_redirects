@@ -497,3 +497,6 @@
 / p=1781 /2015/12/13/ruby-make-list-minimum-length/ 301
 / p=1798 /2016/08/25/git-tip-to-remove-remote-branches-already-merged/ 301
 / p=1809 /2016/11/02/git-extract-folder-from-project-with-history-and-tags/ 301
+
+# WordPress search /?s=term -> Pagefind search page (Netlify query matching; Cloudflare Pages ignores query strings in rules)
+/ s=:term /search/?q=:term 301

@@ -56,3 +56,5 @@ Preserve 20 years of content and URLs, drop the maintenance and security burden,
 
 - `bin/mirror`: wget mirror of the live site into `mirror/` (gitignored).
 - `export/`: put the WordPress XML export (Tools → Export → All content) here, e.g. `export/justaddwater.WordPress.xml`.
+
+- Search: client-side Pagefind over posts only (`bin/build`, `bin/dev reindex`, `/search/`); see `docs/search.md`.
