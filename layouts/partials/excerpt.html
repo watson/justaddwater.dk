@@ -2,7 +2,8 @@
 {{- $h := "" -}}
 {{- with index hugo.Data.excerpts .Params.slug -}}{{ $h = . }}
 {{- else -}}
-{{- $t := .Plain | htmlUnescape | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+{{- /* inline code keeps its backticks: the original excerpt was cut from the Markdown-ish source */ -}}
+{{- $t := .Content | replaceRE `(?s)<pre.*?</pre>` "" | replaceRE `</?code>` "`" | plainify | htmlUnescape | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
 {{- $t = $t | replaceRE ` – ` " — " -}}
 {{- $w := split $t " " -}}
 {{- if gt (len $w) 55 -}}{{ $h = printf "<p>%s [&hellip;]</p>" (delimit (first 55 $w) " " | htmlEscape) }}{{ else }}{{ $h = printf "<p>%s</p>" ($t | htmlEscape) }}{{ end -}}
