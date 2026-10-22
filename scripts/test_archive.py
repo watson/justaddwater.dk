@@ -221,7 +221,7 @@ class VideoEmbedTests(unittest.TestCase):
     def test_native_players_preserve_original_ids_sizes_and_supported_options(self):
         migrated = set()
         for row in self.articles:
-            if row['id'] == 1168:  # Owner approved a different upload of this video.
+            if row['id'] in (805, 1168, 1378):  # Owner approved different uploads.
                 continue
             original = BeautifulSoup(row['content']['rendered'], 'html.parser').find(['object', 'iframe', 'embed'])
             movie = original.find('param', attrs={'name': 'movie'})
@@ -254,14 +254,14 @@ class VideoEmbedTests(unittest.TestCase):
                 self.assertEqual(str(clean_html(output)), once)
                 migrated.add(row['id'])
         self.assertEqual(migrated, {row['post_id'] for row in video_players() if 'alternative' not in row})
-        # The unapproved Spam replacement still shows its original unavailable ID.
-        self.assertIn(805, migrated)
 
     def test_only_approved_alternative_videos_replace_original_ids(self):
-        # Independent record of the owner's selection: items 1-5, six posts.
+        # Independent record of the owner's selection: items 1-8, ten posts.
         approved = {908: '9y10Jvruc_Q', 906: '9y10Jvruc_Q', 848: 'U_HgMduuE5s',
-                    465: 'vMV4PIEIKY4', 930: '1OnlF0X6G3g', 1168: '_tjYoKCBYag'}
-        self.assertEqual(len(video_players()), 16)
+                    465: 'vMV4PIEIKY4', 930: '1OnlF0X6G3g', 1168: '_tjYoKCBYag',
+                    805: 'y9B75hH26yU', 540: '6gmP4nk0EOE', 542: '6gmP4nk0EOE',
+                    1378: 'Bu8EtZdSJ3c'}
+        self.assertEqual(len(video_players()), 18)
         self.assertEqual({r['post_id'] for r in video_players() if 'alternative' in r}, set(approved))
         for row in self.articles:
             if row['id'] not in approved:
@@ -287,6 +287,30 @@ class VideoEmbedTests(unittest.TestCase):
                 self.assertEqual(frame['referrerpolicy'], 'strict-origin-when-cross-origin')
                 once = str(output)
                 self.assertEqual(str(clean_html(output)), once)
+
+    def test_mojiti_replacements_explain_missing_layers_and_preserve_article_content(self):
+        for row in self.articles:
+            output = clean_html(parse_document(row['content']['rendered']))
+            notes = output.select('.archive-video-note')
+            if row['id'] not in (540, 542):
+                self.assertEqual(notes, [])
+                continue
+            with self.subTest(article=row['slug']):
+                self.assertEqual(len(notes), 1)
+                self.assertIs(output.iframe.find_next_sibling(), notes[0])
+                text = notes[0].get_text()
+                self.assertIn('Archive note:', text)
+                self.assertIn('unavailable', text)
+                self.assertIn('comments and clickable annotations' if row['id'] == 540
+                              else 'transcription overlay', text)
+                notes[0].decompose()
+                actual = ' '.join(output.get_text(' ', strip=True).split())
+                self.assertTrue(article_text_preserved(row['content']['rendered'], actual))
+                if row['id'] == 540:
+                    self.assertIsNotNone(output.find('img', src=re.compile('mojiti-web20-comment.png')))
+                else:
+                    self.assertIn('Complete transcript below', actual)
+                    self.assertIn('[4:31]', actual)
 
     def test_video_check_detects_removed_players_and_changed_parameters(self):
         article = next(row for row in self.articles if row['slug'] == 'lessons-learned-from-pixar-2')

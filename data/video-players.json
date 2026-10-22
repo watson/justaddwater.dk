@@ -2,7 +2,12 @@
   {
     "post_id": 1378,
     "captured": "<iframe frameborder=\"0\" height=\"225\" src=\"http://player.vimeo.com/video/16527312\" width=\"400\"></iframe>",
-    "replacement": "<iframe allow=\"autoplay; fullscreen; picture-in-picture; encrypted-media\" allowfullscreen=\"\" frameborder=\"0\" height=\"225\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://player.vimeo.com/video/16527312\" title=\"Rapid Prototyping with Aza Raskin\" width=\"400\"></iframe>"
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"225\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/Bu8EtZdSJ3c\" title=\"Rapid Prototyping with Aza Raskin\" width=\"400\"></iframe>",
+    "alternative": {
+      "review_item": 8,
+      "approved_date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=Bu8EtZdSJ3c"
+    }
   },
   {
     "post_id": 1337,
@@ -42,7 +47,12 @@
   {
     "post_id": 805,
     "captured": "<object height=\"355\" width=\"425\"><param name=\"movie\" value=\"http://www.youtube.com/v/wZ7YedEopp4&amp;rel=1\"/><param name=\"wmode\" value=\"transparent\"/><embed height=\"355\" src=\"http://www.youtube.com/v/wZ7YedEopp4&amp;rel=1\" type=\"application/x-shockwave-flash\" width=\"425\" wmode=\"transparent\"/></object>",
-    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"355\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/wZ7YedEopp4?rel=1\" title=\"YouTube video player\" width=\"425\"></iframe>"
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"355\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/y9B75hH26yU?rel=1\" title=\"Spam! | Monty Python (Official Sketch)\" width=\"425\"></iframe>",
+    "alternative": {
+      "review_item": 6,
+      "approved_date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=y9B75hH26yU"
+    }
   },
   {
     "post_id": 699,
@@ -108,5 +118,27 @@
       "approved_date": "2026-10-22",
       "url": "https://www.youtube.com/watch?v=1OnlF0X6G3g"
     }
+  },
+  {
+    "post_id": 540,
+    "captured": "<object height=\"381\" width=\"425\"><param name=\"movie\" value=\"http://mojiti.com/bofangqi/2024/3313\"/><embed height=\"381\" src=\"http://mojiti.com/bofangqi/2024/3313\" width=\"425\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"381\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/6gmP4nk0EOE\" title=\"Web 2.0 ... The Machine is Us/ing Us\" width=\"425\"></iframe>",
+    "alternative": {
+      "review_item": 7,
+      "approved_date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=6gmP4nk0EOE"
+    },
+    "note": "Archive note: The original Mojiti comments and clickable annotations are unavailable. This player shows the underlying video."
+  },
+  {
+    "post_id": 542,
+    "captured": "<object height=\"381\" width=\"425\"><param name=\"movie\" value=\"http://mojiti.com/bofangqi/2024/3443\"/><embed height=\"381\" src=\"http://mojiti.com/bofangqi/2024/3443\" width=\"425\"/></object>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"381\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/6gmP4nk0EOE\" title=\"Web 2.0 ... The Machine is Us/ing Us\" width=\"425\"></iframe>",
+    "alternative": {
+      "review_item": 7,
+      "approved_date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=6gmP4nk0EOE"
+    },
+    "note": "Archive note: The original Mojiti transcription overlay is unavailable. The complete written transcript is preserved below."
   }
 ]

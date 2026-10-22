@@ -37,11 +37,16 @@ def modernize_videos(soup):
     Exact source matching also covers copies on index/category/archive pages.
     Retired providers without a native replacement keep their original markup.
     """
-    replacements = {row['captured']: row['replacement'] for row in video_players()}
+    replacements = {row['captured']: row for row in video_players()}
     for tag in reversed(soup.find_all(['object', 'iframe', 'embed'])):
-        replacement = replacements.get(str(tag))
-        if replacement:
-            tag.replace_with(BeautifulSoup(replacement, 'html.parser').iframe)
+        record = replacements.get(str(tag))
+        if record:
+            frame = BeautifulSoup(record['replacement'], 'html.parser').iframe
+            tag.replace_with(frame)
+            if record.get('note'):
+                note = soup.new_tag('small', attrs={'class': 'archive-video-note', 'role': 'note'})
+                note.string = record['note']
+                frame.insert_after(note)
 
 
 def code_key(source):

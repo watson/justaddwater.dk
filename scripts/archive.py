@@ -616,8 +616,8 @@ def build(data, state):
     write_json(SITE / 'archive-assets/routes.json', ids)
     def render_feed_content(markup, base):
         soup = clean_html(parse_document(markup))
-        # Players remain on the article, but are not executable RSS content.
-        for tag in soup.find_all(['iframe', 'object', 'embed', 'script', 'style']):
+        # Players and their explanatory notes remain together on the article.
+        for tag in soup.select('iframe, object, embed, script, style, .archive-video-note'):
             tag.decompose()
         soup = rewrite(soup, base, ids, routes, unavailable, external)
         return soup.body.decode_contents()
