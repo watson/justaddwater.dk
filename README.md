@@ -75,7 +75,9 @@ timeouts. Raw responses are cached in `.cache/`, which is excluded from Git. Kee
 that cache for repeatable local rebuilding; move it aside to make a fresh capture.
 External-image results are cached separately in `data/external-images.json`.
 HTML is parsed using the browser's HTML5 rules to preserve formatting in the
-original WordPress markup, including mismatched inline tags.
+original WordPress markup, including mismatched inline tags. Literal form tags
+inside legacy `[code]` examples are escaped before parsing so they cannot swallow
+the surrounding article text.
 
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset
@@ -83,6 +85,8 @@ references resolve, RSS and sitemap XML parse, and pages do not contain legacy
 executable scripts or dynamic forms. It also checks background images in external
 stylesheets, style attributes and embedded style blocks, rejecting remote CSS
 dependencies. The deployment workflow runs these checks before publishing.
+Expected article text is checked independently of the converter's cleanup rules,
+so the same accidental deletion cannot be hidden on both sides of the comparison.
 
 To test a project URL prefix:
 

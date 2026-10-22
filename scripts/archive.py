@@ -181,7 +181,27 @@ def parse_document(raw):
     # Match the browser's HTML5 tree construction. Legacy WordPress sometimes
     # lets formatting tags cross paragraph boundaries; html.parser closes them
     # early and silently changes how the published article looks.
-    return BeautifulSoup(raw, 'html5lib')
+    return BeautifulSoup(protect_form_examples(raw), 'html5lib')
+
+
+def protect_form_examples(raw):
+    """Keep form tags in legacy [code] snippets from consuming article prose."""
+    blocks = r'(\[code\b[^\]]*\])(.*?)(\[/code\])'
+    forms = r'''</?form\b(?:"[^"]*"|'[^']*'|[^'">])*>'''
+    binary = isinstance(raw, bytes)
+    if binary:
+        blocks, forms = blocks.encode(), forms.encode()
+
+    def escape_tag(match):
+        tag = match[0]
+        # Preserve the capture's original byte encoding; only ASCII markup is
+        # escaped. Ordinary forms outside code blocks are handled as before.
+        if binary:
+            return tag.replace(b'&', b'&amp;').replace(b'<', b'&lt;').replace(b'>', b'&gt;')
+        return html.escape(tag, quote=False)
+
+    return re.sub(blocks, lambda block: block[1] + re.sub(forms, escape_tag, block[2], flags=re.I) + block[3],
+                  raw, flags=re.I | re.S)
 
 
 def references(soup, base, ids):

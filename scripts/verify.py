@@ -11,20 +11,31 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from archive import ROOT, HOSTS, CSS_URL, clean_html, embedded_css, parse_document
+from archive import ROOT, HOSTS, CSS_URL, embedded_css, parse_document
+
+
+def expected_article_content(soup):
+    # Deliberately independent of clean_html: applying the converter's cleanup
+    # to both expected and actual content would hide its accidental deletions.
+    for tag in soup.find_all(['script', 'style', 'iframe', 'object', 'embed', 'applet']):
+        tag.decompose()
+    for form in soup.find_all('form'):
+        # Genuine submission UI is intentionally absent from the archive.
+        # A bare form tag in an example must not exclude the prose after it.
+        if form.find(['input', 'textarea', 'select', 'button']):
+            form.decompose()
+    return soup
 
 
 def article_text_preserved(markup, actual):
-    expected = ' '.join(clean_html(BeautifulSoup(markup, 'html.parser')).get_text(' ', strip=True).split())
+    expected = ' '.join(expected_article_content(BeautifulSoup(markup, 'html.parser')).get_text(' ', strip=True).split())
     if expected in actual:
         return True
     # An unclosed table in an old article can make the browser move surrounding
     # text before its cells, even inserting the page footer between them. Check
     # every complete text node in browser order, allowing template text between
     # nodes, instead of treating that original rendering as lost content.
-    browser_content = clean_html(parse_document(markup))
-    for style in browser_content.find_all('style'):
-        style.decompose()
+    browser_content = expected_article_content(parse_document(markup))
     position = 0
     for node in browser_content.stripped_strings:
         text = ' '.join(node.split())

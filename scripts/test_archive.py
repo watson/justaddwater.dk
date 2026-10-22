@@ -1,8 +1,9 @@
+import json
 import unittest
 
 from bs4 import BeautifulSoup
 
-from archive import ORIGIN, clean_html, parse_document, references, rewrite
+from archive import ROOT, ORIGIN, clean_html, parse_document, references, rewrite
 from prepare_pages import PrefixHTML
 from verify import article_text_preserved
 
@@ -66,6 +67,40 @@ class LegacyMarkupTests(unittest.TestCase):
         self.assertTrue(article_text_preserved(article, actual))
         self.assertFalse(article_text_preserved(article, actual.replace('Cell text', '')))
         self.assertFalse(article_text_preserved(article, actual.replace('After table', '')))
+
+
+class FormExampleTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        data = json.loads((ROOT / 'data/content.json').read_text())
+        cls.article = next(row['content']['rendered'] for row in data['posts']
+                           if row['slug'] == 'blog-usability-avoid-spam-comments')
+
+    def test_original_article_keeps_example_and_every_section_after_it(self):
+        output = clean_html(parse_document(self.article))
+        text = output.get_text(' ', strip=True)
+        self.assertIn('<form id="postform" method="post" action="illegal.url">', text)
+        for section in ('Moderate all comments before publishing', 'What we won’t do',
+                        'Captcha', 'More info:', 'WordPress comment spam stoppage techniques'):
+            self.assertIn(section, text)
+        self.assertIsNone(output.find('form', id='postform'))
+        self.assertNotIn('This form no longer accepts submissions.', text)
+        self.assertTrue(article_text_preserved(self.article, ' '.join(text.split())))
+
+    def test_validator_rejects_the_previous_loss_instead_of_repeating_it(self):
+        broken = BeautifulSoup(self.article, 'html.parser')
+        broken.form.replace_with('This form no longer accepts submissions.')
+        actual = ' '.join(broken.get_text(' ', strip=True).split())
+        self.assertFalse(article_text_preserved(self.article, actual))
+
+    def test_byte_capture_preserves_unicode_and_literal_form_tags(self):
+        source = '<meta charset="utf-8"><p>[code lang="html"]<form action="example?a=1&amp;b=2">Example</form>[/code]</p><p>François’ notes</p>'
+        for raw in (source, source.encode('utf-8')):
+            output = clean_html(parse_document(raw))
+            text = output.get_text(' ', strip=True)
+            self.assertIn('<form action="example?a=1&amp;b=2">Example</form>', text)
+            self.assertIn('François’ notes', text)
+            self.assertIsNone(output.form)
 
 
 if __name__ == '__main__':
