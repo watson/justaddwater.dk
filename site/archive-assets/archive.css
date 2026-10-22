@@ -1,5 +1,6 @@
 /* Small additions for the static archive; the original theme remains intact. */
 .archive-note { font-size: 1em; }
+.archive-footer-note { width: 760px; margin: 0 auto 20px; text-align: center; }
 #search-results { padding-left: 1.5em; }
 #search-results li { margin: 1.5em 0; }
 #search-results p { margin: .4em 0; }
