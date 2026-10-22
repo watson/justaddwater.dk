@@ -23,6 +23,17 @@
   "downloaded_assets": 816,
   "comments_in_html": 2782,
   "comments_missing_from_html": [],
+  "recovered_assets": [
+    "/wp-content/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.png",
+    "/wp-content/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.thumbnail.png"
+  ],
+  "repaired_asset_aliases": {
+    "/pres 2006-06-01 reboot.ppt": "/wp-content/uploads/2006/06/pres 2006-06-01 reboot.ppt",
+    "/wp-content/Beermatroadmap2.jpg": "/wp-content/uploads/2005/11/Beermatroadmap2.jpg",
+    "/wp-content/thumb-Beermatroadmap2.jpg": "/wp-content/uploads/2005/11/thumb-Beermatroadmap2.jpg"
+  },
+  "recovered_code_blocks": 61,
+  "recovered_gist_embeds": 12,
   "unavailable_pages": {
     "/google-create-table-search-error/": "HTTP Error 404: Not Found",
     "/google-create-table-search/": "HTTP Error 404: Not Found",
@@ -35,16 +46,11 @@
     "/2009/01/08/css-fun-flag-d%E2%80%A6ated-html-tagscss-fun-flag-deprecated-html-tags/": "HTTP Error 404: Not Found",
     "/2012/02/24/get-started-using-advanced-web-fonts-today/": "HTTP Error 404: Not Found",
     "/http%3Awww.grancomo.com/": "HTTP Error 404: Not Found",
-    "/pres%202006-06-01%20reboot.ppt": "HTTP Error 404: Not Found",
     "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/github.com/giraffesoft/resource_controller/": "HTTP Error 404: Not Found"
   },
   "unavailable_assets": {
-    "/wp-content/Beermatroadmap2.jpg": "HTTP Error 404: Not Found",
-    "/wp-content/thumb-Beermatroadmap2.jpg": "HTTP Error 404: Not Found",
     "/2008/05/26/jquery-rounded-corners-technorati-style/roundcorners.css": "HTTP Error 404: Not Found",
     "/2008/05/26/jquery-rounded-corners-technorati-style/comment-page-1/roundcorners.css": "HTTP Error 404: Not Found",
-    "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png": "HTTP Error 404: Not Found",
-    "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png": "HTTP Error 404: Not Found",
     "/rss.xml/": "HTTP Error 404: Not Found",
     "/static/spreadsheets/client/css/813770466-tiler_view_ltr.css": "HTTP Error 404: Not Found",
     "/wp-content/uploads/2007/10/train_css_d_v6.html": "HTTP Error 404: Not Found",
@@ -60,8 +66,6 @@
     "/2007/02/13/danish-newspaper-interview-capgemini-on-rails/article-from-b%c3%b8rsen-borsendk-about-ruby-on-rails-capgemini-jesper-and-thomas/",
     "/2007/02/13/danish-newspaper-interview-capgemini-on-rails/screenshot-of-b%c3%b8rsen-article/",
     "/2007/10/12/toolbox/",
-    "/2008/05/26/jquery-rounded-corners-technorati-style/comment-page-1/roundcorners.css",
-    "/2008/05/26/jquery-rounded-corners-technorati-style/roundcorners.css",
     "/2009/01/08/css-fun-flag-d%E2%80%A6ated-html-tagscss-fun-flag-deprecated-html-tags/",
     "/2009/09/30/spoken-git-commit-log-%e2%80%94-another-annoyance-at-the-office/",
     "/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/unicode-utf-8-character-table-chrome-search-for-danish-letter-%c3%a6-loose-search/",
@@ -75,17 +79,12 @@
     "/contact-us/justaddwaterdk-author-jesper-r%c3%b8nn-jensen/",
     "/http%3Awww.grancomo.com/",
     "/nyheder/",
-    "/pres%202006-06-01%20reboot.ppt",
     "/resources/",
     "/rss.xml/",
     "/samarbejde/",
     "/sektorer/",
     "/static/spreadsheets/client/css/813770466-tiler_view_ltr.css",
     "/usabilitydagene-notes-jesper/jesper-r%c3%b8nn-jensen-thumbnail/",
-    "/wp-content/Beermatroadmap2.jpg",
-    "/wp-content/thumb-Beermatroadmap2.jpg",
-    "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png",
-    "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png",
     "/wp-content/uploads/2007/10/iepngfix.htc",
     "/wp-content/uploads/2007/10/train_css_d_v6.html",
     "/ydelser/"

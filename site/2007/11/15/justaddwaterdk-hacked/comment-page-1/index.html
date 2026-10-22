@@ -132,22 +132,22 @@ img.emoji {
 <p><a href="/wp-content/uploads/justaddwater-hacked.png" title="justaddwater-hacked.png"><img alt="justaddwater-hacked.png" src="/wp-content/uploads/justaddwater-hacked.thumbnail.png"/></a></p>
 <p>After looking at the Apache log files we can see what the cracker actually did to gain access and what he used that access to do.</p>
 <p>First he made a very strange call:</p>
-<p>[code]”GET /wp-includes/js/tinymce/wp-mce-help.php HTTP/1.0″ 200 7411 “-” “-“[/code]</p>
+<pre class="archive-code" data-recovery-code="post-779-1"><code>"GET /wp-includes/js/tinymce/wp-mce-help.php HTTP/1.0" 200 7411 "-" "-"</code></pre>
 <p>I have no idea why he called this URL first. My guess first was that this was a way of detecting which version of WordPress we where running, but after investigating I can see that this file exists also in versions not affected by the bug.</p>
 <p>Secondly he called the URL affected by the SQL injection bug several times (actually 159!):</p>
-<p>[code]”POST /wp-admin/admin-ajax.php HTTP/1.1” 200 2 “-” “Mozilla/4.0 (compatible; windows 5.1)”[/code]</p>
+<pre class="archive-code" data-recovery-code="post-779-2"><code>"POST /wp-admin/admin-ajax.php HTTP/1.1" 200 2 "-" "Mozilla/4.0 (compatible; windows 5.1)"</code></pre>
 <p>Every call looks the same except for the size of the response in bytes following the 200 response code (in the above log entry it’s 2, but sometimes it would be 298 or 299). It would have been during these calls that the cracker gained administrative access to WordPress. The cracker also created a new post that he would later use as a placeholder for the PHP script he where to upload.</p>
 <p>Now followed 8 calls to options.php:</p>
-<p>[code]”POST /wp-admin/options.php HTTP/1.0” 200 1248 “http://justaddwater.dk/wp-admin/options.php” “Opera”[/code]</p>
+<pre class="archive-code" data-recovery-code="post-779-3"><code>"POST /wp-admin/options.php HTTP/1.0" 200 1248 "http://justaddwater.dk/wp-admin/options.php" "Opera"</code></pre>
 <p>Notice how the user-agent changes all the time. This could be different scripts running, set to identify them selfs differently. My guess is that he used these calls to change the “upload_path” option and the “active_plugins” option. He could have done this via SQL injection though.</p>
 <p>Then came 10 calls to upload.php, the script used to upload pictures etc. to posts:</p>
-<p>[code]”POST /wp-admin/upload.php?style=inline&amp;tab=upload&amp;post_id=-1 HTTP/1.0″ 200 1150 “http://justaddwater.dk/upload.php?style=inline&amp;tab=upload&amp;post_id=-1” “Opera”[/code]</p>
+<pre class="archive-code" data-recovery-code="post-779-4"><code>"POST /wp-admin/upload.php?style=inline&amp;tab=upload&amp;post_id=-1 HTTP/1.0" 200 1150 "http://justaddwater.dk/upload.php?style=inline&amp;tab=upload&amp;post_id=-1" "Opera"</code></pre>
 <p>My guess is that he used these calls to upload the backdoor script to /tmp. Why he needed 10 I don’t know.</p>
 <p>Then came another 15 calls to options.php:</p>
-<p>[code]”POST /wp-admin/options.php HTTP/1.0” 200 1230 “http://justaddwater.dk/wp-admin/options.php” “Opera”[/code]</p>
+<pre class="archive-code" data-recovery-code="post-779-5"><code>"POST /wp-admin/options.php HTTP/1.0" 200 1230 "http://justaddwater.dk/wp-admin/options.php" "Opera"</code></pre>
 <p>It’s not quite obvious why he made these last calls, except to maybe clean up something he made earlier.</p>
 <p>Now came a very strange call to upgrade.php that I can’t figure out why he made:</p>
-<p>[code]”GET /wp-admin/upgrade.php?step=1 HTTP/1.0” 200 1172 “-” “-“[/code]</p>
+<pre class="archive-code" data-recovery-code="post-779-6"><code>"GET /wp-admin/upgrade.php?step=1 HTTP/1.0" 200 1172 "-" "-"</code></pre>
 <p>This script is used to upgrade the WordPress database after installing a new version of WordPress. He might have used some of the previous requests to prepare an “upgrade” script that he could then run this way, but why didn’t he just use the SQL injection technique from before?</p>
 <p>Finally he accessed his newly created backdoor, looked inside our <code>/wp-content</code> folder, did 3 POSTS (that I suspect where file-upload attempts) and then left never to be seen again.</p>
 <p><small>Technorati Tags: <a href="http://technorati.com/tag/script+kiddie" rel="tag">script kiddie</a>, <a href="http://technorati.com/tag/hacking" rel="tag"> hacking</a>, <a href="http://technorati.com/tag/hacker" rel="tag"> hacker</a>, <a href="http://technorati.com/tag/cracker" rel="tag"> cracker</a>, <a href="http://technorati.com/tag/WordPress" rel="tag"> WordPress</a>, <a href="http://technorati.com/tag/security" rel="tag"> security</a>, <a href="http://technorati.com/tag/justaddwater.dk" rel="tag"> justaddwater.dk</a>, <a href="http://technorati.com/tag/bug" rel="tag"> bug</a>, <a href="http://technorati.com/tag/blogging+software" rel="tag"> blogging software</a>, <a href="http://technorati.com/tag/hacked" rel="tag"> hacked</a>, <a href="http://technorati.com/tag/vulnerability" rel="tag"> vulnerability</a>, <a href="http://technorati.com/tag/apache" rel="tag"> apache</a>, <a href="http://technorati.com/tag/log+files" rel="tag"> log files</a></small></p>

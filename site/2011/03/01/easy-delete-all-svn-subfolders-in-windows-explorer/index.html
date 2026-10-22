@@ -121,7 +121,22 @@ img.emoji {
 <p>Of course this will only work if there are no .svn folders in other developer’s file, because then svn authentication, paths, etc. will be messed up, and commit will fail.</p>
 <p>Luckily, Sanil S (IamTechie blog) wrote a nice little script that actually adds a context menu in Windows explorer:<br/>
 <a href="/wp-content/uploads/2011/03/delete-svn.jpg"><img alt="" class="alignnone size-full wp-image-1415" height="288" sizes="(max-width: 360px) 100vw, 360px" src="/wp-content/uploads/2011/03/delete-svn.jpg" srcset="/wp-content/uploads/2011/03/delete-svn.jpg 360w, /wp-content/uploads/2011/03/delete-svn-300x240.jpg 300w" title="delete-svn" width="360"/></a></p>
-<p><br/>
+<p><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1414-1"><code>Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;&amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+</code></pre><p class="archive-code-source">delete_svn_subfolders.reg · <a href="https://gist.github.com/jesperronn/848907/66427a7b4a4046e5aa0e0c2aea6b160ac34690bc">Original gist</a></p></div><br/>
 Just save this file as “delete_svn_subfolders.reg”. When you run it, then you will have the new windows explorer context menu item shown in the image.</p>
 <p>The full script (repeated for the ones with javascript disabled:)</p>
 <blockquote>

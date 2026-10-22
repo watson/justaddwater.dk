@@ -3,6 +3,7 @@
 import argparse
 from collections import Counter
 import html
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -11,7 +12,8 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from archive import ROOT, HOSTS, CSS_URL, REPAIRED_CODE_ARTICLE, embedded_css, is_video_embed, parse_document
+from archive import ROOT, HOSTS, CSS_URL, embedded_css, is_video_embed, parse_document
+from recovery import recovery_data, SHORTCODE, UNDO_PATH, TABLE_DEMO
 
 
 def video_embed_markup(soup):
@@ -48,16 +50,16 @@ def archived_form_errors(soup):
     return errors
 
 
-def article_text_preserved(markup, actual, rendered_code=False):
+def article_text_preserved(markup, actual):
+    # Independently check approved snippet text and every remaining prose node.
+    # Do not run the converter's restore_code/clean_html on the expectation.
+    replacements = {block['captured']: block['code'] for block in recovery_data()['code_blocks']}
+    markup = SHORTCODE.sub(lambda match: '<pre>' + html.escape(replacements[match[0]], quote=False) + '</pre>'
+                           if match[0] in replacements else match[0], markup)
     def expected_text(text):
-        if rendered_code:
-            # Only presentation delimiters disappear when the two repaired
-            # examples become code blocks. Keep checking all example/prose text
-            # independently of the renderer, including the literal form tag.
-            text = re.sub(r'\[/?code\b[^\]]*\]', ' ', text, flags=re.I)
         return ' '.join(text.split())
 
-    original = parse_document(markup) if rendered_code else BeautifulSoup(markup, 'html.parser')
+    original = BeautifulSoup(markup, 'html.parser')
     expected = expected_text(expected_article_content(original).get_text(' ', strip=True))
     if expected in actual:
         return True
@@ -65,7 +67,7 @@ def article_text_preserved(markup, actual, rendered_code=False):
     # text before its cells, even inserting the page footer between them. Check
     # every complete text node in browser order, allowing template text between
     # nodes, instead of treating that original rendering as lost content.
-    browser_content = expected_article_content(parse_document(markup))
+    browser_content = expected_article_content(parse_document(markup, recover=False))
     position = 0
     for node in browser_content.stripped_strings:
         text = expected_text(node)
@@ -85,6 +87,11 @@ def verify(site, base):
     expected_videos = {row['id']: video_embed_markup(BeautifulSoup(row['content']['rendered'], 'html.parser'))
                        for row in data['posts'] + data['pages']}
     original_players = {markup for players in expected_videos.values() for markup in players}
+    recovery = recovery_data()
+    expected_code = {block['id']: block['code'] for block in recovery['code_blocks']}
+    expected_code.update({f'gist-{gist["post_id"]}-{index + 1}': file['code']
+                          for gist in recovery['gists'].values() for index, file in enumerate(gist['files'])})
+    seen_code = set()
 
     def target(url, document):
         nonlocal local_links
@@ -121,10 +128,19 @@ def verify(site, base):
     pages = list(site.rglob('*.html'))
     for file in pages:
         soup = BeautifulSoup(file.read_bytes(), 'html.parser')
+        relative = '/' + file.relative_to(site).as_posix()
         for tag in soup.find_all(True):
-            if tag.name == 'script' and tag.get('src') != base + '/archive-assets/archive.js':
-                errors.append(f'{file}: unexpected executable script')
-            if tag.name in ('iframe', 'object', 'embed', 'applet') and str(tag) not in original_players:
+            if tag.name == 'script':
+                allowed = {base + '/archive-assets/archive.js'}
+                if relative == TABLE_DEMO:
+                    allowed.add(base + '/archive-assets/demos.js')
+                elif relative == UNDO_PATH:
+                    allowed.add('../demos.js')
+                if tag.get('src') not in allowed or tag.get_text().strip():
+                    errors.append(f'{file}: unexpected executable script')
+            local_demo = (tag.name == 'iframe' and tag.get('src') == base + UNDO_PATH
+                          and tag.get('sandbox') == ['allow-scripts'])
+            if tag.name in ('iframe', 'object', 'embed', 'applet') and str(tag) not in original_players and not local_demo:
                 errors.append(f'{file}: embed differs from original video players')
             if any(attr.lower().startswith('on') for attr in tag.attrs):
                 errors.append(f'{file}: inline event handler')
@@ -152,6 +168,11 @@ def verify(site, base):
                 errors.append(f'{file}: non-static form')
         archived_forms += len(soup.select('.archive-form'))
         errors.extend(f'{file}: {error}' for error in archived_form_errors(soup))
+        for block in soup.select('[data-recovery-code]'):
+            key = block['data-recovery-code']
+            seen_code.add(key)
+            if block.get_text() != expected_code.get(key):
+                errors.append(f'{file}: recovered example differs: {key}')
 
     content_checks = 0
     for row in data['posts'] + data['pages']:
@@ -165,12 +186,24 @@ def verify(site, base):
         if ' '.join(title.split()) not in ' '.join(soup.get_text(' ', strip=True).split()):
             errors.append(f'Published title missing: {row["link"]}')
         actual = ' '.join(soup.get_text(' ', strip=True).split())
-        if not article_text_preserved(row['content']['rendered'], actual,
-                                      rendered_code=path.startswith(REPAIRED_CODE_ARTICLE)):
+        if not article_text_preserved(row['content']['rendered'], actual):
             errors.append(f'Published article text differs from API export: {row["link"]}')
         if video_embed_markup(soup) != expected_videos[row['id']]:
             errors.append(f'Published video players differ from API export: {row["link"]}')
+        for key, code in expected_code.items():
+            if key.startswith((f'post-{row["id"]}-', f'gist-{row["id"]}-')):
+                block = soup.find(attrs={'data-recovery-code': key})
+                if block is None or block.get_text() != code:
+                    errors.append(f'Published article is missing recovered example {key}: {row["link"]}')
         content_checks += 1
+    for asset in recovery['assets']:
+        file = site / asset['path'].lstrip('/')
+        if not file.exists() or hashlib.sha256(file.read_bytes()).hexdigest() != asset['sha256']:
+            errors.append(f'Recovered asset missing or modified: {asset["path"]}')
+    for alias, canonical in recovery['aliases'].items():
+        file, original = site / alias.lstrip('/'), site / canonical.lstrip('/')
+        if not file.exists() or file.read_bytes() != original.read_bytes():
+            errors.append(f'Repaired asset alias missing or modified: {alias}')
     missing_comments = {row['id'] for row in data['comments']} - comment_ids
     if missing_comments:
         errors.append(f'{len(missing_comments)} public comments missing from HTML: {sorted(missing_comments)[:20]}')
@@ -191,6 +224,7 @@ def verify(site, base):
         errors.append(f'Remote image dependencies remain: {dict(external_images)}')
     summary = {'html_pages': len(pages), 'published_posts_and_pages': content_checks,
                'articles_with_video_players': sum(bool(players) for players in expected_videos.values()),
+               'recovered_code_examples': len(seen_code),
                'disabled_archived_forms': archived_forms,
                'public_comments': len(comment_ids), 'local_links_checked': local_links,
                'errors': len(errors), 'deployment_base': base or '/'}

@@ -114,10 +114,10 @@ img.emoji {
 				<p>A problem in a current Rails app just found a decent solution, as Danish letters like æøå did not show up decently. It turned out (surprise) that Outlook had a problem accepting UTF-8 charset.</p>
 <p>On the Meeting model in the Rails app I want to save to calendar in an Outlook compatible format. We solved it like this by converting from UTF-8 to ISO-8859-1 when creating the icalendar event.</p>
 <p>meeting.rb:<br/>
-[code lang=”ruby”]<br/>
-require ‘icalendar’<br/>
-require ‘date’</p>
-<p>class Meeting &lt; ActiveRecord::Base
+</p><pre class="archive-code" data-recovery-code="post-784-1"><code class="language-ruby">require 'icalendar'
+require 'date'
+
+class Meeting &lt; ActiveRecord::Base
   belongs_to :room
   belongs_to :journal
 
@@ -130,12 +130,10 @@ require ‘date’</p>
     event.end = self.end.to_datetime
     event.location = meeting.room.name + " " meeting.room.address
     event
-  end
-[/code]
+  end</code></pre>
 
 And meetings_controller.rb:
-[code lang="ruby"]
-require 'icalendar'
+<pre class="archive-code" data-recovery-code="post-784-2"><code class="language-ruby">require 'icalendar'
 require 'iconv'
 
 class MeetingsController &lt; ApplicationController
@@ -144,21 +142,21 @@ class MeetingsController &lt; ApplicationController
     @courtmeeting = Courtmeeting.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml  =&gt; @courtmeeting }<br/>
-      format.ical { render :text =&gt; render_to_ical([@courtmeeting])  }<br/>
-    end<br/>
-  end</p>
-<p>  def render_to_ical(courtmeetings)<br/>
-    headers[‘Content-Type’] = “text/calendar; charset=ISO-8859-1”<br/>
-    cal = Calendar.new<br/>
-    courtmeetings.each do |meeting|<br/>
-      cal.add_event(meeting.to_event)<br/>
-    end<br/>
-    Iconv.iconv(‘ISO-8859-1’, ‘UTF-8’, cal.to_ical).to_s<br/>
-  end<br/>
-end<br/>
-[/code]<br/>
-Very simple, yet very effective way to have your meetings exposed to Outlook in a way that solves the character encoding problems.</p>
+      format.xml  { render :xml  =&gt; @courtmeeting }
+format.ical { render :text =&gt; render_to_ical([@courtmeeting])  }
+end
+end
+
+  def render_to_ical(courtmeetings)
+headers['Content-Type'] = "text/calendar; charset=ISO-8859-1"
+cal = Calendar.new
+courtmeetings.each do |meeting|
+cal.add_event(meeting.to_event)
+end
+Iconv.iconv('ISO-8859-1', 'UTF-8', cal.to_ical).to_s
+end
+end</code></pre><br/>
+Very simple, yet very effective way to have your meetings exposed to Outlook in a way that solves the character encoding problems.<p></p>
 <p><small>Technorati Tags: <a href="http://technorati.com/tag/ruby" rel="tag">ruby</a>, <a href="http://technorati.com/tag/ruby+on+rails" rel="tag"> ruby on rails</a>, <a href="http://technorati.com/tag/charset" rel="tag"> charset</a>, <a href="http://technorati.com/tag/encoding" rel="tag"> encoding</a>, <a href="http://technorati.com/tag/utf-8" rel="tag"> utf-8</a>, <a href="http://technorati.com/tag/latin-1" rel="tag"> latin-1</a>, <a href="http://technorati.com/tag/iso-8859-1" rel="tag"> iso-8859-1</a>, <a href="http://technorati.com/tag/iconv" rel="tag"> iconv</a></small></p>
 	
 					

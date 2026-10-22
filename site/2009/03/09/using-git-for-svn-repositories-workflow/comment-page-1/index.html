@@ -116,124 +116,139 @@ img.emoji {
 <p>I ran into some pitfalls when using branches in Subversion repository. Here is a quick guide to how I setup and work with svn branches in git-svn.</p>
 <h3>Useful git-svn command cheatsheet</h3>
 <p>For the lazy reader, let’s just start with the compressed cheatsheet :)</p>
-<p>[code lang=”bash”]git svn clone -s [url_to_svn_repository] [project_name]</p>
-<p>git branch -a #show all branches local(git) and remote(svn)</p>
-<p>git status</p>
-<p>git svn info #show svn details (also URL)</p>
-<p>#create local Git branch that mirrors remote svn branch</p>
-<p>git checkout -b local/RELEASE-0.12 RELEASE-0.12 #will connect with a remote svn branch named ‘RELEASE-0.12’</p>
-<p>git svn dcommit –dry-run # -n will show which svn branch you will commit into:</p>
-<p>#=&gt; Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable …</p>
-<p>git svn rebase # pull changes from svn repository</p>
-<p>git svn dcommit # push your local git commits to svn repository</p>
-<p>[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-1"><code class="language-bash">git svn clone -s [url_to_svn_repository] [project_name]
+
+git branch -a #show all branches local(git) and remote(svn)
+
+git status
+
+git svn info #show svn details (also URL)
+
+#create local Git branch that mirrors remote svn branch
+
+git checkout -b local/RELEASE-0.12 RELEASE-0.12 #will connect with a remote svn branch named 'RELEASE-0.12'
+
+git svn dcommit --dry-run # -n will show which svn branch you will commit into:
+
+#=&gt; Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...
+
+git svn rebase # pull changes from svn repository
+
+git svn dcommit # push your local git commits to svn repository</code></pre>
 <h3>Step 1: Clone your repository with trunk, branches and tags</h3>
-<p>[code lang=”bash”]git svn clone -s [url_to_svn_repository] [project_name][/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-2"><code class="language-bash">git svn clone -s [url_to_svn_repository] [project_name]</code></pre>
 <p>The -s flag is important: It tells git to clone a standard svn layout with /trunk, /tags, /branches. NOTE that you have to use this -s flag to work with branches! Very important :)</p>
 <p>Example: The Trac code repository has this layout by default. To make a git clone we do:</p>
-<p>[code lang=”bash”]git clone -s http://svn.edgewall.org/repos/trac trac.git</p>
-<p>Initialized empty Git repository in /Users/jesper/othercode/trac.git/.git/<br/>
-A    svntrac/__init__.py</p>
-<p>[…]</p>
-<p>M    trac/admin/console.py<br/>
-r7937 = 2aab87158be06edb1a1931240a453cac762c4615 (trunk)<br/>
-Auto packing your repository for optimum performance. You may also<br/>
-run “git gc” manually. See “git help gc” for more information.<br/>
-Counting objects: 13630, done.<br/>
-Compressing objects: 100% (13146/13146), done.<br/>
-Writing objects: 100% (13630/13630), done.<br/>
-Total 13630 (delta 10584), reused 0 (delta 0)<br/>
-Removing duplicate objects: 100% (256/256), done.<br/>
-Checked out HEAD:<br/>
-http://svn.edgewall.org/repos/trac/trunk r7937<br/>
-[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-3"><code class="language-bash">git clone -s http://svn.edgewall.org/repos/trac trac.git
+
+Initialized empty Git repository in /Users/jesper/othercode/trac.git/.git/
+A    svntrac/__init__.py
+
+[...]
+
+M    trac/admin/console.py
+r7937 = 2aab87158be06edb1a1931240a453cac762c4615 (trunk)
+Auto packing your repository for optimum performance. You may also
+run "git gc" manually. See "git help gc" for more information.
+Counting objects: 13630, done.
+Compressing objects: 100% (13146/13146), done.
+Writing objects: 100% (13630/13630), done.
+Total 13630 (delta 10584), reused 0 (delta 0)
+Removing duplicate objects: 100% (256/256), done.
+Checked out HEAD:
+http://svn.edgewall.org/repos/trac/trunk r7937</code></pre>
 <p>SVN info shows the remote svn url:</p>
-<p>[code lang=”bash”]cd trac.git/<br/>
-git svn info</p>
-<p>Path: .<br/>
-URL: http://svn.edgewall.org/repos/trac/trunk<br/>
-Repository Root: http://svn.edgewall.org/repos/trac<br/>
-Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2<br/>
-Revision: 7937<br/>
-Node Kind: directory<br/>
-Schedule: normal<br/>
-Last Changed Author: rblank<br/>
-Last Changed Rev: 7937<br/>
-Last Changed Date: 2009-03-07 03:52:37 +0100 (Sat, 07 Mar 2009)<br/>
-[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-4"><code class="language-bash">cd trac.git/
+git svn info
+
+Path: .
+URL: http://svn.edgewall.org/repos/trac/trunk
+Repository Root: http://svn.edgewall.org/repos/trac
+Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2
+Revision: 7937
+Node Kind: directory
+Schedule: normal
+Last Changed Author: rblank
+Last Changed Rev: 7937
+Last Changed Date: 2009-03-07 03:52:37 +0100 (Sat, 07 Mar 2009)</code></pre>
 <h3>Step 2: Create local branch to mirror svn branch</h3>
 <p><code>git branch -a</code> shows all branches and tags  (both local and remote ones)</p>
 <p>Use <code>git branch -a</code> to see all remote branches:</p>
-<p>[code lang=”bash”]<br/>
-git branch -a</p>
-<p>* master<br/>
-0.10-stable<br/>
-0.11-stable<br/>
-cboos-dev<br/>
-cmlenz-dev<br/>
-debian<br/>
-debian-dev<br/>
-jonas-dev<br/>
-tags/debian<br/>
-tags/debian-dev<br/>
-tags/trac-0.10<br/>
-tags/trac-0.10.1<br/>
-tags/trac-0.10.2<br/>
-tags/trac-0.10.3<br/>
-[…]<br/>
-trunk<br/>
-utopiste-dev<br/>
-[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-5"><code class="language-bash">git branch -a
+
+* master
+0.10-stable
+0.11-stable
+cboos-dev
+cmlenz-dev
+debian
+debian-dev
+jonas-dev
+tags/debian
+tags/debian-dev
+tags/trac-0.10
+tags/trac-0.10.1
+tags/trac-0.10.2
+tags/trac-0.10.3
+[...]
+trunk
+utopiste-dev</code></pre>
 <p>Create local branch with same name as remote branch:</p>
-<p>[code lang=”bash”]git checkout -b local/0.11-stable 0.11-stable</p>
-<p>Switched to a new branch “local/0.11-stable”<br/>
-[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-6"><code class="language-bash">git checkout -b local/0.11-stable 0.11-stable
+
+Switched to a new branch "local/0.11-stable"</code></pre>
 <h3>Step 3: verify you are on new branch</h3>
-<p>[code lang=”bash”]git svn dcommit –dry-run</p>
-<p>Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable …<br/>
-[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-7"><code class="language-bash">git svn dcommit --dry-run
+
+Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...</code></pre>
 <p>(or git svn info)</p>
-<p>[code lang=”bash”]git svn info</p>
-<p>git svn info<br/>
-Path: .<br/>
-URL: http://svn.edgewall.org/repos/trac/branches/0.11-stable<br/>
-Repository Root: http://svn.edgewall.org/repos/trac<br/>
-Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2<br/>
-Revision: 7930<br/>
-Node Kind: directory<br/>
-Schedule: normal<br/>
-Last Changed Author: rblank<br/>
-Last Changed Rev: 7930<br/>
-Last Changed Date: 2009-03-03 00:41:48 +0100 (Tue, 03 Mar 2009)<br/>
-[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-8"><code class="language-bash">git svn info
+
+git svn info
+Path: .
+URL: http://svn.edgewall.org/repos/trac/branches/0.11-stable
+Repository Root: http://svn.edgewall.org/repos/trac
+Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2
+Revision: 7930
+Node Kind: directory
+Schedule: normal
+Last Changed Author: rblank
+Last Changed Rev: 7930
+Last Changed Date: 2009-03-03 00:41:48 +0100 (Tue, 03 Mar 2009)</code></pre>
 <h3>Step 4: work with code</h3>
 <p>now you are free to work on the local branch: ‘local/0.11-stable’. Hack on and commit to git with commands like:</p>
-<p>[code lang=”bash”]git status</p>
-<p>git add filename</p>
-<p>git commit -m ‘my commit comment’</p>
-<p>[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-9"><code class="language-bash">git status
+
+git add filename
+
+git commit -m 'my commit comment'</code></pre>
 <p>Repeat as much as you like. There are two strategies: Work on the master branch and then commit to the svn branch later.</p>
 <h3>Step 5: commit to svn</h3>
-<p>[code lang=”bash”]git svn rebase #to pull changes from svn before commit</p>
-<p>git svn dcommit[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-10"><code class="language-bash">git svn rebase #to pull changes from svn before commit
+
+git svn dcommit</code></pre>
 <p>If you get an error like this:</p>
-<p>[code lang=”bash”]git svn dcommit<br/>
-Cannot dcommit with a dirty index.  Commit your changes first, or stash them with `git stash’.<br/>
-at /usr/local/libexec/git-core//git-svn line 431[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-11"><code class="language-bash">git svn dcommit
+Cannot dcommit with a dirty index.  Commit your changes first, or stash them with `git stash'.
+at /usr/local/libexec/git-core//git-svn line 431</code></pre>
 <p>Just do what it says:</p>
-<p>[code lang=”bash”]git stash</p>
-<p>git svn dcommit</p>
-<p>git stash apply[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-12"><code class="language-bash">git stash
+
+git svn dcommit
+
+git stash apply</code></pre>
 <p>The last line gets your dirty files back in your working directory.<br/>
 Applying change to multiple branches</p>
 <p>Assume your change now is applied to the branch ‘0.11-stable’.</p>
-<p>[code lang=”bash”]git checkout master<br/>
-git log –1<br/>
-#=&gt; shows log of your latest commit<br/>
-#To apply these changes to Trunk, now you should change branch and merge:</p>
-<p>git checkout local/0.11-stable<br/>
-git merge master #will merge changes to the current branch (local/0.11-stable) from trunk/master.</p>
-<p>git svn dcommit #to commit the merged changes into the svn repository[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1038-13"><code class="language-bash">git checkout master
+git log –1
+#=&gt; shows log of your latest commit
+#To apply these changes to Trunk, now you should change branch and merge:
+
+git checkout local/0.11-stable
+git merge master #will merge changes to the current branch (local/0.11-stable) from trunk/master.
+
+git svn dcommit #to commit the merged changes into the svn repository</code></pre>
 <h3>Related posts:</h3>
 <p>* <a href="/2009/02/21/using-local-file-based-git-server-laziness/" title="justaddwater.dk | Using Local File-based Git — Server Laziness">Using Local File-based Git — Server Laziness</a> (Feb 21st)<br/>
 * <a href="/2009/01/17/git-side-benefit-reducing-disk-usage/" title="justaddwater.dk | Git Side Benefit: Reducing Disk Usage"> Git Side Benefit: Reducing Disk Usage</a> (Jan 17th)<br/>

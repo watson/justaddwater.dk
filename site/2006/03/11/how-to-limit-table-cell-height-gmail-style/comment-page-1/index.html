@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en-US" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 
 <title>justaddwater.dk | How to limit table cell height (GMail style)  </title>
@@ -115,12 +115,12 @@ img.emoji {
 <blockquote cite="http://archivist.incutio.com/viewlist/css-discuss/71697"><p>Hope you can help me with this. I want to limit a table cell height to only one line of text. My example below does not work – any height on td is simply ignored if content is long.</p>
 <p>Problem here (according to for instance  <a href="http://annevankesteren.nl/2004/01/css-tables" target="_blank">http://annevankesteren.nl/2004/01/css-tables</a> ) is that CSS specification requires table cell to expand to a minimum height of the containing content.</p>
 <p>So my question is: How is this solved in for instance GMail where content i only one line high (and additional overflowing content is hidden). Please share your thoughts on this, and if you could point me to any information on how to solve this.<br/>
-[code lang=”html”]<br/>
-&lt; !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;<br/>
-<br/>
-<br/>
-<title></title></p>
-<style type="text/css">
+</p><pre class="archive-code" data-recovery-code="post-176-1"><code class="language-html">&lt; !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;style type="text/css"&gt;
 table{
 width:300px;
 border:1px dashed red;
@@ -130,21 +130,21 @@ vertical-align: top;
 background-color: #dfc;
 height: 10px; /* table cell does not obey this height */
 }
-</style>
-<p></p>
-<p></p>
-<p>I want table row to be the height of 1 text line.</p>
-<table>
-<tbody><tr>
-<td>1. start cell not much content</td>
-<td>2. second cell has insanely long content that I know will always wrap</td>
-</tr>
-</tbody></table>
-<p><br/>
-<br/>
-[/code]<br/>
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;I want table row to be the height of 1 text line.&lt;/p&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;1. start cell not much content&lt;/td&gt;
+&lt;td&gt;2. second cell has insanely long content that I know will always wrap&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><br/>
 Any help appreciated,<br/>
-Jesper</p>
+Jesper<p></p>
 <p>—<br/>
 Jesper Rønn-Jensen<br/>
 Capgemini Danmark A/S<br/>
@@ -155,20 +155,19 @@ Capgemini Danmark A/S<br/>
 <p><ins datetime="20060312">UPDATE: Now working!</ins> Thanks to the information at <a href="http://www.blakems.com/archives/000077.html" title="BlakeMS.com: Using text-overflow">BlakeMS blog</a>, I now got it working (no Javascript necessary).</p>
 <blockquote cite="http://www.blakems.com/archives/000077.html">
 <p>Now this works the same with table cells. See below and note that you must set table to have the table-layout: fixed property for it to work.</p>
-<p>[code lang=”css”].tbl {<br/>
-	table-layout:fixed;<br/>
-	border-top: 5px solid #333;<br/>
-	border-collapse: collapse;<br/>
-	background: #fff;<br/>
-	 }<br/>
-.tbl td {<br/>
-	border-bottom: 1px dashed #333;<br/>
-	padding: 2px 5px;<br/>
-	text-overflow:ellipsis;<br/>
-	overflow:hidden;<br/>
-	white-space:nowrap;<br/>
- } [/code]
-</p></blockquote>
+<pre class="archive-code" data-recovery-code="post-176-2"><code class="language-css">.tbl {
+	table-layout:fixed;
+	border-top: 5px solid #333;
+	border-collapse: collapse;
+	background: #fff;
+	 }
+.tbl td {
+	border-bottom: 1px dashed #333;
+	padding: 2px 5px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+ }</code></pre></blockquote>
 <p>Note that he also adds <code>white-space:nowrap</code>. Otherwise it won’t work. <a href="/wp-content/uploads/2006/03/fixed-table-cells-working.html" id="p178">Example page – working</a></p>
 <p><small>Technorati Tags: <a href="http://technorati.com/tag/web+standards" rel="tag">web standards</a>, <a href="http://technorati.com/tag/css" rel="tag"> css</a>, <a href="http://technorati.com/tag/tables" rel="tag"> tables</a>, <a href="http://technorati.com/tag/google" rel="tag"> google</a>, <a href="http://technorati.com/tag/gmail" rel="tag"> gmail</a></small></p>
 	

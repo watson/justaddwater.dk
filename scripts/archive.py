@@ -22,13 +22,13 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup, Comment
+from recovery import recovery_data, restore_code, restore_gists, restore_demos, UNDO_URL, UNDO_PATH
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / '.cache'
 SITE = ROOT / 'site'
 ORIGIN = 'http://justaddwater.dk'
 HOSTS = {'justaddwater.dk', 'www.justaddwater.dk'}
-REPAIRED_CODE_ARTICLE = '/2006/06/24/blog-usability-avoid-spam-comments/'
 ASSET_SUFFIXES = {'.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp',
                   '.ico', '.pdf', '.zip', '.gz', '.txt', '.xml', '.mp3', '.mp4',
                   '.mov', '.woff', '.woff2', '.ttf', '.eot', '.swf', '.doc', '.xls'}
@@ -129,6 +129,7 @@ def local_url(value, base, ids):
     if parts.hostname not in HOSTS or parts.scheme not in ('http', 'https'):
         return None
     path = re.sub(r'/+', '/', parts.path or '/')
+    path = recovery_data()['aliases'].get(unquote(path), path)
     # A few original articles accidentally used a relative uploads path.
     if '/wp-content/' in path and not path.startswith('/wp-content/'):
         path = path[path.index('/wp-content/'):]
@@ -186,40 +187,13 @@ def embedded_css(soup):
     yield from (tag.string or '' for tag in soup.find_all('style'))
 
 
-def parse_document(raw, path=''):
+def parse_document(raw, path='', recover=True):
     # Match the browser's HTML5 tree construction. Legacy WordPress sometimes
     # lets formatting tags cross paragraph boundaries; html.parser closes them
     # early and silently changes how the published article looks.
-    if path.startswith(REPAIRED_CODE_ARTICLE):
-        raw = render_form_article_code(raw)
+    if recover:
+        raw = restore_code(raw)
     return BeautifulSoup(protect_form_examples(raw), 'html5lib')
-
-
-def render_form_article_code(raw):
-    """Restore the two broken shortcodes in the spam-comments article.
-
-    WordPress inserted paragraphs inside the snippets and emitted an unescaped
-    form tag. Treat the example markup as text before constructing the HTML tree.
-    This repair is deliberately limited to the known article and its copies.
-    """
-    source = raw.decode('utf-8') if isinstance(raw, bytes) else raw
-    pattern = r'(?:<p>\s*)?\[code\b([^\]]*)\](.*?)\[/code\](\s*</p>)?'
-
-    def replace(match):
-        language = re.search(r'lang\s*=\s*[\"\'“”‘’]?([a-z]+)', html.unescape(match[1]), re.I)
-        # These are WordPress paragraph wrappers, not part of either example.
-        code = re.sub(r'</?p\b[^>]*>|<br\s*/?>', '\n', match[2], flags=re.I)
-        code = html.unescape(code).strip()
-        code = re.sub(r'\n[ \t]*\n+', '\n', code)
-        css_class = ' class="language-' + language[1].lower() + '"' if language else ''
-        result = '<pre class="archive-code"><code' + css_class + '>' + html.escape(code, quote=False) + '</code></pre>'
-        # The first closing shortcode runs directly into "And then ..."; its
-        # original closing paragraph tag is later, after that sentence.
-        if not match[3] and source[match.end():].startswith('And then'):
-            result += '<p>'
-        return result
-
-    return re.sub(pattern, replace, source, flags=re.I | re.S)
 
 
 def protect_form_examples(raw):
@@ -399,7 +373,8 @@ def archive_form(soup, form):
     form.insert_before(note)
 
 
-def clean_html(soup):
+def clean_html(soup, path=''):
+    restore_gists(soup)
     # The old host prints PHP open_basedir warnings on attachment pages. These
     # are runtime diagnostics, not article content or archive navigation.
     for warning in soup.find_all('b', string=re.compile(r'^(Warning|Notice|Deprecated)$')):
@@ -417,7 +392,7 @@ def clean_html(soup):
     # Keep original video players, even obsolete Flash players. Process nested
     # embeds before their objects so removing a parent cannot invalidate a child.
     for tag in reversed(soup.find_all(['script', 'iframe', 'object', 'embed', 'applet', 'base'])):
-        if not is_video_embed(tag):
+        if not is_video_embed(tag) and not (tag.name == 'iframe' and tag.get('src') == UNDO_URL):
             tag.decompose()
     for comment in soup.find_all(string=lambda x: isinstance(x, Comment)):
         comment.extract()
@@ -443,6 +418,7 @@ def clean_html(soup):
             del tag['href']
         elif tag['href'].endswith('#respond'):
             tag['href'] = tag['href'].removesuffix('#respond') + '#comments'
+    restore_demos(soup, path)
     return soup
 
 
@@ -550,6 +526,13 @@ def generated_page(template, title, body):
 
 
 def build(data, state):
+    recovery = recovery_data()
+    recovered_assets = {}
+    for asset in recovery['assets']:
+        raw = (ROOT / asset['file']).read_bytes()
+        if hashlib.sha256(raw).hexdigest() != asset['sha256']:
+            raise ValueError('Recovered asset checksum differs: ' + asset['path'])
+        recovered_assets[quote(asset['path'], safe="/!$&'()*+,-.;=@_~")] = raw
     # Clear generated files so removed crawl routes don't survive a rebuild.
     # Archive controls and recovered external images are maintained separately.
     SITE.mkdir(exist_ok=True)
@@ -560,13 +543,13 @@ def build(data, state):
             else:
                 child.unlink()
     ids = id_routes(data)
-    routes = set(state['pages']) | set(state['assets'])
+    routes = set(state['pages']) | set(state['assets']) | set(recovered_assets) | {UNDO_PATH, '/archive-assets/demos.js'}
     external_file = ROOT / 'data/external-images.json'
     external = json.loads(external_file.read_text()) if external_file.exists() else {}
     unavailable, comment_ids = set(), set()
     for path in sorted(state['pages']):
         raw, _ = fetch(ORIGIN + path)
-        soup = clean_html(parse_document(raw, path=path))
+        soup = clean_html(parse_document(raw, path=path), path=path)
         soup = rewrite(soup, ORIGIN + path, ids, routes, unavailable, external)
         for tag in soup.find_all(id=re.compile(r'^comment-\d+$')):
             comment_ids.add(int(tag['id'].split('-')[-1]))
@@ -579,7 +562,7 @@ def build(data, state):
         raw, meta = fetch(ORIGIN + path)
         content_type = next((v for k, v in meta['headers'].items() if k.lower() == 'content-type'), '')
         if 'text/html' in content_type:
-            raw = str(rewrite(clean_html(parse_document(raw)), ORIGIN + path, ids, routes, unavailable, external)).encode()
+            raw = str(rewrite(clean_html(parse_document(raw), path=path), ORIGIN + path, ids, routes, unavailable, external)).encode()
         elif path.endswith('.css'):
             text = raw.decode('utf-8', 'replace')
             raw = rewrite_css(text, ORIGIN + path, ids, routes, unavailable, external).encode()
@@ -589,6 +572,14 @@ def build(data, state):
         target = disk_path(path)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(raw)
+    for path, raw in recovered_assets.items():
+        target = disk_path(path)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(raw)
+    for alias, canonical in recovery['aliases'].items():
+        target = disk_path(alias)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(disk_path(canonical), target)
     template = (SITE / 'index.html').read_text()
     for path, title, content in [
         ('/search/', 'Search the archive', '<form action="/search/" method="get"><label for="archive-query">Search posts and pages</label> <input id="archive-query" name="s" type="search"/><button type="submit">Search</button></form><p id="search-status" role="status"></p><ol id="search-results"></ol>'),
@@ -600,7 +591,7 @@ def build(data, state):
         target.write_text(generated_page(template, title, content))
     search = [{'id': p['id'], 'url': urlsplit(p['link']).path,
                'title': html.unescape(p['title']['rendered']), 'date': p['date'][:10],
-               'text': BeautifulSoup(p['content']['rendered'], 'html.parser').get_text(' ', strip=True)}
+               'text': clean_html(parse_document(p['content']['rendered'])).get_text(' ', strip=True)}
               for p in data['posts'] + data['pages']]
     write_json(SITE / 'archive-assets/search.json', search)
     write_json(SITE / 'archive-assets/routes.json', ids)
@@ -618,8 +609,12 @@ def build(data, state):
               'api_reported_totals': data['api_reported_totals'],
               'html_pages': len(state['pages']), 'downloaded_assets': len(state['assets']),
               'comments_in_html': len(comment_ids), 'comments_missing_from_html': missing_comments,
-              'unavailable_pages': {p: e for p, e in state['failed_pages'].items() if local_url(p, ORIGIN, ids)},
-              'unavailable_assets': state['failed_assets'],
+              'recovered_assets': [a['path'] for a in recovery['assets']],
+              'repaired_asset_aliases': recovery['aliases'],
+              'recovered_code_blocks': len(recovery['code_blocks']),
+              'recovered_gist_embeds': len(recovery['gists']),
+              'unavailable_pages': {p: e for p, e in state['failed_pages'].items() if local_url(p, ORIGIN, ids) and local_url(p, ORIGIN, ids) not in routes},
+              'unavailable_assets': {p: e for p, e in state['failed_assets'].items() if local_url(p, ORIGIN, ids) not in routes},
               'unavailable_references': sorted(unavailable)}
     write_json(ROOT / 'data/capture-report.json', report)
     print(json.dumps({k: v for k, v in report.items() if not isinstance(v, (list, dict))}, indent=2))
@@ -639,7 +634,8 @@ def feeds(data):
             ET.SubElement(item, 'title').text = html.unescape(title)
             ET.SubElement(item, 'link').text = row['link'].replace('http://', 'https://', 1)
             ET.SubElement(item, 'guid').text = row['link']
-            content = BeautifulSoup(row['content']['rendered'], 'html.parser')
+            content = BeautifulSoup(restore_code(row['content']['rendered']), 'html.parser')
+            restore_gists(content)
             for tag in content.find_all(['script', 'iframe', 'object', 'embed']):
                 tag.decompose()
             ET.SubElement(item, 'description').text = str(content)

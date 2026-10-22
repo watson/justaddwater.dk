@@ -1,0 +1,785 @@
+{
+  "sources": {
+    "database": "2007-09-17_watson_wp_jawdk.sql (dump completed 2007-09-16)",
+    "files": "Original jaw WordPress checkout, last commit 6d95951 (2009-10-05)"
+  },
+  "assets": [
+    {
+      "path": "/wp-content/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.png",
+      "file": "data/recovered-assets/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.png",
+      "sha256": "aa839adeeefe1e93c0fd9bfa5ab0ad0c0d4e1404ea35fabf42b5c6ade0036732",
+      "source_path": "wp-content/uploads/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.png"
+    },
+    {
+      "path": "/wp-content/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.thumbnail.png",
+      "file": "data/recovered-assets/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.thumbnail.png",
+      "sha256": "fde49c197e8da0e49810a48855b81a6569a446e30f5d32ebb66f3d8b28afebba",
+      "source_path": "wp-content/uploads/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.thumbnail.png"
+    }
+  ],
+  "aliases": {
+    "/pres 2006-06-01 reboot.ppt": "/wp-content/uploads/2006/06/pres 2006-06-01 reboot.ppt",
+    "/wp-content/Beermatroadmap2.jpg": "/wp-content/uploads/2005/11/Beermatroadmap2.jpg",
+    "/wp-content/thumb-Beermatroadmap2.jpg": "/wp-content/uploads/2005/11/thumb-Beermatroadmap2.jpg"
+  },
+  "code_blocks": [
+    {
+      "id": "post-1038-1",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git svn clone -s [url_to_svn_repository] [project_name]</p>\n<p>git branch -a #show all branches local(git) and remote(svn)</p>\n<p>git status</p>\n<p>git svn info #show svn details (also URL)</p>\n<p>#create local Git branch that mirrors remote svn branch</p>\n<p>git checkout -b local/RELEASE-0.12 RELEASE-0.12 #will connect with a remote svn branch named &#8216;RELEASE-0.12&#8217;</p>\n<p>git svn dcommit &#8211;dry-run # -n will show which svn branch you will commit into:</p>\n<p>#=&gt; Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable &#8230;</p>\n<p>git svn rebase # pull changes from svn repository</p>\n<p>git svn dcommit # push your local git commits to svn repository</p>\n<p>[/code]",
+      "code": "git svn clone -s [url_to_svn_repository] [project_name]\n\ngit branch -a #show all branches local(git) and remote(svn)\n\ngit status\n\ngit svn info #show svn details (also URL)\n\n#create local Git branch that mirrors remote svn branch\n\ngit checkout -b local/RELEASE-0.12 RELEASE-0.12 #will connect with a remote svn branch named 'RELEASE-0.12'\n\ngit svn dcommit --dry-run # -n will show which svn branch you will commit into:\n\n#=> Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...\n\ngit svn rebase # pull changes from svn repository\n\ngit svn dcommit # push your local git commits to svn repository",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-2",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git svn clone -s [url_to_svn_repository] [project_name][/code]",
+      "code": "git svn clone -s [url_to_svn_repository] [project_name]",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-3",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git clone -s http://svn.edgewall.org/repos/trac trac.git</p>\n<p>Initialized empty Git repository in /Users/jesper/othercode/trac.git/.git/<br />\nA    svntrac/__init__.py</p>\n<p>[&#8230;]</p>\n<p>M    trac/admin/console.py<br />\nr7937 = 2aab87158be06edb1a1931240a453cac762c4615 (trunk)<br />\nAuto packing your repository for optimum performance. You may also<br />\nrun &#8220;git gc&#8221; manually. See &#8220;git help gc&#8221; for more information.<br />\nCounting objects: 13630, done.<br />\nCompressing objects: 100% (13146/13146), done.<br />\nWriting objects: 100% (13630/13630), done.<br />\nTotal 13630 (delta 10584), reused 0 (delta 0)<br />\nRemoving duplicate objects: 100% (256/256), done.<br />\nChecked out HEAD:<br />\nhttp://svn.edgewall.org/repos/trac/trunk r7937<br />\n[/code]",
+      "code": "git clone -s http://svn.edgewall.org/repos/trac trac.git\n\nInitialized empty Git repository in /Users/jesper/othercode/trac.git/.git/\nA    svntrac/__init__.py\n\n[...]\n\nM    trac/admin/console.py\nr7937 = 2aab87158be06edb1a1931240a453cac762c4615 (trunk)\nAuto packing your repository for optimum performance. You may also\nrun \"git gc\" manually. See \"git help gc\" for more information.\nCounting objects: 13630, done.\nCompressing objects: 100% (13146/13146), done.\nWriting objects: 100% (13630/13630), done.\nTotal 13630 (delta 10584), reused 0 (delta 0)\nRemoving duplicate objects: 100% (256/256), done.\nChecked out HEAD:\nhttp://svn.edgewall.org/repos/trac/trunk r7937",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-4",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]cd trac.git/<br />\ngit svn info</p>\n<p>Path: .<br />\nURL: http://svn.edgewall.org/repos/trac/trunk<br />\nRepository Root: http://svn.edgewall.org/repos/trac<br />\nRepository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2<br />\nRevision: 7937<br />\nNode Kind: directory<br />\nSchedule: normal<br />\nLast Changed Author: rblank<br />\nLast Changed Rev: 7937<br />\nLast Changed Date: 2009-03-07 03:52:37 +0100 (Sat, 07 Mar 2009)<br />\n[/code]",
+      "code": "cd trac.git/\ngit svn info\n\nPath: .\nURL: http://svn.edgewall.org/repos/trac/trunk\nRepository Root: http://svn.edgewall.org/repos/trac\nRepository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2\nRevision: 7937\nNode Kind: directory\nSchedule: normal\nLast Changed Author: rblank\nLast Changed Rev: 7937\nLast Changed Date: 2009-03-07 03:52:37 +0100 (Sat, 07 Mar 2009)",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-5",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]<br />\ngit branch -a</p>\n<p>* master<br />\n0.10-stable<br />\n0.11-stable<br />\ncboos-dev<br />\ncmlenz-dev<br />\ndebian<br />\ndebian-dev<br />\njonas-dev<br />\ntags/debian<br />\ntags/debian-dev<br />\ntags/trac-0.10<br />\ntags/trac-0.10.1<br />\ntags/trac-0.10.2<br />\ntags/trac-0.10.3<br />\n[&#8230;]<br />\ntrunk<br />\nutopiste-dev<br />\n[/code]",
+      "code": "git branch -a\n\n* master\n0.10-stable\n0.11-stable\ncboos-dev\ncmlenz-dev\ndebian\ndebian-dev\njonas-dev\ntags/debian\ntags/debian-dev\ntags/trac-0.10\ntags/trac-0.10.1\ntags/trac-0.10.2\ntags/trac-0.10.3\n[...]\ntrunk\nutopiste-dev",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-6",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git checkout -b local/0.11-stable 0.11-stable</p>\n<p>Switched to a new branch &#8220;local/0.11-stable&#8221;<br />\n[/code]",
+      "code": "git checkout -b local/0.11-stable 0.11-stable\n\nSwitched to a new branch \"local/0.11-stable\"",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-7",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git svn dcommit &#8211;dry-run</p>\n<p>Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable &#8230;<br />\n[/code]",
+      "code": "git svn dcommit --dry-run\n\nCommitting to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-8",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git svn info</p>\n<p>git svn info<br />\nPath: .<br />\nURL: http://svn.edgewall.org/repos/trac/branches/0.11-stable<br />\nRepository Root: http://svn.edgewall.org/repos/trac<br />\nRepository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2<br />\nRevision: 7930<br />\nNode Kind: directory<br />\nSchedule: normal<br />\nLast Changed Author: rblank<br />\nLast Changed Rev: 7930<br />\nLast Changed Date: 2009-03-03 00:41:48 +0100 (Tue, 03 Mar 2009)<br />\n[/code]",
+      "code": "git svn info\n\ngit svn info\nPath: .\nURL: http://svn.edgewall.org/repos/trac/branches/0.11-stable\nRepository Root: http://svn.edgewall.org/repos/trac\nRepository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2\nRevision: 7930\nNode Kind: directory\nSchedule: normal\nLast Changed Author: rblank\nLast Changed Rev: 7930\nLast Changed Date: 2009-03-03 00:41:48 +0100 (Tue, 03 Mar 2009)",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-9",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git status</p>\n<p>git add filename</p>\n<p>git commit -m &#8216;my commit comment&#8217;</p>\n<p>[/code]",
+      "code": "git status\n\ngit add filename\n\ngit commit -m 'my commit comment'",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-10",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git svn rebase #to pull changes from svn before commit</p>\n<p>git svn dcommit[/code]",
+      "code": "git svn rebase #to pull changes from svn before commit\n\ngit svn dcommit",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-11",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git svn dcommit<br />\nCannot dcommit with a dirty index.  Commit your changes first, or stash them with `git stash&#8217;.<br />\nat /usr/local/libexec/git-core//git-svn line 431[/code]",
+      "code": "git svn dcommit\nCannot dcommit with a dirty index.  Commit your changes first, or stash them with `git stash'.\nat /usr/local/libexec/git-core//git-svn line 431",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-12",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git stash</p>\n<p>git svn dcommit</p>\n<p>git stash apply[/code]",
+      "code": "git stash\n\ngit svn dcommit\n\ngit stash apply",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1038-13",
+      "post_id": 1038,
+      "article": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]git checkout master<br />\ngit log &#8211;1<br />\n#=&gt; shows log of your latest commit<br />\n#To apply these changes to Trunk, now you should change branch and merge:</p>\n<p>git checkout local/0.11-stable<br />\ngit merge master #will merge changes to the current branch (local/0.11-stable) from trunk/master.</p>\n<p>git svn dcommit #to commit the merged changes into the svn repository[/code]",
+      "code": "git checkout master\ngit log –1\n#=> shows log of your latest commit\n#To apply these changes to Trunk, now you should change branch and merge:\n\ngit checkout local/0.11-stable\ngit merge master #will merge changes to the current branch (local/0.11-stable) from trunk/master.\n\ngit svn dcommit #to commit the merged changes into the svn repository",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1029-1",
+      "post_id": 1029,
+      "article": "/2009/02/21/using-local-file-based-git-server-laziness/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]<br />\ncd local #developer&#8217;s local repository<br />\ngit pull ../remote master #get the latest code from &#8216;remote&#8217; repository<br />\ngit push ../remote master #push the recent commits from here to the &#8216;remote&#8217; folder<br />\n[/code]",
+      "code": "cd local #developer's local repository\ngit pull ../remote master #get the latest code from 'remote' repository\ngit push ../remote master #push the recent commits from here to the 'remote' folder",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1029-2",
+      "post_id": 1029,
+      "article": "/2009/02/21/using-local-file-based-git-server-laziness/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]<br />\ngit remote add origin ../remote/ #one time for all<br />\ngit pull origin master # pull from the &#8216;remote&#8217; directory<br />\ngit push origin master #push recent commits from here to the &#8216;remote&#8217; folder<br />\n[/code]",
+      "code": "git remote add origin ../remote/ #one time for all\ngit pull origin master # pull from the 'remote' directory\ngit push origin master #push recent commits from here to the 'remote' folder",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1029-3",
+      "post_id": 1029,
+      "article": "/2009/02/21/using-local-file-based-git-server-laziness/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]<br />\ngit remote add origin ssh://jesper@myserver.com/~/project.git/<br />\n[/code]",
+      "code": "git remote add origin ssh://jesper@myserver.com/~/project.git/",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1029-4",
+      "post_id": 1029,
+      "article": "/2009/02/21/using-local-file-based-git-server-laziness/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;]<br />\n$ ssh jesper@myserver.com<br />\nWelcome to myserver.com!<br />\n$ mkdir project.git &#038;&#038; cd project.git/<br />\n$ git &#8211;bare init<br />\nInitialized empty Git repository in /home/jesper/project.git<br />\n$ exit<br />\nBye!<br />\n[/code]",
+      "code": "$ ssh jesper@myserver.com\nWelcome to myserver.com!\n$ mkdir project.git && cd project.git/\n$ git --bare init\nInitialized empty Git repository in /home/jesper/project.git\n$ exit\nBye!",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1014-1",
+      "post_id": 1014,
+      "article": "/2009/01/17/git-side-benefit-reducing-disk-usage/",
+      "language": "bash",
+      "captured": "[code lang=&#8221;bash&#8221;][~/my-projects]  du -hd 0 \\<br />\n> berammelse berammelse.git \\<br />\n> dokboks dokboks.git       \\<br />\n> intrastat intrastat.git   \\<br />\n> kompetenceregister k2.git \\<br />\n> ourpeople ourpeople.git   \\<br />\n> let0004 let0004.git</p>\n<p>43M\tberammelse<br />\n38M\tberammelse.git<br />\n63M\tdokboks<br />\n11M\tdokboks.git<br />\n53M\tintrastat<br />\n34M\tintrastat.git<br />\n144M\tkompetenceregister<br />\n47M\tkompetenceregister.git<br />\n118M\tourpeople<br />\n151M\tourpeople.git<br />\n163M\tlet0004<br />\n98M\tlet0004.git<br />\n[/code]",
+      "code": "[~/my-projects]  du -hd 0 \\\n> berammelse berammelse.git \\\n> dokboks dokboks.git       \\\n> intrastat intrastat.git   \\\n> kompetenceregister k2.git \\\n> ourpeople ourpeople.git   \\\n> let0004 let0004.git\n\n43M\tberammelse\n38M\tberammelse.git\n63M\tdokboks\n11M\tdokboks.git\n53M\tintrastat\n34M\tintrastat.git\n144M\tkompetenceregister\n47M\tkompetenceregister.git\n118M\tourpeople\n151M\tourpeople.git\n163M\tlet0004\n98M\tlet0004.git",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-1014-2",
+      "post_id": 1014,
+      "article": "/2009/01/17/git-side-benefit-reducing-disk-usage/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]#!/usr/bin/env ruby -wKU<br />\n# command from<br />\n# http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/<br />\n# Install with<br />\n# sudo port install git-core +svn</p>\n<p># get svn info location<br />\nsvnurl = `svn info | grep &#8220;^URL:&#8221;`.gsub(&#8216;URL: &#8216;,&#8221;).chomp</p>\n<p># project = basename<br />\nproject = File.basename(Dir.pwd)</p>\n<p>puts cmd = &#8220;git svn clone #{svnurl} ../#{project}.git&#8221;</p>\n<p>`#{cmd}`</p>\n<p>puts &#8220;(&#8216;git svn rebase&#8217; merges changes from svn.\\n &#8216;git svn dcommit&#8217; updates svn with your git commits)&#8221;<br />\n[/code]",
+      "code": "#!/usr/bin/env ruby -wKU\n# command from\n# http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/\n# Install with\n# sudo port install git-core +svn\n\n# get svn info location\nsvnurl = `svn info | grep \"^URL:\"`.gsub('URL: ', '').chomp\n\n# project = basename\nproject = File.basename(Dir.pwd)\n\nputs cmd = \"git svn clone #{svnurl} ../#{project}.git\"\n\n`#{cmd}`\n\nputs \"('git svn rebase' merges changes from svn.\\n 'git svn dcommit' updates svn with your git commits)\"",
+      "source": "public HTML capture; WordPress paragraph wrappers removed; restore the empty replacement string collapsed by WordPress smart quotes"
+    },
+    {
+      "id": "post-958-1",
+      "post_id": 958,
+      "article": "/2008/10/09/net-tips-for-my-development-environment/",
+      "language": "vb",
+      "captured": "[code lang=&#8221;vb&#8221;]    REM Stop the build process when the first error is encountered<br />\n    Private Sub BuildEvents_OnBuildProjConfigDone(ByVal Project As String, ByVal ProjectConfig As String, ByVal Platform As String, ByVal SolutionConfig As String, ByVal Success As Boolean) Handles BuildEvents.OnBuildProjConfigDone<br />\n        If Success = False Then<br />\n            &#8216;The build failed&#8230;cancel any further builds.<br />\n            DTE.ExecuteCommand(&#8220;Build.Cancel&#8221;)<br />\n        End If<br />\n    End Sub<br />\n[/code]",
+      "code": "REM Stop the build process when the first error is encountered\nPrivate Sub BuildEvents_OnBuildProjConfigDone(ByVal Project As String, ByVal ProjectConfig As String, ByVal Platform As String, ByVal SolutionConfig As String, ByVal Success As Boolean) Handles BuildEvents.OnBuildProjConfigDone\nIf Success = False Then\n'The build failed...cancel any further builds.\nDTE.ExecuteCommand(\"Build.Cancel\")\nEnd If\nEnd Sub",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-958-2",
+      "post_id": 958,
+      "article": "/2008/10/09/net-tips-for-my-development-environment/",
+      "language": "vb",
+      "captured": "[code lang=&#8221;vb&#8221;]    REM Output timestamp in build panel on build complete<br />\n    Private Sub BuildEvents_OnBuildDone(ByVal Scope As EnvDTE.vsBuildScope, ByVal Action As EnvDTE.vsBuildAction) Handles BuildEvents.OnBuildDone<br />\n        Dim win As Window = DTE.Windows.Item(EnvDTE.Constants.vsWindowKindOutput)<br />\n        Dim ow As OutputWindow = win.Object<br />\n        Dim owPane As OutputWindowPane<br />\n        For i As Integer = 1 To ow.OutputWindowPanes.Count<br />\n            owPane = ow.OutputWindowPanes.Item(i)<br />\n            If owPane.Name = &#8220;Build&#8221; Then<br />\n                owPane.Activate()<br />\n                owPane.OutputString(DateTime.Now.ToString)<br />\n                owPane.OutputString(Environment.NewLine)<br />\n            End If<br />\n        Next<br />\n    End Sub<br />\n[/code]",
+      "code": "REM Output timestamp in build panel on build complete\nPrivate Sub BuildEvents_OnBuildDone(ByVal Scope As EnvDTE.vsBuildScope, ByVal Action As EnvDTE.vsBuildAction) Handles BuildEvents.OnBuildDone\nDim win As Window = DTE.Windows.Item(EnvDTE.Constants.vsWindowKindOutput)\nDim ow As OutputWindow = win.Object\nDim owPane As OutputWindowPane\nFor i As Integer = 1 To ow.OutputWindowPanes.Count\nowPane = ow.OutputWindowPanes.Item(i)\nIf owPane.Name = \"Build\" Then\nowPane.Activate()\nowPane.OutputString(DateTime.Now.ToString)\nowPane.OutputString(Environment.NewLine)\nEnd If\nNext\nEnd Sub",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-958-3",
+      "post_id": 958,
+      "article": "/2008/10/09/net-tips-for-my-development-environment/",
+      "language": "dos",
+      "captured": "[code lang=&#8221;dos&#8221;]cd C:\\Inetpub\\AdminScripts\\<br />\nCScript adsutil.vbs enum w3svc /p<br />\n[/code]",
+      "code": "cd C:\\Inetpub\\AdminScripts\\\nCScript adsutil.vbs enum w3svc /p",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-929-1",
+      "post_id": 929,
+      "article": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "language": "html",
+      "captured": "[code lang=\"html\"]\r\n<div class=\"round\">\r\n  <h2>..</h2>\r\n  <ul>\r\n    <li>..</li>\r\n    ..\r\n  </ul>\r\n  <b class=\"cn tr\"></b>\r\n  <b class=\"cn br\"></b>\r\n  <b class=\"cn tl\"></b>\r\n  <b class=\"cn bl\"></b>\r\n</div>\r\n[/code]",
+      "code": "<div class=\"round\">\n  <h2>..</h2>\n  <ul>\n    <li>..</li>\n    ..\n  </ul>\n  <b class=\"cn tr\"></b>\n  <b class=\"cn br\"></b>\n  <b class=\"cn tl\"></b>\n  <b class=\"cn bl\"></b>\n</div>",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-929-2",
+      "post_id": 929,
+      "article": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "language": "html",
+      "captured": "[code lang=\"html\"]\r\n<div class=\"round\">\r\n...\r\n</div>\r\n[/code]",
+      "code": "<div class=\"round\">\n...\n</div>",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-929-3",
+      "post_id": 929,
+      "article": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "language": "javascript",
+      "captured": "[code lang=\"javascript\"]\r\n// Add rounded corners to all div elements with class=\"round\"\r\n// Adds corners the \"technorati way\", described on\r\n// http://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/\r\n// requires you to set class=\"round\" on div or similar elements\r\n// also works on images, which it wraps in a div element to add the\r\n// necessary content\r\nvar round_corners = function(){\r\n var str = '<b class=\"cn tl\"></b><b class=\"cn tr\"></b><b class=\"cn bl\"></b><b class=\"cn br\"></b>';\r\n  $('.round').addClass(\"boxc\").append(str);\r\n};\r\n\r\n$(document).ready( function(){round_corners();});\r\n[/code]",
+      "code": "// Add rounded corners to all div elements with class=\"round\"\n// Adds corners the \"technorati way\", described on\n// http://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/\n// requires you to set class=\"round\" on div or similar elements\n// also works on images, which it wraps in a div element to add the\n// necessary content\nvar round_corners = function(){\n var str = '<b class=\"cn tl\"></b><b class=\"cn tr\"></b><b class=\"cn bl\"></b><b class=\"cn br\"></b>';\n  $('.round').addClass(\"boxc\").append(str);\n};\n\n$(document).ready( function(){round_corners();});",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-929-4",
+      "post_id": 929,
+      "article": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "language": "css",
+      "captured": "[code lang=\"css\"]\r\n.boxc {\r\npadding:0px;\r\nposition:relative;\r\n}\r\n.boxc b.cn {\r\nbackground:transparent url(roundwhite.png) no-repeat scroll 0%;\r\nheight:10px;\r\nposition:absolute;\r\nwidth:10px;\r\n}\r\n.boxc b.tl {\r\nbackground-position:left top;\r\nleft:-1px;\r\ntop:-1px;\r\n}\r\n.boxc b.tr {\r\nbackground-position:right top;\r\nright:-1px;\r\ntop:-1px;\r\n}\r\n.boxc b.bl {\r\nbackground-position:left bottom;\r\nbottom:-1px;\r\nleft:-1px;\r\n}\r\n.boxc b.br {\r\nbackground-position:right bottom;\r\nbottom:-1px;\r\nright:-1px;\r\n}\r\n* html .boxc b.bl {\r\nbottom:-2px;\r\n}\r\n* html .boxc b.br {\r\nbottom:-2px;\r\n}\r\n* html .boxc b.cn {\r\nbackground-image:url(roundwhite.gif);\r\nfont-size:1px;\r\nline-height:1px;\r\n}\r\n[/code]",
+      "code": ".boxc {\npadding:0px;\nposition:relative;\n}\n.boxc b.cn {\nbackground:transparent url(roundwhite.png) no-repeat scroll 0%;\nheight:10px;\nposition:absolute;\nwidth:10px;\n}\n.boxc b.tl {\nbackground-position:left top;\nleft:-1px;\ntop:-1px;\n}\n.boxc b.tr {\nbackground-position:right top;\nright:-1px;\ntop:-1px;\n}\n.boxc b.bl {\nbackground-position:left bottom;\nbottom:-1px;\nleft:-1px;\n}\n.boxc b.br {\nbackground-position:right bottom;\nbottom:-1px;\nright:-1px;\n}\n* html .boxc b.bl {\nbottom:-2px;\n}\n* html .boxc b.br {\nbottom:-2px;\n}\n* html .boxc b.cn {\nbackground-image:url(roundwhite.gif);\nfont-size:1px;\nline-height:1px;\n}",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-929-5",
+      "post_id": 929,
+      "article": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "language": "html",
+      "captured": "[code lang=\"html\"]\r\n<script type=\"text/javascript\" src=\"jquery.js\"></script>\r\n<script type=\"text/javascript\" src=\"roundcorners.js\"></script>\r\n<link type=\"text/css\" rel=\"stylesheet\" href=\"roundcorners.css\"></link>\r\n[/code]",
+      "code": "<script type=\"text/javascript\" src=\"jquery.js\"></script>\n<script type=\"text/javascript\" src=\"roundcorners.js\"></script>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"roundcorners.css\"></link>",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-755-1",
+      "post_id": 755,
+      "article": "/2008/01/01/e-texteditor-snippet-convert-html-entities-for-viewing-code/",
+      "language": "",
+      "captured": "[code]#!/usr/bin/env ruby\r\n# By Jesper Rønn-Jensen, 2007-12-19 (Last update: 2007-12-19)\r\n# escape &amp;,&lt;,&gt; to show in HTML pages\r\n$KCODE = &#039;U&#039;\r\n\r\n$char_to_entity = { }\r\nFile.open(&quot;#{ENV[&#039;TM_BUNDLE_SUPPORT&#039;]}/entities.txt&quot;).read.scan(/^(\\d+)\\t(.+)$/) do |key, value|\r\n  $char_to_entity[[key.to_i].pack(&#039;U&#039;)] = value\r\nend\r\n\r\ndef encode (text)\r\n  text.gsub(/[&lt;&gt;&amp;]/) do |ch|\r\n    ent = $char_to_entity[ch]\r\n    ent ? &quot;&amp;#{ent};&quot; : sprintf(&quot;%02X;&quot;, ch.unpack(&quot;U&quot;)[0])\r\n  end\r\nend\r\n\r\nprint encode(STDIN.read)[/code]",
+      "code": "#!/usr/bin/env ruby\n# By Jesper Rønn-Jensen, 2007-12-19 (Last update: 2007-12-19)\n# escape &,<,> to show in HTML pages\n$KCODE = 'U'\n\n$char_to_entity = { }\nFile.open(\"#{ENV['TM_BUNDLE_SUPPORT']}/entities.txt\").read.scan(/^(\\d+)\\t(.+)$/) do |key, value|\n  $char_to_entity[[key.to_i].pack('U')] = value\nend\n\ndef encode (text)\n  text.gsub(/[<>&]/) do |ch|\n    ent = $char_to_entity[ch]\n    ent ? \"&#{ent};\" : sprintf(\"%02X;\", ch.unpack(\"U\")[0])\n  end\nend\n\nprint encode(STDIN.read)",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-828-1",
+      "post_id": 828,
+      "article": "/2007/12/20/rubygems-rails-20-mongrel-windows-solved/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]> gem update &#8211;system<br />\n> gem update rails<br />\n> gem update mongrel[/code]",
+      "code": "> gem update --system\n> gem update rails\n> gem update mongrel",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-803-1",
+      "post_id": 803,
+      "article": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]gem update &#8211;system[/code]",
+      "code": "gem update --system",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-803-2",
+      "post_id": 803,
+      "article": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]C:\\> gem environment<br />\nRubyGems Environment:<br />\n&#8211; VERSION: 0.9.2 (0.9.2)<br />\n&#8211; INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8<br />\n&#8211; GEM PATH:<br />\n&#8211; c:/ruby/lib/ruby/gems/1.8<br />\n&#8211; REMOTE SOURCES:<br />\n&#8211; http://gems.rubyforge.org[/code]",
+      "code": "C:\\> gem environment\nRubyGems Environment:\n– VERSION: 0.9.2 (0.9.2)\n– INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8\n– GEM PATH:\n– c:/ruby/lib/ruby/gems/1.8\n– REMOTE SOURCES:\n– http://gems.rubyforge.org",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-803-3",
+      "post_id": 803,
+      "article": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]C:\\&gt; unzip -q rubygems-0.9.4.zip<br />\nC:\\> cd rubygems-0.9.4<br />\nC:\\> ruby setup.rb config<br />\nC:\\> ruby setup.rb install[/code]",
+      "code": "C:\\> unzip -q rubygems-0.9.4.zip\nC:\\> cd rubygems-0.9.4\nC:\\> ruby setup.rb config\nC:\\> ruby setup.rb install",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-803-4",
+      "post_id": 803,
+      "article": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]C:\\> gem environment<br />\nRubyGems Environment:<br />\n&#8211; VERSION: 0.9.4 (0.9.4)<br />\n&#8211; INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8<br />\n&#8211; GEM PATH:<br />\n&#8211; c:/ruby/lib/ruby/gems/1.8<br />\n&#8211; REMOTE SOURCES:<br />\n&#8211; http://gems.rubyforge.org[/code]",
+      "code": "C:\\> gem environment\nRubyGems Environment:\n– VERSION: 0.9.4 (0.9.4)\n– INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8\n– GEM PATH:\n– c:/ruby/lib/ruby/gems/1.8\n– REMOTE SOURCES:\n– http://gems.rubyforge.org",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-803-5",
+      "post_id": 803,
+      "article": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]gem update rails -y[/code]",
+      "code": "gem update rails -y",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-784-1",
+      "post_id": 784,
+      "article": "/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]<br />\nrequire &#8216;icalendar&#8217;<br />\nrequire &#8216;date&#8217;</p>\n<p>class Meeting < ActiveRecord::Base\n  belongs_to :room\n  belongs_to :journal\n\n  def to_event\n    event = Icalendar::Event.new\n    event.summary = \"Møde \" + (journal.number || \"no number..\")\n    event.description = description.split(\"\\n\").join(\"\\n\\n\")\n    event.klass = \"PUBLIC\"\n    event.start = start.to_datetime\n    event.end = self.end.to_datetime\n    event.location = meeting.room.name + \" \" meeting.room.address\n    event\n  end\n[/code]",
+      "code": "require 'icalendar'\nrequire 'date'\n\nclass Meeting < ActiveRecord::Base\n  belongs_to :room\n  belongs_to :journal\n\n  def to_event\n    event = Icalendar::Event.new\n    event.summary = \"Møde \" + (journal.number || \"no number..\")\n    event.description = description.split(\"\\n\").join(\"\\n\\n\")\n    event.klass = \"PUBLIC\"\n    event.start = start.to_datetime\n    event.end = self.end.to_datetime\n    event.location = meeting.room.name + \" \" meeting.room.address\n    event\n  end",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-784-2",
+      "post_id": 784,
+      "article": "/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/",
+      "language": "ruby",
+      "captured": "[code lang=\"ruby\"]\nrequire 'icalendar'\nrequire 'iconv'\n\nclass MeetingsController < ApplicationController\n  include Icalendar\n  def show\n    @courtmeeting = Courtmeeting.find(params[:id])\n    respond_to do |format|\n      format.html # show.html.erb\n      format.xml  { render :xml  => @courtmeeting }<br />\n      format.ical { render :text => render_to_ical([@courtmeeting])  }<br />\n    end<br />\n  end</p>\n<p>  def render_to_ical(courtmeetings)<br />\n    headers[&#8216;Content-Type&#8217;] = &#8220;text/calendar; charset=ISO-8859-1&#8221;<br />\n    cal = Calendar.new<br />\n    courtmeetings.each do |meeting|<br />\n      cal.add_event(meeting.to_event)<br />\n    end<br />\n    Iconv.iconv(&#8216;ISO-8859-1&#8217;, &#8216;UTF-8&#8217;, cal.to_ical).to_s<br />\n  end<br />\nend<br />\n[/code]",
+      "code": "require 'icalendar'\nrequire 'iconv'\n\nclass MeetingsController < ApplicationController\n  include Icalendar\n  def show\n    @courtmeeting = Courtmeeting.find(params[:id])\n    respond_to do |format|\n      format.html # show.html.erb\n      format.xml  { render :xml  => @courtmeeting }\nformat.ical { render :text => render_to_ical([@courtmeeting])  }\nend\nend\n\n  def render_to_ical(courtmeetings)\nheaders['Content-Type'] = \"text/calendar; charset=ISO-8859-1\"\ncal = Calendar.new\ncourtmeetings.each do |meeting|\ncal.add_event(meeting.to_event)\nend\nIconv.iconv('ISO-8859-1', 'UTF-8', cal.to_ical).to_s\nend\nend",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-778-1",
+      "post_id": 778,
+      "article": "/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]</p>\n<p>win = ie.document.parentWindow<br />\nwin.ToggleProj(&#8216;1&#8217;)</p>\n<p>[/code]",
+      "code": "win = ie.document.parentWindow\nwin.ToggleProj('1')",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-778-2",
+      "post_id": 778,
+      "article": "/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]<br />\n@ie.document.parentWindow.eval(&#8216;<br />\n  window.CheckReport=function(){return true}&#8217;)<br />\n[/code]",
+      "code": "@ie.document.parentWindow.eval('\nwindow.CheckReport=function(){return true}')",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-778-3",
+      "post_id": 778,
+      "article": "/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]<br />\n# Add accessor for DOM window object<br />\nclass Watir::IE; def window; document.parentWindow; end; end<br />\n[/code]",
+      "code": "# Add accessor for DOM window object\nclass Watir::IE; def window; document.parentWindow; end; end",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-778-4",
+      "post_id": 778,
+      "article": "/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]<br />\n@ie.window.eval(&#8216;<br />\n  window.CheckReport=function(){return true}&#8217;)<br />\n[/code]",
+      "code": "@ie.window.eval('\nwindow.CheckReport=function(){return true}')",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-779-1",
+      "post_id": 779,
+      "article": "/2007/11/15/justaddwaterdk-hacked/",
+      "language": "",
+      "captured": "[code]&#8221;GET /wp-includes/js/tinymce/wp-mce-help.php HTTP/1.0&#8243; 200 7411 &#8220;-&#8221; &#8220;-&#8220;[/code]",
+      "code": "\"GET /wp-includes/js/tinymce/wp-mce-help.php HTTP/1.0\" 200 7411 \"-\" \"-\"",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-779-2",
+      "post_id": 779,
+      "article": "/2007/11/15/justaddwaterdk-hacked/",
+      "language": "",
+      "captured": "[code]&#8221;POST /wp-admin/admin-ajax.php HTTP/1.1&#8221; 200 2 &#8220;-&#8221; &#8220;Mozilla/4.0 (compatible; windows 5.1)&#8221;[/code]",
+      "code": "\"POST /wp-admin/admin-ajax.php HTTP/1.1\" 200 2 \"-\" \"Mozilla/4.0 (compatible; windows 5.1)\"",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-779-3",
+      "post_id": 779,
+      "article": "/2007/11/15/justaddwaterdk-hacked/",
+      "language": "",
+      "captured": "[code]&#8221;POST /wp-admin/options.php HTTP/1.0&#8221; 200 1248 &#8220;http://justaddwater.dk/wp-admin/options.php&#8221; &#8220;Opera&#8221;[/code]",
+      "code": "\"POST /wp-admin/options.php HTTP/1.0\" 200 1248 \"http://justaddwater.dk/wp-admin/options.php\" \"Opera\"",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-779-4",
+      "post_id": 779,
+      "article": "/2007/11/15/justaddwaterdk-hacked/",
+      "language": "",
+      "captured": "[code]&#8221;POST /wp-admin/upload.php?style=inline&amp;tab=upload&amp;post_id=-1 HTTP/1.0&#8243; 200 1150 &#8220;http://justaddwater.dk/upload.php?style=inline&amp;tab=upload&amp;post_id=-1&#8221; &#8220;Opera&#8221;[/code]",
+      "code": "\"POST /wp-admin/upload.php?style=inline&tab=upload&post_id=-1 HTTP/1.0\" 200 1150 \"http://justaddwater.dk/upload.php?style=inline&tab=upload&post_id=-1\" \"Opera\"",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-779-5",
+      "post_id": 779,
+      "article": "/2007/11/15/justaddwaterdk-hacked/",
+      "language": "",
+      "captured": "[code]&#8221;POST /wp-admin/options.php HTTP/1.0&#8221; 200 1230 &#8220;http://justaddwater.dk/wp-admin/options.php&#8221; &#8220;Opera&#8221;[/code]",
+      "code": "\"POST /wp-admin/options.php HTTP/1.0\" 200 1230 \"http://justaddwater.dk/wp-admin/options.php\" \"Opera\"",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-779-6",
+      "post_id": 779,
+      "article": "/2007/11/15/justaddwaterdk-hacked/",
+      "language": "",
+      "captured": "[code]&#8221;GET /wp-admin/upgrade.php?step=1 HTTP/1.0&#8221; 200 1172 &#8220;-&#8221; &#8220;-&#8220;[/code]",
+      "code": "\"GET /wp-admin/upgrade.php?step=1 HTTP/1.0\" 200 1172 \"-\" \"-\"",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-748-1",
+      "post_id": 748,
+      "article": "/2007/10/22/firefox-tip-for-framebuster-javascript/",
+      "language": "javascript",
+      "captured": "[code lang=&#8221;javascript&#8221;]<br />\n<script Language=\"Javascript\">\n  url = \"application_url\";\n  if (parent.frames[0]) {\n    if (parent.frames[0].name != 'FrameMain') {\n      document.location.replace(url);\n    }\n  }else{\n    document.location.replace(url);\n  }\n</script><br />\n[/code]",
+      "code": "<script Language=\"Javascript\">\n  url = \"application_url\";\n  if (parent.frames[0]) {\n    if (parent.frames[0].name != 'FrameMain') {\n      document.location.replace(url);\n    }\n  }else{\n    document.location.replace(url);\n  }\n</script>",
+      "source": "public HTML capture; WordPress paragraph wrappers removed"
+    },
+    {
+      "id": "post-594-1",
+      "post_id": 594,
+      "article": "/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]gem install rails &#8211;include-dependencies #run only if needed<br />\ngem install rake piston sqlite3-ruby mysql &#8211;include-dependencies<br />\n#Command line commands to test your install: gem, rails, svn<br />\n#<br />\n#Remember Mongrel as well<br />\ngem install mongrel &#8211;include-dependencies<br />\n#<br />\n#I also use these on a regular basis, but leave them out for now:<br />\n#gem install scrubyt rspec rcov rubyful_soup mechanize hpricot zentest mocha cheat &#8211;include-dependencies<br />\n[/code]",
+      "code": "gem install rails --include-dependencies #run only if needed\ngem install rake piston sqlite3-ruby mysql --include-dependencies\n#Command line commands to test your install: gem, rails, svn\n#\n#Remember Mongrel as well\ngem install mongrel --include-dependencies\n#\n#I also use these on a regular basis, but leave them out for now:\n#gem install scrubyt rspec rcov rubyful_soup mechanize hpricot zentest mocha cheat --include-dependencies",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-594-2",
+      "post_id": 594,
+      "article": "/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]cd vendor/plugins<br />\npiston import http://dev.rubyonrails.org/svn/rails/trunk vendor/rails<br />\npiston import http://activescaffold.googlecode.com/svn/tags/active_scaffold<br />\npiston import svn://rubyforge.org/var/svn/l10n-simplified<br />\n[/code]",
+      "code": "cd vendor/plugins\npiston import http://dev.rubyonrails.org/svn/rails/trunk vendor/rails\npiston import http://activescaffold.googlecode.com/svn/tags/active_scaffold\npiston import svn://rubyforge.org/var/svn/l10n-simplified",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-550-1",
+      "post_id": 550,
+      "article": "/2007/02/15/rounded-corners-the-technorati-way/",
+      "language": "html",
+      "captured": "[code lang=\"html\"]\r\n<div class=\"bloginfo-summary boxc\">\r\n  <h2>..</h2>\r\n  <ul>\r\n    <li>..</li>\r\n    ..\r\n  </ul>\r\n  <b class=\"cn tr\"></b>\r\n  <b class=\"cn br\"></b>\r\n  <b class=\"cn tl\"></b>\r\n  <b class=\"cn bl\"></b>\r\n</div>\r\n[/code]",
+      "code": "<div class=\"bloginfo-summary boxc\">\n  <h2>..</h2>\n  <ul>\n    <li>..</li>\n    ..\n  </ul>\n  <b class=\"cn tr\"></b>\n  <b class=\"cn br\"></b>\n  <b class=\"cn tl\"></b>\n  <b class=\"cn bl\"></b>\n</div>",
+      "source": "public HTML capture; retain CSS additions made after the 2007 database"
+    },
+    {
+      "id": "post-550-2",
+      "post_id": 550,
+      "article": "/2007/02/15/rounded-corners-the-technorati-way/",
+      "language": "css",
+      "captured": "[code lang=\"css\"]\r\ndiv.bloginfo-summary {background:\r\n  url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;\r\n  float:left;margin-bottom:20px;padding:10px;width:690px}\r\n/* Large radius image backgrounds */\r\n.boxc {position:relative;}\r\n.boxc b.cn { height: 10px; width: 10px; background:\r\n url(http://static.technorati.com/static/css/img/corners/white.png) no-repeat;\r\n position:absolute;\r\n }\r\n.boxc b.tl {top: -1px; left: -1px; background-position: top left;}\r\n.boxc b.tr {top: -1px; right: -1px; background-position: top right;}\r\n.boxc b.bl {bottom: -1px; left: -1px; background-position: bottom left;}\r\n.boxc b.br {bottom: -1px; right: -1px; background-position: bottom right;}\r\n\r\n/* IE Filters */\r\n    * html .boxc b.bl {bottom:-2px}\r\n    * html .boxc b.br {bottom:-2px}\r\n    * html .boxc b.cn {background-image:\r\n       url(http://static.technorati.com/static/css/img/corners/white.gif);\r\n       line-height: 1px;\r\n       font-size: 1px;\r\n      }[/code]",
+      "code": "div.bloginfo-summary {background:\n  url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;\n  float:left;margin-bottom:20px;padding:10px;width:690px}\n/* Large radius image backgrounds */\n.boxc {position:relative;}\n.boxc b.cn { height: 10px; width: 10px; background:\n url(http://static.technorati.com/static/css/img/corners/white.png) no-repeat;\n position:absolute;\n }\n.boxc b.tl {top: -1px; left: -1px; background-position: top left;}\n.boxc b.tr {top: -1px; right: -1px; background-position: top right;}\n.boxc b.bl {bottom: -1px; left: -1px; background-position: bottom left;}\n.boxc b.br {bottom: -1px; right: -1px; background-position: bottom right;}\n\n/* IE Filters */\n    * html .boxc b.bl {bottom:-2px}\n    * html .boxc b.br {bottom:-2px}\n    * html .boxc b.cn {background-image:\n       url(http://static.technorati.com/static/css/img/corners/white.gif);\n       line-height: 1px;\n       font-size: 1px;\n      }",
+      "source": "public HTML capture; retain CSS additions made after the 2007 database"
+    },
+    {
+      "id": "post-362-1",
+      "post_id": 362,
+      "article": "/2006/07/14/watir-sweetspot-enterprise-ruby/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]require &#8216;watir&#8217;<br />\nrequire &#8216;watir/WindowHelper&#8217;<br />\ninclude Watir</p>\n<p>ie = IE.new<br />\nie.goto(test_site) [/code]",
+      "code": "require 'watir'\nrequire 'watir/WindowHelper'\ninclude Watir\n\nie = IE.new\nie.goto(test_site)",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-344-1",
+      "post_id": 344,
+      "article": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+      "language": "",
+      "captured": "[code]&lt;form action=&#8221;&lt;?php <span style=\"color: #ff0000\">echo get_option(&#8216;siteurl&#8217;);</span> ?&gt;/<span style=\"color: #ff0000\">wp-comments-post.php</span>&#8221; method=&#8221;post&#8221; id=&#8221;commentform&#8221;&gt;[/code]",
+      "code": "<form action=\"<?php echo get_option('siteurl'); ?>/wp-comments-post.php\" method=\"post\" id=\"commentform\">",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-344-2",
+      "post_id": 344,
+      "article": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+      "language": "",
+      "captured": "[code]&lt;form action=&#8221;&lt;?php <span style=\"color: #ff0000\">bloginfo(&#8216;template_directory&#8217;);</span> ?&gt;/<span style=\"color: #ff0000\">my-comments-post.php</span>&#8221; method=&#8221;post&#8221; id=&#8221;commentform&#8221;&gt;[/code]",
+      "code": "<form action=\"<?php bloginfo('template_directory'); ?>/my-comments-post.php\" method=\"post\" id=\"commentform\">",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-344-3",
+      "post_id": 344,
+      "article": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+      "language": "",
+      "captured": "[code]&lt;Files wp-comments-post.php&gt;<br />\n&nbsp; &nbsp; Deny from all<br />\n&lt;/Files&gt;[/code]",
+      "code": "<Files wp-comments-post.php>\n    Deny from all\n</Files>",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-325-1",
+      "post_id": 325,
+      "article": "/2006/06/24/blog-usability-avoid-spam-comments/",
+      "language": "html",
+      "captured": "[code lang=&#8221;html&#8221;]</p>\n<form id=\"postform\" method=\"post\" action=\"illegal.url\">[/code]",
+      "code": "<form id=\"postform\" method=\"post\" action=\"illegal.url\">",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-325-2",
+      "post_id": 325,
+      "article": "/2006/06/24/blog-usability-avoid-spam-comments/",
+      "language": "javascript",
+      "captured": "[code lang=&#8221;javascript&#8221;]var obj = document.getElementById(&#8216;postform&#8217;)</p>\n<p>if(obj)</p>\n<p>obj.action = &#8220;wp-comments-post.php&#8221;[/code]",
+      "code": "var obj = document.getElementById('postform')\n\nif(obj)\n\nobj.action = \"wp-comments-post.php\"",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-261-1",
+      "post_id": 261,
+      "article": "/2006/05/19/rails-tip-scaffolding-lists/",
+      "language": "ruby",
+      "captured": "[code lang=&#8221;ruby&#8221;]<br />\ndef self.simple_content_columns<br />\n  column_names = %w{company_number name address}<br />\n  columns = []<br />\n  for c in self.content_columns do<br />\n    columns < < c if column_names.include?(c.name)\n  end\n  columns\nend\n[/code]",
+      "code": "def self.simple_content_columns\n  column_names = %w{company_number name address}\n  columns = []\n  for c in self.content_columns do\n    columns < < c if column_names.include?(c.name)\n  end\n  columns\nend",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-261-2",
+      "post_id": 261,
+      "article": "/2006/05/19/rails-tip-scaffolding-lists/",
+      "language": "ruby",
+      "captured": "[code lang=\"ruby\"]\n\n\n<table>\n<tr>\n  < % for column in Company.simple_content_columns %></p>\n<th>< %= column.human_name %></th>\n<p>  < % end %><br />\n  </tr>\n<p>< % for company in @companies %></p>\n<tr>\n  < % for column in Company.simple_content_columns %></p>\n<td>< %=h company.send(column.name) %></td>\n<p>  < % end %><br />\n[&#8230;]<br />\n[/code]",
+      "code": "<table>\n  <tr>\n  < % for column in Company.simple_content_columns %>\n    <th>< %= column.human_name %></th>\n  < % end %>\n  </tr>\n  \n< % for company in @companies %>\n  <tr>\n  < % for column in Company.simple_content_columns %>\n    <td>< %=h company.send(column.name) %></td>\n  < % end %>\n[...]",
+      "source": "2007 database; original snippet text"
+    },
+    {
+      "id": "post-176-1",
+      "post_id": 176,
+      "article": "/2006/03/11/how-to-limit-table-cell-height-gmail-style/",
+      "language": "html",
+      "captured": "[code lang=&#8221;html&#8221;]<br />\n< !DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><br />\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\"><br />\n<head><br />\n<title></title></p>\n<style type=\"text/css\">\ntable{\nwidth:300px;\nborder:1px dashed red;\n}\ntd{\nvertical-align: top;\nbackground-color: #dfc;\nheight: 10px; /* table cell does not obey this height */\n}\n</style>\n<p></head></p>\n<p><body></p>\n<p>I want table row to be the height of 1 text line.</p>\n<table>\n<tr>\n<td>1. start cell not much content</td>\n<td>2. second cell has insanely long content that I know will always wrap</td>\n</tr>\n</table>\n<p></body><br />\n</html><br />\n[/code]",
+      "code": "< !DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n<head>\n<title></title>\n<style type=\"text/css\">\ntable{\nwidth:300px;\nborder:1px dashed red;\n}\ntd{\nvertical-align: top;\nbackground-color: #dfc;\nheight: 10px; /* table cell does not obey this height */\n}\n</style>\n</head>\n\n<body>\n<p>I want table row to be the height of 1 text line.</p>\n<table>\n<tr>\n<td>1. start cell not much content</td>\n<td>2. second cell has insanely long content that I know will always wrap</td>\n</tr>\n</table>\n</body>\n</html>",
+      "source": "2007 database; original pre/code example"
+    },
+    {
+      "id": "post-176-2",
+      "post_id": 176,
+      "article": "/2006/03/11/how-to-limit-table-cell-height-gmail-style/",
+      "language": "css",
+      "captured": "[code lang=&#8221;css&#8221;].tbl {<br />\n\ttable-layout:fixed;<br />\n\tborder-top: 5px solid #333;<br />\n\tborder-collapse: collapse;<br />\n\tbackground: #fff;<br />\n\t }<br />\n.tbl td {<br />\n\tborder-bottom: 1px dashed #333;<br />\n\tpadding: 2px 5px;<br />\n\ttext-overflow:ellipsis;<br />\n\toverflow:hidden;<br />\n\twhite-space:nowrap;<br />\n } [/code]",
+      "code": ".tbl {\n\ttable-layout:fixed;\n\tborder-top: 5px solid #333;\n\tborder-collapse: collapse;\n\tbackground: #fff;\n\t }\n.tbl td {\n\tborder-bottom: 1px dashed #333;\n\tpadding: 2px 5px;\n\ttext-overflow:ellipsis;\n\toverflow:hidden;\n\twhite-space:nowrap;\n }",
+      "source": "2007 database; original pre/code example"
+    }
+  ],
+  "gists": {
+    "https://gist.github.com/jesperronn/8c5fe0d78f77adc7320f.js": {
+      "post_id": 1781,
+      "article": "/2015/12/13/ruby-make-list-minimum-length/",
+      "url": "https://gist.github.com/jesperronn/8c5fe0d78f77adc7320f",
+      "revision": "bd3243090e2f5cea5d60b6fb9770553eb9303453",
+      "files": [
+        {
+          "name": "fill_up_to.rb",
+          "language": "ruby",
+          "code": "MIN_COUNT = 2\n\n# Naïve implementation, just return whatever number I need\ndef sum_up_a(existing)\n  return 2 if existing == 0\n  return 1 if existing == 1\n  return 0\nend\n\nsum_up_a(0)   # => 2\nsum_up_a(1)   # => 1\nsum_up_a(2)   # => 0\nsum_up_a(3)   # => 0\nsum_up_a(10)  # => 0\n\n\n# slightly improved with less conditionals\ndef sum_up_b(existing)\n  return 0 if existing >= MIN_COUNT\n  MIN_COUNT - existing\nend\n\nsum_up_b(0)   # => 2\nsum_up_b(1)   # => 1\nsum_up_b(2)   # => 0\nsum_up_b(3)   # => 0\nsum_up_b(10)  # => 0\n\n\n# my favorite: return the biggest number either 0 or the difference\n# Works well because difference is only positive for numbers where I \n# need some extra rows\ndef sum_up_c(existing)\n  [MIN_COUNT - existing, 0].max \nend\n\nsum_up_c(0)   # => 2\nsum_up_c(1)   # => 1\nsum_up_c(2)   # => 0\nsum_up_c(3)   # => 0\nsum_up_c(10)  # => 0\n",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/8c5fe0d78f77adc7320f/raw/52467f8b13e4cf9986f5b1730367ebaed4404203/fill_up_to.rb",
+          "sha256": "3aa017818d6b1f1444bf0ba8ef29e75843749de9764ff21b17384f53799afe32"
+        }
+      ]
+    },
+    "https://gist.github.com/jesperronn/174cea58433d2f06968f.js": {
+      "post_id": 1759,
+      "article": "/2015/04/15/change-history-of-svn-repository/",
+      "url": "https://gist.github.com/jesperronn/174cea58433d2f06968f",
+      "revision": "0c07c4a67dac3e13ebf84ba04b3d63be17818999",
+      "files": [
+        {
+          "name": "svn_create.sh",
+          "language": "shell",
+          "code": "#!/usr/bin/env bash\n# set -x\n# script here will create new subversion repository (file based).\n# then it will make 10 commits\n# Then we will manipulate the commit dates of the ten commits\n\nSTART_FOLDER=$(pwd)\nREPO=repo02\nWD=working2\nHOOKFILE=$REPO/hooks/pre-revprop-change\n# svn repository\nsvnadmin create $REPO\n\necho '#!/usr/bin/env bash' > $HOOKFILE\necho 'exit 0' >> $HOOKFILE\nchmod +x $HOOKFILE\n\n\n#checkout a working copy\n\ncd \"$START_FOLDER\"\n\nsvn checkout \"file://$START_FOLDER/$REPO\" \"$WD\"\ncd \"$START_FOLDER\"\ncd \"$WD\"\n\ntouch README.txt\nsvn add README.txt\n\nfor i in 1 2 3 4 5 6 7 8 9 10\ndo\n   echo \"line $i\" >> README.txt\n   svn ci -m \"commit number $i (originally created $(date +\"%Y-%m-%d %T\"))\"\ndone\n\nsvn update\nsvn log\n",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/174cea58433d2f06968f/raw/d7d9d4ec3a9426196cb9a34f8385352aca08291d/svn_create.sh",
+          "sha256": "ec540e3454ae545241aa0d9e59a631e032e184df86bff0772cdc4f3add62165f"
+        },
+        {
+          "name": "svn_modify.sh",
+          "language": "shell",
+          "code": "#!/usr/bin/env bash\n# \n# We have 10 commits in a repository. Lets set commit dates to May 1st, 1981-1990\n#\n# set -x\n\nSTART_FOLDER=$(pwd)\nWD=working2\n\n\ncd \"$START_FOLDER\"\ncd \"$WD\"\n\nfor i in 1 2 3 4 5 6 7 8 9 10\ndo\n  YEAR=$(echo \"1980 + $i\" | bc )\n  svn propset --revprop -r $i  svn:date \"$YEAR-05-01T10:00:00.000000Z\"\ndone\n\nsvn update\n",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/174cea58433d2f06968f/raw/970a0252cb630d488a9db5892eb20e495180b309/svn_modify.sh",
+          "sha256": "b234cea866004fbdd6cfe065a96ef06771c0cf7bc36107237bc46e37bfa0d7eb"
+        }
+      ]
+    },
+    "https://gist.github.com/1222965.js?file=WTF.java": {
+      "post_id": 1492,
+      "article": "/2011/09/16/java-friday-fun-wtf-annotations-in-code/",
+      "url": "https://gist.github.com/jesperronn/1222965",
+      "revision": "75b3c000966a9920c2c58e29421ee37256038550",
+      "files": [
+        {
+          "name": "WTF.java",
+          "language": "java",
+          "code": "@Retention(RetentionPolicy.SOURCE)\n@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.LOCAL_VARIABLE})\npublic @interface WTF {\n\n    /**\n     * Optionally specify <code>explain</code>, and write why you dont understand this annotated element\n     */\n    String explain() default \"\";\n\n    /**\n     * Optionally add <code>explanation</code>, and to explain why and how the element should be used\n     */\n    @Deprecated\n    String  explanation() default \"\";\n}\n",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/1222965/raw/7e326c3107375a550c0da12eb34a88a40580f5eb/WTF.java",
+          "sha256": "245aaf1350ea60f49020d39ada8e4d09d5db086a59a4bb10ebb9c615f7a28cee"
+        }
+      ]
+    },
+    "https://gist.github.com/848907.js?file=delete_svn_subfolders.reg": {
+      "post_id": 1414,
+      "article": "/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/",
+      "url": "https://gist.github.com/jesperronn/848907",
+      "revision": "66427a7b4a4046e5aa0e0c2aea6b160ac34690bc",
+      "files": [
+        {
+          "name": "delete_svn_subfolders.reg",
+          "language": "windows registry entries",
+          "code": "Windows Registry Editor Version 5.00\n;\n; Running this file will give you an extra context menu item in Windows Explorer\n; \"Delete SVN folders\"\n;\n; For the selected folder, it will remove all subfolders named \".svn\" and their content\n; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/\n;\n; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )\n;\n;\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Folder\\shell\\DeleteSVN]\n@=\"Delete SVN Folders\"\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Folder\\shell\\DeleteSVN\\command]\n@=\"cmd.exe /c \\\"TITLE Removing SVN Folders in %1 && FOR /r \\\"%1\\\" %%f IN (.svn) DO RD /s /q \\\"%%f\\\" \\\"\"\n",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/848907/raw/aff791386924bcc75308f6bf6a18e4646d1646e9/delete_svn_subfolders.reg",
+          "sha256": "7583b39a4a42285a6cc986460c3291931323fb197ea922166a78cb9c974f6a6b"
+        }
+      ]
+    },
+    "http://gist.github.com/612402.js": {
+      "post_id": 1361,
+      "article": "/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/",
+      "url": "https://gist.github.com/jesperronn/612402",
+      "revision": "79c24f9b9269c8b65c829e0bd1df0034d0805075",
+      "files": [
+        {
+          "name": "com.google.gwt.template.binder.java",
+          "language": "java",
+          "code": "/* add this to IntelliJ Idea \"File>Settings> Live templates\"\n *\n * Abbreviation: binder\n * Group:        user\n * Description:  GWT UiBinder bootstrapping on existing class\n *\n */\n\n    @com.google.gwt.uibinder.client.UiTemplate(\"$CLASS$.ui.xml\")\n    interface Binder extends com.google.gwt.uibinder.client.UiBinder<com.google.gwt.user.client.ui.HTMLPanel,$CLASS$> {\n    }\n\n    private static Binder ourUiBinder = GWT.create(Binder.class);\n\n    //public $CLASS$() {\n    //    com.google.gwt.user.client.ui.HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);\n    //}\n",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/612402/raw/025b5d1e020b9c9580721f0e21e87912a1b8fa15/com.google.gwt.template.binder.java",
+          "sha256": "b99361ab5c2777b4755a4c2c95118f56553a2db58db7958c76f8513ca320fc7f"
+        },
+        {
+          "name": "com.google.gwt.template.file.uibinder.xml",
+          "language": "xml",
+          "code": "<!-- \n  add this to IntelliJ Idea \"File > Settings > File templates\"\n  \"Templates\" tab\n  Name:      GWT UI binder\n  Extension: xml\n\n-->\n<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'\n             xmlns:g='urn:import:com.google.gwt.user.client.ui'>\n  <${ROOT_TAG_NAME}>\n    \n  </${ROOT_TAG_NAME}>\n</ui:UiBinder>",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/612402/raw/11c6c5ea396fd8d74ee8cf471cefb84034888d66/com.google.gwt.template.file.uibinder.xml",
+          "sha256": "2b317f065ad16384777d916fd15e16697260ed67c7f92068d57858de0c564ab1"
+        }
+      ]
+    },
+    "http://gist.github.com/432704.js": {
+      "post_id": 1354,
+      "article": "/2010/06/10/windows-svn-pre-commit-hook/",
+      "url": "https://gist.github.com/jesperronn/432704",
+      "revision": "ba29b920034d1a997b119a13740e9e1458f43455",
+      "files": [
+        {
+          "name": "pre-commit.bat",
+          "language": "batchfile",
+          "code": "REM Subversion pre-commit hook for Windows machine\nREM put this in your SVN repository folder /hooks/pre-commit.bat\nREM we use it with svn version \nREM http://stackoverflow.com/questions/869248/windows-pre-commit-hook-for-comment-length-subversion\n\n@echo off  \n:: Stops commits that have empty log messages.        \n@echo off  \n\nsetlocal  \n\nrem Subversion sends through the path to the repository and transaction id  \nset REPOS=%1  \nset TXN=%2           \n\nrem line below ensures at least one character \".\", 5 characters require change to \".....\"\nsvnlook log %REPOS% -t %TXN% | findstr . > nul  \nif %errorlevel% gtr 0 (goto err) else exit 0  \n\n:err  \necho. 1>&2  \necho Your commit has been blocked because you didn't enter a comment. 1>&2  \necho Write a log message describing the changes made and try again. 1>&2\necho Thanks 1>&2\nexit 1\n",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/432704/raw/0ccbfe6e7b7f87bd41a5838c637a7b4f223759e8/pre-commit.bat",
+          "sha256": "7c48c1a14ed780673df6ee5a512376a3dd1af10d8e710e40faa10c28ff30c265"
+        }
+      ]
+    },
+    "http://gist.github.com/382105.js": {
+      "post_id": 1341,
+      "article": "/2010/04/28/seeding-rails-app-with-restful-address-data/",
+      "url": "https://gist.github.com/jesperronn/382105",
+      "revision": "0926b27e975e0235b88db895c57f89ff5a746129",
+      "files": [
+        {
+          "name": "seeds.rb",
+          "language": "ruby",
+          "code": "# This file should contain all the record creation needed to seed the database with its default values.\n# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).\n#\n\nclass Seeds\n  require 'httparty'\n  include HTTParty\n  base_uri 'oiorest.dk/danmark/'\nend\n\nKommune.delete_all\n\nregioner = Seeds.get('/regioner')['regioner']['region']\nRegion.transaction do \n  Region.delete_all\n  regioner.each do |item| \n    r = Region.new(:name => item['navn'])\n    r.id = item['nr']\n    r.save\n  end\nend\n\nRegion.all.each do |r|\n  kommuner = Seeds.get(\"/regioner/#{r.id}/kommuner\")['kommuner']['kommune']\n  Kommune.transaction do\n    kommuner.each do |item|\n      k = Kommune.new( :name => item['navn'])\n      k.region_id = r.id \n      k.id = item['nr']\n      k.save\n    end\n  end\n  \nend",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/382105/raw/1dc44d901bf23dca826601f38017d07d9602e41c/seeds.rb",
+          "sha256": "0724c50b109aa74b9e0e6a6628435352a60a5f9273f07c38e0cad6a24b10fec1"
+        }
+      ]
+    },
+    "http://gist.github.com/297427.js": {
+      "post_id": 1270,
+      "article": "/2010/02/07/rake-task-to-validate-all-items-on-all-models/",
+      "url": "https://gist.github.com/jesperronn/297427",
+      "revision": "39c056264acd5b949335da1c5c8f045dd82d8d35",
+      "files": [
+        {
+          "name": "validate_models.rake",
+          "language": "ruby",
+          "code": "#put this file in /lib/tasks and run `rake db:models:validate`\n#created 2010-02-07 by Jesper Rønn-Jensen\nrequire 'find'\n\nnamespace :db do\n  namespace :models do\n    desc 'Dumps all models into fixtures.'\n    task :validate => :environment do\n      models = []\n      Find.find(RAILS_ROOT + '/app/models') do |path|\n        unless File.directory?(path) then models << path.match(/(\\w+).rb/)[1] end\n      end\n  \n      puts \"Found models: \" + models.join(', ')\n      errors = []\n      models.each do |m|\n        puts \"Validating #{m.camelize} items\"\n#        m.camelize.constantize.transaction do\n          m.camelize.constantize.all.each do |item|\n            if item.valid?\n              print \".\"\n            else\n              print \"E\"\n              errors << item\n            end\n          end\n#        end#end transaction\n        puts \"\"\n      end\n      errors.each do |item|\n        puts \"ERROR in #{item.inspect}\"\n      end\n    end#end task\n  end\nend",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/297427/raw/159f9ce85c3aa04c2653cbb229d6cf352926599c/validate_models.rake",
+          "sha256": "ee60b2838e39eb4dae888e9649d18629aabfcf1d8726096daa5cde60ad6b3faa"
+        }
+      ]
+    },
+    "http://gist.github.com/246571.js": {
+      "post_id": 1245,
+      "article": "/2009/12/01/run-tiny-webserver-from-any-directory/",
+      "url": "https://gist.github.com/jesperronn/246571",
+      "revision": "e298fb88adda5e5779db371cb8495fe89d70e21d",
+      "files": [
+        {
+          "name": "server.rb",
+          "language": "ruby",
+          "code": "#!/usr/bin/env ruby\n# Modified from http://yehudakatz.com/2007/08/06/webrick-anywhere/\nrequire 'webrick'\ninclude WEBrick\n\ns = HTTPServer.new(\n  :Port            => ARGV[0] || 2000,\n  :DocumentRoot    => Dir::pwd\n)\n\n## mount subdirectories\ns.mount(\"\",\n        HTTPServlet::FileHandler, \".\",\n        true)  #<= allow to show directory index.\n\ntrap(\"INT\"){ s.shutdown }\ns.start",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/246571/raw/689768233c2f93ad01a48d7316e3f79f6a2f8ef6/server.rb",
+          "sha256": "758f97976e4358f407ead333a6acc132149007015ff0ff08c70308c409f9098e"
+        }
+      ]
+    },
+    "http://gist.github.com/227952.js": {
+      "post_id": 1235,
+      "article": "/2009/11/06/greasemonkey-script-for-removing-scrollbars-on-al-anon-page/",
+      "url": "https://gist.github.com/jesperronn/227952",
+      "revision": "d680e1dab828eebe6ebfe4c974f5742b1539bec7",
+      "files": [
+        {
+          "name": "wwwal-anondk_no_inline_s.user.js",
+          "language": "javascript",
+          "code": "// ==UserScript==\n// @name           www.al-anon.dk Remove inline scroll so that page content prints properly\n// @namespace      http://userscripts.org/users/103819\n// @description    remove scroll from al-anon pages\n// @include        http://al-anon.dk/*\n// @require        http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\n// ==/UserScript==\n\n$('#framen').css({'height': 'auto', width: 'auto'});\n$('<style media=\"print\">#menu {display: none;}</style>').appendTo('head');",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/227952/raw/6a77ddcc3b26be1cb518506f10eea509ee605073/wwwal-anondk_no_inline_s.user.js",
+          "sha256": "1eb15242dae04f4212d9881d049c77436b07aafc18ec8fd2767eb735a2db4acc"
+        }
+      ]
+    },
+    "http://gist.github.com/199558.js": {
+      "post_id": 1176,
+      "article": "/2009/10/05/tiny-script-to-extract-html-structure-from-page/",
+      "url": "https://gist.github.com/jesperronn/199558",
+      "revision": "200af736cdc9dbea29c5ea7e5e8740107e6b12a3",
+      "files": [
+        {
+          "name": "parsepage.rb",
+          "language": "ruby",
+          "code": "#!/usr/bin/env ruby\n# Script that wraps grabbing and selecting stuff from HTML page via CSS selectors\n# Created 2009-10-01 by Jesper Rønn-Jensen, www.justaddwater.dk\n#\n# For usage, run parsepage.rb without arguments.\n#\n# Feel free to modify, fork and improve as long as you commit your changes back to me :)\ndef usage\n  <<-EOF #.gsub('    ', '')\n    === USAGE ===\n    parsepage.rb [uri] [css_selector]\n\n    === example ===\n    parsepage.rb \"http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/\" \"h3\"\n\n\n    U=http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/\n    parsepage.rb $U \"h1,h2,h3\"\n\n\n    === OPTIONS ===\n    --text-only      lists only text from matching elements\n    --list-html      lists all matches as HTML <li> elements\n    --count          Count number of matches\n  EOF\nend\n\n\nprint usage if ARGV.empty?\n\n\nputs ARGV.inspect\nrequire \"rubygems\"\nrequire \"nokogiri\"\nrequire \"open-uri\"\n\ndoc = Nokogiri::HTML(open(ARGV[0]))\nmatches =  doc.css(ARGV[1])\n\nresult = []\nresult << \"no matches found\" if matches.empty?\n\n\nif (ARGV.include?('--text-only'))\n  result << matches.map{|element| \"#{element.text}\"}\nelsif  (ARGV.include?('--html-list'))\n  result << matches.map{|element| \"<li>#{element.text}<li>\"}\nelse\n  result << matches.to_s\nend\n\nresult << ''\nresult << \"TOTAL (#{matches.size} match#{'es' if matches.size != 1} found for '#{ARGV[1]}')\" if (ARGV.include?('--count'))\nputs result.join(\"\\n\")\n\n\n# TODO stuff that would be great to support\n#\n# * support for local files\n# * refactor so this could be used to return a Nokogiri object with selection via irb\n#\n",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/199558/raw/887548715248383f5905c5b37f2a2c0d270a2039/parsepage.rb",
+          "sha256": "e6837280d910db8bde4642064820388850f31f7474f54e7516ced1327e023524"
+        }
+      ]
+    },
+    "http://gist.github.com/179083.js": {
+      "post_id": 1128,
+      "article": "/2009/09/01/selection-groups-in-rails-made-less-cumbersome/",
+      "url": "https://gist.github.com/jesperronn/179083",
+      "revision": "ed4df9fcbfa2ee5938fa70533d20f25b70a87ffd",
+      "files": [
+        {
+          "name": "form_options_helper_to_add_grouped_select.rb",
+          "language": "ruby",
+          "code": "### lib/form_options_helper.rb \nrequire 'action_view/helpers/form_helper'\nmodule ActionView\n  module Helpers\n    module FormOptionsHelper\n \n      ##\n      def grouped_select(object, method, choices, options = {}, html_options = {})\n        InstanceTag.new(object, method, self, options.delete(:object)).to_grouped_select_tag(choices, options, html_options)\n      end\n      \n    end\n    \n    class InstanceTag\n      include FormOptionsHelper\n      def to_grouped_select_tag(choices, options, html_options)\n        html_options = html_options.stringify_keys\n        add_default_name_and_id(html_options)\n        value = value(object)\n        selected_value = options.has_key?(:selected) ? options[:selected] : value\n        disabled_value = options.has_key?(:disabled) ? options[:disabled] : nil\n        content_tag(\"select\", add_options(grouped_options_for_select(choices, :selected => selected_value, :disabled => disabled_value), options, selected_value), html_options)\n      end\n \n    end\n    \n    class FormBuilder\n      def grouped_select(method, choices, options = {}, html_options = {})\n        @template.grouped_select(@object_name, method, choices, objectify_options(options), @default_options.merge(html_options))\n      end\n    end\n  end\nend\n\n### config/environment.rb\nrequire 'form_options_helper'\n\n### app/models/expense_type.rb \nclass ExpenseType < ActiveRecord::Base\n  validates_uniqueness_of :name\n  \n  #returns grouped options split in 'popular' and 'all'\n  def self.groups\n    all_types = self.all.map{|t| [t.name, t.id]}\n    [\n      ['popular', all_types[0..2]],\n      ['all', all_types]\n    ]\n  end\n  \nend\n\n\n### app/views/expense_report/_expense_item.rb\n<li class=\"expense_item\">\n  <%= expense.grouped_select :expense_type_id, ExpenseType.groups, {:include_blank => true}, {:class => 'expense_type'} %>\n  ...\n</li>",
+          "source_url": "https://gist.githubusercontent.com/jesperronn/179083/raw/d430ee417a262d16e6190870a507b42491a3073b/form_options_helper_to_add_grouped_select.rb",
+          "sha256": "d1faec7a5cf8b530a98448e124ecd3c27cc6a0a5873f7bb77e7e4956db715201"
+        }
+      ]
+    }
+  },
+  "demos": [
+    {
+      "path": "/wp-content/uploads/2006/03/fixed-table-cells-notworking.html",
+      "behavior": "Wrap each slimTable cell in an 18px-high, clipped div, as in the original inline script. Uses native DOM methods instead of the missing Prototype dependency."
+    },
+    {
+      "article": "/2007/09/27/undo-not-confirmation-end-of-discussion/",
+      "source_url": "http://humanized.com/weblog/images/resources/undo/todo.html",
+      "status": "Local adaptation of the recovered 2007 demo; delete/undo, checkbox state, and reordering work without server requests. The Done submission control stays disabled.",
+      "archived_source": "https://web.archive.org/web/20071010224109id_/http://humanized.com/weblog/images/resources/undo/todo.html",
+      "local_path": "/archive-assets/demos/undo.html"
+    }
+  ]
+}

@@ -115,7 +115,22 @@ img.emoji {
 <p><a href="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg"><img alt="" class="aligncenter size-medium wp-image-1493" height="282" sizes="(max-width: 300px) 100vw, 300px" src="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg" srcset="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg 300w, /wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg 500w" title="focus-shift-cartoon-wtf-per-minute-wtfm" width="300"/></a></p>
 <p>IN this spirit, i created a quick @WTF annotation for Java.</p>
 <p>Besides being completely useless (its removed at compile time), its only purpose is to give developers a new way to express themselves in code.</p>
-<p></p>
+<p><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1492-1"><code>@Retention(RetentionPolicy.SOURCE)
+@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.LOCAL_VARIABLE})
+public @interface WTF {
+
+    /**
+     * Optionally specify &lt;code&gt;explain&lt;/code&gt;, and write why you dont understand this annotated element
+     */
+    String explain() default "";
+
+    /**
+     * Optionally add &lt;code&gt;explanation&lt;/code&gt;, and to explain why and how the element should be used
+     */
+    @Deprecated
+    String  explanation() default "";
+}
+</code></pre><p class="archive-code-source">WTF.java · <a href="https://gist.github.com/jesperronn/1222965/75b3c000966a9920c2c58e29421ee37256038550">Original gist</a></p></div></p>
 <p>The cartoon states “The only valid measurement of code quality: WTFs/minute”. With the &lt;code&gt;@WTF&lt;/code&gt; annotations, I would like to take it a little further. By annotating the code, you can actually encourage colleagues to help you fix it.</p>
 <p>The best fix for WTF-code is of course to refactor, so that it becomes readable.</p>
 <p>Interesting article:</p>

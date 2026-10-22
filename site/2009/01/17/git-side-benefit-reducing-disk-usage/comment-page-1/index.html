@@ -113,41 +113,45 @@ img.emoji {
 			<div class="entry">
 				<p>A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed.<br/>
 I created two checkouts of a svn project — one using traditional svn and one using git (which can actually clone a svn repos — see explanation below).</p>
-<p>[code lang=”bash”][~/my-projects]  du -hd 0 \<br/>
-&gt; berammelse berammelse.git \<br/>
-&gt; dokboks dokboks.git       \<br/>
-&gt; intrastat intrastat.git   \<br/>
-&gt; kompetenceregister k2.git \<br/>
-&gt; ourpeople ourpeople.git   \<br/>
-&gt; let0004 let0004.git</p>
-<p>43M	berammelse<br/>
-38M	berammelse.git<br/>
-63M	dokboks<br/>
-11M	dokboks.git<br/>
-53M	intrastat<br/>
-34M	intrastat.git<br/>
-144M	kompetenceregister<br/>
-47M	kompetenceregister.git<br/>
-118M	ourpeople<br/>
-151M	ourpeople.git<br/>
-163M	let0004<br/>
-98M	let0004.git<br/>
-[/code]<br/>
+<pre class="archive-code" data-recovery-code="post-1014-1"><code class="language-bash">[~/my-projects]  du -hd 0 \
+&gt; berammelse berammelse.git \
+&gt; dokboks dokboks.git       \
+&gt; intrastat intrastat.git   \
+&gt; kompetenceregister k2.git \
+&gt; ourpeople ourpeople.git   \
+&gt; let0004 let0004.git
+
+43M	berammelse
+38M	berammelse.git
+63M	dokboks
+11M	dokboks.git
+53M	intrastat
+34M	intrastat.git
+144M	kompetenceregister
+47M	kompetenceregister.git
+118M	ourpeople
+151M	ourpeople.git
+163M	let0004
+98M	let0004.git</code></pre><br/>
 For any project I tried this, Git uses significantly less disk space. It’s just a side effect, I know. But more important: The git version has all the logfile history offline and that makes rolling forward/back much faster :)<br/>
-FYI i’m using my version of <a href="http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/  ">Dr. Nic’s “gitify”</a> command that wraps a “git svn” command. This way I can use git locally and then re-commit into svn when done.</p>
-<p>[code lang=”ruby”]#!/usr/bin/env ruby -wKU<br/>
-# command from<br/>
-# http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/<br/>
-# Install with<br/>
-# sudo port install git-core +svn</p>
-<p># get svn info location<br/>
-svnurl = `svn info | grep “^URL:”`.gsub(‘URL: ‘,”).chomp</p>
-<p># project = basename<br/>
-project = File.basename(Dir.pwd)</p>
-<p>puts cmd = “git svn clone #{svnurl} ../#{project}.git”</p>
-<p>`#{cmd}`</p>
-<p>puts “(‘git svn rebase’ merges changes from svn.\n ‘git svn dcommit’ updates svn with your git commits)”<br/>
-[/code]</p>
+FYI i’m using my version of <a href="http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/  ">Dr. Nic’s “gitify”</a> command that wraps a “git svn” command. This way I can use git locally and then re-commit into svn when done.<p></p>
+<pre class="archive-code" data-recovery-code="post-1014-2"><code class="language-ruby">#!/usr/bin/env ruby -wKU
+# command from
+# http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/
+# Install with
+# sudo port install git-core +svn
+
+# get svn info location
+svnurl = `svn info | grep "^URL:"`.gsub('URL: ', '').chomp
+
+# project = basename
+project = File.basename(Dir.pwd)
+
+puts cmd = "git svn clone #{svnurl} ../#{project}.git"
+
+`#{cmd}`
+
+puts "('git svn rebase' merges changes from svn.\n 'git svn dcommit' updates svn with your git commits)"</code></pre>
 	
 					
 				<p class="postmetadata alt">

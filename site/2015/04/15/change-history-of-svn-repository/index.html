@@ -134,7 +134,64 @@ img.emoji {
 <p>I created a combined script, which has has the steps mentioned above, and also iterates to change all dates in a repository:</p>
 <p> </p>
 <p> </p>
-<h3>The result</h3>
+<h3><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1759-1"><code>#!/usr/bin/env bash
+# set -x
+# script here will create new subversion repository (file based).
+# then it will make 10 commits
+# Then we will manipulate the commit dates of the ten commits
+
+START_FOLDER=$(pwd)
+REPO=repo02
+WD=working2
+HOOKFILE=$REPO/hooks/pre-revprop-change
+# svn repository
+svnadmin create $REPO
+
+echo '#!/usr/bin/env bash' &gt; $HOOKFILE
+echo 'exit 0' &gt;&gt; $HOOKFILE
+chmod +x $HOOKFILE
+
+
+#checkout a working copy
+
+cd "$START_FOLDER"
+
+svn checkout "file://$START_FOLDER/$REPO" "$WD"
+cd "$START_FOLDER"
+cd "$WD"
+
+touch README.txt
+svn add README.txt
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+   echo "line $i" &gt;&gt; README.txt
+   svn ci -m "commit number $i (originally created $(date +"%Y-%m-%d %T"))"
+done
+
+svn update
+svn log
+</code></pre><p class="archive-code-source">svn_create.sh · <a href="https://gist.github.com/jesperronn/174cea58433d2f06968f/0c07c4a67dac3e13ebf84ba04b3d63be17818999">Original gist</a></p><pre class="archive-code" data-recovery-code="gist-1759-2"><code>#!/usr/bin/env bash
+# 
+# We have 10 commits in a repository. Lets set commit dates to May 1st, 1981-1990
+#
+# set -x
+
+START_FOLDER=$(pwd)
+WD=working2
+
+
+cd "$START_FOLDER"
+cd "$WD"
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+  YEAR=$(echo "1980 + $i" | bc )
+  svn propset --revprop -r $i  svn:date "$YEAR-05-01T10:00:00.000000Z"
+done
+
+svn update
+</code></pre><p class="archive-code-source">svn_modify.sh · <a href="https://gist.github.com/jesperronn/174cea58433d2f06968f/0c07c4a67dac3e13ebf84ba04b3d63be17818999">Original gist</a></p></div>The result</h3>
 <p>The result is a fine modified commit history which could look like this</p>
 <blockquote>
 <pre>$ svn log

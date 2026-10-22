@@ -29,3 +29,12 @@ Some individual works have explicit licenses. For example:
 
 Preserve and consult the notices attached to each work. The theme's GPL notice
 does not constitute a blanket license for all archived content.
+
+Recovered gist examples retain their source comments and link to the recorded
+GitHub revision. Their original authorship and any existing notices still apply.
+Recovery sources and file hashes are recorded in `data/recovery.json`.
+
+The local undo demonstration is a new native-DOM adaptation of Aza Raskin's
+2007 Humanized example. The source snapshot identifies Humanized, Inc. as its
+copyright holder. The demo credits and links to that archived example; no
+WordPress/PHP or legacy third-party JavaScript runtime was copied into it.

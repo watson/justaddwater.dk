@@ -115,36 +115,33 @@ img.emoji {
 <p>Visual Studio<br/>
 I added the methods below in the Macro editor (Tools &gt; Macros &gt; Macros IDE)</p>
 <p>Stop the build on error. When an error occurs I am notified instantly and able to fix faster.<br/>
-[code lang=”vb”]    REM Stop the build process when the first error is encountered<br/>
-    Private Sub BuildEvents_OnBuildProjConfigDone(ByVal Project As String, ByVal ProjectConfig As String, ByVal Platform As String, ByVal SolutionConfig As String, ByVal Success As Boolean) Handles BuildEvents.OnBuildProjConfigDone<br/>
-        If Success = False Then<br/>
-            ‘The build failed…cancel any further builds.<br/>
-            DTE.ExecuteCommand(“Build.Cancel”)<br/>
-        End If<br/>
-    End Sub<br/>
-[/code]</p>
+</p><pre class="archive-code" data-recovery-code="post-958-1"><code class="language-vb">REM Stop the build process when the first error is encountered
+Private Sub BuildEvents_OnBuildProjConfigDone(ByVal Project As String, ByVal ProjectConfig As String, ByVal Platform As String, ByVal SolutionConfig As String, ByVal Success As Boolean) Handles BuildEvents.OnBuildProjConfigDone
+If Success = False Then
+'The build failed...cancel any further builds.
+DTE.ExecuteCommand("Build.Cancel")
+End If
+End Sub</code></pre>
 <p>Timestamp on build complete. This is a great helper because I usually don’t waste braincycles on keeping track on when I last build the code. The timestamp occurs below the output which makes it instantly clear if it is necessary to rebuild. This usually saves 10-20 daily rebuilds each wasting one to four minutes.<br/>
-[code lang=”vb”]    REM Output timestamp in build panel on build complete<br/>
-    Private Sub BuildEvents_OnBuildDone(ByVal Scope As EnvDTE.vsBuildScope, ByVal Action As EnvDTE.vsBuildAction) Handles BuildEvents.OnBuildDone<br/>
-        Dim win As Window = DTE.Windows.Item(EnvDTE.Constants.vsWindowKindOutput)<br/>
-        Dim ow As OutputWindow = win.Object<br/>
-        Dim owPane As OutputWindowPane<br/>
-        For i As Integer = 1 To ow.OutputWindowPanes.Count<br/>
-            owPane = ow.OutputWindowPanes.Item(i)<br/>
-            If owPane.Name = “Build” Then<br/>
-                owPane.Activate()<br/>
-                owPane.OutputString(DateTime.Now.ToString)<br/>
-                owPane.OutputString(Environment.NewLine)<br/>
-            End If<br/>
-        Next<br/>
-    End Sub<br/>
-[/code]</p>
+</p><pre class="archive-code" data-recovery-code="post-958-2"><code class="language-vb">REM Output timestamp in build panel on build complete
+Private Sub BuildEvents_OnBuildDone(ByVal Scope As EnvDTE.vsBuildScope, ByVal Action As EnvDTE.vsBuildAction) Handles BuildEvents.OnBuildDone
+Dim win As Window = DTE.Windows.Item(EnvDTE.Constants.vsWindowKindOutput)
+Dim ow As OutputWindow = win.Object
+Dim owPane As OutputWindowPane
+For i As Integer = 1 To ow.OutputWindowPanes.Count
+owPane = ow.OutputWindowPanes.Item(i)
+If owPane.Name = "Build" Then
+owPane.Activate()
+owPane.OutputString(DateTime.Now.ToString)
+owPane.OutputString(Environment.NewLine)
+End If
+Next
+End Sub</code></pre>
 <p>Creating/copying websites in IIS. (Local Windows XP development). In our project we had to add a handful of different websites. Using the helper tool called “adsutil.vbs” in Inetpub/AdminScripts can help:</p>
-<p>[code lang=”dos”]cd C:\Inetpub\AdminScripts\<br/>
-CScript adsutil.vbs enum w3svc /p<br/>
-[/code]<br/>
+<pre class="archive-code" data-recovery-code="post-958-3"><code class="language-dos">cd C:\Inetpub\AdminScripts\
+CScript adsutil.vbs enum w3svc /p</code></pre><br/>
 This gives you a list of each website with an index, that you can use for copying websites. This way, you add only one website, and then copy it. Much easier.<br/>
-<code>CScript adsutil.vbs copy W3SVC/1 W3SVC/2</code></p>
+<code>CScript adsutil.vbs copy W3SVC/1 W3SVC/2</code><p></p>
 <p>Now you have added a new site and all you have to do is go into the IIS Manager and configure it. You can configure the site from the command prompt as well, but usually it’s a one-time effort and it’s faster to do that from the manager.</p>
 	
 					

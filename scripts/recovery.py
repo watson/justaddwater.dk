@@ -1,0 +1,98 @@
+"""Selected public material recovered from backups and original code embeds.
+
+The private SQL dump and WordPress installation are never build inputs. Only
+the reviewed snippets, asset files, and provenance in data/recovery.json ship.
+"""
+from functools import lru_cache
+import html
+import json
+from pathlib import Path
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+SHORTCODE = re.compile(r'\[code\b[^\]]*\].*?\[/code\]', re.I | re.S)
+UNDO_URL = 'http://humanized.com/weblog/images/resources/undo/todo.html'
+UNDO_PATH = '/archive-assets/demos/undo.html'
+TABLE_DEMO = '/wp-content/uploads/2006/03/fixed-table-cells-notworking.html'
+
+
+@lru_cache
+def recovery_data():
+    return json.loads((ROOT / 'data/recovery.json').read_text())
+
+
+def code_key(source):
+    return ' '.join(html.unescape(source).split())
+
+
+@lru_cache
+def code_lookup():
+    return {code_key(block['captured']): block for block in recovery_data()['code_blocks']}
+
+
+def code_html(code, language='', key=''):
+    css = ' class="language-' + html.escape(language, quote=True) + '"' if language else ''
+    identifier = ' data-recovery-code="' + html.escape(key, quote=True) + '"' if key else ''
+    return '<pre class="archive-code"' + identifier + '><code' + css + '>' + html.escape(code, quote=False) + '</code></pre>'
+
+
+def restore_code(raw):
+    """Escape known examples before an HTML parser can execute/rearrange them."""
+    if isinstance(raw, bytes) and b'[code' not in raw.lower():
+        return raw
+    source = raw.decode('utf-8') if isinstance(raw, bytes) else raw
+    pattern = r'(?P<open><(?:p|pre)\b[^>]*>\s*)?(?P<snippet>\[code\b[^\]]*\].*?\[/code\])(?P<close>\s*</(?:p|pre)>)?'
+
+    def replace(match):
+        block = code_lookup().get(code_key(match['snippet']))
+        if block is None:
+            return match[0]
+        result = code_html(block['code'], block['language'], block['id'])
+        # Some original shortcodes end midway through a prose paragraph.
+        if match['open'] and match['open'].startswith('<p>') and not match['close']:
+            following = source[match.end():].lstrip()
+            if following and not following.startswith('<'):
+                result += '<p>'
+        return result
+
+    return re.sub(pattern, replace, source, flags=re.I | re.S)
+
+
+def restore_gists(soup):
+    for script in list(soup.find_all('script', src=True)):
+        gist = recovery_data()['gists'].get(script['src'])
+        if gist is None:
+            continue
+        section = soup.new_tag('div', attrs={'class': 'archive-gist'})
+        for index, file in enumerate(gist['files']):
+            pre = soup.new_tag('pre', attrs={'class': 'archive-code', 'data-recovery-code': f'gist-{gist["post_id"]}-{index + 1}'})
+            code = soup.new_tag('code')
+            code.string = file['code']
+            pre.append(code)
+            section.append(pre)
+            label = soup.new_tag('p', attrs={'class': 'archive-code-source'})
+            label.append(file['name'] + ' · ')
+            link = soup.new_tag('a', href=gist['url'] + '/' + gist['revision'])
+            link.string = 'Original gist'
+            label.append(link)
+            section.append(label)
+        if not gist['files']:
+            note = soup.new_tag('p', attrs={'class': 'archive-note'})
+            note.append('The original embedded code is no longer available. ')
+            link = soup.new_tag('a', href=gist['url'])
+            link.string = 'Original gist'
+            note.append(link)
+            section.append(note)
+        script.replace_with(section)
+
+
+def restore_demos(soup, path):
+    for frame in soup.find_all('iframe', src=UNDO_URL):
+        frame['src'] = UNDO_PATH
+        frame['title'] = 'Undo demonstration by Aza Raskin'
+        frame['sandbox'] = 'allow-scripts'
+        frame['loading'] = 'lazy'
+    if path == TABLE_DEMO:
+        soup.html['data-archive-demo'] = 'table-height'
+        script = soup.new_tag('script', src='/archive-assets/demos.js', defer='defer')
+        soup.head.append(script)

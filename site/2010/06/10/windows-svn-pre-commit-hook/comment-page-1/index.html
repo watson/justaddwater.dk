@@ -115,7 +115,32 @@ img.emoji {
 <p>I wanted to set up the pre-commit hook so that commits with empty comment are automatically rejected.</p>
 <p>All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal). </p>
 <p>Here is a the pre-commit hook rewritten as a windows .bat file.</p>
-<p></p>
+<p><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1354-1"><code>REM Subversion pre-commit hook for Windows machine
+REM put this in your SVN repository folder /hooks/pre-commit.bat
+REM we use it with svn version 
+REM http://stackoverflow.com/questions/869248/windows-pre-commit-hook-for-comment-length-subversion
+
+@echo off  
+:: Stops commits that have empty log messages.        
+@echo off  
+
+setlocal  
+
+rem Subversion sends through the path to the repository and transaction id  
+set REPOS=%1  
+set TXN=%2           
+
+rem line below ensures at least one character ".", 5 characters require change to "....."
+svnlook log %REPOS% -t %TXN% | findstr . &gt; nul  
+if %errorlevel% gtr 0 (goto err) else exit 0  
+
+:err  
+echo. 1&gt;&amp;2  
+echo Your commit has been blocked because you didn't enter a comment. 1&gt;&amp;2  
+echo Write a log message describing the changes made and try again. 1&gt;&amp;2
+echo Thanks 1&gt;&amp;2
+exit 1
+</code></pre><p class="archive-code-source">pre-commit.bat · <a href="https://gist.github.com/jesperronn/432704/ba29b920034d1a997b119a13740e9e1458f43455">Original gist</a></p></div></p>
 	
 					
 				<p class="postmetadata alt">

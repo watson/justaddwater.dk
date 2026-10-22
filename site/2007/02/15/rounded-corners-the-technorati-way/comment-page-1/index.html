@@ -116,22 +116,19 @@ img.emoji {
 <p>I remember Eric Meyer mentioned this solution back at a workshop in 2005 (before he could actually tell that it was for  Technorati — the redesign was unveiled a few days later).</p>
 <h3>Technique</h3>
 <p>HTML for the box:</p>
-<pre>[code lang="html"]
-<div class="bloginfo-summary boxc">
-  <h2>..</h2>
-  <ul>
-    <li>..</li>
+<pre class="archive-code" data-recovery-code="post-550-1"><code class="language-html">&lt;div class="bloginfo-summary boxc"&gt;
+  &lt;h2&gt;..&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;..&lt;/li&gt;
     ..
-  </ul>
-  <b class="cn tr"></b>
-  <b class="cn br"></b>
-  <b class="cn tl"></b>
-  <b class="cn bl"></b>
-</div>
-[/code]</pre>
+  &lt;/ul&gt;
+  &lt;b class="cn tr"&gt;&lt;/b&gt;
+  &lt;b class="cn br"&gt;&lt;/b&gt;
+  &lt;b class="cn tl"&gt;&lt;/b&gt;
+  &lt;b class="cn bl"&gt;&lt;/b&gt;
+&lt;/div&gt;</code></pre>
 <p>The HTML is then styled with the following CSS:</p>
-<pre>[code lang="css"]
-div.bloginfo-summary {background:
+<pre class="archive-code" data-recovery-code="post-550-2"><code class="language-css">div.bloginfo-summary {background:
   url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;
   float:left;margin-bottom:20px;padding:10px;width:690px}
 /* Large radius image backgrounds */
@@ -152,7 +149,7 @@ div.bloginfo-summary {background:
        url(http://static.technorati.com/static/css/img/corners/white.gif);
        line-height: 1px;
        font-size: 1px;
-      }[/code]</pre>
+      }</code></pre>
 <p>So, graphically displayed, the <code>&lt;b&gt;</code> elements are actually positioned in each corner with no content:</p>
 <p><img alt="Technorati screenshot of box with rounded corners on faded background showing HTML elements" id="image553" src="/wp-content/uploads/2007/02/technorati-rounded-corner-html-tags-mini.png"/></p>
 <p>Note that the background-image for the faded box is one thin sliced faded image:<br/>

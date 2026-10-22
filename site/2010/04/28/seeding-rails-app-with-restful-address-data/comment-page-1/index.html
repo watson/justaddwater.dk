@@ -114,7 +114,40 @@ img.emoji {
 				<p>Grabbing data from Restful webservices has never been easier. I use this code in the Rails /db/seeds.rb file to grab data from the Danish webservice with addresses, municipalities, regions, etc.</p>
 <p>I decided to import the data into a local database to ensure it could work offline.</p>
 <p>Code from <code>/db/seeds.rb</code> file:</p>
-<p></p>
+<p><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1341-1"><code># This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+
+class Seeds
+  require 'httparty'
+  include HTTParty
+  base_uri 'oiorest.dk/danmark/'
+end
+
+Kommune.delete_all
+
+regioner = Seeds.get('/regioner')['regioner']['region']
+Region.transaction do 
+  Region.delete_all
+  regioner.each do |item| 
+    r = Region.new(:name =&gt; item['navn'])
+    r.id = item['nr']
+    r.save
+  end
+end
+
+Region.all.each do |r|
+  kommuner = Seeds.get("/regioner/#{r.id}/kommuner")['kommuner']['kommune']
+  Kommune.transaction do
+    kommuner.each do |item|
+      k = Kommune.new( :name =&gt; item['navn'])
+      k.region_id = r.id 
+      k.id = item['nr']
+      k.save
+    end
+  end
+  
+end</code></pre><p class="archive-code-source">seeds.rb · <a href="https://gist.github.com/jesperronn/382105/0926b27e975e0235b88db895c57f89ff5a746129">Original gist</a></p></div></p>
 <p>Now I can access municipalities in a grouped selectbox like so in the view code:</p>
 <pre><code>
 &lt;%

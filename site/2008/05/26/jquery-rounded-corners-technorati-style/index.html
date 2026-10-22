@@ -114,45 +114,38 @@ img.emoji {
 				<p>If you ever use <a href="/2007/02/15/rounded-corners-the-technorati-way/">rounded corners the Technorati way</a>, here is some additional code I created recently.</p>
 <p>Usually I add four non-semantic elements to each corner of a div box to round:<br/>
 HTML for the box:</p>
-<pre>[code lang="html"]
-<div class="round">
-  <h2>..</h2>
-  <ul>
-    <li>..</li>
+<pre class="archive-code" data-recovery-code="post-929-1"><code class="language-html">&lt;div class="round"&gt;
+  &lt;h2&gt;..&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;..&lt;/li&gt;
     ..
-  </ul>
-  <b class="cn tr"></b>
-  <b class="cn br"></b>
-  <b class="cn tl"></b>
-  <b class="cn bl"></b>
-</div>
-[/code]</pre>
+  &lt;/ul&gt;
+  &lt;b class="cn tr"&gt;&lt;/b&gt;
+  &lt;b class="cn br"&gt;&lt;/b&gt;
+  &lt;b class="cn tl"&gt;&lt;/b&gt;
+  &lt;b class="cn bl"&gt;&lt;/b&gt;
+&lt;/div&gt;</code></pre>
 <p>Well, what if you could just write:</p>
-<pre>[code lang="html"]
-<div class="round">
+<pre class="archive-code" data-recovery-code="post-929-2"><code class="language-html">&lt;div class="round"&gt;
 ...
-</div>
-[/code]</pre>
+&lt;/div&gt;</code></pre>
 <p>So that the round corners magic was separated semantically away from the HTML code?. This is how you can do it.</p>
 <p>The trick is to add the b-elements with jquery. This way i’ll append the rounded corners as an extra bonus for enhanced clients understanding javascript. </p>
 <p>Create a file named roundcorners.js</p>
-<pre>[code lang="javascript"]
-// Add rounded corners to all div elements with class="round"
+<pre class="archive-code" data-recovery-code="post-929-3"><code class="language-javascript">// Add rounded corners to all div elements with class="round"
 // Adds corners the "technorati way", described on
 // http://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/
 // requires you to set class="round" on div or similar elements
 // also works on images, which it wraps in a div element to add the
 // necessary content
 var round_corners = function(){
- var str = '<b class="cn tl"></b><b class="cn tr"></b><b class="cn bl"></b><b class="cn br"></b>';
+ var str = '&lt;b class="cn tl"&gt;&lt;/b&gt;&lt;b class="cn tr"&gt;&lt;/b&gt;&lt;b class="cn bl"&gt;&lt;/b&gt;&lt;b class="cn br"&gt;&lt;/b&gt;';
   $('.round').addClass("boxc").append(str);
 };
 
-$(document).ready( function(){round_corners();});
-[/code]</pre>
+$(document).ready( function(){round_corners();});</code></pre>
 <p>Create a file named roundcorners.css:</p>
-<pre>[code lang="css"]
-.boxc {
+<pre class="archive-code" data-recovery-code="post-929-4"><code class="language-css">.boxc {
 padding:0px;
 position:relative;
 }
@@ -192,16 +185,13 @@ bottom:-2px;
 background-image:url(roundwhite.gif);
 font-size:1px;
 line-height:1px;
-}
-[/code]</pre>
+}</code></pre>
 <p>Put the two image files in the same directory as roundcorners.css:<br/>
 <a href="http://static.technorati.com/static/css/img/corners/white.png">roundwhite.png</a>, <a href="http://static.technorati.com/static/css/img/corners/white.gif">roundwhite.gif</a></p>
 <p>Now in your HTML file header, add references to load JQuery, the css and js file:</p>
-<pre>[code lang="html"]
-
-
-<link rel="stylesheet" type="text/css"/>
-[/code]</pre>
+<pre class="archive-code" data-recovery-code="post-929-5"><code class="language-html">&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="roundcorners.js"&gt;&lt;/script&gt;
+&lt;link type="text/css" rel="stylesheet" href="roundcorners.css"&gt;&lt;/link&gt;</code></pre>
 <p>Finally, add css class “round” to any div on your page.</p>
 <p>I put the code up on Github =&gt; <a href="http://github.com/jesperronn/jquery-round-corners/tree">jesperronn/jquery-round-corners</a> . Looking forward to patches and improvements :)<br/>
 I would also like a modification that can do the same but works with prototype. Has anybody seen something that does that?</p>

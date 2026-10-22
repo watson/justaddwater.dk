@@ -3,7 +3,7 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from archive import ROOT, ORIGIN, REPAIRED_CODE_ARTICLE, clean_html, parse_document, references, rewrite
+from archive import ROOT, ORIGIN, clean_html, parse_document, references, rewrite
 from prepare_pages import PrefixHTML
 from verify import archived_form_errors, article_text_preserved, video_embed_markup
 
@@ -160,6 +160,7 @@ class FormExampleTests(unittest.TestCase):
             self.assertIsNone(output.form)
 
     def test_repaired_article_has_separate_code_blocks_and_following_paragraph(self):
+        REPAIRED_CODE_ARTICLE = '/2006/06/24/blog-usability-avoid-spam-comments/'
         for path in (REPAIRED_CODE_ARTICLE, REPAIRED_CODE_ARTICLE + 'comment-page-1/'):
             for raw in (self.article, self.article.encode('utf-8')):
                 with self.subTest(path=path, binary=isinstance(raw, bytes)):
@@ -170,7 +171,7 @@ class FormExampleTests(unittest.TestCase):
                     self.assertEqual(blocks[0].get_text(), '<form id="postform" method="post" action="illegal.url">')
                     self.assertEqual(blocks[1]['class'], ['language-javascript'])
                     self.assertEqual(blocks[1].get_text(),
-                                     'var obj = document.getElementById(‘postform’)\nif(obj)\nobj.action = “wp-comments-post.php”')
+                                     "var obj = document.getElementById('postform')\n\nif(obj)\n\nobj.action = \"wp-comments-post.php\"")
                     following = blocks[0].parent.find_next_sibling()
                     self.assertEqual(following.name, 'p')
                     self.assertTrue(following.get_text().startswith('And then via DOM scripting'))
@@ -178,16 +179,16 @@ class FormExampleTests(unittest.TestCase):
                     text = ' '.join(output.get_text(' ', strip=True).split())
                     self.assertNotIn('[code', text)
                     self.assertNotIn('[/code]', text)
-                    self.assertTrue(article_text_preserved(self.article, text, rendered_code=True))
+                    self.assertTrue(article_text_preserved(self.article, text))
                     for missing in ('<form id="postform" method="post" action="illegal.url">',
-                                    'obj.action = “wp-comments-post.php”', 'Captcha'):
+                                    'obj.action = "wp-comments-post.php"', 'Captcha'):
                         damaged = ' '.join(text.replace(missing, '').split())
-                        self.assertFalse(article_text_preserved(self.article, damaged, rendered_code=True))
+                        self.assertFalse(article_text_preserved(self.article, damaged))
 
-    def test_other_articles_keep_their_existing_code_presentation(self):
-        output = parse_document(self.article, path='/another-article/')
-        self.assertFalse(output.select('pre.archive-code'))
-        self.assertIn('[code', output.get_text())
+    def test_repaired_examples_also_work_in_archive_listing_pages(self):
+        output = parse_document(self.article, path='/2006/06/')
+        self.assertEqual(len(output.select('pre.archive-code')), 2)
+        self.assertNotIn('[code', output.get_text())
 
 
 class VideoEmbedTests(unittest.TestCase):

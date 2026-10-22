@@ -109,7 +109,41 @@ img.emoji {
 	
 			<div class="entry">
 				<p>I wanted a way to see if somebody had entered “illegal” data into loaded fixtures. So I wrote this simple rake task. It’s also useful to run as you add more validations to your files.</p>
-<p></p>
+<p><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1270-1"><code>#put this file in /lib/tasks and run `rake db:models:validate`
+#created 2010-02-07 by Jesper Rønn-Jensen
+require 'find'
+
+namespace :db do
+  namespace :models do
+    desc 'Dumps all models into fixtures.'
+    task :validate =&gt; :environment do
+      models = []
+      Find.find(RAILS_ROOT + '/app/models') do |path|
+        unless File.directory?(path) then models &lt;&lt; path.match(/(\w+).rb/)[1] end
+      end
+  
+      puts "Found models: " + models.join(', ')
+      errors = []
+      models.each do |m|
+        puts "Validating #{m.camelize} items"
+#        m.camelize.constantize.transaction do
+          m.camelize.constantize.all.each do |item|
+            if item.valid?
+              print "."
+            else
+              print "E"
+              errors &lt;&lt; item
+            end
+          end
+#        end#end transaction
+        puts ""
+      end
+      errors.each do |item|
+        puts "ERROR in #{item.inspect}"
+      end
+    end#end task
+  end
+end</code></pre><p class="archive-code-source">validate_models.rake · <a href="https://gist.github.com/jesperronn/297427/39c056264acd5b949335da1c5c8f045dd82d8d35">Original gist</a></p></div></p>
 	
 					
 				<p class="postmetadata alt">

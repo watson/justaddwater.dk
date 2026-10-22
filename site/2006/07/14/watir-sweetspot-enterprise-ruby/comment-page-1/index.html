@@ -117,11 +117,12 @@ img.emoji {
 <p>I saw my colleague demo it yesterday, and both testers and developers present were absolutely impressed by the jar-dropping demo. Comments: “We could have used this much earlier”, “Despite that I don’t know Ruby, It’s easy to understand what it does”. Everybody in the project room went around smiling (<a href="http://loudthinking.com/" title="Loudthinking: David Heinemeier Hansson">David Heinemeier</a> would probably say “happy”)</p>
 <p>It’s nothing new that automated browser testing can be done, but when I ask about the alternatives, I’m told that they’re too complex to get started with, and sometimes take forever to set up.</p>
 <p>Watir gets started with just four lines of code:</p>
-<p>[code lang=”ruby”]require ‘watir’<br/>
-require ‘watir/WindowHelper’<br/>
-include Watir</p>
-<p>ie = IE.new<br/>
-ie.goto(test_site) [/code]</p>
+<pre class="archive-code" data-recovery-code="post-362-1"><code class="language-ruby">require 'watir'
+require 'watir/WindowHelper'
+include Watir
+
+ie = IE.new
+ie.goto(test_site)</code></pre>
 <p>In my opinion, Watir + Ruby is a winnner. So easy to get started. So great payoff for a small amount of time invested. Jaw-dropping reactions on developers and testers that don’t even know Ruby. It’s a definite winner.</p>
 <p><small>Technorati Tags: <a href="http://technorati.com/tag/ruby" rel="tag">ruby</a>, <a href="http://technorati.com/tag/enterprise" rel="tag"> enterprise</a>, <a href="http://technorati.com/tag/business+case" rel="tag"> business case</a>, <a href="http://technorati.com/tag/watir" rel="tag"> watir</a></small></p>
 	

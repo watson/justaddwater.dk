@@ -114,7 +114,68 @@ img.emoji {
 				<p>I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It’s pretty straight-forward from scratch. </p>
 <p>To follow the Don’t Repeat Yourself principle, I created a script to make it a one-liner. Just run <code>ruby parsepage.rb [url] [css_selector]</code></p>
 <p>Feel free to use and modify the code (which i put on GitHub so you can fork and pull from it): <a href="http://gist.github.com/199558">http://gist.github.com/199558</a><br/>
-</p>
+<div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1176-1"><code>#!/usr/bin/env ruby
+# Script that wraps grabbing and selecting stuff from HTML page via CSS selectors
+# Created 2009-10-01 by Jesper Rønn-Jensen, www.justaddwater.dk
+#
+# For usage, run parsepage.rb without arguments.
+#
+# Feel free to modify, fork and improve as long as you commit your changes back to me :)
+def usage
+  &lt;&lt;-EOF #.gsub('    ', '')
+    === USAGE ===
+    parsepage.rb [uri] [css_selector]
+
+    === example ===
+    parsepage.rb "http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/" "h3"
+
+
+    U=http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/
+    parsepage.rb $U "h1,h2,h3"
+
+
+    === OPTIONS ===
+    --text-only      lists only text from matching elements
+    --list-html      lists all matches as HTML &lt;li&gt; elements
+    --count          Count number of matches
+  EOF
+end
+
+
+print usage if ARGV.empty?
+
+
+puts ARGV.inspect
+require "rubygems"
+require "nokogiri"
+require "open-uri"
+
+doc = Nokogiri::HTML(open(ARGV[0]))
+matches =  doc.css(ARGV[1])
+
+result = []
+result &lt;&lt; "no matches found" if matches.empty?
+
+
+if (ARGV.include?('--text-only'))
+  result &lt;&lt; matches.map{|element| "#{element.text}"}
+elsif  (ARGV.include?('--html-list'))
+  result &lt;&lt; matches.map{|element| "&lt;li&gt;#{element.text}&lt;li&gt;"}
+else
+  result &lt;&lt; matches.to_s
+end
+
+result &lt;&lt; ''
+result &lt;&lt; "TOTAL (#{matches.size} match#{'es' if matches.size != 1} found for '#{ARGV[1]}')" if (ARGV.include?('--count'))
+puts result.join("\n")
+
+
+# TODO stuff that would be great to support
+#
+# * support for local files
+# * refactor so this could be used to return a Nokogiri object with selection via irb
+#
+</code></pre><p class="archive-code-source">parsepage.rb · <a href="https://gist.github.com/jesperronn/199558/200af736cdc9dbea29c5ea7e5e8740107e6b12a3">Original gist</a></p></div></p>
 <p>I created the script because I wanted to extract headings from a recent article. You could also use it for creating table of contents or similar. </p>
 <h2>Usage examples</h2>
 <pre><code>

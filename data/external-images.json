@@ -523,7 +523,9 @@
     "error": "HTTP Error 404: Not Found"
   },
   "http://www.jonathanboutelle.com/mt/archives/mullet_small.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/wp-content/uploads/2006/03/mullet_small.jpg",
+    "sha256": "bdc12291a64ebfc65884a847b105739f342c68dd172ac7811bc053bf8c69a1d2",
+    "recovered_from": "Original jaw upload; identical to the already captured local image"
   },
   "http://www.customersense.com/files/cs/pics/illustration_retention2.GIF": {
     "error": "HTTP Error 404: Not Found"

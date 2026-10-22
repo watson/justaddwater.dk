@@ -19,10 +19,18 @@ original host.
 - The original site layout, plus local search, RSS feeds, a sitemap and a 404 page.
 - Original video players in **21 posts**, including YouTube, Vimeo and legacy
   Flash embeds, with their original URLs, dimensions and player parameters.
+- **61 legacy code examples in 19 articles** displayed as code, plus **14 files
+  from 12 GitHub gist embeds** saved locally. Quotes, command-line hyphens and
+  literal HTML tags are preserved without executing the examples.
+- Two missing accessibility images recovered from an old site backup, repaired
+  Beermat/presentation links, and a local copy of the previously broken external
+  mullet illustration.
+- Local, working versions of the table-height and undo demonstrations. The undo
+  example is an adaptation of Aza Raskin's archived 2007 demo, with attribution.
 - A public-content export in `data/content.json` and recovery reports in `data/`.
 
 Some local files already returned 404, and some external images could not be
-retrieved during capture. **84 of 187 external image references** were recovered
+retrieved during capture. **85 of 187 external image references** were recovered
 and stored locally. Unavailable images have a small placeholder and retain their
 original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
@@ -31,8 +39,9 @@ fetch errors for possible recovery from backups.
 Video players depend on their original external services; obsolete or unavailable
 players are preserved even if they no longer play.
 
-Legacy tracking scripts, WordPress runtime scripts and other executable embeds
-are removed. Contact, comment and demo forms retain their visible controls, with
+Legacy tracking scripts and WordPress runtime scripts are removed. The two
+reviewed demonstrations use a small local script; other code examples are inert
+text. Contact, comment and demo submission forms retain their visible controls, with
 all fields and buttons disabled and a highlighted notice that submissions are
 closed. Their submission endpoints and hidden runtime fields are removed; archive
 search stays active. Code examples remain text, and downloadable examples remain files.
@@ -85,9 +94,17 @@ HTML is parsed using the browser's HTML5 rules to preserve formatting in the
 original WordPress markup, including mismatched inline tags. Literal form tags
 inside legacy `[code]` examples are escaped before parsing so they cannot swallow
 the surrounding article text.
-In “Blog Usability: Avoid Spam Comments”, the two broken `[code]` shortcodes are
-rendered as code blocks, keeping the example form visible and the following prose
-outside it. The original article markup remains in `data/content.json`.
+Known `[code]` shortcodes are escaped before HTML parsing, so example form,
+table, style and script tags remain visible code and cannot consume article text
+or change the page. `data/recovery.json` records the selected public snippets,
+asset checksums, original paths, gist revisions and demo provenance. It preserves
+later CSS edits where the public article differs from the older database.
+The original captured article markup remains in `data/content.json`.
+
+The database dump, WordPress configuration and unreviewed historical content are
+not included in this repository. Rebuilds use only the selected public material
+in `data/recovery.json` and `data/recovered-assets/`. Previously removed comments
+and obsolete newsletter pages require separate owner review before restoration.
 
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset
@@ -98,6 +115,8 @@ stylesheets, style attributes and embedded style blocks, rejecting remote CSS
 dependencies. The deployment workflow runs these checks before publishing.
 Expected article text is checked independently of the converter's cleanup rules,
 so the same accidental deletion cannot be hidden on both sides of the comparison.
+Recovered examples are checked character-for-character against their recorded
+sources, and recovered assets and repaired aliases are checked for byte identity.
 Video markup is compared directly with the original public export, including
 nested Flash players and their parameters; playback availability is not required.
 

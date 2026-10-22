@@ -119,36 +119,36 @@ img.emoji {
 <p><span class="caps">ERROR</span>:  While executing gem … (Zlib::BufError)     buffer error</p></blockquote>
 <p>An other error lurks in the background: Rails 2.0 requires rubygems 0.9.4. And standard in the <a href="http://www.ruby-lang.org/en/downloads/">Ruby one-click installer</a> is rubygems 0.9.2 (my installed version: ruby186-25.exe).</p>
 <p>Add to this that some commenters suggest to upgrade rubygems to 0.9.5. WARNING: Don’t upgrade Rubygems before you have read which problems it caused me.</p>
-<p>[code lang=”ruby”]gem update –system[/code]</p>
+<pre class="archive-code" data-recovery-code="post-803-1"><code class="language-ruby">gem update --system</code></pre>
 <p>gave me rubygems 0.9.5 but caused mongrel to stop working. I described the details in the ruby forum thread: “<a href="http://www.ruby-forum.com/topic/133033">Mongrel crash on win32</a>“, which basically says that rubygems 0.9.5  forces a native build on windows that don’t work (not on my machine) because i have no compiler installed.</p>
 <p><a href="http://www.workingwithrails.com/person/4626-luis-lavena">Luis Lavena </a>was great help to me explaining what was going on and how to get pass the problems. Here is what i had to do:</p>
 <ol>
 <li>No rubygems 0.9.5 install. Wait for the sequel. If you already did install it, follow Luis’ advice in the forum thread.</li>
 <li>Check your current rubygems version:<br/>
-[code lang=”ruby”]C:\&gt; gem environment<br/>
-RubyGems Environment:<br/>
-– VERSION: 0.9.2 (0.9.2)<br/>
-– INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8<br/>
-– GEM PATH:<br/>
-– c:/ruby/lib/ruby/gems/1.8<br/>
-– REMOTE SOURCES:<br/>
-– http://gems.rubyforge.org[/code]</li>
+<pre class="archive-code" data-recovery-code="post-803-2"><code class="language-ruby">C:\&gt; gem environment
+RubyGems Environment:
+– VERSION: 0.9.2 (0.9.2)
+– INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8
+– GEM PATH:
+– c:/ruby/lib/ruby/gems/1.8
+– REMOTE SOURCES:
+– http://gems.rubyforge.org</code></pre></li>
 <li>Get ready for Rails 2.0 but start with rubygems 0.9.4.<br/>
 Now, here <code>gem update --system</code> gets you 0.9.5, so in stead do as Luis Lavena suggested (steps 4-5)</li>
 <li>Download the zip file with <a href="http://rubyforge.org/frs/?group_id=126&amp;release_id=11889">rubygems 0.9.4 from rubyforge</a> (<a href="http://rubyforge.org/frs/download.php/20990/rubygems-0.9.4.zip">direct link</a>)</li>
-<li>[code lang=”ruby”]C:\&gt; unzip -q rubygems-0.9.4.zip<br/>
-C:\&gt; cd rubygems-0.9.4<br/>
-C:\&gt; ruby setup.rb config<br/>
-C:\&gt; ruby setup.rb install[/code]</li>
-<li>[code lang=”ruby”]C:\&gt; gem environment<br/>
-RubyGems Environment:<br/>
-– VERSION: 0.9.4 (0.9.4)<br/>
-– INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8<br/>
-– GEM PATH:<br/>
-– c:/ruby/lib/ruby/gems/1.8<br/>
-– REMOTE SOURCES:<br/>
-– http://gems.rubyforge.org[/code]</li>
-<li>[code lang=”ruby”]gem update rails -y[/code]</li>
+<li><pre class="archive-code" data-recovery-code="post-803-3"><code class="language-ruby">C:\&gt; unzip -q rubygems-0.9.4.zip
+C:\&gt; cd rubygems-0.9.4
+C:\&gt; ruby setup.rb config
+C:\&gt; ruby setup.rb install</code></pre></li>
+<li><pre class="archive-code" data-recovery-code="post-803-4"><code class="language-ruby">C:\&gt; gem environment
+RubyGems Environment:
+– VERSION: 0.9.4 (0.9.4)
+– INSTALLATION DIRECTORY: c:/ruby/lib/ruby/gems/1.8
+– GEM PATH:
+– c:/ruby/lib/ruby/gems/1.8
+– REMOTE SOURCES:
+– http://gems.rubyforge.org</code></pre></li>
+<li><pre class="archive-code" data-recovery-code="post-803-5"><code class="language-ruby">gem update rails -y</code></pre></li>
 </ol>
 <p>Now everything works as expected. I will eagerly wait for the sequel to rubygems 0.9.5 which would save me for trouble in the future. Don’t know why this should be so difficult to me but much easier to others that could just run “gem update –system” and “gem update rails -y”. But this description above worked for me.</p>
 <p>Related info:</p>

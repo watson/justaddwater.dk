@@ -114,27 +114,19 @@ img.emoji {
 				<p>What’s Watir? Read “<a href="/2006/07/14/watir-sweetspot-enterprise-ruby/">Watir: Another sweetspot for Enterprise Ruby</a>”</p>
 <p>Is it possible to run JavaScript functions or execute code from within your Watir test scripts?  As a matter of fact it is, but I had a hard time finding the proper documentation for it.  Here is what to do and how:</p>
 <h3>Call JavaScript Functions from Watir script</h3>
-<p>[code lang=”ruby”]</p>
-<p>win = ie.document.parentWindow<br/>
-win.ToggleProj(‘1’)</p>
-<p>[/code]</p>
+<pre class="archive-code" data-recovery-code="post-778-1"><code class="language-ruby">win = ie.document.parentWindow
+win.ToggleProj('1')</code></pre>
 <h3>Inject JavaScript  to run from Watir script</h3>
 <p>I used this to alter a JavaScript function on the existing page:<br/>
-[code lang=”ruby”]<br/>
-@ie.document.parentWindow.eval(‘<br/>
-  window.CheckReport=function(){return true}’)<br/>
-[/code]<br/>
-As you can see, you can reference the window object and use eval to execute your snippets. The easier way is to add this custom method for easy reference</p>
-<p>[code lang=”ruby”]<br/>
-# Add accessor for DOM window object<br/>
-class Watir::IE; def window; document.parentWindow; end; end<br/>
-[/code]<br/>
+</p><pre class="archive-code" data-recovery-code="post-778-2"><code class="language-ruby">@ie.document.parentWindow.eval('
+window.CheckReport=function(){return true}')</code></pre><br/>
+As you can see, you can reference the window object and use eval to execute your snippets. The easier way is to add this custom method for easy reference<p></p>
+<pre class="archive-code" data-recovery-code="post-778-3"><code class="language-ruby"># Add accessor for DOM window object
+class Watir::IE; def window; document.parentWindow; end; end</code></pre><br/>
 Then you can write the last example as:<br/>
-[code lang=”ruby”]<br/>
-@ie.window.eval(‘<br/>
-  window.CheckReport=function(){return true}’)<br/>
-[/code]<br/>
-Much more intuitive and straightforward. Thanks to my colleague <a href="http://tobiashm.jaiku.com/">Tobias</a> for the trick.</p>
+<pre class="archive-code" data-recovery-code="post-778-4"><code class="language-ruby">@ie.window.eval('
+window.CheckReport=function(){return true}')</code></pre><br/>
+Much more intuitive and straightforward. Thanks to my colleague <a href="http://tobiashm.jaiku.com/">Tobias</a> for the trick.<p></p>
 <p>More info</p>
 <ul>
 <li>Justaddwater.dk: <a href="/2006/07/14/watir-sweetspot-enterprise-ruby/" rel="bookmark" title="Permanent Link: Watir: Another sweetspot for Enterprise Ruby">Watir: Another sweetspot for Enterprise Ruby</a> (July 2006)</li>

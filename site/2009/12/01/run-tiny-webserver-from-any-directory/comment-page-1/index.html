@@ -113,7 +113,23 @@ img.emoji {
 			<div class="entry">
 				<p>There are alternatives to<a href="/2009/12/01/run-tiny-webserver-from-any-directory/2009/10/15/resolve-symlinks-when-copying-files-with-rsync/" rel="bookmark" title="Permanent Link to Resolve Symlinks When Copying Files With Rsync"> Resolve Symlinks When Copying Files With Rsync .</a></p>
 <p>How about firing up a (tiny) webserver that starts up quickly. Yehuda Katz suggested this some years ago:</p>
-<p></p>
+<p><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1245-1"><code>#!/usr/bin/env ruby
+# Modified from http://yehudakatz.com/2007/08/06/webrick-anywhere/
+require 'webrick'
+include WEBrick
+
+s = HTTPServer.new(
+  :Port            =&gt; ARGV[0] || 2000,
+  :DocumentRoot    =&gt; Dir::pwd
+)
+
+## mount subdirectories
+s.mount("",
+        HTTPServlet::FileHandler, ".",
+        true)  #&lt;= allow to show directory index.
+
+trap("INT"){ s.shutdown }
+s.start</code></pre><p class="archive-code-source">server.rb · <a href="https://gist.github.com/jesperronn/246571/e298fb88adda5e5779db371cb8495fe89d70e21d">Original gist</a></p></div></p>
 <p>Just drop this file in any directory, run the script, and it serves the files. I use this frequently for instance when I need to browser test static files on different virtual machines. (I modified the script shebang to work on my Mac).</p>
 <p>I prefer to use this server.rb script in stead of accessing the files from a shared folder from the virtual machine. It’s faster to write the address for <code>http://172.16.244.1:2000/accordion.html</code> than for <code>\\.host\Shared Folders\jesper On My Mac\src\htmlguide\accordion.html</code> – and easier to remember.</p>
 <p>Tip from Yehuda Katz’ “<a href="http://yehudakatz.com/2007/08/06/webrick-anywhere/">Webrick Anywhere</a>“</p>

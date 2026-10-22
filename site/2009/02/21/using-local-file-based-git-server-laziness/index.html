@@ -116,33 +116,25 @@ img.emoji {
 <li>The master repository could be on a network drive as well.</li>
 </ol>
 <p>Developer’s workflow: Push changes to ‘remote’:<br/>
-[code lang=”bash”]<br/>
-cd local #developer’s local repository<br/>
-git pull ../remote master #get the latest code from ‘remote’ repository<br/>
-git push ../remote master #push the recent commits from here to the ‘remote’ folder<br/>
-[/code]</p>
+</p><pre class="archive-code" data-recovery-code="post-1029-1"><code class="language-bash">cd local #developer's local repository
+git pull ../remote master #get the latest code from 'remote' repository
+git push ../remote master #push the recent commits from here to the 'remote' folder</code></pre>
 <h3>Git remote makes it easier</h3>
 <p>In stead of using a path in “git pull ../remote master”, it’s even easier to add the path just like you would do on GitHub or similar:</p>
-<p>[code lang=”bash”]<br/>
-git remote add origin ../remote/ #one time for all<br/>
-git pull origin master # pull from the ‘remote’ directory<br/>
-git push origin master #push recent commits from here to the ‘remote’ folder<br/>
-[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1029-2"><code class="language-bash">git remote add origin ../remote/ #one time for all
+git pull origin master # pull from the 'remote' directory
+git push origin master #push recent commits from here to the 'remote' folder</code></pre>
 <h3>Bonus tip: Using remote git to SSH server</h3>
 <p>It’s real easy to make a remote backup copy of your Git repository even if you have not set up a git server. Here is an example of how I did it on a server where I have SSH access to:</p>
-<p>[code lang=”bash”]<br/>
-git remote add origin ssh://jesper@myserver.com/~/project.git/<br/>
-[/code]<br/>
+<pre class="archive-code" data-recovery-code="post-1029-3"><code class="language-bash">git remote add origin ssh://jesper@myserver.com/~/project.git/</code></pre><br/>
 Setup the repository on the remote server:<br/>
-[code lang=”bash”]<br/>
-$ ssh jesper@myserver.com<br/>
-Welcome to myserver.com!<br/>
-$ mkdir project.git &amp;&amp; cd project.git/<br/>
-$ git –bare init<br/>
-Initialized empty Git repository in /home/jesper/project.git<br/>
-$ exit<br/>
-Bye!<br/>
-[/code]</p>
+<pre class="archive-code" data-recovery-code="post-1029-4"><code class="language-bash">$ ssh jesper@myserver.com
+Welcome to myserver.com!
+$ mkdir project.git &amp;&amp; cd project.git/
+$ git --bare init
+Initialized empty Git repository in /home/jesper/project.git
+$ exit
+Bye!</code></pre>
 <h3>Related posts:</h3>
 <ul>
 <li><a href="/2009/02/21/2007/04/26/howto-create-a-temporary-local-subversion-repository/" rel="bookmark" title="Justaddwater.dk: Howto Create a Temporary Local Subversion Repository">Howto Create a Temporary Local Subversion Repository (April 2007)</a></li>
