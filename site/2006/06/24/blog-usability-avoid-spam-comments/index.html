@@ -137,11 +137,10 @@ This is the two things, we’ve done and it’s caught all our spam comments the
 <h3>Encode forms with JavaScript</h3>
 <p><a href="http://www.baekdal.com/" title="Baekdal.com">Thomas Baekdal</a> recommended this trick in a <a href="/2006/06/23/spam-comments-just-got-worse/#comment-6171" title="Comment on justaddwater.dk: Spam comments just got worse">comment yesterday</a>: Remove the comment form in the HTML source code and replace it with JavaScript that generates the same HTML. Can be done with online tools like <a href="http://automaticlabs.com/products/enkoderform" rel="nofollow">http://automaticlabs.com/products/enkoderform</a>.</p>
 <p>A variation of this would be to use DOM scripting to change the URL the form posts to via JavaScript. Example:</p>
-<p>[code lang=”html”]</p>
-&lt;form id="postform" method="post" action="illegal.url"&gt;[/code]And then via DOM scripting change form.action to the proper URL (<code>wp-comments-post.php</code>).<p></p>
-<p>[code lang=”javascript”]var obj = document.getElementById(‘postform’)</p>
-<p>if(obj)</p>
-<p>obj.action = “wp-comments-post.php”[/code]</p>
+<pre class="archive-code"><code class="language-html">&lt;form id="postform" method="post" action="illegal.url"&gt;</code></pre><p>And then via DOM scripting change form.action to the proper URL (<code>wp-comments-post.php</code>).</p>
+<pre class="archive-code"><code class="language-javascript">var obj = document.getElementById(‘postform’)
+if(obj)
+obj.action = “wp-comments-post.php”</code></pre>
 <h3>Moderate all comments before publishing</h3>
 <p>It’s also likely that we might toggle that setting in WordPress, to moderate all comments before they’re published. It’s of course a disadvantage to our readers that they can’t read what other people are saying until we approve it. But we might toggle this setting if it’s necessary and comment spam gets out of our hands.</p>
 <h2>What we won’t do</h2>

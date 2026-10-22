@@ -28,6 +28,7 @@ CACHE = ROOT / '.cache'
 SITE = ROOT / 'site'
 ORIGIN = 'http://justaddwater.dk'
 HOSTS = {'justaddwater.dk', 'www.justaddwater.dk'}
+REPAIRED_CODE_ARTICLE = '/2006/06/24/blog-usability-avoid-spam-comments/'
 ASSET_SUFFIXES = {'.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp',
                   '.ico', '.pdf', '.zip', '.gz', '.txt', '.xml', '.mp3', '.mp4',
                   '.mov', '.woff', '.woff2', '.ttf', '.eot', '.swf', '.doc', '.xls'}
@@ -185,11 +186,40 @@ def embedded_css(soup):
     yield from (tag.string or '' for tag in soup.find_all('style'))
 
 
-def parse_document(raw):
+def parse_document(raw, path=''):
     # Match the browser's HTML5 tree construction. Legacy WordPress sometimes
     # lets formatting tags cross paragraph boundaries; html.parser closes them
     # early and silently changes how the published article looks.
+    if path.startswith(REPAIRED_CODE_ARTICLE):
+        raw = render_form_article_code(raw)
     return BeautifulSoup(protect_form_examples(raw), 'html5lib')
+
+
+def render_form_article_code(raw):
+    """Restore the two broken shortcodes in the spam-comments article.
+
+    WordPress inserted paragraphs inside the snippets and emitted an unescaped
+    form tag. Treat the example markup as text before constructing the HTML tree.
+    This repair is deliberately limited to the known article and its copies.
+    """
+    source = raw.decode('utf-8') if isinstance(raw, bytes) else raw
+    pattern = r'(?:<p>\s*)?\[code\b([^\]]*)\](.*?)\[/code\](\s*</p>)?'
+
+    def replace(match):
+        language = re.search(r'lang\s*=\s*[\"\'“”‘’]?([a-z]+)', html.unescape(match[1]), re.I)
+        # These are WordPress paragraph wrappers, not part of either example.
+        code = re.sub(r'</?p\b[^>]*>|<br\s*/?>', '\n', match[2], flags=re.I)
+        code = html.unescape(code).strip()
+        code = re.sub(r'\n[ \t]*\n+', '\n', code)
+        css_class = ' class="language-' + language[1].lower() + '"' if language else ''
+        result = '<pre class="archive-code"><code' + css_class + '>' + html.escape(code, quote=False) + '</code></pre>'
+        # The first closing shortcode runs directly into "And then ..."; its
+        # original closing paragraph tag is later, after that sentence.
+        if not match[3] and source[match.end():].startswith('And then'):
+            result += '<p>'
+        return result
+
+    return re.sub(pattern, replace, source, flags=re.I | re.S)
 
 
 def protect_form_examples(raw):
@@ -512,7 +542,7 @@ def build(data, state):
     unavailable, comment_ids = set(), set()
     for path in sorted(state['pages']):
         raw, _ = fetch(ORIGIN + path)
-        soup = clean_html(parse_document(raw))
+        soup = clean_html(parse_document(raw, path=path))
         soup = rewrite(soup, ORIGIN + path, ids, routes, unavailable, external)
         for tag in soup.find_all(id=re.compile(r'^comment-\d+$')):
             comment_ids.add(int(tag['id'].split('-')[-1]))

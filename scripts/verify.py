@@ -11,7 +11,7 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from archive import ROOT, HOSTS, CSS_URL, embedded_css, is_video_embed, parse_document
+from archive import ROOT, HOSTS, CSS_URL, REPAIRED_CODE_ARTICLE, embedded_css, is_video_embed, parse_document
 
 
 def video_embed_markup(soup):
@@ -34,8 +34,17 @@ def expected_article_content(soup):
     return soup
 
 
-def article_text_preserved(markup, actual):
-    expected = ' '.join(expected_article_content(BeautifulSoup(markup, 'html.parser')).get_text(' ', strip=True).split())
+def article_text_preserved(markup, actual, rendered_code=False):
+    def expected_text(text):
+        if rendered_code:
+            # Only presentation delimiters disappear when the two repaired
+            # examples become code blocks. Keep checking all example/prose text
+            # independently of the renderer, including the literal form tag.
+            text = re.sub(r'\[/?code\b[^\]]*\]', ' ', text, flags=re.I)
+        return ' '.join(text.split())
+
+    original = parse_document(markup) if rendered_code else BeautifulSoup(markup, 'html.parser')
+    expected = expected_text(expected_article_content(original).get_text(' ', strip=True))
     if expected in actual:
         return True
     # An unclosed table in an old article can make the browser move surrounding
@@ -45,7 +54,7 @@ def article_text_preserved(markup, actual):
     browser_content = expected_article_content(parse_document(markup))
     position = 0
     for node in browser_content.stripped_strings:
-        text = ' '.join(node.split())
+        text = expected_text(node)
         position = actual.find(text, position)
         if position < 0:
             return False
@@ -140,7 +149,8 @@ def verify(site, base):
         if ' '.join(title.split()) not in ' '.join(soup.get_text(' ', strip=True).split()):
             errors.append(f'Published title missing: {row["link"]}')
         actual = ' '.join(soup.get_text(' ', strip=True).split())
-        if not article_text_preserved(row['content']['rendered'], actual):
+        if not article_text_preserved(row['content']['rendered'], actual,
+                                      rendered_code=path.startswith(REPAIRED_CODE_ARTICLE)):
             errors.append(f'Published article text differs from API export: {row["link"]}')
         if video_embed_markup(soup) != expected_videos[row['id']]:
             errors.append(f'Published video players differ from API export: {row["link"]}')

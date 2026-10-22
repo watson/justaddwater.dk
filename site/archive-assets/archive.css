@@ -6,3 +6,4 @@
 #search-results p { margin: .4em 0; }
 #archive-query { max-width: 90%; }
 img[data-original-url] { max-width: 100%; object-fit: contain; }
+.archive-code { text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; }

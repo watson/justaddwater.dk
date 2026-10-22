@@ -83,6 +83,9 @@ HTML is parsed using the browser's HTML5 rules to preserve formatting in the
 original WordPress markup, including mismatched inline tags. Literal form tags
 inside legacy `[code]` examples are escaped before parsing so they cannot swallow
 the surrounding article text.
+In “Blog Usability: Avoid Spam Comments”, the two broken `[code]` shortcodes are
+rendered as code blocks, keeping the example form visible and the following prose
+outside it. The original article markup remains in `data/content.json`.
 
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset
