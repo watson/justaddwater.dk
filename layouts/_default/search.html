@@ -31,10 +31,7 @@ function writeUrl(push) {
 }
 function post(m, url, title) {
   const short = title.length > 52 ? title.slice(0, 52) + '...' : title;
-  const n = +m.comments;
-  const cm = n === 0 ? '<span>Comments Off</span>' : `<a href="${esc(url)}#comments">${n} Comment${n !== 1 ? 's' : ''}</a>`;
-  return `<div class="post"><h2><a href="${esc(url)}" rel="bookmark" title="Permanent Link to ${esc(title)}">${esc(title)}</a> <span class="nowrap"><span class="author">by ${esc(m.author)}</span> <span class="time">${esc(m.short)}</span></span></h2>
-<div class="postmenu"><img src="/images/comment.gif" width="24" height="23" alt=""> <span>${cm} | <a href="${esc(url)}" rel="bookmark">Read entire article</a></span></div>
+  return `<div class="post"><h2><a href="${esc(url)}" rel="bookmark" title="Permanent Link to ${esc(title)}">${esc(title)}</a> <span class="sp-date">${esc(m.date)}</span></h2>
 <div class="entry">${m.excerpt}<p class="continue-reading"><a href="${esc(url)}" rel="bookmark">Continue reading &raquo;${esc(short)}&laquo;</a></p></div></div>`;
 }
 async function more() {

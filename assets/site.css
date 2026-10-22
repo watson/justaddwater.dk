@@ -739,3 +739,6 @@ a img {
 .sp-group{margin:.3em 0}.sp-filters a.on{font-weight:bold;color:#333}
 .sp-status{font-size:.85em;color:#666}
 .sp-more{font:inherit}
+.sp-date{font-size:12px;font-weight:normal;color:#999;white-space:nowrap;margin-left:.4em}
+#sp-results .post h2{margin-bottom:.3em}
+.sp-filters a.on,.sp-filters a.on:visited{font-weight:bold;color:#333;text-decoration:none}
