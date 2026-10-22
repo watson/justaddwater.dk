@@ -52,6 +52,10 @@ Preserve 20 years of content and URLs, drop the maintenance and security burden,
 - Any hosting preference or budget?
 - Is Google Analytics or ad revenue still involved?
 
+## Hosting
+
+Project name: jaw-static. Hosting plan (GitHub Pages, public repo): see `docs/hosting.md`.
+
 ## Local files
 
 - `bin/mirror`: wget mirror of the live site into `mirror/` (gitignored).
