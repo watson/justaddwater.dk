@@ -19,11 +19,11 @@
 
 | Difference | Effect |
 |---|---|
-| Original has a "Leave a Reply" form, here "Comments are closed." | about 250 px shorter pages, bands differ from the comments down |
+| Pages 03, 11, 16, 22, 31 (no form on the original here) are 250-290 px shorter | cause not yet investigated |
 | Page 30 (make-wordpress-editor-less-evil): comment list | Hugo shows all comments, the original only a paged subset (4496 px original vs 10830 px Hugo), about 60% differing |
 | Page 35 (change-history-of-svn-repository) | height differs by 707 px, about 33% differing |
 | Footer says "powered by Hugo" | text differs |
-| Contact form on `/contact-us/` missing | not rebuilt |
+| Contact and comment forms are shown disabled with a notice | notice box adds ~46-56 px on /contact-us/ and the four pages with a form |
 | Paging: Hugo `pagerSize = 20` | `/page/N/` contents differ |
 | No comments feed | `/comments/feed/` redirects to `/feed/` |
 

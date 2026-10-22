@@ -16,4 +16,18 @@
 {{ end }}
 </ol>
 {{ end }}
-{{ if or (eq $n 0) (ne .Type "posts") }}<p class="nocomments">Comments are closed.</p>{{ end }}
+{{- /* Pages where the original shows a reply form: show it, disabled */ -}}
+{{ if and (ne .Type "posts") (in (slice "blogtools" "privacy" "passionate-users-printing" "accessibility-background-danish-center-for-accessibility") .Params.slug) }}
+<h3 id="respond">Leave a Reply</h3>
+<div class="form-closed">This form no longer accepts submissions.</div>
+<form action="#" method="post" id="commentform" onsubmit="return false">
+<p><input type="text" name="author" id="author" value="" size="22" disabled="disabled" />
+<label for="author"><small>Name (required)</small></label></p>
+<p><input type="text" name="email" id="email" value="" size="22" disabled="disabled" />
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+<p><input type="text" name="url" id="url" value="" size="22" disabled="disabled" />
+<label for="url"><small>Website</small></label></p>
+<p><textarea name="comment" id="comment" cols="100%" rows="10" disabled="disabled"></textarea></p>
+<p><input name="submit" type="submit" id="submit" value="Submit Comment" disabled="disabled" /></p>
+</form>
+{{ else if or (eq $n 0) (ne .Type "posts") }}<p class="nocomments">Comments are closed.</p>{{ end }}
