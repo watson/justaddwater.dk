@@ -367,7 +367,41 @@ def is_video_embed(tag):
     return False
 
 
-def clean_html(soup, preserve_demo_controls=False):
+def archive_form(soup, form):
+    """Keep the original controls visible without a form that can submit."""
+    # Hidden submission metadata and anti-spam fields have no archival UI.
+    for node in reversed(form.select('input[type="hidden"], [hidden], [style]')):
+        if node.get('type') == 'hidden' or node.has_attr('hidden') or re.search(r'display\s*:\s*none\b', node.get('style', ''), re.I):
+            node.decompose()
+
+    form.name = 'div'
+    form['class'] = [*form.get('class', []), 'archive-form']
+    form['role'] = 'group'
+    form['aria-disabled'] = 'true'
+    for attr in ('action', 'method', 'enctype', 'target', 'accept-charset', 'autocomplete', 'novalidate'):
+        form.attrs.pop(attr, None)
+    for control in form.find_all(['input', 'textarea', 'select', 'button', 'fieldset', 'option', 'optgroup']):
+        control['disabled'] = ''
+        for attr in ('form', 'formaction', 'formmethod', 'formenctype', 'formtarget', 'formnovalidate', 'autofocus', 'tabindex'):
+            control.attrs.pop(attr, None)
+    for editable in form.select('[contenteditable]'):
+        editable['contenteditable'] = 'false'
+
+    number = 1
+    while soup.find(id=f'archive-form-notice-{number}'):
+        number += 1
+    notice_id = f'archive-form-notice-{number}'
+    form['aria-describedby'] = ' '.join(filter(None, [form.get('aria-describedby'), notice_id]))
+    note = soup.new_tag('p', attrs={'class': 'archive-form-notice', 'id': notice_id, 'role': 'note'})
+    heading = soup.new_tag('strong')
+    heading.string = 'This form no longer accepts submissions.'
+    note.append(heading)
+    note.append(soup.new_tag('br'))
+    note.append('Fields and buttons are disabled.')
+    form.insert_before(note)
+
+
+def clean_html(soup):
     # The old host prints PHP open_basedir warnings on attachment pages. These
     # are runtime diagnostics, not article content or archive navigation.
     for warning in soup.find_all('b', string=re.compile(r'^(Warning|Notice|Deprecated)$')):
@@ -402,17 +436,9 @@ def clean_html(soup, preserve_demo_controls=False):
         if form.find('input', attrs={'name': 's'}):
             form['action'] = '/search/'
             form['method'] = 'get'
-        elif preserve_demo_controls:
-            # Downloaded CSS examples use form controls as their subject.
-            # Retain their appearance without a form that can submit anywhere.
-            form.name = 'div'
-            for attr in ('action', 'method', 'enctype', 'target'):
-                form.attrs.pop(attr, None)
         else:
-            note = soup.new_tag('p', attrs={'class': 'archive-note'})
-            note.string = 'This form no longer accepts submissions.'
-            form.replace_with(note)
-    for tag in soup.select('#respond, .comment-reply-link, #cancel-comment-reply-link'):
+            archive_form(soup, form)
+    for tag in soup.select('.comment-reply-link, #cancel-comment-reply-link'):
         tag.decompose()
     for tag in soup.find_all('a', href=True):
         if urlsplit(tag['href']).path.rstrip('/').endswith('/trackback'):
@@ -555,7 +581,7 @@ def build(data, state):
         raw, meta = fetch(ORIGIN + path)
         content_type = next((v for k, v in meta['headers'].items() if k.lower() == 'content-type'), '')
         if 'text/html' in content_type:
-            raw = str(rewrite(clean_html(parse_document(raw), preserve_demo_controls=True), ORIGIN + path, ids, routes, unavailable, external)).encode()
+            raw = str(rewrite(clean_html(parse_document(raw)), ORIGIN + path, ids, routes, unavailable, external)).encode()
         elif path.endswith('.css'):
             text = raw.decode('utf-8', 'replace')
             raw = rewrite_css(text, ORIGIN + path, ids, routes, unavailable, external).encode()

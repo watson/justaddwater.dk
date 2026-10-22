@@ -26,12 +26,26 @@ def expected_article_content(soup):
     # to both expected and actual content would hide its accidental deletions.
     for tag in soup.find_all(['script', 'style', 'iframe', 'object', 'embed', 'applet']):
         tag.decompose()
-    for form in soup.find_all('form'):
-        # Genuine submission UI is intentionally absent from the archive.
-        # A bare form tag in an example must not exclude the prose after it.
-        if form.find(['input', 'textarea', 'select', 'button']):
-            form.decompose()
     return soup
+
+
+def archived_form_errors(soup):
+    errors = []
+    for group in soup.select('.archive-form'):
+        if group.name != 'div' or group.get('aria-disabled') != 'true' or group.find('form'):
+            errors.append('archived form is not a disabled display')
+        if any(group.has_attr(attr) for attr in ('action', 'method', 'enctype', 'target')):
+            errors.append('archived form retains submission attributes')
+        for control in group.find_all(['input', 'textarea', 'select', 'button']):
+            if not control.has_attr('disabled'):
+                errors.append('archived form has an enabled control')
+            if any(control.has_attr(attr) for attr in ('form', 'formaction', 'formmethod', 'formenctype', 'formtarget', 'autofocus', 'tabindex')):
+                errors.append('archived form control retains submission or focus attributes')
+        notices = [soup.find(id=id) for id in group.get('aria-describedby', '').split()]
+        if not any(note is not None and 'archive-form-notice' in note.get('class', [])
+                   and 'This form no longer accepts submissions.' in note.get_text() for note in notices):
+            errors.append('archived form is missing its notice')
+    return errors
 
 
 def article_text_preserved(markup, actual, rendered_code=False):
@@ -65,7 +79,7 @@ def article_text_preserved(markup, actual, rendered_code=False):
 def verify(site, base):
     site = site.resolve()
     base = '/' + base.strip('/') if base.strip('/') else ''
-    errors, local_links, comment_ids = [], 0, set()
+    errors, local_links, comment_ids, archived_forms = [], 0, set(), 0
     external_images = Counter()
     data = json.loads((ROOT / 'data/content.json').read_text())
     expected_videos = {row['id']: video_embed_markup(BeautifulSoup(row['content']['rendered'], 'html.parser'))
@@ -136,6 +150,8 @@ def verify(site, base):
         for form in soup.find_all('form'):
             if form.get('method', 'get').lower() != 'get' or urlsplit(form.get('action', '')).path != base + '/search/':
                 errors.append(f'{file}: non-static form')
+        archived_forms += len(soup.select('.archive-form'))
+        errors.extend(f'{file}: {error}' for error in archived_form_errors(soup))
 
     content_checks = 0
     for row in data['posts'] + data['pages']:
@@ -175,6 +191,7 @@ def verify(site, base):
         errors.append(f'Remote image dependencies remain: {dict(external_images)}')
     summary = {'html_pages': len(pages), 'published_posts_and_pages': content_checks,
                'articles_with_video_players': sum(bool(players) for players in expected_videos.values()),
+               'disabled_archived_forms': archived_forms,
                'public_comments': len(comment_ids), 'local_links_checked': local_links,
                'errors': len(errors), 'deployment_base': base or '/'}
     print(json.dumps(summary, indent=2))

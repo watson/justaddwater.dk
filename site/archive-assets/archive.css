@@ -7,3 +7,14 @@
 #archive-query { max-width: 90%; }
 img[data-original-url] { max-width: 100%; object-fit: contain; }
 .archive-code { text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; }
+.archive-form-notice {
+  margin: 1em 0;
+  padding: 10px 12px;
+  border-left: 4px solid #b27613;
+  background: #fff4d6;
+  color: #503a13;
+  text-align: left;
+  line-height: 1.5;
+}
+.entry .archive-form { text-align: center; }
+.archive-form :disabled { cursor: not-allowed; }

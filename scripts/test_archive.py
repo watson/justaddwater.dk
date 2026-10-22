@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 from archive import ROOT, ORIGIN, REPAIRED_CODE_ARTICLE, clean_html, parse_document, references, rewrite
 from prepare_pages import PrefixHTML
-from verify import article_text_preserved, video_embed_markup
+from verify import archived_form_errors, article_text_preserved, video_embed_markup
 
 
 class BackgroundCaptureTests(unittest.TestCase):
@@ -43,13 +43,14 @@ class BackgroundCaptureTests(unittest.TestCase):
 class LegacyMarkupTests(unittest.TestCase):
     def test_downloadable_demo_controls_remain_visible_without_submission(self):
         source = '<form action="/send.php" method="post"><input type="submit" value="CSS example"><button onclick="submit()">Example</button></form>'
-        demo = clean_html(parse_document(source), preserve_demo_controls=True)
+        demo = clean_html(parse_document(source))
         self.assertIsNone(demo.form)
         self.assertEqual(demo.input['value'], 'CSS example')
         self.assertEqual(demo.button.get_text(), 'Example')
         self.assertNotIn('onclick', demo.button.attrs)
         self.assertNotIn('action', demo.div.attrs)
-        self.assertIsNone(clean_html(parse_document(source)).input)
+        self.assertTrue(demo.input.has_attr('disabled'))
+        self.assertTrue(demo.button.has_attr('disabled'))
 
     def test_browser_formatting_survives_code_tag_crossing_paragraphs(self):
         # WordPress emitted this structure in the 2016 Git extraction article.
@@ -67,6 +68,62 @@ class LegacyMarkupTests(unittest.TestCase):
         self.assertTrue(article_text_preserved(article, actual))
         self.assertFalse(article_text_preserved(article, actual.replace('Cell text', '')))
         self.assertFalse(article_text_preserved(article, actual.replace('After table', '')))
+
+
+class ArchivedFormTests(unittest.TestCase):
+    def test_contact_form_keeps_its_labels_and_controls_but_cannot_submit(self):
+        data = json.loads((ROOT / 'data/content.json').read_text())
+        source = next(row['content']['rendered'] for row in data['pages'] if row['slug'] == 'contact-us')
+        output = clean_html(parse_document(source))
+        controls = output.select('input, textarea, button, select')
+        self.assertEqual([control.get('name') for control in controls],
+                         ['wpcf_your_name', 'wpcf_email', 'wpcf_website', 'wpcf_msg', 'Submit'])
+        self.assertTrue(all(control.has_attr('disabled') for control in controls))
+        self.assertIsNone(output.form)
+        group = output.select_one('.archive-form')
+        self.assertNotIn('action', group.attrs)
+        self.assertEqual(group['aria-disabled'], 'true')
+        self.assertEqual(group.textarea['rows'], '8')
+        self.assertEqual(group.textarea['cols'], '35')
+        self.assertEqual(len(group.find_all('label')), 4)
+        notice = output.find(id=group['aria-describedby'])
+        self.assertIn('This form no longer accepts submissions.', notice.get_text())
+        self.assertIn('archive-form-notice', notice['class'])
+
+    def test_comment_form_is_visible_but_disabled_without_runtime_fields(self):
+        source = '<h3 id="respond">Leave a Reply</h3><form id="commentform" action="/wp-comments-post.php" method="post"><textarea name="comment" autofocus tabindex="1"></textarea><input type="submit" value="Submit Comment" formaction="/other.php"><input type="hidden" name="nonce" value="runtime"><p style="display: none !important;"><input name="honeypot" value="runtime"></p></form>'
+        output = clean_html(parse_document(source))
+        self.assertIsNotNone(output.find(id='respond'))
+        self.assertIsNotNone(output.find(id='commentform'))
+        self.assertTrue(output.textarea.has_attr('disabled'))
+        self.assertTrue(output.input.has_attr('disabled'))
+        self.assertFalse(output.select('[autofocus], [tabindex], [formaction], [type="hidden"], [name="honeypot"]'))
+        self.assertIsNone(output.form)
+
+    def test_archive_search_stays_usable_next_to_a_disabled_form(self):
+        source = '<form id="searchform" action="/"><input name="s"><input type="submit" value="Search"></form><form action="/send"><input name="message"><button>Send</button></form>'
+        output = clean_html(parse_document(source))
+        self.assertEqual(output.form['action'], '/search/')
+        self.assertEqual(output.form['method'], 'get')
+        self.assertFalse(output.form.select('[disabled]'))
+        self.assertEqual(len(output.select('.archive-form-notice')), 1)
+        self.assertTrue(output.button.has_attr('disabled'))
+
+    def test_validator_rejects_enabled_controls_and_missing_notices(self):
+        source = '<form action="/send"><input name="message"><button>Send</button></form>'
+        for mutation in ('enabled', 'notice', 'endpoint', 'association'):
+            with self.subTest(mutation=mutation):
+                output = clean_html(parse_document(source))
+                self.assertEqual(archived_form_errors(output), [])
+                if mutation == 'enabled':
+                    del output.input['disabled']
+                elif mutation == 'notice':
+                    output.select_one('.archive-form-notice').decompose()
+                elif mutation == 'endpoint':
+                    output.select_one('.archive-form')['action'] = '/send'
+                else:
+                    output.button['form'] = 'searchform'
+                self.assertTrue(archived_form_errors(output))
 
 
 class FormExampleTests(unittest.TestCase):

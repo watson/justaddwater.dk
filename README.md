@@ -31,9 +31,11 @@ fetch errors for possible recovery from backups.
 Video players depend on their original external services; obsolete or unavailable
 players are preserved even if they no longer play.
 
-Legacy tracking scripts, WordPress runtime scripts, other executable embeds and
-comment submission forms are removed. Code examples remain text, and downloadable
-examples remain files. CSS-demo controls remain visible without submitting forms.
+Legacy tracking scripts, WordPress runtime scripts and other executable embeds
+are removed. Contact, comment and demo forms retain their visible controls, with
+all fields and buttons disabled and a highlighted notice that submissions are
+closed. Their submission endpoints and hidden runtime fields are removed; archive
+search stays active. Code examples remain text, and downloadable examples remain files.
 Historical comments retain their original authorship and
 links. This is a public static capture, **not** a database backup: drafts, private
 posts, unpublished media and server-side files are not included.
@@ -90,7 +92,8 @@ outside it. The original article markup remains in `data/content.json`.
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset
 references resolve, RSS and sitemap XML parse, and pages do not contain legacy
-executable scripts or dynamic forms. It also checks background images in external
+executable scripts or dynamic forms. It verifies that archived form controls are
+disabled and have an associated notice. It also checks background images in external
 stylesheets, style attributes and embedded style blocks, rejecting remote CSS
 dependencies. The deployment workflow runs these checks before publishing.
 Expected article text is checked independently of the converter's cleanup rules,
