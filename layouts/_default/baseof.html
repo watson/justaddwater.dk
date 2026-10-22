@@ -6,6 +6,7 @@
 <title>{{ if .IsHome }}justaddwater.dk | Instant Usability &amp; Web Standards{{ else }}{{ with .Params.htmltitle }}{{ . }}{{ else }}{{ partial "tt.html" .Title }}{{ end }} · justaddwater.dk{{ end }}</title>
 <meta name="description" content="{{ with .Summary }}{{ . | plainify | truncate 160 }}{{ else }}{{ site.Params.description }}{{ end }}">
 {{ if eq .RelPermalink "/search/" }}<meta name="robots" content="noindex">
+{{ end }}{{ if .IsHome }}<script>if(/[?&]s=/.test(location.search)){var q=new URLSearchParams(location.search).get("s");if(q!==null)location.replace("/search/?q="+encodeURIComponent(q))}</script>
 {{ end }}<link rel="alternate" type="application/rss+xml" href="/feed/" title="{{ site.Title }}">
 {{ $css := resources.Get "site.css" | minify }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 </head>

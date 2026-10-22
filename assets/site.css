@@ -727,13 +727,15 @@ a img {
 /* headings after a left-aligned photo paragraph clear it (original had inline clear:both on those h3) */
 .entry p:has(> img[align=left]) ~ h3{clear:both}
 
-/* search page (Pagefind default UI) */
-#search{--pagefind-ui-scale:.85;--pagefind-ui-primary:#333;--pagefind-ui-text:#333;--pagefind-ui-background:#fff;--pagefind-ui-border:#ccc;--pagefind-ui-font:"Lucida Grande",Verdana,Arial,sans-serif;margin:1em 0}
-#search .pagefind-ui__result-link{color:#06c}
-#search ul,#search ol{list-style:none;margin:0;padding:0}#search li{list-style:none;margin:0}#search input,#search button{font-family:inherit}
-
 /* Disabled legacy forms (contact / reply): notice box and contact form layout */
 .form-closed { background: #fff8d6; border-left: 4px solid #d99a00; color: #5a4300; font-weight: bold; padding: 8px 12px; margin: 10px 0; }
 .contactform { position: static; overflow: hidden; }
 .contactleft { width: 25%; text-align: right; clear: both; float: left; display: inline; padding: 4px; margin: 5px 0; }
 .contactright { width: 70%; text-align: left; float: right; display: inline; padding: 4px; margin: 5px 0; }
+
+/* search page: results reuse the front-page .post blocks; filters are small and collapsed */
+.sp-form{margin:.5em 0}.sp-form #sp-q{width:60%}
+.sp-filters{font-size:.8em;color:#666;margin:.6em 0}.sp-filters summary{cursor:pointer}
+.sp-group{margin:.3em 0}.sp-filters a.on{font-weight:bold;color:#333}
+.sp-status{font-size:.85em;color:#666}
+.sp-more{font:inherit}

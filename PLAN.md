@@ -56,6 +56,10 @@ Preserve 20 years of content and URLs, drop the maintenance and security burden,
 
 Project name: jaw-static. Hosting plan (GitHub Pages, public repo): see `docs/hosting.md`. Later option for limited, moderated commenting: `docs/comments-plan.md`.
 
+## Later tasks
+
+- Remove the "Subscribe to this Blog" sidebar block ("Subscribe by e-mail or get our feed directly to your feed reader:" + RSS icon), which some pages show (`layouts/partials/sidebar.html`). It is kept for now because the original has it, so the screenshot diffs stay low. The feed itself stays at `/feed/`; re-run `bin/compare --report` and recapture the screenshots after the removal.
+
 ## Local files
 
 - `bin/mirror`: wget mirror of the live site into `mirror/` (gitignored).

@@ -1,15 +1,95 @@
 {{ define "main" }}
-{{- /* Hand-written search page (docs/search.md). Not indexed: no data-pagefind-body here. */ -}}
+{{- /* Hand-written search page (docs/search.md). Not indexed: no data-pagefind-body here. Rendered with the Pagefind JS API, markup as in partials/post-short.html. */ -}}
 <h2 class="pagetitle">{{ .Title }}</h2>
 <noscript><p>Search needs JavaScript.</p></noscript>
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<div id="search"></div>
-<script src="/pagefind/pagefind-ui.js"></script>
-<script>
-window.addEventListener('DOMContentLoaded', function () {
-  var ui = new PagefindUI({ element: '#search', showSubResults: false, showImages: false, resetStyles: false, translations: { placeholder: 'Search the posts' } });
-  var q = new URLSearchParams(location.search).get('q');
-  if (q) { ui.triggerSearch(q); var s = document.getElementById('s'); if (s) s.value = q; }
+<form method="get" action="/search/" id="searchpageform" class="sp-form"><input type="text" name="q" id="sp-q" placeholder="Search the posts" autocomplete="off"> <input type="submit" value="Search"></form>
+<details id="sp-filters" class="sp-filters"><summary>Filter results</summary>
+<div class="sp-group"><b>Year:</b> <span id="sp-years"></span></div>
+<div class="sp-group"><b>Category:</b> <span id="sp-cats"></span></div>
+</details>
+<p id="sp-status" class="sp-status" aria-live="polite"></p>
+<div id="sp-results"></div>
+<p><button type="button" id="sp-more" class="sp-more" hidden>Load more results</button></p>
+<script type="module">
+const $ = (i) => document.getElementById(i);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const PAGE = 10;
+let pf, state = { q: '', year: '', category: '' }, hits = [], shown = 0, run = 0;
+try { pf = await import('/pagefind/pagefind.js'); await pf.options({ excerptLength: 20 }); } catch (e) { $('sp-status').textContent = 'Search is not available.'; throw e; }
+
+function readUrl() {
+  const p = new URLSearchParams(location.search);
+  state = { q: p.get('q') || '', year: p.get('year') || '', category: p.get('category') || '' };
+}
+function writeUrl(push) {
+  const p = new URLSearchParams();
+  if (state.q) p.set('q', state.q);
+  if (state.year) p.set('year', state.year);
+  if (state.category) p.set('category', state.category);
+  const u = '/search/' + (p.toString() ? '?' + p.toString().replace(/\+/g, '%20') : '');
+  if (u !== location.pathname + location.search) history[push ? 'pushState' : 'replaceState'](null, '', u);
+}
+function post(m, url, title) {
+  const short = title.length > 52 ? title.slice(0, 52) + '...' : title;
+  const n = +m.comments;
+  const cm = n === 0 ? '<span>Comments Off</span>' : `<a href="${esc(url)}#comments">${n} Comment${n !== 1 ? 's' : ''}</a>`;
+  return `<div class="post"><h2><a href="${esc(url)}" rel="bookmark" title="Permanent Link to ${esc(title)}">${esc(title)}</a> <span class="nowrap"><span class="author">by ${esc(m.author)}</span> <span class="time">${esc(m.short)}</span></span></h2>
+<div class="postmenu"><img src="/images/comment.gif" width="24" height="23" alt=""> <span>${cm} | <a href="${esc(url)}" rel="bookmark">Read entire article</a></span></div>
+<div class="entry">${m.excerpt}<p class="continue-reading"><a href="${esc(url)}" rel="bookmark">Continue reading &raquo;${esc(short)}&laquo;</a></p></div></div>`;
+}
+async function more() {
+  const slice = hits.slice(shown, shown + PAGE);
+  const data = await Promise.all(slice.map(h => h.data()));
+  $('sp-results').insertAdjacentHTML('beforeend', data.map(d => post(d.meta, d.url, d.meta.title)).join('\n'));
+  shown += slice.length;
+  $('sp-more').hidden = shown >= hits.length;
+}
+function facet(el, name, counts, cur) {
+  const keys = Object.keys(counts).sort((a, b) => name === 'year' ? b - a : a.localeCompare(b));
+  el.innerHTML = keys.map(k => `<a href="#" data-${name}="${esc(k)}"${k === cur ? ' class="on"' : ''}>${esc(k)}</a> <small>(${counts[k]})</small>`).join(' &middot; ');
+}
+async function search() {
+  const my = ++run;
+  $('sp-q').value = state.q;
+  const filters = {};
+  if (state.year) filters.year = state.year;
+  if (state.category) filters.category = state.category;
+  if (!state.q && !state.year && !state.category) { $('sp-status').textContent = ''; $('sp-results').innerHTML = ''; $('sp-more').hidden = true; return; }
+  const r = await pf.search(state.q || null, { filters });
+  if (my !== run) return;
+  // Pagefind only returns counts for filters that were passed, so count each value with its own (cheap) search
+  const all = await pf.filters();
+  const count = async (name, other) => {
+    const out = {};
+    await Promise.all(Object.keys(all[name]).map(async v => {
+      const n = (await pf.search(state.q || null, { filters: Object.assign({}, other, { [name]: v }) })).results.length;
+      if (n) out[v] = n;
+    }));
+    return out;
+  };
+  const [ys, cs] = await Promise.all([count('year', state.category ? { category: state.category } : {}), count('category', state.year ? { year: state.year } : {})]);
+  if (my !== run) return;
+  facet($('sp-years'), 'year', ys, state.year);
+  facet($('sp-cats'), 'category', cs, state.category);
+  hits = r.results; shown = 0;
+  $('sp-results').innerHTML = '';
+  $('sp-status').textContent = hits.length ? `${hits.length} result${hits.length !== 1 ? 's' : ''}${state.q ? ' for "' + state.q + '"' : ''}` : 'No results' + (state.q ? ' for "' + state.q + '"' : '') + '.';
+  $('sp-results').dataset.ready = '0';
+  await more();
+  if (my === run) $('sp-results').dataset.ready = '1';
+}
+$('searchpageform').addEventListener('submit', e => { e.preventDefault(); state = { q: $('sp-q').value.trim(), year: '', category: '' }; writeUrl(true); search(); });
+$('sp-more').addEventListener('click', more);
+$('sp-filters').addEventListener('click', e => {
+  const a = e.target.closest('a[data-year],a[data-category]'); if (!a) return;
+  e.preventDefault();
+  const k = a.dataset.year !== undefined ? 'year' : 'category', v = a.dataset[k];
+  state[k] = state[k] === v ? '' : v; writeUrl(true); search();
 });
+addEventListener('popstate', () => { readUrl(); search(); });
+readUrl();
+if (state.year || state.category) $('sp-filters').open = true;
+const side = $('s'); if (side && state.q) side.value = state.q;
+search();
 </script>
 {{ end }}
