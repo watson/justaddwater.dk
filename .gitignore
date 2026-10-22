@@ -7,3 +7,4 @@ resources/
 node_modules/
 tmp/
 static/pagefind/
+export/justaddwater.sanitized.xml

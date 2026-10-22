@@ -26,7 +26,7 @@ If real 301s ever matter, the fallback is Cloudflare Pages or Netlify (the `_red
 
 - [ ] Rename the local folder and GitHub repo to `jaw-static`.
 - [ ] Keep `export/raw-justaddwater.xml` out of the repo and of its history (it is git-ignored; check with `git log --all -- export/raw-justaddwater.xml`, which is empty today). Back it up privately.
-- [ ] `export/justaddwater.sanitized.xml` and `data/comments/*.json` contain commenter names, URLs and comment text, which were already public on the site. E-mails and IPs are stripped (`bin/sanitize-export`). Decide whether the sanitized XML needs to be in the public repo at all (it is only a converter input).
+- [x] `export/justaddwater.sanitized.xml` is git-ignored and removed from history (regenerate with `bin/sanitize-export`). `data/comments/*.json` holds commenter names, URLs and text, already public on the site; e-mails and IPs are stripped.
 - [ ] `.git` is about 326 MB (mostly screenshot history). Fine for GitHub, but consider squashing/ignoring `screenshots/` before publishing; the user already rewrote history once, so this is cheap now and expensive later.
 - [ ] Add a `LICENSE` (code: MIT) and a `README` for the code. Decide the content licence separately (e.g. CC BY-NC-SA), since the posts and comments are people's own writing.
 - [ ] The theme is a port of the original WordPress theme (`reference/original-theme/`); keep its licence notice.

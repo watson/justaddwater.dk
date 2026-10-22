@@ -9,7 +9,7 @@
 | Step | Input | Output |
 |---|---|---|
 | `bin/mirror` | live site | `mirror/` (safety copy, source of uploads) |
-| `bin/sanitize-export` | `export/raw-justaddwater.xml` (git-ignored) | `export/justaddwater.sanitized.xml` (no emails/IPs/drafts) |
+| `bin/sanitize-export` | `export/raw-justaddwater.xml` (git-ignored) | `export/justaddwater.sanitized.xml` (git-ignored; no emails/IPs/drafts) |
 | `bin/export-to-hugo` | sanitized XML (needs pandoc, ~7 min) | `content/posts`, `content/pages`, `data/comments/<slug>.json` |
 | `bin/export-excerpts` | raw XML | `data/excerpts.json` |
 | `bin/copy-uploads` | `mirror/` | `static/wp-content/uploads/` |

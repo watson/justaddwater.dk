@@ -34,7 +34,7 @@ Needs Hugo; pandoc only for re-running `bin/export-to-hugo`.
 | `data/` | comments, excerpts, authors |
 | `layouts/` | templates, partials, shortcodes, image render hook |
 | `assets/`, `static/` | theme CSS and images; uploads, `_redirects`, dev Pagefind bundle |
-| `export/` | WordPress XML (raw is git-ignored), cached gists |
+| `export/` | WordPress XML (raw and sanitized are git-ignored), cached gists |
 | `reference/` | original jaw theme CSS and images |
 | `screenshots/` | `orig/` and `dev/` comparison images |
 | `docs/` | documentation |

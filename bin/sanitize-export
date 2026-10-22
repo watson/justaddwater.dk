@@ -3,7 +3,7 @@
 
 Usage: bin/sanitize-export [RAW_XML] [OUT_XML]
   RAW_XML   default export/raw-justaddwater.xml (git-ignored, keep it private)
-  OUT_XML   default export/justaddwater.sanitized.xml (safe to commit)
+  OUT_XML   default export/justaddwater.sanitized.xml (git-ignored: regenerate when needed)
 
 Keeps:   published posts, pages and attachments, and approved comments.
 Strips:  commenter emails and IPs, author emails, comment metadata, the
