@@ -1,0 +1,265 @@
+{
+  "checked_at": "2026-10-22",
+  "recovered_external_references": 167,
+  "additional_recovered_references": 82,
+  "unrecovered_external_images": [
+    {
+      "url": "http://farm3.static.flickr.com/2194/2881067893_afdfb26552_s.jpg",
+      "articles": [
+        {
+          "title": "Busy Not Updating Blog",
+          "url": "http://justaddwater.dk/2008/11/30/busy-not-updating-blog/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3016/2585489384_f86ab604ab_s.jpg",
+      "articles": [
+        {
+          "title": "The Dark Side of Information Architecture",
+          "url": "http://justaddwater.dk/2008/06/18/the-dark-side-of-information-architecture/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3053/3022889182_2caa990df9_t.jpg",
+      "articles": [
+        {
+          "title": "Busy Not Updating Blog",
+          "url": "http://justaddwater.dk/2008/11/30/busy-not-updating-blog/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3061/3052232491_937c1e4e0b_m.jpg",
+      "articles": [
+        {
+          "title": "Busy Not Updating Blog",
+          "url": "http://justaddwater.dk/2008/11/30/busy-not-updating-blog/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3102/2874557848_76a1b287fe_s.jpg",
+      "articles": [
+        {
+          "title": "Busy Not Updating Blog",
+          "url": "http://justaddwater.dk/2008/11/30/busy-not-updating-blog/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3129/2881903966_dd7cc6912b_t.jpg",
+      "articles": [
+        {
+          "title": "Busy Not Updating Blog",
+          "url": "http://justaddwater.dk/2008/11/30/busy-not-updating-blog/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3134/2585553330_65e43347e5_s.jpg",
+      "articles": [
+        {
+          "title": "The Dark Side of Information Architecture",
+          "url": "http://justaddwater.dk/2008/06/18/the-dark-side-of-information-architecture/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3164/2585429804_d03a941837_s.jpg",
+      "articles": [
+        {
+          "title": "The Dark Side of Information Architecture",
+          "url": "http://justaddwater.dk/2008/06/18/the-dark-side-of-information-architecture/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3169/2584579701_d0d119b614_s.jpg",
+      "articles": [
+        {
+          "title": "The Dark Side of Information Architecture",
+          "url": "http://justaddwater.dk/2008/06/18/the-dark-side-of-information-architecture/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3253/2934782819_5b8055df12_s.jpg",
+      "articles": [
+        {
+          "title": "Busy Not Updating Blog",
+          "url": "http://justaddwater.dk/2008/11/30/busy-not-updating-blog/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://farm4.static.flickr.com/3281/2584651443_0a8bc70162_s.jpg",
+      "articles": [
+        {
+          "title": "The Dark Side of Information Architecture",
+          "url": "http://justaddwater.dk/2008/06/18/the-dark-side-of-information-architecture/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 404: Not Found",
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://noupe.com/img/cb11.gif",
+      "articles": [
+        {
+          "title": "Fixes to Common CSS Problems",
+          "url": "http://justaddwater.dk/2008/06/16/fixes-to-common-css-problems/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "HTTP Error 403: FORBIDDEN"
+      ]
+    },
+    {
+      "url": "http://flickr.com/photos/andjohan/65477716/",
+      "articles": [
+        {
+          "title": "“Usability dagene 05” day 1 roundup",
+          "url": "http://justaddwater.dk/2005/11/21/usabilitydagene-monday/"
+        }
+      ],
+      "capture_error": "Response is not a supported raster image",
+      "recovery_result": [
+        "HTTP Error 404: Not Found"
+      ]
+    },
+    {
+      "url": "http://www.amitech.dk/includes/images/54736.jpg",
+      "articles": [
+        {
+          "title": "DVD Harddisk Recorder Makes My Thumbs Hurt",
+          "url": "http://justaddwater.dk/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://www.dk.capgemini.com/m/dk/img/jesper_mads_3_3841.jpg",
+      "articles": [
+        {
+          "title": "Capgemini website article: Prototyping and Ruby on Rails",
+          "url": "http://justaddwater.dk/2008/04/24/capgemini-website-article-prototyping-and-ruby-on-rails/"
+        }
+      ],
+      "capture_error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "recovery_result": [
+        "No usable image in the available archive records."
+      ]
+    },
+    {
+      "url": "http://www.next2007.dk/2007/ilabLogo.gif",
+      "articles": [
+        {
+          "title": "Invited to Expert Workshop: Future of Internet",
+          "url": "http://justaddwater.dk/2008/05/20/invited-to-expert-workshop-future-of-internet/"
+        }
+      ],
+      "capture_error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "recovery_result": [
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://www.mashable.com/images/comscoreshotnew.PNG",
+      "articles": [
+        {
+          "title": "AJAX and Web2.0 User Experience Bad For Traffic Counts",
+          "url": "http://justaddwater.dk/2007/04/23/ajax-and-web20-user-experience-bad-for-traffic-counts/"
+        }
+      ],
+      "capture_error": "HTTP Error 404: Not Found",
+      "recovery_result": [
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://www.wemind.dk/images/wemind-logo.png",
+      "articles": [
+        {
+          "title": "Invited to Expert Workshop: Future of Internet",
+          "url": "http://justaddwater.dk/2008/05/20/invited-to-expert-workshop-future-of-internet/"
+        }
+      ],
+      "capture_error": "<urlopen error timed out>; Response is not a supported raster image",
+      "recovery_result": [
+        "No successful exact-URL Wayback capture"
+      ]
+    },
+    {
+      "url": "http://usabilityworks.org/bbdTemp.jpg",
+      "articles": [],
+      "capture_error": "HTTP Error 403: Forbidden",
+      "recovery_result": [
+        "No successful exact-URL Wayback capture"
+      ]
+    }
+  ],
+  "notes": [
+    "The retired FeedBurner badge is replaced with the existing local RSS icon and is not counted as unrecovered.",
+    "Exact URLs were checked against Internet Archive captures; applicable original publisher pages, known backup filenames and Flickr resolution variants were also checked.",
+    "Unavailable images retain their original URL and descriptive alt text. No substitute pictures or unreviewed historical content were published."
+  ]
+}

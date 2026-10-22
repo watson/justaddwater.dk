@@ -298,24 +298,24 @@ CommitDate: Tue Jan 13 09:56:13 2015 +0100
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;I had to rewrite the history in order to fix the email addresses. Turns out `git filter-branch` could help:&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
-&lt;p&gt;NEW_MAIL=”jesp….@gmail.com”&lt;br/&gt;
-git filter-branch –env-filter ‘&lt;br/&gt;
-&amp;gt; if [[ “$GIT_AUTHOR_EMAIL” = “EMAIL” || “$GIT_AUTHOR_EMAIL” = “$NEW_MAIL” ]]&lt;br/&gt;
-&amp;gt; then&lt;br/&gt;
-&amp;gt; if [[ “$GIT_AUTHOR_NAME” = “Ben Alman” ]]&lt;br/&gt;
-&amp;gt; then&lt;br/&gt;
-&amp;gt; GIT_AUTHOR_NAME=”Jesper Rønn-Jensen”&lt;br/&gt;
-&amp;gt; GIT_COMMITTER_NAME=”Jesper Rønn-Jensen”&lt;br/&gt;
-&amp;gt; export GIT_AUTHOR_NAME&lt;br/&gt;
-&amp;gt; export GIT_COMMITTER_NAME&lt;br/&gt;
-&amp;gt; fi&lt;br/&gt;
-&amp;gt;&lt;br/&gt;
-&amp;gt; GIT_AUTHOR_EMAIL=”$NEW_MAIL”&lt;br/&gt;
-&amp;gt; GIT_COMMITTER_EMAIL=”$NEW_MAIL”&lt;br/&gt;
-&amp;gt; export GIT_AUTHOR_EMAIL&lt;br/&gt;
-&amp;gt; export GIT_COMMITTER_EMAIL&lt;br/&gt;
-&amp;gt; fi&lt;br/&gt;
-&amp;gt; ‘ — –all&lt;/p&gt;
+&lt;pre class="archive-code" data-repair-code="paragraph-1733-10"&gt;&lt;code&gt;NEW_MAIL="jesp….@gmail.com"
+git filter-branch --env-filter '
+if [[ "$GIT_AUTHOR_EMAIL" = "EMAIL" || "$GIT_AUTHOR_EMAIL" = "$NEW_MAIL" ]]
+then
+if [[ "$GIT_AUTHOR_NAME" = "Ben Alman" ]]
+then
+GIT_AUTHOR_NAME="Jesper Rønn-Jensen"
+GIT_COMMITTER_NAME="Jesper Rønn-Jensen"
+export GIT_AUTHOR_NAME
+export GIT_COMMITTER_NAME
+fi
+
+GIT_AUTHOR_EMAIL="$NEW_MAIL"
+GIT_COMMITTER_EMAIL="$NEW_MAIL"
+export GIT_AUTHOR_EMAIL
+export GIT_COMMITTER_EMAIL
+fi
+' -- --all&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10 seconds later, I could push the changed repository up back on the server. The result was much better:&lt;/p&gt;
 &lt;p&gt;&lt;a href="/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png"&gt;&lt;img alt="github log images fixed" class="aligncenter size-medium wp-image-1735" height="300" sizes="(max-width: 203px) 100vw, 203px" src="/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png" srcset="/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png 203w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-691x1024.png 691w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png 852w" width="203"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;

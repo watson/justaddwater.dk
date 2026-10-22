@@ -27,21 +27,35 @@ original host.
   Original player dimensions are preserved.
 - **61 legacy code examples in 19 articles** displayed as code, plus **14 files
   from 12 GitHub gist embeds** saved locally. Quotes, command-line hyphens and
-  literal HTML tags are preserved without executing the examples.
+  literal HTML tags are preserved without executing the examples. Ten further
+  paragraph-style examples have corrected code punctuation and formatting;
+  literal `<object>` and `<a>` examples no longer consume IE7 article text.
 - Two missing accessibility images recovered from an old site backup, repaired
   Beermat/presentation links, and a local copy of the previously broken external
   mullet illustration.
 - Local, working versions of the table-height and undo demonstrations, plus the
   interactive CSS button example. The undo example is an adaptation of Aza
   Raskin's archived 2007 demo, with attribution; Done resets it locally.
+- **26 working bookmarklets** across the two toolbox downloads and cookie editor.
+  Their scripts, styles and grid image are local. The original SlayerOffice
+  notices are retained; its retired PHP source viewer has a browser-only replacement.
+- A local MP3 and native audio player for the Copenhagen Ruby Brigade podcast,
+  recovered from the publisher and linked from the article and both transcripts.
+- Local topic indexes replace retired Technorati destinations. Original WordPress
+  `/tag/` archives and feed scopes are unchanged. Known mistyped article URLs
+  redirect to their canonical posts, including the original GWT plugin redirect.
 - A public-content export in `data/content.json` and recovery reports in `data/`.
 
 Some local files already returned 404, and some external images could not be
-retrieved during capture. **85 of 187 external image references** were recovered
+retrieved during capture. **167 of 187 external image references** were recovered
 and stored locally. Unavailable images have a small placeholder and retain their
 original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
-fetch errors for possible recovery from backups.
+fetch errors for possible recovery from backups. This repair pass restored 82
+additional image references, including all 29 Google menu screenshots. Nineteen
+external image references still have no usable recovered file; their URLs and
+affected articles are listed in `data/ui-repair-report.json`. The twentieth
+unrecovered external reference is the FeedBurner icon already replaced locally.
 
 Video players depend on external services. Approved alternatives restore Jeff
 Sutherland's Scrum Tuning talk (two posts), Mary Poppendieck's Competing on the
@@ -62,8 +76,10 @@ subtitle preference on the Barry Schwartz talk maps to `cc_load_policy=1`. See t
 for current parameter behavior (including the changed meaning of `rel=0`).
 
 Legacy tracking scripts and WordPress runtime scripts are removed. The two
-reviewed JavaScript demonstrations use a small local script; other code examples
-are inert text. Browser-only demo controls remain active without submission
+reviewed JavaScript demonstrations use a small local script. Restored bookmarklets
+execute only when the visitor invokes them; other code examples are inert text.
+Browser security policies can still restrict bookmarklets on unrelated websites.
+Browser-only demo controls remain active without submission
 notices or server requests. Contact/comment forms and the three old Capgemini
 search forms copied into map examples retain their visible controls, with all
 fields and buttons disabled and a highlighted notice that submissions are closed.
@@ -134,7 +150,12 @@ or change the page. `data/recovery.json` records the selected public snippets,
 asset checksums, original paths, gist revisions and demo provenance. It preserves
 later CSS edits where the public article differs from the older database.
 Two malformed `[tags]…[tags]` lists are rendered with the original SimpleTags
-2.0 markup: small “Technorati Tags:” text and the original Technorati tag links.
+2.0 markup: small “Technorati Tags:” text, now linked to local `/topics/` indexes.
+`data/ui-repairs.json` records the additional code, URL, audio and bookmarklet
+repairs. Recovered bookmarklet originals are kept in
+`data/recovered-assets/bookmarklets/`; their deployed adaptations use local
+dependencies. `data/external-images.json` records source URLs and checksums for
+recovered images.
 The original captured article markup remains in `data/content.json`.
 
 The database dump, WordPress configuration and unreviewed historical content are
@@ -146,8 +167,11 @@ reviewed alongside them remain excluded.
 
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset
-references resolve, RSS and sitemap XML parse, and pages do not contain legacy
-executable scripts or dynamic forms. It verifies that archived form controls are
+references resolve, RSS and sitemap XML parse, and pages do not contain
+unreviewed executable scripts or dynamic forms. The exact reviewed bookmarklet
+URLs are allowlisted only on their three original download pages, and all
+recovered bookmarklet dependencies are verified against recorded checksums.
+It verifies that archived form controls are
 disabled and have an associated notice. It also checks background images in external
 stylesheets, style attributes and embedded style blocks, rejecting remote CSS
 dependencies. The deployment workflow runs these checks before publishing.

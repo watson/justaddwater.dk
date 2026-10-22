@@ -1,21 +1,33 @@
 {
   "http://common.ziffdavisinternet.com/util_get_image/9/0,1425,i=94222,00.jpg": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/6dd67c94f7089731d8ee716e.jpg",
+    "sha256": "6dd67c94f7089731d8ee716e5b1ce5a7b13199cb223c96d2153a6197abcf16fa",
+    "fetched_from": "https://web.archive.org/web/20050924033447id_/http://common.ziffdavisinternet.com/util_get_image/9/0,1425,i=94222,00.jpg"
   },
   "http://codefluency.com/files/railsconf/railsconf-europe-attendee.png": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/65821abca23fc7fa7477ecaa.png",
+    "sha256": "65821abca23fc7fa7477ecaa6d609758ae19be66a3c6b2f201776b7e5bd0f171",
+    "fetched_from": "https://web.archive.org/web/20060529202454id_/http://codefluency.com:80/files/railsconf/railsconf-europe-attendee.png"
   },
   "http://37signals.com/images/37better_clip_bank.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/ba1efaa211a7cfd3da9da99f.gif",
+    "sha256": "ba1efaa211a7cfd3da9da99f40768e66468a4ff1d3566142e1a3d817a5974141",
+    "fetched_from": "https://web.archive.org/web/20020624135626id_/http://37signals.com:80/images/37better_clip_bank.gif"
   },
   "http://en.itst.dk/hd_logo_en_191_89.gif": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/356e73aa9b748f2c13d9132e.gif",
+    "sha256": "356e73aa9b748f2c13d9132e4177cad5615847278e4171a405ddc64c7f347fd8",
+    "fetched_from": "https://web.archive.org/web/20100615024247id_/http://en.itst.dk/hd_logo_en_191_89.gif"
   },
   "http://farm1.static.flickr.com/83/229551714_a5b4f7bc43_o.jpg": {
-    "error": "HTTP Error 410: Gone"
+    "path": "/archive-assets/external/816ee444f6ca02409daf6707.jpg",
+    "sha256": "816ee444f6ca02409daf67070864fa7e4b10450d2ab3bc578c3da57773b478b7",
+    "fetched_from": "https://web.archive.org/web/20090204213540id_/http://farm1.static.flickr.com/83/229551714_a5b4f7bc43_o.jpg"
   },
   "http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg": {
-    "error": "Response is not a supported raster image"
+    "path": "/archive-assets/external/1186e0e341d6cce428e1b032.jpg",
+    "sha256": "1186e0e341d6cce428e1b0324f1ae514043cb85af496b7f223bf187ab3f23df9",
+    "fetched_from": "https://web.archive.org/web/20131224234740id_/http://conferences.oreillynet.com/images/railseurope2007/banners/speakers/125x125.jpg"
   },
   "http://farm2.static.flickr.com/1045/1413156349_d6ef40be3d_t.jpg": {
     "path": "/archive-assets/external/d56740be0f12eca11019972c.jpg",
@@ -48,7 +60,9 @@
     "sha256": "54df0d4bc99315e12034cb5db365eaaa34631e42fc20fde484f409f187482e26"
   },
   "http://developer.yahoo.com/ypatterns/images/pattern_autocomplete_ani.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/93b35111b8cdf059c025a39b.gif",
+    "sha256": "93b35111b8cdf059c025a39b81308a5bb9e3bc1381a3ee949b767c20a6608ef5",
+    "fetched_from": "https://web.archive.org/web/20060503154845id_/http://developer.yahoo.com:80/ypatterns/images/pattern_autocomplete_ani.gif"
   },
   "http://farm2.static.flickr.com/1252/1413190853_5837bf797d_t.jpg": {
     "path": "/archive-assets/external/33eb889edfba2b5c9773ed3c.jpg",
@@ -154,10 +168,14 @@
     "sha256": "fcfec61a45a390cdfb534ac1c4b9e72ebbda354dda5aea9c1f143fc93bd08397"
   },
   "http://media2.smashingmagazine.com/wp-content/uploads/2009/09/tumblr.png": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/0fd1b632e98f1b2dcb8b34df.png",
+    "sha256": "0fd1b632e98f1b2dcb8b34df638557135c6ab078f834653647c69042681fd7c2",
+    "fetched_from": "https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/cb325ee7-022a-44d5-ae5c-908aa139ada3/tumblr.png"
   },
   "http://meiert.com/en/upload/2007/01/door.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/40486afc7a35100e71954fdf.jpg",
+    "sha256": "40486afc7a35100e71954fdffe5a52e8068045ea7de13961ce8bbd2fe5131345",
+    "fetched_from": "https://web.archive.org/web/20071015212601id_/http://meiert.com/en/upload/2007/01/door.jpg"
   },
   "http://static.flickr.com/100/267101116_1cb3f02871_s.jpg": {
     "path": "/archive-assets/external/24de13b800e379f58edf3d44.jpg",
@@ -266,7 +284,9 @@
     "sha256": "c658a6ca3cbe843c0423ba24b034660846199259a4b5528d5057016256c20c53"
   },
   "http://static.flickr.com/37/106972762_7fbced62e7.jpg": {
-    "error": "HTTP Error 410: Gone"
+    "path": "/archive-assets/external/e26542fac0c32475b1f8a081.jpg",
+    "sha256": "e26542fac0c32475b1f8a08101ac63ff0ff761f74622dfc93b65358c50e2ddb0",
+    "fetched_from": "https://web.archive.org/web/20060415173300id_/http://static.flickr.com:80/37/106972762_7fbced62e7.jpg"
   },
   "http://static.flickr.com/34/71871872_e922cab3cc_o.png": {
     "path": "/archive-assets/external/aa62a15b4ab463d33f0e18f0.png",
@@ -359,100 +379,164 @@
     "sha256": "fcb18afe7e3f57815d21bdff2c8debba5ff5aa76bc2129d76fc1d5c17efeb9fd"
   },
   "http://static.technorati.com/static/css/img/corners/white.gif": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/525cb62f01983584667990cf.gif",
+    "sha256": "525cb62f01983584667990cf7d8cb332ce85d8e27511dbba17648720e4e6a7b2",
+    "fetched_from": "https://web.archive.org/web/20060725030956id_/http://static.technorati.com/static/css/img/corners/white.gif"
   },
   "http://static.technorati.com/static/css/img/bg/fade-lightgreen.png": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/ed27112c67343781263d4c04.png",
+    "sha256": "ed27112c67343781263d4c044a57590865a0ef4d40c8109843a43a7cad5e0846",
+    "fetched_from": "https://web.archive.org/web/20060725030930id_/http://static.technorati.com/static/css/img/bg/fade-lightgreen.png"
   },
   "http://usability.typepad.com/google/gmenu_adwords.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/99176a058dbe7217c7aea3f2.jpg",
+    "sha256": "99176a058dbe7217c7aea3f2b6d84203582f1e6cd88f56f4185110e413b5d759",
+    "fetched_from": "https://web.archive.org/web/20090721145930id_/http://usability.typepad.com/google/gmenu_adwords.jpg"
   },
   "http://usability.typepad.com/google/gmenu_adsense.jpg": {
-    "error": "HTTP Error 403: Forbidden; Response is not a supported raster image"
+    "path": "/archive-assets/external/1ca0a0b98556aebb6cdb6d9e.jpg",
+    "sha256": "1ca0a0b98556aebb6cdb6d9e483b1f50ba6e1dc9942bd667601a9265206cb2c0",
+    "fetched_from": "https://web.archive.org/web/20090721145958id_/http://usability.typepad.com/google/gmenu_adsense.jpg"
   },
   "http://usability.typepad.com/google/gmenu_alerts.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/8eaf06b60f4adf3c71e53f68.jpg",
+    "sha256": "8eaf06b60f4adf3c71e53f6847b474c0d5b807eeb8bb9292cf92f33a0756f01d",
+    "fetched_from": "https://web.archive.org/web/20090721145743id_/http://usability.typepad.com/google/gmenu_alerts.jpg"
   },
   "http://usability.typepad.com/google/gmenu_analytics.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/05610abd06d435a410d8ce65.jpg",
+    "sha256": "05610abd06d435a410d8ce65fe9cc47d3fc7a3db1cfc50cb8b5f5ec099a47ad9",
+    "fetched_from": "https://web.archive.org/web/20090721145635id_/http://usability.typepad.com/google/gmenu_analytics.jpg"
   },
   "http://usability.typepad.com/google/gmenu_base.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/d1209877b2058db7f8fdcd08.jpg",
+    "sha256": "d1209877b2058db7f8fdcd08e2c9cb64051c277df93dbcbefe0a563f6c24f954",
+    "fetched_from": "https://web.archive.org/web/20090721145052id_/http://usability.typepad.com/google/gmenu_base.jpg"
   },
   "http://usability.typepad.com/google/gmenu_blue_calendar.jpg": {
-    "error": "Response is not a supported raster image; HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/128460cd65417c177927292e.jpg",
+    "sha256": "128460cd65417c177927292e907adbc59dfb842352f6948578c29db8ac72ee56",
+    "fetched_from": "https://web.archive.org/web/20090721150235id_/http://usability.typepad.com/google/gmenu_blue_calendar.jpg"
   },
   "http://usability.typepad.com/google/gmenu_blue_docs.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/9b9bc5602f485a76a911fa23.jpg",
+    "sha256": "9b9bc5602f485a76a911fa238914c73bb5a22bce554a6ad921c4fb11325a6ef5",
+    "fetched_from": "https://web.archive.org/web/20090721152634id_/http://usability.typepad.com/google/gmenu_blue_docs.jpg"
   },
   "http://usability.typepad.com/google/gmenu_blue_mail.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/e4183f9e1dc8bc20aada32e9.jpg",
+    "sha256": "e4183f9e1dc8bc20aada32e9b3351009c63ff23e1bd1a32ced046c1a0c44c23a",
+    "fetched_from": "https://web.archive.org/web/20090722050734id_/http://usability.typepad.com/google/gmenu_blue_mail.jpg"
   },
   "http://usability.typepad.com/google/gmenu_books.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/f82ee0924f612ddf2cdacf3d.jpg",
+    "sha256": "f82ee0924f612ddf2cdacf3d11170802ff5adf28fb93990e203bf1aa89b93391",
+    "fetched_from": "https://web.archive.org/web/20090722053905id_/http://usability.typepad.com/google/gmenu_books.jpg"
   },
   "http://usability.typepad.com/google/gmenu_calendar.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/45ac3eeb257e4ff1ae98a5e5.jpg",
+    "sha256": "45ac3eeb257e4ff1ae98a5e516a4a05dcb6f106d828317070a4ddad8fe0576f1",
+    "fetched_from": "https://web.archive.org/web/20090722051304id_/http://usability.typepad.com/google/gmenu_calendar.jpg"
   },
   "http://usability.typepad.com/google/gmenu_coop.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/b89c30259ec9fcc946aeb2d7.jpg",
+    "sha256": "b89c30259ec9fcc946aeb2d7fd45a51a55b17407f5bcfb347245b02cbfb286e3",
+    "fetched_from": "https://web.archive.org/web/20090721145223id_/http://usability.typepad.com/google/gmenu_coop.jpg"
   },
   "http://usability.typepad.com/google/gmenu_docs.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/54346bbcbff7991b381a64eb.jpg",
+    "sha256": "54346bbcbff7991b381a64eb5b42f6feba45784f29a840fe2e77497f26622c82",
+    "fetched_from": "https://web.archive.org/web/20090721145147id_/http://usability.typepad.com/google/gmenu_docs.jpg"
   },
   "http://usability.typepad.com/google/gmenu_finance.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/e2855dcd889c0f43b126bec5.jpg",
+    "sha256": "e2855dcd889c0f43b126bec5ea55696ce1c6ee703e7ee50efbc21cfb8ec8500e",
+    "fetched_from": "https://web.archive.org/web/20090721145819id_/http://usability.typepad.com/google/gmenu_finance.jpg"
   },
   "http://usability.typepad.com/google/gmenu_froogle.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/510a830137b229271c872df5.jpg",
+    "sha256": "510a830137b229271c872df586e4e9ec07114d9fbe39d921c7c365319fa55e82",
+    "fetched_from": "https://web.archive.org/web/20090721154045id_/http://usability.typepad.com/google/gmenu_froogle.jpg"
   },
   "http://usability.typepad.com/google/gmenu_google.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/d22f3fca4637ffb4ed303755.jpg",
+    "sha256": "d22f3fca4637ffb4ed303755247228b36e1c99876cccd9067d2b2d563dc2251e",
+    "fetched_from": "https://web.archive.org/web/20090721144954id_/http://usability.typepad.com/google/gmenu_google.jpg"
   },
   "http://usability.typepad.com/google/gmenu_groups.jpg": {
-    "error": "HTTP Error 403: Forbidden; Response is not a supported raster image"
+    "path": "/archive-assets/external/c6780ade22e2eead6d468845.jpg",
+    "sha256": "c6780ade22e2eead6d46884570501650ac66f2eb075aa6b202c8c3083658c572",
+    "fetched_from": "https://web.archive.org/web/20090721150047id_/http://usability.typepad.com/google/gmenu_groups.jpg"
   },
   "http://usability.typepad.com/google/gmenu_history.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/ca9d5f0e339adf65e5bc0d9a.jpg",
+    "sha256": "ca9d5f0e339adf65e5bc0d9a0ca5037e76af0d97f0e19055374819b6124d7396",
+    "fetched_from": "https://web.archive.org/web/20090721145342id_/http://usability.typepad.com/google/gmenu_history.jpg"
   },
   "http://usability.typepad.com/google/gmenu_mail.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/a47e0551ff9a154296a869fa.jpg",
+    "sha256": "a47e0551ff9a154296a869fa6adb419c905c1e25dd9286aadc4850224fffdf82",
+    "fetched_from": "https://web.archive.org/web/20090722052635id_/http://usability.typepad.com/google/gmenu_mail.jpg"
   },
   "http://tredosoft.com/files/multi-ie/setup1.png": {
-    "error": "Response is not a supported raster image"
+    "path": "/archive-assets/external/3eb8832a1e29f1ea14f99679.png",
+    "sha256": "3eb8832a1e29f1ea14f99679c3800821f9517951f75e3b514ba19aa479eb0203",
+    "fetched_from": "https://web.archive.org/web/20060929043511id_/http://tredosoft.com/files/multi-ie/setup1.png"
   },
   "http://usability.typepad.com/google/gmenu_maps.jpg": {
-    "error": "Response is not a supported raster image; HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/4a74f6bc52f96582e741b958.jpg",
+    "sha256": "4a74f6bc52f96582e741b958cf1534f6a8ef60b83ac0b9aee50b061f08197f9a",
+    "fetched_from": "https://web.archive.org/web/20090721151730id_/http://usability.typepad.com/google/gmenu_maps.jpg"
   },
   "http://usability.typepad.com/google/gmenu_myaccount.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/6d734f6b81936a7382f5dfe5.jpg",
+    "sha256": "6d734f6b81936a7382f5dfe53812e1cd13c4894e10917782dcce4a2f4444eccb",
+    "fetched_from": "https://web.archive.org/web/20090721145704id_/http://usability.typepad.com/google/gmenu_myaccount.jpg"
   },
   "http://usability.typepad.com/google/gmenu_news.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/9bdd16b410e1e933f0474c7c.jpg",
+    "sha256": "9bdd16b410e1e933f0474c7c8dbb953d128400ed362e5564c183bba0947e4ac9",
+    "fetched_from": "https://web.archive.org/web/20090722054604id_/http://usability.typepad.com/google/gmenu_news.jpg"
   },
   "http://usability.typepad.com/google/gmenu_notebook.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/ce1d440088cd50a9e4cf58c8.jpg",
+    "sha256": "ce1d440088cd50a9e4cf58c891b696b5887c7db3198765b060eef9a3668eda06",
+    "fetched_from": "https://web.archive.org/web/20090722053647id_/http://usability.typepad.com/google/gmenu_notebook.jpg"
   },
   "http://usability.typepad.com/google/gmenu_pagecreator.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/cb26372bfbc391af2c5b0a5a.jpg",
+    "sha256": "cb26372bfbc391af2c5b0a5a905a87577f16033f99a786f3fe1dfb25db74b486",
+    "fetched_from": "https://web.archive.org/web/20090721154920id_/http://usability.typepad.com/google/gmenu_pagecreator.jpg"
   },
   "http://usability.typepad.com/google/gmenu_patents.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/089c6035ec00c377343d7a81.jpg",
+    "sha256": "089c6035ec00c377343d7a818594c055d230c67658be633d7141d98a2509a033",
+    "fetched_from": "https://web.archive.org/web/20090721150737id_/http://usability.typepad.com/google/gmenu_patents.jpg"
   },
   "http://usability.typepad.com/google/gmenu_personalised.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/ae9eca7c397273df9eb792f5.jpg",
+    "sha256": "ae9eca7c397273df9eb792f5e37f7e98f64c6c4c0f6db4ae841dbdca004825fc",
+    "fetched_from": "https://web.archive.org/web/20090721145423id_/http://usability.typepad.com/google/gmenu_personalised.jpg"
   },
   "http://usability.typepad.com/google/gmenu_photos.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/f6b463c0aae30c7e88936139.jpg",
+    "sha256": "f6b463c0aae30c7e88936139f71f82c74347e8bc34776fa6743e45e6f4de6ad9",
+    "fetched_from": "https://web.archive.org/web/20090721145448id_/http://usability.typepad.com/google/gmenu_photos.jpg"
   },
   "http://usability.typepad.com/google/gmenu_reader.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/9fdccf031b936e670ad51d41.jpg",
+    "sha256": "9fdccf031b936e670ad51d412ca784e06f1f0726e4f78063bf995fadfa35ac90",
+    "fetched_from": "https://web.archive.org/web/20090721155752id_/http://usability.typepad.com/google/gmenu_reader.jpg"
   },
   "http://usability.typepad.com/google/gmenu_video.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/d3a4bfdebf32f7308f4d51e3.jpg",
+    "sha256": "d3a4bfdebf32f7308f4d51e318ebb810a34b62386c82802771de8401322e2b68",
+    "fetched_from": "https://web.archive.org/web/20090722054225id_/http://usability.typepad.com/google/gmenu_video.jpg"
   },
   "http://usability.typepad.com/google/gmenu_webmastertools.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "path": "/archive-assets/external/51ae821249fac1b56cf2aeb8.jpg",
+    "sha256": "51ae821249fac1b56cf2aeb8400f0828e6b8c5a6d2e3e496135a19b72f880d7f",
+    "fetched_from": "https://web.archive.org/web/20090721153317id_/http://usability.typepad.com/google/gmenu_webmastertools.jpg"
   },
   "http://www.23hq.com/mygdal/photo/778322/standard": {
     "path": "/archive-assets/external/55edeb2698f47ef967481e7e.jpg",
@@ -470,46 +554,70 @@
     "sha256": "4bf013e9166408d4fa4d57cb7c08e1c54c54694c77cb64067b83fe373edf6c0d"
   },
   "http://www.37signals.com/svn/images/joeyinteractive_icons.png": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/999adf99740e91bbfdbeb577.png",
+    "sha256": "999adf99740e91bbfdbeb5779cc4eae3e95528f322865cb8d9b103149d00f3b0",
+    "fetched_from": "https://web.archive.org/web/20061127071108id_/http://www.37signals.com/svn/images/joeyinteractive_icons.png"
   },
   "http://www.37signals.com/svn/images/corunet_icons.png": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/09031874b9df268ffd6db833.png",
+    "sha256": "09031874b9df268ffd6db833db120d1a277bdbfad125515283a13e03582778ed",
+    "fetched_from": "https://web.archive.org/web/20061127071120id_/http://www.37signals.com/svn/images/corunet_icons.png"
   },
   "http://www.37signals.com/svn/images/danlockton_icons.png": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/fdfdf34b284d4283299787b9.png",
+    "sha256": "fdfdf34b284d4283299787b94c75f6c274d5ee87ac85045ae838dadc933a4960",
+    "fetched_from": "https://web.archive.org/web/20061127071058id_/http://www.37signals.com/svn/images/danlockton_icons.png"
   },
   "http://www.37signals.com/svn/images/treehugger_icons.png": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/4b7e91bee0175bfc0c3259af.png",
+    "sha256": "4b7e91bee0175bfc0c3259afa613ae39d376a53359ca2eae5b3bee3dbe2147fe",
+    "fetched_from": "https://web.archive.org/web/20061127071053id_/http://www.37signals.com/svn/images/treehugger_icons.png"
   },
   "http://www.37signals.com/svn/images/zingfu_icons.png": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/88817073b9d0888cade6344a.png",
+    "sha256": "88817073b9d0888cade6344a7d4d7658e60e8dfb3d4f0cc3649a8e3b83b983db",
+    "fetched_from": "https://web.archive.org/web/20061127071133id_/http://www.37signals.com/svn/images/zingfu_icons.png"
   },
   "http://www.37signals.com/svn/images/web2list_icons.png": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/923ac01dbaa89bb0105aa547.png",
+    "sha256": "923ac01dbaa89bb0105aa5477a566f72585c3a67486d276049872d9a2dd551f3",
+    "fetched_from": "https://web.archive.org/web/20061127071104id_/http://www.37signals.com/svn/images/web2list_icons.png"
   },
   "http://www.amitech.dk/includes/images/54736.jpg": {
     "error": "HTTP Error 404: Not Found"
   },
   "http://www.codinghorror.com/blog/images/department-of-redundancy-department.png": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/4386b9cb35ad37b66da0dd8f.png",
+    "sha256": "4386b9cb35ad37b66da0dd8f8b1f2df5cec2b0ecebf932780e4f8f92a08a7397",
+    "fetched_from": "https://web.archive.org/web/20081115013257id_/http://www.codinghorror.com/blog/images/department-of-redundancy-department.png"
   },
   "http://www.creuna.dk/gfx/logo-creuna.gif": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/56538a686752086a1235fab3.gif",
+    "sha256": "56538a686752086a1235fab3bf7c2cee7cdf64ad27cddb718c4d01e2148dbcb1",
+    "fetched_from": "https://web.archive.org/web/20070109122220id_/http://www.creuna.dk/gfx/logo-creuna.gif"
   },
   "http://www.badusability.com/img/international/bad-usability-calendar-2009-thumbnail.png": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/272efddf55e1a1f8e24d88ef.png",
+    "sha256": "272efddf55e1a1f8e24d88ef9450e0d11bee703ce9f985a364d31777fe34f7f3",
+    "fetched_from": "https://web.archive.org/web/20090218103207id_/http://www.badusability.com/img/international/bad-usability-calendar-2009-thumbnail.png"
   },
   "http://www.dk.capgemini.com/m/dk/img/jesper_mads_3_3841.jpg": {
     "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
   },
   "http://www.dsiegel.com/tips/resources/dot_clear.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/b1442e85b03bdcaf66dc58c7.gif",
+    "sha256": "b1442e85b03bdcaf66dc58c7abb98745dd2687d86350be9a298a1d9382ac849b",
+    "fetched_from": "https://web.archive.org/web/19970504154403id_/http://www.dsiegel.com:80/tips/resources/dot_clear.gif"
   },
   "http://www.dustindiaz.com/basement/web-1.0/hitstoday.gif": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/7fdf4474f21a6e5a54011c9f.gif",
+    "sha256": "7fdf4474f21a6e5a54011c9f1c9f51afb9f34040c16b2b59a52314f2cc6f9518",
+    "fetched_from": "https://web.archive.org/web/20110726051010id_/http://www.dustindiaz.com/basement/web-1.0/hitstoday.gif"
   },
   "http://www.boxesandarrows.com/files/banda/communicating_c/kirtland_06.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/9f3e63c7cab89564652df55f.jpg",
+    "sha256": "9f3e63c7cab89564652df55ff118912290941c5fb55c1ef9308a7d4f3f2b23c9",
+    "fetched_from": "https://web.archive.org/web/20060603004622id_/http://www.boxesandarrows.com/files/banda/communicating_c/kirtland_06.jpg"
   },
   "http://www.jjg.net/ia/visvocab/images/fig10.gif": {
     "path": "/archive-assets/external/191b458a94bd93af4eb5e984.gif",
@@ -517,10 +625,14 @@
     "sha256": "191b458a94bd93af4eb5e984f4c850b3f894229293947bc9d555051896a58ef2"
   },
   "http://www.joelonsoftware.com/items/2006/11/21vistaOff.PNG": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/da47d0728e6f8ec7623dcb20.png",
+    "sha256": "da47d0728e6f8ec7623dcb2026dfc1318f8c3aaf0eefa8800b9e6ab1148b1685",
+    "fetched_from": "https://web.archive.org/web/20061126044645id_/http://www.joelonsoftware.com:80/items/2006/11/21vistaOff.PNG"
   },
   "http://www.jonathanboutelle.com/mt/archives/monthlyarchive.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/1bd783eda8cbaeafa7b553e0.gif",
+    "sha256": "1bd783eda8cbaeafa7b553e0214faadd170d9aeb78536831ffc83f72e0bc920d",
+    "fetched_from": "https://web.archive.org/web/20060223200754id_/http://www.jonathanboutelle.com:80/mt/archives/monthlyarchive.gif"
   },
   "http://www.jonathanboutelle.com/mt/archives/mullet_small.jpg": {
     "path": "/wp-content/uploads/2006/03/mullet_small.jpg",
@@ -528,10 +640,14 @@
     "recovered_from": "Original jaw upload; identical to the already captured local image"
   },
   "http://www.customersense.com/files/cs/pics/illustration_retention2.GIF": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/bf2063151288e58e4bf0ed3b.gif",
+    "sha256": "bf2063151288e58e4bf0ed3b342aa3644f5378fb3733fa2fa61d73f4e8540639",
+    "fetched_from": "https://web.archive.org/web/20050408181053id_/http://www.customersense.com:80/files/cs/pics/illustration_retention2.GIF"
   },
   "http://www.jonathanboutelle.com/mt/archives/workflow1.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/5102d0bfd2b3cda4b11df8be.gif",
+    "sha256": "5102d0bfd2b3cda4b11df8beedaee30422ba2713d9fbfdf98061f45ca5bfc28c",
+    "fetched_from": "https://web.archive.org/web/20060306225618id_/http://www.jonathanboutelle.com:80/mt/archives/workflow1.gif"
   },
   "http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_dashboard_sm.jpg": {
     "path": "/archive-assets/external/992632d870e8d8b8f6bc5c1f.jpg",
@@ -567,19 +683,27 @@
     "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
   },
   "http://www.ok-cancel.com/strips/okcancel20050211.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/0dcb4b5a32c173c039116aa5.gif",
+    "sha256": "0dcb4b5a32c173c039116aa5ac4ea37268fa673cf73a4cdfe4f2b5750e10bc51",
+    "fetched_from": "https://web.archive.org/web/20051212053008id_/http://www.ok-cancel.com:80/strips/okcancel20050211.gif"
   },
   "http://www.mashable.com/images/comscoreshotnew.PNG": {
     "error": "HTTP Error 404: Not Found"
   },
   "http://www.mypagerank.net/smerankcheck.php?site=justaddwater.dk&s=style8": {
-    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>; Response is not a supported raster image"
+    "path": "/archive-assets/external/f9f88c39f41585e32360d7c6.gif",
+    "sha256": "f9f88c39f41585e32360d7c6d99d3006df488c265275cadbb45ed4ecb58d8cee",
+    "fetched_from": "https://web.archive.org/web/20120511112346id_/http://www.mypagerank.net/smerankcheck.php?site=justaddwater.dk&s=style8"
   },
   "http://www.pragprog.com/images/covers/190x228/tpp.jpg?1184184147": {
-    "error": "HTTP Error 404: Not Found; <urlopen error [Errno 61] Connection refused>"
+    "path": "/archive-assets/external/1cdc36255a939b2fb83eaf8c.jpg",
+    "sha256": "1cdc36255a939b2fb83eaf8cbca3711338c822223b88d02eae0c6cac1ce2fc07",
+    "fetched_from": "https://web.archive.org/web/20101204194749id_/http://www.pragprog.com/images/covers/190x228/tpp.jpg?1184184147"
   },
   "http://www.rickrichards.com/astral/clairvoyant1a.jpg": {
-    "error": "Response is not a supported raster image"
+    "path": "/archive-assets/external/81584368f88e250d3fdd6644.jpg",
+    "sha256": "81584368f88e250d3fdd6644739ebd7b4b6e6a4b6aacd1dd28583d3413b9266d",
+    "fetched_from": "https://web.archive.org/web/20101128115908id_/http://rickrichards.com/astral/clairvoyant1a.jpg"
   },
   "http://www.skooldays.com/images/sa1041.jpg": {
     "path": "/archive-assets/external/fdc07dd932db49af3fdd5221.jpg",
@@ -587,10 +711,14 @@
     "sha256": "fdc07dd932db49af3fdd52213bfe71e19e11922a561250fbd718f3b927d6f25c"
   },
   "http://www.sunflowerhead.com/msimages/ToolbarCompare-11-1-2005_thumb.png": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/5e3eb49d4abffc73a6119894.png",
+    "sha256": "5e3eb49d4abffc73a611989424c83d4d7f99f520c1c1575c5cc97f7927984b81",
+    "fetched_from": "https://web.archive.org/web/20060209191831id_/http://www.sunflowerhead.com:80/msimages/ToolbarCompare-11-1-2005_thumb.png"
   },
   "http://www.theonion.com/content/files/images/Infographic-Microsoft.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/066f88f197f54278c359b3e5.jpg",
+    "sha256": "066f88f197f54278c359b3e552ab641593041032f589e0aa5cb2d9133aee8032",
+    "fetched_from": "https://web.archive.org/web/20070213195242id_/http://www.theonion.com/content/files/images/Infographic-Microsoft.jpg"
   },
   "http://www.webdesignerwall.com/wp-content/uploads/2007/09/shortcuts-6.gif": {
     "path": "/archive-assets/external/89069cc2b3577ddfaa3f6a17.gif",
@@ -598,16 +726,24 @@
     "sha256": "89069cc2b3577ddfaa3f6a17ca20858751b289fb11c392dfaa492e46fb576c0b"
   },
   "http://billetlugen.dk/images/gfx_std/bl_iticket_net.gif": {
-    "error": "The read operation timed out; timed out"
+    "path": "/archive-assets/external/37d3b9e015706d2513ead3df.gif",
+    "sha256": "37d3b9e015706d2513ead3df98f4537b80bdcf940b634e5e81dd8aef4e83bfdd",
+    "fetched_from": "https://web.archive.org/web/20051212185549id_/http://www.billetlugen.dk:80/images/gfx_std/bl_iticket_net.gif"
   },
   "http://www.webmonkey.com/webmonkey/06/24/stuff/3skulls.png": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/e1b9337ae52996cd59e247a9.png",
+    "sha256": "e1b9337ae52996cd59e247a908994ebccce11c3dcc095c88fe3b2895ae0cb425",
+    "fetched_from": "https://web.archive.org/web/20060820044124id_/http://www.webmonkey.com:80/webmonkey/06/24/stuff/3skulls.png"
   },
   "http://www.smileycat.com/miaow/archives/images/misc/smileycat-bad-usability.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/6ffacd7eb5205897dac980a7.gif",
+    "sha256": "6ffacd7eb5205897dac980a7f33b38241581d3e1614efdc9c95e32fc62ceb5f4",
+    "fetched_from": "https://web.archive.org/web/20071012133233id_/http://www.smileycat.com/miaow/archives/images/misc/smileycat-bad-usability.gif"
   },
   "http://www.scottgatz.com/blog/wp-images/mailsidebar.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/d822a7665f9b8b5b5b70e113.gif",
+    "sha256": "d822a7665f9b8b5b5b70e1135d9d667b45cfa32be24affdd243a9a948e124df9",
+    "fetched_from": "https://web.archive.org/web/20060101133752id_/http://www.scottgatz.com:80/blog/wp-images/mailsidebar.gif"
   },
   "http://www.wemind.dk/images/wemind-logo.png": {
     "error": "<urlopen error timed out>; Response is not a supported raster image"
@@ -623,7 +759,9 @@
     "sha256": "8276e8a853e88da413164ecadce6764009ab0a1791b37fca5b7dd63aab082e50"
   },
   "http://ajaxian.com/archives/javascript-console-highjack.jpg": {
-    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>; Response is not a supported raster image"
+    "path": "/archive-assets/external/8e21d59511a3977db2f12cae.jpg",
+    "sha256": "8e21d59511a3977db2f12cae36bceb5e9d5646ba1314e2b5de553dad17c89563",
+    "fetched_from": "https://web.archive.org/web/20060211023318id_/http://ajaxian.com:80/archives/javascript-console-highjack.jpg"
   },
   "http://farm1.static.flickr.com/149/346769509_c3d6da75d8_o.jpg": {
     "path": "/archive-assets/external/3fb9dc62e53f48eb2f1c282c.jpg",
@@ -656,19 +794,32 @@
     "sha256": "36c2b51fd7bd6e201cf3734f7b32a987b2e2d5f1946e318dcd1c99750f72ccd2"
   },
   "http://images.cafepress.com/product/37249791_240x240_Front.jpg": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/d158f0e43518a1728bcf4d9b.jpg",
+    "sha256": "d158f0e43518a1728bcf4d9bfbdb1eec1bfa1cf766ab18f8fd1d5f8e61662a62",
+    "fetched_from": "https://web.archive.org/web/20110823012753id_/http://images.cafepress.com/product/37249791_240x240_Front.jpg"
   },
   "http://images.cafepress.com/product/5514708_240x240_Front.jpg": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/3e28b7870b88197a4afa7b2e.jpg",
+    "sha256": "3e28b7870b88197a4afa7b2efb463dd3f91a81adabdf054743dd6f3085c38c73",
+    "fetched_from": "https://web.archive.org/web/20110823012805id_/http://images.cafepress.com/product/5514708_240x240_Front.jpg"
   },
   "http://images.cafepress.com/product/7520571_240x240_Front.jpg": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/b27ee9e0e21f65160429014c.jpg",
+    "sha256": "b27ee9e0e21f65160429014c102235a1a88a06e41e5b53347d43ec23d084ed15",
+    "fetched_from": "https://web.archive.org/web/20110823012829id_/http://images.cafepress.com/product/7520571_240x240_Front.jpg"
   },
   "http://images.cafepress.com/product/78868305v2_240x240_Front.jpg": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/3a9e477a579599c956c6a53b.jpg",
+    "sha256": "3a9e477a579599c956c6a53b2f3659f7ea3422aafab6717aceabefcb67e9bc73",
+    "fetched_from": "https://web.archive.org/web/20110823012810id_/http://images.cafepress.com/product/78868305v2_240x240_Front.jpg"
   },
   "http://farm1.static.flickr.com/83/229551714_a5b4f7bc43_m.jpg": {
-    "error": "HTTP Error 410: Gone"
+    "path": "/archive-assets/external/816ee444f6ca02409daf6707.jpg",
+    "sha256": "816ee444f6ca02409daf67070864fa7e4b10450d2ab3bc578c3da57773b478b7",
+    "fetched_from": "https://web.archive.org/web/20090204213540id_/http://farm1.static.flickr.com/83/229551714_a5b4f7bc43_o.jpg",
+    "display_width": 166,
+    "display_height": 240,
+    "note": "Same Flickr photo recovered at its original resolution; render at the original medium-size maximum of 240 px."
   },
   "http://farm2.static.flickr.com/1342/1395418767_1d23095952_t.jpg": {
     "path": "/archive-assets/external/8ba8480240aa1f11cfbb62bd.jpg",
@@ -676,10 +827,14 @@
     "sha256": "8ba8480240aa1f11cfbb62bd3824480b1a591debd65726b348a293132d456047"
   },
   "http://simplyaccessible.org/images/4.gif": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/6ff1a9f1f6ac06f6885cc16e.gif",
+    "sha256": "6ff1a9f1f6ac06f6885cc16e3996936baa94c4e3da1bd48b6d08c24bbc052111",
+    "fetched_from": "https://web.archive.org/web/20051215021015id_/http://simplyaccessible.org:80/images/4.gif"
   },
   "http://simplyaccessible.org/images/9.gif": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/23c5438cf534b3322429315a.gif",
+    "sha256": "23c5438cf534b3322429315a83a5d4b3e7624e9b31a4110726f620e9f28e7fbf",
+    "fetched_from": "https://web.archive.org/web/20060430061209id_/http://simplyaccessible.org:80/images/9.gif"
   },
   "http://static.flickr.com/106/269940332_87f1c3750d_m.jpg": {
     "path": "/archive-assets/external/0807012288bc97819f19e628.jpg",
@@ -692,13 +847,19 @@
     "sha256": "b3df57f69d342d013cb71a5ed49796d6c3e72cf016972bc370b827bed59011cd"
   },
   "http://www.baekdal.com/images/articles/htmlimg01.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/57274ea531280e1b45063e4d.jpg",
+    "sha256": "57274ea531280e1b45063e4d21632c46b0c984fe090dc982a6a1b61e252ddad3",
+    "fetched_from": "https://web.archive.org/web/20070315135216id_/http://www.baekdal.com:80/images/articles/htmlimg01.jpg"
   },
   "http://www.baekdal.com/images/articles/htmlimg02.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/5daf0703a1a7a79e295e401c.jpg",
+    "sha256": "5daf0703a1a7a79e295e401c34113a0aa8c9841c8aa99c5a793f5fe12be76cc6",
+    "fetched_from": "https://web.archive.org/web/20070315135027id_/http://www.baekdal.com:80/images/articles/htmlimg02.jpg"
   },
   "http://www.baekdal.com/images/articles/htmlimg03.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/6bea976bd9f1952c25da3578.jpg",
+    "sha256": "6bea976bd9f1952c25da3578353c80de0d56800f68d4237ad85e83b719222538",
+    "fetched_from": "https://web.archive.org/web/20070315135306id_/http://www.baekdal.com:80/images/articles/htmlimg03.jpg"
   },
   "http://googleblog.blogspot.com/uploaded_images/Google_Space-705825.JPG": {
     "path": "/archive-assets/external/e2e4f45d987fede763e5cefa.jpg",
@@ -712,13 +873,19 @@
     "error": "HTTP Error 403: Forbidden"
   },
   "http://www.ok-cancel.com/strips/okcancel20070518.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "path": "/archive-assets/external/45d809ba678bbd6cf14770b3.gif",
+    "sha256": "45d809ba678bbd6cf14770b3f4aa1a38ff8ce33012d60b47b474114ff23934e8",
+    "fetched_from": "https://web.archive.org/web/20070628102143id_/http://www.ok-cancel.com/strips/okcancel20070518.gif"
   },
   "http://www.mypagerank.net/services/pagerankbutton/pagerankbutton.php?aut=c3530d42aeeb70830395fb891f211e1e00595865f524": {
-    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>; Response is not a supported raster image"
+    "path": "/archive-assets/external/b5bf6442a67deb4ffcf5910f.gif",
+    "sha256": "b5bf6442a67deb4ffcf5910fc98c91101dabf508582ba1b2d5b52df9f1b6cb42",
+    "fetched_from": "https://web.archive.org/web/20120511112349id_/http://www.mypagerank.net/services/pagerankbutton/pagerankbutton.php?aut=c3530d42aeeb70830395fb891f211e1e00595865f524"
   },
   "http://www.dk.capgemini.com/img/logo.gif": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "path": "/archive-assets/external/188814ce32cfcc4bf932db9f.gif",
+    "sha256": "188814ce32cfcc4bf932db9f2f299e186d0cd6e774fa2ade9b949e653b3a3513",
+    "fetched_from": "https://web.archive.org/web/20061216081418id_/http://www.dk.capgemini.com:80/img/logo.gif"
   },
   "http://castingwords.com/images/castingwordslogo.gif": {
     "path": "/archive-assets/external/7d620021779e01523425cbee.gif",

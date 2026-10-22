@@ -8,13 +8,14 @@ import json
 from pathlib import Path
 import re
 import sys
-from urllib.parse import unquote, unquote_plus, urlsplit
+from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
 from archive import ROOT, HOSTS, CSS_URL, embedded_css, is_video_embed, parse_document
 from recovery import recovery_data, video_players, SHORTCODE, UNDO_PATH, TABLE_DEMO, BUTTON_DEMO
 from feeds import feed_specs, comment_items, ATOM, url_path
+from legacy import ui_repairs, allowed_bookmarklet, topic_index, tag_key
 
 
 def video_embed_markup(soup):
@@ -36,8 +37,11 @@ def expected_video_markup(row):
 def expected_article_content(soup):
     # Deliberately independent of clean_html: applying the converter's cleanup
     # to both expected and actual content would hide its accidental deletions.
-    for tag in soup.find_all(['script', 'style', 'iframe', 'object', 'embed', 'applet']):
-        tag.decompose()
+    for tag in reversed(soup.find_all(['script', 'style', 'iframe', 'object', 'embed', 'applet'])):
+        if tag.name == 'object' and not is_video_embed(tag):
+            tag.unwrap()  # Literal object examples can contain ordinary article text.
+        else:
+            tag.decompose()
     return soup
 
 
@@ -69,10 +73,22 @@ def article_text_preserved(markup, actual):
     for row in recovery_data()['tag_lists']:
         # get_text(' ', strip=True) separates the link labels and comma nodes.
         markup = markup.replace(row['captured'], 'Technorati Tags: ' + ' , '.join(row['tags']))
+    for row in ui_repairs()['literal_markup']:
+        markup = markup.replace(row['captured'], row['replacement'])
+    audio = ui_repairs().get('audio', {})
+    if audio.get('path'):
+        markup = markup.replace(audio['captured_label'], audio['label'])
     def expected_text(text):
         return ' '.join(text.split())
 
     original = BeautifulSoup(markup, 'html.parser')
+    paragraphs = {row['captured_text']: row for row in ui_repairs()['paragraph_code']}
+    for paragraph in original.find_all('p'):
+        record = paragraphs.get(' '.join(paragraph.get_text(' ', strip=True).split()))
+        if record:
+            paragraph.clear()
+            paragraph.string = (record.get('prefix', '') + '\n' + record['code']).strip()
+    markup = str(original)
     expected = expected_text(expected_article_content(original).get_text(' ', strip=True))
     if expected in actual:
         return True
@@ -170,9 +186,12 @@ def verify(site, base):
                 if not url:
                     continue
                 if url.lower().startswith(('javascript:', 'vbscript:')):
-                    errors.append(f'{file}: executable URL')
+                    if attr != 'href' or not allowed_bookmarklet(tag, relative):
+                        errors.append(f'{file}: unreviewed executable URL')
                 if urlsplit(url).hostname in HOSTS and tag.get('rel') not in (['canonical'], ['shortlink']):
                     errors.append(f'{file.relative_to(site)}: depends on old host: {url}')
+                if attr == 'href' and tag_key(url) is not None:
+                    errors.append(f'{file.relative_to(site)}: retired Technorati tag link: {url}')
                 target(url, file)
             if tag.name == 'img' and urlsplit(tag.get('src', '')).hostname:
                 external_images[urlsplit(tag['src']).hostname] += 1
@@ -198,9 +217,12 @@ def verify(site, base):
             if (row is None or block.name != 'small'
                     or block.get_text() != 'Technorati Tags: ' + ', '.join(row['tags'])
                     or [a.get_text() for a in links] != row['tags']
-                    or any(a.get('rel') != ['tag'] or not a.get('href', '').startswith('http://technorati.com/tag/')
-                           or unquote_plus(a['href'].removeprefix('http://technorati.com/tag/')) != a.get_text() for a in links)):
+                    or any(a.get('rel') != ['tag'] or a.get('href') != base + topic_index()[' '.join(a.get_text().split()).casefold()]['path'] for a in links)):
                 errors.append(f'{file}: repaired tag list differs from SimpleTags output')
+        for block in soup.select('[data-repair-code]'):
+            record = next((r for r in ui_repairs()['paragraph_code'] if r['id'] == block['data-repair-code']), None)
+            if record is None or block.get_text() != record['code']:
+                errors.append(f'{file}: repaired paragraph code differs')
 
     content_checks = 0
     for row in data['posts'] + data['pages']:
@@ -231,15 +253,59 @@ def verify(site, base):
                 block = soup.find(attrs={'data-recovery-code': key})
                 if block is None or block.get_text() != code:
                     errors.append(f'Published article is missing recovered example {key}: {row["link"]}')
+        for repair in ui_repairs()['paragraph_code']:
+            if repair['post_id'] == row['id']:
+                blocks = soup.select('[data-repair-code="' + repair['id'] + '"]')
+                if len(blocks) != 1 or blocks[0].get_text() != repair['code']:
+                    errors.append(f'Published article is missing repaired code {repair["id"]}')
         content_checks += 1
     for asset in recovery['assets']:
         file = site / asset['path'].lstrip('/')
         if not file.exists() or hashlib.sha256(file.read_bytes()).hexdigest() != asset['sha256']:
             errors.append(f'Recovered asset missing or modified: {asset["path"]}')
+    for asset in json.loads((ROOT / 'data/external-images.json').read_text()).values():
+        if asset.get('path'):
+            file = site / asset['path'].lstrip('/')
+            if not file.exists() or hashlib.sha256(file.read_bytes()).hexdigest() != asset['sha256']:
+                errors.append(f'Recovered external image missing or modified: {asset["path"]}')
     for alias, canonical in recovery['aliases'].items():
         file, original = site / alias.lstrip('/'), site / canonical.lstrip('/')
         if not file.exists() or file.read_bytes() != original.read_bytes():
             errors.append(f'Repaired asset alias missing or modified: {alias}')
+    for path, records in ui_repairs()['bookmarklets'].items():
+        soup = BeautifulSoup((site / path.lstrip('/')).read_bytes(), 'html.parser')
+        if Counter(a.get('data-archive-bookmarklet') for a in soup.select('a[data-archive-bookmarklet]')) != Counter(r['id'] for r in records):
+            errors.append(f'Bookmarklets missing from {path}')
+    for asset in ui_repairs().get('bookmarklet_assets', []):
+        for file, digest in [(site / asset['path'].lstrip('/'), asset['sha256']),
+                             (ROOT / asset['source_file'], asset['source_sha256'])]:
+            if not file.exists() or hashlib.sha256(file.read_bytes()).hexdigest() != digest:
+                errors.append(f'Recovered bookmarklet dependency missing or modified: {file}')
+    for alias, canonical in ui_repairs()['redirects'].items():
+        file = site / unquote(alias).lstrip('/') / 'index.html'
+        if not file.exists():
+            errors.append(f'Repaired article alias missing: {alias}')
+            continue
+        soup = BeautifulSoup(file.read_bytes(), 'html.parser')
+        refresh = soup.find('meta', attrs={'http-equiv': 'refresh'})
+        if refresh is None or refresh.get('content') != '0;url=' + base + canonical:
+            errors.append(f'Repaired article alias points at the wrong URL: {alias}')
+    for record in topic_index().values():
+        file = site / unquote(record['path']).lstrip('/') / 'index.html'
+        soup = BeautifulSoup(file.read_bytes(), 'html.parser')
+        links = [a['href'] for a in soup.select('.archive-topic-posts a')]
+        if links != [base + urlsplit(row['link']).path for row in record['posts']]:
+            errors.append(f'Tag index membership differs: {record["path"]}')
+    audio = ui_repairs().get('audio', {})
+    if audio.get('path'):
+        file = site / audio['path'].lstrip('/')
+        if not file.exists() or hashlib.sha256(file.read_bytes()).hexdigest() != audio['sha256']:
+            errors.append('Recovered podcast differs from the publisher download')
+        article = next(row for row in data['posts'] if row['id'] == audio['post_id'])
+        soup = BeautifulSoup((site / urlsplit(article['link']).path.lstrip('/') / 'index.html').read_bytes(), 'html.parser')
+        player = soup.find('audio')
+        if player is None or not player.has_attr('controls') or player.get('src') != base + audio['path']:
+            errors.append('Recovered podcast has no local audio player')
     for path, selector, count in [(UNDO_PATH, '#done', 1), (BUTTON_DEMO, 'input, button', 3)]:
         soup = BeautifulSoup((site / path.lstrip('/')).read_bytes(), 'html.parser')
         controls = soup.select(selector)

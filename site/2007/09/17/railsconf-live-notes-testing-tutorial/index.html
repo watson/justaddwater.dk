@@ -139,10 +139,9 @@ doesnt need right now. always add later. Removed</p>
 …and within 15 minutes that test becomes so non valuable.</p>
 <p>Chad: I challenge you to write long method names … at least for a day or two<br/>
 When you follow that style, your code will be cleaner and healthier</p>
-<p>Write flunking test to identify an assumptions<br/>
-def test_all_validation_are_run<br/>
-flunk ‘we probably want to create a validation test case for this’<br/>
-end</p>
+<p>Write flunking test to identify an assumptions</p><pre class="archive-code" data-repair-code="paragraph-714-15"><code>def test_all_validation_are_run
+flunk 'we probably want to create a validation test case for this'
+end</code></pre>
 <p>Chad: Have you run your other test recently?</p>
 <p>Chad: Id like to have only one test failing at a time</p>
 <p class="Photo"> 	    		<a href="http://www.flickr.com/photos/jesper/1395426465/"><img alt="IMG_3403" data-original-url="http://farm2.static.flickr.com/1192/1395426465_0bd1d6a2d0_m.jpg" height="160" src="/archive-assets/external/2e83d6c2913730a2a0ea1be9.jpg" width="240"/></a></p>
@@ -203,14 +202,14 @@ Here Hecle will go in and modify bar until test breaks</p>
 require ‘flexmock’<br/>
 require ‘flexmock/test_unit’<br/>
 (Jim Weirich (co?)authored it and we tend to use libraries he wrote)</p>
-<p>class GameTest<br/>
-attr_reader :game<br/>
-def setup<br/>
-@game = flexmock(‘Game’)<br/>
-@dealer  = flexmock(‘Dealer’)<br/>
-@player1 = flexmock(‘Player’)<br/>
-@player2 = flexmock(‘Player’)<br/>
-end</p>
+<pre class="archive-code" data-repair-code="paragraph-714-45"><code>class GameTest
+attr_reader :game
+def setup
+@game = flexmock('Game')
+@dealer  = flexmock('Dealer')
+@player1 = flexmock('Player')
+@player2 = flexmock('Player')
+end</code></pre>
 <p>Chad (again): “it would be interesting to run just what you have and see what it does”</p>
 <p>player.should_receive(:join).once.ordered.with(game)<br/>
 player.should_receive(:bet).once.ordered</p>
@@ -261,7 +260,7 @@ not passing a block is an unimplemented spec</p>
 <li>deft + tab “def test_ … end”</li>
 </ul>
 <p>Idea for “deft” shortcut: replace all spaces as-you-type with underscores</p>
-<p><small>Technorati Tags: <a href="http://technorati.com/tag/railsconf" rel="tag">railsconf</a>, <a href="http://technorati.com/tag/berlin" rel="tag"> berlin</a>, <a href="http://technorati.com/tag/marcel+molina" rel="tag"> marcel molina</a>, <a href="http://technorati.com/tag/chad+fowler" rel="tag"> chad fowler</a>, <a href="http://technorati.com/tag/testing" rel="tag"> testing</a>, <a href="http://technorati.com/tag/copenhagenrb" rel="tag"> copenhagenrb</a></small></p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/railsconf" href="/topics/railsconf/" rel="tag">railsconf</a>, <a data-original-url="http://technorati.com/tag/berlin" href="/topics/berlin/" rel="tag"> berlin</a>, <a data-original-url="http://technorati.com/tag/marcel+molina" href="/topics/marcel-molina/" rel="tag"> marcel molina</a>, <a data-original-url="http://technorati.com/tag/chad+fowler" href="/topics/chad-fowler/" rel="tag"> chad fowler</a>, <a data-original-url="http://technorati.com/tag/testing" href="/topics/testing/" rel="tag"> testing</a>, <a data-original-url="http://technorati.com/tag/copenhagenrb" href="/topics/copenhagenrb/" rel="tag"> copenhagenrb</a></small></p>
 	
 					
 				<p class="postmetadata alt">

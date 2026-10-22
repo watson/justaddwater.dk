@@ -1,0 +1,54 @@
+
+#so_mContainer {
+	position:absolute;
+	top:10px;
+	left:10px;
+	color:#000;
+	background-color:#E3EBED;
+	border:2px solid #000;
+	font:11px verdana,arial;
+	text-align:left;
+	background-image:url(../../gr/office_logo_green.gif);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	min-height:200px;
+	min-width:300px;
+}
+
+#so_mContainer h1 {
+	cursor:pointer;
+	margin:0;
+	color:#FFF;
+	font:bold 1.0em verdana,arial;
+	background-color:#638DA1;
+	text-align:left;
+	padding:3px;
+	border-bottom:1px solid #000;
+
+}
+
+#so_mContainer ul {
+	margin:5px;
+	padding:0;
+}
+
+#so_mContainer ul li {
+	margin-left:5px;
+	font:10px verdana,arial;
+	list-style-type:none;
+}
+
+#so_credits {
+	width:60%;
+	margin:25px 0 10px 5px;
+	font:9px verdana;
+	border-top:1px solid #000;
+}
+
+#so_credits a {
+	font-weight:bold;
+	text-decoration:none;
+	color:#004465;
+	border-style:none;
+}
+

@@ -1,0 +1,55 @@
+#nContainer {
+	position:absolute;
+	top:5px;
+	border:2px solid #000;
+	background-color:#E3EBED;
+	padding:5px;
+	z-index:1000;
+	background-image:url(http://slayeroffice.com/gr/office_logo_green.gif);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	text-align:left;
+}
+
+#mRules {
+	display:block;
+	font:9px verdana,arial,helvectica;
+	border:1px solid #000;
+	width:280px;
+	height:200px;
+	padding:3px;
+	color:#000;
+}
+
+.btn {
+	border:1px solid #000;
+	font:9px verdana,arial,helvetica;
+	color:#FFF;
+	background-color:#78919B;
+	margin-right:5px;
+}
+
+.credits {
+	font:9px verdana,arial,helvetica;
+	margin-top:10px;
+	border-top:1px solid #000;
+	width:150px;
+	color:#000;
+}
+
+select {
+	font:9px verdana,arial,helvetica;
+	min-width:275px;
+}
+
+#nContainer h1 {
+	position:relative;
+	margin:0px 0px 5px 0px;
+	padding:5px 3px;
+	color:#FFF;
+	height:15px;
+	font:bold 10px verdana,arial,helvetica;
+	background:#78919B;
+	cursor:pointer;
+	border:1px solid #000;
+}

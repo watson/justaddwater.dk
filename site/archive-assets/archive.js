@@ -3,6 +3,9 @@
   'use strict';
   const root = new URL('../', document.currentScript.src);
   const local = (path) => new URL(path.replace(/^\//, ''), root);
+  for (const link of document.querySelectorAll('a[data-archive-bookmarklet]')) {
+    link.setAttribute('href', link.getAttribute('href').replaceAll('__ARCHIVE_ROOT__', root.href));
+  }
   const params = new URLSearchParams(location.search);
   const legacyID = params.get('p') || params.get('page_id') || params.get('attachment_id');
 

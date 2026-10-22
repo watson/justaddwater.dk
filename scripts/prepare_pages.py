@@ -24,6 +24,8 @@ class PrefixHTML(HTMLParser):
     def handle_starttag(self, tag, attrs):
         text = self.get_starttag_text()
         text = re.sub(r'((?:href|src|action|poster)=[\"\'])/(?!/)', lambda m: m[1] + self.base + '/', text)
+        if tag == 'meta' and dict(attrs).get('http-equiv', '').lower() == 'refresh':
+            text = re.sub(r'(;url=)/(?!/)', lambda m: m[1] + self.base + '/', text)
         text = prefix_css(text, self.base)
         text = re.sub(r'(srcset=[\"\'])(.*?)([\"\'])',
                       lambda m: m[1] + re.sub(r'(^|,\s*)/(?!/)', lambda n: n[1] + self.base + '/', m[2]) + m[3], text)

@@ -24,6 +24,7 @@ import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup, Comment
 from feeds import feed_specs, is_feed, write_feeds
 from recovery import recovery_data, restore_code, restore_tag_lists, restore_gists, restore_demos, restore_local_forms, restore_comments, modernize_videos, UNDO_URL, UNDO_PATH
+from legacy import ui_repairs, restore_literal_markup, restore_article_ui, restore_bookmarklets, allowed_bookmarklet, tag_key, topic_index, topic_body
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / '.cache'
@@ -118,7 +119,7 @@ def load_data():
 
 
 def id_routes(data):
-    return {str(row['id']): urlsplit(row['link']).path
+    return {str(row['id']): quote(unquote(urlsplit(row['link']).path), safe="/!$&'()*+,-.;=@_~")
             for kind in ('posts', 'pages', 'media') for row in data[kind]}
 
 
@@ -131,6 +132,7 @@ def local_url(value, base, ids):
         return None
     path = re.sub(r'/+', '/', parts.path or '/')
     path = recovery_data()['aliases'].get(unquote(path), path)
+    path = ui_repairs()['redirects'].get(unquote(path).rstrip('/') + '/', path)
     # A few original articles accidentally used a relative uploads path.
     if '/wp-content/' in path and not path.startswith('/wp-content/'):
         path = path[path.index('/wp-content/'):]
@@ -194,7 +196,7 @@ def parse_document(raw, path='', recover=True):
     # lets formatting tags cross paragraph boundaries; html.parser closes them
     # early and silently changes how the published article looks.
     if recover:
-        raw = restore_code(raw)
+        raw = restore_literal_markup(restore_code(raw))
     return BeautifulSoup(protect_form_examples(raw), 'html5lib')
 
 
@@ -378,6 +380,8 @@ def archive_form(soup, form):
 def clean_html(soup, path=''):
     restore_tag_lists(soup)
     restore_gists(soup)
+    restore_article_ui(soup, path)
+    restore_bookmarklets(soup, path)
     # The old host prints PHP open_basedir warnings on attachment pages. These
     # are runtime diagnostics, not article content or archive navigation.
     for warning in soup.find_all('b', string=re.compile(r'^(Warning|Notice|Deprecated)$')):
@@ -406,7 +410,8 @@ def clean_html(soup, path=''):
                 del tag[attr]
         for attr in ('href', 'src', 'action', 'xlink:href'):
             if str(tag.get(attr, '')).strip().lower().startswith(('javascript:', 'vbscript:')):
-                del tag[attr]
+                if attr != 'href' or not allowed_bookmarklet(tag, path):
+                    del tag[attr]
     for tag in soup.select('link[rel="pingback"], link[rel="https://api.w.org/"], link[rel="EditURI"], link[rel="wlwmanifest"]'):
         tag.decompose()
     restore_local_forms(soup, path)
@@ -465,6 +470,14 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
             value = tag.get(attr)
             if not value:
                 continue
+            if attr == 'href':
+                value = ui_repairs()['external_link_repairs'].get(value, value)
+                tag[attr] = value
+                key = tag_key(value)
+                if key is not None:
+                    tag['data-original-url'] = value
+                    tag[attr] = topic_index()[key]['path'] if key in topic_index() else '/search/?s=' + quote(key)
+                    continue
             if attr == 'href' and re.match(r'^(?:www\.|github\.com/)', value):
                 value = 'https://' + value
                 tag[attr] = value
@@ -474,6 +487,9 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
             if tag.name == 'img' and attr == 'src' and urlsplit(value).hostname and urlsplit(value).hostname not in HOSTS:
                 image = external.get(value, {})
                 tag['src'] = '/archive-assets/feed.svg' if value.endswith('/feed-icon32x32.png') else image.get('path', '/archive-assets/unavailable.svg')
+                for dimension in ('width', 'height'):
+                    if image.get('display_' + dimension) and not tag.get(dimension):
+                        tag[dimension] = str(image['display_' + dimension])
                 if value.endswith('/feed-icon32x32.png'):
                     tag['alt'] = 'RSS feed'
                 tag['data-original-url'] = value
@@ -558,8 +574,11 @@ def build(data, state):
                 child.unlink()
     ids = id_routes(data)
     routes = set(state['pages']) | set(state['assets']) | set(recovered_assets) | {UNDO_PATH, '/archive-assets/demos.js'}
+    routes.update('/' + file.relative_to(SITE).as_posix() for file in (SITE / 'archive-assets').rglob('*') if file.is_file())
+    routes.update(record['path'] for record in topic_index().values())
     comment_snapshots = json.loads((ROOT / 'data/comment-feeds.json').read_text())
     routes.update(feed_specs(data, comment_snapshots['feeds']))
+    routes = {quote(unquote(path), safe="/!$&'()*+,-.;=@_~") for path in routes}
     external_file = ROOT / 'data/external-images.json'
     external = json.loads(external_file.read_text()) if external_file.exists() else {}
     unavailable, comment_ids, comment_links = set(), set(), {}
@@ -600,6 +619,16 @@ def build(data, state):
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(disk_path(canonical), target)
     template = (SITE / 'index.html').read_text()
+    for record in topic_index().values():
+        target = disk_path(record['path'])
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(generated_page(template, 'Tag: ' + record['name'], topic_body(record)))
+    for alias, canonical in ui_repairs()['redirects'].items():
+        target = disk_path(alias)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(generated_page(template, 'This article has moved',
+            '<meta http-equiv="refresh" content="0;url=' + html.escape(canonical, quote=True) + '">'
+            '<p><a href="' + html.escape(canonical, quote=True) + '">Continue to the article</a>.</p>'))
     for path, title, content in [
         ('/search/', 'Search the archive', '<form action="/search/" method="get"><label for="archive-query">Search posts and pages</label> <input id="archive-query" name="s" type="search"/><button type="submit">Search</button></form><p id="search-status" role="status"></p><ol id="search-results"></ol>'),
         ('/unavailable/', 'Unavailable in the original site', '<p>This historical link was already unavailable when the blog was archived. The rest of the archive is preserved.</p><p><a href="/archive/">Browse the archive</a> or <a href="/search/">search posts</a>.</p>'),
@@ -617,7 +646,7 @@ def build(data, state):
     def render_feed_content(markup, base):
         soup = clean_html(parse_document(markup))
         # Players and their explanatory notes remain together on the article.
-        for tag in soup.select('iframe, object, embed, script, style, .archive-video-note'):
+        for tag in soup.select('iframe, object, embed, audio, script, style, .archive-video-note'):
             tag.decompose()
         soup = rewrite(soup, base, ids, routes, unavailable, external)
         return soup.body.decode_contents()
@@ -625,7 +654,7 @@ def build(data, state):
     generated_feeds = write_feeds(data, SITE, render_feed_content, comment_links=comment_links)
     (SITE / '.nojekyll').touch()
     sitemap = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
-    for path in sorted({urlsplit(p['link']).path for p in data['posts'] + data['pages']} | {'/'}):
+    for path in sorted({urlsplit(p['link']).path for p in data['posts'] + data['pages']} | {record['path'] for record in topic_index().values()} | {'/'}):
         node = ET.SubElement(sitemap, 'url')
         ET.SubElement(node, 'loc').text = 'https://justaddwater.dk' + path
     ET.ElementTree(sitemap).write(SITE / 'sitemap.xml', encoding='utf-8', xml_declaration=True)

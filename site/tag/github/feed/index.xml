@@ -3,58 +3,58 @@
 &lt;p&gt;Short explanation on how to pull changes from different Git repositories into your local Git repository.&lt;/p&gt;
 &lt;p&gt;Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, the remote repository is automatically added so you can do a simple git pull (instead of the verbose version “git pull origin master”)&lt;/p&gt;
 &lt;p&gt;Now, let’s say you’d like to pull changes from another branch/fork on Github:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;git remote add dean git://github.com/dstrelau/webrat.git&lt;br/&gt;
-git co -b dean&lt;br/&gt;
-git pull dean master&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-4"&gt;&lt;code&gt;git remote add dean git://github.com/dstrelau/webrat.git
+git co -b dean
+git pull dean master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;Git pull dean master will work. but “git pull” gives the following message:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;[~/othercode/webrat (master)] ➔ git co dean&lt;br/&gt;
-Switched to branch ‘dean’&lt;br/&gt;
-[~/othercode/webrat (dean)] ➔ git pull&lt;br/&gt;
-You asked me to pull without telling me which branch you&lt;br/&gt;
-want to merge with, and ‘branch.dean.merge’ in&lt;br/&gt;
-your configuration file does not tell me either.    Please&lt;br/&gt;
-specify which branch you want to merge on the command line and&lt;br/&gt;
-try again (e.g. ‘git pull &amp;lt;repository&amp;gt; &amp;lt;refspec&amp;gt;’).&lt;br/&gt;
-See git-pull(1) for details.&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-6"&gt;&lt;code&gt;[~/othercode/webrat (master)] ➔ git co dean
+Switched to branch 'dean'
+[~/othercode/webrat (dean)] ➔ git pull
+You asked me to pull without telling me which branch you
+want to merge with, and 'branch.dean.merge' in
+your configuration file does not tell me either.    Please
+specify which branch you want to merge on the command line and
+try again (e.g. 'git pull &amp;lt;repository&amp;gt; &amp;lt;refspec&amp;gt;').
+See git-pull(1) for details.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you often merge with the same branch, you may want to&lt;br/&gt;
 configure the following variables in your configuration&lt;br/&gt;
 file:&lt;/p&gt;
-&lt;p&gt;branch.dean.remote = &amp;lt;nickname&amp;gt;&lt;br/&gt;
-branch.dean.merge = &amp;lt;remote-ref&amp;gt;&lt;br/&gt;
-remote.&amp;lt;nickname&amp;gt;.url = &amp;lt;url&amp;gt;&lt;br/&gt;
-remote.&amp;lt;nickname&amp;gt;.fetch = &amp;lt;refspec&amp;gt;&lt;/p&gt;
+&lt;pre class="archive-code" data-repair-code="paragraph-1117-8"&gt;&lt;code&gt;branch.dean.remote = &amp;lt;nickname&amp;gt;
+branch.dean.merge = &amp;lt;remote-ref&amp;gt;
+remote.&amp;lt;nickname&amp;gt;.url = &amp;lt;url&amp;gt;
+remote.&amp;lt;nickname&amp;gt;.fetch = &amp;lt;refspec&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;See git-config(1) for details.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2&gt;Solution to get the shorthand “git pull” to work:&lt;/h2&gt;
 &lt;p&gt;Add the following section to [project_dir]/.git/config&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;[branch “dean”]&lt;br/&gt;
-remote = dean&lt;br/&gt;
-merge = refs/heads/master&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-11"&gt;&lt;code&gt;[branch "dean"]
+remote = dean
+merge = refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;So my ./git/config file now looks like this:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;[core]&lt;br/&gt;
-repositoryformatversion = 0&lt;br/&gt;
-filemode = true&lt;br/&gt;
-bare = false&lt;br/&gt;
-logallrefupdates = true&lt;br/&gt;
-ignorecase = true&lt;br/&gt;
-[remote “origin”]&lt;br/&gt;
-url = git://github.com/brynary/webrat.git&lt;br/&gt;
-fetch = +refs/heads/*:refs/remotes/origin/*&lt;br/&gt;
-[branch “master”]&lt;br/&gt;
-remote = origin&lt;br/&gt;
-merge = refs/heads/master&lt;br/&gt;
-[remote “jonas”]&lt;br/&gt;
-url = git://github.com/jnicklas/webrat.git&lt;br/&gt;
-fetch = +refs/heads/*:refs/remotes/jonas/*&lt;br/&gt;
-[branch “jonas”]&lt;br/&gt;
-remote = jonas&lt;br/&gt;
-merge = refs/heads/master&lt;br/&gt;
-[remote “dean”]&lt;br/&gt;
-url = git://github.com/dstrelau/webrat.git&lt;br/&gt;
-fetch = +refs/heads/*:refs/remotes/dean/*&lt;br/&gt;
-[branch “dean”]&lt;br/&gt;
-remote = dean&lt;br/&gt;
-merge = refs/heads/master&lt;br/&gt;
-[branch “orig”]&lt;br/&gt;
-remote = origin&lt;br/&gt;
-merge = refs/heads/master&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-13"&gt;&lt;code&gt;[core]
+repositoryformatversion = 0
+filemode = true
+bare = false
+logallrefupdates = true
+ignorecase = true
+[remote "origin"]
+url = git://github.com/brynary/webrat.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+remote = origin
+merge = refs/heads/master
+[remote "jonas"]
+url = git://github.com/jnicklas/webrat.git
+fetch = +refs/heads/*:refs/remotes/jonas/*
+[branch "jonas"]
+remote = jonas
+merge = refs/heads/master
+[remote "dean"]
+url = git://github.com/dstrelau/webrat.git
+fetch = +refs/heads/*:refs/remotes/dean/*
+[branch "dean"]
+remote = dean
+merge = refs/heads/master
+[branch "orig"]
+remote = origin
+merge = refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 </description></item></channel></rss>

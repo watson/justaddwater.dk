@@ -186,24 +186,24 @@ CommitDate: Tue Jan 13 09:56:13 2015 +0100
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt;I had to rewrite the history in order to fix the email addresses. Turns out `git filter-branch` could help:&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
-&lt;p&gt;NEW_MAIL=”jesp….@gmail.com”&lt;br/&gt;
-git filter-branch –env-filter ‘&lt;br/&gt;
-&amp;gt; if [[ “$GIT_AUTHOR_EMAIL” = “EMAIL” || “$GIT_AUTHOR_EMAIL” = “$NEW_MAIL” ]]&lt;br/&gt;
-&amp;gt; then&lt;br/&gt;
-&amp;gt; if [[ “$GIT_AUTHOR_NAME” = “Ben Alman” ]]&lt;br/&gt;
-&amp;gt; then&lt;br/&gt;
-&amp;gt; GIT_AUTHOR_NAME=”Jesper Rønn-Jensen”&lt;br/&gt;
-&amp;gt; GIT_COMMITTER_NAME=”Jesper Rønn-Jensen”&lt;br/&gt;
-&amp;gt; export GIT_AUTHOR_NAME&lt;br/&gt;
-&amp;gt; export GIT_COMMITTER_NAME&lt;br/&gt;
-&amp;gt; fi&lt;br/&gt;
-&amp;gt;&lt;br/&gt;
-&amp;gt; GIT_AUTHOR_EMAIL=”$NEW_MAIL”&lt;br/&gt;
-&amp;gt; GIT_COMMITTER_EMAIL=”$NEW_MAIL”&lt;br/&gt;
-&amp;gt; export GIT_AUTHOR_EMAIL&lt;br/&gt;
-&amp;gt; export GIT_COMMITTER_EMAIL&lt;br/&gt;
-&amp;gt; fi&lt;br/&gt;
-&amp;gt; ‘ — –all&lt;/p&gt;
+&lt;pre class="archive-code" data-repair-code="paragraph-1733-10"&gt;&lt;code&gt;NEW_MAIL="jesp….@gmail.com"
+git filter-branch --env-filter '
+if [[ "$GIT_AUTHOR_EMAIL" = "EMAIL" || "$GIT_AUTHOR_EMAIL" = "$NEW_MAIL" ]]
+then
+if [[ "$GIT_AUTHOR_NAME" = "Ben Alman" ]]
+then
+GIT_AUTHOR_NAME="Jesper Rønn-Jensen"
+GIT_COMMITTER_NAME="Jesper Rønn-Jensen"
+export GIT_AUTHOR_NAME
+export GIT_COMMITTER_NAME
+fi
+
+GIT_AUTHOR_EMAIL="$NEW_MAIL"
+GIT_COMMITTER_EMAIL="$NEW_MAIL"
+export GIT_AUTHOR_EMAIL
+export GIT_COMMITTER_EMAIL
+fi
+' -- --all&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;10 seconds later, I could push the changed repository up back on the server. The result was much better:&lt;/p&gt;
 &lt;p&gt;&lt;a href="/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png"&gt;&lt;img alt="github log images fixed" class="aligncenter size-medium wp-image-1735" height="300" sizes="(max-width: 203px) 100vw, 203px" src="/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png" srcset="/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png 203w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-691x1024.png 691w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png 852w" width="203"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -280,60 +280,60 @@ pagerbak commit VA17 Login for existing user work., 76 minutes ago.
 &lt;p&gt;Short explanation on how to pull changes from different Git repositories into your local Git repository.&lt;/p&gt;
 &lt;p&gt;Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, the remote repository is automatically added so you can do a simple git pull (instead of the verbose version “git pull origin master”)&lt;/p&gt;
 &lt;p&gt;Now, let’s say you’d like to pull changes from another branch/fork on Github:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;git remote add dean git://github.com/dstrelau/webrat.git&lt;br/&gt;
-git co -b dean&lt;br/&gt;
-git pull dean master&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-4"&gt;&lt;code&gt;git remote add dean git://github.com/dstrelau/webrat.git
+git co -b dean
+git pull dean master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;Git pull dean master will work. but “git pull” gives the following message:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;[~/othercode/webrat (master)] ➔ git co dean&lt;br/&gt;
-Switched to branch ‘dean’&lt;br/&gt;
-[~/othercode/webrat (dean)] ➔ git pull&lt;br/&gt;
-You asked me to pull without telling me which branch you&lt;br/&gt;
-want to merge with, and ‘branch.dean.merge’ in&lt;br/&gt;
-your configuration file does not tell me either.    Please&lt;br/&gt;
-specify which branch you want to merge on the command line and&lt;br/&gt;
-try again (e.g. ‘git pull &amp;lt;repository&amp;gt; &amp;lt;refspec&amp;gt;’).&lt;br/&gt;
-See git-pull(1) for details.&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-6"&gt;&lt;code&gt;[~/othercode/webrat (master)] ➔ git co dean
+Switched to branch 'dean'
+[~/othercode/webrat (dean)] ➔ git pull
+You asked me to pull without telling me which branch you
+want to merge with, and 'branch.dean.merge' in
+your configuration file does not tell me either.    Please
+specify which branch you want to merge on the command line and
+try again (e.g. 'git pull &amp;lt;repository&amp;gt; &amp;lt;refspec&amp;gt;').
+See git-pull(1) for details.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you often merge with the same branch, you may want to&lt;br/&gt;
 configure the following variables in your configuration&lt;br/&gt;
 file:&lt;/p&gt;
-&lt;p&gt;branch.dean.remote = &amp;lt;nickname&amp;gt;&lt;br/&gt;
-branch.dean.merge = &amp;lt;remote-ref&amp;gt;&lt;br/&gt;
-remote.&amp;lt;nickname&amp;gt;.url = &amp;lt;url&amp;gt;&lt;br/&gt;
-remote.&amp;lt;nickname&amp;gt;.fetch = &amp;lt;refspec&amp;gt;&lt;/p&gt;
+&lt;pre class="archive-code" data-repair-code="paragraph-1117-8"&gt;&lt;code&gt;branch.dean.remote = &amp;lt;nickname&amp;gt;
+branch.dean.merge = &amp;lt;remote-ref&amp;gt;
+remote.&amp;lt;nickname&amp;gt;.url = &amp;lt;url&amp;gt;
+remote.&amp;lt;nickname&amp;gt;.fetch = &amp;lt;refspec&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;See git-config(1) for details.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2&gt;Solution to get the shorthand “git pull” to work:&lt;/h2&gt;
 &lt;p&gt;Add the following section to [project_dir]/.git/config&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;[branch “dean”]&lt;br/&gt;
-remote = dean&lt;br/&gt;
-merge = refs/heads/master&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-11"&gt;&lt;code&gt;[branch "dean"]
+remote = dean
+merge = refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;So my ./git/config file now looks like this:&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;[core]&lt;br/&gt;
-repositoryformatversion = 0&lt;br/&gt;
-filemode = true&lt;br/&gt;
-bare = false&lt;br/&gt;
-logallrefupdates = true&lt;br/&gt;
-ignorecase = true&lt;br/&gt;
-[remote “origin”]&lt;br/&gt;
-url = git://github.com/brynary/webrat.git&lt;br/&gt;
-fetch = +refs/heads/*:refs/remotes/origin/*&lt;br/&gt;
-[branch “master”]&lt;br/&gt;
-remote = origin&lt;br/&gt;
-merge = refs/heads/master&lt;br/&gt;
-[remote “jonas”]&lt;br/&gt;
-url = git://github.com/jnicklas/webrat.git&lt;br/&gt;
-fetch = +refs/heads/*:refs/remotes/jonas/*&lt;br/&gt;
-[branch “jonas”]&lt;br/&gt;
-remote = jonas&lt;br/&gt;
-merge = refs/heads/master&lt;br/&gt;
-[remote “dean”]&lt;br/&gt;
-url = git://github.com/dstrelau/webrat.git&lt;br/&gt;
-fetch = +refs/heads/*:refs/remotes/dean/*&lt;br/&gt;
-[branch “dean”]&lt;br/&gt;
-remote = dean&lt;br/&gt;
-merge = refs/heads/master&lt;br/&gt;
-[branch “orig”]&lt;br/&gt;
-remote = origin&lt;br/&gt;
-merge = refs/heads/master&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-13"&gt;&lt;code&gt;[core]
+repositoryformatversion = 0
+filemode = true
+bare = false
+logallrefupdates = true
+ignorecase = true
+[remote "origin"]
+url = git://github.com/brynary/webrat.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+remote = origin
+merge = refs/heads/master
+[remote "jonas"]
+url = git://github.com/jnicklas/webrat.git
+fetch = +refs/heads/*:refs/remotes/jonas/*
+[branch "jonas"]
+remote = jonas
+merge = refs/heads/master
+[remote "dean"]
+url = git://github.com/dstrelau/webrat.git
+fetch = +refs/heads/*:refs/remotes/dean/*
+[branch "dean"]
+remote = dean
+merge = refs/heads/master
+[branch "orig"]
+remote = origin
+merge = refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 </description></item><item><title>Using Git for SVN Repositories Workflow</title><link>http://justaddwater.dk/2009/03/09/using-git-for-svn-repositories-workflow/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1038</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 09 Mar 2009 13:52:11 +0000</pubDate><description>&lt;p&gt;For the last months I have been using Git to work with my Subversion repositories. Besides from &lt;a href="/2009/01/17/git-side-benefit-reducing-disk-usage/" title="justaddwater.dk | Git Side Benefit: Reducing Disk Usage"&gt;reducing disk usage&lt;/a&gt;, Git also makes my work slightly faster and independent of network access — I can make commits to repository which is sync’ed later when I get online.&lt;/p&gt;
 &lt;p&gt;One challenge though: Using branches&lt;/p&gt;
 &lt;p&gt;I ran into some pitfalls when using branches in Subversion repository. Here is a quick guide to how I setup and work with svn branches in git-svn.&lt;/p&gt;

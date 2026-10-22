@@ -1,0 +1,182 @@
+/*
+v03.31.2008
+	- fixed display issues in IE7 courtesy of Frank Mantje @ cosbo.nl
+*/
+
+#modiContainer {
+	position:absolute !important;
+	/*width:auto !important*/;
+	border-left:1px solid #000 !important;
+	border-top:1px solid #000 !important;
+	border-right:2px solid #000 !important;
+	border-bottom:2px solid #000 !important;
+	background-color:#E2EAED !important;
+	font:11px arial,verdana !important;
+	padding:0 !important;
+	/*min-width:200px !important;*/
+	text-align:left !important;
+	color:#000 !important;
+	z-index:1000 !important;
+	top:10px;
+	left:10px;
+	background-image:url() !important;
+	overflow:visible;
+	max-width:400px;
+}
+
+#modiContainer h2 {
+	position:relative !important;
+	background-color:#78919B !important;
+	width:auto !important;
+	color:#FFF !important;
+	text-align:left !important;
+	padding:2px !important;
+	margin:0 !important;
+	font:bold 12px arial,verdana !important;
+	border-bottom:1px solid #000 !important;
+	background-position:center right;
+	background-repeat:no-repeat;
+	text-transform:lowercase !important;
+	/*max-width:400px;*/
+	display:block !important;
+}
+
+#modiContainer h3 {
+	width:auto !important;
+	padding:2px !important;
+	background-color:#98B4C1 !important;
+	color:#000 !important;
+	margin:0 !important;
+	font:bold 12px arial,verdana !important;
+	border-bottom:1px solid #78919B !important;
+
+	background-repeat:no-repeat;
+	background-position:center right;
+	text-transform:lowercase !important;
+	/*max-width:400px;*/
+}
+
+#modiContainer .h3_on {
+	background-image:url(http://slayeroffice.com/tools/modi/v2.0/arrow_down.gif);
+}
+
+#modiContainer .h3_off {
+	background-image:url(http://slayeroffice.com/tools/modi/v2.0/arrow_up.gif);
+}
+
+#modiContainer ul {
+	margin:0 3px 5px 0 !important;
+	padding:2px 0 0 20px !important;
+}
+
+#modiContainer ul li {
+	list-style-type:disc !important;
+	line-height:150% !important;
+	list-style-image:url() !important;
+	background-image:url() !important;
+	font:11px arial,verdana !important;
+	color:#000 !important;
+	padding:0 0 0 1px !important;
+	max-width:400px;
+	word-wrap:break-word;
+	white-space:-moz-pre-wrap;
+	white-space: -o-pre-wrap;
+}
+
+
+#modiContainer #credits {
+	border-top:1px solid #98B4C1 !important;
+	font:9px verdana,arial !important;
+	padding:3px 0 3px 3px !important;
+	line-height:100% !important;
+	color:#000 !important;
+}
+
+#modiContainer #modiHelp {
+	position:absolute !important;
+	top:0px !important;
+	left:0px !important;
+	background-color:#E2EAED !important;
+	width:100% !important;
+	height:100% !important;
+	overflow:auto !important;
+}
+
+#modiHelp dl {
+	padding-left:5px !important;
+}
+
+#modiHelp dl dt {
+	font-weight:bold !important;
+	text-align:left !important;
+}
+
+#modiHelp dl dd {
+	padding-bottom:5px !important;
+}
+
+#modiContainer .parentStructure {
+	cursor:pointer !important;
+}
+
+#modiContainer .parentStructure:hover {
+	background-color:#F2F6F7 !important;
+}
+
+b {
+	font:bold 11px arial,verdana !important;
+	padding-right:2px;
+}
+
+#modiContainer #htmlView {
+	position:absolute !important;
+	width:300px !important;
+	height:200px !important;
+	border:2px solid #000 !important;
+	background-color:#E2EAED !important;
+	padding:3px;
+	top:15px;
+	left:15px;
+	z-index:1005 !important;
+}
+
+#modiContainer #htmlViewText {
+	width:297px;
+	height:150px;
+	border:1px solid #000 !important;
+	font:10px arial,verdana !important;
+	color:#000 !important;
+	background-color:#FFF !important;
+}
+
+.btn {
+	padding:5px;
+	cursor:pointer;
+	background-color:transparent !important;
+	border-style:none !important;
+}
+
+#modiContainer a {
+	color:#004465 !important;
+}
+
+.modi_label {
+	z-index:999 !important;
+	padding:2px !important;
+	font:10px arial,verdana !important;
+	border-top:1px solid #000 !important;
+	border-right:2px solid #000 !important;
+	border-bottom:2px solid #000 !important;
+	border-left:1px solid #000 !important;
+	background-color:#FFF !important;
+	position:absolute !important;
+	cursor:pointer;
+}
+
+#so_outlineObj {
+	position:absolute;
+	background-color:transparent !important;
+	background-image:url() !important;
+	display: none;
+	z-index:2001;
+}

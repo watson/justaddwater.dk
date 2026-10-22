@@ -122,13 +122,13 @@ img.emoji {
 &lt;TITLE&gt;CTR System&lt;/TITLE&gt;<br/>
 &lt;/HEAD&gt;</p>
 <p>&lt;!– No Cookie –&gt;</p>
-<p>&lt;FORM Name=”ssoRedirect” Method=”Post” Action=”https://sso.capgemini.com/gate.asp”&gt;<br/>
-&lt;INPUT Type = “hidden” Name=”calling_url” Value=”http://applications.capgemini.se/Applications/CTR/CTR.cfm?”&gt;<br/>
-&lt;INPUT Type = “hidden” Name=”server_identifier” Value=”applications.capgemini.se”&gt;<br/>
-&lt;/FORM&gt;</p>
-<p>&lt;SCRIPT Language=”javascript”&gt;<br/>
-document.forms[‘ssoRedirect’].submit()<br/>
-&lt;/SCRIPT&gt;</p></blockquote>
+<pre class="archive-code" data-repair-code="paragraph-1152-6"><code>&lt;FORM Name="ssoRedirect" Method="Post" Action="https://sso.capgemini.com/gate.asp"&gt;
+&lt;INPUT Type = "hidden" Name="calling_url" Value="http://applications.capgemini.se/Applications/CTR/CTR.cfm?"&gt;
+&lt;INPUT Type = "hidden" Name="server_identifier" Value="applications.capgemini.se"&gt;
+&lt;/FORM&gt;</code></pre>
+<pre class="archive-code" data-repair-code="paragraph-1152-7"><code>&lt;SCRIPT Language="javascript"&gt;
+document.forms['ssoRedirect'].submit()
+&lt;/SCRIPT&gt;</code></pre></blockquote>
 <p>Several problems here: Content outside of HTML element. No body element. No end HTML tag. And the most critical that triggers this particular problem: The form element and the SCRIPT element are outside the body.</p>
 <p>IE has an interpretation of this illegal structure: It creates a body element and fills in the SCRIPT and FORM tag into them.</p>
 <p>Firefox guesses differently. It moves the FORM element to the body as well, but the SCRIPT element is put in the HEAD section. The consequence is that the form submit happens before the FORM element is rendered. And it gives a JavaScript error that the form is not found.</p>
