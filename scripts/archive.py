@@ -396,8 +396,6 @@ def archive_form(soup, form):
     heading = soup.new_tag('strong')
     heading.string = 'This form no longer accepts submissions.'
     note.append(heading)
-    note.append(soup.new_tag('br'))
-    note.append('Fields and buttons are disabled.')
     form.insert_before(note)
 
 
