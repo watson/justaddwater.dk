@@ -118,7 +118,7 @@ def blockquote_pre(t):
     return re.sub(r"<blockquote\b[^>]*>(.*?)</blockquote>", fix, t, flags=re.S | re.I)
 
 def shortcodes(t):
-    t = re.sub(r"\[tags[^\]]*\].*?\[/?tags\]", "", t, flags=re.S)
+    t = re.sub(r"\[tags[^\]]*\](?:(?!\[/?tags\]).)*\[/tags\]", "", t, flags=re.S)
     def code(m):
         body = m.group(2).strip("\n").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         return '<pre><code%s>%s</code></pre>' % (' class="language-%s"' % m.group(1) if m.group(1) else "", body)
@@ -344,7 +344,7 @@ for it in chan.findall("item"):
             "author": AUTHOR_SLUG.get(it.findtext(D + "creator") or "", it.findtext(D + "creator") or "jesper")}
     raw = it.findtext(C + "encoded") or ""
     techno = []
-    for m in re.finditer(r"\[tags[^\]]*\](.*?)\[/?tags\]", raw, flags=re.S):
+    for m in re.finditer(r"\[tags[^\]]*\]((?:(?!\[/?tags\]).)*)\[/tags\]", raw, flags=re.S):
         techno += [x.strip() for x in re.split(r"[,\n]", re.sub(r"<[^>]+>", "", m.group(1))) if x.strip()]
     if techno: meta["technorati"] = techno
     body = to_md(raw, post=True)

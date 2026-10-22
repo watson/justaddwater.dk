@@ -43,3 +43,4 @@
 /2006/01/09/fixing-the-keyboard-shortcut-problem/ # post with table
 /2006/01/14/ajax-performance-stats-roi-and-business-value/ # post with tables
 /2006/06/29/webstandards-case-study/ # post with table
+/2007/09/27/undo-not-confirmation-end-of-discussion/ # post to check for inconsistency

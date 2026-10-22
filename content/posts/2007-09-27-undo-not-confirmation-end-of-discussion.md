@@ -7,7 +7,6 @@ wp_id: 718
 categories: ["Usability", "User experience"]
 tags: []
 author: "jesper"
-technorati: ["asa raskin", "usability", "undo", "confirmation"]
 ---
 
 Asa Raskin has made a really useful example of how to implement undo easily in user interfaces. Here's the example file (linked directly to a page at his company Humanized). Try deleting some items and then press undo.
@@ -30,3 +29,5 @@ In case you missed the A List Apart article by Asa, go read his brilliant "Never
 More info:\
 Alistapart: [Never Use a Warning When You Mean Undo](http://www.alistapart.com/articles/neveruseawarning/)\
 Humanized: [Undo Made Easy with Ajax (Part 1)](http://humanized.com/weblog/2007/09/14/undo-made-easy-with-ajax-part-1/) and [part 1.5](http://humanized.com/weblog/2007/09/21/undo-made-easy-with-ajax-part-15/)
+
+\[tags\]asa raskin, usability, undo, confirmation\[tags\]
