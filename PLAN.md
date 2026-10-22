@@ -54,7 +54,7 @@ Preserve 20 years of content and URLs, drop the maintenance and security burden,
 
 ## Hosting
 
-Project name: jaw-static. Hosting plan (GitHub Pages, public repo): see `docs/hosting.md`.
+Project name: jaw-static. Hosting plan (GitHub Pages, public repo): see `docs/hosting.md`. Later option for limited, moderated commenting: `docs/comments-plan.md`.
 
 ## Local files
 
