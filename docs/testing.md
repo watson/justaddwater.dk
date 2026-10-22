@@ -4,7 +4,7 @@
 
 | Check | Command |
 |---|---|
-| URL parity | `hugo --gc && sh docs/verify-urls.sh` (every front-matter `url:` has a page in `public/`) |
+| URL parity | `hugo --gc && sh docs/verify-urls.sh` (every front-matter `url:` has a page in `site/`) |
 | Build and search | `bin/build` (prints indexed page count, expected 440) |
 | Visual | `bin/screenshot --all`, then `bin/compare` |
 

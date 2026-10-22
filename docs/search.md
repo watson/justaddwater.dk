@@ -12,7 +12,7 @@ Only the 440 posts. `layouts/_default/single.html` puts `data-pagefind-body` on 
 ## Build
 - Production: `bin/build` (rm -rf public, `hugo --gc`, `pagefind --site public`). Hosting build command: `bin/build`, publish dir `public` (run `yarn install` first).
 - Dev: `hugo server` serves from memory, so no index exists. `bin/dev reindex` builds the site to `tmp/search-site`, runs Pagefind there and writes the bundle to `static/pagefind/` (git-ignored), which hugo serves as `/pagefind/`. `bin/dev start` builds it if missing, `bin/dev restart` always rebuilds. Re-run `bin/dev reindex` after content changes (layout/CSS changes need nothing).
-- `bin/build` removes `public/pagefind` before indexing so a dev bundle copied from `static/` never ends up stale.
+- `bin/build` removes `site/pagefind` before indexing so a dev bundle copied from `static/` never ends up stale.
 
 ## UI
 `/search/` (`content/search.md`, layout `layouts/_default/search.html`) uses the Pagefind Default UI (`/pagefind/pagefind-ui.js`), reads `?q=`, and is `noindex`. The sidebar form (`#searchform`) is a GET form to `/search/` with `name="q"`. The old WordPress `/?s=term` redirects there through `static/_redirects` (Netlify query rule; Cloudflare Pages ignores query strings in rules, `hugo server` ignores `_redirects` entirely).

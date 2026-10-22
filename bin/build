@@ -1,22 +1,22 @@
 #!/bin/bash
-# Production build: Hugo site into public/, then Pagefind search index.
+# Production build: Hugo site into site/, then Pagefind search index.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 case "${1:-}" in
   -h|--help|help)
     cat <<'EOT'
-bin/build - build the static site and its search index into public/
+bin/build - build the static site and its search index into site/
 
 Usage: bin/build [--help]
 
 Steps:
-  1. rm -rf public (retried once on 'Directory not empty'), so no stale pages are indexed
+  1. rm -rf site (retried once on 'Directory not empty'), so no stale pages are indexed
   2. hugo --gc
-  3. node_modules/.bin/pagefind --site public (index: pages with data-pagefind-body = posts only)
+  3. node_modules/.bin/pagefind --site site (index: pages with data-pagefind-body = posts only)
 
 Prints a short summary (indexed pages, fragments). Run 'yarn install' first.
-Hosting build command: bin/build   Publish directory: public
+Hosting build command: bin/build   Publish directory: site
 Dev server: bin/dev reindex (see docs/search.md)
 EOT
     exit 0 ;;
@@ -27,11 +27,11 @@ esac
 PAGEFIND=node_modules/.bin/pagefind
 [ -x "$PAGEFIND" ] || { echo "pagefind missing: run 'yarn install'" >&2; exit 1; }
 
-rm -rf public 2>/dev/null || { sleep 1; rm -rf public; }
+rm -rf site 2>/dev/null || { sleep 1; rm -rf site; }
 hugo --gc
 # static/pagefind may hold a dev index that hugo copied over; always start clean
-rm -rf public/pagefind
-"$PAGEFIND" --site public
+rm -rf site/pagefind
+"$PAGEFIND" --site site
 
-frags=$(ls public/pagefind/fragment 2>/dev/null | wc -l | tr -d ' ')
-echo "bin/build: done. public/ built, $frags indexed pages (fragments) in public/pagefind/"
+frags=$(ls site/pagefind/fragment 2>/dev/null | wc -l | tr -d ' ')
+echo "bin/build: done. site/ built, $frags indexed pages (fragments) in site/pagefind/"

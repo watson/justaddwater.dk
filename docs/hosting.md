@@ -4,7 +4,7 @@ Project name: **jaw-static** (jaw = justaddwater). Proposal: a public, open sour
 
 ## Why GitHub Pages fits
 
-- Static files only, which is exactly what `hugo` + `pagefind` produce (`public/`, about 65 MB, uploads 48 MB).
+- Static files only, which is exactly what `hugo` + `pagefind` produce (`site/`, about 65 MB, uploads 48 MB).
 - HTTPS with an automatic certificate for the custom domain (fixes the "Not secure" problem of today's HTTP-only site).
 - Deploys from `git push` through GitHub Actions; the history is the backup.
 - Limits (published site 1 GB, 100 MB per file, about 100 GB/month soft bandwidth, 10 builds/hour) are far above what a 2016 archive needs.
@@ -37,9 +37,9 @@ If real 301s ever matter, the fallback is Cloudflare Pages or Netlify (the `_red
 
 1. Checkout, setup Hugo (pin the version used here, v0.168) and Node.
 2. `yarn install --frozen-lockfile`
-3. `bin/build` (clean `hugo --gc`, then `pagefind --site public`).
+3. `bin/build` (clean `hugo --gc`, then `pagefind --site site`).
 4. `sh docs/verify-urls.sh` as a gate (`missing=0`).
-5. `actions/upload-pages-artifact` with `public/`, then `actions/deploy-pages`.
+5. `actions/upload-pages-artifact` with `site/` (or, as on origin/main, only `site/` is published, so it can also be committed and deployed without a build step), then `actions/deploy-pages`.
 6. Repo settings: Pages source = GitHub Actions. Custom domain `justaddwater.dk`, "Enforce HTTPS".
 
 `static/CNAME` containing `justaddwater.dk` (or set only in the settings, which is enough with Actions deploys).

@@ -1,5 +1,6 @@
 baseURL = "https://justaddwater.dk/"
 locale = "en"
+publishDir = "site"   # generated site, committed (GitHub Pages publishes site/)
 title = "Just Add Water"
 pagerSize = 20
 disableKinds = ["section"]
@@ -33,3 +34,5 @@ enableRobotsTXT = true
 
 [params]
   description = "Usability, web development and blogging, 2005–2016. An archive."
+  archiveStartYear = 2005
+  archiveEndYear = 2026

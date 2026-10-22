@@ -13,7 +13,7 @@
 | `bin/export-to-hugo` | sanitized XML (needs pandoc, ~7 min) | `content/posts`, `content/pages`, `data/comments/<slug>.json` |
 | `bin/export-excerpts` | raw XML | `data/excerpts.json` |
 | `bin/copy-uploads` | `mirror/` | `static/wp-content/uploads/` |
-| `bin/build` | all of the above | `public/` incl. Pagefind index |
+| `bin/build` | all of the above | `site/` incl. Pagefind index |
 
 ## Generated vs hand-written
 

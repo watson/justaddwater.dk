@@ -18,7 +18,7 @@
 | `.../function.file-exists/` attachment pages, WP 404s from the mirror log, `/wp-json`, `/wp-admin`, `/comments/feed/` content | none | dropped |
 | `/subscribe/`, `/thank-you-for-subscribing/`, `/thank-you-for-verifying-your-email-subscription/` (pages that 404 on the original) | none (skipped via `SKIP_SLUGS` in `bin/export-to-hugo`) | dropped: pages that 404 on the original |
 
-Known mismatch: hugo.toml `[outputs]` leave `section`/`taxonomy` without RSS. `public/robots.txt` has no `Sitemap:` line (needs `layouts/robots.txt`, theme agent).
+Known mismatch: hugo.toml `[outputs]` leave `section`/`taxonomy` without RSS. `site/robots.txt` has no `Sitemap:` line (needs `layouts/robots.txt`, theme agent).
 
 ## Date and author archives
 
@@ -26,7 +26,7 @@ Known mismatch: hugo.toml `[outputs]` leave `section`/`taxonomy` without RSS. `p
 
 ## Verification
 
-    hugo --gc && docs/verify-urls.sh     # every front-matter url: has public/<url>/index.html
-    curl -sI http://justaddwater.dk/<path> # compare with public/<path>
+    hugo --gc && docs/verify-urls.sh     # every front-matter url: has site/<url>/index.html
+    curl -sI http://justaddwater.dk/<path> # compare with site/<path>
 
 `_redirects` is only honoured by Netlify / Cloudflare Pages; `hugo server` ignores it.

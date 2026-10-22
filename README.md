@@ -7,7 +7,7 @@ Static Hugo archive of the WordPress blog justaddwater.dk (jaw = justaddwater): 
     yarn install                          # pagefind, playwright, pngjs
     npx playwright install chromium       # once, for bin/screenshot
     bin/dev start                         # http://localhost:1313
-    bin/build                             # production build into public/
+    bin/build                             # production build into site/
 
 Needs Hugo; pandoc only for re-running `bin/export-to-hugo`.
 
@@ -16,7 +16,7 @@ Needs Hugo; pandoc only for re-running `bin/export-to-hugo`.
 | Command | Purpose |
 |---|---|
 | `bin/dev` | start, stop, restart, status, reindex of the Hugo dev server |
-| `bin/build` | `hugo --gc` then Pagefind index into `public/` |
+| `bin/build` | `hugo --gc` then Pagefind index into `site/` |
 | `bin/mirror` | wget mirror of the live site into `mirror/` (git-ignored) |
 | `bin/scan` | flag suspicious files and links in the mirror and comments |
 | `bin/sanitize-export` | commit-safe copy of the raw WordPress XML export |
@@ -38,7 +38,8 @@ Needs Hugo; pandoc only for re-running `bin/export-to-hugo`.
 | `reference/` | original jaw theme CSS and images |
 | `screenshots/` | `orig/` and `dev/` comparison images |
 | `docs/` | documentation |
-| `mirror/`, `public/`, `tmp/`, `logs/` | generated, git-ignored |
+| `site/` | generated site (committed; GitHub Pages publishes it) |
+| `mirror/`, `tmp/`, `logs/` | generated, git-ignored |
 
 ## Docs
 
