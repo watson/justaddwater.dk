@@ -140,5 +140,27 @@
       "url": "https://www.youtube.com/watch?v=6gmP4nk0EOE"
     },
     "note": "Archive note: The original Mojiti transcription overlay is unavailable. The complete written transcript is preserved below."
+  },
+  {
+    "post_id": 910,
+    "captured": "<embed flashvars=\"\" id=\"VideoPlayback\" src=\"http://video.google.com/googleplayer.swf?docId=7304522840950176490&amp;hl=en\" style=\"width:400px; height:326px;\" type=\"application/x-shockwave-flash\"/>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"326\" id=\"VideoPlayback\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/0nyF_4yMf28?hl=en\" style=\"width:400px; height:326px;\" title=\"Scrum in a Lunchbag Session (Danish, 2008)\" width=\"400\"></iframe>",
+    "alternative": {
+      "approved_date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=0nyF_4yMf28",
+      "provenance": "Original Google Video recording recovered from the Internet Archive and re-uploaded by the site owner.",
+      "archived_source": "https://web.archive.org/web/20110721040245/http://video.google.com/videoplay?docid=7304522840950176490"
+    }
+  },
+  {
+    "post_id": 917,
+    "captured": "<embed flashvars=\"\" id=\"VideoPlayback\" src=\"http://video.google.com/googleplayer.swf?docId=7304522840950176490&amp;hl=en\" style=\"width:400px; height:326px;\" type=\"application/x-shockwave-flash\"/>",
+    "replacement": "<iframe allow=\"autoplay; encrypted-media; picture-in-picture; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"326\" id=\"VideoPlayback\" referrerpolicy=\"strict-origin-when-cross-origin\" src=\"https://www.youtube.com/embed/0nyF_4yMf28?hl=en\" style=\"width:400px; height:326px;\" title=\"Scrum in a Lunchbag Session (Danish, 2008)\" width=\"400\"></iframe>",
+    "alternative": {
+      "approved_date": "2026-10-22",
+      "url": "https://www.youtube.com/watch?v=0nyF_4yMf28",
+      "provenance": "Original Google Video recording recovered from the Internet Archive and re-uploaded by the site owner.",
+      "archived_source": "https://web.archive.org/web/20110721040245/http://video.google.com/videoplay?docid=7304522840950176490"
+    }
   }
 ]

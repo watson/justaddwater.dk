@@ -22,9 +22,9 @@ original host.
   `/…/feed/` paths and scope. Feed item links use the deployed archive address;
   original RSS IDs and comment timestamps are preserved.
   The original RSS and Atom aliases for the Web Standards category also work.
-- Video embeds in **21 posts**. Nineteen use native YouTube players, including
-  eight owner-approved alternative uploads across ten posts.
-  Original player dimensions are preserved. The other legacy embeds remain.
+- Video embeds in **21 posts**, all using native YouTube players, including
+  nine owner-approved replacement uploads across twelve posts.
+  Original player dimensions are preserved.
 - **61 legacy code examples in 19 articles** displayed as code, plus **14 files
   from 12 GitHub gist embeds** saved locally. Quotes, command-line hyphens and
   literal HTML tags are preserved without executing the examples.
@@ -50,8 +50,9 @@ presentation, the motivation clip, Monty Python's Spam sketch, Michael Wesch's
 Web 2.0 film (two posts), and Aza Raskin's Rapid Prototyping talk. The two Mojiti
 replacements explain that their original comment/annotation or transcription
 layers are unavailable; the article screenshot and complete written transcript
-remain. The Danish Scrum presentation keeps its legacy embeds in two posts
-because no matching alternative has been found.
+remain. The original Danish Scrum presentation was recovered from the Internet
+Archive and re-uploaded to YouTube by the site owner, restoring both posts that
+embedded the same Google Video recording.
 The original capture remains unchanged in `data/content.json`;
 `data/video-players.json` records each migration and approved alternative.
 YouTube's supported `hl`, `fs` and `rel` parameters are retained; Flash-only

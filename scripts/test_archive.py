@@ -256,12 +256,12 @@ class VideoEmbedTests(unittest.TestCase):
         self.assertEqual(migrated, {row['post_id'] for row in video_players() if 'alternative' not in row})
 
     def test_only_approved_alternative_videos_replace_original_ids(self):
-        # Independent record of the owner's selection: items 1-8, ten posts.
+        # Owner's selections: items 1-8 plus the recovered Scrum upload, twelve posts.
         approved = {908: '9y10Jvruc_Q', 906: '9y10Jvruc_Q', 848: 'U_HgMduuE5s',
                     465: 'vMV4PIEIKY4', 930: '1OnlF0X6G3g', 1168: '_tjYoKCBYag',
                     805: 'y9B75hH26yU', 540: '6gmP4nk0EOE', 542: '6gmP4nk0EOE',
-                    1378: 'Bu8EtZdSJ3c'}
-        self.assertEqual(len(video_players()), 18)
+                    1378: 'Bu8EtZdSJ3c', 910: '0nyF_4yMf28', 917: '0nyF_4yMf28'}
+        self.assertEqual(len(video_players()), 20)
         self.assertEqual({r['post_id'] for r in video_players() if 'alternative' in r}, set(approved))
         for row in self.articles:
             if row['id'] not in approved:
