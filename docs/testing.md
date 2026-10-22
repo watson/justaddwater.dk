@@ -10,7 +10,7 @@
 
 ## Visual comparison
 
-- `bin/screenshot` takes 800 px full-page shots of the 41 paths in `bin/screenshot-pages.txt` into `screenshots/dev/` (needs `bin/dev start`) and `screenshots/orig/` (live site). Append new pages at the end.
+- `bin/screenshot` takes 800 px full-page shots of the 44 paths in `bin/screenshot-pages.txt` into `screenshots/dev/` (needs `bin/dev start`) and `screenshots/orig/` (live site). Append new pages at the end.
 - `bin/compare` builds a pixelpilot review of the two folders (`~/src/dotfiles/bin/pixelpilot`, override with `PIXELPILOT`).
 - `bin/compare --report [--only a,b] [--fail-above PCT]` prints per page: sizes, height delta, % differing pixels, per-100px bands. Diffs go to `tmp/pixelpilot-report`.
 - `bin/compare --shoot` retakes everything first (~40 s).
