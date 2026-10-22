@@ -12,17 +12,21 @@ technorati: ["event", "seminar", "jesse james garrett", "adaptive path", "copenh
 
 Today I’m attending [Jesse James Garrett](http://blog.jjg.net/)’s event "[The elements of User Experience](http://www.adaptivepath.com/events/2006/may3/)" here in Copenhagen. I'll update this post during the day with my notes. ~~if there's network access which I sort of hope.~~
 
-*Update: Notes done. Very good day! Now on for the informal cocktail hour!*
+<ins>Update: Notes done. Very good day! Now on for the informal cocktail hour!</ins>
 
 **Click here for [My notes, "the elements of User Experience"](/notes-elements-of-user-experience/ "Justaddwater.dk: Jesper's Notes, Elements of User Experience")\**
 
+
 <div style="text-align: center">
+
 
 [![Jesse Games Garrett in action, Copenhagen, May 31, 2006](/wp-content/uploads/2006/05/jjg-7697-thumb.jpg)](/notes-elements-of-user-experience/jesse-games-garrett-in-action-copenhagen-may-31-2006/ "Jesse Games Garrett in action, Copenhagen, May 31, 2006")\
 Click image to view notes[\
 ](/2006/05/31/user-experience-notes/jesse-games-garrett-in-action-copenhagen-may-31-2006/ "Jesse Games Garrett in action, Copenhagen, May 31, 2006")
 
+
 </div>
+
 
 I'm really looking forward to this, alhough mentally [my presentation at reboot](/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/ "Justaddwater.dk: Speaking at reboot8 about Rails and rapid prototyping  ") is taking a lot of my attention. There are several things that I look forward to:
 

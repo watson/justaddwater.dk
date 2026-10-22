@@ -19,11 +19,15 @@ Aza Raskin, creative lead at Firefox, shares some tips and tricks about rapid pr
 
 One of his points: "**Aim to finish a usable artifact in a day. This helps you focus and scope.**"
 
+
 <div style="text-align: left;">
+
 
 He shows this block of wood as example: {{< img src=`/wp-content/uploads/2010/11/Screen-shot-2010-11-22-at-10.04.34-PM.png` alt=`` title=`block of wood that used as prototype for palm pilot` class=`size-full wp-image-1380 aligncenter` style=`margin-top: 10px; margin-bottom: 10px;` width=`302` height=`277` >}}
 
+
 </div>
+
 
 > This block of wood has rather a history, because it is also a Palm Pilot. I regarded it started at Palm. Actually,
 >

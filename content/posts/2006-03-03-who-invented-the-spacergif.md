@@ -16,7 +16,7 @@ Do you remember this fish?
 
 Since this blog is primarily about web standards and and usability, I thought this would be a good time to give you sort of an **anti-webstandards**, anti-usability insight. It's a journey ten years back into time, where no web standards existed, and I learned how to make "**killer websites**".
 
-*UPDATE 2006-03-03: I got an email from David Siegel himself, where he confirms that he invented the spacer.GIF technique.*
+<ins>UPDATE 2006-03-03: I got an email from David Siegel himself, where he confirms that he invented the spacer.GIF technique.</ins>
 
 A few moments ago I saw a job posting over at [ajaxian.com](http://ajaxian.com/archives/senior-ajax-front-end-developer "Ajaxian.com: Senior ajax front-end developer"). Note the final line:
 
@@ -24,7 +24,7 @@ A few moments ago I saw a job posting over at [ajaxian.com](http://ajaxian.com/a
 
 I'm just curious here. Whould this be David Siegel, as the "inventor" of the transparent 1-pixel spacer gif?
 
-~~To be honest, I'm not aware if he invented the trick, but I remember that~~*David Siegel invented this technique and* his book introduced me to it back in 1996-1997. Seen in today's perspective, some of the [review comments for his book on amazon](http://www.amazon.com/gp/product/1568302894/qid=1141336952/sr=1-1/ref=sr_1_1/104-2613138-0017553?s=books&v=glance&n=283155 "Amazon book: Creating Killer Web Sites") are simply amusing:
+~~To be honest, I'm not aware if he invented the trick, but I remember that~~<ins>David Siegel invented this technique and </ins> his book introduced me to it back in 1996-1997. Seen in today's perspective, some of the [review comments for his book on amazon](http://www.amazon.com/gp/product/1568302894/qid=1141336952/sr=1-1/ref=sr_1_1/104-2613138-0017553?s=books&v=glance&n=283155 "Amazon book: Creating Killer Web Sites") are simply amusing:
 
 > Do you want to know about how to use tables for layouts, use transparent 1-pixel GIFs as spacers or "shims" to keep everything from getting wobbly, and how to use GIF-text images in conjunction with actual text to make your page look just the way you, the designer, want it to? All those techniques are explained here in great detail
 

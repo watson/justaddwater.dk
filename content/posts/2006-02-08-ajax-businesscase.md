@@ -14,11 +14,15 @@ As a followup to my earlier post "[AJAX performance stats, ROI, and business val
 
 Anyways, I want to give you some of the details on why we decided to implement AJAX validations in this particular web application. I worked on a project for a Danish company in the financial sector. We had a complex interface where the user had to enter a lot of information about a lot of users. This is illustrated here with user \#1, \#2, and so on.
 
+
 <div align="center">
+
 
 {{< img src=`/wp-content/uploads/2006/01/ajax%20validation%20object%20model.png` alt=`AJAX application object model` width=`306` height=`105` >}}
 
+
 </div>
+
 
 In this particular solution, the typical usage scenario is that an employee has data about multiple users to enter: That could for example be name, age, social security numbers etc.
 
@@ -26,9 +30,13 @@ In this particular solution, the typical usage scenario is that an employee has 
 
 We originally looked at two different interaction models. Version 1 where the employee could edit one user at a time, and then go back to the main page, as shown below. I really can't show the webpages used, but here is a sketch that shows the principle.
 
+
 <div align="left">
 
+
+
 </div>
+
 
 ![ajax validation version 1](/wp-content/uploads/2006/01/ajax%20validation%20version1.png "ajax validation version 1")
 

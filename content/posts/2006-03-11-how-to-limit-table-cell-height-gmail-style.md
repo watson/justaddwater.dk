@@ -57,7 +57,7 @@ I just sent this to the [CSS-D discussion list](http://archivist.incutio.com/vie
 
 I'll post the results here as I find out how Google GMail does the trick. Please share any tricks that you know of here. Oh, for your information, solution must work in Internet Explorer...
 
-*UPDATE: Now working!* Thanks to the information at [BlakeMS blog](http://www.blakems.com/archives/000077.html "BlakeMS.com: Using text-overflow"), I now got it working (no Javascript necessary).
+<ins>UPDATE: Now working!</ins> Thanks to the information at [BlakeMS blog](http://www.blakems.com/archives/000077.html "BlakeMS.com: Using text-overflow"), I now got it working (no Javascript necessary).
 
 > Now this works the same with table cells. See below and note that you must set table to have the table-layout: fixed property for it to work.
 >

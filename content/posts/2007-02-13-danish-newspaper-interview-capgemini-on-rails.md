@@ -14,11 +14,15 @@ Thomas and I are interviewed in Danish newspaper "Børsen" today. The article is
 
 I really like the picture (by [Reimar Juul](http://reimarjuul.com/)) and the fact that the article mentions both Justaddwater.dk and Copenhagen Ruby Brigade. Woot!
 
+
 <div style="text-align:center">
+
 
 [![Screenshot of Børsen article](/wp-content/uploads/2007/02/borsen-ruby-on-rails-article-overview-mini.png)](/wp-content/uploads/2007/02/borsen-ruby-on-rails-article-overview-maxi.png "Screenshot of Børsen article") <small>Click image to view larger version</small>
 
+
 </div>
+
 
 For the benefit of the Danish speaking readers, I really want to include the entire text from the article here to make it searchable and quotable for the benefit of everybody who is also interested in Ruby on Rails for enterprise use. Currently I'm awaiting permission from Børsen to include the article here. Also, I'm awaiting a direct link to the Børsen article if you like to read it in it's original domain.
 

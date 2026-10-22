@@ -42,7 +42,7 @@ In a couple of related articles we have written about what there can be done to 
 
 We will implement these improvements during the next couple of months and will post about our findings along the way...
 
-*UPDATE: I thought that I would add some links to other bloggers that have written about and implemented this new trend:*
+<ins>UPDATE: I thought that I would add some links to other bloggers that have written about and implemented this new trend:</ins>
 
 - [Jonathan Boutelles](http://www.jonathanboutelle.com/) who have also written [a series of posts about the Mullet layout](http://www.jonathanboutelle.com/mt/archives/mullet_blog_layout/index.html)
 - [Kapil Mohan](http://www.kapilmohan.com/) in the post "[Mullet](http://www.kapilmohan.com/2006/01/22/mulleted/ "Kapil Mohan: Mullet")" (and here is [his code for WordPress](http://www.kapilmohan.com/2006/01/22/mullet-code-for-wordpress/ "Kapil Mohan: Mullet code for WordPress"))

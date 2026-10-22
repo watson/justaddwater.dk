@@ -19,10 +19,10 @@ Four years ago we had the usability rap (along with the excellent gangsta-style 
 
 Now there is this even cooler rap. Web design tutorial by Poetic Prophet (AKA The SEO Rapper). This one is called "Design Coding".
 
-~~I wonder where is there a transscript of the rap, search engine optimized?~~
-
-Update: [Molly Holzschlag posted entire transscript](http://www.molly.com/2008/04/07/design-coding-rap-for-the-rest-of-us/) (thanks [Phil Nash](http://www.unintentionallyblank.co.uk/) for mentioning).
+~~I wonder where is there a transscript of the rap, search engine optimized?~~<ins>Update: [Molly Holzschlag posted entire transscript](http://www.molly.com/2008/04/07/design-coding-rap-for-the-rest-of-us/) (thanks [Phil Nash](http://www.unintentionallyblank.co.uk/) for mentioning).
 
 Make sure you also check out the other videos like "Link Building 101 Rap" and "Do the Page Rank".
 
 Hmm i feel like sneaking a movie clip into a presentation at work in the near future...
+
+</ins>

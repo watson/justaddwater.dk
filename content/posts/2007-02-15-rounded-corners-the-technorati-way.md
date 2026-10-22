@@ -70,11 +70,15 @@ Note that the background-image for the faded box is one thin sliced faded image:
 
 The corners is made with only one image that's positioned differently depending on which corner it's in. The image is actually a transparent circle on white background.
 
+
 <div style="background-color: #339933; color: #dddddd; height: 30px; line-height: 30px">
+
 
 ![technorati rounded corner image](http://static.technorati.com/static/css/img/corners/white.gif) shown on dark background for clarity.
 
+
 </div>
+
 
 So I [included the final example on a separate page](/wp-content/uploads/2007/03/technorati-style-rounded-corners.html "Example page: technorati-style rounded corners") (because the Wordpress editor doesn't let me add the HTML code precisely as it's required)
 

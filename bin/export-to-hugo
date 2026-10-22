@@ -151,6 +151,15 @@ def next_opener(t, pos):
     for m in TAG.finditer(t, pos):
         if not m.group(1) and not m.group(3): return m
 
+def autop_list_items(lst):
+    """WordPress autop inside <li>: blank-line separated chunks after the first become <p>."""
+    def item(m):
+        body = m.group(2)
+        if not re.search(r"\n\s*\n", body) or re.search(r"<(?:ul|ol|p|div|table)\b", body, re.I): return m.group(0)
+        first, *rest = [c.strip() for c in re.split(r"\n\s*\n", body.strip())]
+        return m.group(1) + first + "".join("\n<p>%s</p>" % re.sub(r"[ \t]*\n[ \t]*", "<br>\n", c) for c in rest) + "</li>"
+    return re.sub(r"(<li(?:\s[^>]*)?>)(.*?)</li>", item, lst, flags=re.S | re.I)
+
 def wpautop(t):
     """Minimal WordPress autop: text outside block containers becomes <p> (blank-line separated,
     single newlines -> <br>); block containers (lists, tables, pre...) are kept verbatim so no
@@ -185,6 +194,8 @@ def wpautop(t):
             out.append(t[m.start():m.end()] + inner + t[end.start():end.end()])
         elif name in RECURSE:
             out.append(t[m.start():m.end()] + "\n\n" + wpautop(t[m.end():end.start()]) + "\n\n" + t[end.start():end.end()])
+        elif name in ("ul", "ol"):
+            out.append(autop_list_items(t[m.start():end.end()]))
         else:
             out.append(t[m.start():end.end()])
         pos = end.end()
@@ -294,13 +305,14 @@ def to_md(html, post=False):
         html, imgs = protect_imgs(html)
         html = re.sub(r"<p\b([^>]*\s(?:align|style)=[^>]*)>(.*?)</p>", r"<div\1>\2</div>", html, flags=re.I | re.S)
         html = re.sub(r"</?small\b[^>]*>", lambda m: "PPSMALLCLOSEPP" if m.group(0)[1] == "/" else "PPSMALLOPENPP", html, flags=re.I)
+        html = re.sub(r"</?ins\b[^>]*>", lambda m: "PPINSCLOSEPP" if m.group(0)[1] == "/" else "PPINSOPENPP", html, flags=re.I)
     html, div_tags = protect_styled_divs(html)
     r = subprocess.run(["pandoc", "-f", "html", "-t", "gfm-raw_html", "--wrap=none"],
                        input=html, capture_output=True, text=True)
     md = r.stdout if r.returncode == 0 else html
     md = restore_styled_divs(md, div_tags)
     md = restore_tables(md, tabs)
-    md = md.replace("PPSMALLOPENPP", "<small>").replace("PPSMALLCLOSEPP", "</small>")
+    md = md.replace("PPSMALLOPENPP", "<small>").replace("PPSMALLCLOSEPP", "</small>").replace("PPINSOPENPP", "<ins>").replace("PPINSCLOSEPP", "</ins>")
     for i, sc in enumerate(imgs): md = md.replace("PPIMG%dPP" % i, sc)
     md = re.sub(r"(?m)^\\[ \t]*$\n?", "", md)      # lone hard breaks beside block elements
     md = re.sub(r"\\\n(?=\n)", "\n", md)          # hard break at paragraph end

@@ -12,21 +12,29 @@ technorati: ["justaddwater", "justaddwater.dk", "photoshoot", "michael bothager"
 
 You may have noticed the updated photos of the authors on this blog. Recently Thomas and I met up with Michael Bothager (colleague) to do a photo session.
 
+
 <div align="left">
+
 
 {{< img src=`/wp-content/uploads/2006/07/IMG_7912_200x.JPG` alt=`IMG_7912_200x.JPG` align=`left` style=`margin-right: 5px` >}}
 
+
 </div>
+
 
 Apart from being a skilled Java developer and business analyst, Michael Bothager is working hard as a spare-time photographer. We really enjoyed the photoshoot, but it turned out to be hard work finding the right places for the right photos.
 
 This first photo is taken by me as Michael gets ready to shoot. All other photos on this page are by Michael Bothager <small>(all rights reserved)</small>
 
+
 <div style="clear: left">
+
 
 We also experimented a bit with serious and less serious photos.
 
+
 </div>
+
 
 All photos on this page taken by Michael Bothager (except otherwise noted)
 

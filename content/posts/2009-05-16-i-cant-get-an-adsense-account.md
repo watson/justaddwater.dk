@@ -11,11 +11,15 @@ author: "thomas"
 
 This is one of the most dissatisfying customer experiences I've had in a long, long time.
 
+
 <div style="text-align: center;">
+
 
 {{< img src=`/wp-content/uploads/2009/05/picture-6.png` alt=`Google AdSense logo` title=`Google AdSense logo` class=`size-full wp-image-1070 aligncenter` width=`345` height=`88` >}}
 
+
 </div>
+
 
 I'm managing a website for a customer and they want to have the AdSense program running on their site. Piece of cake I thought... First off I created a new AdSense account for the domain with my customers contact information and linked it to my own Google Account. I used my own Google Account because I didn't wanted to bother my customer with the technical setup e-mails I expected to arrive. So my thought was to transfer the AdSense account to him at a later stage. BIG MISTAKE! That's not possible.
 
@@ -42,11 +46,15 @@ Ahh... So I just need to find some AdSense specific information about how to clo
 
 After a lot of searching I find this form: [Closing my Google AdSense account](https://www.google.com/adsense/support/bin/request.py?contact=request_cancellation). I submit the form, wait and later receive a nice e-mail telling me that they are unable to cancel my account because I currently have "payment holds". I must admit that I'm not entirely sure what that is, but since I haven't ever used or earned any money with this account, I didn't think "payment holds" should be an issue. They tell me, that if I want to give up my rights to get my money (what money?), I must fill out another form almost identical to the one I filled out before. The new form have the same name but the URL is slightly different: It ends with "cancellation" instead of "request_cancellation" and have this extra check box:
 
+
 <div style="text-align: center;">
+
 
 {{< img src=`/wp-content/uploads/2009/05/picture-7.png` alt=`Google AdSense cancelation check box` title=`Google AdSense cancelation check box` class=`size-full wp-image-1074 aligncenter` width=`391` height=`67` >}}
 
+
 </div>
+
 
 Why didn't they just show be this form to beging with?
 

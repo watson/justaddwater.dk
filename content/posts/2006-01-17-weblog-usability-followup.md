@@ -24,17 +24,25 @@ The report is published 3 months before Jakob Nielsen focused on [weblog usabili
 
 For instance, we do not have fotos of Thomas and I on this weblog, but to please the grumpy crowd here's one of me and Jakob Nielsen:
 
+
 <div style="text-align: center">
+
 
 {{< img src=`http://static.flickr.com/30/65199575_ad1a0ab136_m.jpg` alt=`IMG_1551` width=`240` height=`160` >}}
 
+
 </div>
+
+
 
 <div align="center">
 
+
 <small>Jesper Rønn-Jensen and Jakob Nielsen, Usability Week, Copenhagen, 2004 </small>
 
+
 </div>
+
 
 Also mentioned by "[brugervenligeblogs.dk](http://www.brugervenligeblogs.dk/2006/01/er-weblogs-brugervenlige.html "brugervenligeblogs.dk: er weblogs brugervenlige?")" is "[10 Ways to Increase Blog Usability](http://performancing.com/node/331 "Performancing blog: 10 Ways to Increase Blog Usability by Claire Campbell")", with some very useful tips (some overlapping the other two mentioned).
 

@@ -40,7 +40,7 @@ But what about screen readers? Will they still recognize this as a regular image
 
 **Does anybody have any thoughts or experience with this? Am I for example right in my assumption that JAWS actually reads the generated code? And will that in fact be a problem? Please drop a comment with your thoughts.**
 
-*Update 2006-11-06 19:10 (CET)*\
+<ins>Update 2006-11-06 19:10 (CET)</ins>\
 To better understand the accessibility implications, here is an update to clarify what Bob Osolas fix actually does. Take this example of a regular img element:
 
 `<img src="`**`/images/sunset.png`**`" align="`**`left`**`" alt="`**`Sunset over New York`**`" width="`**`654`**`" height="`**`321`**`" id="`**`img421`**`" class="`**`largeimage`**`" style="`**`border: 1px solid black`**`" />`

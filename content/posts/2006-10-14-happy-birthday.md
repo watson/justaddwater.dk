@@ -30,11 +30,15 @@ I think that I'll end this birthday post with some statistics... In the beginnin
 
 Just a couple of days ago Google gave us a very nice birthday present, they bumped us from PageRank 4 to 6 overnight, so this is now our current Google Page Rank:
 
+
 <div style="text-align: center">
+
 
 [{{< img src=`http://www.mypagerank.net/smerankcheck.php?site=justaddwater.dk&s=style8` alt=`This is my Google PageRank™ - SmE Rank free service Powered by Scriptme` border=`0` >}}](http://www.mypagerank.net)
 
+
 </div>
+
 
 Thank you Google :)
 

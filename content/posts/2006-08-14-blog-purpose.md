@@ -44,17 +44,25 @@ And then, justaddwater.dk was born. Thomas wrote this as our [first guideline fo
 
 After blogging for a while, we started to get feedback from people we never dreamt of. The style of the blog encourages dialog and we were thrilled to see comments and feedback from Jakob Nielsen, Jared Spool, Eric Reiss, John Rhodes, Joe Clark, Jonathan Boutelle, and many others.
 
+
 <div align="center">
+
 
 [{{< img src=`http://static.flickr.com/63/165588134_b909304062_m.jpg` alt=`IMG_7921_crop` width=`240` height=`160` >}}](http://www.flickr.com/photos/jesper/165588134/ "Photo Sharing")
 
+
 </div>
+
+
 
 <div align="center">
 
+
 <small>Books by authors that read justaddwater.dk: [Jakob Nielsen](http://www.useit.com/jakob/), [Jared Spool](http://www.uie.com/brainsparks/author/jared/), [Steve Krug](http://www.sensible.com/about.html), [Eric Reiss](http://www.fatdux.com/who/eric-reiss.html), [John Rhodes](http://webword.com), [Mike Kuniavski](http://www.amazon.com/gp/product/1558609237/ref=ase_orangecone-20/103-6147560-2043036?s=books&v=glance&n=283155&tagActionCode=orangecone-20), [Joe Clark](http://joeclark.org/), [Thomas Snitker](http://snitker.com) </small>
 
+
 </div>
+
 
 But most and above all, our most active commentators deserve a special mention: [Piotr](http://www.Deducta.dk), [Luis Villa](http://www.grancomo.com), [Hemanshu](http://hnarsana.com), [Jakob Skjerning](http://mentalized.net), [Olle Jonsson](http://blog.olle.ter.dk), [Casper Fabricius](http://casperfabricius.com/blog/), [Brian Crescimanno](http://ds.phorce.com/), [Trine-Maria](http://hovedetpaabloggen.dk)\
 **Thanks for all your comments. Our blog wouldn't be the same without you!**

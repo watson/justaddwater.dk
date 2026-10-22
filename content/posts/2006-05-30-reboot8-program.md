@@ -14,7 +14,7 @@ technorati: ["reboot", "reboot8", "copenhagen", "denmark", "conference", "speaki
 
 I've been very curious with respect to the conference program for reboot8 next week. Especially because [I'll be giving a short talk](/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/ "Justaddwater.dk: speaking at reboot8 about Rails and rapid prototyping") there.
 
-I see from the [Program page](http://reboot.dk/wiki/Program "Reboot: program ") that now there **is a program available** for ~~Thursday at least~~ *the entire conference*. I just mailed Thomas Madsen-Mygdal to ask if the other half of the program is on the way. Also, it seems like [Michael Heliemanns Google Calendar](http://binarybonsai.com/archives/2006/04/27/reboot-80-google-calendar/ "Binary Bonsai: reboot 8 google calendar") is not yet updated with the schedule (at least not in my Google Calendar).\
+I see from the [Program page](http://reboot.dk/wiki/Program "Reboot: program ") that now there **is a program available** for ~~Thursday at least~~ <ins>the entire conference</ins>. I just mailed Thomas Madsen-Mygdal to ask if the other half of the program is on the way. Also, it seems like [Michael Heliemanns Google Calendar](http://binarybonsai.com/archives/2006/04/27/reboot-80-google-calendar/ "Binary Bonsai: reboot 8 google calendar") is not yet updated with the schedule (at least not in my Google Calendar).\
 I'll be speaking in the "demos" section somewhere between 16.45 and 17.30.
 
 > ### THURSDAY 1st OF JUNE

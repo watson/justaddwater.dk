@@ -95,10 +95,14 @@ Vaguely related, the final word is from my blogging partner Thomas Watson, [curr
 
 [](/2006/05/16/rails-enterprise-business-perspective/keep-off-rails-thumbjpg/ "keep-off-rails-thumb.jpg")
 
+
 <div style="text-align: center">
+
 
 [![keep-off-rails-thumb.jpg](/wp-content/uploads/2006/05/keep-off-rails-thumb.jpg)](/2006/05/16/rails-enterprise-business-perspective/keep-off-rails-thumbjpg/ "keep-off-rails-thumb.jpg")
 
+
 </div>
+
 
 Sure hope that not everybody will follow the advice of San Fransisco Authorities to keep off Ruby on Rails.

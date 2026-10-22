@@ -24,7 +24,7 @@ Topic: Prototype driven development with Ruby on Rails, and demo of the applicat
 
 ~~Request: Could somebody **convert my Powerpoint to PDF?**~~
 
-*Thanks to Thomas Maas and Guy Dickinson for converting to PDF!*
+<ins>Thanks to Thomas Maas and Guy Dickinson for converting to PDF!</ins>
 
 ### Additional material
 

@@ -49,15 +49,40 @@ Some even have different pages for each group of fields creating a wizard like e
 
 This category is a bit more diverse. You can imagine an endless amount of different ways to indicate that a specific field is required, or you can turn the tables around and indicate that a field is optional. There generally is 3 popular ways of doing this:
 
-1.  Asterisk next to either label or field marking the field as required: [Yahoo](https://edit.yahoo.com/config/eval_register "Yahoo! Registration") ![Yahoo! Registration - Asterisk before label](/wp-content/uploads/2006/03/yahoo-form-asterisk-before-label.png) [IBM](https://www-132.ibm.com/webapp/wcs/stores/servlet/UserRegistrationForm "IBM: Create an account") ![IBM Create Account - Asterisk before label](/wp-content/uploads/2006/03/ibm-form-asterisk-before-label.png) [The Washington Post](http://www.washingtonpost.com/ac2/wp-dyn?node=admin/registration/register&destination=register&nextstep=gather&application=reg30-globalnav "The Washington Post: Register") ![The Washington Post Register - Asterisk before label](/wp-content/uploads/2006/03/washingtonpost-form-asterisk-before-label.png) [Spread Firefox](http://www.spreadfirefox.com/user/register "Spread Firefox: Register") ![Spread Firefox Create Account - Asterisk after label](/wp-content/uploads/2006/03/spreadfirefox-form-asterisk-after-label.png)
-2.  Bold label marking the field as required: [Technorati](http://technorati.com/signup/ "Technorati: Sign Up") ![Technorati - Bold is required](/wp-content/uploads/2006/03/bold-is-required2.png)
-3.  The word "optional" or "required" in brackets next to either the field or the label: [Bugzilla](https://bugzilla.mozilla.org/createaccount.cgi "Bugzilla: Create account") ![Bugzilla Create Account - The word optional after the field](/wp-content/uploads/2006/03/bugzilla-form-optional-after-field.png) <small>Here all labels are bold and does not mean that the field is required!</small> [Wikipedia](http://en.wikipedia.org/w/index.php?title=Special:Userlogin&type=signup&returnto=Main_Page "Wikipedia: Create account") ![Wikipedia Create Account - The word optional after label](/wp-content/uploads/2006/03/wikipedia-form-optional-word-after-label.png) <small>Here the asterisk actually means something else than "required"!</small>
+1.  Asterisk next to either label or field marking the field as required:
+
+    [Yahoo](https://edit.yahoo.com/config/eval_register "Yahoo! Registration")\
+    ![Yahoo! Registration - Asterisk before label](/wp-content/uploads/2006/03/yahoo-form-asterisk-before-label.png)
+
+    [IBM](https://www-132.ibm.com/webapp/wcs/stores/servlet/UserRegistrationForm "IBM: Create an account")\
+    ![IBM Create Account - Asterisk before label](/wp-content/uploads/2006/03/ibm-form-asterisk-before-label.png)
+
+    [The Washington Post](http://www.washingtonpost.com/ac2/wp-dyn?node=admin/registration/register&destination=register&nextstep=gather&application=reg30-globalnav "The Washington Post: Register")\
+    ![The Washington Post Register - Asterisk before label](/wp-content/uploads/2006/03/washingtonpost-form-asterisk-before-label.png)
+
+    [Spread Firefox](http://www.spreadfirefox.com/user/register "Spread Firefox: Register")\
+    ![Spread Firefox Create Account - Asterisk after label](/wp-content/uploads/2006/03/spreadfirefox-form-asterisk-after-label.png)
+
+2.  Bold label marking the field as required:
+
+    [Technorati](http://technorati.com/signup/ "Technorati: Sign Up")\
+    ![Technorati - Bold is required](/wp-content/uploads/2006/03/bold-is-required2.png)
+
+3.  The word "optional" or "required" in brackets next to either the field or the label:
+
+    [Bugzilla](https://bugzilla.mozilla.org/createaccount.cgi "Bugzilla: Create account")\
+    ![Bugzilla Create Account - The word optional after the field](/wp-content/uploads/2006/03/bugzilla-form-optional-after-field.png)\
+    <small>Here all labels are bold and does not mean that the field is required!</small>
+
+    [Wikipedia](http://en.wikipedia.org/w/index.php?title=Special:Userlogin&type=signup&returnto=Main_Page "Wikipedia: Create account")\
+    ![Wikipedia Create Account - The word optional after label](/wp-content/uploads/2006/03/wikipedia-form-optional-word-after-label.png)\
+    <small>Here the asterisk actually means something else than "required"!</small>
 
 ### Conclusion
 
-Looking at the examples that use an asterisk to indicate a required field it's clear that common practice is to **color the asterisk in a different color than the text in the label**. All of my examples above use a shade of red to do this. The color red has a special effect on the human brain so that it is noticed before other colors and given a stronger weight. As a non-disabled user I prefer to quickly skim a form to get an idea of which fields I am required to fill out. Using the red color helps me do this. *UPDATE: Brian Crescimanno has brought an important fact to my attention which he also wrote about in [his A List Part article](http://www.alistapart.com/articles/sensibleforms "A List Part: Sensible Forms - A Form Usability Checklist"):*
+Looking at the examples that use an asterisk to indicate a required field it's clear that common practice is to **color the asterisk in a different color than the text in the label**. All of my examples above use a shade of red to do this. The color red has a special effect on the human brain so that it is noticed before other colors and given a stronger weight. As a non-disabled user I prefer to quickly skim a form to get an idea of which fields I am required to fill out. Using the red color helps me do this. <ins>UPDATE: Brian Crescimanno has brought an important fact to my attention which he also wrote about in [his A List Part article](http://www.alistapart.com/articles/sensibleforms "A List Part: Sensible Forms - A Form Usability Checklist"):</ins>
 
-> *I advise against using the color red to denote required fields, because red most often indicates an error or warning. \[...\] so pick a color that will not be confused with error messages.*
+> <ins>I advise against using the color red to denote required fields, because red most often indicates an error or warning. \[...\] so pick a color that will not be confused with error messages.</ins>
 
 I would **always try to group form fields into fieldsets** so required and optional fields are separated - remember to clearly state if a group is required or not. If this isn't possible due to design or logical issues I would use the word "optional" (or "required" - whatever makes the most sense) in brackets next to the label. My last option would be to use asterisks if using actual words would be a design issue.
 

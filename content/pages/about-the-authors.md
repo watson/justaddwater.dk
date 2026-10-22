@@ -11,11 +11,15 @@ author: "jesper"
 
 This weblog is run and maintained by Jesper Rønn-Jensen from [NineConsult](http://nine.dk/) and Thomas Watson Steen from [3dbyggeri danmark](http://www.3dbyggeri.dk/).
 
+
 <div style="text-align: center;">
+
 
 ![Jesper Rønn-Jensen (left) and Thomas Watson Steen. Photo by Michael Bothager](/wp-content/uploads/2006/06/mb-2006-018-C-00117-300x200.jpg)
 
+
 </div>
+
 
 The thoughts here present their personal opinions and views and is not necessarily connected with their employer. If you want to contact us please fill in [our contact form »](/contact-us/)
 

@@ -10,7 +10,7 @@ author: "jesper"
 technorati: ["wordpress", "blogging", "search", "usability", "google analytics", "ajax", "dashboard", "wordpress dashboard"]
 ---
 
-*UPDATE: Owen's comment pointed me to [WordPress Admin Dashboard replacement](http://blog.taragana.com/index.php/archive/angsumans-wordpress-20-dashboard-replacement-how-to-trim-the-fat-resource-hogging-wordpress-admin-dashboard/) which apparently adresses some of the issues I'm pointing out.*
+<ins>UPDATE: Owen's comment pointed me to [WordPress Admin Dashboard replacement](http://blog.taragana.com/index.php/archive/angsumans-wordpress-20-dashboard-replacement-how-to-trim-the-fat-resource-hogging-wordpress-admin-dashboard/) which apparently adresses some of the issues I'm pointing out.</ins>
 
 I like Wordpress Dashboard. The name suggests that it's an overview of whats relevant to your blog. What's happening. What's popular. Who comments. What important updates are available. The Dashboard should work like in a car. The **most important and relevant information should be visible at a glance**. Lets have a brief look at the dashboard.\
 I suggest you only take a brief look to judge for your self whether you think the main objectives of the Dashboard page are met.

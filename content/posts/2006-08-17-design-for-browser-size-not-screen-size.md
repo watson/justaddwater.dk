@@ -24,21 +24,29 @@ People working professionally with web know the difference between screen size a
 
 To illustrate the difference, look at these examples that show the difference between screen size and browser content area.
 
+
 <div align="center">
+
 
 <small>![Screen size 1024x768](/wp-content/uploads/2006/08/outerwindow-10241.png)\
 1024x768 screen resolution gives 1004x598 usable content\
 area (maximized Internet Explorer window, Windows XP)</small>
 
+
 </div>
 
+
+
 <div align="center">
+
 
 ![Screen size 800x600](/wp-content/uploads/2006/08/outerwindow-800.png)\
 <small>800x600 screen resolution gives only 778x430 usable content\
 area (maximized Internet Explorer window, Windows XP)</small>
 
+
 </div>
+
 
 The figures show that the "browser real estate" available for actual content is smaller. This is what I call "content area".
 
@@ -53,7 +61,9 @@ Does this mean that we're safe if we optimize for 1004x598? Well, not entirely. 
 I wanted to take this quote and the other facts from the article and show it in a tabular format:<small>\
 </small>
 
+
 <div align="center">
+
 
 <table width="450" border="1">
 <tr>
@@ -94,14 +104,20 @@ I wanted to take this quote and the other facts from the article and show it in 
 </tr>
 </table>
 
+
 </div>
 
+
+
 <div align="center">
+
 
 <small>Screen real-estate available for browser. Source: Jacob Nielsen's article </small><small>*"[Screen resolution\
 and page layout](http://www.useit.com/alertbox/screen_resolution.html)"*</small><small>. The blank fields show what is not mentioned explicitly in the article.</small>
 
+
 </div>
+
 
 - Percentage is the users that have the given screen size.
 - Maximized window is how likely users are to run browser maximized (no other programs visible)
@@ -113,25 +129,35 @@ My problem is that often people are not using a maximized browser, but a browser
 
 18% of all web users who use big screens (above 1200x1024), including me (and most of my web developer colleagues). I also fit perfect on the other finding: I never surf with my browser maximized. Here is what my laptop screen looks like:
 
+
 <div style="text-align: center">
+
 
 ![Screen size 1400x1050](/wp-content/uploads/2006/08/outerwindow-14001.png)
 
+
 </div>
 
+
+
 <div align="center">
+
 
 <small>1400x1050 screen resolution with a normal Internet Explorer</small>\
 <small> window gives 941x1017 usable content area\
 </small>
 
+
 </div>
+
 
 Notice that even though I have a wider screen, the actual browser window is smaller than a maximized browser on 1024x768.
 
 So to sum this up and fill in the missing data from Jakob's article:
 
+
 <div align="center">
+
 
 <table width="450" border="1">
 <tr>
@@ -172,14 +198,20 @@ So to sum this up and fill in the missing data from Jakob's article:
 </tr>
 </table>
 
+
 </div>
 
+
+
 <div align="center">
+
 
 <small>Screen real-estate available for browser, based on findings by\
 Jakob Nielsen with added data by me.</small>
 
+
 </div>
+
 
 ### No stats on browser window size
 

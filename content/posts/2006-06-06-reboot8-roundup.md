@@ -16,17 +16,25 @@ Last weeks [reboot8](http://reboot.dk) conference in Copenhagen is over, and it'
 
 For weeks I had been looking forward to presenting [my talk on rapid prototyping](/2006/06/01/my-talk-at-reboot8-prototyping/) and do a demo of an application we did in Capgemini. It went fairly well. No technical flaws, I also got a little extra time so there was time for questions.
 
+
 <div style="text-align: center">
+
 
 ![IMG_7746_crop.jpg](/wp-content/uploads/2006/06/IMG_7746_crop.jpg)
 
+
 </div>
+
+
 
 <div style="text-align: center">
 
+
 Jesper presenting at reboot8
 
+
 </div>
+
 
 Here is some of the feedback I got. I decided to shamelessly to put the kind comments here, so if I have a bad day, I can get back to this post and read all your kind comments :-)
 
@@ -61,12 +69,16 @@ My own impression: I Started out a little too tense, but fund the natural flow a
 
 I saw [Doc Searls](http://doc.weblogs.com/whoIsDoc) in the audience just before my presentation, and got this thought that the moment I started, he'd probably get up and leave the room! I think he stayed, however. He took this photo of Thomas Watson:
 
+
 <div style="text-align: center">
+
 
 [![Photo of Thomas Watson by Doc Searls](http://static.flickr.com/60/159026990_fbeb57b4fc_m.jpg)](http://flickr.com/photos/docsearls/159026990/)\
 Thomas Watson Steen (photo by Doc Searls)
 
+
 </div>
+
 
 ### Ruby on Rails meeting
 

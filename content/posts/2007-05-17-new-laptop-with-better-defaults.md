@@ -10,7 +10,7 @@ author: "jesper"
 technorati: ["hardware", "laptop", "usability", "lenovo", "thinkpad", "t60p", "dell", "d600"]
 ---
 
-***Update: CPU fan speed can be controlled. See updated notes below...(2007-11-06)***\
+<ins>**Update: CPU fan speed can be controlled. See updated notes below...(2007-11-06)**</ins>\
 I got a new laptop from work last week. Swapped the old Dell D600 in for a sparkling new (IBM) Lenovo Thinkpad T60p. I really like the new one. Things I have noted for now:
 
 - Much brighter and better screen
@@ -76,7 +76,7 @@ Microsoft hotfix to solve it: [Hotfix 909095](http://support.microsoft.com/?kbid
 
 Running ThinkVantage System Updater told me to update a few essential programs: BIOS, graphics card driver, and add a program to manage keyboard shortcuts
 
-### *Solved issue*: Fan always running (updated!)
+### <ins>Solved issue</ins>: Fan always running (updated!)
 
 Fan is always running. Even at low CPU usage (usually 2-7%), the CPU fan is always running. This is very annoying. Especially when running on batteries, as I presume it drains the battery faster. Here is a screenshot during typical usage:
 

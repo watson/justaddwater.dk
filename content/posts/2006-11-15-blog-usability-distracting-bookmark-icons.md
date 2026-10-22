@@ -14,12 +14,16 @@ technorati: ["blog usabilty", "blogging", "usability", "digg", "delicious", "soc
 
 Do you remember this from the pre-bubble era? Lots of websites had a link like this. Who used it by the way? I didn't! Here's Altavista homepage from February 2000.
 
+
 <div align="center">
+
 
 [![Altavista homepage 2000 cropped](/wp-content/uploads/2006/11/screenshot-altavista-2000-crop.thumbnail.png)](/2006/11/15/blog-usability-distracting-bookmark-icons/altavista-homepage-2000-full-screenshot/ "Altavista homepage 2000 full screenshot")\
 Image from [Internet Archive](http://web.archive.org/web/*/http://altavista.com)
 
+
 </div>
+
 
 Now it has gotten even worse on blogs. From Matt over at 37Signals, "[It's the content, not the icons](http://www.37signals.com/svn/posts/93-its-the-content-not-the-icons)":
 

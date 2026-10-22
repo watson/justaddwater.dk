@@ -28,4 +28,4 @@ After Jensen Harris, I want to hear [Evan Williams talk](http://www.baychi.org/c
 
 So very true!
 
-*UPDATE 2005-12-21: Now I heard the presentation. Very recommendable. Also, the presenter told that there will be a video posted on the [BayCHI event website](http://www.baychi.org/calendar/20051213/) soon.*
+<ins>UPDATE 2005-12-21: Now I heard the presentation. Very recommendable. Also, the presenter told that there will be a video posted on the [BayCHI event website](http://www.baychi.org/calendar/20051213/) soon.</ins>

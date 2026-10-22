@@ -12,9 +12,12 @@ technorati: ["book", "review", "dry", "repeat", "repetition", "pragmatic program
 
 <div style="float: left; margin: 0 10px 10px 0">
 
+
 [{{< img src=`http://www.pragprog.com/images/covers/190x228/tpp.jpg?1184184147` alt=`The Pragmatic Programmer` title=`pragmatic programmer book image` width=`190` height=`228` >}}](http://www.pragprog.com/titles/tpp/the-pragmatic-programmer)
 
+
 </div>
+
 
 After reading Pragmatic Programmer at my recent vacation, I immediately found an urge to repeat myself and read it again.
 

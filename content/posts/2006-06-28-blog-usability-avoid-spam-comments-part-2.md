@@ -34,9 +34,17 @@ Since the symbolic link is located in our theme directory it is never deleted wh
 
 <small>If you don't have shell access you must ask your host provider to do this for you</small>
 
-1.  **Create Symbolic Link** Create a symbolic link from your theme directory to the `wp-comments-post.php` file:Go to the directory of your current theme (in our case `wp-content/themes/jaw/`) and execute the following command: ln -s ../../../wp-comments-post.php my-comments-post.php <small>In this example we name the symbolic link `my-comments-post.php`, but you can choose any name.</small>
+1.  **Create Symbolic Link** Create a symbolic link from your theme directory to the `wp-comments-post.php` file:Go to the directory of your current theme (in our case `wp-content/themes/jaw/`) and execute the following command:
 
-2.  **Update Comment Form** Still in your theme directory you need to find which files that contain links to the `wp-comments-post.php` file. To do this execute the following command: grep -l wp-comments-post.php \* You will then get a list of the files you need to edit. Now update each file so that the link to `wp-comments-post.php` instead point to the symbolic link. This is usually done by changing the following:
+    ln -s ../../../wp-comments-post.php my-comments-post.php
+
+    <small>In this example we name the symbolic link `my-comments-post.php`, but you can choose any name.</small>
+
+2.  **Update Comment Form** Still in your theme directory you need to find which files that contain links to the `wp-comments-post.php` file. To do this execute the following command:
+
+    grep -l wp-comments-post.php \*
+
+    You will then get a list of the files you need to edit. Now update each file so that the link to `wp-comments-post.php` instead point to the symbolic link. This is usually done by changing the following:
 
         &lt;form action="&lt;?php <span style="color: #ff0000">echo get_option('siteurl');</span> ?&gt;/<span style="color: #ff0000">wp-comments-post.php</span>" method="post" id="commentform"&gt;
 
@@ -47,7 +55,9 @@ Since the symbolic link is located in our theme directory it is never deleted wh
 3.  **Deny Access To Old File** To make sure that the old `wp-comments-post.php` file cannot be accessed from the internet, edit your `.htaccess` file in the root of your website and add the following to the top of the file:
 
         &lt;Files wp-comments-post.php&gt;
+
         &nbsp; &nbsp; Deny from all
+
         &lt;/Files&gt;
 
     To verify that the update to the htaccess file works, try to open the `wp-comments-post.php` file in a browser (i.e. http://www.yourblog.com/wp-comments-post.php) and see if you get a "403 Forbidden" page telling you that you do not have permission to access the document.

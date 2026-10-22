@@ -20,11 +20,15 @@ Dave Thomas' keynote had a great section about art and the work of great artists
 
 "Everytime you step away from your keyboard, you engage another part of your brain", he said, refering to using whiteboards, papers, napkins, etc, to sketch ideas and think it over. At leas in Capgemini, the next year will be the year of the prototypes, and I still believe that Ruby on Rails is just fit for this purpose. (yes, I know we can and should do a lot more than just prototypes, but it really is a sweetspot where big enterprise organisations with a fixed architectural platform can still taste some of the advantages with Ruby on Rails).
 
+
 <div style="float: left; margin-top: 0pt; margin-right: 10px; width: 160px">
+
 
 [{{< img src=`http://farm2.static.flickr.com/1194/1414028690_bed6089427_m.jpg` alt=`IMG_3416_crop` title=`IMG_3416_crop` align=`left` width=`160` height=`240` >}}](http://www.flickr.com/photos/jesper/1414028690/ "Photo Sharing")
 
+
 </div>
+
 
 David Heinemeier gave a good keynote the next morning, and one of the things he mentioned was just a little thing for Rails developers. But actually a brilliant example that software can always benefit from: **Better defaults**. David mentioned that the debugger in the upcoming Rails 2.0 is only working in development environment by default. Which means that your production application won't break if you forget to remove a breakpoint. Ruby on Rails have a lot of good defaults.
 

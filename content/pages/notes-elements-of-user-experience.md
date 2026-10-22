@@ -12,17 +12,25 @@ technorati: ["event", "seminar", "jesse james garrett", "adaptive path", "copenh
 
 Jesper's notes from Jesse James Garrett’s event "[The elements of User Experience](http://www.adaptivepath.com/events/2006/may3/)" in Copenhagen, Denmark, May 31, 2006.
 
+
 <div style="text-align: center">
+
 
 [![Jesse Games Garrett in action, Copenhagen, May 31, 2006](/wp-content/uploads/2006/05/jjg-7697-thumb.jpg)](/notes-elements-of-user-experience/jesse-games-garrett-in-action-copenhagen-may-31-2006/ "Jesse Games Garrett in action, Copenhagen, May 31, 2006")
 
+
 </div>
+
+
 
 <div style="text-align: center">
 
+
 Click image to see full-size version
 
+
 </div>
+
 
 Compares User Experience to the experience at going to the movies. Worst movie experience ever. "I cannot walk out of a movie". Why are we still seeing bad movies?
 
@@ -137,11 +145,15 @@ Comparison Apple search results with IBM. Very different although they have almo
 
 [](/notes-elements-of-user-experience/jesse-games-garrett-in-action-copenhagen-may-31-2006-noon/ "Jesse Games Garrett in action, Copenhagen, May 31, 2006 (noon)")
 
+
 <div style="text-align: center">
+
 
 [![Jesse Games Garrett in action, Copenhagen, May 31, 2006 (noon)](/wp-content/uploads/2006/05/jjg-76991.thumbnail.jpg)](/notes-elements-of-user-experience/jesse-games-garrett-in-action-copenhagen-may-31-2006-noon/ "Jesse Games Garrett in action, Copenhagen, May 31, 2006 (noon)")
 
+
 </div>
+
 
 **Answering objections**
 
@@ -196,12 +208,16 @@ The vocabulary are standard shapes to express common concepts.
 - Tool agnostic (works even in powerpoint)
 - Whiteboard-compatible (so quick sketching of shapes are easily distinct)
 
+
 <div align="center">
+
 
 ![](http://www.jjg.net/ia/visvocab/images/fig10.gif)\
 <small>**Figure 10:** An example use of a decision point in a login sequence</small>
 
+
 </div>
+
 
 From <http://www.jjg.net/ia/visvocab/>
 

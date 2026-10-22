@@ -9,7 +9,7 @@ tags: []
 author: "jesper"
 ---
 
-***UPDATE 2006-02-22:** Podcasts available. All podcasts are now available for download from [Carson Workshops Summit](http://carsonworkshops.com/summit/)*
+<ins>**UPDATE 2006-02-22:** Podcasts available. All podcasts are now available for download from [Carson Workshops Summit](http://carsonworkshops.com/summit/)</ins>
 
 [Carson Workshops Summit](http://carsonworkshops.com/summit/) happened yesterday in London. I was not in London but have previously attended Ryan Carson's excellent workshops.
 

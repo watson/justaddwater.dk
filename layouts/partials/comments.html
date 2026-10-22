@@ -1,10 +1,12 @@
 {{- /* Read-only comments, WordPress/Kubrick markup. Flat list, alternating "alt" class, as the original. */ -}}
 {{ $c := sort (index hugo.Data.comments .Params.slug | default slice) "date" }}
 {{ $n := len $c }}
+{{- /* WordPress pages comments by 100 and shows the newest page (oldest first inside it) */ -}}
+{{ $shown := $c }}{{ if gt $n 100 }}{{ $shown = last (sub $n (mul 100 (div (sub $n 1) 100))) $c }}{{ end }}
 {{ if gt $n 0 }}
 <h3 id="comments">{{ if eq $n 1 }}One Response{{ else }}{{ $n }} Responses{{ end }} to &#8220;{{ partial "tt.html" .Title }}&#8221;</h3>
 <ol class="commentlist">
-{{ range $i, $x := $c }}{{ $id := $x.id }}
+{{ range $i, $x := $shown }}{{ $id := $x.id }}
 <li{{ if eq (mod $i 2) 0 }} class="alt"{{ end }} id="comment-{{ $id }}">
 <cite>{{ if $x.url }}<a href="{{ $x.url }}" class="url" rel="external">{{ $x.author }}</a>{{ else }}{{ $x.author }}{{ end }}</cite> Says:
 <br />
