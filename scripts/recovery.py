@@ -9,6 +9,7 @@ import html
 import json
 from pathlib import Path
 import re
+from urllib.parse import quote_plus
 
 ROOT = Path(__file__).resolve().parents[1]
 SHORTCODE = re.compile(r'\[code\b[^\]]*\].*?\[/code\]', re.I | re.S)
@@ -58,6 +59,28 @@ def restore_code(raw):
         return result
 
     return re.sub(pattern, replace, source, flags=re.I | re.S)
+
+
+def restore_tag_lists(soup):
+    """Reproduce SimpleTags 2.0 output for the two reviewed authoring typos."""
+    lists = {row['captured']: row for row in recovery_data()['tag_lists']}
+    for paragraph in soup.find_all('p'):
+        if (not paragraph.string or paragraph.string.parent is not paragraph
+                or paragraph.find_parent(['pre', 'code'])):
+            continue
+        row = lists.get(paragraph.string.strip())
+        if row is None:
+            continue
+        small = soup.new_tag('small', attrs={'data-recovery-tags': str(row['post_id'])})
+        small.append('Technorati Tags: ')
+        for index, tag in enumerate(row['tags']):
+            if index:
+                small.append(', ')
+            link = soup.new_tag('a', href='http://technorati.com/tag/' + quote_plus(tag), rel='tag')
+            link.string = tag
+            small.append(link)
+        paragraph.clear()
+        paragraph.append(small)
 
 
 def restore_gists(soup):

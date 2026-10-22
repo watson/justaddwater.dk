@@ -1,8 +1,23 @@
 {
   "sources": {
     "database": "2007-09-17_watson_wp_jawdk.sql (dump completed 2007-09-16)",
-    "files": "Original jaw WordPress checkout, last commit 6d95951 (2009-10-05)"
+    "files": "Original jaw WordPress checkout, last commit 6d95951 (2009-10-05)",
+    "tag_lists": "wp-content/plugins/simpletags.php, SimpleTags 2.0 (2006-01-03); reproduce its output for two lists with a missing closing slash"
   },
+  "tag_lists": [
+    {
+      "post_id": 718,
+      "article": "/2007/09/27/undo-not-confirmation-end-of-discussion/",
+      "captured": "[tags]asa raskin, usability, undo, confirmation[tags]",
+      "tags": ["asa raskin", "usability", "undo", "confirmation"]
+    },
+    {
+      "post_id": 569,
+      "article": "/2007/03/15/low-publishing-frequency-help-to-prioritize/",
+      "captured": "[tags]usability, publishing, frequency, review, axure, e texteditor, e, paul graham, wikipedia, progressive disclosure, busy, work[tags]",
+      "tags": ["usability", "publishing", "frequency", "review", "axure", "e texteditor", "e", "paul graham", "wikipedia", "progressive disclosure", "busy", "work"]
+    }
+  ],
   "comments": [
     {
       "id": 27244,

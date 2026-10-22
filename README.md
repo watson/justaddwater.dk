@@ -103,6 +103,8 @@ table, style and script tags remain visible code and cannot consume article text
 or change the page. `data/recovery.json` records the selected public snippets,
 asset checksums, original paths, gist revisions and demo provenance. It preserves
 later CSS edits where the public article differs from the older database.
+Two malformed `[tags]…[tags]` lists are rendered with the original SimpleTags
+2.0 markup: small “Technorati Tags:” text and the original Technorati tag links.
 The original captured article markup remains in `data/content.json`.
 
 The database dump, WordPress configuration and unreviewed historical content are

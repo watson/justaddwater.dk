@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 import re
 import sys
-from urllib.parse import unquote, urlsplit
+from urllib.parse import unquote, unquote_plus, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
@@ -56,6 +56,9 @@ def article_text_preserved(markup, actual):
     replacements = {block['captured']: block['code'] for block in recovery_data()['code_blocks']}
     markup = SHORTCODE.sub(lambda match: '<pre>' + html.escape(replacements[match[0]], quote=False) + '</pre>'
                            if match[0] in replacements else match[0], markup)
+    for row in recovery_data()['tag_lists']:
+        # get_text(' ', strip=True) separates the link labels and comma nodes.
+        markup = markup.replace(row['captured'], 'Technorati Tags: ' + ' , '.join(row['tags']))
     def expected_text(text):
         return ' '.join(text.split())
 
@@ -173,6 +176,15 @@ def verify(site, base):
             seen_code.add(key)
             if block.get_text() != expected_code.get(key):
                 errors.append(f'{file}: recovered example differs: {key}')
+        for block in soup.select('[data-recovery-tags]'):
+            row = next((r for r in recovery['tag_lists'] if str(r['post_id']) == block['data-recovery-tags']), None)
+            links = block.find_all('a')
+            if (row is None or block.name != 'small'
+                    or block.get_text() != 'Technorati Tags: ' + ', '.join(row['tags'])
+                    or [a.get_text() for a in links] != row['tags']
+                    or any(a.get('rel') != ['tag'] or not a.get('href', '').startswith('http://technorati.com/tag/')
+                           or unquote_plus(a['href'].removeprefix('http://technorati.com/tag/')) != a.get_text() for a in links)):
+                errors.append(f'{file}: repaired tag list differs from SimpleTags output')
 
     content_checks = 0
     for row in data['posts'] + data['pages']:
@@ -190,6 +202,9 @@ def verify(site, base):
             errors.append(f'Published article text differs from API export: {row["link"]}')
         if video_embed_markup(soup) != expected_videos[row['id']]:
             errors.append(f'Published video players differ from API export: {row["link"]}')
+        if any(r['post_id'] == row['id'] for r in recovery['tag_lists']):
+            if len(soup.select(f'[data-recovery-tags="{row["id"]}"]')) != 1:
+                errors.append(f'Published article is missing its repaired tag list: {row["link"]}')
         for key, code in expected_code.items():
             if key.startswith((f'post-{row["id"]}-', f'gist-{row["id"]}-')):
                 block = soup.find(attrs={'data-recovery-code': key})

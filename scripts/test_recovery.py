@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 from archive import ROOT, ORIGIN, clean_html, parse_document, local_url, rewrite
 from prepare_pages import PrefixHTML
-from recovery import recovery_data, restore_comments, TABLE_DEMO, BUTTON_DEMO, UNDO_URL, UNDO_PATH
+from recovery import recovery_data, restore_comments, restore_tag_lists, TABLE_DEMO, BUTTON_DEMO, UNDO_URL, UNDO_PATH
 from verify import article_text_preserved
 
 
@@ -33,6 +33,41 @@ class RecoveryTests(unittest.TestCase):
         commands = clean_html(parse_document(self.posts[594]['content']['rendered']))
         self.assertIn('gem install rails --include-dependencies', commands.get_text())
         self.assertNotIn('–include-dependencies', commands.get_text())
+
+    def test_malformed_tag_lists_render_like_simpletags_without_losing_article_text(self):
+        for row in recovery_data()['tag_lists']:
+            source = self.posts[row['post_id']]['content']['rendered']
+            for path in (row['article'], row['article'] + 'comment-page-1/', '/2007/'):
+                with self.subTest(post=row['post_id'], path=path):
+                    output = clean_html(parse_document(source), path=path)
+                    block = output.find(attrs={'data-recovery-tags': str(row['post_id'])})
+                    self.assertEqual(block.name, 'small')
+                    self.assertEqual(block.parent.name, 'p')
+                    self.assertEqual(block.get_text(), 'Technorati Tags: ' + ', '.join(row['tags']))
+                    self.assertEqual([a.get_text() for a in block.find_all('a')], row['tags'])
+                    self.assertTrue(all(a['rel'] == ['tag'] for a in block.find_all('a')))
+                    self.assertNotIn('[tags]', output.get_text())
+                    actual = ' '.join(output.get_text(' ', strip=True).split())
+                    self.assertTrue(article_text_preserved(source, actual))
+                    self.assertFalse(article_text_preserved(source, actual.replace('Technorati Tags:', '')))
+                    rendered = str(output)
+                    restore_tag_lists(output)
+                    self.assertEqual(str(output), rendered)
+        undo = clean_html(parse_document(self.posts[718]['content']['rendered']))
+        self.assertEqual([a['href'] for a in undo.select('[data-recovery-tags] a')], [
+            'http://technorati.com/tag/asa+raskin', 'http://technorati.com/tag/usability',
+            'http://technorati.com/tag/undo', 'http://technorati.com/tag/confirmation'])
+
+    def test_existing_tag_lists_and_literal_examples_remain_unchanged(self):
+        snippets = [
+            '<p><small>Technorati Tags: <a href="http://technorati.com/tag/usability" rel="tag">usability</a></small></p>',
+            '<p><code>[tags]asa raskin, usability, undo, confirmation[tags]</code></p>',
+            '<p>[tags]unreviewed example[tags]</p>',
+        ]
+        for source in snippets:
+            with self.subTest(source=source):
+                before = parse_document(source)
+                self.assertEqual(str(clean_html(parse_document(source))), str(before))
 
     def test_code_containing_page_tags_and_scripts_is_literal_text(self):
         frame = clean_html(parse_document(self.posts[748]['content']['rendered']))

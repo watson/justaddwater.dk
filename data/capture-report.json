@@ -38,6 +38,10 @@
   },
   "recovered_code_blocks": 61,
   "recovered_gist_embeds": 12,
+  "repaired_tag_lists": [
+    718,
+    569
+  ],
   "unavailable_pages": {
     "/google-create-table-search-error/": "HTTP Error 404: Not Found",
     "/google-create-table-search/": "HTTP Error 404: Not Found",

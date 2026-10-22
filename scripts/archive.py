@@ -22,7 +22,7 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup, Comment
-from recovery import recovery_data, restore_code, restore_gists, restore_demos, restore_local_forms, restore_comments, UNDO_URL, UNDO_PATH
+from recovery import recovery_data, restore_code, restore_tag_lists, restore_gists, restore_demos, restore_local_forms, restore_comments, UNDO_URL, UNDO_PATH
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / '.cache'
@@ -374,6 +374,7 @@ def archive_form(soup, form):
 
 
 def clean_html(soup, path=''):
+    restore_tag_lists(soup)
     restore_gists(soup)
     # The old host prints PHP open_basedir warnings on attachment pages. These
     # are runtime diagnostics, not article content or archive navigation.
@@ -616,6 +617,7 @@ def build(data, state):
               'repaired_asset_aliases': recovery['aliases'],
               'recovered_code_blocks': len(recovery['code_blocks']),
               'recovered_gist_embeds': len(recovery['gists']),
+              'repaired_tag_lists': [row['post_id'] for row in recovery['tag_lists']],
               'unavailable_pages': {p: e for p, e in state['failed_pages'].items() if local_url(p, ORIGIN, ids) and local_url(p, ORIGIN, ids) not in routes},
               'unavailable_assets': {p: e for p, e in state['failed_assets'].items() if local_url(p, ORIGIN, ids) not in routes},
               'unavailable_references': sorted(unavailable)}
@@ -638,6 +640,7 @@ def feeds(data):
             ET.SubElement(item, 'link').text = row['link'].replace('http://', 'https://', 1)
             ET.SubElement(item, 'guid').text = row['link']
             content = BeautifulSoup(restore_code(row['content']['rendered']), 'html.parser')
+            restore_tag_lists(content)
             restore_gists(content)
             for tag in content.find_all(['script', 'iframe', 'object', 'embed']):
                 tag.decompose()
