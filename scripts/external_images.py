@@ -8,7 +8,7 @@ from urllib.parse import urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
 from bs4 import BeautifulSoup
-from archive import ROOT, SITE, HOSTS, ORIGIN, CACHE, fetch, write_json
+from archive import ROOT, SITE, HOSTS, ORIGIN, CACHE, CSS_URL, embedded_css, fetch, write_json
 
 
 def download(url):
@@ -49,23 +49,26 @@ def download(url):
 def capture():
     data = json.loads((ROOT / 'data/content.json').read_text())
     urls = set()
+    def collect(soup):
+        candidates = [image['src'] for image in soup.find_all('img', src=True)]
+        candidates.extend(match[2] for css in embedded_css(soup) for match in CSS_URL.finditer(css))
+        urls.update(url for url in candidates if urlsplit(url).hostname and urlsplit(url).hostname not in HOSTS)
+
     for row in data['posts'] + data['pages']:
         soup = BeautifulSoup(row['content']['rendered'], 'html.parser')
-        for image in soup.find_all('img', src=True):
-            url = image['src']
-            if urlsplit(url).hostname and urlsplit(url).hostname not in HOSTS:
-                urls.add(url)
+        collect(soup)
     # Theme chrome, attachment pages and comments can contain images that aren't
     # part of a post's API content (for example the original RSS icon).
     capture_file = CACHE / 'capture.json'
     if capture_file.exists():
-        for path in json.loads(capture_file.read_text())['pages']:
+        state = json.loads(capture_file.read_text())
+        for path in set(state['pages']) | set(state['assets']):
             raw, _ = fetch(ORIGIN + path)
-            soup = BeautifulSoup(raw, 'html.parser')
-            for image in soup.find_all('img', src=True):
-                url = image['src']
-                if urlsplit(url).hostname and urlsplit(url).hostname not in HOSTS:
-                    urls.add(url)
+            if path in state['pages'] or Path(path).suffix.lower() in ('.html', '.htm'):
+                collect(BeautifulSoup(raw, 'html.parser'))
+            elif path.endswith('.css'):
+                urls.update(match[2] for match in CSS_URL.finditer(raw.decode('utf-8', 'replace'))
+                            if urlsplit(match[2]).hostname and urlsplit(match[2]).hostname not in HOSTS)
     results_file = ROOT / 'data/external-images.json'
     results = json.loads(results_file.read_text()) if results_file.exists() else {}
     with ThreadPoolExecutor(max_workers=4) as pool:

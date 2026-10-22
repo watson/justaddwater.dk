@@ -1,23 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
 <title>justaddwater.dk | Run Tiny Webserver From Any Directory</title>
+
 <meta content="WordPress 5.1.27" name="generator"/>
+
 <link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
 <link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
 
 <link href="/favicon.ico" rel="shortcut icon"/>
+
 <style media="screen" type="text/css">
 
-	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+	#page { background: url("/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
 
 </style>
+
 <link href="//s.w.org" rel="dns-prefetch"/>
 <link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Run Tiny Webserver From Any Directory Comments Feed" type="application/rss+xml"/>
-
-<style type="text/css">
+		
+		<style type="text/css">
 img.wp-smiley,
 img.emoji {
 	display: inline !important;
@@ -31,12 +34,12 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+	<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
 
 
 
 
-
+ 
 <link href="/2009/11/26/remove-trailing-space-from-source-files/" rel="prev" title="How to Remove Trailing Space from source files"/>
 <link href="/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/" rel="next" title="How to make Git ignore files that already exist in your project"/>
 <meta content="WordPress 5.1.27" name="generator"/>
@@ -83,32 +86,41 @@ img.emoji {
 
 
 
+
 <link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
 <body>
 <div id="page">
+
 <div id="header">
-<div id="headerimg">
-<h1><a href="/">justaddwater.dk</a></h1>
-<div class="description">Instant Usability &amp; Web Standards</div>
-<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	<div id="headerimg">
+		<h1><a href="/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
 </div>
-</div>
-<div class="widecolumn" id="content">
-<div class="navigation">
-<div class="alignleft">« <a href="/2009/11/26/remove-trailing-space-from-source-files/" rel="prev">How to Remove Trailing Space from source files</a></div>
-<div class="alignright"><a href="/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/" rel="next">How to make Git ignore files that already exist in your project</a> »</div>
-</div>
-<div class="post" id="post-1245">
-<h2><a href="/2009/12/01/run-tiny-webserver-from-any-directory/" rel="bookmark" title="Permanent Link: Run Tiny Webserver From Any Directory">Run Tiny Webserver From Any Directory</a></h2>
-<div class="entry">
-<p>There are alternatives to<a href="/2009/12/01/run-tiny-webserver-from-any-directory/2009/10/15/resolve-symlinks-when-copying-files-with-rsync/" rel="bookmark" title="Permanent Link to Resolve Symlinks When Copying Files With Rsync"> Resolve Symlinks When Copying Files With Rsync .</a></p>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/2009/11/26/remove-trailing-space-from-source-files/" rel="prev">How to Remove Trailing Space from source files</a></div>
+			<div class="alignright"><a href="/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/" rel="next">How to make Git ignore files that already exist in your project</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1245">
+			<h2><a href="/2009/12/01/run-tiny-webserver-from-any-directory/" rel="bookmark" title="Permanent Link: Run Tiny Webserver From Any Directory">Run Tiny Webserver From Any Directory</a></h2>
+	
+			<div class="entry">
+				<p>There are alternatives to<a href="/2009/12/01/run-tiny-webserver-from-any-directory/2009/10/15/resolve-symlinks-when-copying-files-with-rsync/" rel="bookmark" title="Permanent Link to Resolve Symlinks When Copying Files With Rsync"> Resolve Symlinks When Copying Files With Rsync .</a></p>
 <p>How about firing up a (tiny) webserver that starts up quickly. Yehuda Katz suggested this some years ago:</p>
 <p></p>
 <p>Just drop this file in any directory, run the script, and it serves the files. I use this frequently for instance when I need to browser test static files on different virtual machines. (I modified the script shebang to work on my Mac).</p>
 <p>I prefer to use this server.rb script in stead of accessing the files from a shared folder from the virtual machine. It’s faster to write the address for <code>http://172.16.244.1:2000/accordion.html</code> than for <code>\\.host\Shared Folders\jesper On My Mac\src\htmlguide\accordion.html</code> – and easier to remember.</p>
 <p>Tip from Yehuda Katz’ “<a href="http://yehudakatz.com/2007/08/06/webrick-anywhere/">Webrick Anywhere</a>“</p>
-<p class="postmetadata alt">
-<small>
+	
+					
+				<p class="postmetadata alt">
+					<small>
 						This entry was posted by Jesper Rønn-Jensen						 
 						on Tuesday, December 1st, 2009 at 20:56 (GMT-1)						and is filed under <a href="/category/code/" rel="category tag">Code</a>.
 						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
@@ -117,66 +129,111 @@ img.emoji {
 						
 												
 					</small>
-</p>
-</div>
-</div>
+				</p>
+	
+			</div>
+
+		</div>
 
 
+		
+	
 
-<h3 id="comments">4 Responses to “Run Tiny Webserver From Any Directory”</h3>
-<ol class="commentlist">
-<li class="alt" id="comment-491311">
-<cite>jj</cite> Says:
+
+	<h3 id="comments">4 Responses to “Run Tiny Webserver From Any Directory”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-491311">
+			<cite>jj</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-491311" title="">December 1st, 2009 at 22:26 (GMT-1)</a> </small>
-<p>Or you could run “python -m SimpleHTTPServer”</p>
-</li>
+
+			<small class="commentmetadata"><a href="#comment-491311" title="">December 1st, 2009 at 22:26 (GMT-1)</a> </small>
+
+			<p>Or you could run “python -m SimpleHTTPServer”</p>
+
+		</li>
+
+	
 
 
-<li id="comment-491326">
-<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+	
+		<li id="comment-491326">
+			<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-491326" title="">December 2nd, 2009 at 09:55 (GMT-1)</a> </small>
-<p>@jj, thanks for the tip! </p>
+
+			<small class="commentmetadata"><a href="#comment-491326" title="">December 2nd, 2009 at 09:55 (GMT-1)</a> </small>
+
+			<p>@jj, thanks for the tip! </p>
 <p>I’m always flattered by comments like yours. The audience of this blog is just much smarter than I will ever get :)</p>
-</li>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-491403">
-<cite>Eddy Tembilung</cite> Says:
+	
+		<li class="alt" id="comment-491403">
+			<cite>Eddy Tembilung</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-491403" title="">December 4th, 2009 at 18:05 (GMT-1)</a> </small>
-<p>Thanks for your smartness, I will try to practice it.</p>
-</li>
+
+			<small class="commentmetadata"><a href="#comment-491403" title="">December 4th, 2009 at 18:05 (GMT-1)</a> </small>
+
+			<p>Thanks for your smartness, I will try to practice it.</p>
+
+		</li>
+
+	
 
 
-<li id="comment-491449">
-<cite><a class="url" href="http://nikolajsen.net/2009/12/hurtig-og-nem-fildeling/" rel="external">Nikolaj Nikolajsen » Blog Archive » Hurtig og nem fildeling</a></cite> Says:
+	
+		<li id="comment-491449">
+			<cite><a class="url" href="http://nikolajsen.net/2009/12/hurtig-og-nem-fildeling/" rel="external">Nikolaj Nikolajsen » Blog Archive » Hurtig og nem fildeling</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-491449" title="">December 6th, 2009 at 17:31 (GMT-1)</a> </small>
-<p>[…] faldt over dette tip om at køre en lille webserver fra hvilket som helst bibliotek på din PC og det så umiddelbart interessant ud. En kommentar til artiklen var dog det der virkelig gjorde en […]</p>
-</li>
+
+			<small class="commentmetadata"><a href="#comment-491449" title="">December 6th, 2009 at 17:31 (GMT-1)</a> </small>
+
+			<p>[…] faldt over dette tip om at køre en lille webserver fra hvilket som helst bibliotek på din PC og det så umiddelbart interessant ud. En kommentar til artiklen var dog det der virkelig gjorde en […]</p>
+
+		</li>
+
+	
 
 
-</ol>
-</div>
-<div id="sidebar">
-<ul>
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
 <li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
 <p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
 </li>
-</ul>
-</div>
+
+        </ul>
+    </div>
+
+
 <hr/>
 <div id="footer">
-<p>
-<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+	<p>
+                <a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
 		justaddwater.dk is proudly powered by 
 		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
-</p>
+	</p>
 </div>
 </div>
 
 
-</body>
-</html>
+
+
+
+
+</body></html>

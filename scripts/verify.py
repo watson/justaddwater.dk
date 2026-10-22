@@ -11,7 +11,28 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from archive import ROOT, HOSTS, CSS_URL, clean_html
+from archive import ROOT, HOSTS, CSS_URL, clean_html, embedded_css, parse_document
+
+
+def article_text_preserved(markup, actual):
+    expected = ' '.join(clean_html(BeautifulSoup(markup, 'html.parser')).get_text(' ', strip=True).split())
+    if expected in actual:
+        return True
+    # An unclosed table in an old article can make the browser move surrounding
+    # text before its cells, even inserting the page footer between them. Check
+    # every complete text node in browser order, allowing template text between
+    # nodes, instead of treating that original rendering as lost content.
+    browser_content = clean_html(parse_document(markup))
+    for style in browser_content.find_all('style'):
+        style.decompose()
+    position = 0
+    for node in browser_content.stripped_strings:
+        text = ' '.join(node.split())
+        position = actual.find(text, position)
+        if position < 0:
+            return False
+        position += len(text)
+    return True
 
 
 def verify(site, base):
@@ -47,6 +68,12 @@ def verify(site, base):
             errors.append(f'{document.relative_to(site)}: missing {url}')
         return result
 
+    def check_css(css, document):
+        for match in CSS_URL.finditer(css):
+            if urlsplit(match[2]).hostname:
+                errors.append(f'{document.relative_to(site)}: remote CSS dependency: {match[2]}')
+            target(match[2], document)
+
     pages = list(site.rglob('*.html'))
     for file in pages:
         soup = BeautifulSoup(file.read_bytes(), 'html.parser')
@@ -74,9 +101,8 @@ def verify(site, base):
                 for item in tag['srcset'].split(','):
                     if item.strip():
                         target(item.strip().split()[0], file)
-            if tag.get('style'):
-                for match in CSS_URL.finditer(tag['style']):
-                    target(match[2], file)
+        for css in embedded_css(soup):
+            check_css(css, file)
         for form in soup.find_all('form'):
             if form.get('method', 'get').lower() != 'get' or urlsplit(form.get('action', '')).path != base + '/search/':
                 errors.append(f'{file}: non-static form')
@@ -92,9 +118,8 @@ def verify(site, base):
         title = BeautifulSoup(row['title']['rendered'], 'html.parser').get_text(' ', strip=True)
         if ' '.join(title.split()) not in ' '.join(soup.get_text(' ', strip=True).split()):
             errors.append(f'Published title missing: {row["link"]}')
-        expected = ' '.join(clean_html(BeautifulSoup(row['content']['rendered'], 'html.parser')).get_text(' ', strip=True).split())
         actual = ' '.join(soup.get_text(' ', strip=True).split())
-        if expected not in actual:
+        if not article_text_preserved(row['content']['rendered'], actual):
             errors.append(f'Published article text differs from API export: {row["link"]}')
         content_checks += 1
     missing_comments = {row['id'] for row in data['comments']} - comment_ids
@@ -102,8 +127,7 @@ def verify(site, base):
         errors.append(f'{len(missing_comments)} public comments missing from HTML: {sorted(missing_comments)[:20]}')
 
     for file in site.rglob('*.css'):
-        for match in CSS_URL.finditer(file.read_text()):
-            target(match[2], file)
+        check_css(file.read_text(), file)
     for file in [site / 'sitemap.xml', site / 'feed/index.xml', site / 'comments/feed/index.xml']:
         try:
             ET.parse(file)

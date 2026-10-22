@@ -20,7 +20,7 @@ original host.
 - A public-content export in `data/content.json` and recovery reports in `data/`.
 
 Some local files already returned 404, and some external images could not be
-retrieved during capture. **82 of 184 external image references** were recovered
+retrieved during capture. **84 of 187 external image references** were recovered
 and stored locally. Unavailable images have a small placeholder and retain their
 original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
@@ -28,7 +28,8 @@ fetch errors for possible recovery from backups.
 
 Legacy tracking scripts, WordPress runtime scripts, executable embeds and comment
 submission forms are removed. Code examples remain text, and downloadable
-examples remain files. Historical comments retain their original authorship and
+examples remain files. CSS-demo controls remain visible without submitting forms.
+Historical comments retain their original authorship and
 links. This is a public static capture, **not** a database backup: drafts, private
 posts, unpublished media and server-side files are not included.
 
@@ -44,8 +45,9 @@ directly, so search can load its local JSON index.
 ## GitHub Pages
 
 The workflow publishes only `site/`, using `scripts/prepare_pages.py` to support
-both the repository's project URL and a future custom domain. The build needs
-only Python's standard library and never contacts the old WordPress server.
+both the repository's project URL and a future custom domain. The workflow
+installs the Python dependencies for validation and never contacts the old
+WordPress server.
 
 In the repository's **Settings → Pages**, choose **GitHub Actions** as the source.
 Pushes to `main` and manual workflow runs deploy the archive.
@@ -72,11 +74,15 @@ Capturing uses only public GET requests, with four concurrent requests and bound
 timeouts. Raw responses are cached in `.cache/`, which is excluded from Git. Keep
 that cache for repeatable local rebuilding; move it aside to make a fresh capture.
 External-image results are cached separately in `data/external-images.json`.
+HTML is parsed using the browser's HTML5 rules to preserve formatting in the
+original WordPress markup, including mismatched inline tags.
 
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset
 references resolve, RSS and sitemap XML parse, and pages do not contain legacy
-executable scripts or dynamic forms.
+executable scripts or dynamic forms. It also checks background images in external
+stylesheets, style attributes and embedded style blocks, rejecting remote CSS
+dependencies. The deployment workflow runs these checks before publishing.
 
 To test a project URL prefix:
 

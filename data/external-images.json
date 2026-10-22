@@ -714,5 +714,18 @@
   },
   "http://www.mypagerank.net/services/pagerankbutton/pagerankbutton.php?aut=c3530d42aeeb70830395fb891f211e1e00595865f524": {
     "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>; Response is not a supported raster image"
+  },
+  "http://www.dk.capgemini.com/img/logo.gif": {
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  "http://castingwords.com/images/castingwordslogo.gif": {
+    "path": "/archive-assets/external/7d620021779e01523425cbee.gif",
+    "fetched_from": "https://castingwords.com/images/castingwordslogo.gif",
+    "sha256": "7d620021779e01523425cbeee6e5f9b885dbabd1addbbd6186fc262883af9038"
+  },
+  "http://cdn.last.fm/flatness/listen/dark_brushed_panel_small.png": {
+    "path": "/archive-assets/external/4ca961c40d3656a8f3281fff.png",
+    "fetched_from": "https://cdn.last.fm/flatness/listen/dark_brushed_panel_small.png",
+    "sha256": "4ca961c40d3656a8f3281fff1ee51ee24df88cb6c939ca5655fa6fd3c4a3e7c0"
   }
 }

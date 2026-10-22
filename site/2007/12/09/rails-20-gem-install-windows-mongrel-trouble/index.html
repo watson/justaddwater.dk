@@ -1,23 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
 <title>justaddwater.dk | Rails 2.0, gem install, Windows =&gt; Mongrel Trouble</title>
+
 <meta content="WordPress 5.1.27" name="generator"/>
+
 <link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
 <link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
 
 <link href="/favicon.ico" rel="shortcut icon"/>
+
 <style media="screen" type="text/css">
 
-	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+	#page { background: url("/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
 
 </style>
+
 <link href="//s.w.org" rel="dns-prefetch"/>
 <link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Rails 2.0, gem install, Windows =&gt; Mongrel Trouble Comments Feed" type="application/rss+xml"/>
-
-<style type="text/css">
+		
+		<style type="text/css">
 img.wp-smiley,
 img.emoji {
 	display: inline !important;
@@ -31,12 +34,12 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+	<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
 
 
 
 
-
+ 
 <link href="/2007/12/07/justaddwater-readers-exclusive-usability-of-web-applications-poster/" rel="prev" title="Justaddwater Readers Exclusive: Usability of Web Applications Poster"/>
 <link href="/2007/12/12/spam-comment-with-link-to-its-article/" rel="next" title="Spam Comment With Link To Its Article"/>
 <meta content="WordPress 5.1.27" name="generator"/>
@@ -83,25 +86,32 @@ img.emoji {
 
 
 
+
 <link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
 <body>
 <div id="page">
+
 <div id="header">
-<div id="headerimg">
-<h1><a href="/">justaddwater.dk</a></h1>
-<div class="description">Instant Usability &amp; Web Standards</div>
-<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	<div id="headerimg">
+		<h1><a href="/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
 </div>
-</div>
-<div class="widecolumn" id="content">
-<div class="navigation">
-<div class="alignleft">« <a href="/2007/12/07/justaddwater-readers-exclusive-usability-of-web-applications-poster/" rel="prev">Justaddwater Readers Exclusive: Usability of Web Applications Poster</a></div>
-<div class="alignright"><a href="/2007/12/12/spam-comment-with-link-to-its-article/" rel="next">Spam Comment With Link To Its Article</a> »</div>
-</div>
-<div class="post" id="post-803">
-<h2><a href="/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/" rel="bookmark" title="Permanent Link: Rails 2.0, gem install, Windows =&gt; Mongrel Trouble">Rails 2.0, gem install, Windows =&gt; Mongrel Trouble</a></h2>
-<div class="entry">
-<p>UPDATE December 20th: Problems are history with new Rubygems 1.0 release. See: <a href="/2007/12/20/rubygems-rails-20-mongrel-windows-solved/">Rubygems: Rails 2.0, Mongrel, Windows, solved</a>.</p>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/2007/12/07/justaddwater-readers-exclusive-usability-of-web-applications-poster/" rel="prev">Justaddwater Readers Exclusive: Usability of Web Applications Poster</a></div>
+			<div class="alignright"><a href="/2007/12/12/spam-comment-with-link-to-its-article/" rel="next">Spam Comment With Link To Its Article</a> »</div>
+		</div>
+	
+		<div class="post" id="post-803">
+			<h2><a href="/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/" rel="bookmark" title="Permanent Link: Rails 2.0, gem install, Windows =&gt; Mongrel Trouble">Rails 2.0, gem install, Windows =&gt; Mongrel Trouble</a></h2>
+	
+			<div class="entry">
+				<p>UPDATE December 20th: Problems are history with new Rubygems 1.0 release. See: <a href="/2007/12/20/rubygems-rails-20-mongrel-windows-solved/">Rubygems: Rails 2.0, Mongrel, Windows, solved</a>.</p>
 <p>UPDATE December 19th: <a href="http://dev.rubyonrails.org/changeset/8438">Rails changeset 8438</a> fixes the Rails part of this bug but no release 2.0.3 available yet. Rubygems 1.0 is on the way. Wait for the 1.0 release that contains a bugfix. See my <a href="/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/#comment-384409">comment below</a> for details. Also added links here in the bottom of the article explaining further.</p>
 <p>Read this before running gem update –system and before upgrading to Rails 2.0 on windows. The fast one-sentence version: There is a bug in the current windows ruby “gem” release, but you need to upgrade it for Rails 2.0, read below to stay out of trouble.</p>
 <p>This Friday’s final release of Rails 2.0 makes everybody eager to upgrade and install.  I ran into the same problems as commented in <a href="http://weblog.rubyonrails.com/2007/12/7/rails-2-0-it-s-done">the release note</a>:</p>
@@ -149,8 +159,10 @@ RubyGems Environment:<br/>
 <li><a href="http://blog.mmediasys.com/2007/12/19/latest-rubygems-and-rails-is-a-deadly-combo/" title="Enlace Permanente a Latest RubyGems and Rails is a deadly combo">Latest RubyGems and Rails is a deadly combo</a> (December 19)</li>
 </ul>
 <p><small>Technorati Tags: <a href="http://technorati.com/tag/ruby" rel="tag">ruby</a>, <a href="http://technorati.com/tag/rails" rel="tag"> rails</a>, <a href="http://technorati.com/tag/mongrel" rel="tag"> mongrel</a>, <a href="http://technorati.com/tag/rubygems" rel="tag"> rubygems</a>, <a href="http://technorati.com/tag/copenhagenrb" rel="tag"> copenhagenrb</a>, <a href="http://technorati.com/tag/rails2.0" rel="tag"> rails2.0</a></small></p>
-<p class="postmetadata alt">
-<small>
+	
+					
+				<p class="postmetadata alt">
+					<small>
 						This entry was posted by Jesper Rønn-Jensen						 
 						on Sunday, December 9th, 2007 at 22:50 (GMT-1)						and is filed under <a href="/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
 						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
@@ -159,71 +171,111 @@ RubyGems Environment:<br/>
 						
 												
 					</small>
-</p>
-</div>
-</div>
+				</p>
+	
+			</div>
+
+		</div>
 
 
+		
+	
 
-<h3 id="comments">17 Responses to “Rails 2.0, gem install, Windows =&gt; Mongrel Trouble”</h3>
-<ol class="commentlist">
-<li class="alt" id="comment-381708">
-<cite>Thorsten</cite> Says:
+
+	<h3 id="comments">17 Responses to “Rails 2.0, gem install, Windows =&gt; Mongrel Trouble”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-381708">
+			<cite>Thorsten</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-381708" title="">December 10th, 2007 at 02:37 (GMT-1)</a> </small>
-<p>Thanks for this, it helped me to get monrel 1.1.1 running on Windows.</p>
+
+			<small class="commentmetadata"><a href="#comment-381708" title="">December 10th, 2007 at 02:37 (GMT-1)</a> </small>
+
+			<p>Thanks for this, it helped me to get monrel 1.1.1 running on Windows.</p>
 <p>I managed to install it while still having gems 0.9.2 installe, but it didn’t start properly. I switched back to 1.0.1 which ran fine for me, and it worked. </p>
 <p>Then i installed Gems 0.9.5 and Rails 2.0, and was stuck with an out-of-date mongrel</p>
 <p>Your post helped me to get everything up-to-date (well except for gem itself :-P)</p>
-</li>
+
+		</li>
+
+	
 
 
-<li id="comment-381832">
-<cite>Ray Case</cite> Says:
+	
+		<li id="comment-381832">
+			<cite>Ray Case</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-381832" title="">December 10th, 2007 at 21:10 (GMT-1)</a> </small>
-<p>Thanks, Jesper.  After doing the “gem update –system” my mongrel server was shot.  </p>
+
+			<small class="commentmetadata"><a href="#comment-381832" title="">December 10th, 2007 at 21:10 (GMT-1)</a> </small>
+
+			<p>Thanks, Jesper.  After doing the “gem update –system” my mongrel server was shot.  </p>
 <p>Following steps 4,5,6 and 7 above restored my Mongrel server.  </p>
 <p>However, on window$, I had to use <b>gem update rails</b> instead of <b>gem update rails -y</b> because the -y failed.</p>
 <p>Thanks again,<br/>
 Ray</p>
-</li>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-381852">
-<cite><a class="url" href="http://de-amicis.com/" rel="external">Marius Popescu</a></cite> Says:
+	
+		<li class="alt" id="comment-381852">
+			<cite><a class="url" href="http://de-amicis.com/" rel="external">Marius Popescu</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-381852" title="">December 10th, 2007 at 23:25 (GMT-1)</a> </small>
-<p>Thanks very much!<br/>
+
+			<small class="commentmetadata"><a href="#comment-381852" title="">December 10th, 2007 at 23:25 (GMT-1)</a> </small>
+
+			<p>Thanks very much!<br/>
 I saw yesterday night on a personal site (running on windows) that the mongrels are doing something weird: continuously starting and stopping the ruby instances :) Happily, this morning I saw your post and save it for tonight, when I fixed it in 5 minutes:) Nice, mongrels, nice …</p>
 <p>Tak,<br/>
 Marius</p>
-</li>
+
+		</li>
+
+	
 
 
-<li id="comment-382382">
-<cite><a class="url" href="http://lifepatterns.wordpress.com" rel="external">hari</a></cite> Says:
+	
+		<li id="comment-382382">
+			<cite><a class="url" href="http://lifepatterns.wordpress.com" rel="external">hari</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-382382" title="">December 13th, 2007 at 23:56 (GMT-1)</a> </small>
-<p>Thanks for this info!</p>
-</li>
+
+			<small class="commentmetadata"><a href="#comment-382382" title="">December 13th, 2007 at 23:56 (GMT-1)</a> </small>
+
+			<p>Thanks for this info!</p>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-383173">
-<cite><a class="url" href="http://www.haypista.com" rel="external">inasacu</a></cite> Says:
+	
+		<li class="alt" id="comment-383173">
+			<cite><a class="url" href="http://www.haypista.com" rel="external">inasacu</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-383173" title="">December 15th, 2007 at 15:33 (GMT-1)</a> </small>
-<p>hi,</p>
+
+			<small class="commentmetadata"><a href="#comment-383173" title="">December 15th, 2007 at 15:33 (GMT-1)</a> </small>
+
+			<p>hi,</p>
 <p>tried what you suggested and it worked…</p>
 <p>thanks…</p>
-</li>
+
+		</li>
+
+	
 
 
-<li id="comment-384409">
-<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+	
+		<li id="comment-384409">
+			<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384409" title="">December 19th, 2007 at 10:33 (GMT-1)</a> </small>
-<p>I sent an email to Eric Hodel, prompting for a bugfix release that will fix this. Here’s the reply:</p>
+
+			<small class="commentmetadata"><a href="#comment-384409" title="">December 19th, 2007 at 10:33 (GMT-1)</a> </small>
+
+			<p>I sent an email to Eric Hodel, prompting for a bugfix release that will fix this. Here’s the reply:</p>
 <blockquote><p>Eric Hodel to me 12:56 AM (9 hours ago)</p>
 <p>On Dec 18, 2007, at 05:13 AM, Jesper Rønn-Jensen wrote:</p>
 <p>&gt; Hi eric,<br/>
@@ -233,81 +285,129 @@ Marius</p>
 &gt; “Article points to an item that is no longer available for interaction”</p>
 <p>We should have RubyGems 1.0 out in the next couple days with the various fixes.
 </p></blockquote>
-</li>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-384804">
-<cite>Chris</cite> Says:
+	
+		<li class="alt" id="comment-384804">
+			<cite>Chris</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384804" title="">December 20th, 2007 at 16:30 (GMT-1)</a> </small>
-<p>RubyGems 1.0.0 is out, but I still get the same error with Mongrel_Service. And reverting back to 0.9.4 prevents me from getting Rails (somehow). Is the bug not fixed, or am I encountering a new problem?</p>
-</li>
+
+			<small class="commentmetadata"><a href="#comment-384804" title="">December 20th, 2007 at 16:30 (GMT-1)</a> </small>
+
+			<p>RubyGems 1.0.0 is out, but I still get the same error with Mongrel_Service. And reverting back to 0.9.4 prevents me from getting Rails (somehow). Is the bug not fixed, or am I encountering a new problem?</p>
+
+		</li>
+
+	
 
 
-<li id="comment-384825">
-<cite><a class="url" href="http://blog.mmediasys.com" rel="external">Luis Lavena</a></cite> Says:
+	
+		<li id="comment-384825">
+			<cite><a class="url" href="http://blog.mmediasys.com" rel="external">Luis Lavena</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384825" title="">December 20th, 2007 at 19:44 (GMT-1)</a> </small>
-<p>@Chris: what error are you getting with mongrel_service? is doing mongrel_rails or when running the service?</p>
-</li>
+
+			<small class="commentmetadata"><a href="#comment-384825" title="">December 20th, 2007 at 19:44 (GMT-1)</a> </small>
+
+			<p>@Chris: what error are you getting with mongrel_service? is doing mongrel_rails or when running the service?</p>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-384831">
-<cite><a class="url" href="http://blog.mmediasys.com" rel="external">Luis Lavena</a></cite> Says:
+	
+		<li class="alt" id="comment-384831">
+			<cite><a class="url" href="http://blog.mmediasys.com" rel="external">Luis Lavena</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384831" title="">December 20th, 2007 at 20:20 (GMT-1)</a> </small>
-<p>Guys, I’ve updated my post related to RubyGems and @mongrel_service@ with instructions to workaround the issues:</p>
+
+			<small class="commentmetadata"><a href="#comment-384831" title="">December 20th, 2007 at 20:20 (GMT-1)</a> </small>
+
+			<p>Guys, I’ve updated my post related to RubyGems and @mongrel_service@ with instructions to workaround the issues:</p>
 <p><a href="http://blog.mmediasys.com/2007/12/19/latest-rubygems-and-rails-is-a-deadly-combo" rel="external">http://blog.mmediasys.com/2007/12/19/latest-rubygems-and-rails-is-a-deadly-combo</a></p>
 <p>HTH,</p>
 <p>Luis</p>
-</li>
+
+		</li>
+
+	
 
 
-<li id="comment-384834">
-<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+	
+		<li id="comment-384834">
+			<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384834" title="">December 20th, 2007 at 20:56 (GMT-1)</a> </small>
-<p>@Chris, my upgrade revealed no problems. I don’t have mongrel_service installed. But the new rubygems 1.0 just upgraded my ordinary mongrel from 1.1.1 to 1.1.2</p>
+
+			<small class="commentmetadata"><a href="#comment-384834" title="">December 20th, 2007 at 20:56 (GMT-1)</a> </small>
+
+			<p>@Chris, my upgrade revealed no problems. I don’t have mongrel_service installed. But the new rubygems 1.0 just upgraded my ordinary mongrel from 1.1.1 to 1.1.2</p>
 <p>@Luis: thanks a lot for taking your time to investigate and post workarounds</p>
-</li>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-384835">
-<cite><a class="url" href="/2007/12/20/rubygems-rails-20-mongrel-windows-solved/">justaddwater.dk | Rubygems: Rails 2.0, Mongrel, Windows, solved</a></cite> Says:
+	
+		<li class="alt" id="comment-384835">
+			<cite><a class="url" href="/2007/12/20/rubygems-rails-20-mongrel-windows-solved/">justaddwater.dk | Rubygems: Rails 2.0, Mongrel, Windows, solved</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384835" title="">December 20th, 2007 at 21:13 (GMT-1)</a> </small>
-<p>[…] is the time to revoke the install warning Rails 2.0, gem install, Windows =&gt; Mongrel Trouble I wrote about December 9th as Rails 2.0 was […]</p>
-</li>
+
+			<small class="commentmetadata"><a href="#comment-384835" title="">December 20th, 2007 at 21:13 (GMT-1)</a> </small>
+
+			<p>[…] is the time to revoke the install warning Rails 2.0, gem install, Windows =&gt; Mongrel Trouble I wrote about December 9th as Rails 2.0 was […]</p>
+
+		</li>
+
+	
 
 
-<li id="comment-384894">
-<cite>Chris</cite> Says:
+	
+		<li id="comment-384894">
+			<cite>Chris</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384894" title="">December 21st, 2007 at 08:08 (GMT-1)</a> </small>
-<p>Thanks guys for all this info.</p>
+
+			<small class="commentmetadata"><a href="#comment-384894" title="">December 21st, 2007 at 08:08 (GMT-1)</a> </small>
+
+			<p>Thanks guys for all this info.</p>
 <p>My problem is not getting the platform selection menu on “gem install mongrel” and “gem install mongrel_service”, the second printing an error message. Since I don’t even get mongrel_service, I can’t apply Luis’s fix (I completely removed my previous ruby directory for a clean install, during the process of figuring out my upgrade problems).</p>
 <p>I guess I’ll wait for the bug fixes before I continue with the upgrade.</p>
 <p>Best regards,</p>
 <p>Chris.</p>
-</li>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-384901">
-<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+	
+		<li class="alt" id="comment-384901">
+			<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384901" title="">December 21st, 2007 at 09:33 (GMT-1)</a> </small>
-<p>@Chris: Perhaps you should try manually downloading the gem from rubyforge. Put it into any directory and start a dos prompt. Then type </p>
+
+			<small class="commentmetadata"><a href="#comment-384901" title="">December 21st, 2007 at 09:33 (GMT-1)</a> </small>
+
+			<p>@Chris: Perhaps you should try manually downloading the gem from rubyforge. Put it into any directory and start a dos prompt. Then type </p>
 <p>gem install mongrel_service-0.3.3-mswin32.gem</p>
 <p>I did that for installing rails 2.0.2 with rubygems 0.9.4 (which had similar problems: it showed an error message 404 download error).</p>
 <p>PS. I assume you ran “gem -v” or “gem environment” to confirm you are now on rubygems 1.0?</p>
-</li>
+
+		</li>
+
+	
 
 
-<li id="comment-384917">
-<cite>Chris</cite> Says:
+	
+		<li id="comment-384917">
+			<cite>Chris</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384917" title="">December 21st, 2007 at 11:01 (GMT-1)</a> </small>
-<p>Hi Jesper,</p>
+
+			<small class="commentmetadata"><a href="#comment-384917" title="">December 21st, 2007 at 11:01 (GMT-1)</a> </small>
+
+			<p>Hi Jesper,</p>
 <p>Being in the same time zone really helps…</p>
 <p>I tried your solution (how do you find out the name of the latest gems?), first without –source, then with two potential sources, but I still get the same error message:</p>
 <p>c:\ruby&gt;gem install mongrel_service-0.3.3-mswin32.gem<br/>
@@ -341,14 +441,20 @@ RubyGems Environment:<br/>
   – REMOTE SOURCES:<br/>
      – <a href="http://gems.rubyforge.org" rel="external">http://gems.rubyforge.org</a></p>
 <p>I wonder if the “ruby” platform is screwing things up (do you confirm that it shouldn’t be there since I’m on Windows?).</p>
-</li>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-384919">
-<cite>Chris</cite> Says:
+	
+		<li class="alt" id="comment-384919">
+			<cite>Chris</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384919" title="">December 21st, 2007 at 11:09 (GMT-1)</a> </small>
-<p>I apologize if you get this message twice: I submitted a comment, but don’t see it on this page…</p>
+
+			<small class="commentmetadata"><a href="#comment-384919" title="">December 21st, 2007 at 11:09 (GMT-1)</a> </small>
+
+			<p>I apologize if you get this message twice: I submitted a comment, but don’t see it on this page…</p>
 <p>Anyway, I tried getting mongrel_service via the file name, like you suggested, with and without sources, but I get the same error message each time:</p>
 <p>c:\ruby&gt;gem install mongrel_service-0.3.3-mswin32.gem<br/>
 Updating metadata for 19 gems from <a href="http://gems.rubyforge.org" rel="external">http://gems.rubyforge.org</a><br/>
@@ -380,14 +486,20 @@ RubyGems Environment:<br/>
      – :bulk_threshold =&gt; 1000<br/>
   – REMOTE SOURCES:<br/>
      – <a href="http://gems.rubyforge.org" rel="external">http://gems.rubyforge.org</a></p>
-</li>
+
+		</li>
+
+	
 
 
-<li id="comment-384980">
-<cite><a class="url" href="http://blog.mmediasys.com" rel="external">Luis Lavena</a></cite> Says:
+	
+		<li id="comment-384980">
+			<cite><a class="url" href="http://blog.mmediasys.com" rel="external">Luis Lavena</a></cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384980" title="">December 21st, 2007 at 19:55 (GMT-1)</a> </small>
-<p>@Chris: you’re doing it wrong and getting things wrong.</p>
+
+			<small class="commentmetadata"><a href="#comment-384980" title="">December 21st, 2007 at 19:55 (GMT-1)</a> </small>
+
+			<p>@Chris: you’re doing it wrong and getting things wrong.</p>
 <p>A. ‘ruby’ is a pure-ruby platform, used by gems that don’t need or provide specific functionality for each platform, or just ships pre-built extensions for them.</p>
 <p>B. When Jesper suggest you try installing mongrel_service by its filename, he meant: donwload the .gem file from rubyforge and *then* try to install it locally.</p>
 <p>C. installing mongrel_service with 1.0.0 installed shows some problems, not because rubygems, but due how dependencies to win32-service are indicated in mongrel_service gem. so:</p>
@@ -400,38 +512,61 @@ RubyGems Environment:<br/>
 <p>I’ll try to solve mongrel_service issues this weekend. So few days before christmas is a nightmare here at office. Please excuse the troubles.</p>
 <p>HTH,</p>
 <p>Luis</p>
-</li>
+
+		</li>
+
+	
 
 
-<li class="alt" id="comment-384987">
-<cite>Chris</cite> Says:
+	
+		<li class="alt" id="comment-384987">
+			<cite>Chris</cite> Says:
 						<br/>
-<small class="commentmetadata"><a href="#comment-384987" title="">December 21st, 2007 at 20:50 (GMT-1)</a> </small>
-<p>Thanks for being so patient Luis.</p>
+
+			<small class="commentmetadata"><a href="#comment-384987" title="">December 21st, 2007 at 20:50 (GMT-1)</a> </small>
+
+			<p>Thanks for being so patient Luis.</p>
 <p>I’m off to a well deserved vacation… so I’ll follow your instructions when I get back. In the mean time have a Happy Holiday,</p>
 <p>Chris.</p>
-</li>
+
+		</li>
+
+	
 
 
-</ol>
-</div>
-<div id="sidebar">
-<ul>
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
 <li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
 <p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
 </li>
-</ul>
-</div>
+
+        </ul>
+    </div>
+
+
 <hr/>
 <div id="footer">
-<p>
-<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+	<p>
+                <a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
 		justaddwater.dk is proudly powered by 
 		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
-</p>
+	</p>
 </div>
 </div>
 
 
-</body>
-</html>
+
+
+
+
+</body></html>

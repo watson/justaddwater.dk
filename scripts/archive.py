@@ -171,6 +171,19 @@ def is_feed(path):
     return bool(re.search(r'/(?:feed|rss2?|atom)/?$', path))
 
 
+def embedded_css(soup):
+    """Include both style attributes and WordPress's per-template style blocks."""
+    yield from (tag['style'] for tag in soup.find_all(style=True))
+    yield from (tag.string or '' for tag in soup.find_all('style'))
+
+
+def parse_document(raw):
+    # Match the browser's HTML5 tree construction. Legacy WordPress sometimes
+    # lets formatting tags cross paragraph boundaries; html.parser closes them
+    # early and silently changes how the published article looks.
+    return BeautifulSoup(raw, 'html5lib')
+
+
 def references(soup, base, ids):
     pages, assets = set(), set()
     for tag in soup.find_all(['a', 'img', 'link', 'source', 'video', 'audio', 'object', 'embed']):
@@ -194,8 +207,8 @@ def references(soup, base, ids):
                 path = local_url(item.strip().split()[0], base, ids) if item.strip() else None
                 if path:
                     assets.add(path)
-    for tag in soup.find_all(style=True):
-        for match in CSS_URL.finditer(tag['style']):
+    for css in embedded_css(soup):
+        for match in CSS_URL.finditer(css):
             path = local_url(match[2], base, ids)
             if path:
                 assets.add(path)
@@ -261,12 +274,18 @@ def crawl(data):
                     if urlsplit(meta['final_url']).hostname not in HOSTS:
                         raise ValueError('External redirect')
                     downloaded[path] = meta['final_url']
+                    dependencies = set()
                     if path.endswith('.css'):
                         for match in CSS_URL.finditer(body.decode('utf-8', 'replace')):
                             extra = local_url(match[2], ORIGIN + path, ids)
-                            if extra and extra not in downloaded and extra not in assets:
-                                assets.add(extra)
-                                pending.add(extra)
+                            if extra:
+                                dependencies.add(extra)
+                    elif 'text/html' in next((v for k, v in meta['headers'].items() if k.lower() == 'content-type'), ''):
+                        # Downloadable HTML demos have their own inline CSS and
+                        # images, even though they aren't WordPress page routes.
+                        _, dependencies = references(BeautifulSoup(body, 'html.parser'), ORIGIN + path, ids)
+                    pending.update(dependencies - assets)
+                    assets.update(dependencies)
                 except Exception as error:
                     unavailable[path] = str(error)
                 if (len(downloaded) + len(unavailable)) % 100 == 0:
@@ -276,7 +295,7 @@ def crawl(data):
     return state
 
 
-def clean_html(soup):
+def clean_html(soup, preserve_demo_controls=False):
     # The old host prints PHP open_basedir warnings on attachment pages. These
     # are runtime diagnostics, not article content or archive navigation.
     for warning in soup.find_all('b', string=re.compile(r'^(Warning|Notice|Deprecated)$')):
@@ -310,6 +329,12 @@ def clean_html(soup):
         if form.find('input', attrs={'name': 's'}):
             form['action'] = '/search/'
             form['method'] = 'get'
+        elif preserve_demo_controls:
+            # Downloaded CSS examples use form controls as their subject.
+            # Retain their appearance without a form that can submit anywhere.
+            form.name = 'div'
+            for attr in ('action', 'method', 'enctype', 'target'):
+                form.attrs.pop(attr, None)
         else:
             note = soup.new_tag('p', attrs={'class': 'archive-note'})
             note.string = 'This form no longer accepts submissions.'
@@ -322,6 +347,24 @@ def clean_html(soup):
         elif tag['href'].endswith('#respond'):
             tag['href'] = tag['href'].removesuffix('#respond') + '#comments'
     return soup
+
+
+def rewrite_css(css, base, ids, routes, unavailable, external):
+    def replace(match):
+        value = match[2]
+        path = local_url(value, base, ids)
+        if path:
+            if path in routes:
+                return 'url("' + path + '")'
+            unavailable.add(path)
+            # A missing background should leave the original background color
+            # visible, rather than tile an image-placeholder message.
+            return 'none'
+        if urlsplit(urljoin(base, value)).hostname not in HOSTS and not value.startswith(('data:', '#')):
+            image = external.get(value, {})
+            return 'url("' + image['path'] + '")' if image.get('path') else 'none'
+        return match[0]
+    return CSS_URL.sub(replace, css)
 
 
 def rewrite(soup, base, ids, routes, unavailable, external=None):
@@ -384,7 +427,9 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
             else:
                 del tag['srcset']
         if tag.get('style'):
-            tag['style'] = CSS_URL.sub(lambda m: 'url("' + (local_url(m[2], base, ids) or m[2]) + '")', tag['style'])
+            tag['style'] = rewrite_css(tag['style'], base, ids, routes, unavailable, external)
+        if tag.name == 'style':
+            tag.string = rewrite_css(tag.string or '', base, ids, routes, unavailable, external)
     for tag in soup.select('link[rel="canonical"], link[rel="shortlink"]'):
         if tag.get('href', '').startswith('/'):
             tag['href'] = 'https://justaddwater.dk' + tag['href']
@@ -397,7 +442,7 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
 
 
 def generated_page(template, title, body):
-    soup = BeautifulSoup(template, 'html.parser')
+    soup = parse_document(template)
     content = soup.select_one('#content')
     content.clear()
     content.append(BeautifulSoup(f'<h2>{html.escape(title)}</h2>{body}', 'html.parser'))
@@ -424,7 +469,7 @@ def build(data, state):
     unavailable, comment_ids = set(), set()
     for path in sorted(state['pages']):
         raw, _ = fetch(ORIGIN + path)
-        soup = clean_html(BeautifulSoup(raw, 'html.parser'))
+        soup = clean_html(parse_document(raw))
         soup = rewrite(soup, ORIGIN + path, ids, routes, unavailable, external)
         for tag in soup.find_all(id=re.compile(r'^comment-\d+$')):
             comment_ids.add(int(tag['id'].split('-')[-1]))
@@ -437,13 +482,10 @@ def build(data, state):
         raw, meta = fetch(ORIGIN + path)
         content_type = next((v for k, v in meta['headers'].items() if k.lower() == 'content-type'), '')
         if 'text/html' in content_type:
-            raw = str(rewrite(clean_html(BeautifulSoup(raw, 'html.parser')), ORIGIN + path, ids, routes, unavailable, external)).encode()
+            raw = str(rewrite(clean_html(parse_document(raw), preserve_demo_controls=True), ORIGIN + path, ids, routes, unavailable, external)).encode()
         elif path.endswith('.css'):
             text = raw.decode('utf-8', 'replace')
-            def css_replace(match):
-                target = local_url(match[2], ORIGIN + path, ids)
-                return 'url("' + (target if target in routes else '/archive-assets/unavailable.svg' if target else match[2]) + '")'
-            raw = CSS_URL.sub(css_replace, text).encode()
+            raw = rewrite_css(text, ORIGIN + path, ids, routes, unavailable, external).encode()
         # JavaScript examples can be downloaded, but aren't executed by pages.
         if path.endswith('.php'):
             continue

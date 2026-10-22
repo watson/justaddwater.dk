@@ -28,12 +28,20 @@ jobs:
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
-      - name: Test deployment URL rewriting
-        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Install validation dependencies
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -r requirements.txt
+      - name: Test asset capture and deployment URL rewriting
+        run: .venv/bin/python -m unittest discover -s scripts -p 'test_*.py'
       - name: Prepare static files
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: python3 scripts/prepare_pages.py --base-path "$PAGES_BASE_PATH"
+      - name: Validate the deployment
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: .venv/bin/python scripts/verify.py --site _site --base-path "$PAGES_BASE_PATH"
       - name: Upload site
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:

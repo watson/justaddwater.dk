@@ -20,7 +20,7 @@
     "users": 3
   },
   "html_pages": 1675,
-  "downloaded_assets": 808,
+  "downloaded_assets": 816,
   "comments_in_html": 2782,
   "comments_missing_from_html": [],
   "unavailable_pages": {
@@ -28,23 +28,27 @@
     "/google-create-table-search/": "HTTP Error 404: Not Found",
     "/screenshot-of-hotmail-progress-bar/": "HTTP Error 404: Not Found",
     "/2007/10/12/web-site-investigation-toolbox-update/www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/": "HTTP Error 404: Not Found",
-    "/2007/10/12/web-site-investigation-toolbox-update/comment-page-1/www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/": "HTTP Error 404: Not Found",
-    "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/github.com/giraffesoft/resource_controller/": "HTTP Error 404: Not Found",
-    "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/www.justaddwater.dk/": "HTTP Error 404: Not Found",
     "/2008/11/07/plugin-for-railss-resource-controller/github.com/giraffesoft/resource_controller/": "HTTP Error 404: Not Found",
-    "/2009/01/08/css-fun-flag-d%E2%80%A6ated-html-tagscss-fun-flag-deprecated-html-tags/": "HTTP Error 404: Not Found",
     "/2008/11/07/plugin-for-railss-resource-controller/www.justaddwater.dk/": "HTTP Error 404: Not Found",
+    "/2007/10/12/web-site-investigation-toolbox-update/comment-page-1/www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/": "HTTP Error 404: Not Found",
+    "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/www.justaddwater.dk/": "HTTP Error 404: Not Found",
+    "/2009/01/08/css-fun-flag-d%E2%80%A6ated-html-tagscss-fun-flag-deprecated-html-tags/": "HTTP Error 404: Not Found",
     "/2012/02/24/get-started-using-advanced-web-fonts-today/": "HTTP Error 404: Not Found",
     "/http%3Awww.grancomo.com/": "HTTP Error 404: Not Found",
-    "/pres%202006-06-01%20reboot.ppt": "HTTP Error 404: Not Found"
+    "/pres%202006-06-01%20reboot.ppt": "HTTP Error 404: Not Found",
+    "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/github.com/giraffesoft/resource_controller/": "HTTP Error 404: Not Found"
   },
   "unavailable_assets": {
     "/wp-content/Beermatroadmap2.jpg": "HTTP Error 404: Not Found",
     "/wp-content/thumb-Beermatroadmap2.jpg": "HTTP Error 404: Not Found",
+    "/2008/05/26/jquery-rounded-corners-technorati-style/roundcorners.css": "HTTP Error 404: Not Found",
     "/2008/05/26/jquery-rounded-corners-technorati-style/comment-page-1/roundcorners.css": "HTTP Error 404: Not Found",
     "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png": "HTTP Error 404: Not Found",
-    "/2008/05/26/jquery-rounded-corners-technorati-style/roundcorners.css": "HTTP Error 404: Not Found",
-    "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png": "HTTP Error 404: Not Found"
+    "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png": "HTTP Error 404: Not Found",
+    "/rss.xml/": "HTTP Error 404: Not Found",
+    "/static/spreadsheets/client/css/813770466-tiler_view_ltr.css": "HTTP Error 404: Not Found",
+    "/wp-content/uploads/2007/10/train_css_d_v6.html": "HTTP Error 404: Not Found",
+    "/wp-content/uploads/2007/10/iepngfix.htc": "HTTP Error 404: Not Found"
   },
   "unavailable_references": [
     "/2005/01/20/one-of-four-web-users-are-disabled-users/",
@@ -82,9 +86,7 @@
     "/wp-content/thumb-Beermatroadmap2.jpg",
     "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png",
     "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png",
-    "/wp-content/uploads/2007/10/train_css_d_v3.html",
-    "/wp-content/uploads/2007/10/train_css_d_v4.html",
-    "/wp-content/uploads/2007/10/train_css_d_v5.html",
+    "/wp-content/uploads/2007/10/iepngfix.htc",
     "/wp-content/uploads/2007/10/train_css_d_v6.html",
     "/ydelser/"
   ]
