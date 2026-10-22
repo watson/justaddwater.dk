@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Git tip to remove remote branches already merged</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+<link href="/2015/12/13/ruby-make-list-minimum-length/" rel="prev" title="Ruby make list minimum length"/>
+<link href="/2016/11/02/git-extract-folder-from-project-with-history-and-tags/" rel="next" title="Git extract folder from project with history and tags"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2016/08/25/git-tip-to-remove-remote-branches-already-merged/" rel="canonical"/>
+<link href="https://justaddwater.dk/2016/08/25/git-tip-to-remove-remote-branches-already-merged/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2015/12/13/ruby-make-list-minimum-length/" rel="prev">Ruby make list minimum length</a></div>
+<div class="alignright"><a href="/2016/11/02/git-extract-folder-from-project-with-history-and-tags/" rel="next">Git extract folder from project with history and tags</a> »</div>
+</div>
+<div class="post" id="post-1798">
+<h2><a href="/2016/08/25/git-tip-to-remove-remote-branches-already-merged/" rel="bookmark" title="Permanent Link: Git tip to remove remote branches already merged">Git tip to remove remote branches already merged</a></h2>
+<div class="entry">
+<p>Let’s talk about source control and an efficient way of using Git.</p>
+<p>I like the projects where you have a `master` branch and a few feature branches, which are actively being worked upon. Only a few branches are present at a given time, and this is less confusing for the contributors in the repository.</p>
+<p>A couple of times I have been on a project where old branches were not cleaned up. </p>
+<p>I found that it’s really easy to list these branches and clean them up.</p>
+<p>Step 1: List all branches that are already merged:</p>
+<p><code>$ git branch -r --merged</code></p>
+<p>Lists all remote branches which are already merged. In case you want to find the old ones, you can sort them by commit date with the flag `–sort=committerdate`</p>
+<p>Example:</p>
+<p><code>$ git branch -r --sort committerdate</code></p>
+<p>Committerdate flag will put the most recent branches last (you can reverse with minus: `<code>--sort=-committerdate</code>`.</p>
+<p>Step 2: List only relevant branches.</p>
+<p>The list returned from above will also contain origin/HEAD and origin/master with we have to filter out:</p>
+<p><code>$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin</code></p>
+<p>we simply remove them with `grep -v`</p>
+<p>Step 3: Feed list into a delete command</p>
+<p>The above command will give you a list of branches to remove. Review the list carefully by printing each line:</p>
+<p><code>$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin | xargs -n 1 echo</code></p>
+<p>When you are satisfied, you can remove each branch with a git push command. Example</p>
+<p><code>$ git push --delete origin merged_branch1</code></p>
+<p>You can simply repeat this for as many times as you have branches with the above expression. So, in total your final command will be:</p>
+<p><code>$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin | xargs -n 1  git push --delete origin</code></p>
+<p>And done :)</p>
+<p>This post is following my series of blog posts with <a href="/2011/09/30/collection-of-useful-git-tips-to-get-started/">useful Git Tips</a></p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Thursday, August 25th, 2016 at 10:54 (GMT-1)						and is filed under <a href="/category/git/" rel="category tag">git</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+
+<p class="nocomments">Comments are closed.</p>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+</body>
+</html>

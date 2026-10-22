@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Git Side Benefit: Reducing Disk Usage</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Git Side Benefit: Reducing Disk Usage Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2009/01/15/bad-usability-calendar-2009-is-out/" rel="prev" title="Bad Usability Calendar 2009 Is Out"/>
+<link href="/2009/01/28/human-time-format-gone-wrong/" rel="next" title="Human Time Format Gone Wrong"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2009/01/17/git-side-benefit-reducing-disk-usage/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2009/01/15/bad-usability-calendar-2009-is-out/" rel="prev">Bad Usability Calendar 2009 Is Out</a></div>
+<div class="alignright"><a href="/2009/01/28/human-time-format-gone-wrong/" rel="next">Human Time Format Gone Wrong</a> »</div>
+</div>
+<div class="post" id="post-1014">
+<h2><a href="/2009/01/17/git-side-benefit-reducing-disk-usage/" rel="bookmark" title="Permanent Link: Git Side Benefit: Reducing Disk Usage">Git Side Benefit: Reducing Disk Usage</a></h2>
+<div class="entry">
+<p>A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed.<br/>
+I created two checkouts of a svn project — one using traditional svn and one using git (which can actually clone a svn repos — see explanation below).</p>
+<p>[code lang=”bash”][~/my-projects]  du -hd 0 \<br/>
+&gt; berammelse berammelse.git \<br/>
+&gt; dokboks dokboks.git       \<br/>
+&gt; intrastat intrastat.git   \<br/>
+&gt; kompetenceregister k2.git \<br/>
+&gt; ourpeople ourpeople.git   \<br/>
+&gt; let0004 let0004.git</p>
+<p>43M	berammelse<br/>
+38M	berammelse.git<br/>
+63M	dokboks<br/>
+11M	dokboks.git<br/>
+53M	intrastat<br/>
+34M	intrastat.git<br/>
+144M	kompetenceregister<br/>
+47M	kompetenceregister.git<br/>
+118M	ourpeople<br/>
+151M	ourpeople.git<br/>
+163M	let0004<br/>
+98M	let0004.git<br/>
+[/code]<br/>
+For any project I tried this, Git uses significantly less disk space. It’s just a side effect, I know. But more important: The git version has all the logfile history offline and that makes rolling forward/back much faster :)<br/>
+FYI i’m using my version of <a href="http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/  ">Dr. Nic’s “gitify”</a> command that wraps a “git svn” command. This way I can use git locally and then re-commit into svn when done.</p>
+<p>[code lang=”ruby”]#!/usr/bin/env ruby -wKU<br/>
+# command from<br/>
+# http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/<br/>
+# Install with<br/>
+# sudo port install git-core +svn</p>
+<p># get svn info location<br/>
+svnurl = `svn info | grep “^URL:”`.gsub(‘URL: ‘,”).chomp</p>
+<p># project = basename<br/>
+project = File.basename(Dir.pwd)</p>
+<p>puts cmd = “git svn clone #{svnurl} ../#{project}.git”</p>
+<p>`#{cmd}`</p>
+<p>puts “(‘git svn rebase’ merges changes from svn.\n ‘git svn dcommit’ updates svn with your git commits)”<br/>
+[/code]</p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Saturday, January 17th, 2009 at 14:28 (GMT-1)						and is filed under <a href="/category/code/" rel="category tag">Code</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">5 Responses to “Git Side Benefit: Reducing Disk Usage”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-468318">
+<cite><a class="url" href="http://www.getlinkspro.com" rel="external">Jeet</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-468318" title="">January 26th, 2009 at 10:46 (GMT-1)</a> </small>
+<p>I am not entirely sure about git reducing the disk usage, since it has to keep ‘whole’ copies of the commits, I am inclined to think that total size required by a well used git repository would be higher than svn/cvs repository that will only keep differences.</p>
+<p>Might try something locally before I can conclude.. but yeah, I have switched to git already :))</p>
+</li>
+
+
+<li id="comment-476803">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-476803" title="">March 9th, 2009 at 10:08 (GMT-1)</a> </small>
+<p>@Jeet i follow your thoughts but the repositories I tested with above actually shows a disk usage reduction.</p>
+<p>The biggest SVN repository above had more than 16,000 commits and the Git version was 40% smaller even though it contained the entire project history.</p>
+<p>So even though that the svn repositories here are only snapshots in time (the history remains on the server), there is a significant difference. </p>
+<p>BTW, the Git repos also only contains differences between each revision.</p>
+</li>
+
+
+<li class="alt" id="comment-494115">
+<cite>Andrew</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-494115" title="">March 24th, 2010 at 17:46 (GMT-1)</a> </small>
+<p>See <a href="https://git.wiki.kernel.org/index.php/GitSvnComparison" rel="external">https://git.wiki.kernel.org/index.php/GitSvnComparison</a><br/>
+They say there that GIT version of Mozilla repository is 420 MB instead of 12 GB in SVN.<br/>
+But that’s the remote repository, which does not really matter to me :-)<br/>
+What matters to me is that when I download it to my machine, with GIT I have to download the entire 420 MB :-( while with SVN only a snapshot of the latest sources.<br/>
+Distributed VCSs are good for large decentralized projects.</p>
+</li>
+
+
+<li id="comment-513664">
+<cite>subbarao</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-513664" title="">March 9th, 2011 at 12:54 (GMT-1)</a> </small>
+<p>Hey guys, I want to know the exact procedure used by git to reduce disk usage i.e. the algorithm used by it to store changes. Any suggestions ???</p>
+</li>
+
+
+<li class="alt" id="comment-545542">
+<cite><a class="url" href="/2009/03/09/using-git-for-svn-repositories-workflow/">justaddwater.dk | Using Git for SVN Repositories Workflow</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-545542" title="">September 30th, 2011 at 19:46 (GMT-1)</a> </small>
+<p>[…] the last months I have been using Git to work with my Subversion repositories. Besides from reducing disk usage, Git also makes my work slightly faster and independent of network access — I can make […]</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

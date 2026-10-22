@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Introducing Tiny JavaScript Number Formatter</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Introducing Tiny JavaScript Number Formatter Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2008/08/03/could-you-fit-the-internet-in-windows-recycle-bin/" rel="prev" title="Could You Fit The Internet In Windows Recycle Bin?"/>
+<link href="/2008/08/28/download-pages-ie-vs-firefox/" rel="next" title="Download Pages — IE vs. Firefox"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2008/08/18/introducing-tiny-javascript-number-formatter/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2008/08/18/introducing-tiny-javascript-number-formatter/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2008/08/03/could-you-fit-the-internet-in-windows-recycle-bin/" rel="prev">Could You Fit The Internet In Windows Recycle Bin?</a></div>
+<div class="alignright"><a href="/2008/08/28/download-pages-ie-vs-firefox/" rel="next">Download Pages — IE vs. Firefox</a> »</div>
+</div>
+<div class="post" id="post-945">
+<h2><a href="/2008/08/18/introducing-tiny-javascript-number-formatter/" rel="bookmark" title="Permanent Link: Introducing Tiny JavaScript Number Formatter">Introducing Tiny JavaScript Number Formatter</a></h2>
+<div class="entry">
+<p>For a current project, I created a tiny number formatter that inserts thousand delimiters in a string:</p>
+<p>10000 to 10,000 etc.</p>
+<p>Just add css class=”numberformat currency” to a text field, and it will be formatted automatically.</p>
+<p>It is based on the <a href="http://prototypejs.org">Prototype JavaScript library</a>. You can get it from it’s GitHub repository page. Feel free to add or alter the functionality. Releasing under Creative Commons license. </p>
+<p><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img alt="Creative Commons License" data-original-url="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" src="/archive-assets/external/acde67df4b37d9df101d6555.png"/></a><br/>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">Creative Commons Attribution-Share Alike 3.0 Unported License</a>.</p>
+<p>Some quick notes:</p>
+<p>I’m using this on a rather big HTML page, so the selection of DOM nodes must be as simple and quick as possible. So if you are considering moderations, please make sure that the DOM manipulations are as lightweight as possible.</p>
+<p>The script is as simple as possible. It does not parse the string as a number. Instead it just strips any thousand delimiters in the string. Afterwards it sets its own. There may be some important logic here to add to make the code more robust.</p>
+<p>I have also added a test page to the project… not a real test page, but a HTML page that shows examples that are modified. Please back up any added functionality with changes to that page as well.</p>
+<p>Contact me for commit access if you would like to contribute. I do not expect to add any functionality to the code unless the work project requires it. </p>
+<p>More info:<br/>
+<a href="http://github.com/jesperronn/numberformat-js/">GitHub repository</a></p>
+<p><small>Technorati Tags: <a href="http://technorati.com/tag/javascript" rel="tag">javascript</a>, <a href="http://technorati.com/tag/opensource" rel="tag"> opensource</a>, <a href="http://technorati.com/tag/project" rel="tag"> project</a>, <a href="http://technorati.com/tag/library" rel="tag"> library</a></small></p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, August 18th, 2008 at 10:50 (GMT-1)						and is filed under <a href="/category/webstandards/javascript/" rel="category tag">JavaScript</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">One Response to “Introducing Tiny JavaScript Number Formatter”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-459497">
+<cite><a class="url" href="http://davidwford.com/" rel="external">David</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-459497" title="">December 15th, 2008 at 01:56 (GMT-1)</a> </small>
+<p>Interesting.  I suppose it could easily be modified to add things like $ signs, decimals as well.</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

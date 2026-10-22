@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>name</key>
+        <string>Convert entities &lt;&gt; for HTML output</string>
+        <key>uuid</key>
+        <string>5AF8503F-DC1B-416C-9475-AF3DB77D4E48</string>
+        <key>input</key>
+        <string>selection</string>
+        <key>output</key>
+        <string>replaceSelectedText</string>
+        <key>command</key>
+        <string>#!/usr/bin/env ruby
+$KCODE = 'U'
+
+$char_to_entity = { }
+File.open("#{ENV['TM_BUNDLE_SUPPORT']}/entities.txt").read.scan(/^(\d+)\t(.+)$/) do |key, value|
+  $char_to_entity[[key.to_i].pack('U')] = value
+end
+
+def encode (text)
+  text.gsub(/[&lt;&gt;&amp;]/) do |ch|
+    ent = $char_to_entity[ch]
+    ent ? "&amp;#{ent};" : sprintf("&amp;#x%02X;", ch.unpack("U")[0])
+  end
+end
+
+print encode(STDIN.read)
+</string>
+        <key>fallbackInput</key>
+        <string>document</string>
+        <key>keyEquivalent</key>
+        <string>@&amp;</string>
+        <key>scope</key>
+        <string>text.html</string>
+    </dict>
+</plist>

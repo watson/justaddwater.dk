@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | CSS Fun: Flag Deprecated HTML Tags</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » CSS Fun: Flag Deprecated HTML Tags Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2008/12/17/time-to-revise-our-comment-policy/" rel="prev" title="Time To Revise Our Comment Policy"/>
+<link href="/2009/01/14/intranet-inspiration/" rel="next" title="Intranet Inspiration"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2008/12/17/time-to-revise-our-comment-policy/" rel="prev">Time To Revise Our Comment Policy</a></div>
+<div class="alignright"><a href="/2009/01/14/intranet-inspiration/" rel="next">Intranet Inspiration</a> »</div>
+</div>
+<div class="post" id="post-990">
+<h2><a href="/2009/01/08/css-fun-flag-deprecated-html-tags/" rel="bookmark" title="Permanent Link: CSS Fun: Flag Deprecated HTML Tags">CSS Fun: Flag Deprecated HTML Tags</a></h2>
+<div class="entry">
+<p>Here is a little fun CSS snippet that helped me identify deprecated HTML on a recent project. Put these lines into the CSS file of your website:</p>
+<blockquote><p><code><br/>
+/* Watch out for invalid/deprecated HTML in CMS */<br/>
+b{font-size: x-large; background-color: fuchsia; color: yellow; font-weight: normal;}<br/>
+i{font-size: x-large; background-color: lime; color: blue; font-style: normal}<br/>
+font{background-color: aqua; color: red}<br/>
+b,i,font{text-decoration: blink;}<br/>
+</code></p></blockquote>
+<p><a href="/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif"><img alt="" class="alignnone size-full wp-image-991" height="165" src="/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif" title="blink-and-flag-deprecated-font-b-i-tags" width="249"/></a></p>
+<p>This was really useful for identifying dirty HTML that was generated from a Microsoft-based CMS. </p>
+<p>Coloring and blinking text makes the editors aware that something is wrong. Two major advantages for this approach:</p>
+<ul>
+<li>Instant attention on HTML validation errors (also for non-developers)</li>
+<li>Developers spend less time on hunting down invalid HTML that constantly sneaks into the web application.</li>
+</ul>
+<p>These lines may also be useful to you — unless you are able to guard your HTML before it’s inserted in your application (something that was not possible at this project).</p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Thursday, January 8th, 2009 at 11:47 (GMT-1)						and is filed under <a href="/category/webstandards/css/" rel="category tag">CSS</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>, <a href="/category/webstandards/" rel="category tag">Web Standards</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to “CSS Fun: Flag Deprecated HTML Tags”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-464587">
+<cite><a class="url" href="http://webignition.net" rel="external">Jon Cram</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-464587" title="">January 8th, 2009 at 13:11 (GMT-1)</a> </small>
+<p>A great idea!</p>
+<p>It might be better to differentiate between deprecated elements and the deprecated /use/ of elements.</p>
+<p>The HTML 4.01 specs contain a list of elements, with those deprecated marked as such: <a href="http://www.w3.org/TR/REC-html40/index/elements.html" rel="external">http://www.w3.org/TR/REC-html40/index/elements.html</a></p>
+<p>You’ll notice that the list of elements doesn’t mark ‘i’ and ‘b’ as deprecated. It is not that ‘i’ and ‘b’ have been deprecated, more than their /use/ has been cautioned against.</p>
+<p>There are use cases supporting the need for ‘i’ to italicise a piece of text instead of using CSS to achieve the same visual effect.</p>
+<p>A good example is the use of italics when presenting a book title within text. We can’t use ’em’ because we don’t want to emphasise the title, we merely want to use italics in following with the conventions of print. There are more justifications for this, but that would start getting too off-topic.</p>
+<p>Back to my main point: use one form of colouring for deprecated elements (ones you can be certain should not be there) and a different form of colouring for commonly misused elements (which /probably/ shouldn’t be there, but might actually be correctly used).</p>
+</li>
+
+
+<li id="comment-467194">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-467194" title="">January 20th, 2009 at 11:46 (GMT-1)</a> </small>
+<p>Jack Clarke wrote:</p>
+<blockquote><p>
+Jack Clarke<br/>
+http:// technewsline.net/ | <a href="mailto:clark31@mail.com" rel="external">clark31@mail.com</a> | 75.177.28.174</p>
+<p>Pretty cool, it would be fun to have a tool that will do the same thing on on any site – I think you’d be surprised how much deprecated HTML is still in use.
+</p></blockquote>
+<p>Actually, you could easily add this into a greasemonkey script or similar. </p>
+<p>PS. I marked your original comment as spam because it’s refering to a product/SEO site. See our <a href="/2008/12/17/time-to-revise-our-comment-policy/">revised blog comment policy</a>.</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CSS for "Train" progress bar</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<h2>CSS for "Train" progress bar</h2>
+<div style="float:right">
+<p>here is an image of what it should look like:</p>
+<img alt="train image" src="/wp-content/uploads/2007/10/train.png"/>
+</div>
+<p>this is the simplest HTML I can come up with. CSS is added below:</p>
+<ol class="train">
+<li class="done">første step <b class="tip"></b></li>
+<li class="done">andet step  <b class="tip"></b></li>
+<li class="current">tredie step
+      <p>This one has extra text that can only be seen when selected</p>
+<b class="tip"></b>
+</li>
+<li class="undone">fjerde step <b class="tip"></b></li>
+<li class="undone">femte step <b class="tip"></b></li>
+<li class="undone final">sidste step <b class="tip"></b></li>
+</ol>
+<style media="screen" type="text/css">
+  ol.train{
+    width: 208px;
+    margin:0;
+    padding:0;
+    
+  }
+  ol.train li{
+    list-style-position:inside; 
+    margin:1px 0px 0px 0px;
+    padding:9px 0 5px 10px;
+    position: relative;
+    bottom:10px;
+    z-index: 1;
+}
+  ol.train li p{
+    margin:0;
+    padding:0;
+    font-weight: normal;
+  }
+  
+.train .done{
+  background: url(train-done.png) #e8f4f7 repeat-x bottom;;
+  color: #999797
+}
+.train .current{
+  background: url(train-current.png) #fea445 repeat-x bottom;
+  color: #fff;
+  font-weight: bold
+}
+.train .undone{
+  background: url(train-undone.png) #d2e9f0 repeat-x bottom;;
+}
+
+.train .tip{
+  height:8px;
+/*  border: 1px dotted green;*/
+  position:absolute;
+  bottom:-6px;
+  left:0;
+  width:100%;
+  z-index:2;
+}
+
+.train .done b.tip{
+  background: url(train-done-tip.png) no-repeat top;
+}
+.train .current b.tip{
+  background: url(train-current-tip.png) no-repeat top;
+}
+.train .undone b.tip{
+  background: url(train-undone-tip.png) no-repeat top;
+}
+.train .final b.tip{
+  background:none;
+}
+
+
+
+</style>
+<br clear="both"/>
+<ul>
+<li><a href="/wp-content/uploads/2007/10/train_css_d.html">version 1</a> (original)</li>
+<li><a href="/wp-content/uploads/2007/10/train_css_d_v2.html">version 2</a> (added z-index on ids)</li>
+<li><a data-original-url="http://justaddwater.dk/wp-content/uploads/2007/10/train_css_d_v3.html" href="/unavailable/?url=%2Fwp-content%2Fuploads%2F2007%2F10%2Ftrain_css_d_v3.html">version 3</a> (added margins and paddings for graphical reasons)</li>
+<li><a data-original-url="http://justaddwater.dk/wp-content/uploads/2007/10/train_css_d_v4.html" href="/unavailable/?url=%2Fwp-content%2Fuploads%2F2007%2F10%2Ftrain_css_d_v4.html">version 4</a> (IE6 support rewrite - no pngfix)</li>
+<li><a data-original-url="http://justaddwater.dk/wp-content/uploads/2007/10/train_css_d_v5.html" href="/unavailable/?url=%2Fwp-content%2Fuploads%2F2007%2F10%2Ftrain_css_d_v5.html">version 5</a> (IE6 support pngfix but strange double numbers in IE6)</li>
+<li><a data-original-url="http://justaddwater.dk/wp-content/uploads/2007/10/train_css_d_v6.html" href="/unavailable/?url=%2Fwp-content%2Fuploads%2F2007%2F10%2Ftrain_css_d_v6.html">version 6 (non existing)</a></li>
+</ul>
+</body>
+</html>

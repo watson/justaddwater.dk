@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Extract HTML Structure From Page With Simple Script</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Extract HTML Structure From Page With Simple Script Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2009/10/02/useful-usability-tips/" rel="prev" title="Useful Usability Tips"/>
+<link href="/2009/10/15/resolve-symlinks-when-copying-files-with-rsync/" rel="next" title="Resolve Symlinks When Copying Files With Rsync"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2009/10/05/tiny-script-to-extract-html-structure-from-page/" rel="canonical"/>
+<link href="https://justaddwater.dk/2009/10/05/tiny-script-to-extract-html-structure-from-page/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2009/10/02/useful-usability-tips/" rel="prev">Useful Usability Tips</a></div>
+<div class="alignright"><a href="/2009/10/15/resolve-symlinks-when-copying-files-with-rsync/" rel="next">Resolve Symlinks When Copying Files With Rsync</a> »</div>
+</div>
+<div class="post" id="post-1176">
+<h2><a href="/2009/10/05/tiny-script-to-extract-html-structure-from-page/" rel="bookmark" title="Permanent Link: Extract HTML Structure From Page With Simple Script">Extract HTML Structure From Page With Simple Script</a></h2>
+<div class="entry">
+<p>I often want to extract parts of HTML page. Often I find myself parsing a doc with Nokogiri and extracting it with a CSS selector. It’s pretty straight-forward from scratch. </p>
+<p>To follow the Don’t Repeat Yourself principle, I created a script to make it a one-liner. Just run <code>ruby parsepage.rb [url] [css_selector]</code></p>
+<p>Feel free to use and modify the code (which i put on GitHub so you can fork and pull from it): <a href="http://gist.github.com/199558">http://gist.github.com/199558</a><br/>
+</p>
+<p>I created the script because I wanted to extract headings from a recent article. You could also use it for creating table of contents or similar. </p>
+<h2>Usage examples</h2>
+<pre><code>
+$ U=http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/
+$ parsepage.rb $U "h3" --html-list
+#=&gt;
+  &lt;li&gt;1. Form Labels Work Best Above The Field&lt;li&gt;
+  &lt;li&gt;2. Users Focus On Faces&lt;li&gt;
+  &lt;li&gt;3. Quality Of Design Is An Indicator Of Credibility&lt;li&gt;
+  &lt;li&gt;4. Most Users Do Not Scroll&lt;li&gt;
+  &lt;li&gt;5. Blue Is The Best Color For Links&lt;li&gt;
+  &lt;li&gt;6. The Ideal Search Box Is 27-Characters Wide&lt;li&gt;
+  &lt;li&gt;7. White Space Improves Comprehension&lt;li&gt;
+  &lt;li&gt;8. Effective User Testing Doesn’t Have To Be Extensive&lt;li&gt;
+  &lt;li&gt;9. Informative Product Pages Help You Stand Out&lt;li&gt;
+  &lt;li&gt;10. Most Users Are Blind To Advertising&lt;li&gt;
+  &lt;li&gt;Bonus: Findings From Our Case-Studies&lt;li&gt;
+  &lt;li&gt;Other Resources&lt;li&gt;
+  &lt;li&gt;Sponsors&lt;li&gt;
+  &lt;li&gt;Smashing Links&lt;li&gt;
+  &lt;li&gt;Stay in touch&lt;li&gt;
+  &lt;li&gt;Popular Posts&lt;li&gt;
+  &lt;li&gt;All Posts&lt;li&gt;
+  &lt;li&gt;Blogroll&lt;li&gt;
+</code></pre>
+<pre><code>
+$ parsepage.rb $U "h1" --text-only
+#=&gt;
+  Smashing Magazine we smash you with the information that will make your life easier. really.
+  10 Useful Usability Findings and Guidelines
+
+$ parsepage.rb $U "h1:first-child"
+#=&gt;
+&lt;h1 class="title"&gt;&lt;a href="http://www.smashingmagazine.com/2009/09/24/10-useful-usability-findings-and-guidelines/" rel="bookmark" title="10 Useful Usability Findings and Guidelines"&gt;10 Useful Usability Findings and Guidelines&lt;/a&gt;&lt;/h1&gt;
+
+</code></pre>
+<p>Let me know if you find it useful. I’ll happily update script with any general contributions. </p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, October 5th, 2009 at 13:00 (GMT-1)						and is filed under <a href="/category/code/" rel="category tag">Code</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">3 Responses to “Extract HTML Structure From Page With Simple Script”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-489778">
+<cite><a class="url" href="http://codercaste.com" rel="external">Spyros</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-489778" title="">October 6th, 2009 at 23:01 (GMT-1)</a> </small>
+<p>Thanx for the script, it will definately come in handy.</p>
+</li>
+
+
+<li id="comment-489916">
+<cite><a class="url" href="http://technokyle.com" rel="external">TechnoKyle</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-489916" title="">October 10th, 2009 at 17:51 (GMT-1)</a> </small>
+<p>Cool! Definitely useful if you want to copy the site design by knowing the structure of the page</p>
+</li>
+
+
+<li class="alt" id="comment-490512">
+<cite><a class="url" href="http://www.scottrobertsweb.com" rel="external">Scott Roberts</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-490512" title="">October 29th, 2009 at 21:20 (GMT-1)</a> </small>
+<p>Now, will this simply make the bulleted list shown above, or give you the underlying HTML code behind it?</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

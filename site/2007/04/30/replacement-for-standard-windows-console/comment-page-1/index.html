@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Replacement for Standard Windows Console</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Replacement for Standard Windows Console Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2007/04/30/debugging-css-my-best-productivity-tip-ever/" rel="prev" title="Debugging CSS: My Best Productivity Tip Ever"/>
+<link href="/2007/05/02/door-handle-usability/" rel="next" title="Door handle Usability"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2007/04/30/replacement-for-standard-windows-console/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2007/04/30/replacement-for-standard-windows-console/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2007/04/30/debugging-css-my-best-productivity-tip-ever/" rel="prev">Debugging CSS: My Best Productivity Tip Ever</a></div>
+<div class="alignright"><a href="/2007/05/02/door-handle-usability/" rel="next">Door handle Usability</a> »</div>
+</div>
+<div class="post" id="post-609">
+<h2><a href="/2007/04/30/replacement-for-standard-windows-console/" rel="bookmark" title="Permanent Link: Replacement for Standard Windows Console">Replacement for Standard Windows Console</a></h2>
+<div class="entry">
+<p>The standard windows command window (console) sucks for several usability reasons:</p>
+<ul>
+<li>Standard windows keyboard shortcuts don’t work. It’s not possible to copy/paste without using a special menu.</li>
+<li>This special menu is best accessible with the mouse (or a long range of shortcuts)</li>
+</ul>
+<p>Compare how it should be</p>
+<blockquote><p>CTRL + V</p></blockquote>
+<p>With how it is in the standard console:</p>
+<blockquote><p>ALT + SHIFT + space</p>
+<p>E (for edit)</p>
+<p>P (for paste)</p></blockquote>
+<p>Which means that my everyday work becomes very tedious than it has to be. Copy is even worse because you first have to put the editor into “mark” mode to make a selection before you do the ALT+SHIFT+space, then E, then C = even more time-consuming.</p>
+<h3>Looking for a replacement</h3>
+<p>I have been using Console 2 for a while as it provides decent support for the basic shortcuts and tabs (to avoid clutter the task bar with multiple windows).</p>
+<p>Console 2 has one major error in my environment: It freezes occationally when I use it for Ruby on Rails development (where I typically run 3 windows per application: one window for the webserver, one for the log-file, and one for commands).</p>
+<p>So I’m ready to shift to a new console replacement</p>
+<p>Microsoft PowerShell seems not to have tabs. At least it’s not mentioned either on the product homepage or in Wikipedia.</p>
+<p>“PowerCmd”. On the paper, it looks very promising: Multiple windows in tabs,  usual keyboard shortcuts are there. But also more advanced features that I have been missing, like line numbers, search and result highlighting, word wrap on/off, and to choose between block selection and line selection.</p>
+<p>I’m sure that these features will help me speed up development further (if implemented properly), and look forward to try out the program.</p>
+<p>More info:</p>
+<ul>
+<li><a href="http://www.powercmd.com/">PowerCmd homepage<br/>
+</a></li>
+<li><a href="http://sourceforge.net/projects/console/">Console 2</a> on SourceForge</li>
+<li><a href="http://www.microsoft.com/windowsserver2003/technologies/management/powershell/default.mspx">Microsoft Powershell</a> (and <a href="http://blogs.msdn.com/powershell/" title="Microsoft blog: Powershell">team blog</a>, found via <a href="http://john.se/blog/2006/07/01/searching-for-a-good-replacement-for-the-old-console-in-windows/" title="John's Blog: Searching for a good replacement for the old console in Windows">John Ericsson</a>)</li>
+</ul>
+<p><small>Technorati Tags: <a href="http://technorati.com/tag/webdevelopment" rel="tag">webdevelopment</a>, <a href="http://technorati.com/tag/programming" rel="tag"> programming</a>, <a href="http://technorati.com/tag/command" rel="tag"> command</a>, <a href="http://technorati.com/tag/shell" rel="tag"> shell</a>, <a href="http://technorati.com/tag/console" rel="tag"> console</a>, <a href="http://technorati.com/tag/powershell" rel="tag"> powershell</a>, <a href="http://technorati.com/tag/powercmd" rel="tag"> powercmd</a>, <a href="http://technorati.com/tag/ruby+on+rails" rel="tag"> ruby on rails</a>, <a href="http://technorati.com/tag/windows" rel="tag"> windows</a>, <a href="http://technorati.com/tag/xp" rel="tag"> xp</a>, <a href="http://technorati.com/tag/winxp" rel="tag"> winxp</a></small></p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, April 30th, 2007 at 11:48 (GMT-1)						and is filed under <a href="/category/productivity/" rel="category tag">Productivity</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">14 Responses to “Replacement for Standard Windows Console”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-138454">
+<cite><a class="url" href="http://www.rafb.net/cohen/blog/" rel="external">Jake Cohen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-138454" title="">April 30th, 2007 at 22:03 (GMT-1)</a> </small>
+<p>I use Cygwin, and the console it comes with has the same problem. You don’t get much control over which mouse button selects, extends, or pastes, either.</p>
+<p>One good solution I’ve found to this is an extension to PuTTY that allows you to use it as a local Cygwin shell. This gives you access to your Cygwin shell (and by extension all of the stuff you can do in the Windows shell) but with the control over mouse and keyboard behavior that you get from PuTTY.</p>
+<p>It can be found here: <a href="http://web.gccaz.edu/~medgar/puttycyg/" rel="external">http://web.gccaz.edu/~medgar/puttycyg/</a></p>
+<p>However, it doesn’t have tabs. There is another utility to get Tabs in PuTTY called, unsurpsingly, PuttyTabs, but I have not tried it.</p>
+</li>
+
+
+<li id="comment-141691">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-141691" title="">May 7th, 2007 at 09:29 (GMT-1)</a> </small>
+<p>After testing PowerCmd, i found out is has a problem with showing unittest output in Ruby . The small dots and failures don’t show up in PowerCmd. Here is the mail I wrote to PowerCmd support. I’ll post any answer I recieve as well.</p>
+<blockquote><p>Hi there.<br/>
+I’m evaluating PowerCmd to find a replacement for the traditional windows command.</p>
+<p>There is one fatal flaw that keeps me from choosing PowerCmd: I’m having problems when running unit tests (it does not show the output of the running tests).</p>
+<p>Is this a bug in PowerCmd?</p>
+<p>Let me just explain how to replicate this. I’m developing in Ruby on Rails. Running the unit tests for the open-source code Ruby on Rails show the problem.</p>
+<p>Here is how it’s done: </p>
+<p>1) install svn.<br/>
+2) install ruby and rubygems<br/>
+   (there are probably also a few rubygems that are needed)<br/>
+3) As explained on <a href="http://dev.rubyonrails.org/" rel="external">http://dev.rubyonrails.org/</a> , check out source code “trunk”.<br/>
+4) go into folder “actionmailer”<br/>
+5) run command “rake test”</p>
+<p>When run from an normal command window, there are small dots that appear for every unit test that is run. When run from PowerCmd, the dots don’t show up.</p>
+<p>Even worse, if a test fails, the result is not shown.</p>
+<p>If there is an obvious workaround or setting I need to set? I’l like to know this before I blog about my experiences. (see the post at <a href="/2007/04/30/replacement-for-standard-windows-console/">Justaddwater</a> )</p>
+<p>Please also let me know if you have planned any updates that can help me.</p>
+<p>/Jesper Rønn-Jensen</p></blockquote>
+</li>
+
+
+<li class="alt" id="comment-141693">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-141693" title="">May 7th, 2007 at 09:37 (GMT-1)</a> </small>
+<p>Screenshots that show the difference between powercmd and another console.</p>
+<p><a href="/wp-content/uploads/2007/05/console-difference-powercmd-without-unittesting-dots.png" title="console-difference-powercmd-without-unittesting-dots.png"><img alt="console-difference-powercmd-without-unittesting-dots-thumbnail.png" src="/wp-content/uploads/2007/05/console-difference-powercmd-without-unittesting-dots.thumbnail.png"/></a></p>
+<p><a href="/wp-content/uploads/2007/05/console-difference-console2-with-unittesting-dots.png" title="console-difference-console2-with-unittesting-dots.png"><img alt="console-difference-console2-with-unittesting-dots-thumbnail.png" src="/wp-content/uploads/2007/05/console-difference-console2-with-unittesting-dots.thumbnail.png"/></a></p>
+<p>Notice that the dots don’t appear in PowerCmd but appear in a normal console window. Click on a screenshot to enlarge it.</p>
+</li>
+
+
+<li id="comment-141696">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-141696" title="">May 7th, 2007 at 09:44 (GMT-1)</a> </small>
+<p>Reply from PowerCmd. I’m impressed to have an answer within minutes!</p>
+<blockquote><p>Hi Jesper,</p>
+<p>Thanks a lot for you reporting the defect. Once I will be working on this defect in 3 hours, and will let you know the result as soon as possible.</p>
+<p>BTW: I found some visitors from your blog and planed to contact you and resolve your issues that you put in the blog. But currently I am busy with the release of the new version. I hope I can resolve it before announcing<br/>
+the release of version 1.3.</p>
+<p>Thanks a lot.<br/>
+Paul
+</p></blockquote>
+</li>
+
+
+<li class="alt" id="comment-141816">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-141816" title="">May 7th, 2007 at 15:20 (GMT-1)</a> </small>
+<p>Just got this reply, which means PowerCmd has fixed the bug for next version. I’m really impressed with this kind of customer support.</p>
+<blockquote><p>Hi Jesper,</p>
+<p>I think I am lucky to have your detailed steps to reproduce the defect. It has been fixed now.</p>
+<p>This defect has been there since the first version of PowerCmd. I greatly appreciate your help.</p>
+<p>Thanks,</p>
+<p>Paul</p></blockquote>
+</li>
+
+
+<li id="comment-142050">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-142050" title="">May 7th, 2007 at 23:21 (GMT-1)</a> </small>
+<p>Just received an update from Paul at PowerCmd, that they released an update that fixes the problem. And it does. This is great news, so I’m upgrading my trial to a paid version. </p>
+<p>Maybe I should also mention the minor things like<br/>
+* window should remeber with/height next time I open PowerCmd<br/>
+* change default setting for autocomplete away from automatic. it can be annoying when executing a command has the same name as the start of a file/folder in current directory.</p>
+<p>An example of the latter is running the ruby command “rake” in directories that have a file called Rakefile (which is default). This way, autocomplete captures the ENTER key and autocompletes “rake” into “rakefile”. </p>
+<p>Very annoying. So I hope these two things can also change soon.</p>
+</li>
+
+
+<li class="alt" id="comment-143306">
+<cite>Paul</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-143306" title="">May 10th, 2007 at 02:32 (GMT-1)</a> </small>
+<p>Because “rakefile” is one of the file under “actionmailer”, if you press “ENTER”, I assume you are accepting the auto-completion. If you are going to  finish the commands without accepting the autocompletion, you can press “ESC” and then “ENTER”, or if you have parameters for “rake”, you can simply press “SPACE” to stop autocompletion for “rake”.</p>
+<p>If “rake test” is you frequently used command, you can define it as a “tool” on quick launch bar, and use Ctrl+F1( or Ctrl+F2 …, depending on the position in quick launch bar) to access it quickly.</p>
+<p>I hope it could be helpful.</p>
+</li>
+
+
+<li id="comment-145956">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-145956" title="">May 14th, 2007 at 21:45 (GMT-1)</a> </small>
+<p>To follow the discussion on autocompletion and window size mentioned in my previous comment, see the PowerCmd support forum:<br/>
+* <a href="http://groups.google.com/group/powercmd/browse_thread/thread/98bcc50317537052" rel="external">Tab completion usability thoughts</a><br/>
+* <a href="http://groups.google.com/group/powercmd/t/124c6c3e10084887" rel="external">PowerCmd should remember window size and position</a></p>
+</li>
+
+
+<li class="alt" id="comment-162208">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-162208" title="">June 4th, 2007 at 20:27 (GMT-1)</a> </small>
+<p>Another thing that I discovered in PowerCmd: Ruby’s command-line interpreter irb can’t run. </p>
+<p>I described it in the <a "="" (ruby="" command="" href="http://groups.google.com/group/powercmd/browse_thread/thread/7a9645a0cd1b27aa" in="" irb"="" is="" line)="" powercmd="" title="	
+" unresponsive="">PowerCmd support forum</a>.</p>
+<p>Not able to run irb means also that “ruby script\console” does not run</p>
+</li>
+
+
+<li id="comment-192196">
+<cite><a class="url" href="http://erufenix.codesys.org/remplaza-cmd-notepad-y-el-explorador-de-window" rel="external">Remplaza cmd, notepad y el explorador de window$</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-192196" title="">June 27th, 2007 at 20:25 (GMT-1)</a> </small>
+<p>[…] Estas dos funciones no las permite el cmd de wigbugs, pero una aplicaion gpl llamada console2 […]</p>
+</li>
+
+
+<li class="alt" id="comment-358576">
+<cite><a class="url" href="/2007/10/14/happy-2nd-birthday/">justaddwater.dk | Happy 2nd birthday</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-358576" title="">November 18th, 2007 at 17:34 (GMT-1)</a> </small>
+<p>[…] Replacement for Standard Windows Console […]</p>
+</li>
+
+
+<li id="comment-418336">
+<cite>Peter</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-418336" title="">May 15th, 2008 at 17:05 (GMT-1)</a> </small>
+<p>Thanks for the tip.  Not open source, but I’m not opposed to *gasp* paying for software if it’s quality software (seeing that I’m a programmer and all…)  :)</p>
+<p>Console2 just crapped out on me, and I’m a little frustrated.  Think I’ll live with powercmd for awhile and see how it fits into my life.</p>
+<p>I guess the primary question is whether it supports cygwin bash consoles.</p>
+<p>About to hit the “help” key and Google bookmark to find out…   :-)</p>
+<p>Thanks so much for writing this blog!</p>
+</li>
+
+
+<li class="alt" id="comment-458682">
+<cite><a class="url" href="http://plopcentral.com" rel="external">Paulie</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-458682" title="">December 9th, 2008 at 15:20 (GMT-1)</a> </small>
+<p>Did you ever have any luck with getting IRB (and therefore script/console) working? </p>
+<p>It was a deal-breaker for me and I’m still hunting for something that’s as usable as a Linux console on windows.</p>
+<p>P</p>
+</li>
+
+
+<li id="comment-502458">
+<cite>maniAC</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-502458" title="">November 14th, 2010 at 17:16 (GMT-1)</a> </small>
+<p>I did not test it (since I am just coming to a Windows machine after 3 years of OS X and trying to find some stuff, like a decent console, tha’s how I came here), but there is also ‘mintty’ at <a href="http://code.google.com/p/mintty/" rel="external">http://code.google.com/p/mintty/</a> It uses the console code of PuTTY along with Win APIs in order to deliver a console replacement. I used to use Console2 a few years back and was very happy about it.</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

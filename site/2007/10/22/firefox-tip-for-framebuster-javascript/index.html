@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Firefox Tip For Framebuster JavaScript</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Firefox Tip For Framebuster JavaScript Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2007/10/19/google-power-tool-for-webmasters/" rel="prev" title="Google Power Tool for Webmasters"/>
+<link href="/2007/10/23/setting-up-subversion-externals-with-tortoisesvn/" rel="next" title="Setting Up Subversion Externals With TortoiseSVN"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2007/10/22/firefox-tip-for-framebuster-javascript/" rel="canonical"/>
+<link href="https://justaddwater.dk/2007/10/22/firefox-tip-for-framebuster-javascript/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2007/10/19/google-power-tool-for-webmasters/" rel="prev">Google Power Tool for Webmasters</a></div>
+<div class="alignright"><a href="/2007/10/23/setting-up-subversion-externals-with-tortoisesvn/" rel="next">Setting Up Subversion Externals With TortoiseSVN</a> »</div>
+</div>
+<div class="post" id="post-748">
+<h2><a href="/2007/10/22/firefox-tip-for-framebuster-javascript/" rel="bookmark" title="Permanent Link: Firefox Tip For Framebuster JavaScript">Firefox Tip For Framebuster JavaScript</a></h2>
+<div class="entry">
+<p>I have for long been struggling with an internal legacy application that wraps the content page in a frameset. Very annoying because I have spent some time to reverse engineer a poor-mans API to the application.</p>
+<p>Problem: An inline “reverse” framebuster script that makes sure that everything is nicely(?) wrapped in the frameset.  As you see it’s included inline in the HTML.</p>
+<p>[code lang=”javascript”]<br/>
+<br/>
+[/code]</p>
+<p>One thing is I never understood the thing about putting everything in a frameset. In this case, I have not been able to change the code. But as I have to use the application every now and then, the big question is:</p>
+<p><strong>How to change or remove the inline JavaScript, and make sure the framebuster is ignored?</strong></p>
+<p>I did not think this was possible until I got this answer from “esquifit” in the <a href="http://groups.google.com/group/greasemonkey-users">Greasemonkey user goup</a>:</p>
+<blockquote cite="http://groups.google.com/group/greasemonkey-users/browse_thread/thread/42a64be1aa31e1d8/76df7564697e076a#76df7564697e076a"><p>You do not need GM nor Opera for this task.  Firefox comes with a<br/>
+built-in capability for allowing/disallowing access to<br/>
+properties/methods of DOM Objects on a per-site basis. It is called<br/>
+Configurable Security Policies (CAPS) and it is described in [1].<br/>
+Further examples and explanations are provided for example in [2] and<br/>
+[3].<br/>
+A short guide assuming the simplest case:<br/>
+1) Close Firefox<br/>
+2) Locate your profile folder [4]<br/>
+3) Locate the file user.js within this folder. If it does not exist,<br/>
+create it with a *text* editor (Notepad, vim, etc.), not with a ‘word<br/>
+processor’ (MS Word, OpenOffice.org, Wordpad, etc.)<br/>
+4) Add the following lines to user.js:<br/>
+user_pref(“capability.policy.policynames”, “noframebuster”);<br/>
+user_pref(“capability.policy.noframebuster.sites”,<br/>
+“<a href="http://www.annoying-site.com/" rel="nofollow" target="_blank">http://www.annoying-site.com</a>“);<br/>
+user_pref(“capability.policy.noframebuster.Location.replace”, “noAccess”);<br/>
+Of course, you will have to replace the domain with the one you want to prevent from redirecting your frames.</p></blockquote>
+<p>Find the entire discussion here:</p>
+<ul>
+<li>Greasemonkey users group: “<a href="http://groups.google.com/group/greasemonkey-users/browse_thread/thread/42a64be1aa31e1d8/76df7564697e076a#76df7564697e076a">How to ignore framebuster script</a>“</li>
+</ul>
+<p><small>Technorati Tags: <a href="http://technorati.com/tag/javascript" rel="tag">javascript</a>, <a href="http://technorati.com/tag/frameset" rel="tag"> frameset</a>, <a href="http://technorati.com/tag/frames" rel="tag"> frames</a>, <a href="http://technorati.com/tag/frame+buster" rel="tag"> frame buster</a>, <a href="http://technorati.com/tag/inline" rel="tag"> inline</a>, <a href="http://technorati.com/tag/firefox" rel="tag"> firefox</a>, <a href="http://technorati.com/tag/location.replace" rel="tag"> location.replace</a></small></p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, October 22nd, 2007 at 13:30 (GMT-1)						and is filed under <a href="/category/browser/" rel="category tag">Browser</a>, <a href="/category/webstandards/javascript/" rel="category tag">JavaScript</a>, <a href="/category/web-development/" rel="category tag">Web Development</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">3 Responses to “Firefox Tip For Framebuster JavaScript”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-309001">
+<cite><a class="url" href="http://fasterda.cn/index.php/2007/10/22/firefox-tip-for-framebuster-javascript/" rel="external">fasterda » Blog Archive » Firefox Tip For Framebuster JavaScript</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-309001" title="">October 22nd, 2007 at 15:28 (GMT-1)</a> </small>
+<p>[…] check the full story here […]</p>
+</li>
+
+
+<li id="comment-309363">
+<cite><a class="url" href="http://qzpoint.cn/index.php/2007/10/22/firefox-tip-for-framebuster-javascript/" rel="external">Firefox Tip For Framebuster JavaScript | qzpoint</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-309363" title="">October 22nd, 2007 at 19:24 (GMT-1)</a> </small>
+<p>[…] here for full […]</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

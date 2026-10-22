@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Mobile Web Best Practices</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Mobile Web Best Practices Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2006/06/26/rails-meetup-thoughts/" rel="prev" title="Thoughts regarding Ruby on Rails Meetup this week"/>
+<link href="/2006/06/28/blog-usability-avoid-spam-comments-part-2/" rel="next" title="Blog Usability: Avoid Spam Comments (Part 2)"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/06/28/mobile-web-best-practices/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/06/28/mobile-web-best-practices/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2006/06/26/rails-meetup-thoughts/" rel="prev">Thoughts regarding Ruby on Rails Meetup this week</a></div>
+<div class="alignright"><a href="/2006/06/28/blog-usability-avoid-spam-comments-part-2/" rel="next">Blog Usability: Avoid Spam Comments (Part 2)</a> »</div>
+</div>
+<div class="post" id="post-342">
+<h2><a href="/2006/06/28/mobile-web-best-practices/" rel="bookmark" title="Permanent Link: Mobile Web Best Practices">Mobile Web Best Practices</a></h2>
+<div class="entry">
+<p><a href="http://www.w3.org/" title="W3C"><img align="left" alt="W3C Icon" id="image343" src="/wp-content/uploads/2006/06/w3c_home.png" style="margin: 5px 8px 0pt 0pt" title="W3C Icon"/></a>Yesterday the W3C released a Candidate Recommendation document called “<a href="http://www.w3.org/TR/2006/CR-mobile-bp-20060627/" title="W3C: Mobile Web Best Practices 1.0">Mobile Web Best Practices 1.0</a>“. With this document W3C is offering a set of guidelines to help web developers deliver a better user experience to mobile users.</p>
+<p>The deadline for providing feedback to W3C is the 27th of August 2006 and all developers are encouraged to try it out.</p>
+<p>At the core of the recommendation are 60 statements that every web developer should follow:</p>
+<blockquote>
+<ol>
+<li><strong>Thematic Consistency</strong><br/>
+Ensure that content provided by accessing a URI yields a thematically coherent experience when accessed from different devices.</li>
+<li><strong>Capabilities</strong><br/>
+Exploit device capabilities to provide an enhanced user experience.</li>
+<li><strong>Deficiencies</strong><br/>
+Take reasonable steps to work around deficient implementations.</li>
+<li><strong>Testing</strong><br/>
+Carry out testing on actual devices as well as emulators.</li>
+<li><strong>URIs</strong><br/>
+Keep the URIs of site entry points short.</li>
+<li><strong>Navbar</strong><br/>
+Provide only minimal navigation at the top of the page.</li>
+<li><strong>Balance</strong><br/>
+Take into account the trade-off between having too many links on a page and asking the user to follow too many links to reach what they are looking for.</li>
+<li><strong>Navigation</strong><br/>
+Provide consistent navigation mechanisms.</li>
+<li><strong>Access Keys</strong><br/>
+Assign access keys to links in navigational menus and frequently accessed functionality.</li>
+<li><strong>Link Target Id</strong><br/>
+Clearly identify the target of each link.</li>
+<li><strong>Link Target Format</strong><br/>
+Note the target file’s format unless you know the device supports it.</li>
+<li><strong>Image Maps</strong><br/>
+Do not use image maps unless you know the device supports them effectively.</li>
+<li><strong>Pop Ups</strong><br/>
+Do not cause pop-ups or other windows to appear and do not change the current window without informing the user.</li>
+<li><strong>Auto Refresh</strong><br/>
+Do not create periodically auto-refreshing pages, unless you have informed the user and provided a means of stopping it.</li>
+<li><strong>Redirection</strong><br/>
+Do not use markup to redirect pages automatically. Instead, configure the server to perform redirects by means of HTTP 3xx codes.</li>
+<li><strong>External Resources</strong><br/>
+Keep the number of externally linked resources to a minimum.</li>
+<li><strong>Suitable</strong><br/>
+Ensure that content is suitable for use in a mobile context.</li>
+<li><strong>Clarity</strong><br/>
+Use clear and simple language.</li>
+<li><strong>Limited</strong><br/>
+Limit content to what the user has requested.</li>
+<li><strong>Page Size Usable</strong><br/>
+Divide pages into usable but limited size portions.</li>
+<li><strong>Page Size Limit</strong><br/>
+Ensure that the overall size of page is appropriate to the memory limitations of the device.</li>
+<li><strong>Scrolling</strong><br/>
+Limit scrolling to one direction, unless secondary scrolling cannot be avoided.</li>
+<li><strong>Central Meaning</strong><br/>
+Ensure that material that is central to the meaning of the page precedes material that is not.</li>
+<li><strong>Graphics For Spacing</strong><br/>
+Do not use graphics for spacing.</li>
+<li><strong>Large Graphics</strong><br/>
+Do not use images that cannot be rendered by the device. Avoid large or high resolution images except where critical information would otherwise be lost.</li>
+<li><strong>Use of Color</strong><br/>
+Ensure that information conveyed with color is also available without color.</li>
+<li><strong>Color Contrast</strong><br/>
+Ensure that foreground and background color combinations provide sufficient contrast.</li>
+<li><strong>Background Image Readability</strong><br/>
+When using background images make sure that content remains readable on the device.</li>
+<li><strong>Page Title</strong><br/>
+Provide a short but descriptive page title.</li>
+<li><strong>No Frames</strong><br/>
+Do not use frames.</li>
+<li><strong>Structure</strong><br/>
+Use features of the markup language to indicate logical document structure.</li>
+<li><strong>Tables Support</strong><br/>
+Do not use tables unless the device is known to support them.</li>
+<li><strong>Tables Nested</strong><br/>
+Do not use nested tables.</li>
+<li><strong>Tables Layout</strong><br/>
+Do not use tables for layout.</li>
+<li><strong>Tables Alternatives</strong><br/>
+Where possible, use an alternative to tabular presentation.</li>
+<li><strong>Non-Text Alternatives</strong><br/>
+Provide a text equivalent for every non-text element.</li>
+<li><strong>Objects or Script</strong><br/>
+Do not rely on embedded objects or script.</li>
+<li><strong>Images Specify Size</strong><br/>
+Specify the size of images in markup, if they have an intrinsic size.</li>
+<li><strong>Images Resizing</strong><br/>
+Resize images at the server, if they have an intrinsic size.</li>
+<li><strong>Valid Markup</strong><br/>
+Create documents that validate to published formal grammars.</li>
+<li><strong>Measures</strong><br/>
+Do not use pixel measures and do not use absolute units in markup language attribute values and style sheet property values.</li>
+<li><strong>Style Sheets Use</strong><br/>
+Use style sheets to control layout and presentation, unless the device is known not to support them.</li>
+<li><strong>Style Sheets Support</strong><br/>
+Organize documents so that if necessary they may be read without style sheets.</li>
+<li><strong>Style Sheets Size</strong><br/>
+Keep style sheets small.</li>
+<li><strong>Minimize</strong><br/>
+Use terse, efficient markup.</li>
+<li><strong>Content Format Support</strong><br/>
+Send content in a format that is known to be supported by the device.</li>
+<li><strong>Content Format Preferred</strong><br/>
+Where possible, send content in a preferred format.</li>
+<li><strong>Character Encoding Support</strong><br/>
+Ensure that content is encoded using a character encoding that is known to be supported by the device.</li>
+<li><strong>Character Encoding Use</strong><br/>
+Indicate in the response the character encoding being used.</li>
+<li><strong>Error Messages</strong><br/>
+Provide informative error messages and a means of navigating away from an error message back to useful information.</li>
+<li><strong>Cookies</strong><br/>
+Do not rely on cookies being available.</li>
+<li><strong>Caching</strong><br/>
+Provide caching information in HTTP responses.</li>
+<li><strong>Fonts</strong><br/>
+Do not rely on support of font related styling.</li>
+<li><strong>Minimize Keystrokes</strong><br/>
+Keep the number of keystrokes to a minimum.</li>
+<li><strong>Avoid Free Text</strong><br/>
+Avoid free text entry where possible.</li>
+<li><strong>Provide Defaults</strong><br/>
+Provide pre-selected default values where possible.</li>
+<li><strong>Default Input Mode</strong><br/>
+Specify a default text entry mode, language and/or input format, if the device is known to support it.</li>
+<li><strong>Tab Order</strong><br/>
+Create a logical order through links, form controls and objects.</li>
+<li><strong>Control Labelling</strong><br/>
+Label all form controls appropriately and explicitly associate labels with form controls.</li>
+<li><strong>Control Position</strong><br/>
+Position labels so they lay out properly in relation to the form controls they refer to.</li>
+</ol>
+</blockquote>
+<p><small>Technorati Tags: <a href="http://technorati.com/tag/w3c" rel="tag">w3c</a>, <a href="http://technorati.com/tag/accessibility" rel="tag"> accessibility</a>, <a href="http://technorati.com/tag/user+experience" rel="tag"> user experience</a>, <a href="http://technorati.com/tag/usability" rel="tag"> usability</a>, <a href="http://technorati.com/tag/web+standards" rel="tag"> web standards</a>, <a href="http://technorati.com/tag/mobile" rel="tag"> mobile</a>, <a href="http://technorati.com/tag/guidelines" rel="tag"> guidelines</a>, <a href="http://technorati.com/tag/web+development" rel="tag"> web development</a>, <a href="http://technorati.com/tag/programming" rel="tag"> programming</a></small></p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Thomas Watson Steen						 
+						on Wednesday, June 28th, 2006 at 10:13 (GMT-1)						and is filed under <a href="/category/accessibility/" rel="category tag">Accessibility</a>, <a href="/category/mobile/" rel="category tag">Mobile</a>, <a href="/category/usability/" rel="category tag">Usability</a>, <a href="/category/user-experience/" rel="category tag">User experience</a>, <a href="/category/webstandards/" rel="category tag">Web Standards</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">One Response to “Mobile Web Best Practices”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-7156">
+<cite><a class="url" href="/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-7156" title="">June 28th, 2006 at 11:28 (GMT-1)</a> </small>
+<p>Interesting, and when I relate these to “normal” web pages, it’s surprisingly similar.</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Thomas Watson Steen" src="/wp-content/jaw/userphoto/1.jpg" title="Photograph of author Thomas Watson Steen"/></p><p>Working the web since 1995, Thomas Watson Steen is a web standards and usability expert. He is a partner in the company '3dbyggeri danmark', a new IT start-up in Denmark specializing in consulting and IT services to the construction sector.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

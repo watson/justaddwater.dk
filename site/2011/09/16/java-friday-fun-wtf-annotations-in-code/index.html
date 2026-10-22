@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Java Friday Fun: @WTF annotations in code</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Java Friday Fun: @WTF annotations in code Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2011/08/11/make-intellij-highlight-usages/" rel="prev" title="Make IntelliJ highlight usages"/>
+<link href="/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/" rel="next" title="Chrome “find in page” with smart search in unicode characters"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2011/09/16/java-friday-fun-wtf-annotations-in-code/" rel="canonical"/>
+<link href="https://justaddwater.dk/2011/09/16/java-friday-fun-wtf-annotations-in-code/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2011/08/11/make-intellij-highlight-usages/" rel="prev">Make IntelliJ highlight usages</a></div>
+<div class="alignright"><a href="/2011/09/29/chrome-find-in-page-with-smart-search-in-unicode-characters/" rel="next">Chrome “find in page” with smart search in unicode characters</a> »</div>
+</div>
+<div class="post" id="post-1492">
+<h2><a href="/2011/09/16/java-friday-fun-wtf-annotations-in-code/" rel="bookmark" title="Permanent Link: Java Friday Fun: @WTF annotations in code">Java Friday Fun: @WTF annotations in code</a></h2>
+<div class="entry">
+<p>Time for a little geeky gimmick. Some developers see and express a lot of “WTF??” while trying to understand code</p>
+<p><a href="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg"><img alt="" class="aligncenter size-medium wp-image-1493" height="282" sizes="(max-width: 300px) 100vw, 300px" src="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg" srcset="/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg 300w, /wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg 500w" title="focus-shift-cartoon-wtf-per-minute-wtfm" width="300"/></a></p>
+<p>IN this spirit, i created a quick @WTF annotation for Java.</p>
+<p>Besides being completely useless (its removed at compile time), its only purpose is to give developers a new way to express themselves in code.</p>
+<p></p>
+<p>The cartoon states “The only valid measurement of code quality: WTFs/minute”. With the &lt;code&gt;@WTF&lt;/code&gt; annotations, I would like to take it a little further. By annotating the code, you can actually encourage colleagues to help you fix it.</p>
+<p>The best fix for WTF-code is of course to refactor, so that it becomes readable.</p>
+<p>Interesting article:</p>
+<p><a href="http://www.gridshore.nl/2008/03/29/how-wtfs-improve-code-quality-awareness/">http://www.gridshore.nl/2008/03/29/how-wtfs-improve-code-quality-awareness/</a></p>
+<p>The original cartoon strip:  <a href="http://www.osnews.com/story/19266/WTFs_m">http://www.osnews.com/story/19266/WTFs_m</a></p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Friday, September 16th, 2011 at 21:52 (GMT-1)						and is filed under <a href="/category/code/" rel="category tag">Code</a>, <a href="/category/java/" rel="category tag">Java</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">4 Responses to “Java Friday Fun: @WTF annotations in code”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-542339">
+<cite><a class="url" href="http://climbingtip.blogspot.com/" rel="external">Aaron</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-542339" title="">September 21st, 2011 at 00:11 (GMT-1)</a> </small>
+<p>Fun idea. And a good article you linked to. Thanks!</p>
+</li>
+
+
+<li id="comment-542576">
+<cite>Labelle</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-542576" title="">September 21st, 2011 at 17:17 (GMT-1)</a> </small>
+<p>WTFs/minute – nice. Last week I was running at least 10WTF’s/minute, methinks.</p>
+</li>
+
+
+<li class="alt" id="comment-543922">
+<cite><a class="url" href="http://www.matthempsell.com.au" rel="external">Matt Hempsell</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-543922" title="">September 25th, 2011 at 16:10 (GMT-1)</a> </small>
+<p>Great Very funny, i will have to pass this on to some of my geeky friends.</p>
+</li>
+
+
+<li id="comment-544065">
+<cite><a class="url" href="http://www.dericcainphotography.com" rel="external">Deric Cain</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-544065" title="">September 26th, 2011 at 02:02 (GMT-1)</a> </small>
+<p>I am going to shoot a link to all of my coding buddies about this one. Nice job and humorous.</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

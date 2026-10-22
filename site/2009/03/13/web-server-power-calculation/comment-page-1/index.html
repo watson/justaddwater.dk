@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | Web Server Power Calculation</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » Web Server Power Calculation Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2009/03/10/textmate-path-modification-ruby-version-issues/" rel="prev" title="Textmate Path Modification — Ruby Version Issues"/>
+<link href="/2009/03/19/jef-raskins-first-law-of-interface-design-explained/" rel="next" title="Jef Raskin’s First Law of Interface Design Explained"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2009/03/13/web-server-power-calculation/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2009/03/13/web-server-power-calculation/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2009/03/10/textmate-path-modification-ruby-version-issues/" rel="prev">Textmate Path Modification — Ruby Version Issues</a></div>
+<div class="alignright"><a href="/2009/03/19/jef-raskins-first-law-of-interface-design-explained/" rel="next">Jef Raskin’s First Law of Interface Design Explained</a> »</div>
+</div>
+<div class="post" id="post-1053">
+<h2><a href="/2009/03/13/web-server-power-calculation/" rel="bookmark" title="Permanent Link: Web Server Power Calculation">Web Server Power Calculation</a></h2>
+<div class="entry">
+<p>In our company’s basement a small server room where we put a few sandbox machines we use for quickly starting up projects, simple project and version control management. Over the time, quite a few of our clients have benefited from this setup as it can create instant project infrastructure.</p>
+<p>But what is the cost of having these machines here?</p>
+<p>Servers: Old HP desktop workstations from 2003. By the time they were state-of-the art workstations used by developers working on virtual machines. Now that everybody uses laptops, we set some of these machines up in our server room and have had immense benefit from them in the last 18 months or so.</p>
+<p>2.6GHz XEON processor, 1GB ram, 2 scsi disks, mirrored raid. Two machines: One “production” server, one passive failover running rsync backup every 2 minutes. (and one shut down spare if the other machines fail).</p>
+<h2>Power meter measurement</h2>
+<p>The other day I brought our power meter measurement tool from home. Here are the measurements for one machine:</p>
+<ul>
+<li>Starting up: 137 Watts</li>
+<li>Running 0.01-5% load: 100 Watts</li>
+<li>Powered off: 26 Watts</li>
+<li>(Danish voltage is 230 Volts)</li>
+</ul>
+<p>With a cost of power in Denmark at 1.60 Danish Crowns (ex. vat) and an assumption of two machines running 24-7 this will give a cost of  1.400 Danish Crowns (DKK) per machine per year.</p>
+<p>Let’s assume that cooling will use 200W to remove the heat from 100W. <strong>Total cost including cooling is thus 4.200DKK per machine per year.</strong> There is also of course the cost of the shared components in the server room: Firewalls, switches, surveillance machine and perhaps routers for the internet connection. In this calculation I’m not including these — that depends entirely on the number of machines that actually shares the infrastructure.</p>
+<p>Two things that really surprised me: the power consumption of these old machines are actually pretty low. Also, that a powered down machine actually consumes 26W in standby power. One lesson I will remember is to pull the power cord on machines powered down. An easy way to be more environmentally correct.</p>
+<p>Some questions I still have:</p>
+<p>Are the assumtions of cooling effect actually valid? What kind of investment should be made to bring power consumtion further down (we still need multiple machines for a redundant fail-over setup)?</p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Friday, March 13th, 2009 at 10:45 (GMT-1)						and is filed under <a href="/category/web-development/" rel="category tag">Web Development</a>, <a href="/category/website/" rel="category tag">Website</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</div>
+</div>
+
+
+
+<h3 id="comments">13 Responses to “Web Server Power Calculation”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-477578">
+<cite><a class="url" href="http://jannikanker.dk/" rel="external">Jannik Anker</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-477578" title="">March 13th, 2009 at 14:01 (GMT-1)</a> </small>
+<p>Hi Jesper,</p>
+<p>Nice article! I am, however, quite a knitpicker and cannot resist to point out that it’s not called Danish Crowns, but Danish Kroner. Danish Crown is, well, something completely different ;-)</p>
+<p>/Jannik</p>
+</li>
+
+
+<li id="comment-477607">
+<cite>John Campbell</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-477607" title="">March 13th, 2009 at 18:58 (GMT-1)</a> </small>
+<p>Your cooling estimate doesn’t make sense.  Why would it take 200W to transfer 100W of heat outdoors?  Most air conditioners require 40W to cool 100W when it is 90F outside.  Depending on the location, typical cooling costs are around 20% of total electricity use.</p>
+</li>
+
+
+<li class="alt" id="comment-478099">
+<cite><a class="url" href="http://www.yinga-vital.de/" rel="external">Magnetschmuck</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-478099" title="">March 15th, 2009 at 14:13 (GMT-1)</a> </small>
+<p>I am using a power saver gadget for my server, but the power load is not that high. I think your server would require a power saver with higher wattage support. Mine has support for only 200 watts. maybe you can find something on web searches.</p>
+</li>
+
+
+<li id="comment-478298">
+<cite>Simon B.</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-478298" title="">March 16th, 2009 at 11:27 (GMT-1)</a> </small>
+<p>Interesting article! A heads up: the first sentence of this post is strange.</p>
+<p>A bipolar power switch would remove the 26W used by the shut off computer. <a href="http://www.clasohlson.se/Product/Product.aspx?id=55373405" rel="external">http://www.clasohlson.se/Product/Product.aspx?id=55373405</a><br/>
+<a href="http://www.clasohlson.se/Product/Product.aspx?id=40430888" rel="external">http://www.clasohlson.se/Product/Product.aspx?id=40430888</a></p>
+<p>About cooling, your marginal cost should depend on the increase of friction in the fan motor + air friction from air inlet and outlet piping. Some years ago, having server cooling (“HVAC”) use as much energy as the servers themselves was “common practice”: <a href="http://www.energystar.gov/ia/products/downloads/koomeysummaryondatacenterpower.pdf" rel="external">http://www.energystar.gov/ia/products/downloads/koomeysummaryondatacenterpower.pdf</a></p>
+</li>
+
+
+<li class="alt" id="comment-478469">
+<cite>Flemming</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-478469" title="">March 17th, 2009 at 15:22 (GMT-1)</a> </small>
+<p>Hi Jesper,</p>
+<p>Power consumption was also one of my main concerns, when I decided to invest in a new server.<br/>
+I decided to buy a mini-pc from AOpen (i965GMx-IF), with 4 GB of ram, an Intel T8300 @2.4 Ghz dual core processor and as storage a 128 GB SSD disk from OCZ. The overall power consumption is around 35W during normal use. The use of SSD disk makes is completely silent as well.<br/>
+It generates no heat – so no cooling is required. It takes almost no place, so you do not need to put it in the cellar..<br/>
+Backup can be done using the fast gigabit network or an attached USB disk. </p>
+<p>I use it as mail server (Exchange 2007) , Database server (SQL 2008) + Reporting/Analysis/Integration services and Web server – all installed on Windows server 2008. Performance is brilliant – Starting up Visual Studio is a matter of 2-4 seconds.. SQL Server Management Studio the same..</p>
+<p>I could have saved DKK 1500 by only buying a 64 GB drive – since I am not using it for Virtualizing I have plenty of space on the disk.<br/>
+The total was around DKK 7000..</p>
+</li>
+
+
+<li id="comment-478518">
+<cite>Nikolaj</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-478518" title="">March 17th, 2009 at 20:53 (GMT-1)</a> </small>
+<p>Hi Jesper,</p>
+<p>You can go build it yourself, so you have he most comtrol over which part uses what amount of energy.<br/>
+There are the 45W processors from AMD now, that will give you very good performance pr. watt.<br/>
+Stay away from Atom for a while, since the Intel chipset is about 22W alone! (AnandTech compared Core2 Duo to Atom, and they are on par, since the chipset for Atom just consumes so much energy).<br/>
+Make sure your Power supplies are effective (80PLUS).</p>
+<p>SCSI disks use a lot of power, as mentioned by Flemming, SSD’s uses almost no power compared to traditional harddrives, makes no noise, and generates very little heat.<br/>
+Just remember write speed = expensive (remember Intel is king here – read AnandTech and others).</p>
+<p>Boot from Flash memory if possible.</p>
+<p>You don’t say if disk capacity is a concern?</p>
+<p>Look at <a href="http://www.mini-itx.com" rel="external">http://www.mini-itx.com</a>, here you can find small and efficient equipment (and low power too).</p>
+<p>Cheers.</p>
+</li>
+
+
+<li class="alt" id="comment-484353">
+<cite><a class="url" href="http://www.haushalt-wohnen.de" rel="external">Hannelore</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-484353" title="">April 19th, 2009 at 21:35 (GMT-1)</a> </small>
+<p>I’ve never thought about the energy my power meter measurement tool could consume. I must have a look.</p>
+</li>
+
+
+<li id="comment-484804">
+<cite><a class="url" href="http://www.a1qa.com" rel="external">Roger</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-484804" title="">April 24th, 2009 at 15:56 (GMT-1)</a> </small>
+<p>Me too. I am much more concerned on the safety of the server and the preservation of all the data on it.</p>
+</li>
+
+
+<li class="alt" id="comment-486598">
+<cite>Cubic zirconia</cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-486598" title="">May 20th, 2009 at 11:16 (GMT-1)</a> </small>
+<p>I think installing a good cooling systems makes sense as you still need multiple machines for a redundant fail-over setup. Especially all the machines are in basement, which will be a problem in hot weather. Sometimes those money have to pay for safty and stability. But it is totally worthy though. Correct me if I am wrong.</p>
+</li>
+
+
+<li id="comment-487299">
+<cite><a class="url" href="http://www.redtantramassage.com" rel="external">James</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-487299" title="">July 1st, 2009 at 20:45 (GMT-1)</a> </small>
+<p>Good calculation. I think more people are looking at that when comparing usage of cloud computing.</p>
+</li>
+
+
+<li class="alt" id="comment-487871">
+<cite><a class="url" href="http://www.elmasnakliyat.com/" rel="external">şehirler arası evden eve</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-487871" title="">July 25th, 2009 at 18:36 (GMT-1)</a> </small>
+<p>SCSI disks use a lot of power, as mentioned by Flemming, SSD’s uses almost no power compared to traditional harddrives, makes no noise, and generates very little heat.</p>
+</li>
+
+
+<li id="comment-487885">
+<cite><a class="url" href="http://www.mp3indirsek.tk" rel="external">Can</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-487885" title="">July 25th, 2009 at 21:46 (GMT-1)</a> </small>
+<p>Nice post.Thanks admin.</p>
+</li>
+
+
+<li class="alt" id="comment-487888">
+<cite><a class="url" href="http://www.naganigi.com" rel="external">Sikiş</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-487888" title="">July 25th, 2009 at 22:15 (GMT-1)</a> </small>
+<p>I’ve never thought about the energy my power meter measurement tool could consume. I must have a look.</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

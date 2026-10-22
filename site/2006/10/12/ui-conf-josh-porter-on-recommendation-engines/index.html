@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>justaddwater.dk | UI Conf: Josh Porter on recommendation engines</title>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<style media="screen" type="text/css">
+
+	#page { background: url("http://justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+<link href="//s.w.org" rel="dns-prefetch"/>
+<link href="/feed/index.xml" rel="alternate" title="justaddwater.dk » UI Conf: Josh Porter on recommendation engines Comments Feed" type="application/rss+xml"/>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link href="/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+<link href="/2006/10/12/ui-conf-jared-spool/" rel="prev" title="UI Conf: Jared Spool"/>
+<link href="/2006/10/14/happy-birthday/" rel="next" title="Happy Birthday Justaddwater :)"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+<link href="/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+<div id="header">
+<div id="headerimg">
+<h1><a href="/">justaddwater.dk</a></h1>
+<div class="description">Instant Usability &amp; Web Standards</div>
+<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+</div>
+</div>
+<div class="widecolumn" id="content">
+<div class="navigation">
+<div class="alignleft">« <a href="/2006/10/12/ui-conf-jared-spool/" rel="prev">UI Conf: Jared Spool</a></div>
+<div class="alignright"><a href="/2006/10/14/happy-birthday/" rel="next">Happy Birthday Justaddwater :)</a> »</div>
+</div>
+<div class="post" id="post-410">
+<h2><a href="/2006/10/12/ui-conf-josh-porter-on-recommendation-engines/" rel="bookmark" title="Permanent Link: UI Conf: Josh Porter on recommendation engines">UI Conf: Josh Porter on recommendation engines</a></h2>
+<div class="entry">
+<p>[Jesper’s note: It will be interesting to see how this maps to Jakob Nielsen’s old ideas about <a href="http://www.useit.com/alertbox/990905.html">reputation managers</a>.]</p>
+<p><a href="http://www.flickr.com/photos/jesper/268008424/" title="Photo Sharing"><img alt="Josh Porter presenting" data-original-url="http://static.flickr.com/82/268008424_dd9859a898_t.jpg" height="100" src="/archive-assets/external/595ec11e802eca2009c7ede4.jpg" width="67"/></a><br/>
+Netflix example:</p>
+<p>Wall-Mart went head to head with Netflix and lost. They are now linking to Netflix</p>
+<p>* 4 million subscribers 10 months ago<br/>
+* 60,000 titles, 40,000 of which are rented every day<br/>
+* 2/3 of movies rented come from recommendations</p>
+<blockquote><p>The movies we recommend generate more satisfaction than (new releases)</p></blockquote>
+<p>– Neil Hunt, Netflix chief product officer</p>
+<h3>Collaborative filtering</h3>
+<p>Example with 5 users<br/>
+1. Look for people with similar habits<br/>
+2. Choose the best fiter. In this case, user 3<br/>
+3. Find differences in best filter<br/>
+4. Those difference become best filter</p>
+<p>Netflix recommendation engine contest<br/>
+* Giving a huuuge user database<br/>
+* Improve recommendation by 10%<br/>
+* in one week a team came up with a suggestion that was better</p>
+<h3>Implicit or Explicit behavior</h3>
+<p>Implicit data: Not a rating.<br/>
+Example: LastFM where user don’t rate, but just watching what what music you play. </p>
+<p>Implicit is everything behavioral data. </p>
+<blockquote><p>Explicit behaviour is when you demonstrate preference</p></blockquote>
+<p>Pandora’s Music recommendations<br/>
+Hired musical experts and recorded small facets of the music.<br/>
+Not a personalized recommendation system. Music based system recommendation from musical elements</p>
+<p><a href="http://www.flickr.com/photos/jesper/268008560/" title="Photo Sharing"><img alt="Audience at Josh Porter's presentation" data-original-url="http://static.flickr.com/112/268008560_f2f41fde7a_m.jpg" height="160" src="/archive-assets/external/dcec6970d83ec58b6c6fad97.jpg" width="240"/></a></p>
+<p>Tivo (movie recommendation) <a href="http://snarkiness.typepad.com/snarkattack/2002/11/my_tivo_thinks_.html">thinks I’m Gay</a><br/>
+* Basil Iwanyk<br/>
+* he started watching “guy stuff” like war movies<br/>
+* tivo started recommending documentaries on The Third Reich<br/>
+* Queer eye for the straight guy<br/>
+* Later this became an episode of King of Queens</p>
+<p>So, recommendation engines are not perfect.</p>
+<p>Customers who bought (clothes) also wear:<br/>
+* clean underwear<br/>
+==What?!?</p>
+<p>Changed to<br/>
+Customers who wear clothes also shop for:<br/>
+* clean underwear</p>
+<p>Wall-Mart put in a recommendation system last year<br/>
+* planet of the apes<br/>
+* recommended a martin luther king video</p>
+<p>Still have not put recommendations back on site.</p>
+<p><em>[My live notes from UI Conf. <a href="/category/eventsseminars/ui11/">All UI Conf notes</a>. Expect updates of thes rough notes, with references, images, etc. within the first few days – this footnote will stay, though. Feel free to add comments, links to similar notes, presentations, correct quotes and add where appropriate. thanks! Also I post my <a href="http://flickr.com/photos/jesper/sets/72157594320346883/">pictures on Flickr </a>tagged <a href="http://flickr.com/photos/tags/uiconf/">uiconf</a>]</em><br/><p><small>Technorati Tags: <a href="http://technorati.com/tag/joshua+porter" rel="tag">joshua porter</a>, <a href="http://technorati.com/tag/uiconf" rel="tag"> uiconf</a>, <a href="http://technorati.com/tag/ui11" rel="tag"> ui11</a>, <a href="http://technorati.com/tag/recommendation" rel="tag"> recommendation</a>, <a href="http://technorati.com/tag/reputation" rel="tag"> reputation</a>, <a href="http://technorati.com/tag/jakob+nielsen" rel="tag"> jakob nielsen</a>, <a href="http://technorati.com/tag/uie" rel="tag"> uie</a>, <a href="http://technorati.com/tag/bokardo" rel="tag"> bokardo</a>, <a href="http://technorati.com/tag/filtering" rel="tag"> filtering</a>, <a href="http://technorati.com/tag/social" rel="tag"> social</a>, <a href="http://technorati.com/tag/netflix" rel="tag"> netflix</a>, <a href="http://technorati.com/tag/niel+hunt" rel="tag"> niel hunt</a></small></p>
+<p class="postmetadata alt">
+<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Thursday, October 12th, 2006 at 22:16 (GMT-1)						and is filed under <a href="/category/eventsseminars/" rel="category tag">Events/seminars</a>, <a href="/category/justaddwaterdk/" rel="category tag">justaddwater.dk</a>, <a href="/category/eventsseminars/ui11/" rel="category tag">ui11</a>.
+						You can follow any responses to this entry through the <a href="/feed/index.xml">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+</p>
+</p></div>
+</div>
+
+
+
+<h3 id="comments">2 Responses to “UI Conf: Josh Porter on recommendation engines”</h3>
+<ol class="commentlist">
+<li class="alt" id="comment-18358">
+<cite><a class="url" href="http://webword.com" rel="external">John S. Rhodes</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-18358" title="">October 13th, 2006 at 14:27 (GMT-1)</a> </small>
+<p>Netflix Mailers OVer the Years<br/>
+<a href="http://money.cnn.com/popups/2006/biz2/netflix/frameset.exclude.html" rel="external">http://money.cnn.com/popups/2006/biz2/netflix/frameset.exclude.html</a></p>
+<p>Netflix nails it<br/>
+<a href="http://37signals.com/svn/archives2/netflix_nails_it.php" rel="external">http://37signals.com/svn/archives2/netflix_nails_it.php</a></p>
+</li>
+
+
+<li id="comment-19232">
+<cite><a class="url" href="/2006/10/18/ui-conf-my-higlights-from-ui11/">justaddwater.dk | UI Conf: My Higlights from UI11</a></cite> Says:
+						<br/>
+<small class="commentmetadata"><a href="#comment-19232" title="">October 18th, 2006 at 17:13 (GMT-1)</a> </small>
+<p>[…] UI Conf: Josh Porter on recommendation engines […]</p>
+</li>
+
+
+</ol>
+</div>
+<div id="sidebar">
+<ul>
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+</ul>
+</div>
+<hr/>
+<div id="footer">
+<p>
+<a href="/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>
+		justaddwater.dk is proudly powered by 
+		<a href="http://wordpress.org" rel="nofollow">WordPress</a>
+</p>
+</div>
+</div>
+
+
+</body>
+</html>

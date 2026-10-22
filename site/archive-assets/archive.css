@@ -1,0 +1,7 @@
+/* Small additions for the static archive; the original theme remains intact. */
+.archive-note { font-size: 1em; }
+#search-results { padding-left: 1.5em; }
+#search-results li { margin: 1.5em 0; }
+#search-results p { margin: .4em 0; }
+#archive-query { max-width: 90%; }
+img[data-original-url] { max-width: 100%; object-fit: contain; }
