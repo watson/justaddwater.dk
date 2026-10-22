@@ -13,8 +13,7 @@
     .box { width: 300px; height: 30px; margin-left: 15px; }
     #undo { color: #ccc; font-size: 15pt; margin-left: 30px; background: #d41; padding: 5px; position: relative; top: 10px; }
     #done { margin-left: 42px; }
-    .archive-form-notice, .credit { font: 12px/1.5 sans-serif; margin: 12px 0 0 42px; }
-    .archive-form-notice { padding: 8px; background: #fff4d6; color: #503a13; border-left: 4px solid #b27613; }
+    .credit { font: 12px/1.5 sans-serif; margin: 12px 0 0 42px; }
     .credit a { color: white; }
   </style>
   <script src="../demos.js" defer></script>
@@ -33,8 +32,7 @@
     <li id="todo-9" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Destroy all humans completed">Destroy all humans <a href="#" data-delete>(delete)</a></li>
     <li id="todo-10" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Allow for creation of to-dos completed">Allow for creation of to-dos <a href="#" data-delete>(delete)</a></li>
   </ul>
-  <p class="archive-form-notice" id="archive-form-notice-1" role="note"><strong>This form no longer accepts submissions.</strong></p>
-  <div class="archive-form" role="group" aria-disabled="true" aria-describedby="archive-form-notice-1"><button id="done" disabled>Done</button></div>
-  <p class="credit">Local adaptation of <a href="https://web.archive.org/web/20071010224109/http://humanized.com/weblog/images/resources/undo/todo.html" target="_blank" rel="noopener">Aza Raskin’s 2007 example</a>. Changes last until you reload.</p>
+  <button id="done" type="button">Done</button>
+  <p class="credit">Local adaptation of <a href="https://web.archive.org/web/20071010224109/http://humanized.com/weblog/images/resources/undo/todo.html" target="_blank" rel="noopener">Aza Raskin’s 2007 example</a>. Changes last until you click Done or reload.</p>
 </body>
 </html>

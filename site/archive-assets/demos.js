@@ -13,6 +13,7 @@
   }
   if (demo === 'undo') {
     const list = document.getElementById('todo-list');
+    const originalItems = [...list.children];
     const undo = document.getElementById('undo');
     const levels = document.getElementById('levels');
     const deleted = [];
@@ -34,6 +35,19 @@
       event.preventDefault();
       const item = deleted.pop();
       if (item) item.hidden = false;
+      update();
+    });
+    document.getElementById('done').addEventListener('click', () => {
+      // The original Done control reloaded the example; its supposed AJAX
+      // calls were only alerts. Reset the same demo state without a request.
+      deleted.length = 0;
+      dragged = null;
+      for (const item of originalItems) {
+        item.hidden = false;
+        const checkbox = item.querySelector('input');
+        checkbox.checked = checkbox.defaultChecked;
+      }
+      list.append(...originalItems);
       update();
     });
     list.addEventListener('dragstart', (event) => {

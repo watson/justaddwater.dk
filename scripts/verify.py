@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
 from archive import ROOT, HOSTS, CSS_URL, embedded_css, is_video_embed, parse_document
-from recovery import recovery_data, SHORTCODE, UNDO_PATH, TABLE_DEMO
+from recovery import recovery_data, SHORTCODE, UNDO_PATH, TABLE_DEMO, BUTTON_DEMO
 
 
 def video_embed_markup(soup):
@@ -204,6 +204,13 @@ def verify(site, base):
         file, original = site / alias.lstrip('/'), site / canonical.lstrip('/')
         if not file.exists() or file.read_bytes() != original.read_bytes():
             errors.append(f'Repaired asset alias missing or modified: {alias}')
+    for path, selector, count in [(UNDO_PATH, '#done', 1), (BUTTON_DEMO, 'input, button', 3)]:
+        soup = BeautifulSoup((site / path.lstrip('/')).read_bytes(), 'html.parser')
+        controls = soup.select(selector)
+        if (len(controls) != count or any(c.has_attr('disabled') for c in controls)
+                or soup.select('form, [aria-disabled], .archive-form-notice')
+                or any(c.has_attr(attr) for c in controls for attr in ('form', 'formaction'))):
+            errors.append(f'Local demo controls are disabled or can submit: {path}')
     missing_comments = {row['id'] for row in data['comments']} - comment_ids
     if missing_comments:
         errors.append(f'{len(missing_comments)} public comments missing from HTML: {sorted(missing_comments)[:20]}')

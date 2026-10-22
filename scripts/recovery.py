@@ -15,6 +15,7 @@ SHORTCODE = re.compile(r'\[code\b[^\]]*\].*?\[/code\]', re.I | re.S)
 UNDO_URL = 'http://humanized.com/weblog/images/resources/undo/todo.html'
 UNDO_PATH = '/archive-assets/demos/undo.html'
 TABLE_DEMO = '/wp-content/uploads/2006/03/fixed-table-cells-notworking.html'
+BUTTON_DEMO = '/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.html'
 
 
 @lru_cache
@@ -85,6 +86,16 @@ def restore_gists(soup):
             note.append(link)
             section.append(note)
         script.replace_with(section)
+
+
+def restore_local_forms(soup, path):
+    # This example compares submit/button rendering; its "nothing" action was
+    # a placeholder. Keep the original control types and their active styling,
+    # but give them no form owner that could navigate or submit anything.
+    if path == BUTTON_DEMO:
+        for form in soup.find_all('form', action='nothing'):
+            form.name = 'div'
+            form.attrs = {'class': ['archive-local-form'], 'role': 'group'}
 
 
 def restore_demos(soup, path):

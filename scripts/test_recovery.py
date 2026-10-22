@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 from archive import ROOT, ORIGIN, clean_html, parse_document, local_url, rewrite
 from prepare_pages import PrefixHTML
-from recovery import recovery_data, restore_comments, TABLE_DEMO, UNDO_URL, UNDO_PATH
+from recovery import recovery_data, restore_comments, TABLE_DEMO, BUTTON_DEMO, UNDO_URL, UNDO_PATH
 from verify import article_text_preserved
 
 
@@ -73,6 +73,27 @@ class RecoveryTests(unittest.TestCase):
         rewritten = rewrite(undo, ORIGIN, {}, {UNDO_PATH}, set())
         self.assertEqual(rewritten.iframe['src'], UNDO_PATH)
         self.assertEqual(rewritten.iframe['sandbox'], 'allow-scripts')
+
+    def test_css_example_preserves_enabled_control_types_without_a_submission(self):
+        source = '<form action="nothing"><input type="submit" name="button1" value="Submit example"><input type="button" id="button2" value="Button example"><button name="button3">Button element</button></form>'
+        output = clean_html(parse_document(source), path=BUTTON_DEMO)
+        controls = output.select('input, button')
+        self.assertEqual([c.get('type') for c in controls], ['submit', 'button', None])
+        self.assertEqual([c.get('value', c.get_text()) for c in controls],
+                         ['Submit example', 'Button example', 'Button element'])
+        self.assertFalse(output.select('form, [disabled], [aria-disabled], .archive-form-notice'))
+        self.assertEqual(output.select_one('.archive-local-form')['role'], 'group')
+        for path, markup in [('/other.html', source), (BUTTON_DEMO, source.replace('nothing', '/send.php'))]:
+            with self.subTest(path=path, markup=markup):
+                unrelated = clean_html(parse_document(markup), path=path)
+                self.assertTrue(all(c.has_attr('disabled') for c in unrelated.select('input, button')))
+                self.assertIsNotNone(unrelated.select_one('.archive-form-notice'))
+
+    def test_undo_done_is_an_enabled_local_button_without_a_submission_notice(self):
+        soup = BeautifulSoup((ROOT / 'site' / UNDO_PATH.lstrip('/')).read_text(), 'html.parser')
+        self.assertEqual(soup.select_one('#done')['type'], 'button')
+        self.assertFalse(soup.select('form, [disabled], [aria-disabled], .archive-form-notice'))
+        self.assertEqual(len(soup.select('#todo-list input[type="checkbox"]')), 10)
 
     def test_only_approved_comments_are_restored_once_on_their_original_pages(self):
         self.assertEqual({c['id'] for c in recovery_data()['comments']}, {27244, 58286})

@@ -19,11 +19,11 @@
 		<h1>IE bug: background-image is 1px away from border on buttons</h1>		
 		<p>I have buttons that are styled with border and background-image. Must work in IE7. But there is a small 1px gap between border and the background-image.</p>
 		<p>How to overcome this problem?</p>
-		<p class="archive-form-notice" id="archive-form-notice-1" role="note"><strong>This form no longer accepts submissions.</strong></p><div aria-describedby="archive-form-notice-1" aria-disabled="true" class="archive-form" role="group">
-			<p><label><input disabled="" name="button1" type="submit" value="input type=submit has the error"/></label></p>
+		<div class="archive-local-form" role="group">
+			<p><label><input name="button1" type="submit" value="input type=submit has the error"/></label></p>
 			<p><label>Background-color should never shine through:<br/>
-				<input disabled="" id="button2" name="button2" type="button" value="input type=button, background-color red)"/></label></p>
-			<p><label><button disabled="" name="button3" value="buttons also have the error">Buttons also have the error</button></label></p>
+				<input id="button2" name="button2" type="button" value="input type=button, background-color red)"/></label></p>
+			<p><label><button name="button3" value="buttons also have the error">Buttons also have the error</button></label></p>
 
 		</div>
 		<p>Problem is especially annoying when buttons must have gradient images.</p>

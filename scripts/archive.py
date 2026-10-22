@@ -22,7 +22,7 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup, Comment
-from recovery import recovery_data, restore_code, restore_gists, restore_demos, restore_comments, UNDO_URL, UNDO_PATH
+from recovery import recovery_data, restore_code, restore_gists, restore_demos, restore_local_forms, restore_comments, UNDO_URL, UNDO_PATH
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / '.cache'
@@ -405,6 +405,7 @@ def clean_html(soup, path=''):
                 del tag[attr]
     for tag in soup.select('link[rel="pingback"], link[rel="https://api.w.org/"], link[rel="EditURI"], link[rel="wlwmanifest"]'):
         tag.decompose()
+    restore_local_forms(soup, path)
     for form in soup.find_all('form'):
         if form.find('input', attrs={'name': 's'}):
             form['action'] = '/search/'

@@ -26,8 +26,9 @@ original host.
 - Two missing accessibility images recovered from an old site backup, repaired
   Beermat/presentation links, and a local copy of the previously broken external
   mullet illustration.
-- Local, working versions of the table-height and undo demonstrations. The undo
-  example is an adaptation of Aza Raskin's archived 2007 demo, with attribution.
+- Local, working versions of the table-height and undo demonstrations, plus the
+  interactive CSS button example. The undo example is an adaptation of Aza
+  Raskin's archived 2007 demo, with attribution; Done resets it locally.
 - A public-content export in `data/content.json` and recovery reports in `data/`.
 
 Some local files already returned 404, and some external images could not be
@@ -41,11 +42,13 @@ Video players depend on their original external services; obsolete or unavailabl
 players are preserved even if they no longer play.
 
 Legacy tracking scripts and WordPress runtime scripts are removed. The two
-reviewed demonstrations use a small local script; other code examples are inert
-text. Contact, comment and demo submission forms retain their visible controls, with
-all fields and buttons disabled and a highlighted notice that submissions are
-closed. Their submission endpoints and hidden runtime fields are removed; archive
-search stays active. Code examples remain text, and downloadable examples remain files.
+reviewed JavaScript demonstrations use a small local script; other code examples
+are inert text. Browser-only demo controls remain active without submission
+notices or server requests. Contact/comment forms and the three old Capgemini
+search forms copied into map examples retain their visible controls, with all
+fields and buttons disabled and a highlighted notice that submissions are closed.
+Their submission endpoints and hidden runtime fields are removed; archive search
+stays active. Code examples remain text, and downloadable examples remain files.
 Historical comments retain their original authorship and
 links. This is a public static capture, **not** a database backup: drafts, private
 posts, unpublished media and server-side files are not included.

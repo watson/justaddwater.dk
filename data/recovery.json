@@ -801,9 +801,13 @@
     {
       "article": "/2007/09/27/undo-not-confirmation-end-of-discussion/",
       "source_url": "http://humanized.com/weblog/images/resources/undo/todo.html",
-      "status": "Local adaptation of the recovered 2007 demo; delete/undo, checkbox state, and reordering work without server requests. The Done submission control stays disabled.",
+      "status": "Local adaptation of the recovered 2007 demo; delete/undo, checkbox state, and reordering work without server requests. Done resets the demo locally, matching the original page reload without its simulated AJAX alerts.",
       "archived_source": "https://web.archive.org/web/20071010224109id_/http://humanized.com/weblog/images/resources/undo/todo.html",
       "local_path": "/archive-assets/demos/undo.html"
+    },
+    {
+      "path": "/wp-content/uploads/2008/11/ie7css-flaw-background-image-on-buttons.html",
+      "behavior": "Keep the original submit/button control types enabled for the CSS styling comparison. Replace the form with a plain group so its placeholder action cannot submit or navigate."
     }
   ]
 }
