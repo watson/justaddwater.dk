@@ -1,16 +1,28 @@
 {
-  "source_site_commit": "44384445bf27bcb3abf6250a579dbc24c86a0d89",
-  "site_tree_sha256": "1dbeb0a492d612ab6afd3e34dba93910abfabc022d80e3728c70835ec9331bcc",
-  "created_at": "2026-10-23T05:31:42.675129+00:00",
+  "source_site_commit": "0d3c8f29de40b9ffd19689b79faec50892415ea7",
+  "site_git_tree": "b179014e00085713541fb54ff26cb9f9d1a17890",
+  "created_at": "2026-10-23T07:22:16.741413+00:00",
+  "report_generated_at": "2026-10-23T07:38:12.941922+00:00",
   "scope": "All 2,514 original capture URLs plus eight separately captured public pagination pages. Full-height offline browser replay of every available HTML pair.",
+  "command": ".venv/bin/python scripts/audit.py --browser --browser-workers 8 --browser-executable /Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "policy_version": 3,
+  "outcome": {
+    "status": "needs-review",
+    "exit_code": 2,
+    "label": "Review required",
+    "partial": false,
+    "pending_review_findings": 1947,
+    "unverified_findings": 2085
+  },
   "counts": {
     "urls": 2522,
     "html_pairs": 1704,
     "browser_pairs": 1704,
+    "visual_review_urls": 1076,
     "statuses": {
       "expected": 1727,
       "unverified": 2085,
-      "review": 805,
+      "review": 1947,
       "fixed": 518,
       "inherited": 22
     },
@@ -18,12 +30,14 @@
       "text": 1688,
       "browser-brokenImages": 372,
       "browser-jsErrors": 1684,
-      "visual": 802,
+      "layout": 1023,
+      "visual": 824,
       "inline-behavior": 25,
       "php-warning": 408,
       "duplicate-id": 26,
       "shortcode": 50,
-      "computed-style": 3,
+      "article-structure": 94,
+      "computed-style": 6,
       "flash-player": 32,
       "unavailable-image": 22,
       "baseline": 25,
@@ -45,9 +59,14 @@
       "count": 1684
     },
     {
+      "kind": "layout",
+      "status": "review",
+      "count": 1023
+    },
+    {
       "kind": "visual",
       "status": "review",
-      "count": 802
+      "count": 824
     },
     {
       "kind": "php-warning",
@@ -58,6 +77,11 @@
       "kind": "browser-brokenImages",
       "status": "unverified",
       "count": 372
+    },
+    {
+      "kind": "article-structure",
+      "status": "review",
+      "count": 94
     },
     {
       "kind": "shortcode",
@@ -95,14 +119,14 @@
       "count": 13
     },
     {
+      "kind": "computed-style",
+      "status": "review",
+      "count": 6
+    },
+    {
       "kind": "screenshot-limit",
       "status": "unverified",
       "count": 4
-    },
-    {
-      "kind": "computed-style",
-      "status": "review",
-      "count": 3
     },
     {
       "kind": "browser-overflow",
@@ -115,47 +139,58 @@
       "count": 1
     }
   ],
-  "interpretation": "Counts are signals per URL, not distinct defects. No unexplained content, reference, fragment, asset or screenshot-coverage differences remain. Pixel differences remain visible review signals: they include intentional form notices, code/plugin repairs, removed host warnings, restored content and unavailable-image placeholders. The report does not claim that every pixel difference was manually reviewed.",
+  "interpretation": "Counts are signals per URL, not distinct defects. No unexplained static content/reference findings were emitted, but this is not a passing visual audit. There are 1,076 URLs with visual/layout/structural review signals, including 824 pixel findings. The report still requires review.",
   "previous_run": {
-    "source_site_commit": "353d4f4967abe29f8e41d8e9dd0949588d827fce",
+    "source_site_commit": "44384445bf27bcb3abf6250a579dbc24c86a0d89",
+    "created_at": "2026-10-23T05:15:35.846521+00:00",
     "counts": {
-      "urls": 2514,
-      "html_pairs": 1696,
-      "browser_pairs": 1696,
+      "urls": 2522,
+      "html_pairs": 1704,
+      "browser_pairs": 1704,
       "statuses": {
-        "expected": 1684,
-        "unexplained": 633,
-        "unverified": 2076,
-        "inherited": 147,
-        "review": 629,
-        "fixed": 481
+        "expected": 1727,
+        "unverified": 2085,
+        "review": 805,
+        "fixed": 518,
+        "inherited": 22
       },
       "kinds": {
-        "text": 1682,
-        "changed-reference": 108,
-        "browser-brokenImages": 366,
-        "browser-jsErrors": 1676,
-        "fragment-target": 603,
-        "unavailable-image": 23,
-        "visual": 599,
-        "inline-behavior": 24,
+        "text": 1688,
+        "browser-brokenImages": 372,
+        "browser-jsErrors": 1684,
+        "visual": 802,
+        "inline-behavior": 25,
         "php-warning": 408,
         "duplicate-id": 26,
-        "shortcode": 49,
-        "computed-style": 4,
+        "shortcode": 50,
+        "computed-style": 3,
         "flash-player": 32,
+        "unavailable-image": 22,
         "baseline": 25,
-        "recovered-url": 8,
-        "screenshot-limit": 8,
+        "recovered-url": 13,
+        "screenshot-limit": 4,
         "browser-overflow": 2,
-        "page-overflow": 4,
-        "missing-article": 1,
-        "missing-comment": 1,
         "stylesheet": 1
       }
     }
   },
-  "resolved_confirmed_items": [
+  "new_findings": {
+    "report": "data/audit-new-findings.json",
+    "new_pixel_findings": 22,
+    "removed_pixel_findings": 0,
+    "image_layout_review_urls": 6,
+    "image_layout_review_articles": 3,
+    "unverified_thumbnail_baseline_urls": 1,
+    "expected_change_urls": 15,
+    "new_computed_style_findings": 3
+  },
+  "code_review": {
+    "report": "data/code-block-review.json",
+    "article_blocks_checked": 319,
+    "comment_blocks_checked": 17,
+    "confirmed_regression_fixed": "Four red editorial highlights restored in two examples in Blog Usability: Avoid Spam Comments, Part 2. Exact escaped code characters retained."
+  },
+  "resolved_confirmed_items_from_previous_work": [
     "Missing response anchors and inherited missing comment targets",
     "Transcript and downloaded HTML encoding errors",
     "Original /search/ article alias overwritten by archive search",
@@ -178,6 +213,14 @@
         "/2007/10/22/firefox-tip-for-framebuster-javascript/"
       ],
       "explanation": "The original executable example navigates to a blocked destination during offline replay. The archive displays the script as code and retains the article theme."
+    },
+    {
+      "paths": [
+        "/wp-content/uploads/2007/12/map-example-denmark-v001.html",
+        "/wp-content/uploads/2007/12/map-example-denmark-v002.html",
+        "/wp-content/uploads/2007/12/map-example-denmark.html"
+      ],
+      "explanation": "The offline original lacks the remote Capgemini stylesheet; the clone uses the previously recovered local stylesheet and its assets. This reflects the recorded stylesheet restoration, not a new loss. The incomplete replay is not proof of the fully styled historical appearance."
     }
   ],
   "remaining_unrecoverable": {
@@ -194,25 +237,77 @@
   },
   "browser_health": {
     "completed_pairs": 1704,
+    "fresh_pairs": 1704,
+    "reused_pairs": 0,
     "clone_pages_with_js_errors": 0,
     "clone_pages_with_broken_images": 0,
     "clone_pages_with_enabled_archived_controls": 0,
     "clone_pages_with_horizontal_overflow": 0,
     "browser_capture_errors": 0,
+    "clone_screenshot_bound_limits": 0,
+    "original_screenshot_bound_limits": 4,
+    "original_screenshot_bound_limit_details": [
+      {
+        "path": "/2009/10/05/tiny-script-to-extract-html-structure-from-page/",
+        "width": 2167,
+        "height": 1729,
+        "reason": "Horizontal overflow outside the 1280px viewport."
+      },
+      {
+        "path": "/2009/10/05/tiny-script-to-extract-html-structure-from-page/comment-page-1/",
+        "width": 2167,
+        "height": 1729,
+        "reason": "Horizontal overflow outside the 1280px viewport."
+      },
+      {
+        "path": "/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/",
+        "width": 2048,
+        "height": 1699,
+        "reason": "Horizontal overflow outside the 1280px viewport."
+      },
+      {
+        "path": "/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/comment-page-1/",
+        "width": 2048,
+        "height": 1699,
+        "reason": "Horizontal overflow outside the 1280px viewport."
+      }
+    ],
     "screenshot_dimension_errors": 0,
     "screenshots_verified": 3408
   },
   "validation": {
-    "unit_tests_passed": 81,
-    "root_validation_errors": 0,
-    "project_prefix_validation_errors": 0,
-    "published_posts_and_pages": 450,
-    "public_comments": 2784,
-    "rss_feeds": 1204,
-    "local_links_checked": 80247,
-    "original_capture_unchanged": true,
-    "wordpress_xml_public_coverage_verified": true,
-    "private_xml_in_git": false,
+    "unit_tests_passed": 99,
+    "root_validation": {
+      "html_pages": 2746,
+      "published_posts_and_pages": 450,
+      "articles_with_video_players": 21,
+      "recovered_code_examples": 75,
+      "disabled_archived_forms": 564,
+      "public_comments": 2784,
+      "local_links_checked": 100995,
+      "recovered_comments": 2,
+      "rss_feeds": 1204,
+      "errors": 0,
+      "deployment_base": "/"
+    },
+    "project_prefix_validation": {
+      "html_pages": 2746,
+      "published_posts_and_pages": 450,
+      "articles_with_video_players": 21,
+      "recovered_code_examples": 75,
+      "disabled_archived_forms": 564,
+      "public_comments": 2784,
+      "local_links_checked": 100995,
+      "recovered_comments": 2,
+      "rss_feeds": 1204,
+      "errors": 0,
+      "deployment_base": "/justaddwater.dk"
+    },
+    "original_capture_hashes_unchanged_from_previous_run": true,
+    "source_capture_hashes_checked": 2497,
+    "editorial_highlights_browser_checked": 4
+  },
+  "prior_interaction_validation": {
     "interaction_checks": [
       "Search query and results under project prefix",
       "Original search alias, first page, and preserved pagination",
@@ -234,16 +329,23 @@
   "limitations": [
     "Browser replay cannot verify third-party video availability or uncaptured remote scripts.",
     "Recovered external images reconstruct baseline dependencies; they are labeled in browser evidence.",
-    "Pixel differences include intentional changes and are review signals, not automatic failures.",
+    "Pixel differences include intentional changes; unresolved reviews prevent a successful audit result.",
     "Controls are inspected, not clicked; demo behavior still needs interaction tests.",
     "Generated clone-only pages are inventoried separately; existing verify.py validates their local links.",
     "DOM checks use HTML5 parsing; text expectations use an independent literal-fragment comparison.",
-    "Live refresh detects drift and saves separate responses; it does not replace the baseline comparison."
+    "Live refresh detects drift and saves separate responses; it does not replace the baseline comparison.",
+    "Four original screenshot-limit signals concern horizontal content wider than the 1280px viewport; no screenshot height limit was reached.",
+    "Twenty-five URLs lack a usable captured original baseline.",
+    "One newly flagged comparison replays a recovered full-size Flickr image for a missing thumbnail; dimensions are not a verified original baseline."
   ],
   "review_status": {
     "status": "needs-review",
-    "visual_findings_pending": 802,
-    "explanation": "This historical run was not a passing visual audit. The zero-unexplained count excluded 802 unresolved visual findings, including the table-cell article. Do not interpret it as visual equivalence.",
+    "visual_review_urls": 1076,
+    "pixel_findings": 824,
+    "layout_findings": 1023,
+    "article_structure_findings": 94,
+    "computed_style_findings": 6,
+    "explanation": "Visual review counts overlap. The new-findings report records focused triage without suppressing whole pages. Previously reported differences remain visible and are not blanket-approved.",
     "auditor_fix": "data/audit-visual-regression.json"
   }
 }

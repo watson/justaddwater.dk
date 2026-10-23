@@ -1,0 +1,592 @@
+{
+  "reviewed_at": "2026-10-23T07:49:13.128871+00:00",
+  "source_site_commit": "0d3c8f29de40b9ffd19689b79faec50892415ea7",
+  "report_generated_at": "2026-10-23T07:38:12.941922+00:00",
+  "comparison": "Delta from the previous full audit preserved in .cache/audit-previous-findings.json. Newly reported does not mean newly introduced. Regional pixel checks now detect differences hidden by the whole-page average.",
+  "counts": {
+    "new_pixel_findings": 22,
+    "removed_pixel_findings": 0,
+    "image_layout_review_urls": 6,
+    "image_layout_review_articles": 3,
+    "unverified_thumbnail_baseline_urls": 1,
+    "expected_change_urls": 15,
+    "new_computed_style_findings": 3
+  },
+  "image_layout_articles": [
+    "/2005/11/30/web-developers-collection-of-browser-tools/",
+    "/2006/01/08/google-analytics-trick-how-to-view-referring-urls/",
+    "/2007/05/09/google-analytics-redesign-flaw-slipped-through/"
+  ],
+  "pixel_findings": [
+    {
+      "path": "/2005/11/30/web-developers-collection-of-browser-tools/",
+      "report_row_id": "6699a1ecd18080ca",
+      "disposition": "image-layout-review",
+      "assessment": "The original keeps the explicit HTML height after theme CSS limits image width, stretching the image. The clone uses object-fit: contain in the same fixed-size box, preserving aspect ratio but adding blank vertical space. This is a real rendering difference, left unchanged for review.",
+      "whole_page_changed_pixel_fraction": 0.0099,
+      "regions": [
+        {
+          "x": 427,
+          "y": 2400,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.15712
+        }
+      ],
+      "finding_ids": [
+        "48774e9a1730cf16"
+      ],
+      "evidence": {
+        "original": "screenshots/6699a1ecd18080ca-original.jpg",
+        "clone": "screenshots/6699a1ecd18080ca-clone.jpg"
+      }
+    },
+    {
+      "path": "/2005/11/30/web-developers-collection-of-browser-tools/comment-page-1/",
+      "report_row_id": "f21d85ecebb924aa",
+      "disposition": "image-layout-review",
+      "assessment": "The original keeps the explicit HTML height after theme CSS limits image width, stretching the image. The clone uses object-fit: contain in the same fixed-size box, preserving aspect ratio but adding blank vertical space. This is a real rendering difference, left unchanged for review.",
+      "whole_page_changed_pixel_fraction": 0.0099,
+      "regions": [
+        {
+          "x": 427,
+          "y": 2400,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.15712
+        }
+      ],
+      "finding_ids": [
+        "b9e23744d0f5aaae"
+      ],
+      "evidence": {
+        "original": "screenshots/f21d85ecebb924aa-original.jpg",
+        "clone": "screenshots/f21d85ecebb924aa-clone.jpg"
+      }
+    },
+    {
+      "path": "/2006/01/08/google-analytics-trick-how-to-view-referring-urls/comment-page-1/",
+      "report_row_id": "80c57e3c212348bd",
+      "disposition": "image-layout-review",
+      "assessment": "The original keeps the explicit HTML height after theme CSS limits image width, stretching the image. The clone uses object-fit: contain in the same fixed-size box, preserving aspect ratio but adding blank vertical space. This is a real rendering difference, left unchanged for review.",
+      "whole_page_changed_pixel_fraction": 0.00319,
+      "regions": [
+        {
+          "x": 427,
+          "y": 480,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.06434
+        }
+      ],
+      "finding_ids": [
+        "d2b5b44efc82d8c6"
+      ],
+      "evidence": {
+        "original": "screenshots/80c57e3c212348bd-original.jpg",
+        "clone": "screenshots/80c57e3c212348bd-clone.jpg"
+      }
+    },
+    {
+      "path": "/2006/01/08/google-analytics-trick-how-to-view-referring-urls/comment-page-2/",
+      "report_row_id": "6787804c359c8a5f",
+      "disposition": "image-layout-review",
+      "assessment": "The original keeps the explicit HTML height after theme CSS limits image width, stretching the image. The clone uses object-fit: contain in the same fixed-size box, preserving aspect ratio but adding blank vertical space. This is a real rendering difference, left unchanged for review.",
+      "whole_page_changed_pixel_fraction": 0.00327,
+      "regions": [
+        {
+          "x": 427,
+          "y": 480,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.06465
+        }
+      ],
+      "finding_ids": [
+        "b283b5c06632d120"
+      ],
+      "evidence": {
+        "original": "screenshots/6787804c359c8a5f-original.jpg",
+        "clone": "screenshots/6787804c359c8a5f-clone.jpg"
+      }
+    },
+    {
+      "path": "/2007/05/09/google-analytics-redesign-flaw-slipped-through/",
+      "report_row_id": "13999ddc265aea69",
+      "disposition": "image-layout-review",
+      "assessment": "The original keeps the explicit HTML height after theme CSS limits image width, stretching the image. The clone uses object-fit: contain in the same fixed-size box, preserving aspect ratio but adding blank vertical space. This is a real rendering difference, left unchanged for review.",
+      "whole_page_changed_pixel_fraction": 0.00672,
+      "regions": [
+        {
+          "x": 427,
+          "y": 2400,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.09542
+        }
+      ],
+      "finding_ids": [
+        "78b4f466e9fc5549"
+      ],
+      "evidence": {
+        "original": "screenshots/13999ddc265aea69-original.jpg",
+        "clone": "screenshots/13999ddc265aea69-clone.jpg"
+      }
+    },
+    {
+      "path": "/2007/05/09/google-analytics-redesign-flaw-slipped-through/comment-page-1/",
+      "report_row_id": "56d956546622e202",
+      "disposition": "image-layout-review",
+      "assessment": "The original keeps the explicit HTML height after theme CSS limits image width, stretching the image. The clone uses object-fit: contain in the same fixed-size box, preserving aspect ratio but adding blank vertical space. This is a real rendering difference, left unchanged for review.",
+      "whole_page_changed_pixel_fraction": 0.00671,
+      "regions": [
+        {
+          "x": 427,
+          "y": 2400,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.09531
+        }
+      ],
+      "finding_ids": [
+        "d657558e0b5ae900"
+      ],
+      "evidence": {
+        "original": "screenshots/56d956546622e202-original.jpg",
+        "clone": "screenshots/56d956546622e202-clone.jpg"
+      }
+    },
+    {
+      "path": "/2008/02/02/selling-ruby-rails-and-agile-project-management/",
+      "report_row_id": "4de3014007bfad07",
+      "disposition": "expected-footer",
+      "assessment": "The highlighted region shows the approved archive footer wording.",
+      "whole_page_changed_pixel_fraction": 0.00045,
+      "regions": [
+        {
+          "x": 427,
+          "y": 1920,
+          "width": 427,
+          "height": 51,
+          "changed_pixel_fraction": 0.05197
+        }
+      ],
+      "finding_ids": [
+        "9a063dd1f7530010"
+      ],
+      "evidence": {
+        "original": "screenshots/4de3014007bfad07-original.jpg",
+        "clone": "screenshots/4de3014007bfad07-clone.jpg"
+      }
+    },
+    {
+      "path": "/2008/02/02/selling-ruby-rails-and-agile-project-management/comment-page-1/",
+      "report_row_id": "b98a5a2087023b9c",
+      "disposition": "expected-footer",
+      "assessment": "The highlighted region shows the approved archive footer wording.",
+      "whole_page_changed_pixel_fraction": 0.00045,
+      "regions": [
+        {
+          "x": 427,
+          "y": 1920,
+          "width": 427,
+          "height": 51,
+          "changed_pixel_fraction": 0.05197
+        }
+      ],
+      "finding_ids": [
+        "6bbfd0d439d6f496"
+      ],
+      "evidence": {
+        "original": "screenshots/b98a5a2087023b9c-original.jpg",
+        "clone": "screenshots/b98a5a2087023b9c-clone.jpg"
+      }
+    },
+    {
+      "path": "/2011/03/10/challenges-configuring-hudson-emails/bounty-questions-page-4-stack-overflow/",
+      "report_row_id": "78188a8fa7e75903",
+      "disposition": "expected-form-notice-and-footer",
+      "assessment": "The retained form is inert and has the approved submission notice, which increases its height. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00703,
+      "regions": [
+        {
+          "x": 427,
+          "y": 1440,
+          "width": 427,
+          "height": 280,
+          "changed_pixel_fraction": 0.06268
+        }
+      ],
+      "finding_ids": [
+        "3bcddfbd6f7e72ac"
+      ],
+      "evidence": {
+        "original": "screenshots/78188a8fa7e75903-original.jpg",
+        "clone": "screenshots/78188a8fa7e75903-clone.jpg"
+      }
+    },
+    {
+      "path": "/2014/03/09/iphoto-11-performance-tuning-tips-revised/",
+      "report_row_id": "912e5f156f00c315",
+      "disposition": "expected-code-wrapping-and-footer",
+      "assessment": "The existing long command wraps within the article column instead of extending into the sidebar, adding one line (17px) and shifting the footer. Source characters are unchanged. The footer also has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00929,
+      "regions": [
+        {
+          "x": 427,
+          "y": 960,
+          "width": 427,
+          "height": 77,
+          "changed_pixel_fraction": 0.08707
+        }
+      ],
+      "finding_ids": [
+        "5032ec12ee1f83ab"
+      ],
+      "evidence": {
+        "original": "screenshots/912e5f156f00c315-original.jpg",
+        "clone": "screenshots/912e5f156f00c315-clone.jpg"
+      }
+    },
+    {
+      "path": "/about-the-authors/",
+      "report_row_id": "5d6d1ed973f638c9",
+      "disposition": "expected-form-notice-and-footer",
+      "assessment": "The retained form is inert and has the approved submission notice, which increases its height. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00615,
+      "regions": [
+        {
+          "x": 427,
+          "y": 3360,
+          "width": 427,
+          "height": 35,
+          "changed_pixel_fraction": 0.07692
+        },
+        {
+          "x": 427,
+          "y": 2880,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.05087
+        }
+      ],
+      "finding_ids": [
+        "2c5ac30a039993a9"
+      ],
+      "evidence": {
+        "original": "screenshots/5d6d1ed973f638c9-original.jpg",
+        "clone": "screenshots/5d6d1ed973f638c9-clone.jpg"
+      }
+    },
+    {
+      "path": "/about-the-authors/comment-page-1/",
+      "report_row_id": "56bbfc3c25882784",
+      "disposition": "expected-form-notice-and-footer",
+      "assessment": "The retained form is inert and has the approved submission notice, which increases its height. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00615,
+      "regions": [
+        {
+          "x": 427,
+          "y": 3360,
+          "width": 427,
+          "height": 35,
+          "changed_pixel_fraction": 0.07692
+        },
+        {
+          "x": 427,
+          "y": 2880,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.05087
+        }
+      ],
+      "finding_ids": [
+        "e5ce978d2db8a44d"
+      ],
+      "evidence": {
+        "original": "screenshots/56bbfc3c25882784-original.jpg",
+        "clone": "screenshots/56bbfc3c25882784-clone.jpg"
+      }
+    },
+    {
+      "path": "/archive/",
+      "report_row_id": "e958d1f646b458d3",
+      "disposition": "expected-restored-comment-and-footer",
+      "assessment": "Previously approved restored archive pingback comment 27244 extends the page. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00434,
+      "regions": [
+        {
+          "x": 427,
+          "y": 3360,
+          "width": 427,
+          "height": 163,
+          "changed_pixel_fraction": 0.10031
+        }
+      ],
+      "finding_ids": [
+        "8af8032409b467db"
+      ],
+      "evidence": {
+        "original": "screenshots/e958d1f646b458d3-original.jpg",
+        "clone": "screenshots/e958d1f646b458d3-clone.jpg"
+      }
+    },
+    {
+      "path": "/author/jesper/page/5/",
+      "report_row_id": "2cce74194e0a8c41",
+      "disposition": "unverified-reconstructed-thumbnail-baseline",
+      "assessment": "The missing Flickr _m.jpg thumbnail is replayed using recovered _o.jpg bytes at 273x394. The clone uses the documented thumbnail dimensions, 166x240. The replay therefore does not establish the historical thumbnail appearance and is not proof of a clone regression.",
+      "whole_page_changed_pixel_fraction": 0.00896,
+      "regions": [
+        {
+          "x": 427,
+          "y": 8640,
+          "width": 427,
+          "height": 464,
+          "changed_pixel_fraction": 0.23423
+        },
+        {
+          "x": 0,
+          "y": 8640,
+          "width": 427,
+          "height": 464,
+          "changed_pixel_fraction": 0.14106
+        },
+        {
+          "x": 427,
+          "y": 8160,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.08
+        }
+      ],
+      "finding_ids": [
+        "5d7ec67063172ea4"
+      ],
+      "evidence": {
+        "original": "screenshots/2cce74194e0a8c41-original.jpg",
+        "clone": "screenshots/2cce74194e0a8c41-clone.jpg"
+      }
+    },
+    {
+      "path": "/page/2/",
+      "report_row_id": "30ed7c3e8af2179f",
+      "disposition": "expected-feed-icon-replacement-and-footer",
+      "assessment": "The offline original has the unavailable FeedBurner image; the clone has the previously recorded local RSS icon. Its 32px height shifts the bottom sidebar/footer. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00107,
+      "regions": [
+        {
+          "x": 427,
+          "y": 11520,
+          "width": 427,
+          "height": 467,
+          "changed_pixel_fraction": 0.06911
+        }
+      ],
+      "finding_ids": [
+        "604f62d32f22e3aa"
+      ],
+      "evidence": {
+        "original": "screenshots/30ed7c3e8af2179f-original.jpg",
+        "clone": "screenshots/30ed7c3e8af2179f-clone.jpg"
+      }
+    },
+    {
+      "path": "/page/4/",
+      "report_row_id": "6303c012860427c5",
+      "disposition": "expected-feed-icon-replacement-and-footer",
+      "assessment": "The offline original has the unavailable FeedBurner image; the clone has the previously recorded local RSS icon. Its 32px height shifts the bottom sidebar/footer. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00106,
+      "regions": [
+        {
+          "x": 427,
+          "y": 12000,
+          "width": 427,
+          "height": 91,
+          "changed_pixel_fraction": 0.20037
+        }
+      ],
+      "finding_ids": [
+        "cfdb28e5f04b4ad4"
+      ],
+      "evidence": {
+        "original": "screenshots/6303c012860427c5-original.jpg",
+        "clone": "screenshots/6303c012860427c5-clone.jpg"
+      }
+    },
+    {
+      "path": "/page/6/",
+      "report_row_id": "131ed312838ae1c3",
+      "disposition": "expected-feed-icon-replacement-and-footer",
+      "assessment": "The offline original has the unavailable FeedBurner image; the clone has the previously recorded local RSS icon. Its 32px height shifts the bottom sidebar/footer. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00107,
+      "regions": [
+        {
+          "x": 427,
+          "y": 12000,
+          "width": 427,
+          "height": 8,
+          "changed_pixel_fraction": 0.66667
+        },
+        {
+          "x": 0,
+          "y": 12000,
+          "width": 427,
+          "height": 8,
+          "changed_pixel_fraction": 0.23958
+        },
+        {
+          "x": 853,
+          "y": 12000,
+          "width": 427,
+          "height": 8,
+          "changed_pixel_fraction": 0.23958
+        },
+        {
+          "x": 427,
+          "y": 11520,
+          "width": 427,
+          "height": 480,
+          "changed_pixel_fraction": 0.05628
+        }
+      ],
+      "finding_ids": [
+        "63245232c70445b5"
+      ],
+      "evidence": {
+        "original": "screenshots/131ed312838ae1c3-original.jpg",
+        "clone": "screenshots/131ed312838ae1c3-clone.jpg"
+      }
+    },
+    {
+      "path": "/page/7/",
+      "report_row_id": "162a8559148a10c9",
+      "disposition": "expected-feed-icon-replacement-and-footer",
+      "assessment": "The offline original has the unavailable FeedBurner image; the clone has the previously recorded local RSS icon. Its 32px height shifts the bottom sidebar/footer. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00107,
+      "regions": [
+        {
+          "x": 427,
+          "y": 11520,
+          "width": 427,
+          "height": 384,
+          "changed_pixel_fraction": 0.0839
+        }
+      ],
+      "finding_ids": [
+        "5a25d62820ba1658"
+      ],
+      "evidence": {
+        "original": "screenshots/162a8559148a10c9-original.jpg",
+        "clone": "screenshots/162a8559148a10c9-clone.jpg"
+      }
+    },
+    {
+      "path": "/page/8/",
+      "report_row_id": "2f5e3b8d196f53fb",
+      "disposition": "expected-feed-icon-replacement-and-footer",
+      "assessment": "The offline original has the unavailable FeedBurner image; the clone has the previously recorded local RSS icon. Its 32px height shifts the bottom sidebar/footer. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00104,
+      "regions": [
+        {
+          "x": 427,
+          "y": 12000,
+          "width": 427,
+          "height": 245,
+          "changed_pixel_fraction": 0.1303
+        }
+      ],
+      "finding_ids": [
+        "971bd4820e2407d9"
+      ],
+      "evidence": {
+        "original": "screenshots/2f5e3b8d196f53fb-original.jpg",
+        "clone": "screenshots/2f5e3b8d196f53fb-clone.jpg"
+      }
+    },
+    {
+      "path": "/page/9/",
+      "report_row_id": "ba6927d0fcf49721",
+      "disposition": "expected-feed-icon-replacement-and-footer",
+      "assessment": "The offline original has the unavailable FeedBurner image; the clone has the previously recorded local RSS icon. Its 32px height shifts the bottom sidebar/footer. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00145,
+      "regions": [
+        {
+          "x": 427,
+          "y": 8640,
+          "width": 427,
+          "height": 139,
+          "changed_pixel_fraction": 0.172
+        }
+      ],
+      "finding_ids": [
+        "7513ac66590591f2"
+      ],
+      "evidence": {
+        "original": "screenshots/ba6927d0fcf49721-original.jpg",
+        "clone": "screenshots/ba6927d0fcf49721-clone.jpg"
+      }
+    },
+    {
+      "path": "/passionate-users-printing/",
+      "report_row_id": "d3cdb327e0d7a75b",
+      "disposition": "expected-form-notice-and-footer",
+      "assessment": "The retained form is inert and has the approved submission notice, which increases its height. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00893,
+      "regions": [
+        {
+          "x": 427,
+          "y": 1920,
+          "width": 427,
+          "height": 195,
+          "changed_pixel_fraction": 0.08759
+        }
+      ],
+      "finding_ids": [
+        "5ed6870b37255edb"
+      ],
+      "evidence": {
+        "original": "screenshots/d3cdb327e0d7a75b-original.jpg",
+        "clone": "screenshots/d3cdb327e0d7a75b-clone.jpg"
+      }
+    },
+    {
+      "path": "/passionate-users-printing/comment-page-1/",
+      "report_row_id": "ff719f8b1159ace1",
+      "disposition": "expected-form-notice-and-footer",
+      "assessment": "The retained form is inert and has the approved submission notice, which increases its height. The footer has the approved archive wording.",
+      "whole_page_changed_pixel_fraction": 0.00893,
+      "regions": [
+        {
+          "x": 427,
+          "y": 1920,
+          "width": 427,
+          "height": 195,
+          "changed_pixel_fraction": 0.08759
+        }
+      ],
+      "finding_ids": [
+        "0d0c54f7fc550690"
+      ],
+      "evidence": {
+        "original": "screenshots/ff719f8b1159ace1-original.jpg",
+        "clone": "screenshots/ff719f8b1159ace1-clone.jpg"
+      }
+    }
+  ],
+  "computed_style_findings": {
+    "paths": [
+      "/wp-content/uploads/2007/12/map-example-denmark-v001.html",
+      "/wp-content/uploads/2007/12/map-example-denmark-v002.html",
+      "/wp-content/uploads/2007/12/map-example-denmark.html"
+    ],
+    "assessment": "The offline original lacks the remote Capgemini stylesheet; the clone uses the previously recovered local stylesheet and its assets. This reflects the recorded stylesheet restoration, not a new loss. The incomplete replay is not proof of the fully styled historical appearance.",
+    "provenance": "data/external-resources.json"
+  },
+  "review_method": "Inspected canonical screenshot pairs/crops for every group, source markup, CSS, resource provenance and reported geometry; duplicate comment-page copies have matching evidence. This assesses the newly flagged regions, not every difference on those pages.",
+  "limitations": [
+    "These dispositions are recorded separately; no whole-page visual exclusions or automatic approvals were added.",
+    "The complete report remains needs-review. Many previously reported pixel/layout/structural differences have not received individual manual review.",
+    "The original is an offline replay of preserved captures with labeled reconstructed dependencies, not a fresh live-browser capture."
+  ]
+}

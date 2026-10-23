@@ -258,9 +258,16 @@ reports missing evidence rather than silently accepting it.
 remaining limitations. `data/audit-repair-report.json` lists repairs and the
 disposition of failed original captures. The auditor reports findings without editing
 the archived site.
-That historical run still had 802 pending pixel-comparison findings; its zero
+The earlier report had 802 pending pixel-comparison findings; its zero
 unexplained count was not a visual pass. `data/audit-visual-regression.json`
-records the table-cell article regression and the corrected audit outcome.
+records that audit defect. `data/code-block-review.json` records the subsequent
+review of all 319 article code blocks and 17 comment code blocks, including the
+restored red emphasis in the two spam-comment examples. The latest full run
+still reports visual review requirements separately from content validation.
+`data/audit-new-findings.json` records the 22 additional pixel findings: six
+URLs with image-sizing differences across three articles, one unreliable
+reconstructed-thumbnail baseline, and 15 expected changes. These dispositions
+do not suppress whole pages or make the overall audit pass.
 
 For screenshots, pixel differences and Chromium health checks on **all captured
 HTML pages**:

@@ -1,0 +1,777 @@
+{
+  "checked_at": "2026-10-23T07:27:12.395776+00:00",
+  "site_commit": "0d3c8f29de40b9ffd19689b79faec50892415ea7",
+  "scope": "All canonical published article/page pre/code elements, all 61 recorded shortcode repairs, 14 recovered gist files, 10 paragraph-to-code repairs, three literal-markup repairs, and original comment code blocks. All copies of recovered examples were also checked throughout the generated HTML.",
+  "coverage": {
+    "articles_with_pre_or_code": 88,
+    "original_article_pre_or_code_blocks": 239,
+    "unchanged_existing_article_blocks": 231,
+    "existing_blocks_replaced_by_recorded_shortcode_repairs": 8,
+    "shortcode_repairs": 61,
+    "gist_files": 14,
+    "paragraph_code_repairs": 10,
+    "literal_markup_repairs": 3,
+    "resulting_article_pre_or_code_blocks": 319,
+    "recovered_example_copies_checked": 141,
+    "existing_editorial_emphasis_markups_preserved": 27,
+    "original_comment_code_blocks": 16,
+    "original_comments_with_code": 9,
+    "resulting_comment_code_blocks": 17,
+    "additional_comment_block": "comment-455679: previously recorded conditional-comment repair"
+  },
+  "similar_rendering_changes": [
+    {
+      "post_id": 176,
+      "path": "/2006/03/11/how-to-limit-table-cell-height-gmail-style/",
+      "examples": [
+        "post-176-1"
+      ],
+      "assessment": "HTML example rendered a green table and applied its CSS to the page. The clone shows the complete literal source; both linked standalone demonstrations remain available.",
+      "disposition": "Keep literal source; the article identifies these as code examples, not an embedded live demonstration."
+    },
+    {
+      "post_id": 261,
+      "path": "/2006/05/19/rails-tip-scaffolding-lists/",
+      "examples": [
+        "post-261-2"
+      ],
+      "assessment": "An incomplete HTML/Rails table fragment was parsed as a real table and changed page nesting. The clone displays the original fragment as source.",
+      "disposition": "Keep literal source; the article identifies these as code examples, not an embedded live demonstration."
+    },
+    {
+      "post_id": 325,
+      "path": "/2006/06/24/blog-usability-avoid-spam-comments/",
+      "examples": [
+        "post-325-1"
+      ],
+      "assessment": "An opening form tag was interpreted as a real form and captured following prose. The clone shows the tag as code and keeps the surrounding article outside a form.",
+      "disposition": "Keep literal source; the article identifies these as code examples, not an embedded live demonstration."
+    },
+    {
+      "post_id": 550,
+      "path": "/2007/02/15/rounded-corners-the-technorati-way/",
+      "examples": [
+        "post-550-1"
+      ],
+      "assessment": "The HTML example produced headings/list items instead of showing its tags. The clone displays the source; the separate rounded-corner demonstration remains linked.",
+      "disposition": "Keep literal source; the article identifies these as code examples, not an embedded live demonstration."
+    },
+    {
+      "post_id": 929,
+      "path": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "examples": [
+        "post-929-1",
+        "post-929-2",
+        "post-929-3",
+        "post-929-5"
+      ],
+      "assessment": "HTML fragments were parsed as elements, including the b tags inside a JavaScript string. Example script/link tags also attempted resource loads. All are now visible literal source.",
+      "disposition": "Keep literal source; the article identifies these as code examples, not an embedded live demonstration."
+    },
+    {
+      "post_id": 748,
+      "path": "/2007/10/22/firefox-tip-for-framebuster-javascript/",
+      "examples": [
+        "post-748-1"
+      ],
+      "assessment": "The inline framebuster example executed and redirected the original page. The clone displays it as code so the article remains readable.",
+      "disposition": "Keep literal source; the article identifies these as code examples, not an embedded live demonstration."
+    }
+  ],
+  "confirmed_regression_fixed": {
+    "path": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+    "examples": [
+      "post-344-1",
+      "post-344-2"
+    ],
+    "issue": "Four red editorial highlights were lost when the two examples were restored as plain code.",
+    "fix": "Restore those four original highlighted fragments while retaining exact escaped source characters.",
+    "browser_check": "All four fragments compute to rgb(255, 0, 0); no form or executable script is created inside the code blocks."
+  },
+  "remaining_existing_block_changes": {
+    "count": 8,
+    "assessment": "All eight are the original pre wrappers around recorded shortcode examples (five in post 929, one in post 755, two in post 550); no additional missing-code case was found."
+  },
+  "unexpected_code_text_or_active_element_issues": [],
+  "editorial_markup_checks": [
+    {
+      "post_id": 1759,
+      "path": "/2015/04/15/change-history-of-svn-repository/",
+      "editorial_markup_count": 3,
+      "missing": []
+    },
+    {
+      "post_id": 1550,
+      "path": "/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/",
+      "editorial_markup_count": 5,
+      "missing": []
+    },
+    {
+      "post_id": 1373,
+      "path": "/2010/11/12/fixed-strange-hudson-slave-outofmemoryerror/",
+      "editorial_markup_count": 1,
+      "missing": []
+    },
+    {
+      "post_id": 437,
+      "path": "/2006/11/06/the-ie-png-fix-vs-accessibility/",
+      "editorial_markup_count": 16,
+      "missing": []
+    },
+    {
+      "post_id": 261,
+      "path": "/2006/05/19/rails-tip-scaffolding-lists/",
+      "editorial_markup_count": 2,
+      "missing": []
+    }
+  ],
+  "shortcode_records": [
+    {
+      "id": "post-1038-1",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "0a272216a898f038c9e9daba8c7b10afca9107b661f12b4958d6d441fdbc1ce6",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-2",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "684032f4296f00cd17530832e1691a2a7b5ad2fababe85439acd0ae29008001f",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-3",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "1b2b0964e3b3b5473f1b8d5eb8834857fb726c68a93bc711a77b16efd1d14c46",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-4",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "0b1ddb59e15d50e46c5aed5e0c51e290f5b53978f4eaee4caa56776ef295209f",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-5",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "b982be91211569fa29af4c1e48e1cb9c5b40b30396abaca436cec84f68e68205",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-6",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "b27de4964ae905d3356ba73993297606bbd7aaffa95bd99d428471070606f7ba",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-7",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "ac8b7d277109d284d9af703b229eafd875417ef4b6cf7ca10b275c05c61aa6e3",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-8",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "83bd53fbb50c08c15508ea1d4c10f6ecba5792b0e472f51a6314b2f3f37e90f2",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-9",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "c378d9a98f1a11c44c0dd3fb6f3ab710d9a700f7f0e59a7dd642cece58ce6b7b",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-10",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "badd87c5ab46b693d5674a17283b2030a5041d49646414763cfc58f8957c7d19",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-11",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "f1ce99617e79908e61f1a6753a54a232dd7ba4d3036580f16db54593b594f0de",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-12",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "87432ca7ee6e234c0f12940a768361dc5016048f7d0ff6263c4c4a962796293e",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1038-13",
+      "path": "/2009/03/09/using-git-for-svn-repositories-workflow/",
+      "source_sha256": "ca071616dcad189c156f12de02144db5729487dc0ba9c802f3a5a6c81f0e4c0a",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1029-1",
+      "path": "/2009/02/21/using-local-file-based-git-server-laziness/",
+      "source_sha256": "52cb11885fb71b1b00fa578f367d4119a660a002c142be6ea9e5eb4df997ea2a",
+      "copies_checked": 1,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1029-2",
+      "path": "/2009/02/21/using-local-file-based-git-server-laziness/",
+      "source_sha256": "081102810368a6b6f710eb485c008f22d0a19d1df9dc6b1f128c4515db848c01",
+      "copies_checked": 1,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1029-3",
+      "path": "/2009/02/21/using-local-file-based-git-server-laziness/",
+      "source_sha256": "fd38bad8fe8bbb25d0ce3f1b6c3176e357640005df2755d193f25aaf6857ddbb",
+      "copies_checked": 1,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1029-4",
+      "path": "/2009/02/21/using-local-file-based-git-server-laziness/",
+      "source_sha256": "7fe65f0c5bd65aaa54d65152795595f35e56beb146987c118bd9a8543d3db4ab",
+      "copies_checked": 1,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1014-1",
+      "path": "/2009/01/17/git-side-benefit-reducing-disk-usage/",
+      "source_sha256": "715bf0358dea2d11582b3bb7e72c454a2561eac54b9c9652aa091f6a59c718a0",
+      "copies_checked": 3,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-1014-2",
+      "path": "/2009/01/17/git-side-benefit-reducing-disk-usage/",
+      "source_sha256": "02046b758ae34b458c2e1150a7c8d1ab481d8a241788ddaad8f32db260f87aaa",
+      "copies_checked": 3,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-958-1",
+      "path": "/2008/10/09/net-tips-for-my-development-environment/",
+      "source_sha256": "ce3a55b01d1ee4bd5fca0df919ddb829aa2eba83dc6aeacb37f63f79e1b1963e",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-958-2",
+      "path": "/2008/10/09/net-tips-for-my-development-environment/",
+      "source_sha256": "3a5af4baa0ff37d2dd3f4d7ee80505550f04da1af190eb09e5e3d3b887e34abd",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-958-3",
+      "path": "/2008/10/09/net-tips-for-my-development-environment/",
+      "source_sha256": "e44552d02b25278399c165c8de23f2d958ed4144d8f88a0487d4dc5bd3b6f3f0",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-929-1",
+      "path": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "source_sha256": "2c6af9cd7ba18913a2c08aa51f98efa4184a206385a42c8340b88cb886305851",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-929-2",
+      "path": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "source_sha256": "cc5ddb51d2442915f8d3529d588935b9c8e92d7c178eb9330e54526564a00b5f",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-929-3",
+      "path": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "source_sha256": "7ef40c7f28a562d05843f80351548b80d3cc2294d0f37901547dff324d114783",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-929-4",
+      "path": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "source_sha256": "d28fd6f976bef88e6207124b03191c23dd5d146083b973a0a06b787f49412a83",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-929-5",
+      "path": "/2008/05/26/jquery-rounded-corners-technorati-style/",
+      "source_sha256": "7519c66f2aed203c503710a663018dda1ae62dbb6911e285c8247c6cec019cb5",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-755-1",
+      "path": "/2008/01/01/e-texteditor-snippet-convert-html-entities-for-viewing-code/",
+      "source_sha256": "6d74424c9e107a90b5d80e3c3b32b80f378a2b94793b735dd27b90cd1d59041d",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-828-1",
+      "path": "/2007/12/20/rubygems-rails-20-mongrel-windows-solved/",
+      "source_sha256": "34a9b6a6e3a4468f387e47b5a31195cfaf44bfb542a4320dd99630d04218df7e",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-803-1",
+      "path": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "source_sha256": "f9ff0f65dd3bdc4cf80eb024ca0f0601762cc2eb790cad849c829e42558d3677",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-803-2",
+      "path": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "source_sha256": "a5317a96a760eb74f823ddd0f911773531fd38979175f87d20576f665b658a5b",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-803-3",
+      "path": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "source_sha256": "6b04d66a92bd597feef499fbf08d9642c4e614800ea0b4f5672875fd76110d4c",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-803-4",
+      "path": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "source_sha256": "34fbd6f17f3235a23390274fed805f18e8d7cdcda139c775ddcfc000a1864d6b",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-803-5",
+      "path": "/2007/12/09/rails-20-gem-install-windows-mongrel-trouble/",
+      "source_sha256": "e99ada13fc507d00c7fc585b564c7c1da88586b96608ec60247442bbcc5deefa",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-784-1",
+      "path": "/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/",
+      "source_sha256": "efda6e91f27b5a333d00ee8f2ffd90391dcb3aa68b3af4a8067720a314b052b1",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-784-2",
+      "path": "/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/",
+      "source_sha256": "dd91b393987ad3615f5edbc83b7e61b1201654fbbdc3a0c57b654a09fcc51cb1",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-778-1",
+      "path": "/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+      "source_sha256": "90974695913f5f77f092c435855480bb6d8e682de936b25676b1c72c4f479c6e",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-778-2",
+      "path": "/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+      "source_sha256": "c912d1aad67f880615d0c72149010fdf8828612d562c63b90e63ab1a94ead4a0",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-778-3",
+      "path": "/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+      "source_sha256": "a8dd15bbfbd0bebc6f7fa7059c76e22ce129c20be453c60b1da7b80ae4a662a9",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-778-4",
+      "path": "/2007/11/20/how-to-run-javascript-from-watir-scripts/",
+      "source_sha256": "7f89e336e2cae5274522b2a7b3b48ae42731649d063cd61189f1a87714090f64",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-779-1",
+      "path": "/2007/11/15/justaddwaterdk-hacked/",
+      "source_sha256": "82179a043b530fbff683dc594d54d9cc4893bb42648c8c713789925a4e8889bf",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-779-2",
+      "path": "/2007/11/15/justaddwaterdk-hacked/",
+      "source_sha256": "47238be06034e647ac2f8d3f9a6f4d94ec2e849595c1396e8ec09370fa8c620f",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-779-3",
+      "path": "/2007/11/15/justaddwaterdk-hacked/",
+      "source_sha256": "655786c45b44b9a361265e08f17fe693a45993cf537aeecc2ec315e5e606595f",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-779-4",
+      "path": "/2007/11/15/justaddwaterdk-hacked/",
+      "source_sha256": "9930fa9cbd502b43885f05e4c10b515824df35114b7e9e68511e4d3c71131d77",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-779-5",
+      "path": "/2007/11/15/justaddwaterdk-hacked/",
+      "source_sha256": "752eaa03f1f61c6a7a700e7e34421f8693833a078d92d96a8e76bac92e23aa69",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-779-6",
+      "path": "/2007/11/15/justaddwaterdk-hacked/",
+      "source_sha256": "9555a6fcba46839c3cebfdec6877b66176e93372a4278f7ec9a3c9776e29f587",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-748-1",
+      "path": "/2007/10/22/firefox-tip-for-framebuster-javascript/",
+      "source_sha256": "34ea5038d4f403f04c5779e62abcba380ab00bf4f797c8cbfdd1697eab377757",
+      "copies_checked": 1,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-594-1",
+      "path": "/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/",
+      "source_sha256": "dc35c7fc2a731cc09a06fd3849c42f265e4cbdcbc96700c96de4eda4febcf302",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-594-2",
+      "path": "/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/",
+      "source_sha256": "76cad6e908f9eaa44d5ca7d23c1e38fa7c87ee949be48b8ca2fab59ea3e7ede7",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-550-1",
+      "path": "/2007/02/15/rounded-corners-the-technorati-way/",
+      "source_sha256": "ba8e53b963510e24b2d759d920ef4542edcce9a1ace2aa42ea3f8155d3107046",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-550-2",
+      "path": "/2007/02/15/rounded-corners-the-technorati-way/",
+      "source_sha256": "7541865bdfcecaf0dfafd195abdbd36b10dee6137ba22d4a1f5ca9037daf9205",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-362-1",
+      "path": "/2006/07/14/watir-sweetspot-enterprise-ruby/",
+      "source_sha256": "dc6b2e26ba4053eaea180308f39885808f161b4bb452600b91be93a00a37371f",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-344-1",
+      "path": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+      "source_sha256": "f83b8a4e468ed8ff0a10b74bb2bdb0b2c5b2575ef8314c92585055d89b31361d",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": [
+        "echo get_option('siteurl');",
+        "wp-comments-post.php"
+      ]
+    },
+    {
+      "id": "post-344-2",
+      "path": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+      "source_sha256": "24526d7050b69ce7d6359db067f20f14883659ac3c3d23ad347d1a0e0c72b102",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": [
+        "bloginfo('template_directory');",
+        "my-comments-post.php"
+      ]
+    },
+    {
+      "id": "post-344-3",
+      "path": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+      "source_sha256": "9b427adf5fa6187a7eea41217dc74a509fceb8f265f41ca9679b6b1e3c40176b",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-325-1",
+      "path": "/2006/06/24/blog-usability-avoid-spam-comments/",
+      "source_sha256": "c35f3c87f413e8831661b4ee7a4023e1e166865596fff38424d4da6ffbbe1281",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-325-2",
+      "path": "/2006/06/24/blog-usability-avoid-spam-comments/",
+      "source_sha256": "b2f8429955ebf6c429b27bc78973666d7c0efdc4fa9a84e3949689f1ea0e6b20",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-261-1",
+      "path": "/2006/05/19/rails-tip-scaffolding-lists/",
+      "source_sha256": "d21ca2b76f1020ef529104be9966a7965136860ad6f481d5c0b452e76b76594e",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-261-2",
+      "path": "/2006/05/19/rails-tip-scaffolding-lists/",
+      "source_sha256": "b59bb4cd9945a0b335a426472eecf389aee19b7fd1e57d2b9d18aed34f6e8b81",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-176-1",
+      "path": "/2006/03/11/how-to-limit-table-cell-height-gmail-style/",
+      "source_sha256": "c42b05db9fdf51c0985f39eee6e9c5c0078164e9a6055bec715b89d08cc48308",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    },
+    {
+      "id": "post-176-2",
+      "path": "/2006/03/11/how-to-limit-table-cell-height-gmail-style/",
+      "source_sha256": "2fd93302436236a276e5dde141abac2bbce367167f0cd9b1cddaa7d0ba3cfd1b",
+      "copies_checked": 2,
+      "text_exact": true,
+      "editorial_highlights": []
+    }
+  ],
+  "gist_records": [
+    {
+      "post_id": 1781,
+      "source": "https://gist.github.com/jesperronn/8c5fe0d78f77adc7320f",
+      "files": [
+        {
+          "name": "fill_up_to.rb",
+          "sha256": "3aa017818d6b1f1444bf0ba8ef29e75843749de9764ff21b17384f53799afe32",
+          "copies_checked": 2
+        }
+      ]
+    },
+    {
+      "post_id": 1759,
+      "source": "https://gist.github.com/jesperronn/174cea58433d2f06968f",
+      "files": [
+        {
+          "name": "svn_create.sh",
+          "sha256": "ec540e3454ae545241aa0d9e59a631e032e184df86bff0772cdc4f3add62165f",
+          "copies_checked": 1
+        },
+        {
+          "name": "svn_modify.sh",
+          "sha256": "b234cea866004fbdd6cfe065a96ef06771c0cf7bc36107237bc46e37bfa0d7eb",
+          "copies_checked": 1
+        }
+      ]
+    },
+    {
+      "post_id": 1492,
+      "source": "https://gist.github.com/jesperronn/1222965",
+      "files": [
+        {
+          "name": "WTF.java",
+          "sha256": "245aaf1350ea60f49020d39ada8e4d09d5db086a59a4bb10ebb9c615f7a28cee",
+          "copies_checked": 2
+        }
+      ]
+    },
+    {
+      "post_id": 1414,
+      "source": "https://gist.github.com/jesperronn/848907",
+      "files": [
+        {
+          "name": "delete_svn_subfolders.reg",
+          "sha256": "7583b39a4a42285a6cc986460c3291931323fb197ea922166a78cb9c974f6a6b",
+          "copies_checked": 2
+        }
+      ]
+    },
+    {
+      "post_id": 1361,
+      "source": "https://gist.github.com/jesperronn/612402",
+      "files": [
+        {
+          "name": "com.google.gwt.template.binder.java",
+          "sha256": "b99361ab5c2777b4755a4c2c95118f56553a2db58db7958c76f8513ca320fc7f",
+          "copies_checked": 1
+        },
+        {
+          "name": "com.google.gwt.template.file.uibinder.xml",
+          "sha256": "2b317f065ad16384777d916fd15e16697260ed67c7f92068d57858de0c564ab1",
+          "copies_checked": 1
+        }
+      ]
+    },
+    {
+      "post_id": 1354,
+      "source": "https://gist.github.com/jesperronn/432704",
+      "files": [
+        {
+          "name": "pre-commit.bat",
+          "sha256": "7c48c1a14ed780673df6ee5a512376a3dd1af10d8e710e40faa10c28ff30c265",
+          "copies_checked": 2
+        }
+      ]
+    },
+    {
+      "post_id": 1341,
+      "source": "https://gist.github.com/jesperronn/382105",
+      "files": [
+        {
+          "name": "seeds.rb",
+          "sha256": "0724c50b109aa74b9e0e6a6628435352a60a5f9273f07c38e0cad6a24b10fec1",
+          "copies_checked": 2
+        }
+      ]
+    },
+    {
+      "post_id": 1270,
+      "source": "https://gist.github.com/jesperronn/297427",
+      "files": [
+        {
+          "name": "validate_models.rake",
+          "sha256": "ee60b2838e39eb4dae888e9649d18629aabfcf1d8726096daa5cde60ad6b3faa",
+          "copies_checked": 1
+        }
+      ]
+    },
+    {
+      "post_id": 1245,
+      "source": "https://gist.github.com/jesperronn/246571",
+      "files": [
+        {
+          "name": "server.rb",
+          "sha256": "758f97976e4358f407ead333a6acc132149007015ff0ff08c70308c409f9098e",
+          "copies_checked": 2
+        }
+      ]
+    },
+    {
+      "post_id": 1235,
+      "source": "https://gist.github.com/jesperronn/227952",
+      "files": [
+        {
+          "name": "wwwal-anondk_no_inline_s.user.js",
+          "sha256": "1eb15242dae04f4212d9881d049c77436b07aafc18ec8fd2767eb735a2db4acc",
+          "copies_checked": 2
+        }
+      ]
+    },
+    {
+      "post_id": 1176,
+      "source": "https://gist.github.com/jesperronn/199558",
+      "files": [
+        {
+          "name": "parsepage.rb",
+          "sha256": "e6837280d910db8bde4642064820388850f31f7474f54e7516ced1327e023524",
+          "copies_checked": 2
+        }
+      ]
+    },
+    {
+      "post_id": 1128,
+      "source": "https://gist.github.com/jesperronn/179083",
+      "files": [
+        {
+          "name": "form_options_helper_to_add_grouped_select.rb",
+          "sha256": "d1faec7a5cf8b530a98448e124ecd3c27cc6a0a5873f7bb77e7e4956db715201",
+          "copies_checked": 1
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "unit_tests_passed": 99,
+    "root_site_errors": 0,
+    "project_prefix_errors": 0
+  },
+  "limitations": [
+    "Review confirms fidelity to the preserved historical source, not whether old code still works on current libraries or platforms.",
+    "The complete screenshot comparison is recorded separately in data/audit-summary.json; this inventory is not a blanket approval of its visual review findings."
+  ]
+}
