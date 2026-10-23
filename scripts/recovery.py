@@ -58,10 +58,20 @@ def code_lookup():
     return {code_key(block['captured']): block for block in recovery_data()['code_blocks']}
 
 
-def code_html(code, language='', key=''):
+def code_html(code, language='', key='', highlights=()):
     css = ' class="language-' + html.escape(language, quote=True) + '"' if language else ''
     identifier = ' data-recovery-code="' + html.escape(key, quote=True) + '"' if key else ''
-    return '<pre class="archive-code"' + identifier + '><code' + css + '>' + html.escape(code, quote=False) + '</code></pre>'
+    # These reviewed spans were editorial highlights around literal source, not
+    # HTML belonging to the example. Keep its characters inert and unchanged.
+    pieces, end = [], 0
+    for start, text in sorted((code.find(text), text) for text in highlights):
+        if not text or code.count(text) != 1 or start < end:
+            raise ValueError('Ambiguous code highlight: ' + key)
+        pieces.append(html.escape(code[end:start], quote=False))
+        pieces.append('<span style="color: #ff0000">' + html.escape(text, quote=False) + '</span>')
+        end = start + len(text)
+    pieces.append(html.escape(code[end:], quote=False))
+    return '<pre class="archive-code"' + identifier + '><code' + css + '>' + ''.join(pieces) + '</code></pre>'
 
 
 def restore_code(raw):
@@ -75,7 +85,7 @@ def restore_code(raw):
         block = code_lookup().get(code_key(match['snippet']))
         if block is None:
             return match[0]
-        result = code_html(block['code'], block['language'], block['id'])
+        result = code_html(block['code'], block['language'], block['id'], block.get('highlights', ()))
         # Some original shortcodes end midway through a prose paragraph.
         if match['open'] and match['open'].startswith('<p>') and not match['close']:
             following = source[match.end():].lstrip()

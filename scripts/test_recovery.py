@@ -34,6 +34,18 @@ class RecoveryTests(unittest.TestCase):
         self.assertIn('gem install rails --include-dependencies', commands.get_text())
         self.assertNotIn('–include-dependencies', commands.get_text())
 
+    def test_code_examples_preserve_the_original_red_change_highlights(self):
+        soup = clean_html(parse_document(self.posts[344]['content']['rendered']))
+        expected = {
+            'post-344-1': ["echo get_option('siteurl');", 'wp-comments-post.php'],
+            'post-344-2': ["bloginfo('template_directory');", 'my-comments-post.php'],
+        }
+        for key, texts in expected.items():
+            block = soup.find(attrs={'data-recovery-code': key})
+            self.assertEqual([s.get_text() for s in block.select('span[style="color: #ff0000"]')], texts)
+            self.assertIsNone(block.find(['form', 'input', 'script']))
+            self.assertEqual(block.get_text(), next(b['code'] for b in recovery_data()['code_blocks'] if b['id'] == key))
+
     def test_malformed_tag_lists_render_like_simpletags_without_losing_article_text(self):
         for row in recovery_data()['tag_lists']:
             source = self.posts[row['post_id']]['content']['rendered']

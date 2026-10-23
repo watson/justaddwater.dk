@@ -83,6 +83,10 @@ def visible_text(soup):
     copy = BeautifulSoup(str(soup), 'html.parser')
     for node in copy.select('script, style, template, head, title, input[type=hidden]'):
         node.decompose()
+    for code in copy.select('code'):
+        for span in code.select('span'):
+            span.unwrap()
+        code.smooth()
     return normalize_space(copy.get_text(' ', strip=True))
 
 
@@ -145,6 +149,7 @@ class Expectations:
         self.root = root
         self.videos = read_json(root / 'data/video-players.json', [])
         self.images = read_json(root / 'data/external-images.json', {})
+        self.resources = read_json(root / 'data/external-resources.json', {}).get('resources', {})
         content = read_json(root / 'data/content.json', {})
         self.ids = {str(r['id']): canonical(r['link']) for key in ('posts', 'pages', 'media') for r in content.get(key, [])}
         self.player_urls = {v['url'] for video in self.videos for v in refs(BeautifulSoup(video['captured'], 'html.parser'), ORIGIN + '/')}
@@ -177,6 +182,7 @@ class Expectations:
         for group in (self.recovery.get('aliases', {}), self.ui.get('redirects', {}), self.repairs.get('redirects', {})):
             mappings.update({canonical(k): canonical(v) for k, v in group.items()})
         mappings.update({canonical(k): v['path'] for k, v in self.images.items() if v.get('path')})
+        mappings.update({canonical(k): v['path'] for k, v in self.resources.items() if v.get('path')})
         mappings.update({canonical(d['source_url']): d['local_path'] for d in self.recovery.get('demos', []) if d.get('source_url') and d.get('local_path')})
         added_keys = {(v['tag'], v['attribute'], v['url']) for v in added}
         slash_keys = {(tag, attr, url.rstrip('/')) for tag, attr, url in added_keys}

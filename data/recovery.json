@@ -539,7 +539,12 @@
       "language": "",
       "captured": "[code]&lt;form action=&#8221;&lt;?php <span style=\"color: #ff0000\">echo get_option(&#8216;siteurl&#8217;);</span> ?&gt;/<span style=\"color: #ff0000\">wp-comments-post.php</span>&#8221; method=&#8221;post&#8221; id=&#8221;commentform&#8221;&gt;[/code]",
       "code": "<form action=\"<?php echo get_option('siteurl'); ?>/wp-comments-post.php\" method=\"post\" id=\"commentform\">",
-      "source": "2007 database; original snippet text"
+      "source": "2007 database; original snippet text",
+      "highlights": [
+        "echo get_option('siteurl');",
+        "wp-comments-post.php"
+      ],
+      "highlight_source": "Original captured span elements with color: #ff0000; retain editorial emphasis while displaying the form markup as literal source."
     },
     {
       "id": "post-344-2",
@@ -548,7 +553,12 @@
       "language": "",
       "captured": "[code]&lt;form action=&#8221;&lt;?php <span style=\"color: #ff0000\">bloginfo(&#8216;template_directory&#8217;);</span> ?&gt;/<span style=\"color: #ff0000\">my-comments-post.php</span>&#8221; method=&#8221;post&#8221; id=&#8221;commentform&#8221;&gt;[/code]",
       "code": "<form action=\"<?php bloginfo('template_directory'); ?>/my-comments-post.php\" method=\"post\" id=\"commentform\">",
-      "source": "2007 database; original snippet text"
+      "source": "2007 database; original snippet text",
+      "highlights": [
+        "bloginfo('template_directory');",
+        "my-comments-post.php"
+      ],
+      "highlight_source": "Original captured span elements with color: #ff0000; retain editorial emphasis while displaying the form markup as literal source."
     },
     {
       "id": "post-344-3",

@@ -68,7 +68,14 @@ def archived_form_errors(soup):
 def article_text_preserved(markup, actual):
     # Independently check approved snippet text and every remaining prose node.
     # Do not run the converter's restore_code/clean_html on the expectation.
-    replacements = {block['captured']: block['code'] for block in recovery_data()['code_blocks']}
+    replacements = {}
+    for block in recovery_data()['code_blocks']:
+        text = block['code']
+        # The caller's get_text(' ') separates editorial span boundaries.
+        # Exact code characters and highlight spans are checked independently.
+        for highlight in block.get('highlights', []):
+            text = text.replace(highlight, ' ' + highlight + ' ')
+        replacements[block['captured']] = text
     markup = SHORTCODE.sub(lambda match: '<pre>' + html.escape(replacements[match[0]], quote=False) + '</pre>'
                            if match[0] in replacements else match[0], markup)
     for row in recovery_data()['tag_lists']:
@@ -234,6 +241,9 @@ def verify(site, base):
             seen_code.add(key)
             if block.get_text() != expected_code.get(key):
                 errors.append(f'{file}: recovered example differs: {key}')
+            record = next((r for r in recovery['code_blocks'] if r['id'] == key), {})
+            if record.get('highlights') and [s.get_text() for s in block.select('span[style="color: #ff0000"]')] != record['highlights']:
+                errors.append(f'{file}: recovered code highlighting differs: {key}')
         for block in soup.select('[data-recovery-tags]'):
             row = next((r for r in recovery['tag_lists'] if str(r['post_id']) == block['data-recovery-tags']), None)
             links = block.find_all('a')

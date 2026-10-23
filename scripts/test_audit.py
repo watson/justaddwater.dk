@@ -7,7 +7,7 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from audit import ROOT, Expectations, audit_outcome, audit_record, canonical, decode, fragment_ids, health, is_html, local_file, merge_browser, render_report, screenshot_coverage, text_changes, visual_comparison
+from audit import ROOT, Expectations, audit_outcome, audit_record, canonical, decode, fragment_ids, health, is_html, local_file, merge_browser, render_report, screenshot_coverage, text_changes, visible_text, visual_comparison
 
 
 class AuditTest(unittest.TestCase):
@@ -215,6 +215,24 @@ class AuditTest(unittest.TestCase):
         unexplained, explained = policy.reference_issues(old, new, '/')
         self.assertEqual(unexplained, [])
         self.assertEqual(len(explained), 1)
+
+    def test_preserved_stylesheet_mapping_does_not_approve_unrecorded_replacement(self):
+        url = 'https://old.test/theme.css'
+        (self.root / 'data/external-resources.json').write_text(json.dumps({'resources': {
+            url: {'path': '/archive-assets/theme.css', 'kind': 'stylesheet'}}}))
+        policy = self.policy()
+        old = [{'tag': 'link', 'attribute': 'href', 'url': url, 'label': ''}]
+        for path, expected in [('/archive-assets/theme.css', []), ('/wrong.css', old)]:
+            new = [{'tag': 'link', 'attribute': 'href', 'url': path, 'label': ''}]
+            problems, _ = policy.reference_issues(old, new, '/')
+            self.assertEqual(problems, expected)
+
+    def test_editorial_code_highlighting_does_not_change_literal_text(self):
+        original = BeautifulSoup('<pre>&lt;form action="/file.php"&gt;</pre>', 'html.parser')
+        actual = BeautifulSoup('<pre><code>&lt;form action="/<span style="color: #ff0000">file.php</span>"&gt;</code></pre>', 'html.parser')
+        self.assertEqual(visible_text(original), visible_text(actual))
+        actual.span.string = 'wrong.php'
+        self.assertNotEqual(visible_text(original), visible_text(actual))
 
     def test_literal_code_is_not_a_fragment_target(self):
         file = self.site / 'page.html'

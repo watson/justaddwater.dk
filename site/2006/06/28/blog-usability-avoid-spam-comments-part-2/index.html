@@ -137,9 +137,9 @@ Create a symbolic link from your theme directory to the <code>wp-comments-post.p
 Still in your theme directory you need to find which files that contain links to the <code>wp-comments-post.php</code> file. To do this execute the following command:<p></p>
 <p><kbd>grep -l wp-comments-post.php *</kbd></p>
 <p>You will then get a list of the files you need to edit. Now update each file so that the link to <code>wp-comments-post.php</code> instead point to the symbolic link. This is usually done by changing the following:</p>
-<pre class="archive-code" data-recovery-code="post-344-1"><code>&lt;form action="&lt;?php echo get_option('siteurl'); ?&gt;/wp-comments-post.php" method="post" id="commentform"&gt;</code></pre>
+<pre class="archive-code" data-recovery-code="post-344-1"><code>&lt;form action="&lt;?php <span style="color: #ff0000">echo get_option('siteurl');</span> ?&gt;/<span style="color: #ff0000">wp-comments-post.php</span>" method="post" id="commentform"&gt;</code></pre>
 <p>To this:</p>
-<pre class="archive-code" data-recovery-code="post-344-2"><code>&lt;form action="&lt;?php bloginfo('template_directory'); ?&gt;/my-comments-post.php" method="post" id="commentform"&gt;</code></pre></li>
+<pre class="archive-code" data-recovery-code="post-344-2"><code>&lt;form action="&lt;?php <span style="color: #ff0000">bloginfo('template_directory');</span> ?&gt;/<span style="color: #ff0000">my-comments-post.php</span>" method="post" id="commentform"&gt;</code></pre></li>
 <li><strong>Deny Access To Old File</strong><br/>
 To make sure that the old <code>wp-comments-post.php</code> file cannot be accessed from the internet, edit your <code>.htaccess</code> file in the root of your website and add the following to the top of the file:<p></p>
 <pre class="archive-code" data-recovery-code="post-344-3"><code>&lt;Files wp-comments-post.php&gt;
