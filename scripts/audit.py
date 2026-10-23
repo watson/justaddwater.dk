@@ -29,7 +29,8 @@ from bs4 import BeautifulSoup, UnicodeDammit
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'http://justaddwater.dk'
 HOSTS = {'justaddwater.dk', 'www.justaddwater.dk'}
-POLICY_VERSION = 2
+POLICY_VERSION = 3
+VISUAL_KINDS = {'visual', 'article-structure', 'layout', 'computed-style', 'page-overflow'}
 
 
 def read_json(path, default=None):
@@ -111,6 +112,15 @@ def text_changes(before, after):
 
 def finding(kind, status, message, **evidence):
     return {'kind': kind, 'status': status, 'message': message, **evidence}
+
+
+def article_structure(soup):
+    # Count the actual parsed markup, before applying text-recovery exceptions.
+    # A restored code example may intentionally replace a rendered table, but
+    # that changes presentation and must remain a separate review item.
+    entries = soup.select('.entry')
+    return {name: sum(len(entry.select(name)) for entry in entries)
+            for name in ('table', 'pre', 'iframe', 'object', 'embed', 'audio', 'video', 'canvas', 'svg')}
 
 
 def inline_review(scripts):
@@ -509,7 +519,14 @@ def audit_record(path, url, kind, cache, site, policy, prefix, failure=None):
         before, after = {t['id'] for t in old_soup.select(selector)}, {t['id'] for t in new_soup.select(selector)}
         if before - after:
             issues.append(finding('missing-' + label, 'unexplained', 'Original IDs are absent.', ids=sorted(before - after)))
-    row['structure'] = {side: {name: len(s.select(name)) for name in ['h1', 'h2', 'h3', 'img', 'iframe', 'object', 'form', 'pre', 'audio']} for side, s in [('original', old_soup), ('clone', new_soup)]}
+    row['structure'] = {side: {name: len(s.select(name)) for name in ['h1', 'h2', 'h3', 'img', 'iframe', 'object', 'form', 'table', 'pre', 'audio']} for side, s in [('original', old_soup), ('clone', new_soup)]}
+    before, after = article_structure(old_soup), article_structure(new_soup)
+    structural_changes = [{'element': name, 'before': before[name], 'after': after[name]}
+                          for name in before if before[name] != after[name]]
+    if structural_changes:
+        issues.append(finding('article-structure', 'review',
+            'Article elements changed. Recorded text repairs do not approve the rendered result.',
+            changes=structural_changes, text_repair_rules=notes))
     inline_before = {normalize_space(t.decode_contents()): t.decode_contents() for t in old_soup.select('script:not([src])') if t.decode_contents().strip()}
     inline_after = {normalize_space(t.decode_contents()): t.decode_contents() for t in new_soup.select('script:not([src])') if t.decode_contents().strip()}
     changed_scripts = [inline_before[key] for key in inline_before.keys() - inline_after.keys()]
@@ -602,6 +619,23 @@ def screenshot_coverage(info, width, height):
     return None if (width, height) == expected else {'expected': list(expected), 'actual': [width, height]}
 
 
+def changed_regions(mask, scale):
+    """Keep a localized change from disappearing into a long page's denominator."""
+    regions = []
+    # At the normal 0.375 scale, each region covers about 427 x 480 CSS pixels.
+    for y in range(0, mask.height, 180):
+        for x in range(0, mask.width, 160):
+            right, bottom = min(x + 160, mask.width), min(y + 180, mask.height)
+            tile = mask.crop((x, y, right, bottom))
+            changed = sum(tile.histogram()[1:])
+            ratio = changed / (tile.width * tile.height)
+            if ratio > .05 and changed >= 50:
+                regions.append({'x': round(x / scale), 'y': round(y / scale),
+                                'width': round(tile.width / scale), 'height': round(tile.height / scale),
+                                'changed_pixel_fraction': round(ratio, 5)})
+    return sorted(regions, key=lambda r: r['changed_pixel_fraction'], reverse=True)
+
+
 def visual_comparison(row, out):
     from PIL import Image, ImageChops, ImageEnhance
     sides = row.get('browser', {})
@@ -631,11 +665,13 @@ def visual_comparison(row, out):
     name = 'screenshots/' + row['id'] + '-diff.png'
     image.save(out / name, optimize=True)
     row['visual'] = {'changed_pixel_fraction': round(ratio, 5), 'diff': name, 'scale': scale,
-                     'original_height': sides['original']['height'], 'clone_height': sides['clone']['height']}
+                     'original_height': sides['original']['height'], 'clone_height': sides['clone']['height'],
+                     'changed_regions': changed_regions(mask, scale)}
     for im in images:
         im.close()
-    if ratio > .01:
-        row['findings'].append(finding('visual', 'review', 'Rendered pages differ; inspect screenshots. Expected repairs also affect this score.', **row['visual']))
+    if ratio > .01 or row['visual']['changed_regions']:
+        row['findings'].append(finding('visual', 'review',
+            'Rendered pages differ; visual review is required even when text changes match recorded repairs.', **row['visual']))
 
 
 def merge_browser(rows, out):
@@ -644,6 +680,8 @@ def merge_browser(rows, out):
             continue
         data = read_json(out / 'browser' / (row['id'] + '.json'))
         if not data:
+            row['findings'].append(finding('browser-missing', 'unverified',
+                'No browser comparison is available for this HTML pair; run --browser.'))
             continue
         if any(data.get(k) != row.get(k) for k in ('source_sha256', 'clone_sha256')):
             row['findings'].append(finding('browser-stale', 'unverified', 'Saved browser evidence predates the compared HTML; run --browser again.'))
@@ -651,6 +689,10 @@ def merge_browser(rows, out):
         row['browser'] = data
         for side in ('original', 'clone'):
             info = data.get(side, {})
+            if not info.get('screenshot') or not (out / info['screenshot']).is_file():
+                row['findings'].append(finding('browser-missing', 'unverified',
+                    'The browser screenshot is missing; run --browser.', side=side))
+                info.pop('screenshot', None)
             if info.get('error'):
                 row['findings'].append(finding('browser-capture', 'unverified', 'Browser capture failed.', side=side, error=info['error']))
             if info.get('truncated'):
@@ -678,7 +720,50 @@ def merge_browser(rows, out):
                     styles.append({'selector': selector, 'property': prop, 'before': a, 'after': b})
         if styles:
             row['findings'].append(finding('computed-style', 'review', 'Computed theme styles differ, including color changes below the pixel-diff tolerance.', changes=styles))
+        layout = []
+        for selector in sorted(old_geometry.keys() & new_geometry.keys()):
+            for prop in ('x', 'y', 'width', 'height'):
+                a, b = old_geometry[selector].get(prop), new_geometry[selector].get(prop)
+                if isinstance(a, (int, float)) and isinstance(b, (int, float)) and abs(a - b) >= 8:
+                    layout.append({'selector': selector, 'property': prop, 'before': a, 'after': b, 'delta': b - a})
+        if layout:
+            row['findings'].append(finding('layout', 'review',
+                'Rendered layout differs by at least eight CSS pixels; inspect the affected regions.', changes=layout))
         visual_comparison(row, out)
+
+
+def audit_outcome(counts, metadata):
+    """A clean text check is not a completed visual review."""
+    statuses = counts['statuses']
+    partial = counts['urls'] < metadata.get('inventory_urls', counts['urls'])
+    if statuses.get('unexplained'):
+        status, code, label = 'needs-investigation', 1, 'Investigation required'
+    elif statuses.get('review'):
+        status, code, label = 'needs-review', 2, 'Review required'
+    elif partial or statuses.get('unverified') or not counts['urls']:
+        status, code, label = 'incomplete', 2, 'Audit incomplete'
+    else:
+        status, code, label = 'complete', 0, 'No unresolved findings in the audited capture'
+    return {'status': status, 'exit_code': code, 'label': label, 'partial': partial,
+            'pending_review_findings': statuses.get('review', 0),
+            'unverified_findings': statuses.get('unverified', 0)}
+
+
+def review_summary(row):
+    descriptions = []
+    for f in row['findings']:
+        if f['kind'] == 'article-structure':
+            descriptions.extend(f"{c['element']}: {c['before']} → {c['after']}" for c in f['changes'])
+        if f['kind'] == 'layout':
+            descriptions.extend(f"article {c['property']}: {c['before']} → {c['after']} px"
+                                for c in f['changes'] if c['selector'] == '.entry')
+    visual = row.get('visual', {})
+    if visual:
+        descriptions.append(f"{visual['changed_pixel_fraction']:.1%} of all pixels differ")
+        regions = visual.get('changed_regions', [])
+        if regions:
+            descriptions.append(f"{regions[0]['changed_pixel_fraction']:.1%} in the most changed region")
+    return '; '.join(descriptions)
 
 
 def render_report(rows, out, metadata):
@@ -686,7 +771,11 @@ def render_report(rows, out, metadata):
     kinds = Counter(f['kind'] for r in rows for f in r['findings'])
     metadata['counts'] = {'urls': len(rows), 'html_pairs': sum(r.get('html', False) for r in rows),
                           'browser_pairs': sum(all(r.get('browser', {}).get(s, {}).get('screenshot') for s in ('original', 'clone')) for r in rows),
+                          'visual_review_urls': sum(any(f['kind'] in VISUAL_KINDS and f['status'] == 'review' for f in r['findings']) for r in rows),
                           'statuses': dict(statuses), 'kinds': dict(kinds)}
+    metadata['outcome'] = audit_outcome(metadata['counts'], metadata)
+    metadata['report_policy_version'] = POLICY_VERSION
+    metadata['report_generated_at'] = datetime.now(timezone.utc).isoformat()
     groups = Counter((f['kind'], f['status']) for r in rows for f in r['findings'])
     metadata['finding_groups'] = [{'kind': key[0], 'status': key[1], 'count': count} for key, count in groups.most_common()]
     for row in rows:
@@ -702,6 +791,8 @@ def render_report(rows, out, metadata):
         body = '<p><a href="../index.html">← All URLs</a></p><h1>' + esc(row.get('title', row['path'])) + '</h1><p>' + esc(row['path']) + '</p>'
         body += '<p><a href="' + esc(row['url'], quote=True) + '">Original live URL</a> · <a href="https://watson.github.io/justaddwater.dk' + esc(row['path'], quote=True) + '">Published clone</a></p>'
         body += '<h2>Findings</h2>'
+        if any(f['status'] == 'review' and f['kind'] in VISUAL_KINDS for f in row['findings']):
+            body += '<p class="review"><strong>Visual review required.</strong> ' + esc(review_summary(row)) + '</p>'
         for f in row['findings']:
             body += '<details><summary><b class="' + f['status'] + '">' + esc(f['status']) + '</b> · ' + esc(f['kind']) + ': ' + esc(f['message']) + '</summary><pre>' + esc(json.dumps(f, ensure_ascii=False, indent=2)) + '</pre></details>'
         if row.get('browser'):
@@ -720,12 +811,19 @@ def render_report(rows, out, metadata):
             if row.get(key):
                 body += '<details><summary>' + esc(key.replace('_', ' ').capitalize()) + '</summary><pre>' + esc(json.dumps(row[key], ensure_ascii=False, indent=2)) + '</pre></details>'
         (details / (row['id'] + '.html')).write_text(document(row['path'], body))
-        rank = 0 if 'unexplained' in state else 1 if 'review' in state else 2 if 'inherited' in state else 3
+        rank = 0 if 'unexplained' in state else 1 if any(f['kind'] == 'article-structure' for f in row['findings']) else 2 if 'review' in state else 3 if 'unverified' in state else 4
+        regions = row.get('visual', {}).get('changed_regions', [])
+        score = regions[0]['changed_pixel_fraction'] if regions else row.get('visual', {}).get('changed_pixel_fraction', 0)
         search = ' '.join(f['kind'] for f in row['findings'])
         group_keys = ' '.join(f['kind'] + ':' + f['status'] for f in row['findings'])
-        cards.append((rank, row['path'], '<tr data-groups="' + esc(group_keys, quote=True) + '" data-state="' + ' '.join(state) + '" data-search="' + esc(search, quote=True) + '"><td><a href="pages/' + row['id'] + '.html">' + esc(row['path']) + '</a></td><td>' + esc(', '.join(state)) + '</td><td>' + str(len(row['findings'])) + '</td></tr>'))
-    body = '<h1>Archive comparison</h1><p>' + esc(metadata['created_at']) + '</p><div class="stats">'
-    for name, value in [('Inventoried URLs', len(rows)), ('HTML pairs', metadata['counts']['html_pairs']), ('Browser pairs', metadata['counts']['browser_pairs']), ('Unexplained findings', statuses['unexplained'])]:
+        cards.append((rank, -score, row['path'], '<tr data-groups="' + esc(group_keys, quote=True) + '" data-state="' + ' '.join(state) + '" data-search="' + esc(search, quote=True) + '"><td><a href="pages/' + row['id'] + '.html">' + esc(row['path']) + '</a></td><td>' + esc(', '.join(state)) + '</td><td>' + esc(review_summary(row)) + '</td><td>' + str(len(row['findings'])) + '</td></tr>'))
+    outcome = metadata['outcome']
+    body = '<h1>Archive comparison</h1><p>' + esc(metadata['created_at']) + '</p><h2>' + outcome['label'] + '</h2>'
+    body += '<p>Zero unexplained text differences does not mean the rendered pages match. Pending reviews and missing evidence prevent a successful audit result.</p>'
+    if outcome['partial']:
+        body += '<p><strong>Partial audit:</strong> ' + str(len(rows)) + ' of ' + str(metadata['inventory_urls']) + ' inventoried URLs selected.</p>'
+    body += '<div class="stats">'
+    for name, value in [('Selected URLs', len(rows)), ('Browser pairs', metadata['counts']['browser_pairs']), ('Unexplained findings', statuses['unexplained']), ('Visual reviews pending', metadata['counts']['visual_review_urls']), ('All pending review findings', statuses['review']), ('Unverified findings', statuses['unverified'])]:
         body += '<div><strong>' + str(value) + '</strong><span>' + name + '</span></div>'
     body += '</div><p>Compare the original capture with the static archive. <b>Unexplained</b> means investigate; it does not prove a regression. <b>Review</b> includes visual differences and browser signals. <b>Inherited</b> issues occur on both sides or were already recorded as unavailable. <b>Unverified</b> identifies missing evidence.</p><p>Offline browser replay uses saved responses and separately recovered external images. Missing dependencies and third-party players are blocked and listed, not treated as proof of live failures. Form controls are inspected without submitting anything. Text differences retain a raw view alongside the scoped expected repairs.</p>'
     body += '<details><summary>Coverage, configuration and limitations</summary><pre>' + esc(json.dumps(metadata, ensure_ascii=False, indent=2)) + '</pre></details><p><a href="report.json">Download complete JSON</a></p><label>Find a URL or issue <input id="query" type="search" placeholder="URL, issue type or status"></label> <label>Status <select id="status"><option value="">All</option>'
@@ -735,13 +833,13 @@ def render_report(rows, out, metadata):
     for (kind, status), count in groups.most_common():
         if status in ('unexplained', 'review', 'inherited'):
             body += '<button type="button" data-kind="' + esc(kind, quote=True) + '" data-status="' + status + '">' + esc(kind) + ' · ' + status + ' (' + str(count) + ')</button> '
-    body += '</p></details><p id="count"></p><table><thead><tr><th>URL</th><th>Status</th><th>Findings</th></tr></thead><tbody>' + ''.join(c[2] for c in sorted(cards)) + '</tbody></table><script>const q=document.querySelector("#query"),s=document.querySelector("#status"),rows=[...document.querySelectorAll("tbody tr")];function filter(group=""){let n=0;for(const r of rows){r.hidden=!!group&&!r.dataset.groups.split(" ").includes(group)||!((r.textContent+" "+r.dataset.search).toLowerCase().includes(q.value.toLowerCase())&&(!s.value||r.dataset.state.split(" ").includes(s.value)));if(!r.hidden)n++}document.querySelector("#count").textContent=n+" URLs shown"}q.addEventListener("input",()=>filter());s.addEventListener("change",()=>filter());document.querySelectorAll("button[data-kind]").forEach(b=>b.addEventListener("click",()=>{q.value=b.dataset.kind;s.value=b.dataset.status;filter(b.dataset.kind+":"+b.dataset.status)}));filter();</script>'
+    body += '</p></details><p id="count"></p><table><thead><tr><th>URL</th><th>Status</th><th>Rendered changes</th><th>Findings</th></tr></thead><tbody>' + ''.join(c[3] for c in sorted(cards)) + '</tbody></table><script>const q=document.querySelector("#query"),s=document.querySelector("#status"),rows=[...document.querySelectorAll("tbody tr")];function filter(group=""){let n=0;for(const r of rows){r.hidden=!!group&&!r.dataset.groups.split(" ").includes(group)||!((r.textContent+" "+r.dataset.search).toLowerCase().includes(q.value.toLowerCase())&&(!s.value||r.dataset.state.split(" ").includes(s.value)));if(!r.hidden)n++}document.querySelector("#count").textContent=n+" URLs shown"}q.addEventListener("input",()=>filter());s.addEventListener("change",()=>filter());document.querySelectorAll("button[data-kind]").forEach(b=>b.addEventListener("click",()=>{q.value=b.dataset.kind;s.value=b.dataset.status;filter(b.dataset.kind+":"+b.dataset.status)}));filter();</script>'
     (out / 'index.html').write_text(document('Archive comparison', body))
     return metadata['counts']
 
 
 def document(title, body):
-    return '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' + html.escape(title) + '</title><style>body{font:16px/1.5 system-ui,sans-serif;color:#1e293b;background:#f8fafc;max-width:1400px;margin:32px auto;padding:0 24px}h1{font-size:32px}a{color:#0369a1}table{border-collapse:collapse;width:100%;background:white}td,th{text-align:left;border-bottom:1px solid #e2e8f0;padding:10px;overflow-wrap:anywhere}td:first-child{width:68%}details{border:1px solid #cbd5e1;padding:12px;margin:12px 0;background:white}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;max-height:650px;overflow:auto}.stats{display:flex;gap:16px;flex-wrap:wrap}.stats div{background:white;border:1px solid #cbd5e1;padding:16px 24px}.stats strong{display:block;font-size:28px}.stats span{font-size:14px}.unexplained{color:#b91c1c}.inherited,.review{color:#92400e}.fixed{color:#166534}.screens{display:flex;gap:16px}.screens section{min-width:0;flex:1}.shot{max-height:700px;overflow:auto;border:1px solid #cbd5e1}.shot img{width:100%;display:block}input,select{font:inherit;padding:8px;border:1px solid #94a3b8;border-radius:4px}input{width:320px}tr[hidden]{display:none}@media(max-width:700px){.screens{display:block}input{width:80%}}</style><body>' + body + '</body></html>'
+    return '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' + html.escape(title) + '</title><style>body{font:16px/1.5 system-ui,sans-serif;color:#1e293b;background:#f8fafc;max-width:1400px;margin:32px auto;padding:0 24px}h1{font-size:32px}a{color:#0369a1}table{border-collapse:collapse;width:100%;background:white}td,th{text-align:left;border-bottom:1px solid #e2e8f0;padding:10px;overflow-wrap:anywhere}td:first-child{width:40%}th:last-child,td:last-child{white-space:nowrap;width:1%}details{border:1px solid #cbd5e1;padding:12px;margin:12px 0;background:white}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;max-height:650px;overflow:auto}.stats{display:flex;gap:16px;flex-wrap:wrap}.stats div{background:white;border:1px solid #cbd5e1;padding:16px 24px}.stats strong{display:block;font-size:28px}.stats span{font-size:14px}.unexplained{color:#b91c1c}.inherited,.review{color:#92400e}.fixed{color:#166534}.screens{display:flex;gap:16px}.screens section{min-width:0;flex:1}.shot{max-height:700px;overflow:auto;border:1px solid #cbd5e1}.shot img{width:100%;display:block}input,select{font:inherit;padding:8px;border:1px solid #94a3b8;border-radius:4px}input{width:320px}tr[hidden]{display:none}@media(max-width:700px){.screens{display:block}input{width:80%}}</style><body>' + body + '</body></html>'
 
 
 def main():
@@ -756,7 +854,7 @@ def main():
     parser.add_argument('--browser-workers', type=int, default=3)
     parser.add_argument('--browser-executable', help='Optional system Chromium/Chrome path')
     parser.add_argument('--refresh', action='store_true', help='GET originals into a separate live snapshot; never overwrite the capture')
-    parser.add_argument('--fail-on-unexplained', action='store_true')
+    parser.add_argument('--fail-on-unexplained', action='store_true', help='Deprecated compatibility option: unexplained findings always exit 1; pending reviews or incomplete evidence exit 2')
     parser.add_argument('--report-only', action='store_true', help='Rebuild report from existing static/browser evidence')
     args = parser.parse_args()
     args.base_path = '/' + args.base_path.strip('/') if args.base_path.strip('/') else ''
@@ -797,7 +895,7 @@ def main():
                     'generated_html_without_capture': ['/' + p.relative_to(args.site).as_posix() for p in sorted(args.site.rglob('*.html')) if p not in compared],
                     'limitations': ['Browser replay cannot verify third-party video availability or uncaptured remote scripts.',
                                     'Recovered external images reconstruct baseline dependencies; they are labeled in browser evidence.',
-                                    'Pixel differences include intentional changes and are review signals, not automatic failures.',
+                                    'Pixel differences include intentional changes; unresolved reviews prevent a successful audit result.',
                                     'Controls are inspected, not clicked; demo behavior still needs interaction tests.',
                                     'Generated clone-only pages are inventoried separately; existing verify.py validates their local links.',
                                     'DOM checks use HTML5 parsing; text expectations use an independent literal-fragment comparison.',
@@ -819,7 +917,8 @@ def main():
     counts = render_report(rows, args.output, metadata)
     print(json.dumps(counts, indent=2))
     print('Report: ' + str(args.output / 'index.html'))
-    return 1 if args.fail_on_unexplained and counts['statuses'].get('unexplained') else 0
+    print(metadata['outcome']['label'] + f" (exit {metadata['outcome']['exit_code']}).")
+    return metadata['outcome']['exit_code']
 
 
 if __name__ == '__main__':

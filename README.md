@@ -258,6 +258,9 @@ reports missing evidence rather than silently accepting it.
 remaining limitations. `data/audit-repair-report.json` lists repairs and the
 disposition of failed original captures. The auditor reports findings without editing
 the archived site.
+That historical run still had 802 pending pixel-comparison findings; its zero
+unexplained count was not a visual pass. `data/audit-visual-regression.json`
+records the table-cell article regression and the corrected audit outcome.
 
 For screenshots, pixel differences and Chromium health checks on **all captured
 HTML pages**:
@@ -290,6 +293,23 @@ The raw text diff and original/clone screenshots remain available even for
 expected changes. Browser results are resumable and invalidated by changes to
 HTML, dependency bytes, configuration, browser version or the runner.
 
+The auditor also compares smaller image regions: a region with more than 5%
+changed pixels (at least 50 pixels at the comparison scale) requires review even
+when the whole-page difference is below 1%. This prevents long pages from hiding
+localized changes. Article element counts and layout changes of at least eight
+CSS pixels are separate review findings. For example, repairing a code shortcode
+can replace a rendered table with a literal source listing; accepting that text
+repair does **not** approve the visual difference.
+
+The report prominently lists pending visual reviews, describes structural and
+layout changes, and prioritizes those pages. Exit status is now **0** only when
+the complete capture inventory has no unexplained findings, pending reviews or
+unverified evidence; **1** means unexplained findings; **2** means review is
+required or coverage/evidence is incomplete. Partial selections always remain
+incomplete. A static-only run without matching browser evidence is not a visual
+pass. Intentional changes remain review items; zero unexplained text differences
+does not establish visual equivalence.
+
 Useful options:
 
 - `--match '/2007/09/27/'` or `--limit 10`: a clearly labeled partial run.
@@ -298,13 +318,15 @@ Useful options:
 - `--report-only`: rebuild the HTML/JSON report from saved evidence.
 - `--refresh`: fetch originals with two GET workers into a separate `live/`
   snapshot and report changes since capture. The original cache is never replaced.
-- `--fail-on-unexplained`: return a nonzero status for unexplained differences.
+- `--fail-on-unexplained`: retained for compatibility; unexplained findings now
+  always exit 1, and unresolved reviews or incomplete evidence exit 2.
 
 Unexplained findings require investigation; they are not automatically declared
 regressions. Generated clone-only pages are listed separately, and `verify.py`
-continues to check their links and expected content. The comparison is optional
-and is not part of deployment CI, which must work without the private capture
-cache or the original server.
+continues to check their links and expected content. The full comparison is
+optional and is not part of deployment CI, which must work without the private
+capture cache or the original server. Its deterministic unit tests, including
+generated screenshot comparisons, do run in deployment CI.
 
 ## Licensing
 

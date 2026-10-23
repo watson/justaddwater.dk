@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-10-23T06:55:21.483277+00:00",
+  "compared_site_commit": "db35c37e5f10145a02f670ba82bbebb73fb9ffa5",
+  "scope": "Focused regression audit of the article, its comment-page alias and two attachment pages (4 of 2522 captured URLs). This is not a new full-site audit.",
+  "path": "/2006/03/11/how-to-limit-table-cell-height-gmail-style/",
+  "source_sha256": "68d805a6c8ee9c6d7f52b7774595131d5112e73036a7c59e7eaae5e1305ba1b4",
+  "clone_sha256": "906c70066f914caa277f228aad0ef067be821aa3b772a70d3668efb09d33cb4c",
+  "cause": "The previous auditor detected the pixel difference but treated visual findings as advisory. Even --fail-on-unexplained exited successfully. A matching recorded code repair explained the text without approving its presentation.",
+  "before": {
+    "exit_code": 0,
+    "changed_pixel_fraction": 0.04146,
+    "visual_status": "review"
+  },
+  "after": {
+    "exit_code": 2,
+    "outcome": {
+      "status": "needs-review",
+      "exit_code": 2,
+      "label": "Review required",
+      "partial": true,
+      "pending_review_findings": 10,
+      "unverified_findings": 4
+    },
+    "counts": {
+      "urls": 4,
+      "html_pairs": 4,
+      "browser_pairs": 4,
+      "visual_review_urls": 4,
+      "statuses": {
+        "expected": 4,
+        "fixed": 2,
+        "review": 10,
+        "unverified": 4
+      },
+      "kinds": {
+        "text": 4,
+        "shortcode": 2,
+        "article-structure": 2,
+        "browser-jsErrors": 4,
+        "layout": 4,
+        "visual": 4
+      }
+    },
+    "article_structure": [
+      {
+        "element": "table",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "element": "pre",
+        "before": 0,
+        "after": 2
+      }
+    ],
+    "article_layout": [
+      {
+        "selector": ".entry",
+        "property": "height",
+        "before": 1250,
+        "after": 1527,
+        "delta": 277
+      }
+    ],
+    "changed_pixel_fraction": 0.04146,
+    "most_changed_region": {
+      "x": 427,
+      "y": 960,
+      "width": 427,
+      "height": 480,
+      "changed_pixel_fraction": 0.11632
+    }
+  },
+  "validation": {
+    "unit_tests_passed": 96,
+    "exact_recorded_article_fragment_regression": true,
+    "local_change_below_global_pixel_threshold_regression": true,
+    "noisy_pixels_not_flagged": true,
+    "missing_browser_evidence_prevents_success": true,
+    "partial_run_prevents_success": true,
+    "report_heading_filtering_and_three_images_verified_in_chromium": true,
+    "report_javascript_errors": 0
+  },
+  "report": ".cache/audit-visual-regression/index.html",
+  "article_report": ".cache/audit-visual-regression/pages/ee66b0ce6486e92a.html",
+  "rendering_decision": "This change fixes auditing and reporting. It does not reverse the previously recorded restoration of HTML/CSS examples as literal source code."
+}

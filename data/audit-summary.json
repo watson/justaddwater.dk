@@ -239,5 +239,11 @@
     "Generated clone-only pages are inventoried separately; existing verify.py validates their local links.",
     "DOM checks use HTML5 parsing; text expectations use an independent literal-fragment comparison.",
     "Live refresh detects drift and saves separate responses; it does not replace the baseline comparison."
-  ]
+  ],
+  "review_status": {
+    "status": "needs-review",
+    "visual_findings_pending": 802,
+    "explanation": "This historical run was not a passing visual audit. The zero-unexplained count excluded 802 unresolved visual findings, including the table-cell article. Do not interpret it as visual equivalence.",
+    "auditor_fix": "data/audit-visual-regression.json"
+  }
 }

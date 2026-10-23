@@ -1,4 +1,5 @@
 import hashlib
+import html
 import json
 from pathlib import Path
 import tempfile
@@ -6,7 +7,7 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from audit import Expectations, audit_record, canonical, decode, fragment_ids, health, is_html, local_file, screenshot_coverage, text_changes
+from audit import ROOT, Expectations, audit_outcome, audit_record, canonical, decode, fragment_ids, health, is_html, local_file, merge_browser, render_report, screenshot_coverage, text_changes, visual_comparison
 
 
 class AuditTest(unittest.TestCase):
@@ -43,6 +44,107 @@ class AuditTest(unittest.TestCase):
         before, after, _ = policy.text_pair(original, good.replace('<p>Do not lose this paragraph.</p>', ''))
         self.assertTrue(text_changes(before, after))
         self.assertIn('code: one', notes)
+
+    def test_table_article_repair_still_requires_visual_review(self):
+        # The exact fragment behind the March 11 screenshot, independently of
+        # the converter: accepting its text does not approve its presentation.
+        records = json.loads((ROOT / 'data/recovery.json').read_text())['code_blocks']
+        block = next(b for b in records if b['id'] == 'post-176-1')
+        original = '<div class="entry">' + block['captured'] + '</div>'
+        clone = '<div class="entry"><pre><code>' + html.escape(block['code']) + '</code></pre></div>'
+        row = self.capture(block['article'], original, clone)
+        self.policy({'code_blocks': [block]})
+        row = audit_record(row['path'], row['url'], 'pages', self.cache, self.site, Expectations(self.root), '')
+        self.assertTrue(any(f['kind'] == 'text' and f['status'] == 'expected' for f in row['findings']))
+        changes = [f for f in row['findings'] if f['kind'] == 'article-structure']
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(changes[0]['status'], 'review')
+        self.assertIn({'element': 'table', 'before': 1, 'after': 0}, changes[0]['changes'])
+        self.assertIn({'element': 'pre', 'before': 0, 'after': 1}, changes[0]['changes'])
+
+    def test_small_local_visual_change_is_not_diluted_by_a_long_page(self):
+        from PIL import Image, ImageDraw
+        (self.root / 'screenshots').mkdir()
+        original = Image.new('RGB', (1280, 20000), 'white')
+        clone = original.copy()
+        ImageDraw.Draw(clone).rectangle((320, 500, 620, 620), fill='black')
+        for side, im in [('original', original), ('clone', clone)]:
+            im.save(self.root / 'screenshots' / (side + '.png'))
+        row = {'id': 'localized', 'findings': [], 'browser': {
+            side: {'screenshot': 'screenshots/' + side + '.png', 'height': 20000,
+                   'viewport': {'width': 1280, 'height': 900}}
+            for side in ('original', 'clone')}}
+        visual_comparison(row, self.root)
+        self.assertLess(row['visual']['changed_pixel_fraction'], .01)
+        self.assertTrue(any(f['kind'] == 'visual' and f['status'] == 'review' for f in row['findings']))
+
+    def test_missing_browser_evidence_is_explicitly_incomplete(self):
+        row = self.capture('/post/', '<p>Same</p>', '<p>Same</p>')
+        merge_browser([row], self.root)
+        self.assertTrue(any(f['kind'] == 'browser-missing' and f['status'] == 'unverified' for f in row['findings']))
+
+    def test_visual_review_prevents_success_even_with_no_unexplained_findings(self):
+        row = self.capture('/post/', '<p>Same</p>', '<p>Same</p>')
+        row['findings'] = [{'kind': 'visual', 'status': 'review', 'message': 'Rendered pages differ.'},
+                           {'kind': 'text', 'status': 'expected', 'message': 'Recorded code repair.'}]
+        metadata = {'created_at': 'test', 'inventory_urls': 1, 'selected_urls': 1}
+        render_report([row], self.root, metadata)
+        self.assertEqual(metadata['outcome']['status'], 'needs-review')
+        self.assertEqual(metadata['outcome']['exit_code'], 2)
+        report = (self.root / 'index.html').read_text()
+        self.assertIn('Visual reviews pending', report)
+        self.assertIn('Review required', report)
+
+    def test_partial_and_unverified_reports_cannot_claim_completion(self):
+        for partial, findings in [(True, []), (False, [{'kind': 'baseline', 'status': 'unverified', 'message': 'Missing'}])]:
+            with self.subTest(partial=partial):
+                row = self.capture('/post/', '<p>Same</p>', '<p>Same</p>')
+                row['findings'] = findings
+                metadata = {'created_at': 'test', 'inventory_urls': 2 if partial else 1, 'selected_urls': 1}
+                render_report([row], self.root, metadata)
+                self.assertEqual(metadata['outcome']['status'], 'incomplete')
+                self.assertEqual(metadata['outcome']['exit_code'], 2)
+
+    def test_audit_exit_codes_distinguish_complete_errors_and_pending_review(self):
+        for statuses, expected in [({}, 0), ({'expected': 2, 'fixed': 1}, 0),
+                                   ({'unexplained': 1, 'review': 1}, 1),
+                                   ({'review': 1}, 2), ({'unverified': 1}, 2)]:
+            with self.subTest(statuses=statuses):
+                result = audit_outcome({'urls': 1, 'statuses': statuses}, {'inventory_urls': 1})
+                self.assertEqual(result['exit_code'], expected)
+        self.assertEqual(audit_outcome({'urls': 0, 'statuses': {}}, {})['exit_code'], 2)
+
+    def test_layout_change_is_reviewed_even_when_pixels_are_identical(self):
+        from PIL import Image
+        row = self.capture('/post/', '<p>Same</p>', '<p>Same</p>')
+        (self.root / 'browser').mkdir()
+        Image.new('RGB', (1280, 900), 'white').save(self.root / 'same.png')
+        (self.root / 'screenshots').mkdir()
+        data = {k: row[k] for k in ('source_sha256', 'clone_sha256')}
+        for side, height in [('original', 1250), ('clone', 1527)]:
+            data[side] = {'screenshot': 'same.png', 'height': 900,
+                          'viewport': {'width': 1280, 'height': 900},
+                          'geometry': {'.entry': {'height': height}}}
+        (self.root / 'browser' / (row['id'] + '.json')).write_text(json.dumps(data))
+        merge_browser([row], self.root)
+        layout = next(f for f in row['findings'] if f['kind'] == 'layout')
+        self.assertEqual(layout['status'], 'review')
+        self.assertEqual(layout['changes'][0]['delta'], 277)
+        self.assertFalse(any(f['kind'] == 'visual' for f in row['findings']))
+
+    def test_identical_screenshots_and_small_jpeg_noise_do_not_require_visual_review(self):
+        from PIL import Image, ImageDraw
+        (self.root / 'screenshots').mkdir()
+        before = Image.new('RGB', (1280, 900), 'white')
+        after = before.copy()
+        ImageDraw.Draw(after).rectangle((300, 400, 800, 800), fill=(250, 250, 250))
+        for side, im in [('original', before), ('clone', after)]:
+            im.save(self.root / (side + '.png'))
+        row = {'id': 'noise', 'findings': [], 'browser': {
+            side: {'screenshot': side + '.png', 'height': 900, 'viewport': {'width': 1280, 'height': 900}}
+            for side in ('original', 'clone')}}
+        visual_comparison(row, self.root)
+        self.assertEqual(row['findings'], [])
 
     def test_inherited_bug_is_reported_even_when_pages_match(self):
         row = self.capture('/post/', '<p>[tags]broken[tags]</p>', '<p>[tags]broken[tags]</p>')
