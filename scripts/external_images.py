@@ -8,7 +8,7 @@ from urllib.parse import urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
 from bs4 import BeautifulSoup
-from archive import ROOT, SITE, HOSTS, ORIGIN, CACHE, CSS_URL, embedded_css, fetch, write_json
+from archive import ROOT, SITE, HOSTS, ORIGIN, CACHE, CSS_URL, IMAGE_SUFFIXES, embedded_css, fetch, write_json
 
 
 def download(url):
@@ -50,7 +50,10 @@ def capture():
     data = json.loads((ROOT / 'data/content.json').read_text())
     urls = set()
     def collect(soup):
-        candidates = [image['src'] for image in soup.find_all('img', src=True)]
+        candidates = [image['src'] for image in soup.find_all(['img', 'input'], src=True)
+                      if image.name == 'img' or image.get('type', '').lower() == 'image']
+        candidates.extend(link['href'] for link in soup.find_all('a', href=True)
+                          if Path(urlsplit(link['href']).path).suffix.lower() in IMAGE_SUFFIXES)
         candidates.extend(match[2] for css in embedded_css(soup) for match in CSS_URL.finditer(css))
         urls.update(url for url in candidates if urlsplit(url).hostname and urlsplit(url).hostname not in HOSTS)
 

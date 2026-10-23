@@ -32,6 +32,7 @@ CACHE = ROOT / '.cache'
 SITE = ROOT / 'site'
 ORIGIN = 'http://justaddwater.dk'
 HOSTS = {'justaddwater.dk', 'www.justaddwater.dk'}
+IMAGE_SUFFIXES = {'.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.ico'}
 ASSET_SUFFIXES = {'.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp',
                   '.ico', '.pdf', '.zip', '.gz', '.txt', '.xml', '.mp3', '.mp4',
                   '.mov', '.woff', '.woff2', '.ttf', '.eot', '.swf', '.doc', '.xls'}
@@ -228,7 +229,7 @@ def protect_form_examples(raw):
 
 def references(soup, base, ids):
     pages, assets = set(), set()
-    for tag in soup.find_all(['a', 'img', 'link', 'source', 'video', 'audio', 'object', 'embed']):
+    for tag in soup.find_all(['a', 'img', 'input', 'link', 'source', 'video', 'audio', 'object', 'embed']):
         attrs = ['href'] if tag.name in ('a', 'link') else ['src', 'poster', 'data']
         for attr in attrs:
             val = tag.get(attr)
@@ -480,6 +481,12 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                 value = scoped.get(value, value)
                 value = repairs()['link_repairs'].get(value, value)
                 tag[attr] = value
+                if tag.name == 'a' and Path(urlsplit(value).path).suffix.lower() in IMAGE_SUFFIXES:
+                    image = external.get(value, {})
+                    if image.get('path'):
+                        tag['data-original-url'] = value
+                        tag[attr] = image['path']
+                        continue
                 key = tag_key(value)
                 if key is not None:
                     tag['data-original-url'] = value
@@ -491,7 +498,8 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
             elif attr == 'href' and value.startswith('http:www.'):
                 value = value.replace('http:', 'http://', 1)
                 tag[attr] = value
-            if tag.name == 'img' and attr == 'src' and urlsplit(value).hostname and urlsplit(value).hostname not in HOSTS:
+            image_element = tag.name == 'img' or (tag.name == 'input' and tag.get('type', '').lower() == 'image')
+            if image_element and attr == 'src' and urlsplit(value).hostname and urlsplit(value).hostname not in HOSTS:
                 image = external.get(value, {})
                 tag['src'] = '/archive-assets/feed.svg' if value.endswith('/feed-icon32x32.png') else image.get('path', '/archive-assets/unavailable.svg')
                 for dimension in ('width', 'height'):
@@ -518,7 +526,7 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                 # Preserve already-broken historical references as links to a
                 # local explanation; record the source for future recovery.
                 unavailable.add(path)
-                if attr in ('src', 'poster') and tag.name in ('img', 'source', 'video'):
+                if attr in ('src', 'poster') and (image_element or tag.name in ('source', 'video')):
                     tag[attr] = '/archive-assets/unavailable.svg'
                     tag['data-original-url'] = ORIGIN + path
                 elif attr == 'href' and tag.name == 'a':

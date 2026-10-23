@@ -906,5 +906,30 @@
     "sha256": "dcf96f03b1801264a8e9abcd260276a2aa209c6d3e636d15d0f2fde99d4b5f58",
     "fetched_from": "https://web.archive.org/web/20060725030447id_/http://static.technorati.com/static/css/img/corners/white.png",
     "note": "Original PNG corner sprite for the recovered UTF-16 rounded-corners demo."
+  },
+  "http://www.dk.capgemini.com/img/btn_go.gif": {
+    "path": "/archive-assets/external/99e9a9c34f880fa957c27890.gif",
+    "sha256": "99e9a9c34f880fa957c27890ef26d50dcf13850b32bcc549e63ef669c68208a4",
+    "fetched_from": "https://web.archive.org/web/20061006221812id_/http://www.dk.capgemini.com:80/img/btn_go.gif"
+  },
+  "http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_dashboard.jpg": {
+    "path": "/archive-assets/external/b6ee258d8d1f913c2379abfa.jpg",
+    "fetched_from": "https://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_dashboard.jpg",
+    "sha256": "b6ee258d8d1f913c2379abfa92a329139de3553397f0c4e41e9baf3894830895"
+  },
+  "http://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_discover_data-2.jpg": {
+    "path": "/archive-assets/external/36bd07127fd054a0a0a06132.jpg",
+    "fetched_from": "https://www.kaushik.net/avinash/wp-content/uploads/2007/05/google_analytics_v2_discover_data-2.jpg",
+    "sha256": "36bd07127fd054a0a0a061324484f9f01cfc70f9ce546312e7fb3e277b4ded7c"
+  },
+  "http://www.netliferesearch.com/files/kalender_netlife_V3_mai2005.jpg": {
+    "path": "/archive-assets/external/f2c8bf09804044a4b7d5480c.jpg",
+    "sha256": "f2c8bf09804044a4b7d5480c6c715a38f13005fd5a09c5b4593dad1b4628e1fa",
+    "fetched_from": "https://web.archive.org/web/20051222042320id_/http://www.netliferesearch.com:80/files/kalender_netlife_V3_mai2005.jpg"
+  },
+  "http://www.tatanka.com.br/ies4linux/extra-ie7.jpg": {
+    "path": "/archive-assets/external/ef50059acab9b1ade0b0fc67.jpg",
+    "sha256": "ef50059acab9b1ade0b0fc6737fb1490d4b2389ff7c9bad6940f27ce32d7f335",
+    "fetched_from": "https://web.archive.org/web/20061210210057id_/http://www.tatanka.com.br:80/ies4linux/extra-ie7.jpg"
   }
 }

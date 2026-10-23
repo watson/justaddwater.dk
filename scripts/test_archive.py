@@ -44,6 +44,19 @@ class BackgroundCaptureTests(unittest.TestCase):
 
 
 class LegacyMarkupTests(unittest.TestCase):
+    def test_direct_image_links_use_local_copies_and_publisher_pages_keep_their_links(self):
+        url = 'http://example.com/full-size.jpg?version=1'
+        page = 'http://example.com/photos/123/'
+        path = '/archive-assets/external/photo.jpg'
+        source = f'<a href="{url}">Full size</a><a href="{page}">Publisher</a>'
+        output = rewrite(parse_document(source), ORIGIN + '/', {}, set(), set(),
+                         {url: {'path': path}, page: {'path': path}})
+        image_link, page_link = output.find_all('a')
+        self.assertEqual(image_link['href'], path)
+        self.assertEqual(image_link['data-original-url'], url)
+        self.assertEqual(image_link.get_text(), 'Full size')
+        self.assertEqual(page_link['href'], page)
+
     def test_downloadable_demo_controls_remain_visible_without_submission(self):
         source = '<form action="/send.php" method="post"><input type="submit" value="CSS example"><button onclick="submit()">Example</button></form>'
         demo = clean_html(parse_document(source))
@@ -74,6 +87,21 @@ class LegacyMarkupTests(unittest.TestCase):
 
 
 class ArchivedFormTests(unittest.TestCase):
+    def test_image_button_is_preserved_locally_and_stays_disabled_after_deployment(self):
+        url = 'http://www.dk.capgemini.com/img/btn_go.gif'
+        path = '/archive-assets/external/button.gif'
+        source = f'<form action="/search.php"><input type="image" src="{url}" alt="Go"></form>'
+        output = rewrite(clean_html(parse_document(source)), ORIGIN + '/', {}, set(), set(),
+                         {url: {'path': path}})
+        parser = PrefixHTML('/justaddwater.dk')
+        parser.feed(str(output))
+        parser.close()
+        deployed = BeautifulSoup(''.join(parser.parts), 'html.parser')
+        self.assertEqual(deployed.input['src'], '/justaddwater.dk' + path)
+        self.assertEqual(deployed.input['data-original-url'], url)
+        self.assertEqual(deployed.input['alt'], 'Go')
+        self.assertEqual(archived_form_errors(deployed), [])
+
     def test_contact_form_keeps_its_labels_and_controls_but_cannot_submit(self):
         data = json.loads((ROOT / 'data/content.json').read_text())
         source = next(row['content']['rendered'] for row in data['pages'] if row['slug'] == 'contact-us')

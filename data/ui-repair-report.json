@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-10-23",
-  "recovered_external_references": 169,
+  "recovered_external_references": 174,
   "additional_recovered_references": 82,
   "unrecovered_external_images": [
     {
@@ -248,7 +248,9 @@
     "The retired FeedBurner badge is replaced with the existing local RSS icon and is not counted as unrecovered.",
     "Exact URLs were checked against Internet Archive captures; applicable original publisher pages, known backup filenames and Flickr resolution variants were also checked.",
     "Unavailable images retain their original URL and descriptive alt text. No substitute pictures or unreviewed historical content were published.",
-    "2026-10-23: Checked the complete WordPress export, the 1,632,615-path local backup inventory and original Flickr pages. Recovered photo 65477716 from its original page; the eleven tordisvej photo pages return 404."
+    "2026-10-23: Checked the complete WordPress export, the 1,632,615-path local backup inventory and original Flickr pages. Recovered photo 65477716 from its original page; the eleven tordisvej photo pages return 404.",
+    "2026-10-23: A complete image dependency scan found the same external image button in three Denmark map demos. The original host no longer resolves; recovered its exact btn_go.gif from the Internet Archive and included image inputs in capture, rewriting and validation.",
+    "2026-10-23: All ten direct external image links now open local copies. Six target previously recovered images; four additional full-size images were preserved: two Google Analytics screenshots from the original publisher, plus the Netlife usability calendar and IEs4Linux screenshot from exact Internet Archive captures."
   ],
   "additional_css_dependency_recovered": "Original Technorati white.png corner sprite, discovered after recovering the damaged UTF-16 demo."
 }

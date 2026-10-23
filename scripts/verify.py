@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from archive import ROOT, HOSTS, CSS_URL, embedded_css, is_video_embed, parse_document
+from archive import ROOT, HOSTS, CSS_URL, IMAGE_SUFFIXES, embedded_css, is_video_embed, parse_document
 from recovery import recovery_data, video_players, SHORTCODE, UNDO_PATH, TABLE_DEMO, BUTTON_DEMO
 from feeds import feed_specs, comment_items, ATOM, url_path
 from legacy import ui_repairs, allowed_bookmarklet, topic_index, tag_key
@@ -200,9 +200,12 @@ def verify(site, base):
                     errors.append(f'{file.relative_to(site)}: retired Technorati tag link: {url}')
                 linked_file = target(url, file)
                 parts = urlsplit(url)
+                if tag.name == 'a' and attr == 'href' and parts.hostname and Path(parts.path).suffix.lower() in IMAGE_SUFFIXES:
+                    errors.append(f'{file.relative_to(site)}: remote image link: {url}')
                 if tag.name == 'a' and attr == 'href' and parts.fragment and not parts.scheme and not parts.netloc:
                     fragment_links.append((file, linked_file if parts.path else file, unquote(parts.fragment), url))
-            if tag.name == 'img' and urlsplit(tag.get('src', '')).hostname:
+            image_element = tag.name == 'img' or (tag.name == 'input' and tag.get('type', '').lower() == 'image')
+            if image_element and urlsplit(tag.get('src', '')).hostname:
                 external_images[urlsplit(tag['src']).hostname] += 1
             if tag.get('srcset'):
                 for item in tag['srcset'].split(','):
