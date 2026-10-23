@@ -8,6 +8,23 @@ permalinks, comments, author/category/tag/date archives, images and downloads.
 It runs without PHP, WordPress, a database, or a build-time connection to the
 original host.
 
+## Recovery and preservation report
+
+Read the [migration and preservation report](https://watson.github.io/justaddwater.dk/migration-report/)
+for a searchable record of recovered content, rendering and behavior repairs,
+and resources now stored locally. It links to affected articles, demonstrations,
+archive copies, original sources and the underlying evidence. Its resource
+inventory distinguishes archive/backup recovery, successful direct captures,
+local adaptations and approved replacement uploads. Unrecovered material and
+outstanding visual reviews are kept separate.
+
+The report uses only the public manifests and generated site; it never reads the
+private WordPress XML or database backup. Regenerate it after changing those
+records with `.venv/bin/python scripts/migration_report.py`; the normal archive
+build also does this. CI runs `--check` to reject stale output. The downloadable
+inventory is also committed as `data/migration-report.json`. Counts are source
+records and affected URLs, not additive counts of distinct historical defects.
+
 ## What is included
 
 - **440 posts and 10 pages**, captured from the public site on 22 October 2026.

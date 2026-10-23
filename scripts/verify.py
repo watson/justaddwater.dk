@@ -121,10 +121,20 @@ def expected_missing_image(tag, attr, url, base, missing):
     return bool(image and attr == 'src' and path and url == base + path)
 
 
+def report_reference_allowed(tag, attr, relative, urls):
+    """Only explicit evidence links in the generated report may target old hosts."""
+    return (relative == '/migration-report/index.html' and tag.name == 'a' and attr == 'href'
+            and tag.get('data-migration-reference') == 'true' and tag.get(attr) in urls)
+
+
 def verify(site, base):
     site = site.resolve()
     base = '/' + base.strip('/') if base.strip('/') else ''
     errors, local_links, comment_ids, archived_forms = [], 0, set(), 0
+    report_file = ROOT / 'data/migration-report.json'
+    report = json.loads(report_file.read_text()) if report_file.exists() else {}
+    report_urls = {p['original_url'] for p in report.get('pages', [])}
+    report_urls.update(r[k] for r in report.get('resources', []) for k in ('source', 'retrieved_from') if r.get(k))
     external_images = Counter()
     image_records = json.loads((ROOT / 'data/external-images.json').read_text())
     missing_images = {url: record['missing_path'] for url, record in image_records.items()
@@ -209,6 +219,8 @@ def verify(site, base):
                     allowed.add(base + '/archive-assets/demos.js')
                 elif relative == UNDO_PATH:
                     allowed.add('../demos.js')
+                elif relative == '/migration-report/index.html':
+                    allowed.add(base + '/archive-assets/migration-report.js')
                 if tag.get('src') not in allowed or tag.get_text().strip():
                     errors.append(f'{file}: unexpected executable script')
             local_demo = (tag.name == 'iframe' and tag.get('src') == base + UNDO_PATH
@@ -232,6 +244,8 @@ def verify(site, base):
                 if url.lower().startswith(('javascript:', 'vbscript:')):
                     if attr != 'href' or not allowed_bookmarklet(tag, relative):
                         errors.append(f'{file}: unreviewed executable URL')
+                if report_reference_allowed(tag, attr, relative, report_urls):
+                    continue
                 if urlsplit(url).hostname in HOSTS and tag.get('rel') not in (['canonical'], ['shortlink']):
                     errors.append(f'{file.relative_to(site)}: depends on old host: {url}')
                 if attr == 'href' and tag_key(url) is not None:

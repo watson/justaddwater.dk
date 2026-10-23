@@ -725,6 +725,8 @@ def build(data, state):
     write_json(ROOT / 'data/capture-report.json', report)
     print(json.dumps({k: v for k, v in report.items() if not isinstance(v, (list, dict))}, indent=2))
     print('Comments missing from rendered HTML:', len(missing_comments), flush=True)
+    from migration_report import generate as generate_migration_report
+    generate_migration_report()
 
 
 if __name__ == '__main__':

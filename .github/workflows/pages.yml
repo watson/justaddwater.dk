@@ -34,6 +34,8 @@ jobs:
           .venv/bin/pip install -r requirements-audit.txt
       - name: Test asset capture and deployment URL rewriting
         run: .venv/bin/python -m unittest discover -s scripts -p 'test_*.py'
+      - name: Check migration report against public recovery records
+        run: .venv/bin/python scripts/migration_report.py --check
       - name: Prepare static files
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
