@@ -45,6 +45,19 @@ class AuditTest(unittest.TestCase):
         self.assertTrue(text_changes(before, after))
         self.assertIn('code: one', notes)
 
+    def test_comment_repair_accepts_only_exact_recorded_text_and_keeps_neighbours(self):
+        policy = self.policy({'comment_repairs': [{'id': 123, 'captured_text': 'Truncated', 'content': 'Truncated text restored'}]})
+        original = '<li id="comment-123"><cite>Author</cite><p>Truncated</p></li><p>Neighbour</p>'
+        good = original.replace('<p>Truncated</p>', '<p>Truncated text restored</p>')
+        before, after, notes = policy.text_pair(original, good)
+        self.assertEqual(before, after)
+        self.assertIn('restored-comment-text: 123', notes)
+        for bad in (good.replace(' restored', ''), good.replace('<p>Neighbour</p>', ''), good.replace('Author', 'Wrong author')):
+            before, after, _ = policy.text_pair(original, bad)
+            self.assertTrue(text_changes(before, after))
+        before, after, _ = policy.text_pair(original.replace('Truncated', 'Later edit'), good)
+        self.assertTrue(text_changes(before, after))
+
     def test_table_article_repair_still_requires_visual_review(self):
         # The exact fragment behind the March 11 screenshot, independently of
         # the converter: accepting its text does not approve its presentation.

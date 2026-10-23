@@ -9,7 +9,7 @@ from urllib.parse import quote, unquote, urlsplit, urlunsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from recovery import recovery_data
+from recovery import recovery_data, restore_comment_content
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://justaddwater.dk'
@@ -109,7 +109,8 @@ def comment_items(spec, data, snapshots):
                       'guid': 'http://justaddwater.dk' + c['path'] + f'#comment-{c["id"]}',
                       'date': format_datetime(datetime.fromisoformat(c['date_gmt']).replace(tzinfo=timezone.utc)),
                       'content': '<p>' + html.escape(c['content']) + '</p>'})
-    return sorted(items, key=lambda i: (parsedate_to_datetime(i['date']), i['id']), reverse=True)[:10 if 'post_id' in spec else 50]
+    selected = sorted(items, key=lambda i: (parsedate_to_datetime(i['date']), i['id']), reverse=True)[:10 if 'post_id' in spec else 50]
+    return [{**item, 'content': restore_comment_content(item['id'], item['content'])} for item in selected]
 
 
 def write_feeds(data, site, render_content, snapshots=None, comment_links=None):

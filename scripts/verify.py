@@ -131,6 +131,7 @@ def verify(site, base):
                       if record.get('error') and not record.get('path') and record.get('missing_path')}
     known_missing_images = 0
     data = json.loads((ROOT / 'data/content.json').read_text())
+    comment_repairs = {r['id']: r for r in recovery_data().get('comment_repairs', [])}
     expected_videos = {row['id']: expected_video_markup(row)
                        for row in data['posts'] + data['pages']}
     original_players = {markup for players in expected_videos.values() for markup in players}
@@ -217,8 +218,13 @@ def verify(site, base):
             if any(attr.lower().startswith('on') for attr in tag.attrs):
                 errors.append(f'{file}: inline event handler')
             if tag.get('id') and re.fullmatch(r'comment-\d+', tag['id']):
-                comment_ids.add(int(tag['id'].split('-')[-1]))
+                comment_id = int(tag['id'].split('-')[-1])
+                comment_ids.add(comment_id)
                 page_comment_ids[file].add(tag['id'])
+                if comment_id in comment_repairs:
+                    paragraphs = tag.find_all('p', recursive=False)
+                    if len(paragraphs) != 1 or paragraphs[0].get_text() != comment_repairs[comment_id]['content']:
+                        errors.append(f'{file.relative_to(site)}: restored comment text differs: {comment_id}')
             for attr in ('href', 'src', 'poster', 'data', 'action'):
                 url = tag.get(attr)
                 if not url:
@@ -376,6 +382,8 @@ def verify(site, base):
     missing_comments = {row['id'] for row in data['comments']} - comment_ids
     if missing_comments:
         errors.append(f'{len(missing_comments)} public comments missing from HTML: {sorted(missing_comments)[:20]}')
+    if set(comment_repairs) - comment_ids:
+        errors.append(f'Restored truncated comments missing: {sorted(set(comment_repairs) - comment_ids)}')
     for comment in recovery['comments']:
         file = site / comment['path'].lstrip('/') / 'index.html'
         soup = BeautifulSoup(file.read_bytes(), 'html.parser')
@@ -425,6 +433,12 @@ def verify(site, base):
                 errors.append(f'HTML masks the RSS directory URL: {path}')
             for item in items:
                 link = item.find(f'{{{ATOM}}}link').get('href', '') if atom else item.findtext('link', '')
+                comment_match = re.fullmatch(r'comment-(\d+)', urlsplit(link).fragment)
+                if spec['kind'] == 'comments' and comment_match and int(comment_match[1]) in comment_repairs:
+                    record = comment_repairs[int(comment_match[1])]
+                    body = BeautifulSoup(item.findtext('description', ''), 'html.parser')
+                    if body.p is None or body.p.get_text() != record['content']:
+                        errors.append(f'Restored comment text differs in RSS: {path}#{comment_match[0]}')
                 expected_host = urlsplit(self_link.get('href', '')).netloc if self_link is not None else ''
                 if urlsplit(link).netloc != expected_host or not urlsplit(link).path.startswith(base + '/'):
                     errors.append(f'RSS entry links outside the deployed archive: {path}')
@@ -460,6 +474,7 @@ def verify(site, base):
                'known_missing_image_elements': known_missing_images,
                'public_comments': len(comment_ids), 'local_links_checked': local_links,
                'recovered_comments': len(recovery['comments']),
+               'restored_truncated_comments': len(comment_repairs),
                'rss_feeds': len(feeds),
                'errors': len(errors), 'deployment_base': base or '/'}
     print(json.dumps(summary, indent=2))

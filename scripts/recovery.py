@@ -168,8 +168,31 @@ def restore_demos(soup, path):
         soup.head.append(script)
 
 
+def restore_comment_body(container, record):
+    paragraphs = container.find_all('p', recursive=False)
+    if (len(paragraphs) != 1 or paragraphs[0].find(True) or
+            paragraphs[0].get_text() not in (record['captured_text'], record['content'])):
+        raise ValueError(f'Recorded truncated comment changed: {record["id"]}')
+    paragraphs[0].string = record['content']
+
+
+def restore_comment_content(comment_id, markup):
+    """Apply the same exact, approved comment repair to a feed item."""
+    record = next((r for r in recovery_data().get('comment_repairs', []) if r['id'] == comment_id), None)
+    if record is None:
+        return markup
+    soup = BeautifulSoup(markup, 'html.parser')
+    restore_comment_body(soup, record)
+    return str(soup)
+
+
 def restore_comments(soup, path):
     """Restore only owner-approved comments at their original permalinks."""
+    canonical = re.sub(r'comment-page-\d+/$', '', path)
+    for record in recovery_data().get('comment_repairs', []):
+        if record['path'] == canonical:
+            for item in soup.find_all('li', id=f'comment-{record["id"]}'):
+                restore_comment_body(item, record)
     for comment in recovery_data()['comments']:
         anchor = f'comment-{comment["id"]}'
         if comment['path'] != path or soup.find(id=anchor):

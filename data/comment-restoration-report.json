@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-10-23T09:41:04.320055+00:00",
+  "base_commit": "5e2f7a358ef9cd6c86ee3091b496664be51f244b",
+  "decision": "Restore the missing suffixes of four existing public pingbacks from the 2007 database backup, as requested by the owner on 2026-10-23.",
+  "comment_ids": [
+    40879,
+    89144,
+    89152,
+    164717
+  ],
+  "source": "data/recovery.json, comment_repairs: exact source text, per-comment SHA-256 and displayed replacement",
+  "research_scope": {
+    "approved_current_export_comments": 2783,
+    "comments_shared_with_2007_backup": 1104,
+    "confirmed_truncations": 4,
+    "likely_cause": "Encoding/import error: each stored string stops immediately before its first non-ASCII character. The historical cause is not directly verified."
+  },
+  "validation": {
+    "unit_tests_passed": 107,
+    "restored_comments": 4,
+    "html_occurrences": 8,
+    "html_pages": 6,
+    "rss_entries": 3,
+    "rss_feeds": 2,
+    "all_other_html_and_feed_content_unchanged": true,
+    "unexplained_static_findings": 0,
+    "root": {
+      "html_pages": 2746,
+      "published_posts_and_pages": 450,
+      "articles_with_video_players": 21,
+      "recovered_code_examples": 75,
+      "disabled_archived_forms": 564,
+      "known_missing_image_elements": 42,
+      "public_comments": 2784,
+      "local_links_checked": 100995,
+      "recovered_comments": 2,
+      "restored_truncated_comments": 4,
+      "rss_feeds": 1204,
+      "errors": 0,
+      "deployment_base": "/"
+    },
+    "project_prefix": {
+      "html_pages": 2746,
+      "published_posts_and_pages": 450,
+      "articles_with_video_players": 21,
+      "recovered_code_examples": 75,
+      "disabled_archived_forms": 564,
+      "known_missing_image_elements": 42,
+      "public_comments": 2784,
+      "local_links_checked": 100995,
+      "recovered_comments": 2,
+      "restored_truncated_comments": 4,
+      "rss_feeds": 1204,
+      "errors": 0,
+      "deployment_base": "/justaddwater.dk"
+    }
+  },
+  "browser": {
+    "compared_html_pairs": 6,
+    "clone_js_errors": 0,
+    "clone_broken_images": 0,
+    "clone_horizontal_overflow": 0,
+    "counts": {
+      "urls": 8,
+      "html_pairs": 6,
+      "browser_pairs": 6,
+      "visual_review_urls": 6,
+      "statuses": {
+        "expected": 8,
+        "unverified": 6,
+        "review": 14,
+        "fixed": 2
+      },
+      "kinds": {
+        "text": 6,
+        "browser-jsErrors": 6,
+        "layout": 6,
+        "visual": 6,
+        "shortcode": 2,
+        "article-structure": 2,
+        "feed-rewrite": 2
+      }
+    },
+    "report": ".cache/audit-comment-restoration/index.html"
+  },
+  "preservation": [
+    "Only the recorded truncated body is extended; authors, dates, IDs, permalinks and neighbouring content are unchanged.",
+    "RSS entry IDs, dates, ordering and feed limits are unchanged. Comment 164717 remains outside its article feed ten-item window.",
+    "The original HTTP capture, public API export and feed snapshots remain unchanged.",
+    "The build rejects unexpected newer text; comparison checks accept only the exact recorded restoration and still flag unrelated loss."
+  ],
+  "limitations": [
+    "This browser comparison covers six affected HTML pages, not the entire site.",
+    "Restoring text changes page heights; visual findings remain visible and do not waive existing review requirements.",
+    "The backup covers only through September 2007."
+  ]
+}

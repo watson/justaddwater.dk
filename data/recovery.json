@@ -44,6 +44,52 @@
       "source": "2007 database; author name encoding repaired; restoration approved by the owner on 2026-10-22"
     }
   ],
+  "comment_repairs": [
+    {
+      "id": 40879,
+      "post_id": 467,
+      "path": "/2006/11/26/windows-vista-off-button-usability-issues/",
+      "captured_text": "[…] Vielen neuen Features von Windows Vista sind verbl",
+      "content": "[…] Vielen neuen Features von Windows Vista sind verblüffend – besonders wenn man sie bereits von Mac OS X kennt. Ob Microsoft dabei bei Apple abgeschaut hat, kann und möchte ich nicht sagen. Schließlich baut ja alles auf irgendetwas anderem auf.  Doch die Verwechslung ist fast perfekt. Ich kannte das zweite Video bereits, doch habe auch erst nach zwei Minuten festgestellt, dass die Stimme über das neue Windows Vista und nicht Mac OS X spricht.  Mit Windows Vista werden es die Benutzer aber nicht unbedingt einfacher haben, wo sie doch nun bis zu 15 Möglichkeiten haben ihren Computer-Arbeit zu beenden (Roger Johansson: Windows Vista Off Button Usability Issues). Die armen.    __________________ Markus Wulftange […]",
+      "backup_content": "[...] Vielen neuen Features von Windows Vista sind verblüffend &#8211; besonders wenn man sie bereits von Mac OS X kennt. Ob Microsoft dabei bei Apple abgeschaut hat, kann und möchte ich nicht sagen. Schließlich baut ja alles auf irgendetwas anderem auf.  Doch die Verwechslung ist fast perfekt. Ich kannte das zweite Video bereits, doch habe auch erst nach zwei Minuten festgestellt, dass die Stimme über das neue Windows Vista und nicht Mac OS X spricht.  Mit Windows Vista werden es die Benutzer aber nicht unbedingt einfacher haben, wo sie doch nun bis zu 15 Möglichkeiten haben ihren Computer-Arbeit zu beenden (Roger Johansson: Windows Vista Off Button Usability Issues). Die armen.    __________________ Markus Wulftange [...]",
+      "backup_content_sha256": "77d1f67592446ae086cb64b9d09d63357ba18ec16ad8d8cfefec5bd62491c650",
+      "source": "2007-09-17_watson_wp_jawdk.sql, wp_comments.comment_content; dump completed 2007-09-16",
+      "approved_on": "2026-10-23"
+    },
+    {
+      "id": 89144,
+      "post_id": 344,
+      "path": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+      "captured_text": "[…] Schuss ins Blaue sinnvoll. Dort reicht es allem Anschein nach schon aus die Skripte umzubenennen (JustAddWater.dk – Blog Usability: Avoid Spam Comments (Part 2)) um einen Gro",
+      "content": "[…] Schuss ins Blaue sinnvoll. Dort reicht es allem Anschein nach schon aus die Skripte umzubenennen (JustAddWater.dk – Blog Usability: Avoid Spam Comments (Part 2)) um einen Großteil des Spams abzuwehren.    __________________ Markus […]",
+      "backup_content": "[...] Schuss ins Blaue sinnvoll. Dort reicht es allem Anschein nach schon aus die Skripte umzubenennen (JustAddWater.dk &#8211; Blog Usability: Avoid Spam Comments (Part 2)) um einen Großteil des Spams abzuwehren.    __________________ Markus [...]",
+      "backup_content_sha256": "22fc3ee366ac7cd8e81830c3ee5c0fd00801afbd906bf1b9a2c7a3f84618efc5",
+      "source": "2007-09-17_watson_wp_jawdk.sql, wp_comments.comment_content; dump completed 2007-09-16",
+      "approved_on": "2026-10-23"
+    },
+    {
+      "id": 89152,
+      "post_id": 344,
+      "path": "/2006/06/28/blog-usability-avoid-spam-comments-part-2/",
+      "captured_text": "[…] Schuss ins Blaue sinnvoll. Dort reicht es allem Anschein nach schon aus die Skripte umzubenennen (JustAddWater.dk ",
+      "content": "[…] Schuss ins Blaue sinnvoll. Dort reicht es allem Anschein nach schon aus die Skripte umzubenennen (JustAddWater.dk – Blog Usability: Avoid Spam Comments (Part 2)) um einen Großteil des Spams abzuwehren.    Tja, das würde ich wie gesagt nicht unterschreiben, […]",
+      "backup_content": "[...] Schuss ins Blaue sinnvoll. Dort reicht es allem Anschein nach schon aus die Skripte umzubenennen (JustAddWater.dk – Blog Usability: Avoid Spam Comments (Part 2)) um einen Großteil des Spams abzuwehren.    Tja, das würde ich wie gesagt nicht unterschreiben, [...]",
+      "backup_content_sha256": "0d02b9478b0caee1cdb4297bf531c25e9138ea0cd272bcb037228f44453d1069",
+      "source": "2007-09-17_watson_wp_jawdk.sql, wp_comments.comment_content; dump completed 2007-09-16",
+      "approved_on": "2026-10-23"
+    },
+    {
+      "id": 164717,
+      "post_id": 35,
+      "path": "/2006/01/20/one-of-four-web-users-are-disabled-users/",
+      "captured_text": "[…] 25% of all web users are disabled [justaddwater] – Artigo em ingl",
+      "content": "[…] 25% of all web users are disabled [justaddwater] – Artigo em inglês sobre os dados de que 25% dos usuários tem algum tipo de deficiência que interfere na navegação. […]",
+      "backup_content": "[...] 25% of all web users are disabled [justaddwater] - Artigo em inglês sobre os dados de que 25% dos usuários tem algum tipo de deficiência que interfere na navegação. [...]",
+      "backup_content_sha256": "507ae40403c32e4ddff86ee058cfe10979a8b3f286037e3106eb7f79861ee43f",
+      "source": "2007-09-17_watson_wp_jawdk.sql, wp_comments.comment_content; dump completed 2007-09-16",
+      "approved_on": "2026-10-23"
+    }
+  ],
   "assets": [
     {
       "path": "/wp-content/uploads/2006/01/dcft.dk.Dansk Center for Tilgængelighed - Tilgængelighed til internet1137575366574.png",

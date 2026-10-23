@@ -14,6 +14,8 @@ original host.
 - **2,219 public API comments**, all preserved as read-only content. The rendered
   pages contain **2,784 comment and trackback entries** in total, including two
   owner-approved comments recovered from the 2007 database backup.
+  Four existing pingbacks have their truncated text restored from that backup,
+  including their feed entries.
 - **548 public media records.** WordPress advertises 572, but returns 548 across
   all API pages. Images and downloads discovered in HTML and CSS are also copied,
   including files not listed in the media library.
@@ -203,6 +205,15 @@ all captured public entry IDs and no missing approved comments. The 24 additiona
 media records belong to unpublished entries. Only the aggregate verification is
 stored in `data/wordpress-export-verification.json`; the XML, drafts and private
 comment metadata remain outside Git and the published site.
+
+A subsequent text comparison covered all 2,783 approved exported comments and
+1,104 comments shared with the 2007 backup. No general comment-length cutoff was
+found. Four pingbacks (#40879, #89144, #89152 and #164717) had lost their endings
+before the current export, each at a non-ASCII character. Their exact backup text
+is recorded in `data/recovery.json` under `comment_repairs` and restored wherever
+those entries already appear, preserving author, date, link and feed ordering.
+The build refuses to overwrite unexpected newer text. The original capture is
+unchanged; `data/comment-restoration-report.json` records the repair and checks.
 
 The database dump, WordPress configuration and unreviewed historical content are
 not included in this repository. Rebuilds use only the selected public material

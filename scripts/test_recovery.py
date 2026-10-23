@@ -1,4 +1,5 @@
 import hashlib
+import html
 import json
 import unittest
 
@@ -166,6 +167,39 @@ class RecoveryTests(unittest.TestCase):
                 self.assertEqual(soup.select_one('.entry').get_text(), 'Original content')
                 self.assertLess(str(soup).index('commentlist'), str(soup).index('id="respond"'))
                 self.assertFalse(any(a['href'].startswith(ORIGIN) for a in item.select('a[href]')))
+
+    def test_truncated_pingbacks_restore_exact_backup_text_and_preserve_metadata(self):
+        records = recovery_data()['comment_repairs']
+        self.assertEqual({r['id'] for r in records}, {40879, 89144, 89152, 164717})
+        for record in records:
+            expected = html.unescape(record['backup_content']).replace('[...]', '[…]').replace(' - ', ' – ')
+            self.assertEqual(hashlib.sha256(record['backup_content'].encode()).hexdigest(), record['backup_content_sha256'])
+            self.assertEqual(record['content'], expected)
+            self.assertTrue(expected.startswith(record['captured_text']))
+            source = (f'<ol class="commentlist"><li id="comment-{record["id"]}"><cite><a href="https://source.test/">Author</a></cite>'
+                      f'<small class="commentmetadata">Original date</small><p>{html.escape(record["captured_text"])}</p></li>'
+                      '<li id="comment-123">Do not change this neighbour.</li></ol>')
+            untouched = parse_document(source)
+            restore_comments(untouched, '/unrelated/')
+            self.assertEqual(untouched.p.get_text(), record['captured_text'])
+            for path in (record['path'], record['path'] + 'comment-page-1/'):
+                soup = parse_document(source)
+                metadata = str(soup.cite) + str(soup.small)
+                restore_comments(soup, path)
+                once = str(soup)
+                restore_comments(soup, path)
+                self.assertEqual(str(soup), once)
+                self.assertEqual(soup.p.get_text(), expected)
+                self.assertEqual(str(soup.cite) + str(soup.small), metadata)
+                self.assertEqual(soup.find(id='comment-123').get_text(), 'Do not change this neighbour.')
+
+    def test_truncated_comment_repair_refuses_unexpected_newer_content(self):
+        record = recovery_data()['comment_repairs'][0]
+        for body in ('<p>Later edited content</p>', '<p>Part one</p><p>Part two</p>',
+                     '<p><b>' + html.escape(record['captured_text']) + '</b></p>'):
+            soup = parse_document(f'<li id="comment-{record["id"]}">{body}</li>')
+            with self.assertRaisesRegex(ValueError, 'Recorded truncated comment changed'):
+                restore_comments(soup, record['path'])
 
     def test_recovered_comment_does_not_replace_an_existing_comment_or_require_a_form(self):
         source = '<div id="content"><p>Archive links</p></div>'

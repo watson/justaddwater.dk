@@ -29,7 +29,7 @@ from bs4 import BeautifulSoup, UnicodeDammit
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'http://justaddwater.dk'
 HOSTS = {'justaddwater.dk', 'www.justaddwater.dk'}
-POLICY_VERSION = 4
+POLICY_VERSION = 5
 VISUAL_KINDS = {'visual', 'article-structure', 'layout', 'computed-style', 'page-overflow'}
 
 
@@ -284,6 +284,12 @@ class Expectations:
                 notes.append('tags: ' + str(record['post_id']))
         original = BeautifulSoup(raw, 'html.parser')
         actual = BeautifulSoup(clone, 'html.parser')
+        for record in self.recovery.get('comment_repairs', []):
+            node = original.find('li', id='comment-' + str(record['id']))
+            paragraphs = node.find_all('p', recursive=False) if node else []
+            if len(paragraphs) == 1 and paragraphs[0].get_text() == record['captured_text']:
+                paragraphs[0].string = record['content']
+                notes.append('restored-comment-text: ' + str(record['id']))
         for paragraph in original.select('.entry p'):
             for record in self.repairs.get('excerpts', []):
                 if paragraph.get_text() == record['captured_text']:

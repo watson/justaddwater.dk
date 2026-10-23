@@ -7,7 +7,8 @@ import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
 from archive import ROOT, ORIGIN, local_url, rewrite, parse_document
-from feeds import ATOM, feed_specs, is_feed, parse_comment_feed, write_feeds, deploy_feed
+from feeds import ATOM, comment_items, feed_specs, is_feed, parse_comment_feed, write_feeds, deploy_feed
+from recovery import recovery_data
 from prepare_pages import PrefixHTML
 
 
@@ -69,6 +70,25 @@ class FeedTests(unittest.TestCase):
         self.assertEqual(len(feed['items']), 9)
         self.assertEqual(feed['items'][0]['date'], 'Mon, 23 Jun 2008 18:33:51 +0000')
         self.assertEqual(feed['items'][0]['guid'], ORIGIN + self.cookie + '#comment-425822')
+
+    def test_restored_pingback_feeds_keep_original_entries_metadata_and_capture(self):
+        before = copy.deepcopy(self.snapshots)
+        repairs = {r['id']: r for r in recovery_data()['comment_repairs']}
+        restored = set()
+        for record in repairs.values():
+            original = self.snapshots['feeds'][record['path'] + 'feed/']['items']
+            output = comment_items({'post_id': record['post_id'], 'home': record['path']}, self.data, self.snapshots)
+            self.assertEqual([i['id'] for i in output], [i['id'] for i in original])
+            for old, new in zip(original, output):
+                self.assertEqual({k: v for k, v in old.items() if k != 'content'},
+                                 {k: v for k, v in new.items() if k != 'content'})
+                if new['id'] in repairs:
+                    self.assertEqual(BeautifulSoup(new['content'], 'html.parser').p.get_text(), repairs[new['id']]['content'])
+                    restored.add(new['id'])
+                else:
+                    self.assertEqual(new['content'], old['content'])
+        self.assertEqual(restored, {40879, 89144, 89152})
+        self.assertEqual(self.snapshots, before)
 
     def test_each_feed_is_xml_at_its_original_directory_with_no_html_redirect(self):
         data = copy.deepcopy(self.data)
