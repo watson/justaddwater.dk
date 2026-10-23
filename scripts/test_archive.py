@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 from archive import ROOT, ORIGIN, clean_html, parse_document, references, rewrite
 from prepare_pages import PrefixHTML
-from verify import archived_form_errors, article_text_preserved, video_embed_markup, expected_video_markup
+from verify import archived_form_errors, article_text_preserved, video_embed_markup, expected_video_markup, expected_missing_image
 from recovery import video_players
 
 
@@ -44,6 +44,37 @@ class BackgroundCaptureTests(unittest.TestCase):
 
 
 class LegacyMarkupTests(unittest.TestCase):
+    def test_missing_images_preserve_native_rendering_and_attributes_under_project_prefix(self):
+        url = 'http://www.next2007.dk/2007/ilabLogo.gif'
+        record = json.loads((ROOT / 'data/external-images.json').read_text())[url]
+        source = f'<img src="{url}" alt="innovation lab logo" width="240" height="160" class="aligncenter"><img src="{url}">'
+        output = rewrite(parse_document(source), ORIGIN + '/', {}, set(), set(), {url: record})
+        one, two = output.find_all('img')
+        self.assertEqual(one['src'], record['missing_path'])
+        self.assertFalse((ROOT / 'site' / one['src'].lstrip('/')).exists())
+        self.assertEqual({k: one[k] for k in ('alt', 'width', 'height', 'class')},
+                         {'alt': 'innovation lab logo', 'width': '240', 'height': '160', 'class': ['aligncenter']})
+        self.assertFalse(any(key in two.attrs for key in ('alt', 'width', 'height')))
+        parser = PrefixHTML('/justaddwater.dk')
+        parser.feed(str(output)); parser.close()
+        image = BeautifulSoup(''.join(parser.parts), 'html.parser').img
+        self.assertEqual(image['src'], '/justaddwater.dk' + record['missing_path'])
+        self.assertEqual(image['data-original-url'], url)
+
+    def test_missing_image_validation_requires_exact_source_target_and_image_element(self):
+        original = 'https://example.org/missing.png'
+        path = '/archive-assets/missing/known.png'
+        image = BeautifulSoup(f'<img src="/project{path}" data-original-url="{original}">', 'html.parser').img
+        mapping = {original: path}
+        self.assertTrue(expected_missing_image(image, 'src', image['src'], '/project', mapping))
+        self.assertFalse(expected_missing_image(image, 'src', image['src'] + '?different=1', '/project', mapping))
+        self.assertFalse(expected_missing_image(image, 'src', image['src'], '', mapping))
+        self.assertFalse(expected_missing_image(image, 'href', image['src'], '/project', mapping))
+        image.name = 'script'
+        self.assertFalse(expected_missing_image(image, 'src', image['src'], '/project', mapping))
+        image.name = 'img'; image['data-original-url'] = 'https://example.org/other.png'
+        self.assertFalse(expected_missing_image(image, 'src', image['src'], '/project', mapping))
+
     def test_direct_image_links_use_local_copies_and_publisher_pages_keep_their_links(self):
         url = 'http://example.com/full-size.jpg?version=1'
         page = 'http://example.com/photos/123/'

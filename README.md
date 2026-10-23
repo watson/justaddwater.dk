@@ -52,8 +52,11 @@ original host.
 
 Some local files already returned 404, and some external images could not be
 retrieved during capture. **174 of 193 image references in the original capture** were recovered
-and stored locally. Unavailable images have a small placeholder and retain their
-original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
+and stored locally. Unavailable images use local URLs that deliberately return
+404, preserving the browser's native broken-image rendering, original alt text
+and dimensions. Their original URLs remain in `data-original-url` attributes;
+the exact failed-source/local-path mappings are recorded as `missing_path` in
+`data/external-images.json`. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
 fetch errors for possible recovery from backups. This repair pass restored 82
 additional image references, including all 29 Google menu screenshots. A further
@@ -74,7 +77,7 @@ the thumbnails directly to local copies, so those views survive Flickr account,
 access-policy or service changes. Preserve photographer credit, original Flickr
 URLs and licence information, and distinguish original uploads from smaller
 available copies. The current inventory has 63 visible-image links across 25
-canonical pages, plus 11 linked missing-image placeholders. No review date is set.
+canonical pages, plus 11 links from missing images. No review date is set.
 
 The two external stylesheet entry points used by the podcast transcripts and
 Denmark map demos are also local, along with the map stylesheet's three main
@@ -211,7 +214,9 @@ reviewed alongside them remain excluded.
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset
 references resolve, RSS and sitemap XML parse, and pages do not contain
-unreviewed executable scripts or dynamic forms. The validator also checks
+unreviewed executable scripts or dynamic forms. Recorded missing images must
+still return 404; these exact exceptions do not allow new missing assets,
+altered URLs or missing script dependencies. The validator also checks
 duplicate IDs and local HTML fragment targets. The reviewed bookmarklet
 URLs are allowlisted only on their three original download pages, and all
 recovered bookmarklet dependencies are verified against recorded checksums.
@@ -276,6 +281,12 @@ still reports visual review requirements separately from content validation.
 URLs with image-sizing differences across three articles, one unreliable
 reconstructed-thumbnail baseline, and 15 expected changes. These dispositions
 do not suppress whole pages or make the overall audit pass.
+
+`data/missing-image-rendering.json` records the subsequent replacement of custom
+placeholders with native broken images, full static validation and browser checks
+on all 22 affected HTML pages. Known historical image failures remain visible as
+inherited findings; newly broken clone images are unexplained failures. Pixel
+and layout differences still require review.
 
 For screenshots, pixel differences and Chromium health checks on **all captured
 HTML pages**:

@@ -167,6 +167,43 @@ class AuditTest(unittest.TestCase):
         row = self.capture('/post/', '<ul><li id="comment-1">Hello</li></ul>', '<img src="/missing.png">')
         self.assertTrue({'local-target', 'missing-comment', 'text'} <= {f['kind'] for f in row['findings']})
 
+    def test_recorded_missing_image_does_not_hide_wrong_targets_or_new_missing_images(self):
+        url, path = 'https://old.test/logo.gif', '/archive-assets/missing/logo.gif'
+        (self.root / 'data/external-images.json').write_text(json.dumps({url: {'error': '404', 'missing_path': path}}))
+        original = f'<img src="{url}" alt="Logo">'
+        clone = f'<img src="{path}" alt="Logo" data-original-url="{url}">'
+        good = self.capture('/post/', original, clone)
+        self.assertEqual(good['expected_missing_images'], [{'url': path, 'original_url': url, 'alt': 'Logo'}])
+        self.assertFalse(any(f['status'] == 'unexplained' for f in good['findings']))
+        for wrong in [clone.replace(path, path + '?wrong=1'), clone.replace('data-original-url=', 'data-wrong='), clone + '<img src="/newly-lost.png">', clone.replace('<img ', '<script ')+ '</script>']:
+            row = self.capture('/post/', original, wrong)
+            self.assertTrue(any(f['kind'] == 'local-target' for f in row['findings']), wrong)
+        target = self.site / path.lstrip('/')
+        target.parent.mkdir(parents=True); target.write_bytes(b'Unexpected replacement')
+        row = self.capture('/post/', original, clone)
+        self.assertTrue(any(f['kind'] == 'unexpected-image-file' for f in row['findings']))
+
+    def test_browser_reports_known_missing_and_newly_broken_images_separately(self):
+        from PIL import Image
+        url, path = 'https://old.test/logo.gif', '/archive-assets/missing/logo.gif'
+        (self.root / 'data/external-images.json').write_text(json.dumps({url: {'error': '404', 'missing_path': path}}))
+        row = self.capture('/post/', f'<img src="{url}" alt="Logo">', f'<img src="{path}" alt="Logo" data-original-url="{url}">')
+        row['base_path'] = '/project'
+        (self.root / 'browser').mkdir(); (self.root / 'screenshots').mkdir()
+        Image.new('RGB', (1280, 900), 'white').save(self.root / 'same.png')
+        data = {k: row[k] for k in ('source_sha256', 'clone_sha256')}
+        common = {'screenshot': 'same.png', 'height': 900, 'viewport': {'width': 1280, 'height': 900}}
+        data['original'] = {**common, 'brokenImages': [{'url': url, 'alt': 'Logo'}]}
+        new_failure = {'url': 'http://archive.test/project/newly-lost.png', 'alt': 'New'}
+        data['clone'] = {**common, 'brokenImages': [{'url': 'http://archive.test/project' + path, 'alt': 'Logo'}, new_failure]}
+        (self.root / 'browser' / (row['id'] + '.json')).write_text(json.dumps(data))
+        merge_browser([row], self.root)
+        known = next(f for f in row['findings'] if f['kind'] == 'browser-knownMissingImages')
+        other = next(f for f in row['findings'] if f['kind'] == 'browser-brokenImages')
+        self.assertEqual(known['status'], 'inherited')
+        self.assertEqual(other['status'], 'unexplained')
+        self.assertEqual(other['after'], [new_failure])
+
     def test_url_normalization_preserves_semantic_query_and_fragment(self):
         self.assertEqual(canonical('https://watson.github.io/justaddwater.dk/a%20b/?p=4#reply'), '/a b/?p=4#reply')
         self.assertEqual(canonical('/file.css?ver=1'), '/file.css')

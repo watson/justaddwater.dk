@@ -468,6 +468,13 @@ def rewrite_css(css, base, ids, routes, unavailable, external):
     return CSS_URL.sub(replace, css)
 
 
+def missing_image_path(url):
+    # Deliberately absent: the static host returns 404 and the browser retains
+    # its native broken-image rendering, including the original alt/dimensions.
+    suffix = Path(urlsplit(url).path).suffix.lower() or '.img'
+    return '/archive-assets/missing/' + hashlib.sha256(url.encode()).hexdigest()[:24] + suffix
+
+
 def rewrite(soup, base, ids, routes, unavailable, external=None):
     external = external or {}
     for tag in soup.find_all(True):
@@ -507,7 +514,7 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
             image_element = tag.name == 'img' or (tag.name == 'input' and tag.get('type', '').lower() == 'image')
             if image_element and attr == 'src' and urlsplit(value).hostname and urlsplit(value).hostname not in HOSTS:
                 image = external.get(value, {})
-                tag['src'] = '/archive-assets/feed.svg' if value.endswith('/feed-icon32x32.png') else image.get('path', '/archive-assets/unavailable.svg')
+                tag['src'] = '/archive-assets/feed.svg' if value.endswith('/feed-icon32x32.png') else image.get('path') or missing_image_path(value)
                 for dimension in ('width', 'height'):
                     if image.get('display_' + dimension) and not tag.get(dimension):
                         tag[dimension] = str(image['display_' + dimension])
@@ -529,11 +536,11 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                 query = '?s=' + quote(search[0], safe='') if path == SEARCH_PATH and search else ''
                 tag[attr] = path + query + ('#' + fragment if fragment else '')
             else:
-                # Preserve already-broken historical references as links to a
-                # local explanation; record the source for future recovery.
+                # Missing images stay broken locally; other historical links
+                # retain their explanation. Keep their source for recovery.
                 unavailable.add(path)
                 if attr in ('src', 'poster') and (image_element or tag.name in ('source', 'video')):
-                    tag[attr] = '/archive-assets/unavailable.svg'
+                    tag[attr] = missing_image_path(ORIGIN + path)
                     tag['data-original-url'] = ORIGIN + path
                 elif attr == 'href' and tag.name == 'a':
                     tag[attr] = '/unavailable/?url=' + quote(path, safe='')

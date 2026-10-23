@@ -29,7 +29,7 @@ from bs4 import BeautifulSoup, UnicodeDammit
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'http://justaddwater.dk'
 HOSTS = {'justaddwater.dk', 'www.justaddwater.dk'}
-POLICY_VERSION = 3
+POLICY_VERSION = 4
 VISUAL_KINDS = {'visual', 'article-structure', 'layout', 'computed-style', 'page-overflow'}
 
 
@@ -149,6 +149,8 @@ class Expectations:
         self.root = root
         self.videos = read_json(root / 'data/video-players.json', [])
         self.images = read_json(root / 'data/external-images.json', {})
+        self.missing_images = {canonical(url): record['missing_path'] for url, record in self.images.items()
+                               if record.get('error') and not record.get('path') and record.get('missing_path')}
         self.resources = read_json(root / 'data/external-resources.json', {}).get('resources', {})
         content = read_json(root / 'data/content.json', {})
         self.ids = {str(r['id']): canonical(r['link']) for key in ('posts', 'pages', 'media') for r in content.get(key, [])}
@@ -203,6 +205,9 @@ class Expectations:
                 replacement = '/archive-search/?' + parsed.query
             if replacement and (ref['tag'], ref['attribute'], replacement) in added_keys:
                 reason = 'recorded URL or recovered resource'
+            elif (ref['tag'] in ('img', 'input') and ref['attribute'] == 'src' and url in self.missing_images
+                  and (ref['tag'], 'src', self.missing_images[url]) in added_keys):
+                reason = 'recorded missing image retains native broken-image rendering'
             elif (ref['tag'], ref['attribute'], url) in code_refs:
                 reason = 'literal dependency inside a restored code example'
             elif url in self.repairs.get('unavailable_references', {}):
@@ -238,9 +243,9 @@ class Expectations:
                     reason = 'local topic index for the same tag'
                 elif not parsed.path[5:] and not ref['label']:
                     reason = 'empty legacy tag link'
-            elif ref['tag'] == 'img' and any(canonical(k) == url and 'error' in v for k, v in self.images.items()):
-                if any(v['tag'] == 'img' and v['url'] in ('/archive-assets/unavailable.svg', '/archive-assets/feed.svg') for v in added):
-                    reason = 'recorded unavailable external image'
+            elif ref['tag'] == 'img' and url == 'http://www.feedburner.com/fb/images/pub/feed-icon32x32.png':
+                if ('img', 'src', '/archive-assets/feed.svg') in added_keys:
+                    reason = 'recorded replacement for the retired FeedBurner icon'
             if reason:
                 explained.append({'reference': ref, 'reason': reason})
             else:
@@ -498,10 +503,24 @@ def audit_record(path, url, kind, cache, site, policy, prefix, failure=None):
     row['reference_changes']['explained'] = explained
     if changed:
         issues.append(finding('changed-reference', 'unexplained', 'Original links or dependencies were removed or changed without an exact recorded URL match.', references=changed))
+    # Exceptions require the exact failed source and target on this document.
+    # They apply only to image loads, never arbitrary links or scripts.
+    row['base_path'] = prefix
+    row['expected_missing_images'] = []
+    for tag in new_soup.select('img[data-original-url], input[type=image][data-original-url]'):
+        original = canonical(tag['data-original-url'])
+        target = canonical(tag.get('src', ''), 'http://archive.test' + prefix + path, prefix)
+        if (policy.missing_images.get(original) == target and
+                any(ref['tag'] == tag.name and ref['attribute'] == 'src' and ref['url'] == original for ref in old_refs)):
+            row['expected_missing_images'].append({'url': target, 'original_url': original, 'alt': tag.get('alt', '')})
+    expected_missing = {record['url'] for record in row['expected_missing_images']}
     missing, fragments = [], []
     for ref in new_refs:
         u = urlsplit(ref['url'])
-        if not u.netloc and u.path and not local_file(site, u.path):
+        if ref['tag'] in ('img', 'input') and ref['attribute'] == 'src' and ref['url'] in expected_missing:
+            if local_file(site, u.path):
+                issues.append(finding('unexpected-image-file', 'unexplained', 'A recorded missing image unexpectedly resolves to a file.', url=ref['url']))
+        elif not u.netloc and u.path and not local_file(site, u.path):
             missing.append(ref)
         elif not u.netloc and u.fragment:
             target = local_file(site, u.path or path)
@@ -517,9 +536,8 @@ def audit_record(path, url, kind, cache, site, policy, prefix, failure=None):
     for form in new_soup.find_all('form'):
         if form.get('method', 'get').lower() != 'get' or canonical(form.get('action', ''), 'http://archive.test' + prefix + path, prefix) != '/archive-search/':
             issues.append(finding('active-submission', 'unexplained', 'A form remains outside the approved local search route.', action=form.get('action'), method=form.get('method', 'get')))
-    placeholders = [t.get('data-original-url') for t in new_soup.select('img[data-original-url]') if 'unavailable.svg' in t.get('src', '')]
-    if placeholders:
-        issues.append(finding('unavailable-image', 'inherited', 'Original images still unavailable; the archive shows placeholders.', urls=sorted(set(placeholders))))
+    if expected_missing:
+        issues.append(finding('unavailable-image', 'inherited', 'Original images still unavailable; local 404 responses preserve native broken-image rendering.', images=row['expected_missing_images']))
     # Missing whole comments/articles are unambiguous regardless of prose repairs.
     for selector, label in [('.post[id]', 'article'), ('li[id^=comment-]', 'comment')]:
         before, after = {t['id'] for t in old_soup.select(selector)}, {t['id'] for t in new_soup.select(selector)}
@@ -705,8 +723,16 @@ def merge_browser(rows, out):
                 row['findings'].append(finding('screenshot-limit', 'unverified', 'Screenshot covers at most 1280 × 50000 pixels; overflow outside that rectangle is not visually compared.', side=side))
         for key in ('brokenImages', 'jsErrors', 'overflow', 'enabledArchivedControls'):
             a, b = data.get('original', {}).get(key, []), data.get('clone', {}).get(key, [])
+            if key == 'brokenImages':
+                expected = {(item['url'], item['alt']) for item in row.get('expected_missing_images', [])}
+                known = [item for item in b if (canonical(item['url'], prefix=row.get('base_path', '')), item.get('alt', '')) in expected]
+                if known:
+                    row['findings'].append(finding('browser-knownMissingImages', 'inherited', 'Recorded unavailable images retain the browser failure state.', images=known))
+                    originals = {item['original_url'] for item in row['expected_missing_images']}
+                    a = [item for item in a if canonical(item['url']) not in originals]
+                    b = [item for item in b if item not in known]
             if a or b:
-                status = 'inherited' if a == b else 'fixed' if not b else 'unexplained' if key == 'enabledArchivedControls' else 'review'
+                status = 'inherited' if a == b else 'fixed' if not b else 'unexplained' if key in ('brokenImages', 'enabledArchivedControls') else 'review'
                 if a and not b and key in ('brokenImages', 'jsErrors') and data.get('original', {}).get('blocked'):
                     status = 'unverified'
                 row['findings'].append(finding('browser-' + key, status, 'Browser health: ' + key, before=a, after=b))
@@ -914,7 +940,7 @@ def main():
                     row['live'] = result
         write_json(args.output / 'static.json', {'metadata': metadata, 'urls': rows})
     if args.browser:
-        manifest = {'rows': [{**{k: r[k] for k in ('id', 'path', 'source', 'clone', 'source_sha256', 'clone_sha256')}, 'url': r.get('original_final_url') or r['url']} for r in rows if r.get('html')],
+        manifest = {'rows': [{**{k: r[k] for k in ('id', 'path', 'source', 'clone', 'source_sha256', 'clone_sha256')}, 'expected_missing_images': r.get('expected_missing_images', []), 'url': r.get('original_final_url') or r['url']} for r in rows if r.get('html')],
                     'resources': resources(ROOT, args.cache, args.site, args.base_path), 'output': str(args.output),
                     'basePath': args.base_path, 'workers': args.browser_workers, 'executablePath': args.browser_executable}
         write_json(args.output / 'manifest.json', manifest)

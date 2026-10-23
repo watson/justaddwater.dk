@@ -1,0 +1,104 @@
+{
+  "created_at": "2026-10-23T09:13:40.425259+00:00",
+  "base_commit": "30b4156e4f17cbb91be726b454e5b696a194c0e8",
+  "decision": "Replace custom unavailable-image placeholders with native browser broken-image rendering using deliberately absent local image URLs.",
+  "missing_sources": 18,
+  "html_image_occurrences": 42,
+  "affected_html_pages": 22,
+  "source_mappings": "data/external-images.json (missing_path)",
+  "preserved": "All original image attributes except src, including absent alt/dimension attributes. Existing data-original-url and surrounding HTML are unchanged.",
+  "validation": {
+    "unit_tests_passed": 103,
+    "root": {
+      "html_pages": 2746,
+      "published_posts_and_pages": 450,
+      "articles_with_video_players": 21,
+      "recovered_code_examples": 75,
+      "disabled_archived_forms": 564,
+      "known_missing_image_elements": 42,
+      "public_comments": 2784,
+      "local_links_checked": 100995,
+      "recovered_comments": 2,
+      "rss_feeds": 1204,
+      "errors": 0,
+      "deployment_base": "/"
+    },
+    "project_prefix": {
+      "html_pages": 2746,
+      "published_posts_and_pages": 450,
+      "articles_with_video_players": 21,
+      "recovered_code_examples": 75,
+      "disabled_archived_forms": 564,
+      "known_missing_image_elements": 42,
+      "public_comments": 2784,
+      "local_links_checked": 100995,
+      "recovered_comments": 2,
+      "rss_feeds": 1204,
+      "errors": 0,
+      "deployment_base": "/justaddwater.dk"
+    },
+    "static_urls_compared": 2522,
+    "unexplained_static_findings": 0
+  },
+  "browser": {
+    "pairs": 22,
+    "known_broken_image_elements": 42,
+    "image_404_responses": 42,
+    "unexpected_broken_images": 0,
+    "clone_js_errors": 0,
+    "clone_horizontal_overflow": 0,
+    "missing_local_resources_except_recorded_images": 0,
+    "report": ".cache/audit-missing-images-focused/index.html",
+    "counts": {
+      "urls": 22,
+      "html_pairs": 22,
+      "browser_pairs": 22,
+      "visual_review_urls": 6,
+      "statuses": {
+        "expected": 22,
+        "inherited": 44,
+        "unverified": 28,
+        "fixed": 4,
+        "review": 9
+      },
+      "kinds": {
+        "text": 22,
+        "unavailable-image": 22,
+        "browser-knownMissingImages": 22,
+        "browser-jsErrors": 22,
+        "shortcode": 4,
+        "browser-brokenImages": 6,
+        "layout": 6,
+        "visual": 3
+      }
+    }
+  },
+  "limitations": [
+    "This is a focused browser rerun of all 22 affected HTML pages, not a new browser comparison of all 1704 pairs.",
+    "Original replay can still lack remote scripts or images. Existing visual/layout review findings are not waived by this change."
+  ],
+  "affected_paths": [
+    "/2007/04/23/ajax-and-web20-user-experience-bad-for-traffic-counts/",
+    "/2007/04/23/ajax-and-web20-user-experience-bad-for-traffic-counts/comment-page-1/",
+    "/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/",
+    "/2007/09/03/dvd-harddisk-recorder-makes-my-thumbs-hurt/comment-page-1/",
+    "/2007/11/18/blue-beanie-day-a-day-for-web-standards-and-accessibility/",
+    "/2007/11/18/blue-beanie-day-a-day-for-web-standards-and-accessibility/comment-page-1/",
+    "/2008/",
+    "/2008/04/",
+    "/2008/04/24/capgemini-website-article-prototyping-and-ruby-on-rails/",
+    "/2008/04/24/capgemini-website-article-prototyping-and-ruby-on-rails/comment-page-1/",
+    "/2008/05/20/invited-to-expert-workshop-future-of-internet/",
+    "/2008/05/20/invited-to-expert-workshop-future-of-internet/comment-page-1/",
+    "/2008/06/16/fixes-to-common-css-problems/",
+    "/2008/06/16/fixes-to-common-css-problems/comment-page-1/",
+    "/2008/06/18/the-dark-side-of-information-architecture/",
+    "/2008/06/18/the-dark-side-of-information-architecture/comment-page-1/",
+    "/2008/11/30/busy-not-updating-blog/",
+    "/2008/11/30/busy-not-updating-blog/comment-page-1/",
+    "/author/jesper/page/3/",
+    "/category/prototyping/",
+    "/category/ruby-on-rails/",
+    "/page/3/"
+  ]
+}

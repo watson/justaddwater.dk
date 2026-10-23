@@ -54,7 +54,7 @@ async function render(row, side) {
     locale: 'en-GB', timezoneId: 'Europe/Copenhagen', serviceWorkers: 'block', reducedMotion: 'reduce',
     acceptDownloads: false });
   const info = { browser: browser.version(), viewport: { width, height }, blocked: [], reconstructed: [], jsErrors: [],
-    consoleErrors: [], requests: 0, methodsBlocked: [] };
+    consoleErrors: [], requests: 0, methodsBlocked: [], missingImageResponses: [] };
   const blocked = new Map();
   const reconstructed = new Set();
   const page = await context.newPage();
@@ -83,6 +83,13 @@ async function render(row, side) {
       if (item.provenance === 'recovered-image') reconstructed.add(url.href);
       await route.fulfill({ path: item.file, contentType: item.contentType, status: item.status,
         headers: { 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'no-store' } });
+    } else if (side === 'clone' && url.hostname === 'archive.test' &&
+               (row.expected_missing_images || []).some(image => url.pathname === manifest.basePath + image.url) &&
+               request.resourceType() === 'image') {
+      // These files intentionally do not exist on the static host. Reproduce
+      // its 404 response rather than treating them as uncaptured dependencies.
+      info.missingImageResponses.push({ url: url.href, status: 404 });
+      await route.fulfill({ status: 404, contentType: 'text/plain', body: 'Not found' });
     } else {
       blocked.set(url.href, { url: url.href, resourceType: request.resourceType(),
         reason: side === 'clone' && url.hostname === 'archive.test' ? 'missing-local-resource' : 'not-in-offline-capture' });
@@ -156,7 +163,8 @@ async function worker() {
   while (manifest.rows.length && !stopped) {
     const row = manifest.rows.shift();
     const file = path.join(browserDir, row.id + '.json');
-    const signature = sha(configuration + row.path + row.url + row.source_sha256 + row.clone_sha256);
+    const signature = sha(configuration + row.path + row.url + row.source_sha256 + row.clone_sha256 +
+      JSON.stringify(row.expected_missing_images || []));
     let previous;
     try { previous = JSON.parse(await fs.readFile(file, 'utf8')); } catch {}
     let reusable = previous?.signature === signature && !previous.original?.error && !previous.clone?.error;

@@ -100,10 +100,12 @@
     "sha256": "76a30522f9e6f4b80220db16e8cdfbfa5b642536bde474dd5a9a0ae3e350cf7d"
   },
   "http://farm3.static.flickr.com/2194/2881067893_afdfb26552_s.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/40907d51cb7404d9cb5e9085.jpg"
   },
   "http://farm4.static.flickr.com/3016/2585489384_f86ab604ab_s.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/d2b30f1340f05a54c933bc1a.jpg"
   },
   "http://farm3.static.flickr.com/2199/2235781106_a33f82c80a_m.jpg": {
     "path": "/archive-assets/external/f2d139366c818200ef92d920.jpg",
@@ -116,25 +118,32 @@
     "sha256": "6aaf2e3ca93fe1b9a5ea6ebfe1ac35e39f5314425f56e506d0510ea24e52bb36"
   },
   "http://farm4.static.flickr.com/3053/3022889182_2caa990df9_t.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/03fa7a163e84d59a5b2189d8.jpg"
   },
   "http://farm4.static.flickr.com/3061/3052232491_937c1e4e0b_m.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/55416e6fc1db3732b022d819.jpg"
   },
   "http://farm4.static.flickr.com/3102/2874557848_76a1b287fe_s.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/ff865a96175509e749f55bd3.jpg"
   },
   "http://farm4.static.flickr.com/3129/2881903966_dd7cc6912b_t.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/c455598b834d29993d1f907f.jpg"
   },
   "http://farm4.static.flickr.com/3134/2585553330_65e43347e5_s.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/7a46cfa12b8a589131375a23.jpg"
   },
   "http://farm4.static.flickr.com/3164/2585429804_d03a941837_s.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/035f637fb7deb49e7bfa13a3.jpg"
   },
   "http://farm4.static.flickr.com/3169/2584579701_d0d119b614_s.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/81bc0083a379240389c350ed.jpg"
   },
   "http://farm4.static.flickr.com/3177/2585103004_fee2991205_m.jpg": {
     "path": "/archive-assets/external/bdc43b414ed79df1f674c3c4.jpg",
@@ -147,7 +156,8 @@
     "sha256": "8eb2f3959c9ad465d31008410b890d830ddb615af78fb609f756f1e427493173"
   },
   "http://farm4.static.flickr.com/3253/2934782819_5b8055df12_s.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/693462718e07ce936623a81f.jpg"
   },
   "http://farm4.static.flickr.com/3177/2585104012_9f180c9d44_m.jpg": {
     "path": "/archive-assets/external/f1a28e6587606bdfb53b32cf.jpg",
@@ -155,7 +165,8 @@
     "sha256": "f1a28e6587606bdfb53b32cf480767dc7a42157ae33704df66c5ee1bec4e0778"
   },
   "http://farm4.static.flickr.com/3281/2584651443_0a8bc70162_s.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/d378dd0b11fb06ecfb158f47.jpg"
   },
   "http://i.creativecommons.org/l/by-sa/3.0/88x31.png": {
     "path": "/archive-assets/external/acde67df4b37d9df101d6555.png",
@@ -183,7 +194,8 @@
     "sha256": "24de13b800e379f58edf3d4480a65fcbe23095aa1af565e18857e0d80473bcf0"
   },
   "http://noupe.com/img/cb11.gif": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/8501ce86827e79cdc4c5cf2e.gif"
   },
   "http://static.flickr.com/104/267100630_8f8db50d4d_m.jpg": {
     "path": "/archive-assets/external/02a39e4d0b01e9e70ef57195.jpg",
@@ -588,7 +600,8 @@
     "fetched_from": "https://web.archive.org/web/20061127071104id_/http://www.37signals.com/svn/images/web2list_icons.png"
   },
   "http://www.amitech.dk/includes/images/54736.jpg": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/3878dbe346e4ddc056bf3990.jpg"
   },
   "http://www.codinghorror.com/blog/images/department-of-redundancy-department.png": {
     "path": "/archive-assets/external/4386b9cb35ad37b66da0dd8f.png",
@@ -606,7 +619,8 @@
     "fetched_from": "https://web.archive.org/web/20090218103207id_/http://www.badusability.com/img/international/bad-usability-calendar-2009-thumbnail.png"
   },
   "http://www.dk.capgemini.com/m/dk/img/jesper_mads_3_3841.jpg": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "missing_path": "/archive-assets/missing/d76c4d166e37e82b882082c5.jpg"
   },
   "http://www.dsiegel.com/tips/resources/dot_clear.gif": {
     "path": "/archive-assets/external/b1442e85b03bdcaf66dc58c7.gif",
@@ -684,7 +698,8 @@
     "sha256": "24c1f3f408a032931724568ad6c8c1a85f913a86d38f8720505bf27ab0eeae2b"
   },
   "http://www.next2007.dk/2007/ilabLogo.gif": {
-    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "missing_path": "/archive-assets/missing/ba5ffa27a3a4aef73172acab.gif"
   },
   "http://www.ok-cancel.com/strips/okcancel20050211.gif": {
     "path": "/archive-assets/external/0dcb4b5a32c173c039116aa5.gif",
@@ -692,7 +707,8 @@
     "fetched_from": "https://web.archive.org/web/20051212053008id_/http://www.ok-cancel.com:80/strips/okcancel20050211.gif"
   },
   "http://www.mashable.com/images/comscoreshotnew.PNG": {
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 404: Not Found",
+    "missing_path": "/archive-assets/missing/51917fa809183526b7b581e4.png"
   },
   "http://www.mypagerank.net/smerankcheck.php?site=justaddwater.dk&s=style8": {
     "path": "/archive-assets/external/f9f88c39f41585e32360d7c6.gif",
@@ -750,7 +766,8 @@
     "fetched_from": "https://web.archive.org/web/20060101133752id_/http://www.scottgatz.com:80/blog/wp-images/mailsidebar.gif"
   },
   "http://www.wemind.dk/images/wemind-logo.png": {
-    "error": "<urlopen error timed out>; Response is not a supported raster image"
+    "error": "<urlopen error timed out>; Response is not a supported raster image",
+    "missing_path": "/archive-assets/missing/df382a43af987e41dd2f1900.png"
   },
   "http://farm1.static.flickr.com/138/346769511_3cf0ae00b4_m.jpg": {
     "path": "/archive-assets/external/0e453a53f59ac6c0a4250e1d.jpg",
@@ -874,7 +891,8 @@
     "error": "HTTP Error 404: Not Found"
   },
   "http://usabilityworks.org/bbdTemp.jpg": {
-    "error": "HTTP Error 403: Forbidden"
+    "error": "HTTP Error 403: Forbidden",
+    "missing_path": "/archive-assets/missing/e7a2eb5de4406a0c9214d410.jpg"
   },
   "http://www.ok-cancel.com/strips/okcancel20070518.gif": {
     "path": "/archive-assets/external/45d809ba678bbd6cf14770b3.gif",

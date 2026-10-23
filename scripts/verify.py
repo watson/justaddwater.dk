@@ -115,11 +115,21 @@ def article_text_preserved(markup, actual):
     return True
 
 
+def expected_missing_image(tag, attr, url, base, missing):
+    image = tag.name == 'img' or (tag.name == 'input' and tag.get('type', '').lower() == 'image')
+    path = missing.get(tag.get('data-original-url'))
+    return bool(image and attr == 'src' and path and url == base + path)
+
+
 def verify(site, base):
     site = site.resolve()
     base = '/' + base.strip('/') if base.strip('/') else ''
     errors, local_links, comment_ids, archived_forms = [], 0, set(), 0
     external_images = Counter()
+    image_records = json.loads((ROOT / 'data/external-images.json').read_text())
+    missing_images = {url: record['missing_path'] for url, record in image_records.items()
+                      if record.get('error') and not record.get('path') and record.get('missing_path')}
+    known_missing_images = 0
     data = json.loads((ROOT / 'data/content.json').read_text())
     expected_videos = {row['id']: expected_video_markup(row)
                        for row in data['posts'] + data['pages']}
@@ -135,7 +145,7 @@ def verify(site, base):
     page_comment_ids = {}
     page_anchors, fragment_links = {}, []
 
-    def target(url, document):
+    def target(url, document, expected_missing=False):
         nonlocal local_links
         parts = urlsplit(html.unescape(url))
         if parts.scheme or parts.netloc or not parts.path:
@@ -157,7 +167,10 @@ def verify(site, base):
         if result.is_dir():
             result /= 'index.html' if (result / 'index.html').is_file() else 'index.xml'
         local_links += 1
-        if not result.is_file():
+        if expected_missing:
+            if result.exists():
+                errors.append(f'{document.relative_to(site)}: expected missing image must return 404: {url}')
+        elif not result.is_file():
             errors.append(f'{document.relative_to(site)}: missing {url}')
         return result
 
@@ -174,7 +187,8 @@ def verify(site, base):
             approved_player = tag.name == 'iframe' and parts.hostname == 'www.youtube.com' and str(tag) in original_players
             if parts.hostname and parts.netloc != local_host and not approved_player:
                 errors.append(f'{document.relative_to(site)}: external resource {tag.name}[{attr}]: {url}')
-            target(parts.path if parts.netloc and parts.netloc == local_host else url, document)
+            local_url = parts.path if parts.netloc and parts.netloc == local_host else url
+            target(local_url, document, expected_missing_image(tag, attr, local_url, base, missing_images))
 
     pages = list(site.rglob('*.html'))
     for file in pages:
@@ -216,13 +230,15 @@ def verify(site, base):
                     errors.append(f'{file.relative_to(site)}: depends on old host: {url}')
                 if attr == 'href' and tag_key(url) is not None:
                     errors.append(f'{file.relative_to(site)}: retired Technorati tag link: {url}')
-                linked_file = target(url, file)
+                linked_file = target(url, file, expected_missing_image(tag, attr, url, base, missing_images))
                 parts = urlsplit(url)
                 if tag.name == 'a' and attr == 'href' and parts.hostname and Path(parts.path).suffix.lower() in IMAGE_SUFFIXES:
                     errors.append(f'{file.relative_to(site)}: remote image link: {url}')
                 if tag.name == 'a' and attr == 'href' and parts.fragment and not parts.scheme and not parts.netloc:
                     fragment_links.append((file, linked_file if parts.path else file, unquote(parts.fragment), url))
             image_element = tag.name == 'img' or (tag.name == 'input' and tag.get('type', '').lower() == 'image')
+            if expected_missing_image(tag, 'src', tag.get('src', ''), base, missing_images):
+                known_missing_images += 1
             if image_element and urlsplit(tag.get('src', '')).hostname:
                 external_images[urlsplit(tag['src']).hostname] += 1
             if tag.get('srcset'):
@@ -441,6 +457,7 @@ def verify(site, base):
                'articles_with_video_players': sum(bool(players) for players in expected_videos.values()),
                'recovered_code_examples': len(seen_code),
                'disabled_archived_forms': archived_forms,
+               'known_missing_image_elements': known_missing_images,
                'public_comments': len(comment_ids), 'local_links_checked': local_links,
                'recovered_comments': len(recovery['comments']),
                'rss_feeds': len(feeds),
