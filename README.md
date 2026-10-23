@@ -68,6 +68,14 @@ stored locally, recovered from its exact Internet Archive URL.
 Direct image links now open local copies too, including four further recovered
 full-size images. Links to publishers' ordinary web pages remain external.
 
+**Deferred decision (23 October 2026):** Keep thumbnail links to Flickr photo
+pages for now. Revisit downloading the largest available image files and linking
+the thumbnails directly to local copies, so those views survive Flickr account,
+access-policy or service changes. Preserve photographer credit, original Flickr
+URLs and licence information, and distinguish original uploads from smaller
+available copies. The current inventory has 63 visible-image links across 25
+canonical pages, plus 11 linked missing-image placeholders. No review date is set.
+
 The two external stylesheet entry points used by the podcast transcripts and
 Denmark map demos are also local, along with the map stylesheet's three main
 imports and 21 additional decorative images. Unrecoverable background URLs and
