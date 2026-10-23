@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-22",
-  "recovered_external_references": 167,
+  "checked_at": "2026-10-23",
+  "recovered_external_references": 169,
   "additional_recovered_references": 82,
   "unrecovered_external_images": [
     {
@@ -171,19 +171,6 @@
       ]
     },
     {
-      "url": "http://flickr.com/photos/andjohan/65477716/",
-      "articles": [
-        {
-          "title": "“Usability dagene 05” day 1 roundup",
-          "url": "http://justaddwater.dk/2005/11/21/usabilitydagene-monday/"
-        }
-      ],
-      "capture_error": "Response is not a supported raster image",
-      "recovery_result": [
-        "HTTP Error 404: Not Found"
-      ]
-    },
-    {
       "url": "http://www.amitech.dk/includes/images/54736.jpg",
       "articles": [
         {
@@ -260,6 +247,8 @@
   "notes": [
     "The retired FeedBurner badge is replaced with the existing local RSS icon and is not counted as unrecovered.",
     "Exact URLs were checked against Internet Archive captures; applicable original publisher pages, known backup filenames and Flickr resolution variants were also checked.",
-    "Unavailable images retain their original URL and descriptive alt text. No substitute pictures or unreviewed historical content were published."
-  ]
+    "Unavailable images retain their original URL and descriptive alt text. No substitute pictures or unreviewed historical content were published.",
+    "2026-10-23: Checked the complete WordPress export, the 1,632,615-path local backup inventory and original Flickr pages. Recovered photo 65477716 from its original page; the eleven tordisvej photo pages return 404."
+  ],
+  "additional_css_dependency_recovered": "Original Technorati white.png corner sprite, discovered after recovering the damaged UTF-16 demo."
 }

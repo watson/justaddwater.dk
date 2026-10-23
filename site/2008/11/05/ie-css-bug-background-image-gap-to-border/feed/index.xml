@@ -40,7 +40,7 @@ Allan&lt;/p&gt;
         font-weight: bold;&lt;br/&gt;
         cursor: pointer;&lt;br/&gt;
 }&lt;/p&gt;
-&lt;p&gt;1) Include conditional styles for IE that effectively make the border transparent- you can do this either by including a conditional stylesheet () or by using the CSS hack for IE6 (* html) and IE7 (*+html)&lt;/p&gt;
+&lt;p&gt;1) Include conditional styles for IE that effectively make the border transparent- you can do this either by including a conditional stylesheet (&lt;code&gt;&amp;lt;!--[if IE]&amp;gt;&amp;lt;![endif]--&amp;gt;&lt;/code&gt;) or by using the CSS hack for IE6 (* html) and IE7 (*+html)&lt;/p&gt;
 &lt;p&gt;e.g.&lt;/p&gt;
 &lt;p&gt;*+html .yellowButton, * html .yellowButton&lt;br/&gt;
 {&lt;br/&gt;

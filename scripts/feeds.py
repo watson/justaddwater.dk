@@ -65,6 +65,8 @@ def feed_specs(data, comment_paths=None):
         specs[parent + 'atom/'] = {**specs[parent], 'format': 'atom'}
         specs['/category/webstandards/rss/'] = specs[parent]
         specs['/category/webstandards/atom/'] = specs[parent + 'atom/']
+    for path in json.loads((ROOT / 'data/feed-aliases.json').read_text())['aliases']:
+        specs[path] = {**specs['/feed/'], 'posts': data['posts'][:10]}
     return specs
 
 

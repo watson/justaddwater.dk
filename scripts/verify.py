@@ -125,6 +125,7 @@ def verify(site, base):
                           for gist in recovery['gists'].values() for index, file in enumerate(gist['files'])})
     seen_code = set()
     page_comment_ids = {}
+    page_anchors, fragment_links = {}, []
 
     def target(url, document):
         nonlocal local_links
@@ -161,6 +162,11 @@ def verify(site, base):
     pages = list(site.rglob('*.html'))
     for file in pages:
         soup = BeautifulSoup(file.read_bytes(), 'html.parser')
+        identifiers = [tag['id'] for tag in soup.select('[id]')]
+        duplicates = [key for key, count in Counter(identifiers).items() if count > 1]
+        if duplicates:
+            errors.append(f'{file.relative_to(site)}: duplicate IDs: {duplicates}')
+        page_anchors[file] = set(identifiers) | {a['name'] for a in soup.select('a[name]')}
         page_comment_ids[file] = set()
         relative = '/' + file.relative_to(site).as_posix()
         for tag in soup.find_all(True):
@@ -192,7 +198,10 @@ def verify(site, base):
                     errors.append(f'{file.relative_to(site)}: depends on old host: {url}')
                 if attr == 'href' and tag_key(url) is not None:
                     errors.append(f'{file.relative_to(site)}: retired Technorati tag link: {url}')
-                target(url, file)
+                linked_file = target(url, file)
+                parts = urlsplit(url)
+                if tag.name == 'a' and attr == 'href' and parts.fragment and not parts.scheme and not parts.netloc:
+                    fragment_links.append((file, linked_file if parts.path else file, unquote(parts.fragment), url))
             if tag.name == 'img' and urlsplit(tag.get('src', '')).hostname:
                 external_images[urlsplit(tag['src']).hostname] += 1
             if tag.get('srcset'):
@@ -202,7 +211,7 @@ def verify(site, base):
         for css in embedded_css(soup):
             check_css(css, file)
         for form in soup.find_all('form'):
-            if form.get('method', 'get').lower() != 'get' or urlsplit(form.get('action', '')).path != base + '/search/':
+            if form.get('method', 'get').lower() != 'get' or urlsplit(form.get('action', '')).path != base + '/archive-search/':
                 errors.append(f'{file}: non-static form')
         archived_forms += len(soup.select('.archive-form'))
         errors.extend(f'{file}: {error}' for error in archived_form_errors(soup))
@@ -223,6 +232,10 @@ def verify(site, base):
             record = next((r for r in ui_repairs()['paragraph_code'] if r['id'] == block['data-repair-code']), None)
             if record is None or block.get_text() != record['code']:
                 errors.append(f'{file}: repaired paragraph code differs')
+
+    for file, destination, fragment, url in fragment_links:
+        if destination in page_anchors and fragment not in page_anchors[destination]:
+            errors.append(f'{file.relative_to(site)}: missing fragment target: {url}')
 
     content_checks = 0
     for row in data['posts'] + data['pages']:

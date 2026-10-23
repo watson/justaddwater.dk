@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-23",
+  "source": "Authenticated WordPress XML export",
+  "public_posts": 440,
+  "public_pages": 10,
+  "captured_media_records": 548,
+  "all_captured_ids_found": true,
+  "approved_comments_missing_from_archive": 0,
+  "other_media_records": 24,
+  "other_media_note": "Attached to unpublished entries; excluded from the public archive.",
+  "private_export_committed": false
+}

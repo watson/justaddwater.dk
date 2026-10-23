@@ -6,7 +6,7 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from audit import Expectations, audit_record, canonical, decode, fragment_ids, health, is_html, local_file, text_changes
+from audit import Expectations, audit_record, canonical, decode, fragment_ids, health, is_html, local_file, screenshot_coverage, text_changes
 
 
 class AuditTest(unittest.TestCase):
@@ -89,6 +89,12 @@ class AuditTest(unittest.TestCase):
         latin = '<meta charset="windows-1252"><p>Rønn-Jensen</p>'
         self.assertEqual(decode(latin.encode('cp1252')), latin)
 
+    def test_screenshot_must_cover_full_page_up_to_explicit_cap(self):
+        info = {'height': 3400, 'viewport': {'width': 1280, 'height': 900}}
+        self.assertEqual(screenshot_coverage(info, 1280, 900), {'expected': [1280, 3400], 'actual': [1280, 900]})
+        self.assertIsNone(screenshot_coverage(info, 1280, 3400))
+        self.assertIsNone(screenshot_coverage({**info, 'height': 60000}, 1280, 50000))
+
     def test_fragment_target_and_unexpected_form(self):
         row = self.capture('/post/', '<p id="here">Hello</p>', '<a href="#gone">Go</a><form action="/submit" method="post"><input></form>')
         self.assertTrue({'fragment-target', 'active-submission'} <= {f['kind'] for f in row['findings']})
@@ -131,6 +137,27 @@ class AuditTest(unittest.TestCase):
         a, b, notes = self.policy().text_pair(original, modified)
         self.assertNotEqual(a, b)
         self.assertNotIn('archive-footer', notes)
+
+    def test_retired_dependency_exception_only_matches_the_recorded_url(self):
+        (self.root / 'data/audit-repairs.json').write_text(json.dumps({
+            'unavailable_references': {'https://old.test/widget.js': {'replacement': None, 'reason': 'Retired widget'}}}))
+        policy = self.policy()
+        old = [{'tag': 'script', 'attribute': 'src', 'url': url, 'label': ''}
+               for url in ('https://old.test/widget.js', 'https://old.test/demo.js')]
+        new = [{'tag': 'script', 'attribute': 'src', 'url': '/archive-assets/archive.js', 'label': ''}]
+        unexplained, explained = policy.reference_issues(old, new, '/')
+        self.assertEqual(unexplained, [old[1]])
+        self.assertEqual(explained[0]['reference'], old[0])
+
+    def test_repaired_excerpt_does_not_hide_unrelated_text_loss(self):
+        (self.root / 'data/audit-repairs.json').write_text(json.dumps({'excerpts': [
+            {'post_id': 1, 'captured_text': '[code]Example', 'text': 'Example'}]}))
+        original = '<div class="entry"><p>[code]Example</p><p>Keep this sentence.</p></div>'
+        clone = '<div class="entry"><p>Example</p></div>'
+        before, after, notes = self.policy().text_pair(original, clone)
+        self.assertNotEqual(before, after)
+        self.assertIn('Keep this sentence.', before)
+        self.assertIn('excerpt: 1', notes)
 
 
 if __name__ == '__main__':

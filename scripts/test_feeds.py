@@ -54,6 +54,14 @@ class FeedTests(unittest.TestCase):
         child_ids = {c['id'] for c in self.data['categories'] if c['parent'] == parent['id']}
         self.assertTrue(any(child_ids.intersection(p['categories']) for p in posts))
 
+    def test_attachment_feed_redirects_keep_the_original_ten_post_scope(self):
+        specs = feed_specs(self.data, self.snapshots['feeds'])
+        aliases = json.loads((ROOT / 'data/feed-aliases.json').read_text())['aliases']
+        self.assertEqual(len(aliases), 60)
+        for path in aliases:
+            self.assertEqual(specs[path]['posts'], self.data['posts'][:10])
+            self.assertEqual(specs[path]['kind'], 'posts')
+
     def test_original_cookie_feed_preserves_all_nine_comment_ids_and_dates(self):
         feed = self.snapshots['feeds'][self.cookie + 'feed/']
         original = [c for c in self.data['comments'] if c['post'] == 523]

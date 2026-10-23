@@ -25,6 +25,7 @@ from bs4 import BeautifulSoup, Comment
 from feeds import feed_specs, is_feed, write_feeds
 from recovery import recovery_data, restore_code, restore_tag_lists, restore_gists, restore_demos, restore_local_forms, restore_comments, modernize_videos, UNDO_URL, UNDO_PATH
 from legacy import ui_repairs, restore_literal_markup, restore_article_ui, restore_bookmarklets, allowed_bookmarklet, tag_key, topic_index, topic_body
+from reconcile import SEARCH_PATH, decode_document, repair_document, repairs, restore_fragments
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / '.cache'
@@ -133,6 +134,7 @@ def local_url(value, base, ids):
     path = re.sub(r'/+', '/', parts.path or '/')
     path = recovery_data()['aliases'].get(unquote(path), path)
     path = ui_repairs()['redirects'].get(unquote(path).rstrip('/') + '/', path)
+    path = repairs()['redirects'].get(unquote(path).rstrip('/') + '/', path)
     # A few original articles accidentally used a relative uploads path.
     if '/wp-content/' in path and not path.startswith('/wp-content/'):
         path = path[path.index('/wp-content/'):]
@@ -145,20 +147,23 @@ def local_url(value, base, ids):
     if path.endswith('/function.file-exists'):
         return None
     query = parse_qs(parts.query)
-    if 'feed' in query:
+    if 'feed' in query or path == '/feed/' and 'attachment_id' in query:
         for key in ('p', 'page_id', 'attachment_id'):
             if key in query and query[key][0] in ids:
                 return ids[query[key][0]].rstrip('/') + '/feed/'
-        if query['feed'][0] == 'comments-rss2':
+        if query.get('feed', [''])[0] == 'comments-rss2':
             return '/comments/feed/'
         return (path if path != '/index.php' else '/').rstrip('/') + '/feed/'
     for key in ('p', 'page_id', 'attachment_id'):
         if key in query:
             return ids.get(query[key][0])
     if 's' in query:
-        return '/search/'
-    if 'paged' in query:
-        path = f'{path.rstrip("/")}/page/{query["paged"][0]}/'
+        return SEARCH_PATH
+    if path == '/' and query.get('page', [''])[0].isdigit():
+        number = int(query['page'][0])
+        path = f'/page/{number}/' if number > 1 else '/'
+    if query.get('paged', [''])[0].isdigit() and int(query['paged'][0]) > 1:
+        path = f'{path.rstrip("/")}/page/{int(query["paged"][0])}/'
     if 'cat' in query or 'm' in query or 'author' in query:
         return None
     if Path(path).suffix.lower() in ('.php', '.asp', '.aspx'):
@@ -195,8 +200,9 @@ def parse_document(raw, path='', recover=True):
     # Match the browser's HTML5 tree construction. Legacy WordPress sometimes
     # lets formatting tags cross paragraph boundaries; html.parser closes them
     # early and silently changes how the published article looks.
+    raw = decode_document(raw, path)
     if recover:
-        raw = restore_literal_markup(restore_code(raw))
+        raw = restore_fragments(restore_literal_markup(restore_code(raw)))
     return BeautifulSoup(protect_form_examples(raw), 'html5lib')
 
 
@@ -417,7 +423,7 @@ def clean_html(soup, path=''):
     restore_local_forms(soup, path)
     for form in soup.find_all('form'):
         if form.find('input', attrs={'name': 's'}):
-            form['action'] = '/search/'
+            form['action'] = SEARCH_PATH
             form['method'] = 'get'
         else:
             archive_form(soup, form)
@@ -426,8 +432,6 @@ def clean_html(soup, path=''):
     for tag in soup.find_all('a', href=True):
         if urlsplit(tag['href']).path.rstrip('/').endswith('/trackback'):
             del tag['href']
-        elif tag['href'].endswith('#respond'):
-            tag['href'] = tag['href'].removesuffix('#respond') + '#comments'
     restore_demos(soup, path)
     footer = soup.select_one('#footer p')
     if footer and 'justaddwater.dk is proudly powered by' in footer.get_text():
@@ -442,7 +446,7 @@ def clean_html(soup, path=''):
             repository = soup.new_tag('a', href='https://github.com/watson/justaddwater.dk')
             repository.string = 'source'
             footer.extend([repository, ').'])
-    return soup
+    return repair_document(soup)
 
 
 def rewrite_css(css, base, ids, routes, unavailable, external):
@@ -472,11 +476,14 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                 continue
             if attr == 'href':
                 value = ui_repairs()['external_link_repairs'].get(value, value)
+                scoped = repairs().get('scoped_links', {}).get(urlsplit(base).path, {})
+                value = scoped.get(value, value)
+                value = repairs()['link_repairs'].get(value, value)
                 tag[attr] = value
                 key = tag_key(value)
                 if key is not None:
                     tag['data-original-url'] = value
-                    tag[attr] = topic_index()[key]['path'] if key in topic_index() else '/search/?s=' + quote(key)
+                    tag[attr] = topic_index()[key]['path'] if key in topic_index() else SEARCH_PATH + '?s=' + quote(key)
                     continue
             if attr == 'href' and re.match(r'^(?:www\.|github\.com/)', value):
                 value = 'https://' + value
@@ -495,7 +502,7 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                 tag['data-original-url'] = value
                 continue
             if attr == 'href' and urlsplit(value).hostname == 'feeds.justaddwater.dk':
-                tag[attr] = '/feed/'
+                tag[attr] = '/comments/feed/' if urlsplit(value).path.rstrip('/').endswith('/comments') else '/feed/'
                 continue
             path = local_url(value, base, ids)
             if not path:
@@ -503,8 +510,10 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                     del tag[attr]
                 continue
             fragment = urlsplit(html.unescape(value)).fragment
-            if path in routes or path in ('/search/', '/feed/', '/comments/feed/'):
-                tag[attr] = path + ('#' + fragment if fragment else '')
+            if path in routes or path in (SEARCH_PATH, '/feed/', '/comments/feed/'):
+                search = parse_qs(urlsplit(value).query).get('s')
+                query = '?s=' + quote(search[0], safe='') if path == SEARCH_PATH and search else ''
+                tag[attr] = path + query + ('#' + fragment if fragment else '')
             else:
                 # Preserve already-broken historical references as links to a
                 # local explanation; record the source for future recovery.
@@ -556,6 +565,10 @@ def generated_page(template, title, body):
 
 
 def build(data, state):
+    # Keep the first capture inventory immutable; later public recoveries have
+    # their own URL-to-snapshot inventory.
+    supplemental = json.loads((ROOT / 'data/supplemental-capture.json').read_text())
+    state = {**state, 'pages': state['pages'] | supplemental['pages']}
     recovery = recovery_data()
     recovered_assets = {}
     for asset in recovery['assets']:
@@ -576,6 +589,8 @@ def build(data, state):
     routes = set(state['pages']) | set(state['assets']) | set(recovered_assets) | {UNDO_PATH, '/archive-assets/demos.js'}
     routes.update('/' + file.relative_to(SITE).as_posix() for file in (SITE / 'archive-assets').rglob('*') if file.is_file())
     routes.update(record['path'] for record in topic_index().values())
+    routes.update(urlsplit(row['link']).path for row in data['media'] if row['id'] in repairs()['attachment_pages'])
+    routes.update(repairs()['redirects'])
     comment_snapshots = json.loads((ROOT / 'data/comment-feeds.json').read_text())
     routes.update(feed_specs(data, comment_snapshots['feeds']))
     routes = {quote(unquote(path), safe="/!$&'()*+,-.;=@_~") for path in routes}
@@ -583,7 +598,8 @@ def build(data, state):
     external = json.loads(external_file.read_text()) if external_file.exists() else {}
     unavailable, comment_ids, comment_links = set(), set(), {}
     for path in sorted(state['pages']):
-        raw, _ = fetch(ORIGIN + path)
+        source_url = supplemental['pages'].get(path, ORIGIN + path)
+        raw, _ = fetch(source_url)
         soup = restore_comments(parse_document(raw, path=path), path)
         soup = clean_html(soup, path=path)
         soup = rewrite(soup, ORIGIN + path, ids, routes, unavailable, external)
@@ -600,7 +616,7 @@ def build(data, state):
         raw, meta = fetch(ORIGIN + path)
         content_type = next((v for k, v in meta['headers'].items() if k.lower() == 'content-type'), '')
         if 'text/html' in content_type:
-            raw = str(rewrite(clean_html(parse_document(raw), path=path), ORIGIN + path, ids, routes, unavailable, external)).encode()
+            raw = str(rewrite(clean_html(parse_document(raw, path=path), path=path), ORIGIN + path, ids, routes, unavailable, external)).encode()
         elif path.endswith('.css'):
             text = raw.decode('utf-8', 'replace')
             raw = rewrite_css(text, ORIGIN + path, ids, routes, unavailable, external).encode()
@@ -623,16 +639,25 @@ def build(data, state):
         target = disk_path(record['path'])
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(generated_page(template, 'Tag: ' + record['name'], topic_body(record)))
-    for alias, canonical in ui_repairs()['redirects'].items():
+    for row in data['media']:
+        if row['id'] not in repairs()['attachment_pages']:
+            continue
+        path = urlsplit(row['link']).path
+        image_path = local_url(row['source_url'], ORIGIN, ids)
+        body = '<p><a href="' + image_path + '"><img src="' + image_path + '" alt="' + html.escape(row.get('alt_text') or row['title']['rendered'], quote=True) + '"></a></p>'
+        target = disk_path(path)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(generated_page(template, html.unescape(row['title']['rendered']), body))
+    for alias, canonical in (ui_repairs()['redirects'] | repairs()['redirects']).items():
         target = disk_path(alias)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(generated_page(template, 'This article has moved',
             '<meta http-equiv="refresh" content="0;url=' + html.escape(canonical, quote=True) + '">'
             '<p><a href="' + html.escape(canonical, quote=True) + '">Continue to the article</a>.</p>'))
     for path, title, content in [
-        ('/search/', 'Search the archive', '<form action="/search/" method="get"><label for="archive-query">Search posts and pages</label> <input id="archive-query" name="s" type="search"/><button type="submit">Search</button></form><p id="search-status" role="status"></p><ol id="search-results"></ol>'),
-        ('/unavailable/', 'Unavailable in the original site', '<p>This historical link was already unavailable when the blog was archived. The rest of the archive is preserved.</p><p><a href="/archive/">Browse the archive</a> or <a href="/search/">search posts</a>.</p>'),
-        ('/404.html', 'Page not found', '<p>This address is not in the archive.</p><p><a href="/archive/">Browse all posts</a> or <a href="/search/">search the archive</a>.</p>'),
+        (SEARCH_PATH, 'Search the archive', f'<form action="{SEARCH_PATH}" method="get"><label for="archive-query">Search posts and pages</label> <input id="archive-query" name="s" type="search"/><button type="submit">Search</button></form><p id="search-status" role="status"></p><ol id="search-results"></ol>'),
+        ('/unavailable/', 'Unavailable in the original site', f'<p>This historical link was already unavailable when the blog was archived. The rest of the archive is preserved.</p><p><a href="/archive/">Browse the archive</a> or <a href="{SEARCH_PATH}">search posts</a>.</p>'),
+        ('/404.html', 'Page not found', f'<p>This address is not in the archive.</p><p><a href="/archive/">Browse all posts</a> or <a href="{SEARCH_PATH}">search the archive</a>.</p>'),
     ]:
         target = disk_path(path)
         target.parent.mkdir(parents=True, exist_ok=True)

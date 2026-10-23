@@ -106,7 +106,7 @@ class ArchivedFormTests(unittest.TestCase):
     def test_archive_search_stays_usable_next_to_a_disabled_form(self):
         source = '<form id="searchform" action="/"><input name="s"><input type="submit" value="Search"></form><form action="/send"><input name="message"><button>Send</button></form>'
         output = clean_html(parse_document(source))
-        self.assertEqual(output.form['action'], '/search/')
+        self.assertEqual(output.form['action'], '/archive-search/')
         self.assertEqual(output.form['method'], 'get')
         self.assertFalse(output.form.select('[disabled]'))
         self.assertEqual(len(output.select('.archive-form-notice')), 1)

@@ -139,7 +139,7 @@ async function render(row, side) {
     info.screenshot = 'screenshots/' + row.id + '-' + side + '.jpg';
     await page.screenshot({ path: path.join(output, info.screenshot), type: 'jpeg', quality: 90,
       animations: 'disabled', caret: 'hide', clip: { x: 0, y: 0, width, height: Math.min(maxHeight, metrics.height) },
-      captureBeyondViewport: true, timeout: 20000 });
+      fullPage: true, timeout: 20000 });
   } catch (error) {
     info.error = error.message;
   } finally {

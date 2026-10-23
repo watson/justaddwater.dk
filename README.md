@@ -18,6 +18,10 @@ original host.
   all API pages. Images and downloads discovered in HTML and CSS are also copied,
   including files not listed in the media library.
 - The original site layout, plus local search, RSS feeds, a sitemap and a 404 page.
+- Search lives at `/archive-search/`; the old `/search/` alias still displays
+  its original SEO article. The homepage's “More articles” link opens the complete
+  archive, avoiding the original pagination bug that skipped 45 posts. Eight
+  additional original pagination pages are preserved at `/page/2/` through `/page/9/`.
 - Article comment feeds and category, tag and author feeds retain their original
   `/…/feed/` paths and scope. Feed item links use the deployed archive address;
   original RSS IDs and comment timestamps are preserved.
@@ -47,14 +51,17 @@ original host.
 - A public-content export in `data/content.json` and recovery reports in `data/`.
 
 Some local files already returned 404, and some external images could not be
-retrieved during capture. **167 of 187 external image references** were recovered
+retrieved during capture. **169 of 188 external image references** were recovered
 and stored locally. Unavailable images have a small placeholder and retain their
 original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
 fetch errors for possible recovery from backups. This repair pass restored 82
-additional image references, including all 29 Google menu screenshots. Nineteen
+additional image references, including all 29 Google menu screenshots. A further
+Flickr recovery restores the Andreas Johannsen/Jakob Nielsen photo. Recovering
+the damaged UTF-16 demo exposed one further dependency: its original Technorati
+PNG corner sprite, also recovered from the Internet Archive. Eighteen
 external image references still have no usable recovered file; their URLs and
-affected articles are listed in `data/ui-repair-report.json`. The twentieth
+affected articles are listed in `data/ui-repair-report.json`. The nineteenth
 unrecovered external reference is the FeedBurner icon already replaced locally.
 
 Video players depend on external services. Approved alternatives restore Jeff
@@ -158,6 +165,21 @@ dependencies. `data/external-images.json` records source URLs and checksums for
 recovered images.
 The original captured article markup remains in `data/content.json`.
 
+`data/audit-repairs.json` records the subsequent comparison repairs: response
+anchors, unique form IDs, malformed links, shortcode excerpts, encoding and
+overflow. Two UTF-16 HTML downloads were damaged by an old text-mode transfer;
+intact backup copies reconstruct their original bytes before conversion. The
+recovery is checksum-bound. `data/supplemental-capture.json` adds pagination
+without modifying the original crawl inventory. `data/feed-aliases.json` records
+60 attachment feed paths that the old server redirects to the ten latest posts;
+the static versions retain those exact entries at their own XML paths.
+
+An authenticated WordPress XML export was checked on 23 October 2026. It confirms
+all captured public entry IDs and no missing approved comments. The 24 additional
+media records belong to unpublished entries. Only the aggregate verification is
+stored in `data/wordpress-export-verification.json`; the XML, drafts and private
+comment metadata remain outside Git and the published site.
+
 The database dump, WordPress configuration and unreviewed historical content are
 not included in this repository. Rebuilds use only the selected public material
 in `data/recovery.json` and `data/recovered-assets/`. The owner approved restoring
@@ -168,7 +190,8 @@ reviewed alongside them remain excluded.
 `scripts/verify.py` checks that the full text of every exported post/page is
 preserved, all public comment IDs appear in HTML, local navigation and asset
 references resolve, RSS and sitemap XML parse, and pages do not contain
-unreviewed executable scripts or dynamic forms. The exact reviewed bookmarklet
+unreviewed executable scripts or dynamic forms. The validator also checks
+duplicate IDs and local HTML fragment targets. The reviewed bookmarklet
 URLs are allowlisted only on their three original download pages, and all
 recovered bookmarklet dependencies are verified against recorded checksums.
 It verifies that archived form controls are
@@ -213,8 +236,9 @@ diffs. `.cache/audit/report.json` contains all results, evidence and coverage.
 The report is local and excluded from Git and the published site. A fresh clone
 needs the original `.cache/` capture to perform these comparisons; the script
 reports missing evidence rather than silently accepting it.
-`data/audit-summary.json` records the first complete run, its coverage and the
-confirmed items needing review. The auditor reports findings without editing
+`data/audit-summary.json` records the latest complete run, its coverage and
+remaining limitations. `data/audit-repair-report.json` lists repairs and the
+disposition of failed original captures. The auditor reports findings without editing
 the archived site.
 
 For screenshots, pixel differences and Chromium health checks on **all captured

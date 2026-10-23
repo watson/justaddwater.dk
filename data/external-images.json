@@ -216,7 +216,11 @@
     "sha256": "0761d6f4d3c26e69091b385a16a9e093578896ee1cb72e90d9164e1366bc76c9"
   },
   "http://flickr.com/photos/andjohan/65477716/": {
-    "error": "Response is not a supported raster image"
+    "path": "/archive-assets/external/b95ba9d2ae63837585a48d65.jpg",
+    "fetched_from": "https://live.staticflickr.com/25/65477716_85720333b0_z.jpg",
+    "sha256": "b95ba9d2ae63837585a48d653580be0db74c61dcf91f5bd1d01d808c409c3481",
+    "source_page": "https://www.flickr.com/photos/andjohan/65477716/",
+    "note": "Original photo ID 65477716, recovered from the original Flickr page og:image; the old img src mistakenly pointed to the HTML photo page."
   },
   "http://static.flickr.com/111/267101293_28f7b8b5b0_s.jpg": {
     "path": "/archive-assets/external/cd1579062afb77b96d7fd868.jpg",
@@ -896,5 +900,11 @@
     "path": "/archive-assets/external/4ca961c40d3656a8f3281fff.png",
     "fetched_from": "https://cdn.last.fm/flatness/listen/dark_brushed_panel_small.png",
     "sha256": "4ca961c40d3656a8f3281fff1ee51ee24df88cb6c939ca5655fa6fd3c4a3e7c0"
+  },
+  "http://static.technorati.com/static/css/img/corners/white.png": {
+    "path": "/archive-assets/external/dcf96f03b1801264a8e9abcd.png",
+    "sha256": "dcf96f03b1801264a8e9abcd260276a2aa209c6d3e636d15d0f2fde99d4b5f58",
+    "fetched_from": "https://web.archive.org/web/20060725030447id_/http://static.technorati.com/static/css/img/corners/white.png",
+    "note": "Original PNG corner sprite for the recovered UTF-16 rounded-corners demo."
   }
 }

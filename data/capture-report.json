@@ -19,7 +19,7 @@
     "tags": 149,
     "users": 3
   },
-  "html_pages": 1675,
+  "html_pages": 1683,
   "downloaded_assets": 816,
   "comments_in_html": 2784,
   "comments_missing_from_html": [],
@@ -42,44 +42,26 @@
     718,
     569
   ],
-  "rss_feeds": 1144,
+  "rss_feeds": 1204,
   "unavailable_pages": {
-    "/google-create-table-search-error/": "HTTP Error 404: Not Found",
-    "/google-create-table-search/": "HTTP Error 404: Not Found",
-    "/screenshot-of-hotmail-progress-bar/": "HTTP Error 404: Not Found",
     "/2007/10/12/web-site-investigation-toolbox-update/www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/": "HTTP Error 404: Not Found",
     "/2008/11/07/plugin-for-railss-resource-controller/github.com/giraffesoft/resource_controller/": "HTTP Error 404: Not Found",
     "/2008/11/07/plugin-for-railss-resource-controller/www.justaddwater.dk/": "HTTP Error 404: Not Found",
     "/2007/10/12/web-site-investigation-toolbox-update/comment-page-1/www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/": "HTTP Error 404: Not Found",
     "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/www.justaddwater.dk/": "HTTP Error 404: Not Found",
-    "/2012/02/24/get-started-using-advanced-web-fonts-today/": "HTTP Error 404: Not Found",
     "/http%3Awww.grancomo.com/": "HTTP Error 404: Not Found",
     "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/github.com/giraffesoft/resource_controller/": "HTTP Error 404: Not Found"
   },
   "unavailable_assets": {
     "/2008/05/26/jquery-rounded-corners-technorati-style/roundcorners.css": "HTTP Error 404: Not Found",
     "/2008/05/26/jquery-rounded-corners-technorati-style/comment-page-1/roundcorners.css": "HTTP Error 404: Not Found",
-    "/rss.xml/": "HTTP Error 404: Not Found",
     "/static/spreadsheets/client/css/813770466-tiler_view_ltr.css": "HTTP Error 404: Not Found",
     "/wp-content/uploads/2007/10/train_css_d_v6.html": "HTTP Error 404: Not Found",
     "/wp-content/uploads/2007/10/iepngfix.htc": "HTTP Error 404: Not Found"
   },
   "unavailable_references": [
-    "/2005/11/11/the-importance-of-labels-usability-work-at-microsoft/%E2%80%9D/",
-    "/2005/11/11/the-importance-of-labels-usability-work-at-microsoft/comment-page-1/%E2%80%9D/",
-    "/2006/01/08/google-analytics-trick-how-to-view-referring-urls/comment-page-2/costareviews.blogspot.com/",
-    "/2006/01/24/107/",
-    "/2012/02/24/get-started-using-advanced-web-fonts-today/",
-    "/Hvem_vi_er/",
-    "/Hvem_vi_er/kontakt/",
-    "/nyheder/",
-    "/resources/",
-    "/rss.xml/",
-    "/samarbejde/",
-    "/sektorer/",
     "/static/spreadsheets/client/css/813770466-tiler_view_ltr.css",
     "/wp-content/uploads/2007/10/iepngfix.htc",
-    "/wp-content/uploads/2007/10/train_css_d_v6.html",
-    "/ydelser/"
+    "/wp-content/uploads/2007/10/train_css_d_v6.html"
   ]
 }

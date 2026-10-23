@@ -15,6 +15,7 @@
       .then((routes) => {
         if (routes[legacyID]) {
           const destination = local(routes[legacyID]);
+          if (params.has('feed')) destination.pathname = destination.pathname.replace(/\/$/, '') + '/feed/';
           destination.hash = location.hash;
           location.replace(destination);
         }
@@ -25,9 +26,14 @@
   const query = params.get('s') || '';
   const input = document.getElementById('archive-query');
   if (!input && query) {
-    const destination = local('/search/');
+    const destination = local('/archive-search/');
     destination.searchParams.set('s', query);
     location.replace(destination);
+    return;
+  }
+  if (location.pathname === root.pathname && /^\d+$/.test(params.get('page') || params.get('paged') || '')) {
+    const page = Number(params.get('page') || params.get('paged'));
+    location.replace(local(page > 1 ? '/page/' + page + '/' : '/'));
     return;
   }
   if (!input) return;

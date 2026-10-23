@@ -1,0 +1,305 @@
+{
+  "note": "These attachment feed paths redirect to the main posts feed on the original server. All captured feeds have the same ordered ten latest post GUIDs. Preserve that behavior as direct XML at each local path.",
+  "aliases": {
+    "/891/feed/": {
+      "source_url": "http://justaddwater.dk/891/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/892/feed/": {
+      "source_url": "http://justaddwater.dk/892/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/893/feed/": {
+      "source_url": "http://justaddwater.dk/893/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/903/feed/": {
+      "source_url": "http://justaddwater.dk/903/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/904/feed/": {
+      "source_url": "http://justaddwater.dk/904/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/905/feed/": {
+      "source_url": "http://justaddwater.dk/905/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/bookmarletspng/feed/": {
+      "source_url": "http://justaddwater.dk/bookmarletspng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/danske-netbank-udbakke-skjult-highlight/feed/": {
+      "source_url": "http://justaddwater.dk/danske-netbank-udbakke-skjult-highlight/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/danske-netbank-udbakke-status-besked/feed/": {
+      "source_url": "http://justaddwater.dk/danske-netbank-udbakke-status-besked/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/e-texteditor-homepagepng/feed/": {
+      "source_url": "http://justaddwater.dk/e-texteditor-homepagepng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/gmail-inbox-reboot-invitationspng/feed/": {
+      "source_url": "http://justaddwater.dk/gmail-inbox-reboot-invitationspng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/google-analytics-screenshot-justaddwater-2007-05-09-thumbnailpng/feed/": {
+      "source_url": "http://justaddwater.dk/google-analytics-screenshot-justaddwater-2007-05-09-thumbnailpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/google-analytics-screenshot-justaddwater-2007-05-09png/feed/": {
+      "source_url": "http://justaddwater.dk/google-analytics-screenshot-justaddwater-2007-05-09png/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/google-front-page/feed/": {
+      "source_url": "http://justaddwater.dk/google-front-page/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/google-groups-mass-delete-multiple-files/feed/": {
+      "source_url": "http://justaddwater.dk/google-groups-mass-delete-multiple-files/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/google-webmaster-tools-dashboard-web-crawl-errors/feed/": {
+      "source_url": "http://justaddwater.dk/google-webmaster-tools-dashboard-web-crawl-errors/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/hotmail-checkbox-select-for-deletion-principle/feed/": {
+      "source_url": "http://justaddwater.dk/hotmail-checkbox-select-for-deletion-principle/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/jesper-r%C3%B8nn-jensen-thumbnail/feed/": {
+      "source_url": "http://justaddwater.dk/jesper-r%C3%B8nn-jensen-thumbnail/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/justaddwater-akismet-spam-icq-454528835-or-email-tedirectory-at-yahoo-compng/feed/": {
+      "source_url": "http://justaddwater.dk/justaddwater-akismet-spam-icq-454528835-or-email-tedirectory-at-yahoo-compng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/justaddwater-comment-spam-example-email-thumbnailpng/feed/": {
+      "source_url": "http://justaddwater.dk/justaddwater-comment-spam-example-email-thumbnailpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/justaddwater-comment-spam-example-emailpng/feed/": {
+      "source_url": "http://justaddwater.dk/justaddwater-comment-spam-example-emailpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/justaddwater-comment-subscriptionpng/feed/": {
+      "source_url": "http://justaddwater.dk/justaddwater-comment-subscriptionpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/microsoft-comfort-curve-keyboard-2000-ease-of-use-minipng/feed/": {
+      "source_url": "http://justaddwater.dk/microsoft-comfort-curve-keyboard-2000-ease-of-use-minipng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/microsoft-comfort-curve-keyboard-2000-ease-of-use-thumbpng/feed/": {
+      "source_url": "http://justaddwater.dk/microsoft-comfort-curve-keyboard-2000-ease-of-use-thumbpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/microsoft-comfort-curve-keyboard-2000-ease-of-usepng/feed/": {
+      "source_url": "http://justaddwater.dk/microsoft-comfort-curve-keyboard-2000-ease-of-usepng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/mozilla-thunderbird-2-message-tags/feed/": {
+      "source_url": "http://justaddwater.dk/mozilla-thunderbird-2-message-tags/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/nykredit-frontpage-validation-errors-warnings-horizontal-scrollpng/feed/": {
+      "source_url": "http://justaddwater.dk/nykredit-frontpage-validation-errors-warnings-horizontal-scrollpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/paris-on-rails-logo/feed/": {
+      "source_url": "http://justaddwater.dk/paris-on-rails-logo/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/photoshop-elements-saturation-for-disabled-buttons/feed/": {
+      "source_url": "http://justaddwater.dk/photoshop-elements-saturation-for-disabled-buttons/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/photoshop-mask-add-layer-mask-reveal-selectionpng/feed/": {
+      "source_url": "http://justaddwater.dk/photoshop-mask-add-layer-mask-reveal-selectionpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/photoshop-mask-create-new-setpng/feed/": {
+      "source_url": "http://justaddwater.dk/photoshop-mask-create-new-setpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/photoshop-mask-create-rounded-shapepng/feed/": {
+      "source_url": "http://justaddwater.dk/photoshop-mask-create-rounded-shapepng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/photoshop-mask-finished-result-rounded-cornerspng/feed/": {
+      "source_url": "http://justaddwater.dk/photoshop-mask-finished-result-rounded-cornerspng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/photoshop-mask-select-folderpng/feed/": {
+      "source_url": "http://justaddwater.dk/photoshop-mask-select-folderpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/photoshop-mask-unlink-click-to-move-mask-on-fixed-backgroundpng/feed/": {
+      "source_url": "http://justaddwater.dk/photoshop-mask-unlink-click-to-move-mask-on-fixed-backgroundpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/screen-shot-2009-10-13-at-1-03-35-pm/feed/": {
+      "source_url": "http://justaddwater.dk/screen-shot-2009-10-13-at-1-03-35-pm/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/screen-shot-2010-04-20-at-15-03-31/feed/": {
+      "source_url": "http://justaddwater.dk/screen-shot-2010-04-20-at-15-03-31/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/screenshot-firefox-on-xp-css-revisited-article-456bereastreet/feed/": {
+      "source_url": "http://justaddwater.dk/screenshot-firefox-on-xp-css-revisited-article-456bereastreet/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/screenshot-oreilly-not-working-with-non-us-characters/feed/": {
+      "source_url": "http://justaddwater.dk/screenshot-oreilly-not-working-with-non-us-characters/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/spam-blog-comment-on-justaddwater-thumbpng/feed/": {
+      "source_url": "http://justaddwater.dk/spam-blog-comment-on-justaddwater-thumbpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/spam-blog-comment-on-justaddwaterpng/feed/": {
+      "source_url": "http://justaddwater.dk/spam-blog-comment-on-justaddwaterpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/spam-blog-page-18-todaypng/feed/": {
+      "source_url": "http://justaddwater.dk/spam-blog-page-18-todaypng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/speedfan-cpu-harddisk-temperature-thumbnailpng/feed/": {
+      "source_url": "http://justaddwater.dk/speedfan-cpu-harddisk-temperature-thumbnailpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/speedfan-cpu-harddisk-temperaturepng/feed/": {
+      "source_url": "http://justaddwater.dk/speedfan-cpu-harddisk-temperaturepng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/svn-create-local-repository-native-filesystempng/feed/": {
+      "source_url": "http://justaddwater.dk/svn-create-local-repository-native-filesystempng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/svn-create-local-repository-with-subversion-tortoisesvnpng/feed/": {
+      "source_url": "http://justaddwater.dk/svn-create-local-repository-with-subversion-tortoisesvnpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/svn-import-initial-commit-messagepng/feed/": {
+      "source_url": "http://justaddwater.dk/svn-import-initial-commit-messagepng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/svn-import-workspace-folder-into-subversionpng/feed/": {
+      "source_url": "http://justaddwater.dk/svn-import-workspace-folder-into-subversionpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/thinkpad-fancontrol-for-t60p-ati-gpu-graphical-processor-not-cooled-by-fanpng/feed/": {
+      "source_url": "http://justaddwater.dk/thinkpad-fancontrol-for-t60p-ati-gpu-graphical-processor-not-cooled-by-fanpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/thinkpad-fancontrol-for-t60p-smallpng/feed/": {
+      "source_url": "http://justaddwater.dk/thinkpad-fancontrol-for-t60p-smallpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/thinkpad-fancontrol-for-t60ppng/feed/": {
+      "source_url": "http://justaddwater.dk/thinkpad-fancontrol-for-t60ppng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/thinkpad-t60p-ubuntu-install-fails-graphicsjpg/feed/": {
+      "source_url": "http://justaddwater.dk/thinkpad-t60p-ubuntu-install-fails-graphicsjpg/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/timereporting-total-issues-largepng/feed/": {
+      "source_url": "http://justaddwater.dk/timereporting-total-issues-largepng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/timereporting-total-issues-thumbnailpng/feed/": {
+      "source_url": "http://justaddwater.dk/timereporting-total-issues-thumbnailpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/tortoisesvn-properties-add-svn-externalspng/feed/": {
+      "source_url": "http://justaddwater.dk/tortoisesvn-properties-add-svn-externalspng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/tortoisesvn-properties-svn-externals-addedpng/feed/": {
+      "source_url": "http://justaddwater.dk/tortoisesvn-properties-svn-externals-addedpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/tortoisesvn-propertiespng/feed/": {
+      "source_url": "http://justaddwater.dk/tortoisesvn-propertiespng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened/feed/": {
+      "source_url": "http://justaddwater.dk/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/unicode-utf-8-character-table-chrome-search-for-danish-letter-%C3%A6/feed/": {
+      "source_url": "http://justaddwater.dk/unicode-utf-8-character-table-chrome-search-for-danish-letter-%C3%A6/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    },
+    "/windows-system-hibernate-system-errorpng/feed/": {
+      "source_url": "http://justaddwater.dk/windows-system-hibernate-system-errorpng/feed/",
+      "final_url": "http://feeds.justaddwater.dk/jaw/posts",
+      "sha256": "1efe0f9240a801972f0ba8256db7c031e4580069a5a491ac27f0f293ab3eb25a"
+    }
+  }
+}

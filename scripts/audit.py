@@ -29,7 +29,7 @@ from bs4 import BeautifulSoup, UnicodeDammit
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'http://justaddwater.dk'
 HOSTS = {'justaddwater.dk', 'www.justaddwater.dk'}
-POLICY_VERSION = 1
+POLICY_VERSION = 2
 
 
 def read_json(path, default=None):
@@ -131,6 +131,8 @@ class Expectations:
     def __init__(self, root, cache=None):
         self.recovery = read_json(root / 'data/recovery.json', {})
         self.ui = read_json(root / 'data/ui-repairs.json', {})
+        self.repairs = read_json(root / 'data/audit-repairs.json', {})
+        self.root = root
         self.videos = read_json(root / 'data/video-players.json', [])
         self.images = read_json(root / 'data/external-images.json', {})
         content = read_json(root / 'data/content.json', {})
@@ -141,6 +143,7 @@ class Expectations:
         self.source_files = {}
         if cache:
             inventory = read_json(cache / 'capture.json', {})
+            inventory['pages'] = inventory.get('pages', {}) | read_json(root / 'data/supplemental-capture.json', {}).get('pages', {})
             self.failed_paths = {canonical(p) for k in ('failed_pages', 'failed_assets') for p in inventory.get(k, {})}
             for kind in ('pages', 'assets'):
                 for path, url in inventory.get(kind, {}).items():
@@ -152,19 +155,25 @@ class Expectations:
                     if canonical(ORIGIN + path) != final:
                         self.capture_aliases[canonical(ORIGIN + path)] = final
 
-    def reference_issues(self, removed, added, path):
+    def reference_issues(self, removed, added, path, raw=''):
         """Explain known URL migrations; retain every other changed target."""
         problems, explained = [], []
         mappings = {canonical(k): canonical(v) for k, v in self.ui.get('external_link_repairs', {}).items()}
         mappings.update(self.capture_aliases)
+        mappings.update({canonical(k): canonical(v) for k, v in self.repairs.get('reference_mappings', {}).items()})
+        mappings.update(self.repairs.get('scoped_links', {}).get(path, {}))
         mappings.update({'http://feeds.justaddwater.dk/jaw/posts': '/feed/', 'http://feeds.feedburner.com/jaw/posts': '/feed/',
                          'http://feeds.justaddwater.dk/jaw/comments': '/comments/feed/'})
-        for group in (self.recovery.get('aliases', {}), self.ui.get('redirects', {})):
+        for group in (self.recovery.get('aliases', {}), self.ui.get('redirects', {}), self.repairs.get('redirects', {})):
             mappings.update({canonical(k): canonical(v) for k, v in group.items()})
         mappings.update({canonical(k): v['path'] for k, v in self.images.items() if v.get('path')})
         mappings.update({canonical(d['source_url']): d['local_path'] for d in self.recovery.get('demos', []) if d.get('source_url') and d.get('local_path')})
         added_keys = {(v['tag'], v['attribute'], v['url']) for v in added}
         slash_keys = {(tag, attr, url.rstrip('/')) for tag, attr, url in added_keys}
+        code_refs = set()
+        for block in self.recovery.get('code_blocks', []):
+            if block['captured'] in raw:
+                code_refs.update((r['tag'], r['attribute'], r['url']) for r in refs(BeautifulSoup(block['captured'], 'html.parser'), ORIGIN + path))
         for ref in removed:
             url = ref['url']
             parsed = urlsplit(url)
@@ -175,9 +184,16 @@ class Expectations:
             if not parsed.netloc and post_id in self.ids:
                 replacement = self.ids[post_id] + ('feed/' if query.get('feed') or parsed.path == '/feed/' else '') + ('#' + parsed.fragment if parsed.fragment else '')
             if not parsed.netloc and query.get('s'):
-                replacement = '/search/?' + parsed.query
+                replacement = '/archive-search/?' + parsed.query
             if replacement and (ref['tag'], ref['attribute'], replacement) in added_keys:
                 reason = 'recorded URL or recovered resource'
+            elif (ref['tag'], ref['attribute'], url) in code_refs:
+                reason = 'literal dependency inside a restored code example'
+            elif url in self.repairs.get('unavailable_references', {}):
+                item = self.repairs['unavailable_references'][url]
+                if (item.get('replacement') is None or
+                        (ref['tag'], ref['attribute'], item.get('replacement')) in added_keys):
+                    reason = item['reason']
             elif (ref['tag'], ref['attribute'], url.rstrip('/')) in slash_keys:
                 reason = 'directory slash normalization'
             elif ref['tag'] == 'script' and (parsed.path.startswith(('/wp-includes/', '/wp-content/plugins/')) or
@@ -234,7 +250,8 @@ class Expectations:
             notes.append('retired-host-open_basedir-warning')
         # Replace only an exact recorded source fragment, never an entire post.
         for group, records in [('code', self.recovery.get('code_blocks', [])),
-                               ('literal-markup', self.ui.get('literal_markup', []))]:
+                               ('literal-markup', self.ui.get('literal_markup', [])),
+                               ('literal-comment', self.repairs.get('literal_fragments', []))]:
             for record in records:
                 if record['captured'] in raw:
                     replacement = record.get('replacement', '<pre>' + html.escape(record.get('code', '')) + '</pre>')
@@ -246,6 +263,12 @@ class Expectations:
                 notes.append('tags: ' + str(record['post_id']))
         original = BeautifulSoup(raw, 'html.parser')
         actual = BeautifulSoup(clone, 'html.parser')
+        for paragraph in original.select('.entry p'):
+            for record in self.repairs.get('excerpts', []):
+                if paragraph.get_text() == record['captured_text']:
+                    paragraph.clear()
+                    paragraph.string = record['text']
+                    notes.append('excerpt: ' + str(record['post_id']))
         for record in self.ui.get('paragraph_code', []):
             for paragraph in original.find_all('p'):
                 if normalize_space(paragraph.get_text(' ', strip=True)) == record['captured_text']:
@@ -424,7 +447,15 @@ def audit_record(path, url, kind, cache, site, policy, prefix, failure=None):
     old_soup, new_soup = BeautifulSoup(raw, 'html5lib'), BeautifulSoup(actual, 'html5lib')
     row['title'] = new_soup.title.get_text(' ', strip=True) if new_soup.title else path
     row['text_before'], row['text_after'] = visible_text(old_soup), visible_text(new_soup)
-    expected, observed, notes = policy.text_pair(raw, actual)
+    expected_raw = raw
+    recovery = policy.repairs.get('html_sources', {}).get(path)
+    if recovery and recovery.get('capture_sha256') == digest(a):
+        restored = (policy.root / recovery['file']).read_bytes() if recovery.get('file') else a
+        if not recovery.get('sha256') or digest(restored) == recovery['sha256']:
+            expected_raw = restored.decode(recovery['encoding'])
+    expected, observed, notes = policy.text_pair(expected_raw, actual)
+    if expected_raw != raw:
+        notes.append('recorded HTML encoding recovery')
     row['expected_changes'] = notes
     changes = text_changes(expected, observed)
     if changes:
@@ -447,7 +478,7 @@ def audit_record(path, url, kind, cache, site, policy, prefix, failure=None):
     new_keys = {(v['tag'], v['attribute'], v['url']) for v in new_refs}
     row['reference_changes'] = {'removed': [v for v in old_refs if (v['tag'], v['attribute'], v['url']) not in new_keys],
                                 'added': [v for v in new_refs if (v['tag'], v['attribute'], v['url']) not in old_keys]}
-    changed, explained = policy.reference_issues(row['reference_changes']['removed'], new_refs, path)
+    changed, explained = policy.reference_issues(row['reference_changes']['removed'], new_refs, path, raw)
     row['reference_changes']['explained'] = explained
     if changed:
         issues.append(finding('changed-reference', 'unexplained', 'Original links or dependencies were removed or changed without an exact recorded URL match.', references=changed))
@@ -468,7 +499,7 @@ def audit_record(path, url, kind, cache, site, policy, prefix, failure=None):
             if group:
                 issues.append(finding('fragment-target', status, 'Local fragment links have no matching ID or named anchor.', references=group))
     for form in new_soup.find_all('form'):
-        if form.get('method', 'get').lower() != 'get' or canonical(form.get('action', ''), 'http://archive.test' + prefix + path, prefix) != '/search/':
+        if form.get('method', 'get').lower() != 'get' or canonical(form.get('action', ''), 'http://archive.test' + prefix + path, prefix) != '/archive-search/':
             issues.append(finding('active-submission', 'unexplained', 'A form remains outside the approved local search route.', action=form.get('action'), method=form.get('method', 'get')))
     placeholders = [t.get('data-original-url') for t in new_soup.select('img[data-original-url]') if 'unavailable.svg' in t.get('src', '')]
     if placeholders:
@@ -485,8 +516,27 @@ def audit_record(path, url, kind, cache, site, policy, prefix, failure=None):
     handlers = [{'tag': t.name, 'attribute': name, 'code': value} for t in old_soup.find_all(True) for name, value in t.attrs.items() if name.lower().startswith('on')]
     row['inline_code'] = {'removed_scripts': changed_scripts, 'original_event_handlers': handlers}
     unknown_scripts = inline_review(changed_scripts)
-    if unknown_scripts or handlers:
-        issues.append(finding('inline-behavior', 'review', 'Inline behavior changed. Check whether it was a demo, code example or retired widget.', scripts=unknown_scripts, handlers=handlers))
+    explained_inline = []
+    for code in list(unknown_scripts):
+        if any(code in record['captured'] and record['captured'] in raw for record in policy.recovery.get('code_blocks', [])):
+            unknown_scripts.remove(code)
+            explained_inline.append('Script is displayed as a recorded literal code example.')
+        elif path == '/wp-content/uploads/2006/03/fixed-table-cells-notworking.html' and new_soup.select_one('script[src$="/archive-assets/demos.js"]'):
+            unknown_scripts.remove(code)
+            explained_inline.append('Table-height behavior is provided by the tested local demo script.')
+    pending_handlers = []
+    for handler in handlers:
+        code = handler['code'].strip()
+        if handler['tag'] == 'a' and (re.fullmatch(r'doPopup\(\d*\);return false;?', code) or code in ('return top.js.OpenExtLink(window,event,this)', 'return false;')):
+            explained_inline.append('Obsolete link interception removed; the original destination remains a normal link.')
+        elif handler == {'tag': 'input', 'attribute': 'onclick', 'code': "this.value=''"} and new_soup.select_one('.archive-form input[disabled]'):
+            explained_inline.append('Clear-on-click handler belongs to the disabled historical submission form.')
+        else:
+            pending_handlers.append(handler)
+    if explained_inline:
+        issues.append(finding('inline-behavior', 'expected', 'Reviewed local behavior or inert examples.', reasons=sorted(set(explained_inline))))
+    if unknown_scripts or pending_handlers:
+        issues.append(finding('inline-behavior', 'review', 'Inline behavior changed. Check whether it was a demo, code example or retired widget.', scripts=unknown_scripts, handlers=pending_handlers))
     return row
 
 
@@ -547,12 +597,22 @@ def refresh_one(row, out, timeout):
         return {'error': str(e)}
 
 
+def screenshot_coverage(info, width, height):
+    expected = (info.get('viewport', {}).get('width', 1280), min(50000, info['height']))
+    return None if (width, height) == expected else {'expected': list(expected), 'actual': [width, height]}
+
+
 def visual_comparison(row, out):
     from PIL import Image, ImageChops, ImageEnhance
     sides = row.get('browser', {})
     if not all(sides.get(s, {}).get('screenshot') for s in ('original', 'clone')):
         return
     images = [Image.open(out / sides[s]['screenshot']).convert('RGB') for s in ('original', 'clone')]
+    for side, im in zip(('original', 'clone'), images):
+        mismatch = screenshot_coverage(sides[side], im.width, im.height)
+        if mismatch:
+            row['findings'].append(finding('screenshot-coverage', 'unexplained',
+                'Screenshot dimensions do not cover the measured page up to the documented cap.', side=side, **mismatch))
     # Fixed scale preserves height/layout differences. This is a review signal,
     # not an assertion of correctness; JPEG noise below 45/255 is ignored.
     scale = 480 / max(im.width for im in images)
@@ -715,6 +775,7 @@ def main():
         inventory = read_json(args.cache / 'capture.json')
         if not inventory:
             parser.error('Capture inventory is missing; run scripts/archive.py capture or supply --cache')
+        inventory['pages'] = inventory.get('pages', {}) | read_json(ROOT / 'data/supplemental-capture.json', {}).get('pages', {})
         policy = Expectations(ROOT, args.cache)
         jobs = {}
         for kind in ('pages', 'assets', 'failed_pages', 'failed_assets'):

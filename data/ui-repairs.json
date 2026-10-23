@@ -307,10 +307,11 @@
       {
         "id": "bookmarklet-cookieeditor",
         "label": "CookEd",
-        "captured": "javascript:਀⠀昀甀渀挀琀椀漀渀⠀⤀笀�\nu='http://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.js';਀眀㴀眀椀渀搀漀眀⸀漀瀀攀渀⠀⤀㬀�\nd=w.document;਀搀⸀眀爀椀琀攀⠀✀㰀栀琀洀氀㸀㰀栀攀愀搀㸀㰀⼀栀攀愀搀㸀㰀戀漀搀礀㸀㰀⼀戀漀搀礀㸀㰀⼀栀琀洀氀㸀✀⤀㬀�\nd.close();਀猀㴀搀⸀戀漀搀礀⸀愀瀀瀀攀渀搀䌀栀椀氀搀⠀眀⸀搀漀挀甀洀攀渀琀⸀挀爀攀愀琀攀䔀氀攀洀攀渀琀⠀✀猀挀爀椀瀀琀✀⤀⤀㬀�\ns.type='text/javascript';਀猀⸀猀爀挀㴀甀㬀�\n}਀⤀⠀⤀�\n",
+        "captured": "javascript:\n(function(){\nu='http://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.js';\nw=window.open();\nd=w.document;\nd.write('<html><head></head><body></body></html>');\nd.close();\ns=d.body.appendChild(w.document.createElement('script'));\ns.type='text/javascript';\ns.src=u;\n}\n)()\n",
         "replacement": "javascript:(function(){u='__ARCHIVE_ROOT__archive-assets/bookmarklets/cookieeditor.js';w=window.open();d=w.document;d.write('<html><head></head><body></body></html>');d.close();s=d.body.appendChild(w.document.createElement('script'));s.type='text/javascript';s.src=u;})()",
         "source": "Original UTF-16 cookie-editor page from the site backup; local script URL",
-        "repair": "Restore local dependencies and literal output escaping; original bookmarklet is retained in captured."
+        "repair": "Restore local dependencies and literal output escaping; original bookmarklet is retained in captured.",
+        "damaged_capture": "javascript:਀⠀昀甀渀挀琀椀漀渀⠀⤀笀�\nu='http://justaddwater.dk/wp-content/uploads/2007/01/cookieeditor.js';਀眀㴀眀椀渀搀漀眀⸀漀瀀攀渀⠀⤀㬀�\nd=w.document;਀搀⸀眀爀椀琀攀⠀✀㰀栀琀洀氀㸀㰀栀攀愀搀㸀㰀⼀栀攀愀搀㸀㰀戀漀搀礀㸀㰀⼀戀漀搀礀㸀㰀⼀栀琀洀氀㸀✀⤀㬀�\nd.close();਀猀㴀搀⸀戀漀搀礀⸀愀瀀瀀攀渀搀䌀栀椀氀搀⠀眀⸀搀漀挀甀洀攀渀琀⸀挀爀攀愀琀攀䔀氀攀洀攀渀琀⠀✀猀挀爀椀瀀琀✀⤀⤀㬀�\ns.type='text/javascript';਀猀⸀猀爀挀㴀甀㬀�\n}਀⤀⠀⤀�\n"
       }
     ]
   },

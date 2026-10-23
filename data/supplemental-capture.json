@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "/page/2/": "http://justaddwater.dk/?page=2",
+    "/page/3/": "http://justaddwater.dk/?page=3",
+    "/page/4/": "http://justaddwater.dk/?page=4",
+    "/page/5/": "http://justaddwater.dk/?page=5",
+    "/page/6/": "http://justaddwater.dk/?page=6",
+    "/page/7/": "http://justaddwater.dk/?page=7",
+    "/page/8/": "http://justaddwater.dk/?page=8",
+    "/page/9/": "http://justaddwater.dk/?page=9"
+  },
+  "source": "Original homepage pagination, captured 2026-10-23. The root page only lists five posts and the next page starts at post 51; the repaired More articles link opens the full archive."
+}

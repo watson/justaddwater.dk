@@ -1,0 +1,152 @@
+{
+  "checked_at": "2026-10-23",
+  "repairs": [
+    "Restored response fragment destinations on 516 affected pages and inherited missing comment targets.",
+    "Kept the original /search/ article alias; moved working search to /archive-search/ and preserved query text.",
+    "Repaired transcript encodings and restored two damaged UTF-16 HTML downloads from intact backups.",
+    "Removed duplicate IDs while preserving form labels and theme styling.",
+    "Repaired eight shortcode excerpts and the invisible conditional-comment HTML example.",
+    "Wrapped long article code to prevent horizontal overflow.",
+    "Corrected malformed article/external links and copied Capgemini demo navigation destinations.",
+    "Preserved eight additional original pagination pages; the homepage now links to the complete archive.",
+    "Restored three public attachment display pages and one missing Flickr photograph.",
+    "Corrected comment/feed routing, retaining 60 attachment feed aliases with their original ten-post scope.",
+    "Recovered the original PNG corner sprite so the restored Technorati demonstration displays rounded corners.",
+    "Fixed the audit screenshot runner to capture full page heights and reject screenshots that cover only the viewport."
+  ],
+  "failed_capture_dispositions": [
+    {
+      "path": "/2007/10/12/web-site-investigation-toolbox-update/comment-page-1/www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/",
+      "status": "repaired-link",
+      "detail": "Malformed relative URL corrected to the original external or canonical site destination."
+    },
+    {
+      "path": "/2007/10/12/web-site-investigation-toolbox-update/www.andybudd.com/archives/2006/07/layout_grid_bookmarklet/",
+      "status": "repaired-link",
+      "detail": "Malformed relative URL corrected to the original external or canonical site destination."
+    },
+    {
+      "path": "/2008/05/26/jquery-rounded-corners-technorati-style/comment-page-1/roundcorners.css",
+      "status": "literal-code",
+      "detail": "This apparent dependency occurs inside an HTML code example. The example now renders as inert code."
+    },
+    {
+      "path": "/2008/05/26/jquery-rounded-corners-technorati-style/roundcorners.css",
+      "status": "literal-code",
+      "detail": "This apparent dependency occurs inside an HTML code example. The example now renders as inert code."
+    },
+    {
+      "path": "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/github.com/giraffesoft/resource_controller/",
+      "status": "repaired-link",
+      "detail": "Malformed relative URL corrected to the original external or canonical site destination."
+    },
+    {
+      "path": "/2008/11/07/plugin-for-railss-resource-controller/comment-page-1/www.justaddwater.dk/",
+      "status": "repaired-link",
+      "detail": "Malformed relative URL corrected to the original external or canonical site destination."
+    },
+    {
+      "path": "/2008/11/07/plugin-for-railss-resource-controller/github.com/giraffesoft/resource_controller/",
+      "status": "repaired-link",
+      "detail": "Malformed relative URL corrected to the original external or canonical site destination."
+    },
+    {
+      "path": "/2008/11/07/plugin-for-railss-resource-controller/www.justaddwater.dk/",
+      "status": "repaired-link",
+      "detail": "Malformed relative URL corrected to the original external or canonical site destination."
+    },
+    {
+      "path": "/2009/01/08/css-fun-flag-d%E2%80%A6ated-html-tagscss-fun-flag-deprecated-html-tags/",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/2012/02/24/get-started-using-advanced-web-fonts-today/",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/category/webstandards/atom/",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/category/webstandards/rss/",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/google-create-table-search-error/",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/google-create-table-search/",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/http%3Awww.grancomo.com/",
+      "status": "repaired-link",
+      "detail": "Malformed relative URL corrected to the original external or canonical site destination."
+    },
+    {
+      "path": "/pres%202006-06-01%20reboot.ppt",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/rss.xml/",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/screenshot-of-hotmail-progress-bar/",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/static/spreadsheets/client/css/813770466-tiler_view_ltr.css",
+      "status": "unrecovered",
+      "detail": "Original spreadsheet stylesheet is unavailable. The HTML retains its embedded per-cell formatting."
+    },
+    {
+      "path": "/wp-content/Beermatroadmap2.jpg",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/wp-content/thumb-Beermatroadmap2.jpg",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.png",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/wp-content/uploads/2006/01/dcft.dk.Dansk%20Center%20for%20Tilg%C3%A6ngelighed%20-%20Tilg%C3%A6ngelighed%20til%20internet1137575366574.thumbnail.png",
+      "status": "recovered",
+      "detail": "Local resource or reviewed alias restored; the unavailable original cannot be compared byte-for-byte."
+    },
+    {
+      "path": "/wp-content/uploads/2007/10/iepngfix.htc",
+      "status": "unrecovered",
+      "detail": "Exact original IE6 PNG workaround is unavailable. Modern browsers render PNG transparency without it."
+    },
+    {
+      "path": "/wp-content/uploads/2007/10/train_css_d_v6.html",
+      "status": "unrecovered",
+      "detail": "The linked v6 train demo is unavailable. Backups contain earlier v2-v5 versions, not the requested file."
+    }
+  ],
+  "unrecovered_external_image_references": 18,
+  "image_details": "data/ui-repair-report.json",
+  "export_verification": "data/wordpress-export-verification.json",
+  "notes": [
+    "The immutable original capture remains unchanged. A failed original response cannot supply a pixel or content baseline even when its link has been repaired.",
+    "Pixel differences from intentional code, form and plugin repairs remain visible in the comparison report.",
+    "Private XML data and unpublished content are excluded."
+  ]
+}
