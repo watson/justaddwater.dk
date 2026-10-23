@@ -1,63 +1,53 @@
 {
-  "source_site_commit": "353d4f4967abe29f8e41d8e9dd0949588d827fce",
-  "created_at": "2026-10-22T21:26:35.119326+00:00",
-  "scope": "Every URL in the saved capture inventory; offline browser replay of every available HTML pair.",
+  "source_site_commit": "44384445bf27bcb3abf6250a579dbc24c86a0d89",
+  "site_tree_sha256": "1dbeb0a492d612ab6afd3e34dba93910abfabc022d80e3728c70835ec9331bcc",
+  "created_at": "2026-10-23T05:31:42.675129+00:00",
+  "scope": "All 2,514 original capture URLs plus eight separately captured public pagination pages. Full-height offline browser replay of every available HTML pair.",
   "counts": {
-    "urls": 2514,
-    "html_pairs": 1696,
-    "browser_pairs": 1696,
+    "urls": 2522,
+    "html_pairs": 1704,
+    "browser_pairs": 1704,
     "statuses": {
-      "expected": 1684,
-      "unexplained": 633,
-      "unverified": 2076,
-      "inherited": 147,
-      "review": 629,
-      "fixed": 481
+      "expected": 1727,
+      "unverified": 2085,
+      "review": 805,
+      "fixed": 518,
+      "inherited": 22
     },
     "kinds": {
-      "text": 1682,
-      "changed-reference": 108,
-      "browser-brokenImages": 366,
-      "browser-jsErrors": 1676,
-      "fragment-target": 603,
-      "unavailable-image": 23,
-      "visual": 599,
-      "inline-behavior": 24,
+      "text": 1688,
+      "browser-brokenImages": 372,
+      "browser-jsErrors": 1684,
+      "visual": 802,
+      "inline-behavior": 25,
       "php-warning": 408,
       "duplicate-id": 26,
-      "shortcode": 49,
-      "computed-style": 4,
+      "shortcode": 50,
+      "computed-style": 3,
       "flash-player": 32,
+      "unavailable-image": 22,
       "baseline": 25,
-      "recovered-url": 8,
-      "screenshot-limit": 8,
+      "recovered-url": 13,
+      "screenshot-limit": 4,
       "browser-overflow": 2,
-      "page-overflow": 4,
-      "missing-article": 1,
-      "missing-comment": 1,
       "stylesheet": 1
     }
   },
   "finding_groups": [
     {
-      "kind": "browser-jsErrors",
-      "status": "unverified",
-      "count": 1676
-    },
-    {
       "kind": "text",
       "status": "expected",
-      "count": 1675
+      "count": 1688
+    },
+    {
+      "kind": "browser-jsErrors",
+      "status": "unverified",
+      "count": 1684
     },
     {
       "kind": "visual",
       "status": "review",
-      "count": 599
-    },
-    {
-      "kind": "fragment-target",
-      "status": "unexplained",
-      "count": 516
+      "count": 802
     },
     {
       "kind": "php-warning",
@@ -67,22 +57,12 @@
     {
       "kind": "browser-brokenImages",
       "status": "unverified",
-      "count": 366
-    },
-    {
-      "kind": "changed-reference",
-      "status": "unexplained",
-      "count": 108
-    },
-    {
-      "kind": "fragment-target",
-      "status": "inherited",
-      "count": 86
+      "count": 372
     },
     {
       "kind": "shortcode",
       "status": "fixed",
-      "count": 41
+      "count": 50
     },
     {
       "kind": "flash-player",
@@ -91,8 +71,13 @@
     },
     {
       "kind": "duplicate-id",
-      "status": "inherited",
+      "status": "fixed",
       "count": 26
+    },
+    {
+      "kind": "inline-behavior",
+      "status": "expected",
+      "count": 25
     },
     {
       "kind": "baseline",
@@ -100,64 +85,29 @@
       "count": 25
     },
     {
-      "kind": "inline-behavior",
-      "status": "review",
-      "count": 24
-    },
-    {
       "kind": "unavailable-image",
       "status": "inherited",
-      "count": 23
-    },
-    {
-      "kind": "shortcode",
-      "status": "inherited",
-      "count": 8
+      "count": 22
     },
     {
       "kind": "recovered-url",
       "status": "expected",
-      "count": 8
+      "count": 13
     },
     {
       "kind": "screenshot-limit",
       "status": "unverified",
-      "count": 8
-    },
-    {
-      "kind": "text",
-      "status": "unexplained",
-      "count": 7
+      "count": 4
     },
     {
       "kind": "computed-style",
       "status": "review",
-      "count": 4
-    },
-    {
-      "kind": "page-overflow",
-      "status": "inherited",
-      "count": 4
+      "count": 3
     },
     {
       "kind": "browser-overflow",
-      "status": "review",
+      "status": "fixed",
       "count": 2
-    },
-    {
-      "kind": "fragment-target",
-      "status": "unverified",
-      "count": 1
-    },
-    {
-      "kind": "missing-article",
-      "status": "unexplained",
-      "count": 1
-    },
-    {
-      "kind": "missing-comment",
-      "status": "unexplained",
-      "count": 1
     },
     {
       "kind": "stylesheet",
@@ -165,56 +115,119 @@
       "count": 1
     }
   ],
-  "interpretation": "Counts describe signals per URL, not distinct defects. Unexplained differences and visual signals still require review. Missing offline dependencies are not evidence that the live service is broken.",
-  "confirmed_review_items": [
+  "interpretation": "Counts are signals per URL, not distinct defects. No unexplained content, reference, fragment, asset or screenshot-coverage differences remain. Pixel differences remain visible review signals: they include intentional form notices, code/plugin repairs, removed host warnings, restored content and unavailable-image placeholders. The report does not claim that every pixel difference was manually reviewed.",
+  "previous_run": {
+    "source_site_commit": "353d4f4967abe29f8e41d8e9dd0949588d827fce",
+    "counts": {
+      "urls": 2514,
+      "html_pairs": 1696,
+      "browser_pairs": 1696,
+      "statuses": {
+        "expected": 1684,
+        "unexplained": 633,
+        "unverified": 2076,
+        "inherited": 147,
+        "review": 629,
+        "fixed": 481
+      },
+      "kinds": {
+        "text": 1682,
+        "changed-reference": 108,
+        "browser-brokenImages": 366,
+        "browser-jsErrors": 1676,
+        "fragment-target": 603,
+        "unavailable-image": 23,
+        "visual": 599,
+        "inline-behavior": 24,
+        "php-warning": 408,
+        "duplicate-id": 26,
+        "shortcode": 49,
+        "computed-style": 4,
+        "flash-player": 32,
+        "baseline": 25,
+        "recovered-url": 8,
+        "screenshot-limit": 8,
+        "browser-overflow": 2,
+        "page-overflow": 4,
+        "missing-article": 1,
+        "missing-comment": 1,
+        "stylesheet": 1
+      }
+    }
+  },
+  "resolved_confirmed_items": [
+    "Missing response anchors and inherited missing comment targets",
+    "Transcript and downloaded HTML encoding errors",
+    "Original /search/ article alias overwritten by archive search",
+    "Duplicate form IDs and broken shortcode excerpts",
+    "Long code overflowing the page",
+    "Malformed internal/external links, attachment feed query routing and original homepage pagination",
+    "Missing public attachment display pages and two recoverable external image dependencies",
+    "Audit screenshots clipped to the viewport instead of the measured page height"
+  ],
+  "reviewed_computed_style_signals": [
     {
-      "kind": "response-anchor",
-      "affected_page_urls": 516,
-      "detail": "Response links were rewritten to #comments where the preserved form is still #respond and no #comments target exists.",
-      "example": "/2006/01/12/blog-software-usability/screenshot-wordpress-dashboard-modified-halfsizepng/"
+      "paths": [
+        "/2006/05/19/rails-tip-scaffolding-lists/",
+        "/2006/05/19/rails-tip-scaffolding-lists/comment-page-1/"
+      ],
+      "explanation": "Restoring literal HTML code fixes malformed nesting that originally pulled the sidebar and footer into article typography."
     },
     {
-      "kind": "transcript-encoding",
-      "path": "/wp-content/uploads/2007/01/transcript-rails-podcast-041-castingwords18675.html",
-      "original": "Jesper Rønn-Jensen",
-      "clone": "Jesper RÃ¸nn-Jensen",
-      "verification": "Confirmed in Chromium with the UTF-8 response charset verified on GitHub Pages."
-    },
-    {
-      "kind": "url-behavior",
-      "path": "/search/",
-      "original_redirect": "/2005/12/12/search-engine-optimization-in-the-news/",
-      "clone": "Archive search",
-      "detail": "The article and its comment are preserved at the canonical article URL; this alias changes behavior."
+      "paths": [
+        "/2007/10/22/firefox-tip-for-framebuster-javascript/"
+      ],
+      "explanation": "The original executable example navigates to a blocked destination during offline replay. The archive displays the script as code and retains the article theme."
     }
   ],
-  "inherited_review_items": [
-    {
-      "kind": "horizontal-overflow",
-      "page_urls": [
-        "/2009/10/05/tiny-script-to-extract-html-structure-from-page/",
-        "/2009/10/05/tiny-script-to-extract-html-structure-from-page/comment-page-1/",
-        "/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/",
-        "/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/comment-page-1/"
-      ]
-    },
-    {
-      "kind": "unavailable-images",
-      "detail": "Known unrecovered external images remain represented by placeholders."
-    }
-  ],
+  "remaining_unrecoverable": {
+    "external_image_references": 18,
+    "local_files": [
+      "/static/spreadsheets/client/css/813770466-tiler_view_ltr.css",
+      "/wp-content/uploads/2007/10/iepngfix.htc",
+      "/wp-content/uploads/2007/10/train_css_d_v6.html"
+    ],
+    "details": [
+      "data/ui-repair-report.json",
+      "data/audit-repair-report.json"
+    ]
+  },
   "browser_health": {
-    "completed_pairs": 1696,
+    "completed_pairs": 1704,
     "clone_pages_with_js_errors": 0,
     "clone_pages_with_broken_images": 0,
-    "browser_capture_errors": 0
+    "clone_pages_with_enabled_archived_controls": 0,
+    "clone_pages_with_horizontal_overflow": 0,
+    "browser_capture_errors": 0,
+    "screenshot_dimension_errors": 0,
+    "screenshots_verified": 3408
   },
   "validation": {
-    "unit_tests_passed": 69,
-    "existing_archive_validation_errors": 0,
-    "live_refresh_smoke_urls": 3,
+    "unit_tests_passed": 81,
+    "root_validation_errors": 0,
+    "project_prefix_validation_errors": 0,
+    "published_posts_and_pages": 450,
+    "public_comments": 2784,
+    "rss_feeds": 1204,
+    "local_links_checked": 80247,
     "original_capture_unchanged": true,
-    "resume_smoke_pairs_reused": 3
+    "wordpress_xml_public_coverage_verified": true,
+    "private_xml_in_git": false,
+    "interaction_checks": [
+      "Search query and results under project prefix",
+      "Original search alias, first page, and preserved pagination",
+      "Contact form remains visible and inert",
+      "Embedded undo, delete, checkbox and reset",
+      "Local table-height demonstration",
+      "Long code no longer overflows the page",
+      "UTF-8 transcript and restored UTF-16 HTML",
+      "Attachment RSS alias returns ten posts as XML"
+    ],
+    "additional_interactions": [
+      "Original PNG renders all four rounded corners with no failed resource requests",
+      "Local undo drag ordering and keyboard reset work offline with no requests",
+      "Local CSS button demo remains interactive without navigation or requests"
+    ]
   },
   "report": ".cache/audit/index.html",
   "machine_report": ".cache/audit/report.json",
