@@ -419,7 +419,7 @@ def clean_html(soup, path=''):
             if str(tag.get(attr, '')).strip().lower().startswith(('javascript:', 'vbscript:')):
                 if attr != 'href' or not allowed_bookmarklet(tag, path):
                     del tag[attr]
-    for tag in soup.select('link[rel="pingback"], link[rel="https://api.w.org/"], link[rel="EditURI"], link[rel="wlwmanifest"]'):
+    for tag in soup.select('link[rel="pingback"], link[rel="https://api.w.org/"], link[rel="EditURI"], link[rel="wlwmanifest"], link[rel~="dns-prefetch"], link[rel~="preconnect"]'):
         tag.decompose()
     restore_local_forms(soup, path)
     for form in soup.find_all('form'):
@@ -481,6 +481,12 @@ def rewrite(soup, base, ids, routes, unavailable, external=None):
                 value = scoped.get(value, value)
                 value = repairs()['link_repairs'].get(value, value)
                 tag[attr] = value
+                if tag.name == 'link' and 'stylesheet' in tag.get('rel', []):
+                    resource = external.get(value, {})
+                    if resource.get('path'):
+                        tag['data-original-url'] = value
+                        tag[attr] = resource['path']
+                        continue
                 if tag.name == 'a' and Path(urlsplit(value).path).suffix.lower() in IMAGE_SUFFIXES:
                     image = external.get(value, {})
                     if image.get('path'):
@@ -604,6 +610,7 @@ def build(data, state):
     routes = {quote(unquote(path), safe="/!$&'()*+,-.;=@_~") for path in routes}
     external_file = ROOT / 'data/external-images.json'
     external = json.loads(external_file.read_text()) if external_file.exists() else {}
+    external.update(json.loads((ROOT / 'data/external-resources.json').read_text())['resources'])
     unavailable, comment_ids, comment_links = set(), set(), {}
     for path in sorted(state['pages']):
         source_url = supplemental['pages'].get(path, ORIGIN + path)

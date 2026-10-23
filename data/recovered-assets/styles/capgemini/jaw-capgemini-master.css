@@ -1,0 +1,38 @@
+/*
+-----------------------------------------------
+Capgemini Master Style Sheet
+Version:  12 July 2004
+----------------------------------------------- */
+
+
+/* Imported Styles
+----------------------------------------------- */
+@import url("main.css");
+@import url("nav_en_us.css");
+@import url("headers.css");
+
+
+/* IE5/Mac Only Styles
+   Uses the IE5/Mac Band Pass Filter:
+   http://stopdesign.com/examples/ie5mac-bpf/
+----------------------------------------------- */
+/*\*//*/
+  @import "ie5mac.css";
+/**/
+
+
+/* Tables
+----------------------------------------------- */
+th, td {
+  text-align:left;
+  vertical-align:top;
+  }
+
+
+/* IE5/Win Only Styles
+   Uses the Mid Pass Filter:
+   http://tantek.com/CSS/Examples/midpass.html
+----------------------------------------------- */
+@media tty {
+  i{content:"\";/*" "*/}} @import 'ie5win.css'; /*";}
+}/* */

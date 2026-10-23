@@ -12,10 +12,11 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from archive import ROOT, HOSTS, CSS_URL, IMAGE_SUFFIXES, embedded_css, is_video_embed, parse_document
+from archive import ROOT, HOSTS, IMAGE_SUFFIXES, embedded_css, is_video_embed, parse_document
 from recovery import recovery_data, video_players, SHORTCODE, UNDO_PATH, TABLE_DEMO, BUTTON_DEMO
 from feeds import feed_specs, comment_items, ATOM, url_path
 from legacy import ui_repairs, allowed_bookmarklet, topic_index, tag_key
+from resources import css_urls, resource_urls
 
 
 def video_embed_markup(soup):
@@ -153,11 +154,20 @@ def verify(site, base):
             errors.append(f'{document.relative_to(site)}: missing {url}')
         return result
 
-    def check_css(css, document):
-        for match in CSS_URL.finditer(css):
-            if urlsplit(match[2]).hostname:
-                errors.append(f'{document.relative_to(site)}: remote CSS dependency: {match[2]}')
-            target(match[2], document)
+    def check_css(css, document, local_host=''):
+        for url in css_urls(css):
+            parts = urlsplit(url)
+            if parts.hostname and parts.netloc != local_host:
+                errors.append(f'{document.relative_to(site)}: remote CSS dependency: {url}')
+            target(parts.path if parts.netloc and parts.netloc == local_host else url, document)
+
+    def check_resources(tag, document, local_host=''):
+        for attr, url in resource_urls(tag):
+            parts = urlsplit(url)
+            approved_player = tag.name == 'iframe' and parts.hostname == 'www.youtube.com' and str(tag) in original_players
+            if parts.hostname and parts.netloc != local_host and not approved_player:
+                errors.append(f'{document.relative_to(site)}: external resource {tag.name}[{attr}]: {url}')
+            target(parts.path if parts.netloc and parts.netloc == local_host else url, document)
 
     pages = list(site.rglob('*.html'))
     for file in pages:
@@ -170,6 +180,7 @@ def verify(site, base):
         page_comment_ids[file] = set()
         relative = '/' + file.relative_to(site).as_posix()
         for tag in soup.find_all(True):
+            check_resources(tag, file)
             if tag.name == 'script':
                 allowed = {base + '/archive-assets/archive.js'}
                 if relative == TABLE_DEMO:
@@ -284,6 +295,13 @@ def verify(site, base):
             file = site / asset['path'].lstrip('/')
             if not file.exists() or hashlib.sha256(file.read_bytes()).hexdigest() != asset['sha256']:
                 errors.append(f'Recovered external image missing or modified: {asset["path"]}')
+    for resource in json.loads((ROOT / 'data/external-resources.json').read_text())['resources'].values():
+        if not resource.get('path'):
+            continue
+        for file, digest in [(site / resource['path'].lstrip('/'), resource['sha256'])] + (
+                [(ROOT / resource['source_file'], resource['source_sha256'])] if resource.get('source_file') else []):
+            if not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest() != digest:
+                errors.append(f'Recovered stylesheet dependency missing or modified: {file}')
     for alias, canonical in recovery['aliases'].items():
         file, original = site / alias.lstrip('/'), site / canonical.lstrip('/')
         if not file.exists() or file.read_bytes() != original.read_bytes():
@@ -348,6 +366,12 @@ def verify(site, base):
 
     for file in site.rglob('*.css'):
         check_css(file.read_text(), file)
+    for file in site.rglob('*.svg'):
+        soup = BeautifulSoup(file.read_bytes(), 'html.parser')
+        for tag in soup.find_all(True):
+            check_resources(tag, file)
+        for css in embedded_css(soup):
+            check_css(css, file)
     for path, spec in feeds.items():
         file = site / unquote(path).lstrip('/') / 'index.xml'
         try:
@@ -379,6 +403,14 @@ def verify(site, base):
                 if urlsplit(link).netloc != expected_host or not urlsplit(link).path.startswith(base + '/'):
                     errors.append(f'RSS entry links outside the deployed archive: {path}')
                 document = target(urlsplit(link).path, file)
+                for node in item.iter():
+                    if node.tag.rsplit('}', 1)[-1] not in ('description', 'encoded', 'content') or not node.text:
+                        continue
+                    content = BeautifulSoup(node.text, 'html.parser')
+                    for tag in content.find_all(True):
+                        check_resources(tag, file, expected_host)
+                    for css in embedded_css(content):
+                        check_css(css, file, expected_host)
                 if spec['kind'] == 'comments' and urlsplit(link).fragment not in page_comment_ids.get(document, set()):
                     errors.append(f'RSS comment link does not locate its preserved comment: {link}')
         except (OSError, ET.ParseError) as error:

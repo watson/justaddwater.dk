@@ -1,0 +1,46 @@
+/*
+-----------------------------------------------
+Capgemini Nav Styles
+Version:  13 July 2004
+----------------------------------------------- */
+
+
+/* Nav Images
+----------------------------------------------- */
+#nav ul {
+  padding:0 48px;
+  }
+#nav1 a, #nav1 strong {
+  background:url("../img/nav1.gif");
+  width:67px;
+  }
+#nav2 a, #nav2 strong {
+  background:url("../img/nav2.gif");
+  width:97px;
+  }
+#nav3 a, #nav3 strong {
+  background:url("../img/nav3.gif");
+  width:107px;
+  }
+#nav4 a, #nav4 strong {
+  background:url("../img/nav4.gif");
+  width:98px;
+  }
+#nav5 a, #nav5 strong {
+  background:url("../img/nav5.gif");
+  width:72px;
+  }
+#nav6 a, #nav6 strong {
+  background:none;
+  width:96px;
+  }
+#nav7 a, #nav7 strong {
+  background:url("../img/nav7.gif");
+  width:87px;
+  }
+
+/* The unavailable nav6.gif hid this existing text label. */
+#nav #nav6 a, #nav #nav6 strong {
+  text-indent:0; text-align:center; white-space:nowrap;
+  font:10px/36px Verdana,sans-serif; color:#fff;
+}

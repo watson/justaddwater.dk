@@ -1,0 +1,762 @@
+{
+  "checked_at": "2026-10-23",
+  "resources": {
+    "http://www.dk.capgemini.com/img/nav4.gif": {
+      "path": "/archive-assets/styles/capgemini/img/nav4.gif",
+      "sha256": "614542ea9799dd1599d5c89bd14c2ae25f876eaf08801dbd9b2cb1bc9f03f4b3",
+      "fetched_from": "https://web.archive.org/web/20070824135110id_/http://www.dk.capgemini.com/img/nav4.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/nav1.gif": {
+      "path": "/archive-assets/styles/capgemini/img/nav1.gif",
+      "sha256": "0a1b441b89cd33d5479957f257f037e787db2ebec8d2543d5fd5523c948bd72c",
+      "fetched_from": "https://web.archive.org/web/20070824135109id_/http://www.dk.capgemini.com/img/nav1.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/nav2.gif": {
+      "path": "/archive-assets/styles/capgemini/img/nav2.gif",
+      "sha256": "23bdd05cfdd57e064b242bac21dda39a0f35aa51d221c55100b02d444c987c21",
+      "fetched_from": "https://web.archive.org/web/20070824135109id_/http://www.dk.capgemini.com/img/nav2.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/nav3.gif": {
+      "path": "/archive-assets/styles/capgemini/img/nav3.gif",
+      "sha256": "f2a17f9e17565f6b2968f0ba5231cdb8cbc02cd10ffcab8d0fe3912555a6d442",
+      "fetched_from": "https://web.archive.org/web/20070824135110id_/http://www.dk.capgemini.com/img/nav3.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_D99E4F.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D99E4F.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D99E4F.jpg"
+    },
+    "http://www.dk.capgemini.com/img/nav6.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20180310184952id_/http://www.dk.capgemini.com/img/nav6.gif",
+      "error": "404 https://web.archive.org/web/20180310184952id_/http://www.dk.capgemini.com/img/nav6.gif"
+    },
+    "http://www.dk.capgemini.com/img/nav5.gif": {
+      "path": "/archive-assets/styles/capgemini/img/nav5.gif",
+      "sha256": "13379f7450b3f02d5a4d089cff271e91be5d33afc0f972361af5aa297a07080d",
+      "fetched_from": "https://web.archive.org/web/20070824135111id_/http://www.dk.capgemini.com/img/nav5.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/nav7.gif": {
+      "path": "/archive-assets/styles/capgemini/img/nav7.gif",
+      "sha256": "42d207f47267e0e96ac3b970f54102eab87f2203f65cbe736208f9c7076c1a0b",
+      "fetched_from": "https://web.archive.org/web/20070824135111id_/http://www.dk.capgemini.com/img/nav7.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_91B83B.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_91B83B.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_91B83B.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_798AC6.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_798AC6.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_798AC6.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_46BCD9.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_46BCD9.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_46BCD9.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_2A072B.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_2A072B.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_2A072B.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_44388F.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_44388F.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_44388F.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_575BBA.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_575BBA.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_575BBA.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_931D6C.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_931D6C.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_931D6C.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_32AC00.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_32AC00.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_32AC00.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_F2C923.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_F2C923.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_F2C923.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_1CA63A.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_1CA63A.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_1CA63A.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_B55370.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_B55370.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_B55370.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_A5E0A1.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_A5E0A1.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_A5E0A1.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_70716D.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_70716D.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_70716D.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_7D02E2.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_7D02E2.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_7D02E2.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_64F170.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_64F170.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_64F170.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_3227B2.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_3227B2.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_3227B2.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_47C010.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_47C010.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_47C010.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_E5759E.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_E5759E.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_E5759E.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_D0E63C.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D0E63C.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D0E63C.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_047999.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 171 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_047999.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 171 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_047999.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_D10D9A.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 173 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D10D9A.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 173 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D10D9A.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_52756D.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 173 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_52756D.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 173 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_52756D.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_848125.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 167 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_848125.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 167 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_848125.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_C5FAC0.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 169 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_C5FAC0.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 169 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_C5FAC0.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_D7D69B.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 174 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D7D69B.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 174 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D7D69B.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_6D34A3.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 172 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_6D34A3.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 172 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_6D34A3.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_8553ED.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 171 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_8553ED.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 171 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_8553ED.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_EAFA4C.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 171 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_EAFA4C.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 171 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_EAFA4C.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_1628B6.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 163 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_1628B6.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 163 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_1628B6.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_3BA7AA.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20180310185031id_/http://www.dk.capgemini.com/m/dk/bg/ph_3BA7AA.jpg",
+      "error": "404 https://web.archive.org/web/20180310185031id_/http://www.dk.capgemini.com/m/dk/bg/ph_3BA7AA.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_BEE956.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 172 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_BEE956.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 172 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_BEE956.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_F9C97F.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 166 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_F9C97F.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 166 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_F9C97F.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_8D9B61.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 167 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_8D9B61.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 167 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_8D9B61.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_49DEA2.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_49DEA2.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_49DEA2.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_7D727E.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_7D727E.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_7D727E.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_3F75E6.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_3F75E6.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_3F75E6.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_DB4282.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_DB4282.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_DB4282.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_A85105.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 169 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_A85105.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 169 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_A85105.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_98C4A6.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 167 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_98C4A6.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 167 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_98C4A6.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_0B2F6C.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 170 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_0B2F6C.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 170 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_0B2F6C.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_A2A247.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_A2A247.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_A2A247.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_9343FC.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 166 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_9343FC.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 166 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_9343FC.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_05E96B.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_05E96B.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_05E96B.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_2A4477.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_2A4477.jpg\ncurl: (7) Failed to connect to web.archive.org port 443 after 167 ms: Couldn't connect to server",
+      "error": "000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_2A4477.jpg\ncurl: (7) Failed to connect to web.archive.org port 443 after 167 ms: Couldn't connect to server"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_797D11.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 163 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_797D11.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 163 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_797D11.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_D66BAB.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D66BAB.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D66BAB.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_6EBBA9.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_6EBBA9.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_6EBBA9.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_834781.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_834781.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_834781.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_D83262.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D83262.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_D83262.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_ACF2CD.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_ACF2CD.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_ACF2CD.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_783A07.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_783A07.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_783A07.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_34172A.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_34172A.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_34172A.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_3F9CE8.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_3F9CE8.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_3F9CE8.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_90BB16.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_90BB16.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_90BB16.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_6B46D6.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_6B46D6.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_6B46D6.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_7B6A61.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_7B6A61.jpg",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_7B6A61.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_7F57EB.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_7F57EB.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 168 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_7F57EB.jpg"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_FB01AB.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_FB01AB.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_FB01AB.gif"
+    },
+    "http://www.dk.capgemini.com/m/dk/bg/ph_A374BA.jpg": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "(7) Failed to connect to web.archive.org port 443 after 163 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_A374BA.jpg",
+      "error": "curl: (7) Failed to connect to web.archive.org port 443 after 163 ms: Couldn't connect to server\n000 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/m/dk/bg/ph_A374BA.jpg"
+    },
+    "http://www.dk.capgemini.com/img/bg_page_topright.gif": {
+      "path": "/archive-assets/styles/capgemini/img/bg_page_topright.gif",
+      "sha256": "2b990849005c50ad80f2a83659953c95ac3b64c2ed01c4b78ba33a2c2a191e76",
+      "fetched_from": "https://web.archive.org/web/20070824135029id_/http://www.dk.capgemini.com/img/bg_page_topright.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/bg_page_right.gif": {
+      "path": "/archive-assets/styles/capgemini/img/bg_page_right.gif",
+      "sha256": "fe5806818879e1ac490392c4115e24ad1f0a72148a228ef1a4e54061831d371a",
+      "fetched_from": "https://web.archive.org/web/20070824135029id_/http://www.dk.capgemini.com/img/bg_page_right.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/bg_page_right_gridright.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/bg_page_right_gridright.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/bg_page_right_gridright.gif"
+    },
+    "http://www.dk.capgemini.com/img/bg_page_right_gridleft.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/bg_page_right_gridleft.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/bg_page_right_gridleft.gif"
+    },
+    "http://www.dk.capgemini.com/img/bg_page_bot.gif": {
+      "path": "/archive-assets/styles/capgemini/img/bg_page_bot.gif",
+      "sha256": "01c99d784e74da75d86eaefee55c006bdc4baca189a831877fe889575ce3a885",
+      "fetched_from": "https://web.archive.org/web/20070824135030id_/http://www.dk.capgemini.com/img/bg_page_bot.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/corners_countrymenu.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_countrymenu.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_countrymenu.gif"
+    },
+    "http://www.dk.capgemini.com/img/corners_countrymenu.png": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_countrymenu.png",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_countrymenu.png"
+    },
+    "http://www.dk.capgemini.com/img/shadow_e6e4df.gif": {
+      "path": "/archive-assets/styles/capgemini/img/shadow_e6e4df.gif",
+      "sha256": "46d177e1e7a9c082f48aa8b5ad5763c6e655074c4e203c4710047d424671f8b8",
+      "fetched_from": "https://web.archive.org/web/20070824135031id_/http://www.dk.capgemini.com/img/shadow_e6e4df.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/corners_sidebar.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_sidebar.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_sidebar.gif"
+    },
+    "http://www.dk.capgemini.com/img/corners_sidebar.png": {
+      "path": "/archive-assets/styles/capgemini/img/corners_sidebar.png",
+      "sha256": "b41a60d39ce3085f20378b3077bc1d26f442f648fd1396c4f43b73a4c400b088",
+      "fetched_from": "https://web.archive.org/web/20070824135056id_/http://www.dk.capgemini.com/img/corners_sidebar.png",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/tri_right_047.gif": {
+      "path": "/archive-assets/styles/capgemini/img/tri_right_047.gif",
+      "sha256": "fa23d945a764d081bb9efc59892de4dc03722572e273e2653452e1182bd12c3c",
+      "fetched_from": "https://web.archive.org/web/20070824135114id_/http://www.dk.capgemini.com/img/tri_right_047.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/corners_fullwidth_bot.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_fullwidth_bot.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_fullwidth_bot.gif"
+    },
+    "http://www.dk.capgemini.com/img/corners_fullwidth_bot.png": {
+      "path": "/archive-assets/styles/capgemini/img/corners_fullwidth_bot.png",
+      "sha256": "8bd05c10fbd36b8d2e004674ae2ede5835884095061027d185c1ba333e664fae",
+      "fetched_from": "https://web.archive.org/web/20070824135108id_/http://www.dk.capgemini.com/img/corners_fullwidth_bot.png",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/shadow_8AA.gif": {
+      "path": "/archive-assets/styles/capgemini/img/shadow_8AA.gif",
+      "sha256": "b11cf6fb9b42db10b164c27eb03586bb816fc284b5f2765f25f11979feb3e330",
+      "fetched_from": "https://web.archive.org/web/20070824135109id_/http://www.dk.capgemini.com/img/shadow_8AA.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/bg_ph_col.gif": {
+      "path": "/archive-assets/styles/capgemini/img/bg_ph_col.gif",
+      "sha256": "d54e4105af8d05bc6d09d18411a067668c06c8fb9fc2a16478effedf7165d864",
+      "fetched_from": "https://web.archive.org/web/20070824135112id_/http://www.dk.capgemini.com/img/bg_ph_col.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/bg_ph_col_top.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/bg_ph_col_top.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/bg_ph_col_top.gif"
+    },
+    "http://www.dk.capgemini.com/img/tri_down_bad2d2.gif": {
+      "path": "/archive-assets/styles/capgemini/img/tri_down_bad2d2.gif",
+      "sha256": "459a6cf09f1296764671ef73fcfb2c5e92f9491cd1dadfa4c1fe32114f556bf2",
+      "fetched_from": "https://web.archive.org/web/20070824135112id_/http://www.dk.capgemini.com/img/tri_down_bad2d2.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/bg_col.gif": {
+      "path": "/archive-assets/styles/capgemini/img/bg_col.gif",
+      "sha256": "cdb20823509202be72dbee1ae43c815381d91b18fcbe744c961b957451aca046",
+      "fetched_from": "https://web.archive.org/web/20070824135112id_/http://www.dk.capgemini.com/img/bg_col.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/shadow.gif": {
+      "path": "/archive-assets/styles/capgemini/img/shadow.gif",
+      "sha256": "4bdf7124b59128cdaf79b8cf9ab2f74e560b3b23fbc716c7b09bdb8676891062",
+      "fetched_from": "https://web.archive.org/web/20070824135113id_/http://www.dk.capgemini.com/img/shadow.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/shadow_side1.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20180310185031id_/http://www.dk.capgemini.com/img/shadow_side1.gif",
+      "error": "404 https://web.archive.org/web/20180310185031id_/http://www.dk.capgemini.com/img/shadow_side1.gif"
+    },
+    "http://www.dk.capgemini.com/img/tri_down_fff.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20180310185031id_/http://www.dk.capgemini.com/img/tri_down_fff.gif",
+      "error": "404 https://web.archive.org/web/20180310185031id_/http://www.dk.capgemini.com/img/tri_down_fff.gif"
+    },
+    "http://www.dk.capgemini.com/img/shadow_CEE6E6.gif": {
+      "path": "/archive-assets/styles/capgemini/img/shadow_CEE6E6.gif",
+      "sha256": "4bdf7124b59128cdaf79b8cf9ab2f74e560b3b23fbc716c7b09bdb8676891062",
+      "fetched_from": "https://web.archive.org/web/20070824135114id_/http://www.dk.capgemini.com/img/shadow_CEE6E6.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/tri_right_fff.gif": {
+      "path": "/archive-assets/styles/capgemini/img/tri_right_fff.gif",
+      "sha256": "c6fcdf7f79f3871d3105932a6f28a4db06b561faef6cee61d2fccaa3691307ed",
+      "fetched_from": "https://web.archive.org/web/20070824135114id_/http://www.dk.capgemini.com/img/tri_right_fff.gif",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/img/icon_arrow.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/icon_arrow.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/icon_arrow.gif"
+    },
+    "http://www.dk.capgemini.com/img/icon_news.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/icon_news.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/icon_news.gif"
+    },
+    "http://www.dk.capgemini.com/img/bg_ph_col_home.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20180310184952id_/http://www.dk.capgemini.com/img/bg_ph_col_home.gif",
+      "error": "404 https://web.archive.org/web/20180310184952id_/http://www.dk.capgemini.com/img/bg_ph_col_home.gif"
+    },
+    "http://www.dk.capgemini.com/img/shadow_home.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20180310184952id_/http://www.dk.capgemini.com/img/shadow_home.gif",
+      "error": "404 https://web.archive.org/web/20180310184952id_/http://www.dk.capgemini.com/img/shadow_home.gif"
+    },
+    "http://www.dk.capgemini.com/img/bg_col_home.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20180310184952id_/http://www.dk.capgemini.com/img/bg_col_home.gif",
+      "error": "404 https://web.archive.org/web/20180310184952id_/http://www.dk.capgemini.com/img/bg_col_home.gif"
+    },
+    "http://www.dk.capgemini.com/img/quotes.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/quotes.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/quotes.gif"
+    },
+    "http://www.dk.capgemini.com/img/152_bg.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/152_bg.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/152_bg.gif"
+    },
+    "http://www.dk.capgemini.com/img/corners_fullwidth_top.gif": {
+      "kind": "decorative-image",
+      "status": "not-recovered",
+      "attempted": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_fullwidth_top.gif",
+      "error": "404 https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/img/corners_fullwidth_top.gif"
+    },
+    "http://www.dk.capgemini.com/img/corners_fullwidth_top.png": {
+      "path": "/archive-assets/styles/capgemini/img/corners_fullwidth_top.png",
+      "sha256": "ebf9c96433b3cdffc56c1be6a19f451ec1579bf05a8082ad79e39ba4499fc26f",
+      "fetched_from": "https://web.archive.org/web/20070824135114id_/http://www.dk.capgemini.com/img/corners_fullwidth_top.png",
+      "kind": "decorative-image"
+    },
+    "http://www.dk.capgemini.com/css/ie5mac.css": {
+      "kind": "legacy-stylesheet",
+      "status": "not-recovered",
+      "error": "HTTP Error 404: NOT FOUND",
+      "archive_index": "No successful captures",
+      "disposition": "Removed obsolete IE5-only import; modern-browser styles retained."
+    },
+    "http://www.dk.capgemini.com/css/ie5win.css": {
+      "kind": "legacy-stylesheet",
+      "status": "not-recovered",
+      "error": "HTTP Error 404: NOT FOUND",
+      "archive_index": "No successful captures",
+      "disposition": "Removed obsolete IE5-only import; modern-browser styles retained."
+    },
+    "http://castingwords.com/css/search.css": {
+      "path": "/archive-assets/styles/castingwords/search.css",
+      "kind": "stylesheet",
+      "fetched_from": "https://castingwords.com/css/search.css",
+      "sha256": "d2feb2739349eff799700ab73e9c8b4df73d4106c882497d404ec4c794059dfc",
+      "source_file": "data/recovered-assets/styles/castingwords/jaw-casting-search.css",
+      "source_sha256": "d2feb2739349eff799700ab73e9c8b4df73d4106c882497d404ec4c794059dfc",
+      "removed_unavailable_urls": [],
+      "adaptations": []
+    },
+    "http://www.dk.capgemini.com/css/master.css": {
+      "path": "/archive-assets/styles/capgemini/css/master.css",
+      "kind": "stylesheet",
+      "fetched_from": "https://web.archive.org/web/20061006221154id_/http://www.dk.capgemini.com:80/css/master.css",
+      "sha256": "af77c7afff8f5bf5aaff307fbdffbcb4eedb56afa3f6efed75718bff880d2184",
+      "source_file": "data/recovered-assets/styles/capgemini/jaw-capgemini-master.css",
+      "source_sha256": "80a9b9c995ee8f53f3a61044c2f8d32da6c7708c1c1a960ffcf5b4c72662ce0d",
+      "removed_unavailable_urls": [],
+      "adaptations": [
+        "Removed unavailable IE5/Mac and IE5/Windows conditional imports; all three main stylesheet imports retained."
+      ]
+    },
+    "http://www.dk.capgemini.com/css/nav_en_us.css": {
+      "path": "/archive-assets/styles/capgemini/css/nav_en_us.css",
+      "kind": "stylesheet",
+      "fetched_from": "https://web.archive.org/web/20070824135025id_/http://www.dk.capgemini.com/css/nav_en_us.css",
+      "sha256": "5d2f5d9cc6bedf06d68beeaca9acc909d233a63427851ead190dea8b9e1a70f3",
+      "source_file": "data/recovered-assets/styles/capgemini/nav_en_us.css",
+      "source_sha256": "6eae2a6ce843d8d693c9948739e692f11d980ea2d778581c1b11aef37293e3f7",
+      "removed_unavailable_urls": [
+        "http://www.dk.capgemini.com/img/nav6.gif"
+      ],
+      "adaptations": [
+        "Show the existing Nyheder og Events label because its nav6.gif sprite is unavailable."
+      ]
+    },
+    "http://www.dk.capgemini.com/css/headers.css": {
+      "path": "/archive-assets/styles/capgemini/css/headers.css",
+      "kind": "stylesheet",
+      "fetched_from": "https://web.archive.org/web/20070824135026id_/http://www.dk.capgemini.com/css/headers.css",
+      "sha256": "3f9a10d79fadf0ef7834da23307e7f093e39713ea3200fb6d0c13342de445e1b",
+      "source_file": "data/recovered-assets/styles/capgemini/headers.css",
+      "source_sha256": "62d6c13b96c923f45c6b51bf8a6cf7a6c906567b64a98c5788805d989dde5fa4",
+      "removed_unavailable_urls": [
+        "http://www.dk.capgemini.com/m/dk/bg/ph_047999.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_05E96B.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_0B2F6C.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_1628B6.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_1CA63A.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_2A072B.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_2A4477.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_3227B2.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_32AC00.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_34172A.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_3BA7AA.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_3F75E6.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_3F9CE8.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_44388F.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_46BCD9.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_47C010.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_49DEA2.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_52756D.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_575BBA.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_64F170.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_6B46D6.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_6D34A3.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_6EBBA9.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_70716D.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_783A07.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_797D11.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_798AC6.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_7B6A61.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_7D02E2.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_7D727E.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_7F57EB.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_834781.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_848125.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_8553ED.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_8D9B61.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_90BB16.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_91B83B.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_931D6C.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_9343FC.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_98C4A6.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_A2A247.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_A374BA.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_A5E0A1.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_A85105.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_ACF2CD.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_B55370.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_BEE956.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_C5FAC0.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_D0E63C.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_D10D9A.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_D66BAB.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_D7D69B.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_D83262.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_D99E4F.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_DB4282.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_E5759E.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_EAFA4C.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_F2C923.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_F9C97F.jpg",
+        "http://www.dk.capgemini.com/m/dk/bg/ph_FB01AB.gif"
+      ],
+      "adaptations": []
+    },
+    "http://www.dk.capgemini.com/css/main.css": {
+      "path": "/archive-assets/styles/capgemini/css/main.css",
+      "kind": "stylesheet",
+      "fetched_from": "https://web.archive.org/web/20070824135027id_/http://www.dk.capgemini.com/css/main.css",
+      "sha256": "503e50c84da1bda0f28ae57ab2ba09fbf4d039b4e842758def6710f42aca4169",
+      "source_file": "data/recovered-assets/styles/capgemini/main.css",
+      "source_sha256": "c51292f6505a18aefd4274aeb3521c50541a4e0e81f401ce68aa0341e2e2feb6",
+      "removed_unavailable_urls": [
+        "http://www.dk.capgemini.com/img/152_bg.gif",
+        "http://www.dk.capgemini.com/img/bg_col_home.gif",
+        "http://www.dk.capgemini.com/img/bg_page_right_gridleft.gif",
+        "http://www.dk.capgemini.com/img/bg_page_right_gridright.gif",
+        "http://www.dk.capgemini.com/img/bg_ph_col_home.gif",
+        "http://www.dk.capgemini.com/img/bg_ph_col_top.gif",
+        "http://www.dk.capgemini.com/img/corners_countrymenu.gif",
+        "http://www.dk.capgemini.com/img/corners_countrymenu.png",
+        "http://www.dk.capgemini.com/img/corners_fullwidth_bot.gif",
+        "http://www.dk.capgemini.com/img/corners_fullwidth_top.gif",
+        "http://www.dk.capgemini.com/img/corners_sidebar.gif",
+        "http://www.dk.capgemini.com/img/icon_arrow.gif",
+        "http://www.dk.capgemini.com/img/icon_news.gif",
+        "http://www.dk.capgemini.com/img/quotes.gif",
+        "http://www.dk.capgemini.com/img/shadow_home.gif",
+        "http://www.dk.capgemini.com/img/shadow_side1.gif",
+        "http://www.dk.capgemini.com/img/tri_down_fff.gif"
+      ],
+      "adaptations": []
+    }
+  },
+  "notes": [
+    "Exact original URLs were fetched from the publisher or the Internet Archive.",
+    "All three map demos use the same preserved stylesheets; both podcast transcripts share the preserved CastingWords stylesheet.",
+    "Unavailable decorative backgrounds become none, retaining layout, colors and text. Sixty banner variants have no matching class in these map demos.",
+    "The one missing active navigation sprite uses its existing text label. No replacement artwork was invented.",
+    "The backup filename inventory contained no matching Capgemini assets; icon_arrow.gif matches belonged to unrelated WordPress smileys.",
+    "YouTube players are the intentional external-content exception."
+  ],
+  "counts": {
+    "stylesheets_preserved": 5,
+    "decorative_images_preserved": 21,
+    "decorative_images_not_recovered": 78,
+    "obsolete_ie5_imports_removed": 2
+  }
+}

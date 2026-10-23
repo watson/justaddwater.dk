@@ -51,7 +51,7 @@ original host.
 - A public-content export in `data/content.json` and recovery reports in `data/`.
 
 Some local files already returned 404, and some external images could not be
-retrieved during capture. **174 of 193 external image references** were recovered
+retrieved during capture. **174 of 193 image references in the original capture** were recovered
 and stored locally. Unavailable images have a small placeholder and retain their
 original URL in a `data-original-url` attribute. The obsolete FeedBurner icon is
 replaced with a local RSS icon. Reports identify unrecovered resources and the
@@ -67,6 +67,15 @@ The original image button in all three archived Denmark map demos is also
 stored locally, recovered from its exact Internet Archive URL.
 Direct image links now open local copies too, including four further recovered
 full-size images. Links to publishers' ordinary web pages remain external.
+
+The two external stylesheet entry points used by the podcast transcripts and
+Denmark map demos are also local, along with the map stylesheet's three main
+imports and 21 additional decorative images. Unrecoverable background URLs and
+two obsolete IE5-only imports were removed. The map's missing navigation sprite
+uses its existing text label; the other missing decorations belong to unused
+styles or legacy fallbacks. Original CSS, checksums, sources and adaptation notes
+are recorded in `data/external-resources.json`. Obsolete WordPress DNS-prefetch
+hints are removed from every page.
 
 Video players depend on external services. Approved alternatives restore Jeff
 Sutherland's Scrum Tuning talk (two posts), Mary Poppendieck's Competing on the
@@ -203,6 +212,10 @@ disabled and have an associated notice. It also checks background images in exte
 stylesheets, style attributes and embedded style blocks, rejecting remote CSS
 dependencies, external image buttons and external direct-image links. The
 deployment workflow runs these checks before publishing.
+Automatic resource checks also cover stylesheet imports, scripts, media, SVG
+references, responsive images, redirects and connection hints, including content
+inside feeds. Only the recorded YouTube players may load external resources;
+ordinary links and provenance metadata are excluded from this check.
 RSS checks cover feed paths, article footer links, scoped entries, original
 comment timestamps and IDs, and links back into the deployed archive.
 Expected article text is checked independently of the converter's cleanup rules,
