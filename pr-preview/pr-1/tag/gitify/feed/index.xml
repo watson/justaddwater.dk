@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>gitify – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/gitify/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/gitify/feed/" rel="self" type="application/rss+xml" /><item><title>Git Side Benefit: Reducing Disk Usage</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/01/17/git-side-benefit-reducing-disk-usage/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1014</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sat, 17 Jan 2009 13:28:52 +0000</pubDate><description>&lt;p&gt;A side benefit of switching from Subversion to Git for source control is that Git does not use shadow files and directories to find out what has changed.&lt;br/&gt;
+I created two checkouts of a svn project — one using traditional svn and one using git (which can actually clone a svn repos — see explanation below).&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1014-1"&gt;&lt;code class="language-bash"&gt;[~/my-projects]  du -hd 0 \
+&amp;gt; berammelse berammelse.git \
+&amp;gt; dokboks dokboks.git       \
+&amp;gt; intrastat intrastat.git   \
+&amp;gt; kompetenceregister k2.git \
+&amp;gt; ourpeople ourpeople.git   \
+&amp;gt; let0004 let0004.git
+
+43M	berammelse
+38M	berammelse.git
+63M	dokboks
+11M	dokboks.git
+53M	intrastat
+34M	intrastat.git
+144M	kompetenceregister
+47M	kompetenceregister.git
+118M	ourpeople
+151M	ourpeople.git
+163M	let0004
+98M	let0004.git&lt;/code&gt;&lt;/pre&gt;&lt;br/&gt;
+For any project I tried this, Git uses significantly less disk space. It’s just a side effect, I know. But more important: The git version has all the logfile history offline and that makes rolling forward/back much faster :)&lt;br/&gt;
+FYI i’m using my version of &lt;a href="http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/  "&gt;Dr. Nic’s “gitify”&lt;/a&gt; command that wraps a “git svn” command. This way I can use git locally and then re-commit into svn when done.&lt;p&gt;&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1014-2"&gt;&lt;code class="language-ruby"&gt;#!/usr/bin/env ruby -wKU
+# command from
+# http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/
+# Install with
+# sudo port install git-core +svn
+
+# get svn info location
+svnurl = `svn info | grep "^URL:"`.gsub('URL: ', '').chomp
+
+# project = basename
+project = File.basename(Dir.pwd)
+
+puts cmd = "git svn clone #{svnurl} ../#{project}.git"
+
+`#{cmd}`
+
+puts "('git svn rebase' merges changes from svn.\n 'git svn dcommit' updates svn with your git commits)"&lt;/code&gt;&lt;/pre&gt;
+</description></item></channel></rss>

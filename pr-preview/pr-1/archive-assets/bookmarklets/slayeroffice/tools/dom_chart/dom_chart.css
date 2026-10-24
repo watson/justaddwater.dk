@@ -1,0 +1,29 @@
+#chartContainer {
+	position:absolute;
+	font:9px verdana;
+	top:0px;
+	left:0px;
+	z-index:1000;
+	-moz-opacity:0.9;
+}
+
+.chartLabel{
+	position:relative;
+	color:#000;
+	font:9px verdana;
+	display:inline;
+	margin:0px 0px 0px 5px;
+	padding:3px 3px 0px 3px;
+	border:1px solid #000;
+	border-left:2px solid #000;
+	border-top-style:none;
+	border-right-style:none;
+	background:#FFF;
+	text-transform:lowercase;
+	cursor:pointer;
+}
+
+.chartLabel a {
+	color:#000;
+	text-decoration:none;
+}

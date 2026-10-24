@@ -1,0 +1,37 @@
+/* Small additions for the static archive; the original theme remains intact. */
+.archive-note { font-size: 1em; }
+#search-results { padding-left: 1.5em; }
+#search-results li { margin: 1.5em 0; }
+#search-results p { margin: .4em 0; }
+#archive-query { max-width: 90%; }
+img[data-original-url] { max-width: 100%; object-fit: contain; }
+.archive-code { text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; }
+.archive-video-note {
+  display: block;
+  margin: .75em 0;
+  padding: .6em .8em;
+  border-left: 3px solid #ccc;
+  background: #f7f7f7;
+  text-align: left;
+  line-height: 1.5;
+}
+.archive-form-notice {
+  margin: 1em 0;
+  padding: 10px 12px;
+  border-left: 4px solid #b27613;
+  background: #fff4d6;
+  color: #503a13;
+  text-align: left;
+  line-height: 1.5;
+}
+.entry .archive-form { text-align: center; }
+.archive-form :disabled { cursor: not-allowed; }
+/* Keep long examples inside the original article column. */
+.entry pre, .entry code { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+/* The original theme uses IDs for forms; duplicated historical forms now have
+   unique IDs and share these equivalent styles. */
+.archive-commentform input, .archive-commentform textarea { font: .9em 'Lucida Grande', Verdana, Arial, sans-serif; }
+.archive-commentform input { width: 170px; padding: 2px; margin: 5px 5px 1px 0; }
+.archive-commentform textarea { width: 100%; padding: 2px; }
+.archive-commentform .archive-comment-submit { margin: 0; float: right; }
+.archive-commentform p { font-family: 'Lucida Grande', Verdana, Arial, sans-serif; margin: 5px 0; }

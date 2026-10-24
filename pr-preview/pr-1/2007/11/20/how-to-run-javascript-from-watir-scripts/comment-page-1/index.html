@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | How to Run JavaScript From Watir Scripts</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/11/20/how-to-run-javascript-from-watir-scripts/feed/" rel="alternate" title="justaddwater.dk » How to Run JavaScript From Watir Scripts Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/11/18/blue-beanie-day-a-day-for-web-standards-and-accessibility/" rel="prev" title="Blue Beanie Day – A day for Web Standards and Accessibility"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/" rel="next" title="Converting UTF-8 Data to Outlook Compatible Charset"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2007/11/20/how-to-run-javascript-from-watir-scripts/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2007/11/20/how-to-run-javascript-from-watir-scripts/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2007/11/18/blue-beanie-day-a-day-for-web-standards-and-accessibility/" rel="prev">Blue Beanie Day – A day for Web Standards and Accessibility</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/" rel="next">Converting UTF-8 Data to Outlook Compatible Charset</a> »</div>
+		</div>
+	
+		<div class="post" id="post-778">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2007/11/20/how-to-run-javascript-from-watir-scripts/" rel="bookmark" title="Permanent Link: How to Run JavaScript From Watir Scripts">How to Run JavaScript From Watir Scripts</a></h2>
+	
+			<div class="entry">
+				<p>What’s Watir? Read “<a href="/justaddwater.dk/pr-preview/pr-1/2006/07/14/watir-sweetspot-enterprise-ruby/">Watir: Another sweetspot for Enterprise Ruby</a>”</p>
+<p>Is it possible to run JavaScript functions or execute code from within your Watir test scripts?  As a matter of fact it is, but I had a hard time finding the proper documentation for it.  Here is what to do and how:</p>
+<h3>Call JavaScript Functions from Watir script</h3>
+<pre class="archive-code" data-recovery-code="post-778-1"><code class="language-ruby">win = ie.document.parentWindow
+win.ToggleProj('1')</code></pre>
+<h3>Inject JavaScript  to run from Watir script</h3>
+<p>I used this to alter a JavaScript function on the existing page:<br/>
+</p><pre class="archive-code" data-recovery-code="post-778-2"><code class="language-ruby">@ie.document.parentWindow.eval('
+window.CheckReport=function(){return true}')</code></pre><br/>
+As you can see, you can reference the window object and use eval to execute your snippets. The easier way is to add this custom method for easy reference<p></p>
+<pre class="archive-code" data-recovery-code="post-778-3"><code class="language-ruby"># Add accessor for DOM window object
+class Watir::IE; def window; document.parentWindow; end; end</code></pre><br/>
+Then you can write the last example as:<br/>
+<pre class="archive-code" data-recovery-code="post-778-4"><code class="language-ruby">@ie.window.eval('
+window.CheckReport=function(){return true}')</code></pre><br/>
+Much more intuitive and straightforward. Thanks to my colleague <a href="http://tobiashm.jaiku.com/">Tobias</a> for the trick.<p></p>
+<p>More info</p>
+<ul>
+<li>Justaddwater.dk: <a href="/justaddwater.dk/pr-preview/pr-1/2006/07/14/watir-sweetspot-enterprise-ruby/" rel="bookmark" title="Permanent Link: Watir: Another sweetspot for Enterprise Ruby">Watir: Another sweetspot for Enterprise Ruby</a> (July 2006)</li>
+<li>Telerik (by Egil): <a href="http://blogs.telerik.com/blogs/twisted_asp_net/archive/2006/04/26/201.aspx">Automating Complex JavaScript-rich Controls with Watir</a> (April 2006)</li>
+<li><a href="http://dwatir.rubyforge.org/">DWatir</a> for distributed testing is very promising. I saw the demo at RailsConf but had not yet a chance to use. More info in the <a href="http://dwatir.rubyforge.org/svn/trunk/lib/dwatir.rb">code files</a>.
+</li>
+</ul>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/ruby" href="/justaddwater.dk/pr-preview/pr-1/topics/ruby/" rel="tag">ruby</a>, <a data-original-url="http://technorati.com/tag/enterprise" href="/justaddwater.dk/pr-preview/pr-1/topics/enterprise/" rel="tag"> enterprise</a>, <a data-original-url="http://technorati.com/tag/business+case" href="/justaddwater.dk/pr-preview/pr-1/topics/business-case/" rel="tag"> business case</a>, <a data-original-url="http://technorati.com/tag/watir" href="/justaddwater.dk/pr-preview/pr-1/topics/watir/" rel="tag"> watir</a>, <a data-original-url="http://technorati.com/tag/testing" href="/justaddwater.dk/pr-preview/pr-1/topics/testing/" rel="tag"> testing</a>, <a data-original-url="http://technorati.com/tag/javascript" href="/justaddwater.dk/pr-preview/pr-1/topics/javascript/" rel="tag"> javascript</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Tuesday, November 20th, 2007 at 21:12 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/javascript/" rel="category tag">JavaScript</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2007/11/20/how-to-run-javascript-from-watir-scripts/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">One Response to “How to Run JavaScript From Watir Scripts”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-387238">
+			<cite>Fabienphilipp</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-387238" title="">January 2nd, 2008 at 19:41 (GMT-1)</a> </small>
+
+			<p>Dear Sir,</p>
+<p>I used a call javascript function from Watir script so as to go to the superior page.<br/>
+win = $ie.frame(“home”).document.parentWindow<br/>
+win.gotoSeq(‘next’)<br/>
+However $ie rest on the old page. Must update on $ie through hwnd for example? </p>
+<p>Yours faithfully,</p>
+<p>Fabien.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

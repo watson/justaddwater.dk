@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Find Occurences of Text String in Files</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2008/06/17/find-occurences-of-text-string-in-files/feed/" rel="alternate" title="justaddwater.dk » Find Occurences of Text String in Files Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2008/06/16/fixes-to-common-css-problems/" rel="prev" title="Fixes to Common CSS Problems"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2008/06/18/the-dark-side-of-information-architecture/" rel="next" title="The Dark Side of Information Architecture"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2008/06/17/find-occurences-of-text-string-in-files/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2008/06/17/find-occurences-of-text-string-in-files/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2008/06/16/fixes-to-common-css-problems/" rel="prev">Fixes to Common CSS Problems</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2008/06/18/the-dark-side-of-information-architecture/" rel="next">The Dark Side of Information Architecture</a> »</div>
+		</div>
+	
+		<div class="post" id="post-934">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2008/06/17/find-occurences-of-text-string-in-files/" rel="bookmark" title="Permanent Link: Find Occurences of Text String in Files">Find Occurences of Text String in Files</a></h2>
+	
+			<div class="entry">
+				<p>I had to search for occurences of string in particular files, and using Cygwin i did the following:</p>
+<p>find all files that ends on .js, .html or .ascx:<br/>
+<code>$ find -regextype posix-extended -regex ".+\.(js|html?|ascx)$"</code></p>
+<p>Then search for lines that contain the following javascript construction <code>for( var x in object)</code></p>
+<p>I ended up with this regular expression to match the javascript: <code>/for\s?\(.+?\bin\b.+?\)/</code>. Although not strictly necessary, i test for word-boundaries around <code>"in"</code> — it would be sufficient just to use spaces like this <code>" in "</code>. For grep to eat this its pack with parameters that show filename (-H), line number (-n), only matching part of line (-o), and use Pearl compatible regexps (-P):</p>
+<p><code> grep -nHoP "for\s?\(.+?\bin\b.+?\)" </code></p>
+<p>Set this into a find expression where the -exec flag allows you to run the grep command on each file found:</p>
+<p><code>$ find -regextype posix-extended -regex ".+\.(js|html?|ascx)$"  -exec grep -nHoP "for\s?\(.+?\bin\b.+?\)" '{}' \;</code></p>
+<p><strong>Choosing a -regextype for find</strong><br/>
+The regextype had to be changed and I found that these work with the chosen regexp:<br/>
+* posix-extended, posix-awk, and posix-egrep<br/>
+but posix-basic did not work.</p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Tuesday, June 17th, 2008 at 14:54 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/software/" rel="category tag">Software</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/unix/" rel="category tag">Unix</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2008/06/17/find-occurences-of-text-string-in-files/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">4 Responses to “Find Occurences of Text String in Files”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-424385">
+			<cite><a class="url" href="http://www.baekdal.com" rel="external">Thomas Baekdal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-424385" title="">June 17th, 2008 at 22:57 (GMT-1)</a> </small>
+
+			<p>Jesper, you should try regexboddy :)<br/>
+<a href="http://www.regexbuddy.com/" rel="external">http://www.regexbuddy.com/</a></p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-424389">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-424389" title="">June 17th, 2008 at 23:29 (GMT-1)</a> </small>
+
+			<p>@Thomas, I am glad you pointed that out. It comes down to usability :)</p>
+<p>Actually i have a license for regexbuddy, acetext, Powergrep, and more of Jan Goyvaerts utilities. </p>
+<p>I was very fond of Powergrep especially because it had so good regex support. But I stopped using it — as the usability geek I am — primarily because of the following:</p>
+<p>1) the interface was cluttered and it became harder to use. I had repeatedly problems and wasted braincycles setting up simple things like which files to search in. The program had the unlucky ability always to present the wrong defaults when i used the program.</p>
+<p>2) the other thing that’s important to me is I want the search to be reproducible by everybody in our project team. Even if I could save a search, i don’t want it in a proprietary format. </p>
+<p>Having said that, I used the Powergrep family of programs extensively for a period of time. Approximately 2 years ago. So things can have improved.<br/>
+However I remember the shift from version 3 to 4 when the interface got too complicated (at least to me)</p>
+<p>I want programs that get out of my way, and let me focus on solving my work. Powergrep required too many of my braincycles :)</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-424399">
+			<cite><a class="url" href="http://www.baekdal.com" rel="external">Thomas Baekdal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-424399" title="">June 18th, 2008 at 00:15 (GMT-1)</a> </small>
+
+			<p>He he – well, I pointed out RegExBoddy, primarely because I thought your command lines looked a tad too complex. I would have a hard time remembering what to write. I actually switched from a command like interface to RegExBoddy, because I thought it was more usable and easier to work with :)</p>
+<p>I guess then it is a matter of personal taste…</p>
+<p>BTW: All this remind of the age old quote by Jamie Zawinski</p>
+<p>Some people, when confronted with a problem, think<br/>
+“I know, I’ll use regular expressions.”   Now they have two problems.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

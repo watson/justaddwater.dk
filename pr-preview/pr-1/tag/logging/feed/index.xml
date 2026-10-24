@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>logging – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/logging/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/logging/feed/" rel="self" type="application/rss+xml" /><item><title>Spoken Git Commit Log — Another Annoyance at the Office</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/09/30/spoken-git-commit-log-%e2%80%94-another-annoyance-at-the-office/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1161</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 30 Sep 2009 08:23:26 +0000</pubDate><description>&lt;p&gt;Here is a short one-liner that really annoyed my colleagues today.&lt;br/&gt;
+I set my mac to read aloud all changes in the repository since yesterday:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; git  log --pretty=format:"%an commit %s, %ad." --date=relative --since=yesterday |say
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;if you remove the “say” command in the end it’s actually pretty readable:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+pagerbak commit VA17, 34 minutes ago.
+pagerbak commit VA17 - Not used, 35 minutes ago.
+therikss commit , 48 minutes ago.
+pagerbak commit Checkstyle configuration, 56 minutes ago.
+pagerbak commit Checkstyle configuration, 56 minutes ago.
+pagerbak commit Checkstyle configuration, 57 minutes ago.
+pagerbak commit Checkstyle configuration, 57 minutes ago.
+pagerbak commit Checkstyle configuration, 57 minutes ago.
+pagerbak commit Checkstyle configuration, 57 minutes ago.
+pagerbak commit Checkstyle configuration, 58 minutes ago.
+pagerbak commit Library update. Axis2 updated, 58 minutes ago.
+pagerbak commit Checkstyle configuration, 59 minutes ago.
+pagerbak commit New certificates, VA17, Library update, Checkstyle, 60 minutes ago.
+pagerbak commit Checkstyle configuration, 61 minutes ago.
+pagerbak commit Checkstyle configuration, 62 minutes ago.
+pagerbak commit ?, 63 minutes ago.
+pagerbak commit Checkstyle configuration, 63 minutes ago.
+pagerbak commit Added a few extra SAML2 related methods for VA17, 64 minutes ago.
+nstrandb commit fixes, 75 minutes ago.
+nstrandb commit fixes, 75 minutes ago.
+pagerbak commit VA17 Login for existing user work., 76 minutes ago.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While reading it aloud seems pretty evil and intriguing, it was actually bit of a laugh at the office.&lt;/p&gt;
+&lt;p&gt;PS. Time to look for a better hobby :)&lt;/p&gt;
+</description></item></channel></rss>

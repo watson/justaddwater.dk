@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Why AJAX Failed (Then Succeeded)</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/01/31/why-ajax-failed-then-succeeded/feed/" rel="alternate" title="justaddwater.dk » Why AJAX Failed (Then Succeeded) Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/01/29/javascript-cookie-editor-bookmarklet/" rel="prev" title="Handy JavaScript Cookie Editor"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/02/06/100000-blog-spam-comments/" rel="next" title="100,000 Blog Spam Comments"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2007/01/31/why-ajax-failed-then-succeeded/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2007/01/31/why-ajax-failed-then-succeeded/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2007/01/29/javascript-cookie-editor-bookmarklet/" rel="prev">Handy JavaScript Cookie Editor</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2007/02/06/100000-blog-spam-comments/" rel="next">100,000 Blog Spam Comments</a> »</div>
+		</div>
+	
+		<div class="post" id="post-530">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2007/01/31/why-ajax-failed-then-succeeded/" rel="bookmark" title="Permanent Link: Why AJAX Failed (Then Succeeded)">Why AJAX Failed (Then Succeeded)</a></h2>
+	
+			<div class="entry">
+				<p>E-Week has notes from “Google’s Bosworth”  (which must be <a href="http://en.wikipedia.org/wiki/Adam_Bosworth">Adam Bosworth</a>, formerly employed at Microsoft and working on the IE4 team).</p>
+<p>Below some notable quotes on AJAX. I really like his style a lot. Also, I can recommend <a href="http://www.itconversations.com/shows/detail571.html" title="ITConversations: Adam Bosworth - 
+Database Requirements in the Age of Scalable Services">his talk from 2005 on high performance systems</a> (via IT conversations), where he mentions that one Google blog has experienced up to 120,000 hits per second.</p>
+<blockquote cite="http://www.eweek.com/article2/0,1895,2088644,00.asp"><p>A good tool should be transparent, should execute actions in less than half a second and should involve interactive bottom-up learning, “because you change your mind as you go,” he said.</p></blockquote>
+<blockquote cite="http://www.eweek.com/article2/0,1895,2088644,00.asp">
+<p nd="23">Natural language was billed as a replacement for the GUI, but it failed to achieve that. It also failed as a query language for databases, as a calculation language for spreadsheets and as a document creation language, Bosworth said. “Humans expect a human level of comprehension,” he said, noting that database queries and spreadsheet formulas have to be exact. </p>
+<p><a href="http://www.eweek.com/category2/0,1874,1743276,00.asp"><img align="left" alt="eWEEK.com Special Report: Google's Global Reach" border="0" data-original-url="http://common.ziffdavisinternet.com/util_get_image/9/0,1425,i=94222,00.jpg" height="110" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/6dd67c94f7089731d8ee716e.jpg" width="160"/></a></p>
+<p nd="24">But natural language got a second life, too, triggered in part by Microsoft Help, and the next step turned out to be Google, Bosworth said. The trick to being successful with natural language is to “start with a fuzzy problem, one no human can resolve anyway…orient it around search, and the magic is just in the ranking,” he said.</p>
+<p nd="25">Drawing on the lessons he learned from the initial failure of AJAX, Bosworth admonished developers to think about user activity. “Ask what the frequency is,” he said. “Unless an app is used over and over each day, <strong>make it simple, even if more clicks [or] pages are required</strong>.”</p>
+<p nd="26">Also, “Ask how long it takes to execute a requested task,” he said. “If it takes more than 2 seconds, consider not providing the task or splitting it up into small, user-controlled tasks.”</p>
+<p nd="27">Moreover, “sites where people don’t go a lot don’t need AJAX-style UIs [user interfaces],” Bosworth said. “If we started building AJAX for AJAX’s sake we wouldn’t be doing our customers any favors.”</p>
+</blockquote>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/google" href="/justaddwater.dk/pr-preview/pr-1/topics/google/" rel="tag">google</a>, <a data-original-url="http://technorati.com/tag/ajax" href="/justaddwater.dk/pr-preview/pr-1/topics/ajax/" rel="tag"> ajax</a>, <a data-original-url="http://technorati.com/tag/adam+bosworth" href="/justaddwater.dk/pr-preview/pr-1/topics/adam-bosworth/" rel="tag"> adam bosworth</a>, <a data-original-url="http://technorati.com/tag/microsoft" href="/justaddwater.dk/pr-preview/pr-1/topics/microsoft/" rel="tag"> microsoft</a>, <a data-original-url="http://technorati.com/tag/ie4" href="/justaddwater.dk/pr-preview/pr-1/topics/ie4/" rel="tag"> ie4</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Wednesday, January 31st, 2007 at 14:28 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/ajax/" rel="category tag">AJAX</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/eventsseminars/speaking/" rel="category tag">Speaking</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2007/01/31/why-ajax-failed-then-succeeded/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">3 Responses to “Why AJAX Failed (Then Succeeded)”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-75512">
+			<cite><a class="url" href="http://www.zuschlogin.com" rel="external">Michael Zuschlag</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-75512" title="">February 2nd, 2007 at 21:40 (GMT-1)</a> </small>
+
+			<p>Not to denigrate Google’s sophisticated page ranking algorithms, but I think it’s more than a stretch to characterize Google Search as a natural language user interface. Type in “Frogs, but not the amphibians” and you get nothing but amphibians. Google can appear like a natural language interface sometimes only because the content it searches happens to be organized as natural language.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-417143">
+			<cite><a class="url" href="http://www.transparent.com/about/company_info.htm" rel="external">Transparent language</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-417143" title="">May 8th, 2008 at 23:53 (GMT-1)</a> </small>
+
+			<p>I think Ajax is good for web users. The use of AJAX on the website can entice the interest of the web users, however it is not that good to the company side. If what I said is wrong, welcome to correct me.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

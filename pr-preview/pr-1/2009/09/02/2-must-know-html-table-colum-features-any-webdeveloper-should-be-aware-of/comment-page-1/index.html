@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | 2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/feed/" rel="alternate" title="justaddwater.dk » 2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2009/09/01/selection-groups-in-rails-made-less-cumbersome/" rel="prev" title="Selection Groups in Rails made less cumbersome"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2009/09/16/css-styling-buttons-problem-with-underlined-text/" rel="next" title="CSS Styling Buttons Problem with Underlined Text"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2009/09/01/selection-groups-in-rails-made-less-cumbersome/" rel="prev">Selection Groups in Rails made less cumbersome</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2009/09/16/css-styling-buttons-problem-with-underlined-text/" rel="next">CSS Styling Buttons Problem with Underlined Text</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1135">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/" rel="bookmark" title="Permanent Link: 2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of">2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</a></h2>
+	
+			<div class="entry">
+				<p>I was reading up on the good old HTML specification and discovered a feature I had always wanted — and it’s already there:<br/>
+Creating widths of columns that will work like percentages, but will also pay attention to any small, fixed-width columns.</p>
+<p>Take a look at HTML’s proportional widths and amount alignment features.</p>
+<p>Look at this from HTML specification of &lt;COL&gt; elements:</p>
+<blockquote><p>Authors may specify column widths in three ways:</p>
+<dl>
+<dt><strong>Fixed</strong></dt>
+<dd>A fixed width specification is given in pixels (e.g., <samp> width</samp>=”30″). A fixed-width specification enables incremental rendering.</dd>
+<dt><strong>Percentage</strong></dt>
+<dd>A percentage specification (e.g., <samp>width</samp>=”20%”) is based on the percentage of the horizontal space available to the table (between the current left and right margins, including floats). Note that this space does not depend on the table itself, and thus percentage specifications enable incremental rendering.</dd>
+<dt><strong>Proportional</strong></dt>
+<dd>Proportional specifications (e.g., <samp>width</samp>=”3*”) refer to portions of the horizontal space <em>required</em> by a table. If the table width is given a fixed value via the <samp>width</samp> attribute of the <a href="http://www.w3.org/TR/html4/struct/tables.html#edef-TABLE"><samp>TABLE</samp></a> element, user agents may render the table incrementally even with proportional columns.However, if the table does not have a fixed width, user agents must receive all table data before they can determine the horizontal space required by the table. Only then may this space be allotted to proportional columns.<p></p>
+</dd>
+</dl>
+</blockquote>
+<p>Proportional widths! Nice. This means that you can create tables like this example (i have swapped the original HTML4 style to lowercase XHTML):</p>
+<blockquote><p>Once the (visual) user agent has received the table’s data: the available horizontal space will be alloted by the user agent as follows: First the user agent will allot 30 pixels to columns one and two. Then, the minimal space required for the third column will be reserved. <strong>The remaining horizontal space will be divided into six equal portions (since 2* + 1* + 3* = 6 portions)</strong>. Column four (2*) will receive two of these portions, column five (1*) will receive one, and column six (3*) will receive three.</p>
+<pre>&lt;table&gt;
+&lt;colgroup&gt;
+  &lt;col width="30"/&gt;
+&lt;colgroup&gt;
+  &lt;col width="30"/&gt;
+  &lt;col width="0*"/&gt;
+  &lt;col width="2*"/&gt;
+&lt;colgroup align="center"&gt;
+  &lt;col width="1*"/&gt;
+  &lt;col width="3*" align="char" char=":"/&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;td&gt; ...
+...rows...
+&lt;/table&gt;</pre>
+</blockquote>
+<p>This leaves me with one big question: How is browser support for &lt;col width=”2*”&gt; ????</p>
+<p>BONUS: Did you notice the little align feature ‘align=”char” char=”:” ‘ so that you can correctly align your decimal amounts? I was not aware of that either!</p>
+<p>More info in W3C’s HTML4 specification “<a href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.4.4">Calculating the widths of columns</a>“</p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Wednesday, September 2nd, 2009 at 15:23 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/html/" rel="category tag">HTML</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/" rel="category tag">Web Standards</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">15 Responses to “2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-488842">
+			<cite>Chris</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488842" title="">September 3rd, 2009 at 11:37 (GMT-1)</a> </small>
+
+			<p>As far as I know no browser supports align=”char” — do you have other information?</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-488854">
+			<cite><a class="url" href="http://www.divrad.com/index.php/radiologists/" rel="external">Keegan</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488854" title="">September 3rd, 2009 at 23:03 (GMT-1)</a> </small>
+
+			<p>I’ve never used this before but I want to try it very soon.  Thank you for the post</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-488857">
+			<cite><a class="url" href="http://freeringbacktoness.blogspot.com" rel="external">free ringback tones</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488857" title="">September 3rd, 2009 at 23:51 (GMT-1)</a> </small>
+
+			<p>im need this tutorial thankss!!!</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-488866">
+			<cite><a class="url" href="http://ReverseCellPhones.org" rel="external">Reverse Cell Phones</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488866" title="">September 4th, 2009 at 07:16 (GMT-1)</a> </small>
+
+			<p>Proporational is new to me. I will have to use next time it makes sense.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-488868">
+			<cite><a class="url" href="http://www.workgroup.co.in" rel="external">Maneesh Bhati</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488868" title="">September 4th, 2009 at 13:55 (GMT-1)</a> </small>
+
+			<p>I like ur stuff on the HTML. I have to use it and then see what happens. Thanks for the info.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-488881">
+			<cite><a class="url" href="http://www.consumercourtforum.in/" rel="external">Consumer forum</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488881" title="">September 5th, 2009 at 10:55 (GMT-1)</a> </small>
+
+			<p>Learning HTML is not so easy, but i am very confident that going through your post will help many people to know how easy it is. You have very well explained all the elements beautifully.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-488906">
+			<cite><a class="url" href="http://qpew.com" rel="external">Toppy</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488906" title="">September 6th, 2009 at 10:09 (GMT-1)</a> </small>
+
+			<p>This is a great find.  I’d guess the reason its not more widely known is compatibility issues.  Any update on your findings about that?</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-488937">
+			<cite><a class="url" href="http://www.marcusevans.com/marcusevans-scam/index.asp" rel="external">Angeline @ marcus evans scam</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488937" title="">September 7th, 2009 at 04:01 (GMT-1)</a> </small>
+
+			<p>I’m nt aware of the Browser support for column 2*. If you get to know please share with us. </p>
+<p>Angeline @  marcus evans scam  </p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-488944">
+			<cite><a class="url" href="http://www.ingateros.com/" rel="external">Rusli Zainal sang Visioner</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488944" title="">September 7th, 2009 at 10:06 (GMT-1)</a> </small>
+
+			<p>ops lose comment<br/>
+thank a lot of information. may be useful. continue to increase the quantity and quality of your writing. the more qualified you are writing all the more delighted visitors to come back to visit. success always for you. </p>
+<p>regard,<br/>
+<a href="http://www.ingateros.com/2009/06/rusli-zainal-sang-visioner.html" rel="external">rusli zainal sang visioner</a></p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-488954">
+			<cite><a class="url" href="http://www.fashno.com" rel="external">Fashno</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488954" title="">September 7th, 2009 at 12:47 (GMT-1)</a> </small>
+
+			<p>Hello, First of all thank you for Providing great information about the HTML. THis will surely help newbies who want to know about the HTMl, im basically a Web Designing student, So i always do google searchs for the HTML tutorials, Etc and now found your site/blog and its GOOD</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-488955">
+			<cite><a class="url" href="http://www.seoworkgroup.com/" rel="external">SEO Workgroup</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488955" title="">September 7th, 2009 at 12:47 (GMT-1)</a> </small>
+
+			<p>Thanks for sharing. I’ve never used this before but I want to try it very soon. Thank you for the post &amp; the sharing on HTML.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-488959">
+			<cite><a class="url" href="http://animemmorpgs.blogspot.com" rel="external">Anime Games</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488959" title="">September 7th, 2009 at 16:57 (GMT-1)</a> </small>
+
+			<p>is this also applicable to HTML5, HTML 5.0 is not a big hit but you know that transition is also another consideration</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-488963">
+			<cite><a class="url" href="http://www.flockoffigurines.com" rel="external">Figurine</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488963" title="">September 7th, 2009 at 23:44 (GMT-1)</a> </small>
+
+			<p>Great information, written in a style everyone can understand.  Thanks Jesper</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-489017">
+			<cite><a class="url" href="http://www.wallpaperstop.com" rel="external">Derek Dorian</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-489017" title="">September 10th, 2009 at 13:28 (GMT-1)</a> </small>
+
+			<p>lol<br/>
+i never heard this before<br/>
+though i am gonna cross broswer check before testing it</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-489485">
+			<cite><a class="url" href="http://shamanpvp.net" rel="external">Shaman PVP</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-489485" title="">September 28th, 2009 at 05:13 (GMT-1)</a> </small>
+
+			<p>I love the idea of proportional tables, but how well supported is this among the various browsers?</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

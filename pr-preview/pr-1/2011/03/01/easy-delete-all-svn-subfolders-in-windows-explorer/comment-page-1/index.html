@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Easy delete all .svn Subfolders in Windows Explorer</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/feed/" rel="alternate" title="justaddwater.dk » Easy delete all .svn Subfolders in Windows Explorer Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2011/01/05/automatic-excel-time-format-without-colon-in-input/" rel="prev" title="Automatic Excel Time Format Without Colon in Input"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2011/03/10/challenges-configuring-hudson-emails/" rel="next" title="Challenges Configuring Hudson Emails"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2011/01/05/automatic-excel-time-format-without-colon-in-input/" rel="prev">Automatic Excel Time Format Without Colon in Input</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2011/03/10/challenges-configuring-hudson-emails/" rel="next">Challenges Configuring Hudson Emails</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1414">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/" rel="bookmark" title="Permanent Link: Easy delete all .svn Subfolders in Windows Explorer">Easy delete all .svn Subfolders in Windows Explorer</a></h2>
+	
+			<div class="entry">
+				<p>I had to repair a flawed Subversion repository recently (not all files were committed). I had my local repository checked out. This was the flawed part, containing only parts of the folders and files it should.</p>
+<p>Then, I got a zip file from the machine where it was working. Problem: It contained .svn folders from the other developer. So to merge these i did the following workflow:</p>
+<ol>
+<li>Delete all .svn folders from other developer’s zip</li>
+<li>Move other developers folder over on top of my local install.</li>
+<li>Commit all missing files</li>
+</ol>
+<p>Of course this will only work if there are no .svn folders in other developer’s file, because then svn authentication, paths, etc. will be messed up, and commit will fail.</p>
+<p>Luckily, Sanil S (IamTechie blog) wrote a nice little script that actually adds a context menu in Windows explorer:<br/>
+<a href="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg"><img alt="" class="alignnone size-full wp-image-1415" height="288" sizes="(max-width: 360px) 100vw, 360px" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg" srcset="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg 360w, /justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn-300x240.jpg 300w" title="delete-svn" width="360"/></a></p>
+<p><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1414-1"><code>Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;&amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+</code></pre><p class="archive-code-source">delete_svn_subfolders.reg · <a href="https://gist.github.com/jesperronn/848907/66427a7b4a4046e5aa0e0c2aea6b160ac34690bc">Original gist</a></p></div><br/>
+Just save this file as “delete_svn_subfolders.reg”. When you run it, then you will have the new windows explorer context menu item shown in the image.</p>
+<p>The full script (repeated for the ones with javascript disabled:)</p>
+<blockquote>
+<pre>Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;&amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+</pre>
+</blockquote>
+<p>More info:</p>
+<p>IamTechie: <a href="http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/">How to remove all “.svn” folders in Windows XP &amp; Vista?</a></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Tuesday, March 1st, 2011 at 11:08 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/justaddwaterdk/" rel="category tag">justaddwater.dk</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">4 Responses to “Easy delete all .svn Subfolders in Windows Explorer”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-513373">
+			<cite>Lois Extra</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-513373" title="">March 7th, 2011 at 19:17 (GMT-1)</a> </small>
+
+			<p>Thanks for actually providing the “delete_svn_subfolders.reg” file itself.  It’s so nice when someone else has already dealt with the same problem, had done the legwork to fix it, and then provided the solution free of charge to others so we don’t have to reinvent the wheel..  Yes, than you to Sanil S. and to you!</p>
+<p>Cheers,</p>
+<p>Lois</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-513796">
+			<cite><a class="url" href="http://www.adnas.com" rel="external">Product Authentication</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-513796" title="">March 10th, 2011 at 09:27 (GMT-1)</a> </small>
+
+			<p>I only delete files using command prompt but it is time consuming and I need to know where is the file situated in the directory. I find your tips on deleting .svn files on Windows operating system easy to follow. I won’t be bothered anymore on locating and typing files on command prompt and deleting it one by one.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-517097">
+			<cite>Niels Peter Strandberg</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-517097" title="">April 6th, 2011 at 11:03 (GMT-1)</a> </small>
+
+			<p>In Mac OS X you can use the following Bash command:</p>
+<p>find . -name .svn -print0 | xargs -0 rm -rf</p>
+<p>I have not tried it in Cygwin, but it should work :-)</p>
+<p>/Niels Peter</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-531813">
+			<cite>Review Guy</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-531813" title="">July 28th, 2011 at 05:57 (GMT-1)</a> </small>
+
+			<p>Omg this finally solved my problem. I was freaking tired of using the Cmd prompt, this is so much easier. Thanks for the script man, super helpful. By the way I have just upgraded my mac to lion, and I think it’s pretty awesome, I was wondering what you guys thought of it, or are you all windows guys?</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

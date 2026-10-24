@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | How To Recover Deleted Subversion Branch</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2009/12/09/how-to-recover-deleted-subversion-branch/feed/" rel="alternate" title="justaddwater.dk » How To Recover Deleted Subversion Branch Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/" rel="prev" title="How To add “Open folder in Textmate” to Finder Context Menu"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2010/02/04/mac-harddisk-upgrade-usability-improvements/" rel="next" title="Mac Harddisk Upgrade Usability Improvements"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2009/12/09/how-to-recover-deleted-subversion-branch/" rel="canonical"/>
+<link href="https://justaddwater.dk/2009/12/09/how-to-recover-deleted-subversion-branch/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2009/12/08/how-to-add-open-folder-in-textmate-to-finder-context-menu/" rel="prev">How To add “Open folder in Textmate” to Finder Context Menu</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2010/02/04/mac-harddisk-upgrade-usability-improvements/" rel="next">Mac Harddisk Upgrade Usability Improvements</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1257">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2009/12/09/how-to-recover-deleted-subversion-branch/" rel="bookmark" title="Permanent Link: How To Recover Deleted Subversion Branch">How To Recover Deleted Subversion Branch</a></h2>
+	
+			<div class="entry">
+				<p>I recently deleted a branch from our (svn) code repository. Did you know that it’s the general recommendation to delete a branch after a merge to ensure that nobody commits to it. (see <a href="http://www.orcaware.com/svn/wiki/Svnmerge.py#Merging_development_branches_back_to_trunk">svnmerge wiki</a> for more on that advice)</p>
+<p>Svn checkout, svn info, etc. all fail when you try to access the deleted branch immediately:</p>
+<blockquote>
+<pre>$ HOST=https://repository.com/repos_path
+$ svn log --limit=3 $HOST/portal/branches/VA1-12
+svn: '/svn/repos_path/!svn/bc/8881/portal/branches/VA1-12' path not found
+
+</pre>
+</blockquote>
+<p>But the interesting thing is that we need to add a so-called peg revision, denoted by the @ after the URL:</p>
+<blockquote>
+<pre>$ svn log --limit=3 $HOST/portal/branches/VA1-12@8800
+
+------------------------------------------------------------------------
+r8774 | jronn | 2009-11-23 11:30:40 +0100 (Mon, 23 Nov 2009) | 3 lines
+
+Max height in search results (indberetninger): 34px is 2 lines for a total of max 4 lines.
+
+Also converted spaces to tabs and removed trailing whitespace for consistency
+------------------------------------------------------------------------
+r8769 | jronn | 2009-11-17 17:01:25 +0100 (Tue, 17 Nov 2009) | 1 line
+
+Horizontal train first-shot with new image files
+------------------------------------------------------------------------
+r8768 | jronn | 2009-11-17 17:01:21 +0100 (Tue, 17 Nov 2009) | 1 line
+
+Removed image files having not been used for a long time
+------------------------------------------------------------------------
+
+</pre>
+</blockquote>
+<p>And to recover the deleted branch (for instance by checking out a copy):</p>
+<pre><blockquote>
+$ svn co $HOST/portal/branches/VA1-12@8800 va112
+</blockquote></pre>
+<p>More info on <a href="http://svnbook.red-bean.com/nightly/en/svn.advanced.pegrevs.html">peg revisions in svn book</a></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Wednesday, December 9th, 2009 at 16:33 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/web-development/" rel="category tag">Web Development</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2009/12/09/how-to-recover-deleted-subversion-branch/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">One Response to “How To Recover Deleted Subversion Branch”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-493394">
+			<cite><a class="url" href="http://www.earnwithcoins.com" rel="external">Shaun Judy</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-493394" title="">March 6th, 2010 at 21:09 (GMT-1)</a> </small>
+
+			<p>Wow! This was a real life saver for me. I had this happen to me on one of my computers and I have been on the biggest mission searching on how to fix it.</p>
+<p>Thanks</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

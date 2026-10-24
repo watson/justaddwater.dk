@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<title>CSS for "Train" progress bar</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style media="screen" type="text/css">
+    /* http://www.remotesynthesis.com/blog/index.cfm/2006/4/27/IE-PNG-Fix-with-Background-Support */
+.train6 li, .train li {
+  /*behavior: none; */
+}
+
+</style>
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+	<h2>CSS for "Train" progress bar</h2>
+  <div style="float:right">
+    <p>here is an image of what it should look like:</p>
+    <img alt="train image" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train.png"/>
+  </div>
+  <p>this is the simplest HTML I can come up with. CSS is added below:</p>
+
+  <ol class="train">
+    <li class="done" id="step1">første step <b class="tip"></b></li>
+    <li class="done" id="step2">andet step which is so long it wraps on 2 lines.  <b class="tip"></b></li>
+    <li class="current" id="step3">tredie step
+      <p>This one has extra text that can only be seen when selected</p>
+      <p>Extra paragraph of text</p>
+      <b class="tip"></b>
+    </li>
+    <li class="undone" id="step4">fjerde step <b class="tip"></b></li>
+    <li class="undone" id="step5">femte step <b class="tip"></b></li>
+    <li class="undone final" id="step6">sidste step <b class="tip"></b></li>
+  </ol>
+
+
+<style media="screen" type="text/css">
+  body{
+    font:11px Verdana;
+  }
+  ol.train{
+    width: 208px;
+    margin:0;    
+  }
+  ol.train li{
+    list-style-position:inside; 
+    margin:1px 0px 0px 0px;
+    padding:7px 10px 7px 10px;
+    position: relative;
+    display:block;
+  }
+
+  ol.train li p{
+    margin:2px 0 4px 16px;
+    padding:0;
+    font-weight: normal;
+    line-height: 14px;
+  }
+  
+.train .done{
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-done.png") #e8f4f7 repeat-x bottom;;
+  color: #999797
+}
+.train .current{
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-current.png") #fea445 repeat-x bottom;
+  color: #fff;
+  font-weight: bold
+}
+.train .undone{
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-undone.png") #d2e9f0 repeat-x bottom;;
+}
+
+.train .tip{
+  height:8px;
+  position:absolute;
+  bottom:-8px;
+  left:0;
+  width:100%;
+}
+
+.train .done b.tip{
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-done-tip.png") no-repeat top;
+}
+.train .current b.tip{
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-current-tip.png") no-repeat top;
+}
+.train .undone b.tip{
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-undone-tip.png") no-repeat top;
+}
+.train .final b.tip{
+  background:none;
+}
+
+
+
+#step1{z-index:20}
+#step2{z-index:19}
+#step3{z-index:18}
+#step4{z-index:17}
+#step5{z-index:16}
+#step6{z-index:15}
+#step7{z-index:14}
+#step8{z-index:13}
+#step9{z-index:12}
+#step10{z-index:11}
+#step11{z-index:9}
+#step12{z-index:8}
+#step13{z-index:7}
+#step14{z-index:6}
+#step15{z-index:5}
+#step16{z-index:4}
+#step17{z-index:3}
+#step18{z-index:2}
+#step19{z-index:1}
+</style>
+<ol class="train6">
+	<li class="done" id="step11">First step</li>
+	<li class="done" id="step12">Second step with long text that wraps on 2 lines</li>
+	<li class="current" id="step13">Current step
+    <p>This one has extra text that can only be seen when selected</p>
+    <p>Extra paragraph of text</p>
+	</li>
+	<li class="undone" id="step14">Fourth step</li>
+	<li class="undone" id="step15">Fifth step</li>
+	<li class="undone final" id="step16">Final step</li>
+</ol>
+<style media="screen" type="text/css">
+	.train6, .train{
+		float:left;
+	}
+	ol.train6{
+    width:208px;
+	}
+  ol.train6 li {
+  
+    border-top:1px solid white;
+    list-style-position:inside; 
+    margin:0px 0px -8px 0px;
+    padding:7px 10px 14px 10px;
+    position: relative;
+  }
+
+  ol.train6 li p {
+    margin:2px 0 4px 16px;
+    padding:0;
+    font-weight: normal;
+    line-height: 14px;
+  }
+  
+.train6 .done {
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-done-w-tip.png") repeat-x bottom;
+  color: #999797 
+}
+.train6 .current {
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-current-w-tip.png") repeat-x bottom;
+  color: #fff;
+  font-weight: bold
+}
+.train6 .undone {
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-undone-w-tip.png") repeat-x bottom;
+}
+
+.train6 .final{
+top:1px;
+padding-top:7px;
+}
+.train6 .undone.final{
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-undone.png") repeat-x bottom;
+}
+.train6 .current.final{
+  background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train-current.png") repeat-x bottom;
+}
+
+
+</style>
+
+<br clear="both"/>
+<ul>
+    <li><a href="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train_css_d.html">version 1</a> (original)</li>
+    <li><a href="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train_css_d_v2.html">version 2</a> (added z-index on ids)</li>
+    <li><a href="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train_css_d_v3.html">version 3</a> (added margins and paddings for graphical reasons)</li>
+    <li><a href="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train_css_d_v4.html">version 4</a> (IE6 support rewrite - no pngfix)</li>
+    <li><a href="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/10/train_css_d_v5.html">version 5</a> (IE6 support pngfix but strange double numbers in IE6)</li>
+    <li><a data-original-url="http://justaddwater.dk/wp-content/uploads/2007/10/train_css_d_v6.html" href="/justaddwater.dk/pr-preview/pr-1/unavailable/?url=%2Fwp-content%2Fuploads%2F2007%2F10%2Ftrain_css_d_v6.html">version 6 (non existing)</a></li>
+</ul>
+
+
+
+</body></html>

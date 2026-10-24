@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>workflow – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/workflow/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/workflow/feed/" rel="self" type="application/rss+xml" /><item><title>Using Git for SVN Repositories Workflow</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/03/09/using-git-for-svn-repositories-workflow/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1038</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 09 Mar 2009 13:52:11 +0000</pubDate><description>&lt;p&gt;For the last months I have been using Git to work with my Subversion repositories. Besides from &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/01/17/git-side-benefit-reducing-disk-usage/" title="justaddwater.dk | Git Side Benefit: Reducing Disk Usage"&gt;reducing disk usage&lt;/a&gt;, Git also makes my work slightly faster and independent of network access — I can make commits to repository which is sync’ed later when I get online.&lt;/p&gt;
+&lt;p&gt;One challenge though: Using branches&lt;/p&gt;
+&lt;p&gt;I ran into some pitfalls when using branches in Subversion repository. Here is a quick guide to how I setup and work with svn branches in git-svn.&lt;/p&gt;
+&lt;h3&gt;Useful git-svn command cheatsheet&lt;/h3&gt;
+&lt;p&gt;For the lazy reader, let’s just start with the compressed cheatsheet :)&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-1"&gt;&lt;code class="language-bash"&gt;git svn clone -s [url_to_svn_repository] [project_name]
+
+git branch -a #show all branches local(git) and remote(svn)
+
+git status
+
+git svn info #show svn details (also URL)
+
+#create local Git branch that mirrors remote svn branch
+
+git checkout -b local/RELEASE-0.12 RELEASE-0.12 #will connect with a remote svn branch named 'RELEASE-0.12'
+
+git svn dcommit --dry-run # -n will show which svn branch you will commit into:
+
+#=&amp;gt; Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...
+
+git svn rebase # pull changes from svn repository
+
+git svn dcommit # push your local git commits to svn repository&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 1: Clone your repository with trunk, branches and tags&lt;/h3&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-2"&gt;&lt;code class="language-bash"&gt;git svn clone -s [url_to_svn_repository] [project_name]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The -s flag is important: It tells git to clone a standard svn layout with /trunk, /tags, /branches. NOTE that you have to use this -s flag to work with branches! Very important :)&lt;/p&gt;
+&lt;p&gt;Example: The Trac code repository has this layout by default. To make a git clone we do:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-3"&gt;&lt;code class="language-bash"&gt;git clone -s http://svn.edgewall.org/repos/trac trac.git
+
+Initialized empty Git repository in /Users/jesper/othercode/trac.git/.git/
+A    svntrac/__init__.py
+
+[...]
+
+M    trac/admin/console.py
+r7937 = 2aab87158be06edb1a1931240a453cac762c4615 (trunk)
+Auto packing your repository for optimum performance. You may also
+run "git gc" manually. See "git help gc" for more information.
+Counting objects: 13630, done.
+Compressing objects: 100% (13146/13146), done.
+Writing objects: 100% (13630/13630), done.
+Total 13630 (delta 10584), reused 0 (delta 0)
+Removing duplicate objects: 100% (256/256), done.
+Checked out HEAD:
+http://svn.edgewall.org/repos/trac/trunk r7937&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SVN info shows the remote svn url:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-4"&gt;&lt;code class="language-bash"&gt;cd trac.git/
+git svn info
+
+Path: .
+URL: http://svn.edgewall.org/repos/trac/trunk
+Repository Root: http://svn.edgewall.org/repos/trac
+Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2
+Revision: 7937
+Node Kind: directory
+Schedule: normal
+Last Changed Author: rblank
+Last Changed Rev: 7937
+Last Changed Date: 2009-03-07 03:52:37 +0100 (Sat, 07 Mar 2009)&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 2: Create local branch to mirror svn branch&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git branch -a&lt;/code&gt; shows all branches and tags  (both local and remote ones)&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;git branch -a&lt;/code&gt; to see all remote branches:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-5"&gt;&lt;code class="language-bash"&gt;git branch -a
+
+* master
+0.10-stable
+0.11-stable
+cboos-dev
+cmlenz-dev
+debian
+debian-dev
+jonas-dev
+tags/debian
+tags/debian-dev
+tags/trac-0.10
+tags/trac-0.10.1
+tags/trac-0.10.2
+tags/trac-0.10.3
+[...]
+trunk
+utopiste-dev&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create local branch with same name as remote branch:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-6"&gt;&lt;code class="language-bash"&gt;git checkout -b local/0.11-stable 0.11-stable
+
+Switched to a new branch "local/0.11-stable"&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 3: verify you are on new branch&lt;/h3&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-7"&gt;&lt;code class="language-bash"&gt;git svn dcommit --dry-run
+
+Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(or git svn info)&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-8"&gt;&lt;code class="language-bash"&gt;git svn info
+
+git svn info
+Path: .
+URL: http://svn.edgewall.org/repos/trac/branches/0.11-stable
+Repository Root: http://svn.edgewall.org/repos/trac
+Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2
+Revision: 7930
+Node Kind: directory
+Schedule: normal
+Last Changed Author: rblank
+Last Changed Rev: 7930
+Last Changed Date: 2009-03-03 00:41:48 +0100 (Tue, 03 Mar 2009)&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 4: work with code&lt;/h3&gt;
+&lt;p&gt;now you are free to work on the local branch: ‘local/0.11-stable’. Hack on and commit to git with commands like:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-9"&gt;&lt;code class="language-bash"&gt;git status
+
+git add filename
+
+git commit -m 'my commit comment'&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Repeat as much as you like. There are two strategies: Work on the master branch and then commit to the svn branch later.&lt;/p&gt;
+&lt;h3&gt;Step 5: commit to svn&lt;/h3&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-10"&gt;&lt;code class="language-bash"&gt;git svn rebase #to pull changes from svn before commit
+
+git svn dcommit&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you get an error like this:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-11"&gt;&lt;code class="language-bash"&gt;git svn dcommit
+Cannot dcommit with a dirty index.  Commit your changes first, or stash them with `git stash'.
+at /usr/local/libexec/git-core//git-svn line 431&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just do what it says:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-12"&gt;&lt;code class="language-bash"&gt;git stash
+
+git svn dcommit
+
+git stash apply&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The last line gets your dirty files back in your working directory.&lt;br/&gt;
+Applying change to multiple branches&lt;/p&gt;
+&lt;p&gt;Assume your change now is applied to the branch ‘0.11-stable’.&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-13"&gt;&lt;code class="language-bash"&gt;git checkout master
+git log –1
+#=&amp;gt; shows log of your latest commit
+#To apply these changes to Trunk, now you should change branch and merge:
+
+git checkout local/0.11-stable
+git merge master #will merge changes to the current branch (local/0.11-stable) from trunk/master.
+
+git svn dcommit #to commit the merged changes into the svn repository&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Related posts:&lt;/h3&gt;
+&lt;p&gt;* &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/02/21/using-local-file-based-git-server-laziness/" title="justaddwater.dk | Using Local File-based Git — Server Laziness"&gt;Using Local File-based Git — Server Laziness&lt;/a&gt; (Feb 21st)&lt;br/&gt;
+* &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/01/17/git-side-benefit-reducing-disk-usage/" title="justaddwater.dk | Git Side Benefit: Reducing Disk Usage"&gt; Git Side Benefit: Reducing Disk Usage&lt;/a&gt; (Jan 17th)&lt;br/&gt;
+* Dr Nic’s Gitify command: &lt;a href="http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/"&gt;Going offline without your favourite Subversion repository?&lt;/a&gt; (Nov 2007)&lt;/p&gt;
+</description></item></channel></rss>

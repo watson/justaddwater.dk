@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Ruby on Rails as rapid prototyping tool</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/04/12/rails-prototyping/feed/" rel="alternate" title="justaddwater.dk » Ruby on Rails as rapid prototyping tool Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/04/11/windows-xp-less-efficiant-than-windows-2000/" rel="prev" title="Windows XP: Less efficient than Windows 2000"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/04/22/questions-rails-prototyping/" rel="next" title="Questions on Rails for prototyping"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/04/12/rails-prototyping/" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/04/12/rails-prototyping/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2006/04/11/windows-xp-less-efficiant-than-windows-2000/" rel="prev">Windows XP: Less efficient than Windows 2000</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2006/04/22/questions-rails-prototyping/" rel="next">Questions on Rails for prototyping</a> »</div>
+		</div>
+	
+		<div class="post" id="post-221">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2006/04/12/rails-prototyping/" rel="bookmark" title="Permanent Link: Ruby on Rails as rapid prototyping tool">Ruby on Rails as rapid prototyping tool</a></h2>
+	
+			<div class="entry">
+				<p>Ruby on Rails might be the perfect match as a prototyping tool. It delivers consistent productivity gains compared to any other prototyping tool. Very few lines of code makes it easy to change. Here is why we use it at work as our preferred prototyping tool.</p>
+<p>First time I heard about Ruby on Rails was when David Heinemeier Hansson, Jason Fried and Ryan Singer presented the “<a href="http://www.37signals.com/workshop-062504.php" title="37 signals: The building of Basecamp workshop">Building of Basecamp</a>” workshop in Denmark June 2005. Basecamp was the project that sparked the development of the Ruby on Rails framework.</p>
+<p>I recognize the reaction that Deane of gadgetopia describes:</p>
+<blockquote><p>So what was the biggest shock of the Basecamp seminar?  Finding out that it was written in <a href="http://www.ruby-lang.org/en/">Ruby</a>. Yeah, that’s right — that Japanese language that you thought no one was using. They’ve apparently put together a Web development framework for it which they’re releasing to open-source.</p>
+<p>(from <a href="http://www.gadgetopia.com/post/2530" title="Gadgetopia.com: Basecamp and Ruby">www.gadgetopia.com</a> June 25, 2004)</p></blockquote>
+<p>I was immediately interested in the possibility of using Rails as a productivity tool, where in some cases a Rails application can be developed up to ten times faster than a similar Java or .Net application. Very promising.</p>
+<h3>Prototyping satisfaction survey</h3>
+<p>I’ve tried a lot of different prototyping tools: Paper, Photoshop, Powerpoint, Dreamweaver, HTML. Until Rails I was perfectly happy with HTML prototypes: I consider them easy to maintain, fast to produce, possible to search and replace during development.</p>
+<p>My experience goes pretty well with the 2002 GUUUI survey where 52 people replied on their preferred prototyping tool and their satisfaction with it (people preferring HTML were the most happy with their tool).</p>
+<table border="0" cellpadding="2" cellspacing="1" class="article">
+<tbody><tr>
+<td class="smallCopy" colspan="5"><span class="bold">“I’m perfectly happy with the prototyping tool I’m using”</span></td>
+</tr>
+<tr>
+<td class="smallCopy"></td>
+<td align="center" class="smallCopy">Strongly disagree</td>
+<td align="center" class="smallCopy">Mildly disagree</td>
+<td align="center" class="smallCopy">Neither agree nor disagree</td>
+<td align="center" class="smallCopy">Mildly agree</td>
+<td align="center" class="smallCopy">Strongly agree</td>
+</tr>
+<tr>
+<td bgcolor="#f0f0f2" class="smallCopy">All replies (52 replies)</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">7.5%</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">37.7%</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">15.1%</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">32.1%</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">7.5%</td>
+</tr>
+<tr>
+<td class="smallCopy">Using a visual or text based HTML tool (15  		 replies)</td>
+<td align="center" class="smallCopy" valign="top">6.7%</td>
+<td align="center" class="smallCopy" valign="top">20.0%</td>
+<td align="center" class="smallCopy" valign="top">6.7%</td>
+<td align="center" class="smallCopy" valign="top">60.0%</td>
+<td align="center" class="smallCopy" valign="top">6.7%</td>
+</tr>
+<tr>
+<td bgcolor="#f0f0f2" class="smallCopy">Using a diagramming tool  		 (13 replies)</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">7.7%</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">76.9%</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">7.7%</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">0.0%</td>
+<td align="center" bgcolor="#f0f0f2" class="smallCopy" valign="top">7.7%</td>
+</tr>
+<tr>
+<td class="smallCopy">Using a graphic design tool (10 replies)</td>
+<td align="center" class="smallCopy" valign="top">10.0%</td>
+<td align="center" class="smallCopy" valign="top">20.0%</td>
+<td align="center" class="smallCopy" valign="top">20.0%</td>
+<td align="center" class="smallCopy" valign="top">50.0%</td>
+<td align="center" class="smallCopy" valign="top">0.0%</td>
+</tr>
+</tbody></table>
+<p>Source <a href="http://www.guuui.com/issues/01_03_02.php" title="GUUUI - Results from a survey of web prototyping tools usage">2002 GUUUI survey</a> on prototyping tools.</p>
+<h3>Enter ruby on Rails</h3>
+<p>One thing I miss in HTML prototyping is the lack of real data. For instance, a user enters a date on one page. On the next page, the date is hardcoded. Chances are that users at a user test enter values that are different from what I hardcoded on the screen. Here Rails is perfect. In stead of building screens, we build the application front-end.</p>
+<p>At my work in Capgemini Denmark, we have used Rails for some months at work projects and it has proven to deliver:</p>
+<ul>
+<li>Very high fidelity prototypes that can use real data. The high fidelity give much better findings in usability testing.</li>
+<li>Consistent productivity gains compared to any other prototyping tool.</li>
+<li>Very few lines of code makes it easy to change prototype.</li>
+<li>Doesn’t have to be thrown away after building prototype.</li>
+</ul>
+<p>Consider the fact that Rails can actually live on in the application development. I believe that Rails is a perfect match for making rapid prototype development. Also this approach is what Garret Dimon invented “<strong>just build it</strong>“, and it fits like a glove with the agile approach of the guys at 37signals.</p>
+<p>Whats your thoughts on this? What tools would you use for prototyping?</p>
+<ul>
+<li>Digital Web Magazine: <a href="http://www.digital-web.com/articles/just_build_it_html_prototyping_and_agile_development/">Just Build It: HTML Prototyping and Agile Development</a></li>
+<li>Garrett Dimon: <a href="http://www.garrettdimon.com/archives/ajax-dom-scripting-just-build-it">AJAX &amp; DOM Scripting: Just Build It</a></li>
+<li>37signals: <a href="http://www.37signals.com/svn/archives/001050.php">Getting Real, Step 1: No Functional Spec</a></li>
+<li>Particletree: <a href="http://particletree.com/features/a-designers-guide-to-prototyping-ajax/" title="A Designer's Guide to Prototyping Ajax">A Designer’s Guide to Prototyping Ajax</a></li>
+<li>GUUI: <a href="http://www.guuui.com/issues/01_03_02.php" title="GUUUI - Results from a survey of web prototyping tools usage">2002 survey on prototyping tools</a></li>
+</ul>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/prototyping" href="/justaddwater.dk/pr-preview/pr-1/topics/prototyping/" rel="tag">prototyping</a>, <a data-original-url="http://technorati.com/tag/html" href="/justaddwater.dk/pr-preview/pr-1/topics/html/" rel="tag"> html</a>, <a data-original-url="http://technorati.com/tag/ruby+on+rails" href="/justaddwater.dk/pr-preview/pr-1/topics/ruby-on-rails/" rel="tag"> ruby on rails</a>, <a data-original-url="http://technorati.com/tag/business+case" href="/justaddwater.dk/pr-preview/pr-1/topics/business-case/" rel="tag"> business case</a>, <a data-original-url="http://technorati.com/tag/capgemini" href="/justaddwater.dk/pr-preview/pr-1/topics/capgemini/" rel="tag"> capgemini</a>, <a data-original-url="http://technorati.com/tag/productivity" href="/justaddwater.dk/pr-preview/pr-1/topics/productivity/" rel="tag"> productivity</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Wednesday, April 12th, 2006 at 00:16 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/best-of-justaddwater/" rel="category tag">Best of Justaddwater</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/businesscase/" rel="category tag">Businesscase</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/prototyping/" rel="category tag">Prototyping</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2006/04/12/rails-prototyping/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">26 Responses to “Ruby on Rails as rapid prototyping tool”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-2162">
+			<cite>ramzi</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2162" title="">April 12th, 2006 at 08:09 (GMT-1)</a> </small>
+
+			<p>I work at Capgemini too, and use RoR for the same purpose.<br/>
+It tooks me 3 to 4 days to implement all the functionalities + some css.<br/>
+The production application – rewritten in java – is often a replicate of the prototype.<br/>
+Actually, I’m pretty sure that no one can make a difference between the prototype and the final product.<br/>
+Now I just hope that one day I will ship my RoR app as a final product.</p>
+<p>ps: are there any psychological side-effects in using both RoR and Java/.Net in parallel? Do you have to keep RoR out of the reach of the developers to keep them motivated in working with other frameworks?</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-2163">
+			<cite><a class="url" href="http://www.hashref.com" rel="external">Xavier Noria</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2163" title="">April 12th, 2006 at 09:00 (GMT-1)</a> </small>
+
+			<p>Just curious, why do you rewrite it in Java? Is it just some kind of company policy or inertia perhaps?</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-2164">
+			<cite>Priisholm</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2164" title="">April 12th, 2006 at 10:05 (GMT-1)</a> </small>
+
+			<p>Very interesting post; nice to see large consulting companies embrace RoR, even if “only” for prototyping.<br/>
+I think it will still be a while until enterprises dare to use RoR as a production platform, which also somehow answers Xavier’s question: The customers have invested large amounts of money in J2EE or .Net, so for obvious reasons they’re not likely suddenly to switch to a platform, they probably haven’t even heard of.<br/>
+As of the  psychological side-effects in using both RoR and Java/.Net in parallel , my guess is that developers will get smarter using RoR and try to adopt some of the agility principles of RoR on a more general basis, f.ex. write or implement meta-programming tools, think about “convention over configuration” when writing their own micro-framework apps and so on. Sticking rigidly to the conform rules of (most) Java frameworks or .Net technologies will become a pain faster than one can spell ActiveRecord, that’s true, but these rules come with the frameworks and since neither J2EE nor .Net is likely to go away for a long time, it’ll be a matter of bending them.<br/>
+Nice thing is to see larger RoR adoption in my home country, Denmark. Do you know of any RoR knowledge groups in DK, and if so, could you post it here? I’d be very interested.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-2165">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2165" title="">April 12th, 2006 at 10:35 (GMT-1)</a> </small>
+
+			<p>This question came from the <a href="http://thread.gmane.org/gmane.comp.lang.ruby.rails/62655/focus=62660" rel="external">Rails mailing list</a>. </p>
+<blockquote cite="http://thread.gmane.org/gmane.comp.lang.ruby.rails/62655/focus=62660"><p>
+Have any of your prototypes turned into live applications?  If not,<br/>
+what have you used to produce your applications and is there a reason<br/>
+you didn’t go with Rails?  Somewhere, perhaps in Beyond Java, I read<br/>
+a line like “I’ve prototyped the application in Rails and got it<br/>
+fully functional in 3 days.  If you like we can spend the next 3<br/>
+months developing it how we originally planned.”  That sums up my<br/>
+impression so far!</p>
+<p>I’m interested to hear your experience, because I’ve been presenting<br/>
+Rails to my boss and I can tell he is coming round to the idea that<br/>
+we can drop our plans for Java and use Rails for finished application<br/>
+development (finance sector).</p>
+<p>Ashley Moran</p></blockquote>
+<p>Two of the projects, were big offers in the public sector where we used Rails to define the user interface. In these cases, the clients had already chosen technology and platform. So Rails was only used for prototyping during the process where we wrote our offer.</p>
+<p>One of these, which we won, we decided to modify the Rails prototype so that it will reflect all requirements for the user interface. The rationale behind this: It’s faster to modify this in Rails and then port to the platform that the client required. Furthermore, we want to make sure that we share the understanding of the system with the client. This is where a prototype is way better than a written document.</p>
+<p>In this way, we use Rails to gain equal expectations of the system’s capabilities. (Oh by the way, the contract obliges us still to document our work in word documents but I guess it’s the way the enterprise world still works).</p>
+<p>The third project has just passed a milestone where the client wanted us to give an estimate on how it could fit into their existing environment (Microsoft technology). The client would choose between two options: 1. Rails solution running on IIS and with MSSQL server. 2. A port of the prototype to .NET (which is estimated to cost approximately 3 times as much). I have no more details to share right now, but I’ll definately post more (on justaddwater.dk ) when I can share more details on this project.</p>
+<p>I hope this responds to your questions.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-2172">
+			<cite><a class="url" href="http://mentalized.net" rel="external">Jakob S</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2172" title="">April 12th, 2006 at 21:11 (GMT-1)</a> </small>
+
+			<p>These are great tidings. As a matter of fact, during the process of persuading my own boss(es) to let us adopt Rails I was asked if any of the big consulting firms were using it. Since I knew of none, my boss got a worried look on his face. Very good news this.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-2175">
+			<cite>ramzi</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2175" title="">April 12th, 2006 at 23:24 (GMT-1)</a> </small>
+
+			<p>&gt; Xavier Noria Says:<br/>
+&gt;Just curious, why do you rewrite it in Java? Is it just some kind of company policy or inertia perhaps?</p>
+<p>Only Java (TM) EJB (TM) are allowed.<br/>
+RoR was my own initiative, my other alternative was to write a Word document.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-2252">
+			<cite><a class="url" href="http://www.grancomo.com/" rel="external">Luis Villa</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2252" title="">April 17th, 2006 at 10:09 (GMT-1)</a> </small>
+
+			<p>Hi Jesper! Interesting article… I agree with you. But if we want to make grow RoR as a platform there are some questions (I think that is better be an devil’s advocate :-)):</p>
+<p>1. In my experience, one of the problems I can find with this approach is the “What’s left? Can we make it run NOW?” effect. I mean, . Sometimes, they take the high fidelity for the final product. If you show your client an almost ended product, he can put pressure on the development phase. The advantage of the RoR approach is that you almost don’t have functional specs… so… all the product design and development team has the same perspective about functions, look and feel of the final product… Just build it.</p>
+<p>2. The HCI and Interface team need to be remodeled: I mean, you can’t only sketch the UI. You need more technical profiles. So maybe, from a pure UI Team perspective you are   lacking “agility”, because you raise the client’s expectations: he expects to hace a very high fidelity pre-definition of the final product.</p>
+<p>3. Last. Are we degrading Rails to just a “nice prototyping platform” with this approach?</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-2334">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/04/22/questions-rails-prototyping/">justaddwater.dk | Questions on Rails for prototyping</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2334" title="">April 22nd, 2006 at 01:37 (GMT-1)</a> </small>
+
+			<p>[…] justaddwater.dk Instant Usability &amp; Web Standards “I would love to change the world,                but they won’t give me the source code.”      « Ruby on Rails as rapid prototyping tool […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-2689">
+			<cite>Lisa P</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2689" title="">May 2nd, 2006 at 00:27 (GMT-1)</a> </small>
+
+			<p>Not sure RoR makes sense for non-programmers, but I can see it working for those willing to learn.</p>
+<p>We’ve started using a new prototyping tool (www.easyprototype.com) that can take scanned paper sketches and link them into interactive HTML without us having to code (it’s not our strong suit).  It works pretty well, and the prototypes could never be confused with the real thing :-)</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-2862">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/05/11/speaking-at-reboot8-about-rails-and-rapid-prototyping/">justaddwater.dk | Speaking at reboot8 about Rails and rapid prototyping</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2862" title="">May 11th, 2006 at 13:10 (GMT-1)</a> </small>
+
+			<p>[…] My talk is based on some of the ideas I posted about in the article Ruby on Rails as rapid prototyping tool. In case you missed it, yesterday I announced that I’ll also be speaking on usability and rapid prototyping May 19. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-2950">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/05/16/rails-enterprise-business-perspective/">justaddwater.dk | Ruby on Rails for the enterprise: Business perspective</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-2950" title="">May 16th, 2006 at 00:11 (GMT-1)</a> </small>
+
+			<p>[…] Justaddwater.dk Ruby on Rails as rapid prototyping tool by me: At my work in Capgemini Denmark, we have used Rails for some months at work projects and it has proven to deliver: […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-3487">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/05/22/attending-railsconf-europe/">justaddwater.dk | Attending RailsConf Europe, London, September</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-3487" title="">May 22nd, 2006 at 09:18 (GMT-1)</a> </small>
+
+			<p>[…] We’re looking forward to this conference. As frequent readers here may know, we’re using Ruby on Rails in Capgemini for things like rapid prototyping of web applications. Also I’m particularly interested in the business value of using it. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-6982">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/06/26/rails-meetup-thoughts/">justaddwater.dk | Thoughts regarding Ruby on Rails Meetup this week</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-6982" title="">June 26th, 2006 at 23:00 (GMT-1)</a> </small>
+
+			<p>[…] Danish translation: Volunteers for paticipation in translating all error messages, active record messages, scaffolding, etc to Danish. That would be extremely valuable for working with close relation do Danish customers or public authorities that need their websites in Danish anyway. I no repetition, and a translation plugin (or more likely GLoc/Globalize) to be used especially when working professionally with rapid prototyping. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-9265">
+			<cite><a class="url" href="http://www.speedhost.com.br" rel="external">Jefferson</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-9265" title="">August 3rd, 2006 at 15:42 (GMT-1)</a> </small>
+
+			<p>Hello,</p>
+<p>Very nice post!</p>
+<p>Thanks!</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-10157">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/08/14/blog-purpose/">justaddwater.dk | Time to revise our blog purpose</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-10157" title="">August 14th, 2006 at 23:10 (GMT-1)</a> </small>
+
+			<p>[…] Ruby on Rails as rapid prototyping tool […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-13097">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/09/12/nielsen-joel-on-software-and-david-heinemeier-hansson/">justaddwater.dk | Nielsen, Joel on Software and David Heinemeier Hansson</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-13097" title="">September 12th, 2006 at 13:39 (GMT-1)</a> </small>
+
+			<p>[…] The point David touches here is whether you could consider an “Immature” technology in the enterprise. Joel and David seem to disagree on this point. And Joel seems to disagree with himself. For the case of Ruby on Rails considered immature for the enterprise, i strongly disagree. As I wrote previously, Ruby on Rails has proven to deliver: […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-17874">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/10/09/ui-conf-david-malouf-and-bill-scott-on-ajax/">justaddwater.dk | UI Conf: David Malouf and Bill Scott on AJAX</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-17874" title="">October 9th, 2006 at 23:12 (GMT-1)</a> </small>
+
+			<p>[…] [Jesper’s note: Nobody mentions using Ruby on Rails as Prototyping tool.] […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-28020">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/11/16/usability-toolkit-now-available/">justaddwater.dk | Usability Toolkit Now Available</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-28020" title="">November 16th, 2006 at 11:48 (GMT-1)</a> </small>
+
+			<p>[…] The best part of it — my personal opinion — is probably the early bird free web design fridge magnets. They will fit perfectly in the way we do rapid prototyping with Ruby on Rails at work. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-31423">
+			<cite><a class="url" href="http://www.dorsch.com/2006/11/23/links-for-2006-11-23/" rel="external">Gebrüder Dorsch » Blog Archive » links for 2006-11-23</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-31423" title="">November 23rd, 2006 at 20:08 (GMT-1)</a> </small>
+
+			<p>[…] Ruby on Rails as rapid prototyping tool (tags: rails ia @lesen) […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-47781">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/12/26/ruby-on-rails-rapid-prototyping-just-got-faster/">justaddwater.dk | Ruby on Rails Rapid Prototyping Just Got Faster</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-47781" title="">December 26th, 2006 at 22:17 (GMT-1)</a> </small>
+
+			<p>[…] Earlier I wrote how we use Ruby on Rails as rapid prototyping tool at work. Hobo is a promising plugin for Ruby on Rails to speed up development even more. At work, we’ve been looking into rapid prototyping of web applications for quite some time. Hobo might even help us to speed up development even more. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-82795">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2007/02/13/danish-newspaper-interview-capgemini-on-rails/">justaddwater.dk | Danish Newspaper Interview: Capgemini on Rails</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-82795" title="">February 13th, 2007 at 09:54 (GMT-1)</a> </small>
+
+			<p>[…] Justaddwater.dk: Ruby on Rails as rapid prototyping tool […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-93628">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2007/02/28/prototyping-talk-in-danish-it-usability-network/">justaddwater.dk | Prototyping Talk in Danish IT Usability Network</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-93628" title="">February 28th, 2007 at 21:23 (GMT-1)</a> </small>
+
+			<p>[…] Ruby on Rails as rapid prototyping tool (Apr […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-206399">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-206399" title="">July 9th, 2007 at 14:07 (GMT-1)</a> </small>
+
+			<p>SAP Design Guild has an outdated paper on prototyping that focused on paper prototyping: <a href="http://www.sapdesignguild.org/resources/archive/prototypes-old.asp" rel="external">http://www.sapdesignguild.org/resources/archive/prototypes-old.asp</a></p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-358572">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2007/09/22/railsconf-europe-2007-recap/">justaddwater.dk | RailsConf Europe 2007 Recap</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-358572" title="">November 18th, 2007 at 17:32 (GMT-1)</a> </small>
+
+			<p>[…] Ruby on Rails as rapid prototyping tool (Apr […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-380508">
+			<cite><a class="url" href="http://www.inter-sections.net/2007/12/01/comparing-pieces-of-string-part-1/" rel="external">Inter-Sections » Blog Archive » Comparing pieces of string - part 1</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-380508" title="">December 1st, 2007 at 16:15 (GMT-1)</a> </small>
+
+			<p>[…] happy. When faced with a Rubygmatic programmer, words like “productivity” and “rapid development” will be […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-387259">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2008/01/02/speed-house-building-video-teamwork-and-collaboration/">justaddwater.dk | Speed House Building Video, Teamwork and Collaboration</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-387259" title="">January 2nd, 2008 at 21:55 (GMT-1)</a> </small>
+
+			<p>[…] Ruby on Rails as rapid prototyping tool […]</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

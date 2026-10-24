@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | JQuery Rounded Corners (Technorati Style)</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2008/05/26/jquery-rounded-corners-technorati-style/feed/" rel="alternate" title="justaddwater.dk » JQuery Rounded Corners (Technorati Style) Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2008/05/20/invited-to-expert-workshop-future-of-internet/" rel="prev" title="Invited to Expert Workshop: Future of Internet"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2008/05/28/public-danish-data-rest-interface/" rel="next" title="Public Danish Data REST Interface"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2008/05/26/jquery-rounded-corners-technorati-style/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2008/05/26/jquery-rounded-corners-technorati-style/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2008/05/20/invited-to-expert-workshop-future-of-internet/" rel="prev">Invited to Expert Workshop: Future of Internet</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2008/05/28/public-danish-data-rest-interface/" rel="next">Public Danish Data REST Interface</a> »</div>
+		</div>
+	
+		<div class="post" id="post-929">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2008/05/26/jquery-rounded-corners-technorati-style/" rel="bookmark" title="Permanent Link: JQuery Rounded Corners (Technorati Style)">JQuery Rounded Corners (Technorati Style)</a></h2>
+	
+			<div class="entry">
+				<p>If you ever use <a href="/justaddwater.dk/pr-preview/pr-1/2007/02/15/rounded-corners-the-technorati-way/">rounded corners the Technorati way</a>, here is some additional code I created recently.</p>
+<p>Usually I add four non-semantic elements to each corner of a div box to round:<br/>
+HTML for the box:</p>
+<pre class="archive-code" data-recovery-code="post-929-1"><code class="language-html">&lt;div class="round"&gt;
+  &lt;h2&gt;..&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    ..
+  &lt;/ul&gt;
+  &lt;b class="cn tr"&gt;&lt;/b&gt;
+  &lt;b class="cn br"&gt;&lt;/b&gt;
+  &lt;b class="cn tl"&gt;&lt;/b&gt;
+  &lt;b class="cn bl"&gt;&lt;/b&gt;
+&lt;/div&gt;</code></pre>
+<p>Well, what if you could just write:</p>
+<pre class="archive-code" data-recovery-code="post-929-2"><code class="language-html">&lt;div class="round"&gt;
+...
+&lt;/div&gt;</code></pre>
+<p>So that the round corners magic was separated semantically away from the HTML code?. This is how you can do it.</p>
+<p>The trick is to add the b-elements with jquery. This way i’ll append the rounded corners as an extra bonus for enhanced clients understanding javascript. </p>
+<p>Create a file named roundcorners.js</p>
+<pre class="archive-code" data-recovery-code="post-929-3"><code class="language-javascript">// Add rounded corners to all div elements with class="round"
+// Adds corners the "technorati way", described on
+// http://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/
+// requires you to set class="round" on div or similar elements
+// also works on images, which it wraps in a div element to add the
+// necessary content
+var round_corners = function(){
+ var str = '&lt;b class="cn tl"&gt;&lt;/b&gt;&lt;b class="cn tr"&gt;&lt;/b&gt;&lt;b class="cn bl"&gt;&lt;/b&gt;&lt;b class="cn br"&gt;&lt;/b&gt;';
+  $('.round').addClass("boxc").append(str);
+};
+
+$(document).ready( function(){round_corners();});</code></pre>
+<p>Create a file named roundcorners.css:</p>
+<pre class="archive-code" data-recovery-code="post-929-4"><code class="language-css">.boxc {
+padding:0px;
+position:relative;
+}
+.boxc b.cn {
+background:transparent url(roundwhite.png) no-repeat scroll 0%;
+height:10px;
+position:absolute;
+width:10px;
+}
+.boxc b.tl {
+background-position:left top;
+left:-1px;
+top:-1px;
+}
+.boxc b.tr {
+background-position:right top;
+right:-1px;
+top:-1px;
+}
+.boxc b.bl {
+background-position:left bottom;
+bottom:-1px;
+left:-1px;
+}
+.boxc b.br {
+background-position:right bottom;
+bottom:-1px;
+right:-1px;
+}
+* html .boxc b.bl {
+bottom:-2px;
+}
+* html .boxc b.br {
+bottom:-2px;
+}
+* html .boxc b.cn {
+background-image:url(roundwhite.gif);
+font-size:1px;
+line-height:1px;
+}</code></pre>
+<p>Put the two image files in the same directory as roundcorners.css:<br/>
+<a data-original-url="http://static.technorati.com/static/css/img/corners/white.png" href="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/dcf96f03b1801264a8e9abcd.png">roundwhite.png</a>, <a data-original-url="http://static.technorati.com/static/css/img/corners/white.gif" href="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/525cb62f01983584667990cf.gif">roundwhite.gif</a></p>
+<p>Now in your HTML file header, add references to load JQuery, the css and js file:</p>
+<pre class="archive-code" data-recovery-code="post-929-5"><code class="language-html">&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="roundcorners.js"&gt;&lt;/script&gt;
+&lt;link type="text/css" rel="stylesheet" href="roundcorners.css"&gt;&lt;/link&gt;</code></pre>
+<p>Finally, add css class “round” to any div on your page.</p>
+<p>I put the code up on Github =&gt; <a href="http://github.com/jesperronn/jquery-round-corners/tree">jesperronn/jquery-round-corners</a> . Looking forward to patches and improvements :)<br/>
+I would also like a modification that can do the same but works with prototype. Has anybody seen something that does that?</p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/technorati" href="/justaddwater.dk/pr-preview/pr-1/topics/technorati/" rel="tag">technorati</a>, <a data-original-url="http://technorati.com/tag/round" href="/justaddwater.dk/pr-preview/pr-1/topics/round/" rel="tag"> round</a>, <a data-original-url="http://technorati.com/tag/corners" href="/justaddwater.dk/pr-preview/pr-1/topics/corners/" rel="tag"> corners</a>, <a data-original-url="http://technorati.com/tag/jquery" href="/justaddwater.dk/pr-preview/pr-1/topics/jquery/" rel="tag"> jquery</a>, <a data-original-url="http://technorati.com/tag/unobtrusive" href="/justaddwater.dk/pr-preview/pr-1/topics/unobtrusive/" rel="tag"> unobtrusive</a>, <a data-original-url="http://technorati.com/tag/javascript" href="/justaddwater.dk/pr-preview/pr-1/topics/javascript/" rel="tag"> javascript</a>, <a data-original-url="http://technorati.com/tag/library" href="/justaddwater.dk/pr-preview/pr-1/topics/library/" rel="tag"> library</a>, <a data-original-url="http://technorati.com/tag/github" href="/justaddwater.dk/pr-preview/pr-1/topics/github/" rel="tag"> github</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, May 26th, 2008 at 17:11 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/justaddwaterdk/" rel="category tag">justaddwater.dk</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2008/05/26/jquery-rounded-corners-technorati-style/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">4 Responses to “JQuery Rounded Corners (Technorati Style)”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-420650">
+			<cite><a class="url" href="http://mentalized.net" rel="external">Jakob S</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-420650" title="">May 27th, 2008 at 10:35 (GMT-1)</a> </small>
+
+			<p>Or if your rounded corners aren’t mission critical they can be made using CSS: </p>
+<p>.round {<br/>
+  -webkit-border-radius: 10px;<br/>
+  -moz-border-radius: 10px /* as of Firefox 3, they even look good there */<br/>
+}</p>
+<p>Progressive enhancement rocks – but sucks for those on lesser browsers, so if your boss/client is in that camp, you’ll probably have to settle for the Javascript method – or the more verbose HTML + CSS method Jesper outlines at the beginning.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-463347">
+			<cite><a class="url" href="http://sploy.de" rel="external">Chris</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-463347" title="">January 3rd, 2009 at 11:31 (GMT-1)</a> </small>
+
+			<p>I hope that there will be a solution with CSS which works in every browser in the near future, than we can all skip the alternatives, but the jquery solution looks pretty good (like everything which is done with jquery *love it*). Thanks!</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-475508">
+			<cite><a class="url" href="http://mo.notono.us" rel="external">Oskar Austegard</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-475508" title="">March 2nd, 2009 at 22:24 (GMT-1)</a> </small>
+
+			<p>Just curious: why do you use the b tag (which you point out as deprecated in a later post)?</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-476823">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-476823" title="">March 9th, 2009 at 12:16 (GMT-1)</a> </small>
+
+			<p>@Oskar Austegard: using the deprecated b tag was a solution that Tantek Celik and Eric Meyer used on Technorati… They used a deprecated tag to say that this tag carried no semantic meaning. Read more about Tantek’s explanation in the related post <a href="/justaddwater.dk/pr-preview/pr-1/2007/02/15/rounded-corners-the-technorati-way/" rel="bookmark" title="Permanent Link: Rounded Corners the Technorati Way">Rounded Corners the Technorati Way</a></p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

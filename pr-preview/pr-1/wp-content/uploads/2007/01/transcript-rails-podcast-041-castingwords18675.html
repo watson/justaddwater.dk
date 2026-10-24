@@ -1,0 +1,1242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"/>
+
+<title>Transcript: rails 041 copenhagen </title>
+
+
+<link data-original-url="http://castingwords.com/css/search.css" href="/justaddwater.dk/pr-preview/pr-1/archive-assets/styles/castingwords/search.css" rel="stylesheet" type="text/css"/>
+
+
+
+<style type="text/css">
+
+blockquote,  cite{
+        margin: 1em 0;
+        padding: 0;
+        font-style: normal;
+        clear: none;
+        border: none;
+}
+cite { display:inline;  font-weight: bold;   }
+
+</style>
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body style="font-size: small;  font-family: monotype; padding: 4px">
+<div id="container">
+<div id="logo">
+<a href="http://castingwords.com/"><img alt="castingWords.com" data-original-url="http://castingwords.com/images/castingwordslogo.gif" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/7d620021779e01523425cbee.gif"/></a>
+</div>
+<br/><br/>
+
+<h3 style="text-align: center">rails 041 copenhagen</h3><audio aria-label="Copenhagen Ruby Brigade podcast" controls="" preload="none" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/audio/copenhagen-ruby-brigade.mp3"></audio>
+<div id="content">
+
+
+ 
+
+
+  <blockquote class="_text">
+
+      <br/><br/>[music]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_1_text">
+ 
+  <cite class="speaker_1">Geoffrey Grossenbach:</cite>
+
+      It's the Ruby, on Rails podcast.  I'm Jeffery Grossenbach.  I have a great interview today from Obie Fernandez talking to some of the members of the Copenhagen Denmark Ruby Users Group.  Also, I want to remind you of e Ruby con happening February 9-11 in Columbus, Ohio.  A lot of great speakers:  Jim Weirich, Bruce Tate, Dave Hoover, and others talk about using Ruby in the enterprise.  Go to <a href="http://erubycon.com/">erubycon.com</a> for the details.<br/><br/><br/>I also just finished downloading a new podcast from Dan Benjamin who was on this show over a year ago.  He's a Rails developer behind a list of Part Corked and a bunch of other great sites.  You can check that out at <a href="http://highlogic.com/">highlogic.com</a>.<br/><br/><br/>[music]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_2_text">
+ 
+  <cite class="speaker_2">Obie Fernandez:</cite>
+
+      I am having a really cool night with the guys from the Copenhagen Ruby Brigade.  You guys actually have - that's your naming lingo, right?  Is Ruby Brigade, right?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_3_text">
+ 
+  <cite class="speaker_3">Group:</cite>
+
+      Yeah.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      So why don't you guys introduce yourselves.  Just let us know who you are what you're about a little bit.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_5_text">
+ 
+  <cite class="speaker_5">Jesper Rønn-Jensen:</cite>
+
+      Okay, I'm Jesper.  I'm in Capgemini (<a href="http://dk.capgemini.com/">http://dk.capgemini.com</a>).  Done a bit of Rails since January.  And recently I've been working with a plugin for making easier internationalization.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_6_text">
+ 
+  <cite class="speaker_6">Tobias Michaelsen:</cite>
+
+      My name is Tobias.  I work in a company that's called EasyFlow (<a href="http://easyflow.dk/">http://easyflow.dk</a>).  We use C#.NET for all the work so I can't really use Ruby that much.  Not at all Rails at my work.  But I do some of the spin-offs and try to use some of the different tools for like Watir, stuff for testing.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      OK.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_7_text">
+ 
+  <cite class="speaker_7">Olle Johnsson:</cite>
+
+      My name is Olle.  I work with a company called Olle, Olle, Olle. (<a href="http://olleolleolle.dk/">http://olleolleolle.dk</a>).<br/><br/><br/>[laughter]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      It's a web development company that does web apps and mostly with PHP.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Are there three of you?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      Sorry?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Are there three of you?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      Me. Model, view, controller!
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Oh.<br/><br/><br/>[laughter]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      Olle Olle Olle.  I use Ruby for importing stuff and everything that people used Pearl for back in the day.  Doing that with Ruby is pretty much more convenient.  And I've been hosting roles, so I've been staying off Rails for a while.  But now there's a fine VPS company in Copenhagen that can really, really take care of you.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Well, bravo.  Do you want to give them a plug?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      I would.  They're called Giga Host.  Their pro packaging you can find, by really, really looking hard at the website:  <a href="http://gigahost.dk/">gigahost.dk</a>.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      There you go.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_9_text">
+ 
+  <cite class="speaker_9">Thomas Watson:</cite>
+
+      I'm the last one here.  My name is Thomas Watson, and I'm also working at Capgemini (<a href="http://dk.capgemini.com/">http://dk.capgemini.com</a>) with Jesper.  Originally I'm a Java programmer, but at the moment, I would call Scott into this whole Rails thing, and working half in Java and half in Rails.  I've been looking at Rails for the last year, but only coding the last half year or something like that.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      So you've got a great group here. So tell me a little bit more about how it got started?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Well, it started by me contacting Yokoiv, who has the blog <a href="http://mentalized.net/">mentalized.net</a> (<a href="http://mentalized.net/">http://mentalized.net</a>).  He has actually been working very hard to introduce, to convert his company work into Rails.  They had an old legacy system that he has written quite a lot about in his blog.  He has done a lot of work in convincing his company into going with Rails instead of... and dumping the old ASP and VB script. Dumping all that.  At a moment I contacted him and we immediately knew we had to do an initiative like what we've seen in Chicago and elsewhere.  I guess that's what started it three or four months ago. Just before the summer holidays.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      So how many people came to the first meeting?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_11_text">
+ 
+  <cite class="speaker_11">Tobias:</cite>
+
+      I think we were around....
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      22.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      So tell us a little bit about the work that you've done.  The localization stuff?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Actually, I had been looking into some of the localization plug-ins, just to make something really, really simple, and to make it much easier to localize your Rails application.<br/><br/><br/>[background noise]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      We're recording this at a club by the way, so [laughter].  For all you aspiring pod casters, it doesn't matter where you record it, just get something good.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      I had a look into much of the localization plug-in, and they really do a lot of stuff that I personally didn't need when working with prototypes at work.  I just wanted a simple localization feature to make a very fast one-language application.<br/><br/><br/>So what I wanted to do was just translating the basic stuff, and supporting multiple languages was not an option.  That was way too much in relation to what I wanted.  So I wanted something that was not in the database that had to be really, really simple.  And I ended up writing my own plug-in instead of modifying somebody else's.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      What's the plug-in called?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Localization Simplified.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Localization Simplified.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      It's kind of a complex name.  I put in on RubyForge, so it's called L10n-Simplified. (<a href="http://rubyforge.org/projects/l10n-simplified/">http://rubyforge.org/projects/l10n-simplified/</a>).<br/><br/><br/>[laughter]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Cheers, simplicity!
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_11_text">
+ 
+  <cite class="speaker_11">Tobias:</cite>
+
+      Cheers!
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      And just to comment on that, there's actually after we released it there's a lot of people writing back and saying, "Hey, I can add a language to this" and you also added some pretty cool languages like pirate talk and I think there was another one.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Swedish chef.<br/><br/><br/>[laughter]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Swedish chef.  So, you can actually edit a text to say "Ho, ho, ho.  You have an error."<br/><br/><br/>[laughter]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      I was at Rails conference in London in the past month and actually localization talk, the plug-in was mentioned. I am extremely honored about it. But also I tried to see if there was a chance to get the core team to comment on the issues of localization difficulties in Rails. I mean there have a variable to modify Active Record error messages. Yes it is but it does not really modify the header in Active Record. So it is very inconsistent, so thats...
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      So you have a message for core team, is that what you are trying to say?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_11_text">
+ 
+  <cite class="speaker_11">Tobias:</cite>
+
+      Yes. Actually, I put my first patch in today, on number_to_currency, because it really annoys me that it always has to unit before the currency. And not the opposite, the way we do in Denmark. I put a patch for the core, which of course, I hope they accept. Like they have accepted some modification to distance of words in time recently.<br/><br/><br/>I really hope I modify that we can get all this override of functions out of the localization plug-ins that does not belong. The localization plug should focus on translating messages in Rails and that should be it.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Tell the Rails Podcast Audience, what is going on in Denmark with Ruby on Rails? Ruby on Rails born here, right?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Yes, the Danish way is, unfortunately, to wait and see what other people are doing, in terms of like big companies and stuff. Even though David Heinemeier started out here. Rails is not that huge compared to the United States.<br/><br/><br/>The whole idea of the group is to come you need to we needed to know other Rails guys, because the community was not that active. People were sitting around in theirown little companies somewhere and doing their small localized stuff but nobody knew about it.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      The dangerous thing is just thinking about Ruby or anything else as your own secret weapon. It is so stupid to think that, "Not publishing is a smart thing." That is so completely out of the map.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      What do you mean by not publishing?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Not blogging about it. Basically, last half years that Jesper and I have been doing a lot of Rails at Capgemini. Suddenly our managers and sales people are like, "Oh  yeah, this is pretty cool. We did not know about this. This is new cool stuff. Maybe we could choose something out this."<br/><br/><br/>Slowly we can our managers and sales people accept the fact that there is a pretty cool new thing that we can sell to customers. And do stuff in half of the time. I think by doing that and other people are doing that that Rails are going to kick ass very soon in Copenhagen and in Denmark.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      What is the Capgemini story for Ruby on Rails in Denmark?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Actually, I blogged a little about it. I think the story is we wanted to introduce Rails in a non intrusive way were we really could show a sweet spot for Ruby on Rails.<br/><br/><br/>We could gain productivity and we are fit into our usual development style. What we did was actually prototyping a lot of stuff in Rails just making rapid prototypes within a weekend, within a week, within two weeks, to see how long we could go. To see how far it would take us.<br/><br/><br/>And sales people immediately bought into it. Every time we had a big offer, sales people actually want us to show off make something cool. They could show to the customers. I think for the first project, they decided to just take screen shots of our Rails application. And then document everything that was happened. It was like ten screen shots, or something like that. The documentation was 70 pages. What we went after next time was actually demo it to the customers, to the clients.<br/><br/><br/>When delivering an offer, We could actually demo the application.  How we thought it would work and that actually made us win a project where we want to make a Java application (running on JBoss), but we actually do prototyping in Rails because we could show off a lot of things. We could kick start a lot of thoughts that were very deep down in analysis. We could actually bring it top right away.<br/><br/><br/>I guess the point is that we could prototype a lot faster. We could benefit from a common understanding on a whole team, because we could actually visualize it. Furthermore, we could actually accellerate the analysis phase, because we could dig deep into problems. Some of our luxury problems were we want it more accurate data. We wanted more data. We had a completely different view point.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      I think we actually mentioned here is pretty cool thing. We had a customer contacting us saying: "We want to do this <a href="http://asp.net/">ASP.net</a> application." We went about doing the prototype and of course we did the prototype in Rails, what else, showed it to customer and said "Hey, is this what you want. Was what you were thinking about? We can do this in <a href="http://asp.net/">ASP.net</a>." I think it was like 400 man-hours. It was not a huge application a small one. I think a 400 man-hours application but you can choose to get in Rails and get into 100. And they were like: "Hmm. Yeah."<br/><br/><br/>[laughter]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Actually, I just want to add that particular company which is a big public agency here in Denmark. They were used to Microsoft technology and they want it implemented Microsoft technology. Actually considering the fact that they have to four double the price, they want it to continue with the Rails.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      If you can generalize your advice, there is a lot of people out there listening who are at their big companies, Capgemini is huge.<br/><br/><br/>Even in Denmark, it is really big right? How many guys?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      In Denmark we have around 400 and worldwide we have 60,000.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      So Denmark is not like that huge but even it is not huge but it is not like if you are comparing to Sweden where it is like 3000 or something like that.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Still same sort of challenges right now are faced by anyone who is that like at shops that are used to doing things the Java and.NET way. If you can generalize your advice right now.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      The shortest way how we can formulate this, start Rails instead of starting with work documents.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      When you want document or prototype something?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      I mean when you want to specify what you actually want to do or want to deliver: Do not do in Word. Do it in Rails.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      We actually code it instead of describing it in a Word document.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Yeah, exactly.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_11_text">
+ 
+  <cite class="speaker_11">Tobias:</cite>
+
+      so you can see how this stuff works.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Yeah, like a picture says more than thousand words. A web application says more than a thousand Word documents.<br/><br/><br/>[laughter]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Instead of trying to convince the salespeople from start, "Hey, we want to sell Rails applications". We say, "OK, we still want to sell Java or.NET or whatever. But as part of the process we want to prototype this as a usual thing. I mean it is pretty nice to prototype stuff. We want to prototype it in Rails because it is faster not because it is Rails."
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      And management does not have a problem with that?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Yeah because the management says, "Cool. This stuff is faster. You can prototype it way faster than whatever and HTML prototype or whatever." The customer can actually work with this application and discover things that they did not know they wanted. You get Rails from the back.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Sneak in it.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Yeah, sneak in it basically.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      You had that comment.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      I am quite interested in how long would it take to write those specs; these functional specs that you were describing the description of something. I am outside of this big corporate world. I would like to know how much time to spend by the word processor?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      The actual example I mentioned the guy that did the description of the Rails that we did. He actually worked a lot faster than us. We spent a whole weekend quoting like eight hours every night that weekend. This guy, he spent only one night from like Monday afternoon till Tuesday morning where they delivered a 74 page description of this.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      But was it based on your prototype?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Yeah, it was based on the prototype. We have that screenshots of the prototype.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      But to be frank actually, a big company like ours does delivers a lot of this to the big companies, they want to have custom built IT systems and usually what the way that happens is that we write a word document. I mean it is not like 100 pages. It is not 200 pages. It can be way more then that. I am talking like volumes of paper here.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      In you experience does those binders get used? Afterwards, once you develop the styles. I do not want to get into trouble.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Not really. I would not say that none of them get used but actually the real reason why both the customer and provider or IT people like us, we are doing this. It is basically to safeguard us.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Let's wrap this up. Denmark, Rails, Ruby, what is going to happen in the next year? Put on your little prophet hat. What do you think is going to happen?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      We are going to take over the world.<br/><br/><br/>[laughter]
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      Our club is going to adopt at least two libraries there are not well enough to kept these days.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      I think that we will definitely meet pursue making being committed to help making Rails even better. It has given us so much already. I think that we will pursue contributing more to Rails in the ways that we can do it.<br/><br/><br/>The best way right now is probably internationalization and localization. That is the obvious. That is the low hang fruit here. But that should be done within a year. There is plenty of time for deadline here, which is one year.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Olle just mentioned hosting, let's going to be some hosting companies.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      We can see hosting products. Shared hosting in Rails, hosting for dummies.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Is that important that to get that on local basis?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      Very, super important.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Very important.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Why it is important?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_10_text">
+ 
+  <cite class="speaker_10">Jesper:</cite>
+
+      Big times. It is between text and dream host. If you do not know a lot about hosting, you choose it in big players. If you do not, you are going to have to take a VPS yourself and learn a lot about the Debian or another distribution. If you do not manage that, you are not going to have Rail hosting.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Another thing, I think we are going to see a lot of broader acceptance of Rails and Ruby. We are going to see bigger companies taken it in and than having running Rail applications.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      You see it is starting to happen?
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_12_text">
+ 
+  <cite class="speaker_12">Thomas:</cite>
+
+      Yes. It is starting to happen now and I think so far it is going really fast. It is fast projects to do. You're quickly on to your next project. It is really fast at moment. I think it is going to continue to next year. It is kind of early. It is going to have a broad acceptance also in the media.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      Absolutely. Thank you guys for sharing time with me here. I think we will find another round of beers.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_8_text">
+ 
+  <cite class="speaker_8">Olle:</cite>
+
+      It is a pleasure to be here with you.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_4_text">
+ 
+  <cite class="speaker_4">Obie:</cite>
+
+      I look forward to coming back within a year, finding out some of this predictions come true. Thanks a lot you guys. Thanks again.
+  </blockquote>
+
+
+
+
+ 
+
+
+  <blockquote class="speaker_13_text">
+ 
+  <cite class="speaker_13">Announcer:</cite>
+
+      This weekend we have just finished rolling a new site for Peepcode screen cast; <a href="http://peepcode.com/">peepcode.com</a> has a lot of new features asking for you can subscribe five or ten pack for discount. If you sign in, it will keep a record of screen-cast you purchased from here on out, also have every episode available in I-Pod video format. So, you can download that watch it on your I-Pod or take it to go.<br/><br/><br/>This has been the Ruby on Rails on podcast, music by Why the Lucky Stiff, equipment donated by Sampson Audio.
+  </blockquote>
+
+
+
+
+<br/><br/>
+</div> 
+
+<small>Transcription by <a href="http://castingwords.com" style="color:gray">CastingWords</a></small>
+
+</div>
+
+
+
+
+</body></html>

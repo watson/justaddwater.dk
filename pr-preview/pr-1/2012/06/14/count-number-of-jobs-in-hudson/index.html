@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Count number of jobs in Hudson</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2012/02/24/get-started-using-advanced-webfonts-today/" rel="prev" title="Get started using advanced web fonts today"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/" rel="next" title="Mortgage-driven development vs Behaviour-driven development"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2012/06/14/count-number-of-jobs-in-hudson/" rel="canonical"/>
+<link href="https://justaddwater.dk/2012/06/14/count-number-of-jobs-in-hudson/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2012/02/24/get-started-using-advanced-webfonts-today/" rel="prev">Get started using advanced web fonts today</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2012/06/18/mortgage-driven-development-vs-behaviour-driven-development/" rel="next">Mortgage-driven development vs Behaviour-driven development</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1596">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2012/06/14/count-number-of-jobs-in-hudson/" rel="bookmark" title="Permanent Link: Count number of jobs in Hudson">Count number of jobs in Hudson</a></h2>
+	
+			<div class="entry">
+				<p>I wanted to count the number of jobs running on a Hudson server (continuous integration) at work.</p>
+<p> </p>
+<p>This javascript counts the number of lines in the table with all jobs:</p>
+<p> </p>
+<pre>document.getElementById("projectstatus").children[0].children.length</pre>
+<p> </p>
+<p>Or save this as a browser toolbar bookmarklet:</p>
+<pre>Name: #HudsonJobs
+ javascript:(function(e){alert(document.getElementById("projectstatus").children[0].children.length);e.preventDefault()})()</pre>
+<p>This line finds the table with id=”projectstatus”, and counts the TR elements inside of it’s TBODY.</p>
+<p>At work it said 445 lines, including the table header.</p>
+<p> </p>
+<p>Which means that this hudson server has configured 444 jobs.</p>
+<p> </p>
+<p>That’s insane!</p>
+<p> </p>
+<p>How many jobs are on your Hudson servers?</p>
+<p> </p>
+<p>(I am currently relying on the html structure for Hudson version 2.1.2. It may work for other versions as well)</p>
+<p> </p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Thursday, June 14th, 2012 at 11:42 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/web-development/" rel="category tag">Web Development</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2012/06/14/count-number-of-jobs-in-hudson/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+
+			
+		<p class="nocomments" id="comments">Comments are closed.</p>
+
+	
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+</body></html>

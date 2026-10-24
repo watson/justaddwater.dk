@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-archive-demo="undo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Undo demonstration — Aza Raskin, 2007</title>
+  <style>
+    body { background: #c30; color: white; font-size: 20pt; margin-top: 10px; }
+    li { list-style: none; }
+    li a { font-size: 10pt; color: #ccc; }
+    li input { position: relative; top: -5px; }
+    .grip { cursor: move; padding: 0 3px; font-size: 14pt; }
+    .box { width: 300px; height: 30px; margin-left: 15px; }
+    #undo { color: #ccc; font-size: 15pt; margin-left: 30px; background: #d41; padding: 5px; position: relative; top: 10px; }
+    #done { margin-left: 42px; }
+    .credit { font: 12px/1.5 sans-serif; margin: 12px 0 0 42px; }
+    .credit a { color: white; }
+  </style>
+  <script src="../demos.js" defer></script>
+</head>
+<body>
+  <div class="box"><a href="#" id="undo" hidden>Undo delete!<span id="levels"></span></a></div>
+  <ul id="todo-list">
+    <li id="todo-1" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Call Home completed">Call Home <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-2" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Change car oil completed">Change car oil <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-3" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Do laundry completed">Do laundry <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-4" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Craft Halloween costume completed">Craft Halloween costume <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-5" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Paint Warhammer figures completed">Paint Warhammer figures <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-6" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Make sure to never expect completed">Make sure to never expect <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-7" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="The spanish inquisition completed">The spanish inquisition <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-8" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Write blog post completed">Write blog post <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-9" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Destroy all humans completed">Destroy all humans <a href="#" data-delete>(delete)</a></li>
+    <li id="todo-10" draggable="true"><span class="grip" aria-hidden="true">⠿</span><input type="checkbox" aria-label="Allow for creation of to-dos completed">Allow for creation of to-dos <a href="#" data-delete>(delete)</a></li>
+  </ul>
+  <button id="done" type="button">Done</button>
+  <p class="credit">Local adaptation of <a href="https://web.archive.org/web/20071010224109/http://humanized.com/weblog/images/resources/undo/todo.html" target="_blank" rel="noopener">Aza Raskin’s 2007 example</a>. Changes last until you click Done or reload.</p>
+</body>
+</html>

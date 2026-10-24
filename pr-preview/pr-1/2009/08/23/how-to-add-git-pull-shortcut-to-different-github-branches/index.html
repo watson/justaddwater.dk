@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | How to add Git Pull Shortcut to Different Github Branches</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/feed/" rel="alternate" title="justaddwater.dk » How to add Git Pull Shortcut to Different Github Branches Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2009/08/19/rup-vs-scrum-vs-kanban/" rel="prev" title="Rup vs Scrum vs Kanban"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2009/08/28/the-quick-way-to-creating-disabled-state-icon-with-photoshop/" rel="next" title="The Quick Way to Creating Disabled State Icon With Photoshop"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/" rel="canonical"/>
+<link href="https://justaddwater.dk/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2009/08/19/rup-vs-scrum-vs-kanban/" rel="prev">Rup vs Scrum vs Kanban</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2009/08/28/the-quick-way-to-creating-disabled-state-icon-with-photoshop/" rel="next">The Quick Way to Creating Disabled State Icon With Photoshop</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1117">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/" rel="bookmark" title="Permanent Link: How to add Git Pull Shortcut to Different Github Branches">How to add Git Pull Shortcut to Different Github Branches</a></h2>
+	
+			<div class="entry">
+				<p><strong>UPDATE 9 hours later: Changed to “remote = origin” to the specific branch “remote = dean” which works!</strong></p>
+<p>Short explanation on how to pull changes from different Git repositories into your local Git repository.</p>
+<p>Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, the remote repository is automatically added so you can do a simple git pull (instead of the verbose version “git pull origin master”)</p>
+<p>Now, let’s say you’d like to pull changes from another branch/fork on Github:</p>
+<blockquote><pre class="archive-code" data-repair-code="paragraph-1117-4"><code>git remote add dean git://github.com/dstrelau/webrat.git
+git co -b dean
+git pull dean master</code></pre></blockquote>
+<p>Git pull dean master will work. but “git pull” gives the following message:</p>
+<blockquote><pre class="archive-code" data-repair-code="paragraph-1117-6"><code>[~/othercode/webrat (master)] ➔ git co dean
+Switched to branch 'dean'
+[~/othercode/webrat (dean)] ➔ git pull
+You asked me to pull without telling me which branch you
+want to merge with, and 'branch.dean.merge' in
+your configuration file does not tell me either.    Please
+specify which branch you want to merge on the command line and
+try again (e.g. 'git pull &lt;repository&gt; &lt;refspec&gt;').
+See git-pull(1) for details.</code></pre>
+<p>If you often merge with the same branch, you may want to<br/>
+configure the following variables in your configuration<br/>
+file:</p>
+<pre class="archive-code" data-repair-code="paragraph-1117-8"><code>branch.dean.remote = &lt;nickname&gt;
+branch.dean.merge = &lt;remote-ref&gt;
+remote.&lt;nickname&gt;.url = &lt;url&gt;
+remote.&lt;nickname&gt;.fetch = &lt;refspec&gt;</code></pre>
+<p>See git-config(1) for details.</p></blockquote>
+<h2>Solution to get the shorthand “git pull” to work:</h2>
+<p>Add the following section to [project_dir]/.git/config</p>
+<blockquote><pre class="archive-code" data-repair-code="paragraph-1117-11"><code>[branch "dean"]
+remote = dean
+merge = refs/heads/master</code></pre></blockquote>
+<p>So my ./git/config file now looks like this:</p>
+<blockquote><pre class="archive-code" data-repair-code="paragraph-1117-13"><code>[core]
+repositoryformatversion = 0
+filemode = true
+bare = false
+logallrefupdates = true
+ignorecase = true
+[remote "origin"]
+url = git://github.com/brynary/webrat.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+remote = origin
+merge = refs/heads/master
+[remote "jonas"]
+url = git://github.com/jnicklas/webrat.git
+fetch = +refs/heads/*:refs/remotes/jonas/*
+[branch "jonas"]
+remote = jonas
+merge = refs/heads/master
+[remote "dean"]
+url = git://github.com/dstrelau/webrat.git
+fetch = +refs/heads/*:refs/remotes/dean/*
+[branch "dean"]
+remote = dean
+merge = refs/heads/master
+[branch "orig"]
+remote = origin
+merge = refs/heads/master</code></pre></blockquote>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Sunday, August 23rd, 2009 at 23:42 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/git/" rel="category tag">git</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/web-development/" rel="category tag">Web Development</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+
+			
+		<p class="nocomments" id="comments">Comments are closed.</p>
+
+	
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

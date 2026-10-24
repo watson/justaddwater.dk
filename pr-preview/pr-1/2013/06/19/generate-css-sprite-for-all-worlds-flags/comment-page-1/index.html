@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Generate CSS sprite for all world’s flags</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2013/06/19/generate-css-sprite-for-all-worlds-flags/feed/" rel="alternate" title="justaddwater.dk » Generate CSS sprite for all world’s flags Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2012/11/09/git-checkout-old-revisions-by-date/" rel="prev" title="Git checkout old revisions by date"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2014/03/09/iphoto-11-performance-tuning-tips-revised/" rel="next" title="iPhoto 11 performance tuning tips, revised"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2013/06/19/generate-css-sprite-for-all-worlds-flags/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2013/06/19/generate-css-sprite-for-all-worlds-flags/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2012/11/09/git-checkout-old-revisions-by-date/" rel="prev">Git checkout old revisions by date</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2014/03/09/iphoto-11-performance-tuning-tips-revised/" rel="next">iPhoto 11 performance tuning tips, revised</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1594">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2013/06/19/generate-css-sprite-for-all-worlds-flags/" rel="bookmark" title="Permanent Link: Generate CSS sprite for all world’s flags">Generate CSS sprite for all world’s flags</a></h2>
+	
+			<div class="entry">
+				<p>Recently i worked on a project, which had to use flag icons for all flags in the world. The implementation looked like this:</p>
+<p>css file:</p>
+<p>.</p>
+<p> </p>
+<p> </p>
+<p>In order to reduce the number of HTTP requests, I wanted to change it to using CSS sprites instead.</p>
+<p> </p>
+<p>CSS file now has changed to lines like this:</p>
+<p>.er_16{ background-position: -20px 0; }<br/>
+.es_16{ background-position: -20px -20px; }<br/>
+.et_16{ background-position: -20px -40px; }<br/>
+.fi_16{ background-position: -20px -60px; }</p>
+<p> </p>
+<p>&gt; Generation of sprite: http://spritegen.website-performance.org/</p>
+<p>&gt; * Upload zip file with flags (in my case all the 16×16 px flags)<br/>
+&gt; * ignore duplicate images<br/>
+&gt; * build direction vertical<br/>
+&gt; * offset 4px (since the images are 16×14, this will make a 20-20 grid)<br/>
+&gt; * background/transparency colour: #ffffff<br/>
+&gt; * output format: PNG<br/>
+<span style="font-size: 13px; line-height: 19px;">&gt; * Compress Image with OptiPNG: YES<br/>
+</span><span style="font-size: 13px; line-height: 19px;">&gt; * Number of colours: True colour<br/>
+</span><span style="font-size: 13px; line-height: 19px;">&gt; * css suffix: _16 (to indicate 16px icons)</span></p>
+<p> </p>
+<p>Oh, before creatign the zip file, I removed all countries not matching a two-letter code.</p>
+<p>cd 16/</p>
+<p>find . -type f -name ‘???????*’ |xargs -I{} rm {}</p>
+<p>This would remove countries named “_African Union.png”, “_United Nations.png”, “Olimpic Movement.png”  and similar.</p>
+<p> </p>
+<p> </p>
+<p>For the following sizes of flags, I used these offset values:</p>
+<p>16px, offset 4px will make a 20px grid</p>
+<p>24px, offset 6px will make a 30px grid</p>
+<p>32px, offset 8px will make a 40pxgrid</p>
+<p>48px, offset 2px will make a 50px grid</p>
+<p>64px, offset 6px will make a 70px grid</p>
+<p>128px, offset 2px will make a 130px grid</p>
+<p> </p>
+<p> </p>
+<p> </p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Wednesday, June 19th, 2013 at 13:46 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/justaddwaterdk/" rel="category tag">justaddwater.dk</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2013/06/19/generate-css-sprite-for-all-worlds-flags/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">3 Responses to “Generate CSS sprite for all world’s flags”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-653388">
+			<cite><a class="url" href="http://www.powergenbatt.com/" rel="external">HKGE</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-653388" title="">July 11th, 2013 at 22:38 (GMT-1)</a> </small>
+
+			<p>Two questions.  First, how many flags were used?  In e-commerce sites, where they use flags of the world, it seems like a couple of dozen flag, of the most populous countries, since they don’t try to add a flag for every single nation.  How many flags were you targeting?  Second, reducing the number of HTTP requests is certainly good, but wouldn’t the browser most likely cache the images anyway?</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-653425">
+			<cite>Mitch</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-653425" title="">July 16th, 2013 at 06:37 (GMT-1)</a> </small>
+
+			<p>This is great, and exactly what i am looking for,<br/>
+could you please share the source files, the pngs of the flags and a html sample or something, that would be great.<br/>
+Many thanks.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-653431">
+			<cite><a class="url" href="http://www.jobslash.com" rel="external">James</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-653431" title="">July 16th, 2013 at 15:13 (GMT-1)</a> </small>
+
+			<p>Good article … The CSS sprite Generator is good, I should give it try for my project too, I’m using a flags for a Game website… Thanks man</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

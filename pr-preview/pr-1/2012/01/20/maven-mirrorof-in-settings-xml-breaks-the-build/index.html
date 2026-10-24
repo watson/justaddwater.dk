@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Maven mirrorOf * in settings.xml breaks the build</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2012/01/18/intellij-structural-search-to-convert-from-junit3-to-junit4/" rel="prev" title="IntelliJ Structural Search to Convert from JUnit3 to Junit4"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2012/01/23/batch-screenshots-with-webkit2png/" rel="next" title="Batch Screenshots with webkit2png"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/" rel="canonical"/>
+<link href="https://justaddwater.dk/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2012/01/18/intellij-structural-search-to-convert-from-junit3-to-junit4/" rel="prev">IntelliJ Structural Search to Convert from JUnit3 to Junit4</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2012/01/23/batch-screenshots-with-webkit2png/" rel="next">Batch Screenshots with webkit2png</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1550">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/" rel="bookmark" title="Permanent Link: Maven mirrorOf * in settings.xml breaks the build">Maven mirrorOf * in settings.xml breaks the build</a></h2>
+	
+			<div class="entry">
+				<p>In our maven3 pom.xml files for a particular project, we have defined a reference to an internal Nexus repository. Since we are behind a firewall, the Nexus repository also has to be mirror of the outside world. I discovered that this <strong>generic &lt;mirrorOf&gt; from my settings.xml is actually evil</strong>:</p>
+<blockquote>
+<pre>&lt;!-- settings.xml --&gt;
+&lt;mirrors&gt;
+  &lt;mirror&gt;
+    &lt;id&gt;insideFirewallRepo&lt;/id&gt;
+    &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+    &lt;name&gt;Mirror of the world outside.&lt;/name&gt;
+    &lt;url&gt;http://nexus_url/nexus/content/groups/public/&lt;/url&gt;
+  &lt;/mirror&gt;
+&lt;/mirrors&gt;</pre>
+</blockquote>
+<p>The reason for this being evil was our project pom files which had the following references</p>
+<blockquote>
+<pre>&lt;properties&gt;
+  &lt;nexus.url&gt;http://nexus_url/nexus&lt;/nexus.url&gt;
+  &lt;subversion.url&gt;http://svn_url/svn&lt;/subversion.url&gt;
+&lt;/properties&gt;
+
+  &lt;scm&gt;
+    &lt;connection&gt;scm:svn:${subversion.url}/common-gwt-gui/trunk&lt;/connection&gt;
+&lt;/scm&gt;
+
+&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;nexus-repo-releases&lt;/id&gt;
+        &lt;name&gt;Nexus Repo&lt;/name&gt;
+        &lt;url&gt;${nexus.url}/content/groups/public/&lt;/url&gt;
+        &lt;releases&gt; &lt;enabled&gt;true&lt;/enabled&gt; &lt;/releases&gt;
+        &lt;snapshots&gt; &lt;enabled&gt;false&lt;/enabled&gt; &lt;/snapshots&gt;
+    &lt;/repository&gt;
+    &lt;repository&gt;
+        &lt;id&gt;nexus-repo-snapshots&lt;/id&gt;
+        &lt;name&gt;Nexus Repo&lt;/name&gt;
+        &lt;url&gt;${nexus.url}/content/groups/public-snapshots/&lt;/url&gt;
+        &lt;releases&gt; &lt;enabled&gt;false&lt;/enabled&gt; &lt;/releases&gt;
+        &lt;snapshots&gt; &lt;enabled&gt;true&lt;/enabled&gt; &lt;/snapshots&gt;
+    &lt;/repository&gt;
+ &lt;/repositories&gt;</pre>
+<pre>[repeat the &lt;repositories&gt; section for &lt;pluginRepositories&gt;]</pre>
+</blockquote>
+<div>And the same pom file contains the following &lt;distributionManagement&gt; section:</div>
+<blockquote>
+<pre>&lt;distributionManagement&gt;
+    &lt;repository&gt;
+        &lt;id&gt;company.releases&lt;/id&gt;
+        &lt;url&gt;${nexus.url}/content/repositories/company/&lt;/url&gt;
+    &lt;/repository&gt;
+    &lt;snapshotRepository&gt;
+        &lt;id&gt;company.snapshots&lt;/id&gt;
+        &lt;url&gt;${nexus.url}/content/repositories/company-snapshots/&lt;/url&gt;
+    &lt;/snapshotRepository&gt;
+&lt;/distributionManagement&gt;</pre>
+</blockquote>
+<p>Finally we have the maven release-plugin, but this irrelevant for now:</p>
+<blockquote>
+<pre>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-release-plugin&lt;/artifactId&gt;
+            &lt;configuration&gt;
+                &lt;tagBase&gt;${subversion.url}/project_name/releases&lt;/tagBase&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+ &lt;/build&gt;</pre>
+</blockquote>
+<h2>Error message: Using the wrong repository for snapshots</h2>
+<p>Now, the generic mirrorOf * in settings.xml actually overrides the specific repository information we set in the pom.xml. Because of that setting, the pom.xml &lt;repository&gt; is not used. And the result is an error message like this. (error message enhanced in bold)</p>
+<blockquote>
+<pre>Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/maven-metadata
+.xml
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/maven-metadata
+.xml
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/dependency_project
+-1.18-SNAPSHOT.pom
+[WARNING] The POM for com.company:dependency_project:jar:1.18-SNAPSHOT is missing, no dependency information available
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/dependency_project
+-1.18-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] project_name ...................................... FAILURE [1.108s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.364s
+[INFO] Finished at: Fri Jan 20 12:28:04 CET 2012
+[INFO] Final Memory: 5M/15M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project project_name: Could not resolve dependencies for project com.company:project_name:jar:2.1.1
+3-SNAPSHOT: Could not find artifact com.company:dependency_project:jar:1.18-SNAPSHOT in <strong>insideFirewallRepo (http://nexus_url
+/nexus/content/groups/public/</strong>) -&gt; [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn &lt;goals&gt; -rf :project_name</pre>
+</blockquote>
+<blockquote>
+<pre>Notice that the errormessage actually gave the ID of our &lt;mirror&gt; from settings.xml:
+&lt;!-- settings.xml --&gt;
+ &lt;mirrors&gt;
+   &lt;mirror&gt;
+     &lt;id&gt;<strong>insideFirewallRepo</strong>&lt;/id&gt;</pre>
+</blockquote>
+<div>So problem is that maven actually does not use the pom.xml settings, but we can easily fix this.</div>
+<div></div>
+<div>Solution: Exclude local repositories from mirrorOf *</div>
+<div></div>
+<div>We need to force Maven to use the &lt;repository&gt; values from the project pom.xml. And  maven can do just that, since we need to take the &lt;repository&gt; ids and exclude them from mirrorOf *.</div>
+<div></div>
+<div>Take the repository ids from the pom file:</div>
+<blockquote>
+<pre>&lt;repositories&gt;
+&lt;repository&gt;&lt;id&gt;<strong>nexus-repo-releases</strong>&lt;/id&gt;&lt;repository&gt;
+&lt;repository&gt;&lt;id&gt;<strong>nexus-repo-snapshots</strong>&lt;/id&gt;&lt;repository&gt;</pre>
+</blockquote>
+<div>And exclude them to mirrorOf in settings.xml (add an exclamation mark in front of them). Line added enhanced in bold:</div>
+<blockquote>
+<pre>&lt;!-- settings.xml --&gt;
+&lt;mirrors&gt;
+  &lt;mirror&gt;
+    &lt;id&gt;insideFirewallRepo&lt;/id&gt;
+    &lt;mirrorOf&gt;<strong>!nexus-repo-releases,!nexus-repo-snapshots,*</strong>&lt;/mirrorOf&gt;
+    &lt;name&gt;Mirror of the world outside.&lt;/name&gt;
+    &lt;url&gt;http://nexus_url/nexus/content/groups/public/&lt;/url&gt;
+  &lt;/mirror&gt;
+&lt;/mirrors&gt;</pre>
+</blockquote>
+<p>Most users could probably just remove the &lt;mirrors&gt; block from settings.xml, but in this particular project, that is not possible since firewall blocks for access to maven central. So, in order for us to use external dependencies, we must use the &lt;mirror&gt; in settings.xml</p>
+<p>Then, you could argue, to use &lt;proxy&gt; instead of &lt;mirrors&gt; in settings.xml. This may be a decent solution as well, but in my case i wanted to avoid that, since the company proxy required user/password. Our jenkins build machines would then have my username/password, and it would lock my account whenever my password expires.</p>
+<p>Within those constraints, the &lt;mirror&gt; block with excluded internal repositories seems like a decent fit.</p>
+<p>For the issues described in this article, I have been using Maven 3.0.3 and Sonatype Nexus 1.9.2</p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Friday, January 20th, 2012 at 22:37 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/code/" rel="category tag">Code</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+
+			
+		<p class="nocomments" id="comments">Comments are closed.</p>
+
+	
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+</body></html>

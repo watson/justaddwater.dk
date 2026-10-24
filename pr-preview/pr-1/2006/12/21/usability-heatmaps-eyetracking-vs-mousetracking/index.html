@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Usability Heatmaps, Eyetracking vs Mousetracking</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/feed/" rel="alternate" title="justaddwater.dk » Usability Heatmaps, Eyetracking vs Mousetracking Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/12/15/simplest-import-data-user-interface-ever/" rel="prev" title="Simplest “Import Data” User Interface Ever"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/12/26/ruby-on-rails-rapid-prototyping-just-got-faster/" rel="next" title="Ruby on Rails Rapid Prototyping Just Got Faster"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2006/12/15/simplest-import-data-user-interface-ever/" rel="prev">Simplest “Import Data” User Interface Ever</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2006/12/26/ruby-on-rails-rapid-prototyping-just-got-faster/" rel="next">Ruby on Rails Rapid Prototyping Just Got Faster</a> »</div>
+		</div>
+	
+		<div class="post" id="post-494">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/" rel="bookmark" title="Permanent Link: Usability Heatmaps, Eyetracking vs Mousetracking">Usability Heatmaps, Eyetracking vs Mousetracking</a></h2>
+	
+			<div class="entry">
+				<p>Recently I was recommended taking a look at <a href="http://crazyegg.com">CrazyEgg</a> which could be a possible candidate for creating heatmaps of user navigation. Rather than to be specific to CrazyEgg, I would like to comment on the general principles and pitfalls when using the methodology that CrazyEgg uses.</p>
+<p><a class="imagelink" href="/justaddwater.dk/pr-preview/pr-1/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/crazyegg-heatmap/" id="p493" rel="attachment" title="crazyegg heatmap"><img alt="crazyegg heatmap" id="image493" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2006/12/crazyegg-heatmap.thumbnail.png"/></a><br/>
+<em>Heatmap (from CrazyEgg demo site)</em></p>
+<p>As I understand, it works by injecting a javascript on the page, then tracking mouse movement and clicks. Here are my immediate comments for the concept:</p>
+<ul>
+<li>Sounds like a good idea for “poor mans tests”. You can do tests with low effort, no test lead, and on all your users. It can’t get more quantitative :) </li>
+<li>Tracks mouse movement not eye movement. Results will be skewed compared to “traditional” eyetracking tests</li>
+<li>Results depend on how users use the mouse. Results will be skewed by users that don’t use mouse, users that use a laptop with trackpad or another device for moving the cursor around on screen. More on that later.</li>
+<li>However, if logfiles or your current statistics tool fail to give you the answers, or if traditional eyetracking is not possible, the CrazyEgg method could give you some valuable insight.</li>
+<li>Also, there could be more niche-like usage scenarios: For instance, are there any elements in the user interface that users think are clickable but are not?</li>
+</ul>
+<h3>Mouse vs. trackpad</h3>
+<p>In my opinion, there is a difference in the results collected by mouse-tracking because it’s skewed by the mouse (or “pointing device” to put it in academic terms).</p>
+<p><img alt="Trackpad on a laptop and mouse next to it" id="image492" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2006/12/trackpad-and-mouse.jpg"/></p>
+<p>Some pointing devices are simple and natural to use and others are not. For instance, I move my mouse around with the hand, sometimes I “read” or “look for information” with my mouse.</p>
+<p>When I use my trackpad on the laptop, however, it’s more when I <em>really need to</em>: When I’ve found where to click (and it’s too far away for using the TAB key), I use my index finger to move the cursor. A trackpad gives me more tensions and strain in the underarm and it’s harder and more time-consuming to target the right spot.</p>
+<h3>Your opinion</h3>
+<p>I’d love to hear your comments on this. What are your opinions? Any testing data to back it up? Any other considerations to put into the equation?</p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/eyetracking" href="/justaddwater.dk/pr-preview/pr-1/topics/eyetracking/" rel="tag">eyetracking</a>, <a data-original-url="http://technorati.com/tag/usability" href="/justaddwater.dk/pr-preview/pr-1/topics/usability/" rel="tag"> usability</a>, <a data-original-url="http://technorati.com/tag/heatmap" href="/justaddwater.dk/pr-preview/pr-1/topics/heatmap/" rel="tag"> heatmap</a>, <a data-original-url="http://technorati.com/tag/heatmaps" href="/justaddwater.dk/pr-preview/pr-1/topics/heatmaps/" rel="tag"> heatmaps</a>, <a data-original-url="http://technorati.com/tag/crazyegg" href="/justaddwater.dk/pr-preview/pr-1/topics/crazyegg/" rel="tag"> crazyegg</a>, <a data-original-url="http://technorati.com/tag/quantitative" href="/justaddwater.dk/pr-preview/pr-1/topics/quantitative/" rel="tag"> quantitative</a>, <a data-original-url="http://technorati.com/tag/testing" href="/justaddwater.dk/pr-preview/pr-1/topics/testing/" rel="tag"> testing</a>, <a data-original-url="http://technorati.com/tag/mouse" href="/justaddwater.dk/pr-preview/pr-1/topics/mouse/" rel="tag"> mouse</a>, <a data-original-url="http://technorati.com/tag/tracking" href="/justaddwater.dk/pr-preview/pr-1/topics/tracking/" rel="tag"> tracking</a>, <a data-original-url="http://technorati.com/tag/eye+tracking" href="/justaddwater.dk/pr-preview/pr-1/topics/eye-tracking-72f9af/" rel="tag"> eye tracking</a>, <a data-original-url="http://technorati.com/tag/mouse+tracking" href="/justaddwater.dk/pr-preview/pr-1/topics/mouse-tracking/" rel="tag"> mouse tracking</a>, <a data-original-url="http://technorati.com/tag/mouse" href="/justaddwater.dk/pr-preview/pr-1/topics/mouse/" rel="tag"> mouse</a>, <a data-original-url="http://technorati.com/tag/trackpad" href="/justaddwater.dk/pr-preview/pr-1/topics/trackpad/" rel="tag"> trackpad</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Thursday, December 21st, 2006 at 11:28 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/justaddwaterdk/" rel="category tag">justaddwater.dk</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/usability/" rel="category tag">Usability</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/user-interface/" rel="category tag">User Interface</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">14 Responses to “Usability Heatmaps, Eyetracking vs Mousetracking”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-43236">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43236" title="">December 21st, 2006 at 11:31 (GMT-1)</a> </small>
+
+			<p>By the way, Thanks to <a href="http://dalager.com/weblog/" rel="external">Christian Dalager</a> for bringing this up and asking for comments.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-43257">
+			<cite><a class="url" href="http://www.baekdal.com" rel="external">Thomas Baekdal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43257" title="">December 21st, 2006 at 12:27 (GMT-1)</a> </small>
+
+			<p>One consideration is the power of peripheral vision – something that not even eye-tracking accounts for. Peripheral vision is very important since it is what your brain uses to command you eye to focus on something – and subsequently click on. </p>
+<p>It reacts to similar shapes, odd colors/shadows/objects, anything that stands apart and movement. Designing for peripheral vision is too me more important than designing for eye-tracking or mouse tracking. </p>
+<p>I got a research paper on it somewhere, I will see if I can find it again and post a link.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-43259">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43259" title="">December 21st, 2006 at 12:36 (GMT-1)</a> </small>
+
+			<p>Thomas, I think that eye-tracking is still a poor replacement for brain-tracking :) </p>
+<p>We could do a much better job if only we had the tools (or abilities) to tap into the user’s brain. Then we could say goodbye to think-aloud-tests, eyetracking tests, considerations regarding peripheral vision, etc.</p>
+<p>Well, as the prediction season is about to start, let me just “predict” that it will probably not happen in 2007 either.</p>
+<p>In that perspective, I guess peripheral vision is still an important factor in the equation, especially because — as you say — not even eyetracking accounts for that.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-43274">
+			<cite><a class="url" href="http://usabilityblog.dk/" rel="external">trinetrine</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43274" title="">December 21st, 2006 at 13:47 (GMT-1)</a> </small>
+
+			<p>Glad you brought this up; I’ve been wondering about it the past couple of days. </p>
+<p>In your opinion, what can this tool do that log files or tracking cannot? As I see it, it’s an opportunity to present results in a more visual way (to clients). But is there something I’m missing, is there more to it? (apart from the issue of users clicking on unclickable elements, which actually is a good point).</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-43275">
+			<cite><a class="url" href="http://www.baekdal.com" rel="external">Thomas Baekdal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43275" title="">December 21st, 2006 at 13:49 (GMT-1)</a> </small>
+
+			<p>But, do not forget future time tracking – than we will know what people will think before they think it, and use their peripheral vision, eye-tracking and mouse tracking :)</p>
+<p>(sorry, this discussion is getting side-tracked).</p>
+<p>I do not, as such, think that CrazyEgg is bad. It provides a good illustration of what decisions people make. Eye-tracking does not provide this – it show you what people noticed, but not necessarily what they think about it. They might look at a specific button, but you do not know if they decided to click on it.</p>
+<p>The optimal solution would be to use both. Eye-tracking for recording interest and top choices, and CrazyEgg to record the decisions made afterwards.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-43279">
+			<cite><a class="url" href="http://www.baekdal.com" rel="external">Thomas Baekdal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43279" title="">December 21st, 2006 at 13:57 (GMT-1)</a> </small>
+
+			<p>BTW: I do agree that CrazyEgg is a very poor replacement for Eye-tracking</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-43289">
+			<cite><a class="url" href="http://www.baekdal.com" rel="external">Thomas Baekdal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43289" title="">December 21st, 2006 at 14:11 (GMT-1)</a> </small>
+
+			<p>Trine, You can also see target areas (or lack hereof) – for instance if people continually click just outside a hotspot (because they think it is bigger than it really is). </p>
+<p>It is useful for systems that does not load a new page – mostly in web applications and all these new AJAX applications. </p>
+<p>For visual presentations – flash movies/films – it can provide navigation clues. </p>
+<p>And, if your site has more than one way to get to another page, you can see which path they take.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-43377">
+			<cite><a class="url" href="http://dalager.com/weblog" rel="external">dalager</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43377" title="">December 21st, 2006 at 18:11 (GMT-1)</a> </small>
+
+			<p>There seems to be a bug in the reports for Firefox on OS X.</p>
+<p>Here’s two screenshots from a short tracking test for my weblog:<br/>
+<a href="http://www.flickr.com/photos/dalager/329222299/" rel="external">In safari</a><br/>
+<a href="http://www.flickr.com/photos/dalager/329222254/" rel="external">In firefox</a>.</p>
+<p>The safari-variant is also what you see on windows + firefox.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-43438">
+			<cite><a class="url" href="http://www.webstudio.cl/blog/" rel="external">Nelson Rodríguez-Peña</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-43438" title="">December 21st, 2006 at 22:37 (GMT-1)</a> </small>
+
+			<p>I think this kind of tools are useful for analyzing another kind of data: what are your users actually clicking on. And what are they not clicking. Traditional server logs can show you what pages are being requested and how are they being reached: by clicking a link, by referrer, etc. But if you have two links to a page on the homepage, for instance, you can’t possibly know which one was clicked. Unless you place a URL parameter, like a unique ID. This is where click tracking might be useful. You can <em>see</em> what was clicked, and how frequently. As I see it, this is not about competing with eye tracking techniques. This is not a technique for observing user focus, or attention, is for one simple thing: what is perceived as click-able (and what is not ) and what is being actually clicked on.</p>
+<p>I had previously written a post about this matter, but it is in Spanish:  <a href="http://www.webstudio.cl/blog/registro-de-clics-y-comportamiento-de-los-usuarios/" rel="external">Registro de Clics y Comportamiento de los Usuarios</a>.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-44213">
+			<cite><a class="url" href="http://subtleGradient.com" rel="external">Thomas Aylott</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-44213" title="">December 22nd, 2006 at 22:11 (GMT-1)</a> </small>
+
+			<p>We had originally wanted to do eye-tracking in addition to click-tracking.<br/>
+We looked into it, and decided that the potential security risks outweighed all of the potential benefits of secretly video recording all of your web visitors.</p>
+<p>The fact that javascript has no window.eyePosX and eyePosY properties was only a minor inconvinience ;)</p>
+<p>(Actually, IE7 probably _does_ have those values burried in there somewhere)</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-58105">
+			<cite><a class="url" href="http://www.convertup.com/usability/crazyegg-heat-maps/" rel="external">Convertup.com | Web Usability » Blog Archive » CrazyEgg Heat Maps</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-58105" title="">January 10th, 2007 at 16:25 (GMT-1)</a> </small>
+
+			<p>[…] Jan    CrazyEgg Heat Maps   January 10th, 2007 under Usability.     Jesper  has an interesting post describing some ofthe pros and cons of using CrazyEgg to generate heat maps (a color coded map of where the clicks are happening) on your site.  Results depend on how users use the mouse. Results will be skewed by users that don’t use mouse, users that use a laptop with trackpad or another device for moving the cursor around on screen. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-403309">
+			<cite><a class="url" href="http://eydryan.com/2008/03/20/seo-fun-heatmaps-eye-tracking-and-a-wordpress-plugin/" rel="external">SEO fun: Heatmaps, eye-tracking and a wordpress plugin | eydryan</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-403309" title="">March 20th, 2008 at 15:47 (GMT-1)</a> </small>
+
+			<p>[…] run out of time now so I have to leave you off with an interesting article about web heatmaps and invite you to try some of these heatmaps and see if they provide any useful […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-483426">
+			<cite><a class="url" href="http://blog.maxincube.com/marketingtwo/usability-engineer/usability-study-proof-is-2nd-really-better-than-1st-in-serp" rel="external">Usability Study Proof: Is 2nd really better than 1st in SERP…?!? | MAXincube on Marketing 2.0 (Beta)</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-483426" title="">April 12th, 2009 at 18:46 (GMT-1)</a> </small>
+
+			<p>[…] อ่านรายละเอียดเพิ่มเติมที่นี่) […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-486594">
+			<cite><a class="url" href="http://www.usabilityfactors.in/blog/2009/05/usability-testing-heat-maps-eye-tracking/" rel="external">Usability Testing : Heat Maps « Usability Factors</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-486594" title="">May 20th, 2009 at 10:13 (GMT-1)</a> </small>
+
+			<p>[…] According to Jesper Rønn-Jensen, there is a difference in the results collected by mouse-tracking because it’s skewed by the mouse (or “pointing device” to put it in academic terms). You can read more about at: <a href="/justaddwater.dk/pr-preview/pr-1/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/">http://justaddwater.dk/2006/12/21/usability-heatmaps-eyetracking-vs-mousetracking/</a> […]</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

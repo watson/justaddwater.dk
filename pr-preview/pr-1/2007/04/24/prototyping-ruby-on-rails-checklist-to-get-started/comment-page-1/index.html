@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Prototyping Ruby on Rails Checklist to Get Started</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/feed/" rel="alternate" title="justaddwater.dk » Prototyping Ruby on Rails Checklist to Get Started Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/04/23/ajax-and-web20-user-experience-bad-for-traffic-counts/" rel="prev" title="AJAX and Web2.0 User Experience Bad For Traffic Counts"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/04/26/howto-create-a-temporary-local-subversion-repository/" rel="next" title="Howto Create a Temporary Local Subversion Repository"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2007/04/23/ajax-and-web20-user-experience-bad-for-traffic-counts/" rel="prev">AJAX and Web2.0 User Experience Bad For Traffic Counts</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2007/04/26/howto-create-a-temporary-local-subversion-repository/" rel="next">Howto Create a Temporary Local Subversion Repository</a> »</div>
+		</div>
+	
+		<div class="post" id="post-594">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/" rel="bookmark" title="Permanent Link: Prototyping Ruby on Rails Checklist to Get Started">Prototyping Ruby on Rails Checklist to Get Started</a></h2>
+	
+			<div class="entry">
+				<p><strong>Update May 10: this article is no longer password protected. <a href="/justaddwater.dk/pr-preview/pr-1/2007/05/11/ruby-on-rails-checklist-now-public-available/" title="Justaddwater.dk: Ruby on Rails Checklist Now Public Available">Explanation why</a>.</strong></p>
+<p>Here is a brief reminder to myself before starting up a prototyping session.</p>
+<p>Some of the activities below are done only once on the current machine, some of them you must do with every project. I just wanted to have it all on the same list.</p>
+<h2>Laptop preparations</h2>
+<p>This is for my Windows XP laptop:</p>
+<ul>
+<li>Subversion repository up and running (so you can immediately add the project).</li>
+<li>I do this by installing <a href="http://subversion.tigris.org/servlets/ProjectDocumentList?folderID=91" title="TortoiseSVN Download Windows Binaries">TortoiseSVN</a> and following this explanation in “<a href="/justaddwater.dk/pr-preview/pr-1/2007/04/26/howto-create-a-temporary-local-subversion-repository/" rel="bookmark" title="Permanent Link to Howto Create a Temporary Local Subversion Repository">how to create a temporary local Subversion repository</a>“.</li>
+<li>Add subversion users and authorization for the current project</li>
+<li>Download latest version of Ruby on Rails (i tend to use latest stable, but latest from trunk would be OK as long as all tests pass). See section on Ruby gems and plugins</li>
+<li>Download and prepare editor (currently I use <a href="http://www.e-texteditor.com/">e-texteditor</a>. As a sidenote, <a href="http://radrails.org/download_rails_rdt.php">Aptana released a beta version with rails support</a> the other day but it didn’t work for me out of the box, so I stick to e-texteditor.)</li>
+<li>Let E-texteditor do the Cygwin install (this way, rails bundles work without extra effort).</li>
+<li>Then run cygwin install manually to add the following packets:<br/>
+subversion, curl, wget, openssh, and I need some text browsers as well for testing pupose (Links and Lynx).<br/>
+The cygwin install file is in “C:\Program Files\e\support\bin”</li>
+<li>Check that your database drivers work and are running the basic operations. I prefer SQLite as it’s faster to run from my laptop computer and tests are running faster.</li>
+<li>I prefer a good diff tool like <a href="http://www.prestosoft.com/ps.asp?page=edp_examdiffpro" title="Prestosoft ExamDiff Pro">ExamDiff Pro</a> (which tells me the exact parts of lines that are changed), although the built-in diff tool in TortoiseSVN is decent.</li>
+</ul>
+<h3>Ruby gems and Rails plugins</h3>
+<p>Assuming you have Ruby and RubyGems installed, install the other gems needed:</p>
+<pre class="archive-code" data-recovery-code="post-594-1"><code class="language-ruby">gem install rails --include-dependencies #run only if needed
+gem install rake piston sqlite3-ruby mysql --include-dependencies
+#Command line commands to test your install: gem, rails, svn
+#
+#Remember Mongrel as well
+gem install mongrel --include-dependencies
+#
+#I also use these on a regular basis, but leave them out for now:
+#gem install scrubyt rspec rcov rubyful_soup mechanize hpricot zentest mocha cheat --include-dependencies</code></pre>
+<p>Get hold of <a href="http://activescaffold.com/">ActiveScaffold plugin</a> and my <a href="/justaddwater.dk/pr-preview/pr-1/2006/08/24/ruby-on-rails-plugin-localize-your-rails-app/">LocalizationSimplified plugin</a> (<a href="http://rubyforge.org/projects/l10n-simplified/">project page</a>),  and Rails trunk if you like. (maybe I should also add <a href="http://agilewebdevelopment.com/plugins/smart_form" title="Smart-Form 1.0 Rails plugin">Smart-Form</a>, and the <a href="http://www.caboo.se/articles/2007/4/3/caboose-sample-rails-application">Caboose sample app</a>, but won’t add it here before I try it out)</p>
+<p>With the help of <a href="http://www.rubyinside.com/advent2006/12-piston.html" title="Managing Rails Plugins With Piston (Ruby Advent Calendar 2006)">Piston</a>, it’s easy to administer plugins and version them:</p>
+<pre class="archive-code" data-recovery-code="post-594-2"><code class="language-ruby">cd vendor/plugins
+piston import http://dev.rubyonrails.org/svn/rails/trunk vendor/rails
+piston import http://activescaffold.googlecode.com/svn/tags/active_scaffold
+piston import svn://rubyforge.org/var/svn/l10n-simplified</code></pre>
+<h2>Client preparation</h2>
+<p>At the client’s place, I look for the following preperational work:</p>
+<ul>
+<li>Find documentation for all accessible apis and services</li>
+<li>Try it</li>
+<li>Locate people that might know about the services and apis available</li>
+<li>investigate authorisation and access issues regarding services and apis</li>
+<li>locate other data, lists, sample data, categories that could potentially be used as fixture data in the prototype app.</li>
+<li>Have a look at existing design. Perhaps design manuals, homepage design, fetch logos or existing graphical material. There might be a page or two that can be used as layout inspiration (Not many pages I see are coded the way I want to build the HTML, so usually I make my own layout.rhtml file).</li>
+<li>Find some standard CSS based layouts that fit your need. More inspiration in the sidebar article “More CSS inspiration”.</li>
+</ul>
+<h3>More CSS inspiration</h3>
+<p>Good example from Roger Johanssons 2 column layout. For 3 column layouts, I have not yet found one that fits my needs perfectly. Previosuly I used <a href="http://www.redmelon.net/tstme/3colfixed/">redmelon’s 3 col layout</a> for <a href="http://nemkonto.dk/">Nemkonto</a> (<a href="http://redmelon.net/">redmelons website</a> and old link is currently not working). A place to get inspiration is the <a href="http://css-discuss.incutio.com/?page=ThreeColumnLayouts">3-column layout page at CSS-discuss</a> (be warned that there are too many alternatives there).</p>
+<h3>Your tips, tricks and suggestions</h3>
+<p>Let me know if you have anything that you would like to add to the list, discuss, or think is irrelevant. I’d love to update this post with your suggestions. Main criteria for me: Fast up and running (Getting immediate productivity). Team collaboration in code (so no complex setup features). Please add your good suggestions and comments below.</p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/ruby+on+rails" href="/justaddwater.dk/pr-preview/pr-1/topics/ruby-on-rails/" rel="tag">ruby on rails</a>, <a data-original-url="http://technorati.com/tag/prototyping" href="/justaddwater.dk/pr-preview/pr-1/topics/prototyping/" rel="tag"> prototyping</a>, <a data-original-url="http://technorati.com/tag/rapid+prototyping" href="/justaddwater.dk/pr-preview/pr-1/topics/rapid-prototyping/" rel="tag"> rapid prototyping</a>, <a data-original-url="http://technorati.com/tag/preparation" href="/justaddwater.dk/pr-preview/pr-1/topics/preparation/" rel="tag"> preparation</a>, <a data-original-url="http://technorati.com/tag/rails" href="/justaddwater.dk/pr-preview/pr-1/topics/rails/" rel="tag"> rails</a>, <a data-original-url="http://technorati.com/tag/ruby" href="/justaddwater.dk/pr-preview/pr-1/topics/ruby/" rel="tag"> ruby</a>, <a data-original-url="http://technorati.com/tag/setup" href="/justaddwater.dk/pr-preview/pr-1/topics/setup/" rel="tag"> setup</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Tuesday, April 24th, 2007 at 22:06 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/prototyping/" rel="category tag">Prototyping</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2007/04/24/prototyping-ruby-on-rails-checklist-to-get-started/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">9 Responses to “Prototyping Ruby on Rails Checklist to Get Started”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-144025">
+			<cite><a class="url" href="http://www.rubyonrailsexamples.com/" rel="external">Ruby on Rails Examples</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-144025" title="">May 11th, 2007 at 05:46 (GMT-1)</a> </small>
+
+			<p>Nice and useful list.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-144692">
+			<cite><a class="url" href="http://dalager.com" rel="external">dalager</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-144692" title="">May 12th, 2007 at 12:58 (GMT-1)</a> </small>
+
+			<p>In order to localize active scaffold, go for <a href="http://code.google.com/p/activescaffoldlocalize/" rel="external">http://code.google.com/p/activescaffoldlocalize/</a><br/>
+I just attached a danish translation to <a href="http://code.google.com/p/activescaffoldlocalize/issues/detail?id=3&amp;can=2&amp;q=" rel="external">issue 3</a> (not in trunk yet)</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-145460">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-145460" title="">May 13th, 2007 at 22:08 (GMT-1)</a> </small>
+
+			<p>If you’re planning a cygwin-only installation, then Pluit has a trick to  “unset RUBYOPT” environment variable before running rubygem’s setup file.</p>
+<p><a href="http://www.pluitsolutions.com/2006/03/30/install-ruby-on-rails-ror-on-cygwin/" rel="external">http://www.pluitsolutions.com/2006/03/30/install-ruby-on-rails-ror-on-cygwin/</a></p>
+<p>Very useful for me.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-228148">
+			<cite><a class="url" href="http://www.andywaite.com" rel="external">Andy Waite</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-228148" title="">August 6th, 2007 at 17:37 (GMT-1)</a> </small>
+
+			<p>I’ve written a little on the possiblity of using Markdown to create forms for rapid prototyping: <a href="http://www.andywaite.com/2007/8/5/markdown-for-forms" rel="external">http://www.andywaite.com/2007/8/5/markdown-for-forms</a></p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-229384">
+			<cite>Tobias</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-229384" title="">August 8th, 2007 at 22:50 (GMT-1)</a> </small>
+
+			<p>I had some problems with using the SQL Server adapter, due to DBI not being installed as default with cygwin ruby, so I had to install it manually.</p>
+<p>Some instructions here:<br/>
+<a href="http://www.kitebird.com/articles/ruby-dbi.html" rel="external">http://www.kitebird.com/articles/ruby-dbi.html</a><br/>
+<a href="http://wiki.rubyonrails.org/rails/pages/SQL+Server" rel="external">http://wiki.rubyonrails.org/rails/pages/SQL+Server</a></p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-234496">
+			<cite>Tobias</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-234496" title="">August 17th, 2007 at 13:12 (GMT-1)</a> </small>
+
+			<p>Additional: I found out that ODBC is not supported in the standard installation of Cygwin and Ruby. I had to install FreeTDS and the ruby-odbc and ruby-dbi, following these directions:</p>
+<p><a href="http://www.haidongji.com/2006/08/31/connecting-to-sql-server-from-unix-or-linux-with-freetds/" rel="external">http://www.haidongji.com/2006/08/31/connecting-to-sql-server-from-unix-or-linux-with-freetds/</a></p>
+<p>and then</p>
+<p><a href="http://wiki.rubyonrails.org/rails/pages/HowtoConnectToMicrosoftSQLServerFromRailsOnLinux" rel="external">http://wiki.rubyonrails.org/rails/pages/HowtoConnectToMicrosoftSQLServerFromRailsOnLinux</a></p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-358560">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2007/05/11/ruby-on-rails-checklist-now-public-available/">justaddwater.dk | Ruby on Rails Checklist Now Public Available</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-358560" title="">November 18th, 2007 at 17:31 (GMT-1)</a> </small>
+
+			<p>[…] Today I’ve removed password protection on the article “Prototyping Ruby on Rails Checklist to Get Started“. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-359348">
+			<cite><a class="url" href="http://www.floristone.com" rel="external">King of flowers</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-359348" title="">November 18th, 2007 at 22:06 (GMT-1)</a> </small>
+
+			<p>Very cool check list. If I were to give advice, I would say add more gems :), mongrel and rails are just basics.</p>
+<p>Thanks<br/>
+David</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-376223">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-376223" title="">November 27th, 2007 at 12:56 (GMT-1)</a> </small>
+
+			<p>For some reason I had to reinstall my ruby lib and now my gem list looks like this:</p>
+<p>gem install rcov ruby-debug sqlite3-ruby mysql watir rake hpricot cheat hoe rails piston</p>
+<p>and then of course mongrel</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Comments on: Windows SVN pre-commit-hook</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/06/10/windows-svn-pre-commit-hook/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/06/10/windows-svn-pre-commit-hook/feed/" rel="self" type="application/rss+xml" /><item><title>By: Ray</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/06/10/windows-svn-pre-commit-hook/#comment-510249</link><guid isPermaLink="false">http://justaddwater.dk/?p=1354#comment-510249</guid><dc:creator>Ray</dc:creator><pubDate>Sat, 05 Feb 2011 19:04:47 +0000</pubDate><description>&lt;p&gt;@ocpjp &lt;/p&gt;
+&lt;p&gt;Doesn’t you practically override the log message with each iteration of your loop so at the end you only have one word?&lt;/p&gt;
+</description></item><item><title>By: ocpjp</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/06/10/windows-svn-pre-commit-hook/#comment-502222</link><guid isPermaLink="false">http://justaddwater.dk/?p=1354#comment-502222</guid><dc:creator>ocpjp</dc:creator><pubDate>Mon, 08 Nov 2010 16:30:59 +0000</pubDate><description>&lt;p&gt;Below is a section of my pre-hook. It only assigns the first word to the log message and not the entire log. Any idea what is wrong?&lt;/p&gt;
+&lt;p&gt;rem Subversion sends through the path to the repository and transaction id&lt;br/&gt;
+set REPOS=%1&lt;br/&gt;
+set TXN=%2&lt;br/&gt;
+for /f “tokens=* delims= ” %%a in (‘svnlook log %REPOS% -t %TXN%’) do (set LogMessage=%%a)&lt;/p&gt;
+</description></item></channel></rss>

@@ -1,0 +1,102 @@
+
+#mListContainer {
+	position:absolute;
+	top:5px;
+	left:5px;
+	border:2px solid #000;
+	background-color:#E3EBED;
+	width:250px;
+	z-index:1000;
+	background-image:url(../../gr/office_logo_green.gif);
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	-moz-border-radius:.75em;
+	text-align:left;
+}
+
+#mListContainer ul li a {
+	font:9px verdana;
+	font-weight:bold;
+	color:#004465;
+	float:left;
+	text-decoration:none;
+	background-color:transparent;
+}
+
+#mListContainer .credits a {
+	font:9px verdana;
+	font-weight:bold;
+	color:#004465;
+	text-decoration:none;
+	background-color:transparent;
+}
+
+#mListContainer ul li:hover {
+	background-color:#98B4C1;
+}
+
+#mListContainer ul li:hover a {
+	color:#FFF;
+}
+
+#mListContainer ul .nfo {
+	display:block;
+	width:15px;
+	height:15px;
+	float:right;
+	background-image:url(info_btn.gif);
+	background-repeat:no-repeat;
+}
+
+#mListContainer ul {
+	padding:5px 5px 0px 8px;
+	margin:5px 5px 10px 5px;
+}
+
+#mListContainer ul li {
+	display:block;
+	list-style-type:none;
+	background-position:top left;
+	background-repeat:no-repeat;
+	padding-left:10px;
+	margin:0px;
+	height:18px;
+	width:200px;
+	-moz-border-radius:.75em;
+	cursor:pointer;
+	clear:left;
+}
+
+#mListContainer h1 {
+	position:relative;
+	display:block;
+	font-size:8pt;
+	color:#FFF;
+	background-color:#638DA1;
+	background-image:url();
+	width:96.5%;
+	height:15px;
+	margin:0;
+	padding:5px;
+	font-family:arial;
+	border-bottom:1px solid #000000;
+	text-align:center;
+	-moz-border-radius:.75em .75em 0 0;
+}
+
+#mListContainer table {
+	margin:0;
+	text-align:left;
+	float:left;
+}
+
+#mListContainer .credits {
+	float:left;
+	width:200px;
+	font:6.5pt verdana;
+	color:#000;
+	padding:2px;
+	margin-left:5px;
+	text-align:left;
+	border-top:1px solid #000;
+}

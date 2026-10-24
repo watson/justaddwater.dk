@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | How to move IntelliJ system file to another folder</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2011/03/10/challenges-configuring-hudson-emails/" rel="prev" title="Challenges Configuring Hudson Emails"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2011/04/05/fixed-outlook-2003-corruption-after-power/" rel="next" title="Fixed Outlook 2003 Corruption after Power Blackout"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2011/04/04/how-to-move-intellij-system-file-to-another-folder/" rel="canonical"/>
+<link href="https://justaddwater.dk/2011/04/04/how-to-move-intellij-system-file-to-another-folder/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2011/03/10/challenges-configuring-hudson-emails/" rel="prev">Challenges Configuring Hudson Emails</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2011/04/05/fixed-outlook-2003-corruption-after-power/" rel="next">Fixed Outlook 2003 Corruption after Power Blackout</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1444">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2011/04/04/how-to-move-intellij-system-file-to-another-folder/" rel="bookmark" title="Permanent Link: How to move IntelliJ system file to another folder">How to move IntelliJ system file to another folder</a></h2>
+	
+			<div class="entry">
+				<p>For work, I use IntelliJ IDEA, when working in Java world. For my current client, there is a quota on my user directory, which means I have to move IDEA system files to another folders.</p>
+<ol>
+<li>Locate the file <code>idea.properties</code> in your IntelliJ Idea\bin folder</li>
+<li>Edit <code>idea.config.path</code></li>
+<li>Restart</li>
+</ol>
+<p>I changed it from</p>
+<p><code>idea.config.path=${user.home}/.IntelliJIdea10/config</code></p>
+<p>to</p>
+<p><code>idea.config.path=${idea.home}/.IntelliJIdea10/config</code></p>
+<p>It is very easy to do, but it was hard for me to google the result.</p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, April 4th, 2011 at 09:23 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/web-development/" rel="category tag">Web Development</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2011/04/04/how-to-move-intellij-system-file-to-another-folder/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+
+			
+		<p class="nocomments" id="comments">Comments are closed.</p>
+
+	
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+</body></html>

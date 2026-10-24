@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>usablitiy – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/usablitiy/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/usablitiy/feed/" rel="self" type="application/rss+xml" /><item><title>Mac Harddisk Upgrade Usability Improvements</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/02/04/mac-harddisk-upgrade-usability-improvements/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1264</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 04 Feb 2010 21:56:23 +0000</pubDate><description>&lt;p&gt;Blogging for the first time in a long time from my wife’s computer, because I’m installing my brand new Intel SSD hard drive in my macbook.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/02/intel_160gb_ssd.jpg"&gt;&lt;img alt="intel_160gb_ssd" class="aligncenter size-thumbnail wp-image-1265" height="150" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/02/intel_160gb_ssd-150x150.jpg" title="intel_160gb_ssd" width="150"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Oddly enough I ran into a few things during the install process that I think Apple could improve in their interface. (using Snow Leopard)&lt;/p&gt;
+&lt;h2&gt;Apple should recognize a new unformatted disk inserted and show an install guide&lt;/h2&gt;
+&lt;p&gt;I took out the old disk, inserted the new one, and booted the machine. After 1-2 minutes of nothing, a big folder with a questionmark appeared in the middle of the screen — blinking. No helpful text (no text at all). Just one big blinking questionmark on top of a folder.&lt;/p&gt;
+&lt;p&gt;Several things could have helped me here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Show a helpful message that boot disk is not found (it may have crashed or have been replaced)&lt;/li&gt;
+&lt;li&gt;Show a note that to select a boot menu, restart the computer while pressing and holding the ‘C’ key.&lt;/li&gt;
+&lt;li&gt;Detect that a new harddisk (other than the one used on last successful boot) is inserted, and show a message helpful for explaining harddisk upgrade steps.&lt;/li&gt;
+&lt;li&gt;Tell me that I need to insert the Mac OS X disk in order to restore the system, restore backups, or install.&lt;/li&gt;
+&lt;li&gt;After loading the Mac OS install menu from the Mac OS X disk, there is one big primary action: Install new OS on this computer. I rushed and pressed, but should have looked for the secondary options in the dropdown menus. An easy improvement is to add smaller, visually less dominant, but visible  secondary options (“format new hard drive”, “restore system from backup”).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Many of these points are pretty obvious when i write it now, but I &lt;em&gt;know &lt;/em&gt;each one of them could have saved me brain cycles and time in the harddisk swap process.&lt;/p&gt;
+&lt;p&gt;I wasted 2 hours of valuable time here. Because of the missing help on screens, first I put the old hard drive back in. Then I put the SSD drive in a usb-dockingstation to investigate it with Disk Utility. Then I called Thomas to learn that I had to press ‘C’ at startup to force a boot menu. Furthermore I was too quick and pressed “Install new system”, before I found the dropdown menu and saw the menu item I should have taken: “Restore the system from backup”&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/02/IMG_0198-restore-system-from-backup-mac-osx10.6.jpg"&gt;&lt;img alt="IMG_0198-restore-system-from-backup-mac-osx10.6" height="188" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/02/IMG_0198-restore-system-from-backup-mac-osx10.6.jpg" title="IMG_0198-restore-system-from-backup-mac-osx10.6" width="250"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By the way, It took roughly 3 hours to read 120GB from the TimeCapsule and everything was back up and running. Hooray for TimeCapsule.&lt;/p&gt;
+&lt;p&gt;Photos and more info from:&lt;a href="http://njr.sabi.net/2009/01/15/restoring-a-hard-drive-from-time-machine/" rel="bookmark"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;njr 3.0:  &lt;a href="http://njr.sabi.net/2009/01/15/restoring-a-hard-drive-from-time-machine/" rel="bookmark"&gt;Restoring a hard drive from Time Machine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;James Duncan Davidson: &lt;a href="http://blog.duncandavidson.com/2008/01/restoring-from-time-machine.html"&gt;Restoring  from Time Machine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Legit Storage Reviews: &lt;a href="http://www.legitreviews.com/article/1022/1/"&gt;Intel X25-M 160GB 34nm MLC G2 SSD Benchmark Review&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description></item></channel></rss>

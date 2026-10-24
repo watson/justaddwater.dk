@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>windows – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/windows/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/windows/feed/" rel="self" type="application/rss+xml" /><item><title>Windows delete all tmp files command</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/07/12/windows-delete-all-tmp-files-command/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1419</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 12 Jul 2011 20:34:10 +0000</pubDate><description>&lt;p&gt;Just a quick note to self about this tip i found. It is a Windows (XP) helpful command line snippet that removes all your temporary files.&lt;/p&gt;
+&lt;p&gt;Delete all files in temp folder:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;DEL /F /S /Q %TEMP%&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Taken from the “&lt;a href="http://ss64.com/nt/del.htm"&gt;A-Z Index of the Windows CMD command line&lt;/a&gt;”&lt;/p&gt;
+</description></item><item><title>Easy delete all .svn Subfolders in Windows Explorer</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1414</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 01 Mar 2011 10:08:51 +0000</pubDate><description>&lt;p&gt;I had to repair a flawed Subversion repository recently (not all files were committed). I had my local repository checked out. This was the flawed part, containing only parts of the folders and files it should.&lt;/p&gt;
+&lt;p&gt;Then, I got a zip file from the machine where it was working. Problem: It contained .svn folders from the other developer. So to merge these i did the following workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Delete all .svn folders from other developer’s zip&lt;/li&gt;
+&lt;li&gt;Move other developers folder over on top of my local install.&lt;/li&gt;
+&lt;li&gt;Commit all missing files&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Of course this will only work if there are no .svn folders in other developer’s file, because then svn authentication, paths, etc. will be messed up, and commit will fail.&lt;/p&gt;
+&lt;p&gt;Luckily, Sanil S (IamTechie blog) wrote a nice little script that actually adds a context menu in Windows explorer:&lt;br/&gt;
+&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg"&gt;&lt;img alt="" class="alignnone size-full wp-image-1415" height="288" sizes="(max-width: 360px) 100vw, 360px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg 360w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn-300x240.jpg 300w" title="delete-svn" width="360"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1414-1"&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;delete_svn_subfolders.reg · &lt;a href="https://gist.github.com/jesperronn/848907/66427a7b4a4046e5aa0e0c2aea6b160ac34690bc"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;
+Just save this file as “delete_svn_subfolders.reg”. When you run it, then you will have the new windows explorer context menu item shown in the image.&lt;/p&gt;
+&lt;p&gt;The full script (repeated for the ones with javascript disabled:)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More info:&lt;/p&gt;
+&lt;p&gt;IamTechie: &lt;a href="http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/"&gt;How to remove all “.svn” folders in Windows XP &amp;amp; Vista?&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Windows SVN pre-commit-hook</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/06/10/windows-svn-pre-commit-hook/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1354</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 10 Jun 2010 08:23:32 +0000</pubDate><description>&lt;p&gt;At a current project I work on, we use a Windows server to run our subversion repository. &lt;/p&gt;
+&lt;p&gt;I wanted to set up the pre-commit hook so that commits with empty comment are automatically rejected.&lt;/p&gt;
+&lt;p&gt;All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal). &lt;/p&gt;
+&lt;p&gt;Here is a the pre-commit hook rewritten as a windows .bat file.&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1354-1"&gt;&lt;code&gt;REM Subversion pre-commit hook for Windows machine
+REM put this in your SVN repository folder /hooks/pre-commit.bat
+REM we use it with svn version 
+REM http://stackoverflow.com/questions/869248/windows-pre-commit-hook-for-comment-length-subversion
+
+@echo off  
+:: Stops commits that have empty log messages.        
+@echo off  
+
+setlocal  
+
+rem Subversion sends through the path to the repository and transaction id  
+set REPOS=%1  
+set TXN=%2           
+
+rem line below ensures at least one character ".", 5 characters require change to "....."
+svnlook log %REPOS% -t %TXN% | findstr . &amp;gt; nul  
+if %errorlevel% gtr 0 (goto err) else exit 0  
+
+:err  
+echo. 1&amp;gt;&amp;amp;2  
+echo Your commit has been blocked because you didn't enter a comment. 1&amp;gt;&amp;amp;2  
+echo Write a log message describing the changes made and try again. 1&amp;gt;&amp;amp;2
+echo Thanks 1&amp;gt;&amp;amp;2
+exit 1
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;pre-commit.bat · &lt;a href="https://gist.github.com/jesperronn/432704/ba29b920034d1a997b119a13740e9e1458f43455"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+</description></item></channel></rss>

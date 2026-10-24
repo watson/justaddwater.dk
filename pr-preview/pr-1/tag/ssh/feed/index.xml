@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>ssh – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/ssh/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/ssh/feed/" rel="self" type="application/rss+xml" /><item><title>Using Local File-based Git — Server Laziness</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/02/21/using-local-file-based-git-server-laziness/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1029</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sat, 21 Feb 2009 09:04:59 +0000</pubDate><description>&lt;p&gt;My problem this week: I wanted to share some work with a colleague. Unfortunately we have not yet setup our caplab environment with git server. Nor did i want to push this particular project to GitHub or Unfuddle. My alternative was a file-based setup:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Each developer’s machine has it’s own Git repository.&lt;/li&gt;
+&lt;li&gt;On my machine I had an extra ‘master’ repository that other developers could push into.&lt;/li&gt;
+&lt;li&gt;In the example below the local developer repos is called ‘local’ and the master is called ‘remote’&lt;/li&gt;
+&lt;li&gt;The master repository could be on a network drive as well.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Developer’s workflow: Push changes to ‘remote’:&lt;br/&gt;
+&lt;/p&gt;&lt;pre class="archive-code" data-recovery-code="post-1029-1"&gt;&lt;code class="language-bash"&gt;cd local #developer's local repository
+git pull ../remote master #get the latest code from 'remote' repository
+git push ../remote master #push the recent commits from here to the 'remote' folder&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Git remote makes it easier&lt;/h3&gt;
+&lt;p&gt;In stead of using a path in “git pull ../remote master”, it’s even easier to add the path just like you would do on GitHub or similar:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1029-2"&gt;&lt;code class="language-bash"&gt;git remote add origin ../remote/ #one time for all
+git pull origin master # pull from the 'remote' directory
+git push origin master #push recent commits from here to the 'remote' folder&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Bonus tip: Using remote git to SSH server&lt;/h3&gt;
+&lt;p&gt;It’s real easy to make a remote backup copy of your Git repository even if you have not set up a git server. Here is an example of how I did it on a server where I have SSH access to:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1029-3"&gt;&lt;code class="language-bash"&gt;git remote add origin ssh://jesper@myserver.com/~/project.git/&lt;/code&gt;&lt;/pre&gt;&lt;br/&gt;
+Setup the repository on the remote server:&lt;br/&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1029-4"&gt;&lt;code class="language-bash"&gt;$ ssh jesper@myserver.com
+Welcome to myserver.com!
+$ mkdir project.git &amp;amp;&amp;amp; cd project.git/
+$ git --bare init
+Initialized empty Git repository in /home/jesper/project.git
+$ exit
+Bye!&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Related posts:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/02/21/2007/04/26/howto-create-a-temporary-local-subversion-repository/" rel="bookmark" title="Justaddwater.dk: Howto Create a Temporary Local Subversion Repository"&gt;Howto Create a Temporary Local Subversion Repository (April 2007)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/02/21/2009/01/17/git-side-benefit-reducing-disk-usage/" rel="bookmark" title="Justaddwater.dk: Git Side Benefit: Reducing Disk Usage"&gt;Git Side Benefit: Reducing Disk Usage&lt;/a&gt; (January 17)&lt;/li&gt;
+&lt;/ul&gt;
+</description></item></channel></rss>

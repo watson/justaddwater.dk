@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | ASP.Net 1.1 and web standards support</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2005/11/21/aspnet-11-and-web-standards-support-20/feed/" rel="alternate" title="justaddwater.dk » ASP.Net 1.1 and web standards support Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2005/11/18/danish-usability-conference/" rel="prev" title="On our way to Danish usability conference"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2005/11/21/usabilitydagene-monday/" rel="next" title="“Usability dagene 05” day 1 roundup"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2005/11/21/aspnet-11-and-web-standards-support-20/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2005/11/21/aspnet-11-and-web-standards-support-20/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2005/11/18/danish-usability-conference/" rel="prev">On our way to Danish usability conference</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2005/11/21/usabilitydagene-monday/" rel="next">“Usability dagene 05” day 1 roundup</a> »</div>
+		</div>
+	
+		<div class="post" id="post-19">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2005/11/21/aspnet-11-and-web-standards-support-20/" rel="bookmark" title="Permanent Link: ASP.Net 1.1 and web standards support">ASP.Net 1.1 and web standards support</a></h2>
+	
+			<div class="entry">
+				<p>At the moment, I’m working on a project where we develop ASP.Net components to a Microsoft Sharepoint Portal Server. I’m working on the user interface, other developers take care of the backend ASP.Net functionality, integration and business logic.</p>
+<p>Lately Microsoft ASP.Net has been giving me some headaches. It’s breaking my principles for a decent web-based application. On this project we’re using ASP.Net 1.1 and Vsual Studio 2003.</p>
+<p>Principles for a decent web-based application</p>
+<ul>
+<li>Validate HTML</li>
+<li>Validate CSS</li>
+<li>Accessibility principles</li>
+<li>Avoid bloated HTML code</li>
+</ul>
+<p>Here are some of the ASP usercontrols that are causing me trouble</p>
+<p><a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpgenref/html/cpconcheckboxwebservercontrol.asp">&lt;asp:checkbox /&gt;</a></p>
+<p>&lt;asp:CheckBox id=”CheckBox1″<br/>
+Text=”Label”<br/>
+Checked=”True|False”<br/>
+CssClass=”checkbox”<br/>
+runat=”server”/&gt;</p>
+<p>Will result in this HTML<br/>
+&lt;span class=”checkbox” onclick=”…”&gt;<br/>
+&lt;input type=”checkbox” name=”” id=”” CHECKED /&gt;<br/>
+&lt;label for=””&gt;Label&lt;/label&gt;<br/>
+&lt;/span&gt;</p>
+<p>WHAT? I get a span when I want a checkbox? The span carries the CSS class? How can I put a class on my checkbox element? I figure out that Microsoft did not care about CSS on a checkbox because in Internet Explorer its probably the element that can be styled the least. Why would Microsoft care about putting a CSS class on the checkbox when you can’t change color, you can’t change margins, you can’t change padding, you can’t change size, you can’t change anything?</p>
+<p>Before I get carried away: One good thing about the &lt;asp:checkbox /&gt; though: I get the <code>label</code> element. Very good! </p>
+<p>Labels are important. They enlarge the clickable area so that the user can hit the target with less accuracy. They are used by screenreaders and other assistive tools to identify fields. They must be present on form elements in order for a webpage to validate.</p>
+<p>Back to ASP.Net, does that mean that we can expect <code>&lt;label&gt; </code>on other user controls? Unfortunately not. I looked at the <code>&lt;asp:TextBox&gt;</code>. Here there’s no label. Neither can I get one. </p>
+<p>…</p>
+<p>Then there’s the <code><a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpgenref/html/cpconTextBoxWebServerControl.asp">&lt;asp:Label&gt;</a></code>. The name insinuates something we could use for labeling. Not much help here. asp:Label translates into <code>&lt;span id=".."&gt;Labeltext&lt;/span&gt;</code></p>
+<p>Its too bad that ASP.Net has absolutely no focus on The HTML creation seems random, confusing and a complete nightmare for implementing a website in valid HTML, CSS and following accessibility standards.</p>
+<h3>Until now</h3>
+<p>Last week’s release of ASP.NET 2.0 has allegedly put an end to all this. In the next article I take a closer look on the improvements of ASP.NET 2.0 as I see it from a web standards point of view.</p>
+<p>Technorati tags:  <a data-original-url="http://technorati.com/tag/usability" href="/justaddwater.dk/pr-preview/pr-1/topics/usability/" rel="tag">usability</a>  <a data-original-url="http://technorati.com/tag/css" href="/justaddwater.dk/pr-preview/pr-1/topics/css/" rel="tag">css</a> <a data-original-url="http://technorati.com/tag/microsoft" href="/justaddwater.dk/pr-preview/pr-1/topics/microsoft/" rel="tag"></a> <a data-original-url="http://technorati.com/tag/microsoft" href="/justaddwater.dk/pr-preview/pr-1/topics/microsoft/" rel="tag"></a> <a data-original-url="http://technorati.com/tag/asp.net" href="/justaddwater.dk/pr-preview/pr-1/topics/asp.net/" rel="tag">ASP.NET</a></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, November 21st, 2005 at 06:30 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/css/" rel="category tag">CSS</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/" rel="category tag">Web Standards</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2005/11/21/aspnet-11-and-web-standards-support-20/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">2 Responses to “ASP.Net 1.1 and web standards support”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-18">
+			<cite><a class="url" href="http://visitjesper.homeip.net" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-18" title="">November 30th, 2005 at 14:37 (GMT-1)</a> </small>
+
+			<p>Just saw this comment in <a href="http://www.molly.com/2005/11/03/an-open-letter-to-disney-store-uk/" rel="external">Mollys blog</a><br/>
+<a href="http://www.molly.com/2005/11/03/an-open-letter-to-disney-store-uk/#comment-16206" rel="external">Daniel (www.danielsjourney.com) says:</a></p>
+<blockquote><p>It’s easy to create standards compliant sites in .net, just stay away from the Microsoft methodology of use.</p>
+<p>What’s the point then?! Might as well use Notepad and a reasonable language. The use of .NET ARE in the predefined controls, etc., which create the crap markup. But as for the .NET IDE, I can’t even cut and paste into it’s HTML view without it creating font tags out the wazoo.</p></blockquote>
+<p>This is similar to the experiences here in my blog post. Also I can confirm that .NET alters the HTML when you cut and paste. For instance, it sometimes add name and id attributes to form elements and tables</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-433902">
+			<cite><a class="url" href="http://dotnet.pro" rel="external">dotnet coder</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-433902" title="">August 4th, 2008 at 22:31 (GMT-1)</a> </small>
+
+			<p>Hello.</p>
+<p>In their original out-of-the-box format Microsoft’s ASP.NET HtmlControls and WebControls do not produce XHTML compliant code.  But Microsoft has thoughtfully (and thankfully) allowed developers to extend the controls to add user-defined custom functionality.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

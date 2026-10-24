@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Rounded Corners the Technorati Way</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/02/15/rounded-corners-the-technorati-way/feed/" rel="alternate" title="justaddwater.dk » Rounded Corners the Technorati Way Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/02/14/humorous-vista-features-from-the-onion/" rel="prev" title="Humorous Vista Features (from The Onion)"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/02/16/usability-test-results-too-diverse/" rel="next" title="Usability Test Results Too Diverse?"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/" rel="canonical"/>
+<link href="https://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2007/02/14/humorous-vista-features-from-the-onion/" rel="prev">Humorous Vista Features (from The Onion)</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2007/02/16/usability-test-results-too-diverse/" rel="next">Usability Test Results Too Diverse?</a> »</div>
+		</div>
+	
+		<div class="post" id="post-550">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2007/02/15/rounded-corners-the-technorati-way/" rel="bookmark" title="Permanent Link: Rounded Corners the Technorati Way">Rounded Corners the Technorati Way</a></h2>
+	
+			<div class="entry">
+				<p>It’s been a while where web standards don’t get the attention it deserves on this blog. In that spirit, here’s a behind-the-scenes view on how Technorati makes rounded corners on a faded background.</p>
+<p><img alt="Technorati screenshot of box with rounded corners on faded background (showing Justaddwater Ranks no. 9980 on Technorati)" id="image549" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/02/technorati-rounded-corner-justadwater-rank-9980-mini.png"/></p>
+<p>I remember Eric Meyer mentioned this solution back at a workshop in 2005 (before he could actually tell that it was for  Technorati — the redesign was unveiled a few days later).</p>
+<h3>Technique</h3>
+<p>HTML for the box:</p>
+<pre class="archive-code" data-recovery-code="post-550-1"><code class="language-html">&lt;div class="bloginfo-summary boxc"&gt;
+  &lt;h2&gt;..&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    ..
+  &lt;/ul&gt;
+  &lt;b class="cn tr"&gt;&lt;/b&gt;
+  &lt;b class="cn br"&gt;&lt;/b&gt;
+  &lt;b class="cn tl"&gt;&lt;/b&gt;
+  &lt;b class="cn bl"&gt;&lt;/b&gt;
+&lt;/div&gt;</code></pre>
+<p>The HTML is then styled with the following CSS:</p>
+<pre class="archive-code" data-recovery-code="post-550-2"><code class="language-css">div.bloginfo-summary {background:
+  url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;
+  float:left;margin-bottom:20px;padding:10px;width:690px}
+/* Large radius image backgrounds */
+.boxc {position:relative;}
+.boxc b.cn { height: 10px; width: 10px; background:
+ url(http://static.technorati.com/static/css/img/corners/white.png) no-repeat;
+ position:absolute;
+ }
+.boxc b.tl {top: -1px; left: -1px; background-position: top left;}
+.boxc b.tr {top: -1px; right: -1px; background-position: top right;}
+.boxc b.bl {bottom: -1px; left: -1px; background-position: bottom left;}
+.boxc b.br {bottom: -1px; right: -1px; background-position: bottom right;}
+
+/* IE Filters */
+    * html .boxc b.bl {bottom:-2px}
+    * html .boxc b.br {bottom:-2px}
+    * html .boxc b.cn {background-image:
+       url(http://static.technorati.com/static/css/img/corners/white.gif);
+       line-height: 1px;
+       font-size: 1px;
+      }</code></pre>
+<p>So, graphically displayed, the <code>&lt;b&gt;</code> elements are actually positioned in each corner with no content:</p>
+<p><img alt="Technorati screenshot of box with rounded corners on faded background showing HTML elements" id="image553" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/02/technorati-rounded-corner-html-tags-mini.png"/></p>
+<p>Note that the background-image for the faded box is one thin sliced faded image:<br/>
+<img alt="technorati faded background slice" data-original-url="http://static.technorati.com/static/css/img/bg/fade-lightgreen.png" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/ed27112c67343781263d4c04.png"/></p>
+<p>The corners is made with only one image that’s positioned differently depending on which corner it’s in. The image is actually a transparent circle on white background.</p>
+<p style="background-color: #339933; color: #dddddd; height: 30px; line-height: 30px"><img alt="technorati rounded corner image" data-original-url="http://static.technorati.com/static/css/img/corners/white.gif" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/525cb62f01983584667990cf.gif"/> shown on dark background for clarity.</p>
+<p>So I <a href="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/03/technorati-style-rounded-corners.html" title="Example page: technorati-style rounded corners">included the final example on a separate page</a> (because the WordPress editor doesn’t let me add the HTML code precisely as it’s required)</p>
+<p><a href="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2007/03/technorati-style-rounded-corners.html" title="Example page: technorati-style rounded corners">example page: technorati-style rounded corners</a></p>
+<p>More info<br/>
+Eric Meyer: <a href="http://meyerweb.com/eric/thoughts/2005/06/21/technorati-redesigns/">Technorati Redesigns</a> (June 2005)<br/>
+Smileycat: <a href="http://www.smileycat.com/miaow/archives/000044.html">CSS Rounded Corners Roundup</a></p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/web+standards" href="/justaddwater.dk/pr-preview/pr-1/topics/web-standards/" rel="tag">web standards</a>, <a data-original-url="http://technorati.com/tag/css" href="/justaddwater.dk/pr-preview/pr-1/topics/css/" rel="tag"> css</a>, <a data-original-url="http://technorati.com/tag/html" href="/justaddwater.dk/pr-preview/pr-1/topics/html/" rel="tag"> html</a>, <a data-original-url="http://technorati.com/tag/rounded+corners" href="/justaddwater.dk/pr-preview/pr-1/topics/rounded-corners/" rel="tag"> rounded corners</a>, <a data-original-url="http://technorati.com/tag/technorati" href="/justaddwater.dk/pr-preview/pr-1/topics/technorati/" rel="tag"> technorati</a>, <a data-original-url="http://technorati.com/tag/tantek+celic" href="/justaddwater.dk/pr-preview/pr-1/topics/tantek-celic/" rel="tag"> tantek celic</a>, <a data-original-url="http://technorati.com/tag/eric+meyer" href="/justaddwater.dk/pr-preview/pr-1/topics/eric-meyer/" rel="tag"> eric meyer</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Thursday, February 15th, 2007 at 12:01 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/css/" rel="category tag">CSS</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/html/" rel="category tag">HTML</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/" rel="category tag">Web Standards</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2007/02/15/rounded-corners-the-technorati-way/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">13 Responses to “Rounded Corners the Technorati Way”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-84199">
+			<cite><a class="url" href="http://www.webtouch.dk" rel="external">Sune Jakobsen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-84199" title="">February 15th, 2007 at 15:48 (GMT-1)</a> </small>
+
+			<p>I don’t agree that it’s the right solution to use &lt;b&gt; tags for this purpose. &lt;b&gt; tags are for bold content only (btw deprecated, use strong instead). It would make more sense to use a span tag instead, because they are intended for non semantic purposes only.</p>
+<p>Keep the web semantic :o)</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-84201">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-84201" title="">February 15th, 2007 at 15:53 (GMT-1)</a> </small>
+
+			<p>Sune.<br/>
+I must admit that I don’t remember what reasons Eric Meyer gave for choosing the b-tag in this particular solution.</p>
+<p>However I’m absolutely confident that there is a valid reason because Eric had to report to Tantek Celik. </p>
+<p>It really does not get more semantic than that :)</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-84361">
+			<cite><a class="url" href="http://tantek.com/" rel="external">Tantek</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-84361" title="">February 15th, 2007 at 20:45 (GMT-1)</a> </small>
+
+			<p>The short answer is the B is dead. </p>
+<p>It means nothing other than “presentational fluff”.  And thus we used to for exactly that, presentational fluff.  Whereas using a span would imply zero/neutral semantics (or that the <a href="http://microformats.org/wiki/semantic-class-names" rel="external">semantics might be in the class attribute</a>), Eric and I wanted to actually imply *negative* semantics (that these tags are purely here for presentational reasons), and thus imminently ignorable by anyone parsing the document looking for semantics.</p>
+<p>Another interpretation is that since B is dead, we have repurposed it to mean “presentational Building block”, which, once again, for document semantics, can be ignored.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-84447">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-84447" title="">February 15th, 2007 at 23:54 (GMT-1)</a> </small>
+
+			<p>Thanks a lot for the elaboration, Tantek.</p>
+<p>Your explanation leads me to another question, though.</p>
+<p>Using a &lt;b&gt;-tag means that you’re stuck with XHTML 1.0 or lower. It must have been a tough decision to make. I mean, either use an older HTML standard or break validation and have pages with validation errors.</p>
+<p>What’s the worst thing to do? <strong>Break validation or use deprecated elements?</strong></p>
+<p>I think that’s an interesting question seen in the perspective that Roger Johansson and Peter Paul Koch points out that the recent <a href="http://www.456bereastreet.com/archive/200702/the_dutch_accessibility_law_is_awesome/" rel="external" title="456 Berea St.: Dutch accessibility law is awesome">Dutch accessibility law</a> actually forbids the use of deprecated elements on government sites. </p>
+<p>What are your opinions on this?</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-84461">
+			<cite><a class="url" href="http://www.webtouch.dk" rel="external">Sune Jakobsen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-84461" title="">February 16th, 2007 at 00:21 (GMT-1)</a> </small>
+
+			<p>Using the b-tag as a building block tag is a very nice idea, that i haven’t thought of let us hope i will be a part of XHTML3.0 in the year. But until W3C defines a building block tag as a part of the standard I strongly recommend using the span tag, as i see no reason to invent a negative semantic tag, sorry! </p>
+<p>Jesper -&gt; The dutch law allows the use of validated HTML 4.01, so the b-tag is an option (i know it’s a detail, but allow me to benefit from the hours i spend reading about it :o)</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-84474">
+			<cite><a class="url" href="http://tantek.com/" rel="external">Tantek</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-84474" title="">February 16th, 2007 at 01:01 (GMT-1)</a> </small>
+
+			<p>Jesper,</p>
+<p>You asserted “you’re stuck with XHTML 1.0 or lower” – that’s kind of like saying “you’re stuck with everything that works well today”.  What precisely is the real world problem you are pointing out?</p>
+<p>How does using XHTML 1.0 break validation or use deprecated elements?  W3C for some reason left the purely presentational B tag in XHTML 1.0 Strict <em>without deprecating it</em> (probably for political reasons, I’m guessing), so rather than complain about it being there and people misusing it, we declare a new use for it that makes much more sense. And it looks like Sune has answered the other question.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-89202">
+			<cite><a class="url" href="http://webtouch.dk/runde-hj%c3%b8rner-nu-med-kant/" rel="external">webtouch.dk » Runde hjørner - nu med kant</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-89202" title="">February 22nd, 2007 at 14:41 (GMT-1)</a> </small>
+
+			<p>[…] en lille diskussion på justaddwater.dk, hvor jeg har tilladt mig at øffe lidt over man ikke bør bruge bold tags til design, så hænger […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-98814">
+			<cite>Nikolaj</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-98814" title="">March 8th, 2007 at 09:36 (GMT-1)</a> </small>
+
+			<p>Hi, </p>
+<p>I tried to use the technique described here to create rounded corners.</p>
+<p>I turned out that the code snippets are a bit incomplete, which made me seek the original technorati solution myself.</p>
+<p>One of the more crucial findings was that the following css rule is missing in the snippets:</p>
+<p>b.cn {<br/>
+        position: absolute;<br/>
+        …<br/>
+}</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-98860">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-98860" title="">March 8th, 2007 at 10:45 (GMT-1)</a> </small>
+
+			<p>@Nikolaj: Thanks a lot for reporting this. I have added the css rule and updated the post with an example page as well.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-100334">
+			<cite><a class="url" href="http://meiert.com/en/" rel="external">Jens Meiert</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-100334" title="">March 9th, 2007 at 17:58 (GMT-1)</a> </small>
+
+			<p>As long as the affected boxes are not “liquid” (and I remember that Technorati uses boxes with fix width), you may simply want to use one image for the top section (including corner top-left and top-right) and one image for the bottom section. Both can likely be applied without any markup changes (!). For example: “div” with a bottom positioned background image and “div hn” with a background image for that boxes’ heading.</p>
+<p>That solution is pretty simple (compare it to the above “+20 elements, +20 rules for a rounded corner”), doesn’t necessarily require extra-markup, and works pretty well most of the time (unless the rounded containers are very small and increased font size thus breaks them rather fast, and unless we’re talking about completely liquid boxes).</p>
+<p>So well, I highly respect Tantek’s and Eric’s expertise, but the above technique should not be used. It is general web dev “bad practice”, and one of the drawbacks will definitely be the increased cost of a later redesign (since you decided to cover over with markup rubbish). Here, the cost of solution is definitely higher than the cost of the problem …</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-100337">
+			<cite><a class="url" href="http://meiert.com/en/" rel="external">Jens Meiert</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-100337" title="">March 9th, 2007 at 18:06 (GMT-1)</a> </small>
+
+			<p>Update: I forgot to mention that I even included <a href="http://meiert.com/de/publications/books/3897214229/lib/code/abgerundete-ecken/" rel="external">Eric’s method</a> in my <a href="http://meiert.com/de/publications/books/3897214229/" rel="external">book</a>, just to present it and to point out its problems. Take a look at the source code, that by the way (and of course intentionally) uses “span” elements. You surely don’t want to do that, and you surely don’t want to maintain that by no means.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-113052">
+			<cite>Nikolaj</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-113052" title="">March 23rd, 2007 at 15:46 (GMT-1)</a> </small>
+
+			<p>Actually your example is still a bit incomplete – at least in my IE6. </p>
+<p>To repair you can append the following to the boxc b.cn rule:</p>
+<p>  line-height: 1px;<br/>
+  font-size: 1px;</p>
+<p>Regards Nikolaj</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-231408">
+			<cite><a class="url" href="http://www.cayne.ws" rel="external">Thomas Cayne</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-231408" title="">August 12th, 2007 at 05:25 (GMT-1)</a> </small>
+
+			<p>Thanks for your information on rounded corner boxes. I try to implement whatever I find to improve my learning curve. Like many people I want to get away from javascript and graphics as much as possible. However, I doubt anyone can. I found a website that lists as much rounded corner techniques as the author can. It’s <a>Smily Cat</a>. I hope this helps. So far I have only tested a few of the websites listed.</p>
+<p>Keep up the good work.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

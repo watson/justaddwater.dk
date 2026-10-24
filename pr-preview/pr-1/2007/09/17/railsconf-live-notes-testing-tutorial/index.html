@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | RailsConf Live Notes: Testing Tutorial</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/09/14/should-a-blog-have-a-privacy-policy/" rel="prev" title="Should a blog have a Privacy Policy?"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2007/09/22/railsconf-europe-2007-recap/" rel="next" title="RailsConf Europe 2007 Recap"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2007/09/17/railsconf-live-notes-testing-tutorial/" rel="canonical"/>
+<link href="https://justaddwater.dk/2007/09/17/railsconf-live-notes-testing-tutorial/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2007/09/14/should-a-blog-have-a-privacy-policy/" rel="prev">Should a blog have a Privacy Policy?</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2007/09/22/railsconf-europe-2007-recap/" rel="next">RailsConf Europe 2007 Recap</a> »</div>
+		</div>
+	
+		<div class="post" id="post-714">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2007/09/17/railsconf-live-notes-testing-tutorial/" rel="bookmark" title="Permanent Link: RailsConf Live Notes: Testing Tutorial">RailsConf Live Notes: Testing Tutorial</a></h2>
+	
+			<div class="entry">
+				<p>I’m at RailsConf Europe here in Berlin, and now attending the full-day session “<a href="http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736">Ruby (and Rails) Testing Techniques: Charity Tutorial</a> by Marcel Molina and Chad Fowler.</p>
+<p>Below are the live notes, I wrote with Mads Buus (we wrote the notes collaboratively with Google Docs, <a href="http://docs.google.com/Doc?docid=az54pw3d9f_24hsvwnt&amp;hl=en">direct link</a>).</p>
+<p class="Photo"> 	    		<a href="http://www.flickr.com/photos/jesper/1395418767/"><img alt="IMG_3392_crop" data-original-url="http://farm2.static.flickr.com/1342/1395418767_1d23095952_m.jpg" height="160" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/eef642438a7fae6d6262bda9.jpg" width="240"/></a></p>
+<p class="Photo"> 	    		<a href="http://www.flickr.com/photos/jesper/1396313456/"><img alt="IMG_3397" data-original-url="http://farm2.static.flickr.com/1411/1396313456_e999c55dfe_m.jpg" height="160" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/bcae9a9e0bac6aec57091a27.jpg" width="240"/></a></p>
+<p class="Photo"> </p>
+<ul>
+<li>     Verifying your expectations.</li>
+<li>     Guru reads the output” -testing (just printing stuff out to verify something)</li>
+<li>     Testing is better: declare your expectations.</li>
+<li>     Real value: Analysis, design process. Bonus: verification.</li>
+<li>     If something is too hard to write, you’re probably doing it wrong (design is wrong)</li>
+<li>     Red, green, refactoring. Write a test that fail, the implement until green.</li>
+<li>     Red/green testing: Write code to make testing fail… red. Then write just enough code to make test pass.</li>
+<li>     Marcel’s loops coding/testing is 1-5 minutes. Possible to work with 20 second loops</li>
+<li>No ‘Code smells’, no comments. ‘method_missing’ needs documentation</li>
+</ul>
+<p>Your code should be so simple that you shouldnt put comments in your code. If it just says “test_foo” [new team members] have to do more brain processing.</p>
+<p>Nick: think of my self as a spec writer more than a programmer</p>
+<p>Red/green refactor<br/>
+* refactor your tests before</p>
+<p>flunk “not implemented” is cool because i can see that it’s</p>
+<p>RSpec makes “not implemented” yellow so it doesn’t mix up with the red</p>
+<p>Marcel: Eventually we re all going to be small talk programmers. Ruby is the entry drug</p>
+<p>class PokerException &lt; Exception<br/>
+end<br/>
+doesnt need right now. always add later. Removed</p>
+<p>Chad: i really work in small increments</p>
+<p>Marcel: at the beginning i did “existing? tests”<br/>
+…and within 15 minutes that test becomes so non valuable.</p>
+<p>Chad: I challenge you to write long method names … at least for a day or two<br/>
+When you follow that style, your code will be cleaner and healthier</p>
+<p>Write flunking test to identify an assumptions</p><pre class="archive-code" data-repair-code="paragraph-714-15"><code>def test_all_validation_are_run
+flunk 'we probably want to create a validation test case for this'
+end</code></pre>
+<p>Chad: Have you run your other test recently?</p>
+<p>Chad: Id like to have only one test failing at a time</p>
+<p class="Photo"> 	    		<a href="http://www.flickr.com/photos/jesper/1395426465/"><img alt="IMG_3403" data-original-url="http://farm2.static.flickr.com/1192/1395426465_0bd1d6a2d0_m.jpg" height="160" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/external/2e83d6c2913730a2a0ea1be9.jpg" width="240"/></a></p>
+<p>Mads: Instead of fixing the design, we wirte more tests. Are we thinking too much about test than the code?<br/>
+Chad: now, were running into friction. and frictions tell us tu stop and think about the design</p>
+<p>— break —</p>
+<p>(my comment: the discussions her usually get into details with “business-logic”)</p>
+<p>test helper function<br/>
+card_with(options) is subverting the benefit of the tests as long as Marcel uses that in the test file only.</p>
+<p>replaced with<br/>
+validate_card_with(options)<br/>
+Card.new(options).validate<br/>
+end</p>
+<p>Later:<br/>
+validate_number_card_with(options)</p>
+<p>NumberCard.new(options).validate<br/>
+end</p>
+<p>Another point:<br/>
+card.numbers.sort_by{rand}.first</p>
+<p>Private methods in Test::Unit<br/>
+doesnt impact Test::Unit<br/>
+but the fact is that the reader of the code can ignore them below the private</p>
+<p>Chad: TDD enables you to delay difficult decisions.. … and you keep delaying them, and it ends up that you never have to take the difficult decisions</p>
+<p>def self.foo<br/>
+end<br/>
+or<br/>
+class &lt;&lt; self<br/>
+def foo<br/>
+end<br/>
+end</p>
+<p>M: Visually the latter is better. Easier to grasp overview of the class. Also when you add private methods later, there are more sections of your class</p>
+<p>AgileTalk “just print all names of your test methods” (not found by me on google)<br/>
+rake task</p>
+<p>“Test everything that could possibly break” quote by kent beck.<br/>
+That domain spsecific understanding grows over time. So if something weird with card number 11 happens, then you should probably add a test case for number 11.</p>
+<p>—-lunch break—-<br/>
+“if it’s strip poker I can see why we implement base class”</p>
+<p>$: = LOAD_PATH<br/>
+$: .unshift File.dirname(__FILE__)<br/>
+Adding current directory onto our loadpath</p>
+<p>DR. Jekyll and Mr hyde<br/>
+The good Dr. Jekyll writes a test, then laugh at Mr Hyde (the lazy programmer) and force him to implement the smallest amount of code to make it pass</p>
+<p>Incremental refactoring: Even if you are able to see more steps ahead, you should do Incremental refactoring and test on the way.</p>
+<p>Moving from low-level to high-level</p>
+<p><span style="font-weight: bold">Metrics for measuring test quality</span></p>
+<p>rake test:ratio (marcels own)<br/>
+Code to Test Ratio: 1:1.28</p>
+<p>Rcov<br/>
+issue: sometimes reports false negatives (example lines  not covered “end..end..end”)<br/>
+c0, c1, c2 coverage<br/>
+Line number counting</p>
+<p>code to Test ratio and Rcov used together is very good indicators.</p>
+<p>Heckle can go into those examaples with more loops on the same line<br/>
+if foo &amp;&amp; bar &amp;&amp; baz</p>
+<p>end<br/>
+Here Hecle will go in and modify bar until test breaks</p>
+<p>Now into the highl-level<br/>
+require ‘flexmock’<br/>
+require ‘flexmock/test_unit’<br/>
+(Jim Weirich (co?)authored it and we tend to use libraries he wrote)</p>
+<pre class="archive-code" data-repair-code="paragraph-714-45"><code>class GameTest
+attr_reader :game
+def setup
+@game = flexmock('Game')
+@dealer  = flexmock('Dealer')
+@player1 = flexmock('Player')
+@player2 = flexmock('Player')
+end</code></pre>
+<p>Chad (again): “it would be interesting to run just what you have and see what it does”</p>
+<p>player.should_receive(:join).once.ordered.with(game)<br/>
+player.should_receive(:bet).once.ordered</p>
+<p>partial mock<br/>
+from<br/>
+@game = flexmock(‘Game’)<br/>
+to<br/>
+@game = flexmock(Game.new)<br/>
+mocks if methods are not implemented.</p>
+<p>to<br/>
+@game = flexmock(Game).new_instances<br/>
+difference??</p>
+<p>—..<br/>
+fixtures<br/>
+pain to deal with, and not so explicit</p>
+<p>it makes sense to mock up and never hit the db</p>
+<p>class Person &lt; ActiveRecord::Base<br/>
+end</p>
+<p>####test file below:<br/>
+flexmock(Person).should_recdeive(:find).with(:first).and_return(admin_for)<br/>
+#… valid_person definde helper method</p>
+<p>assert_equal admin_for_company, Person.admin</p>
+<p>Marcel<br/>
+valid_user_attibutes<br/>
+create_valid_user<br/>
+create_valid_user_with_company<br/>
+#always methods parametrized to be overridden</p>
+<p>Marcel: For 2 years, fixtures made me angry with rails</p>
+<p>Chad: We only hate it because its not as good as the rest of Rails, but it’s better than what we had before</p>
+<p>===RSpec===<br/>
+Test::Unit leads to one test per method in your code</p>
+<p>Test usually takes longer.<br/>
+b vs t Behaviours versus testing: So<br/>
+<span style="font-weight: bold">=&gt; good Test Driven Development with the word “test” removed from it</span></p>
+<p>Is your name Dan, by any chance? Did you coin the term BDD, by any chance?</p>
+<p>rspec is a specification framework</p>
+<p>tools more implemented and more into textmate<br/>
+rake test:spec</p>
+<p>it [string]<br/>
+not passing a block is an unimplemented spec</p>
+<p>Its developed way more actively than Test::Unit and it’s also the tooling around it</p>
+<p>RSpec generators (general opinion) they are probably too long</p>
+<p>=== Jesper’s notes below:===</p>
+<p>Windows shortcuts for E-texteditor</p>
+<ul>
+<li>CTRL+R run test file we’re working in.</li>
+<li>CTRL+Shift+R run test in focus</li>
+<li>deft + tab “def test_ … end”</li>
+</ul>
+<p>Idea for “deft” shortcut: replace all spaces as-you-type with underscores</p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/railsconf" href="/justaddwater.dk/pr-preview/pr-1/topics/railsconf/" rel="tag">railsconf</a>, <a data-original-url="http://technorati.com/tag/berlin" href="/justaddwater.dk/pr-preview/pr-1/topics/berlin/" rel="tag"> berlin</a>, <a data-original-url="http://technorati.com/tag/marcel+molina" href="/justaddwater.dk/pr-preview/pr-1/topics/marcel-molina/" rel="tag"> marcel molina</a>, <a data-original-url="http://technorati.com/tag/chad+fowler" href="/justaddwater.dk/pr-preview/pr-1/topics/chad-fowler/" rel="tag"> chad fowler</a>, <a data-original-url="http://technorati.com/tag/testing" href="/justaddwater.dk/pr-preview/pr-1/topics/testing/" rel="tag"> testing</a>, <a data-original-url="http://technorati.com/tag/copenhagenrb" href="/justaddwater.dk/pr-preview/pr-1/topics/copenhagenrb/" rel="tag"> copenhagenrb</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, September 17th, 2007 at 17:05 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/eventsseminars/" rel="category tag">Events/seminars</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/eventsseminars/railsconf/" rel="category tag">Railsconf</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2007/09/17/railsconf-live-notes-testing-tutorial/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+
+			
+		<p class="nocomments" id="comments">Comments are closed.</p>
+
+	
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+</body></html>

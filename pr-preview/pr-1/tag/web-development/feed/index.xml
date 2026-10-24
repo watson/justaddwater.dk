@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Web Development – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/web-development/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/web-development/feed/" rel="self" type="application/rss+xml" /><item><title>Get started using advanced web fonts today</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2012/02/24/get-started-using-advanced-webfonts-today/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1580</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 24 Feb 2012 16:00:05 +0000</pubDate><description>&lt;p&gt;I saw this example on &lt;a href="http://uxcampcph.org/"&gt;a blog today&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2012/02/web-font-example.png"&gt;&lt;img alt="" class="aligncenter size-full wp-image-1581" height="106" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2012/02/web-font-example.png" title="web-font-example" width="250"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Studying the code, it turns out this is just &lt;a href="https://developers.google.com/webfonts/docs/getting_started"&gt;clever use of Google’s font api&lt;/a&gt;. What you essentially do is to add this to your &amp;lt;HEAD&amp;gt; element:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;!-- Google Fonts --&amp;gt; 
+&amp;lt;link href='&lt;a href="http://fonts.googleapis.com/css?family=Cabin Sketch:bold"&gt;http://fonts.googleapis.com/css?family=Cabin Sketch:bold&lt;/a&gt;' rel='stylesheet' type='text/css' /&amp;gt; 
+&amp;lt;style type="text/css" media="screen"&amp;gt; 
+  h1 { font-family: 'Cabin Sketch', arial, serif; } 
+  .entry-title { 
+    font-family:'Cabin Sketch'; 
+  } 
+&amp;lt;/style&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now the stylesheet referenced takes care of the rest. It’s as simple as that!&lt;/p&gt;
+&lt;h2&gt;Browser support&lt;/h2&gt;
+&lt;p&gt;The best part of this, is that it works for all modern browsers, and also for old IE versions (down to IE6).&lt;/p&gt;
+&lt;p&gt;From&lt;a href="https://developers.google.com/webfonts/faq"&gt; googles FAQ&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;What browsers are supported?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Google Web Fonts API is compatible with the following browsers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Chrome: version 4.249.4+&lt;/li&gt;
+&lt;li&gt;Mozilla Firefox: version: 3.5+&lt;/li&gt;
+&lt;li&gt;Apple Safari: version 3.1+&lt;/li&gt;
+&lt;li&gt;Opera: version 10.5+&lt;/li&gt;
+&lt;li&gt;Microsoft Internet Explorer: version 6+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Does the Google Web Fonts API work on mobile devices?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Google Web Fonts API works reliably on the vast majority of modern mobile operating systems, including Android 2.2+ and iOS 4.2+ (iPhone, iPad, iPod). Support for earlier iOS versions is limited.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2&gt;Bandwidth considerations&lt;/h2&gt;
+&lt;p&gt;One word of caution: Think twice before adding a lot of extra bytes to your web application. You should only add assets to it if it &lt;em&gt;really makes a difference for your end users!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+</description></item><item><title>GWT Developer Plugin now Works with Firefox 9</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2012/01/28/gwt-developer-plugin-now-works-with-firefox-9/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1562</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sat, 28 Jan 2012 13:38:44 +0000</pubDate><description>&lt;p&gt;(UPDATED) The GWT developer plugin has been updated to works with Firefox 9, a couple of days ago.&lt;/p&gt;
+&lt;p&gt;Its not yet officially available, but can be downloaded directly from the codebase:&lt;br/&gt;
+&lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;google-web-toolkit.googlecode.com/svn/trunk/ prebuilt folder&lt;/a&gt; in here  is the &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/gwt-dev-plugin.xpi"&gt;gwt-dev-plugin.xpi&lt;/a&gt;, and it works like a charm :)&lt;/p&gt;
+&lt;p&gt;Previously i wrote when the plugin was updated to &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/10/10/gwt-developer-plugin-for-firefox-7-is-now-ready/"&gt;work with Firefox 7 and 8&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More info in the group discussion: “&lt;a href="https://groups.google.com/group/google-web-toolkit/browse_thread/thread/8d9d369fdbfdf87e/98f045c1eb38af0d#cdb775c291719219"&gt;GWT Developer Plugin for Firefox 9&lt;/a&gt;”&lt;/p&gt;
+&lt;p&gt;What timing, as Mozilla is likely to release &lt;a href="https://wiki.mozilla.org/Releases#Firefox_10"&gt;Firefox 10 this coming Tuesday&lt;/a&gt;. For the sake of web developers that use GWT, i hope the plugin updates can come sooner in the future.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE 2012-02-02: This thread in the google group follows &lt;a href="https://groups.google.com/group/google-web-toolkit/browse_thread/thread/2a259452c849c881#"&gt;plugin development for Firefox 10&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+</description></item><item><title>GWT Developer plugin for Firefox 7 is now Ready</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/10/10/gwt-developer-plugin-for-firefox-7-is-now-ready/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1531</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 10 Oct 2011 22:18:42 +0000</pubDate><description>&lt;p&gt;&lt;strong&gt;UPDATED 2011-12-14:&lt;/strong&gt; &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;Prebuilt&lt;/a&gt; folder now contains Firefox 8 version of the GWT developer plugin.&lt;/p&gt;
+&lt;p&gt;Since Firefox 7 was released, i have defered upgrading for one simple reason: At work I am dependent on GWT Developer plugin.&lt;/p&gt;
+&lt;p&gt;Today I found the ready-to-release plugin which actually works with Firefox 7:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/&lt;/a&gt; in here  is the &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/gwt-dev-plugin.xpi"&gt;gwt-dev-plugin.xpi&lt;/a&gt;, and it works like a charm :)&lt;/p&gt;
+&lt;p&gt;(In firefox, it asks you to download. And then you can drag the downloaded .xpi back into the browser to install. Why Firefox will not instantly recognize the .xpi file is kind of strange)&lt;/p&gt;
+</description></item><item><title>Challenges Configuring Hudson Emails</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/03/10/challenges-configuring-hudson-emails/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1437</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 10 Mar 2011 21:01:03 +0000</pubDate><description>&lt;p&gt;My recent Stackoverflow question &lt;a href="http://stackoverflow.com/questions/5181502/how-to-use-hudson-parameterized-build-values-in-an-email"&gt;How to use Hudson “Parameterized Build” values in an email&lt;/a&gt; earned me the “tumbleweed” badge because it had almost no views (39 in a week), got no answers and no votes. Therefore I decided to offer 200 of my reputation points for a usable answer.&lt;/p&gt;
+&lt;p&gt;But despite the high bounty of 200 geek points, i doubt that anybody notices it: The question is buried back at fourth page, near the bottom of 193 other bounty questions.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/Bounty-Questions-Page-4-Stack-Overflow.png"&gt;&lt;img alt="" class="aligncenter size-medium wp-image-1438" height="300" sizes="(max-width: 56px) 100vw, 56px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/Bounty-Questions-Page-4-Stack-Overflow-56x300.png" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/Bounty-Questions-Page-4-Stack-Overflow-56x300.png 56w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/Bounty-Questions-Page-4-Stack-Overflow-191x1024.png 191w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/Bounty-Questions-Page-4-Stack-Overflow.png 1213w" title="Bounty Questions - Page 4 - Stack Overflow" width="56"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Of course, in case you know somebody who can help with an answer, the question is here: &lt;a href="http://stackoverflow.com/questions/5181502/how-to-use-hudson-parameterized-build-values-in-an-email"&gt;How to use Hudson “Parameterized Build” values in an email&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Easy delete all .svn Subfolders in Windows Explorer</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/03/01/easy-delete-all-svn-subfolders-in-windows-explorer/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1414</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 01 Mar 2011 10:08:51 +0000</pubDate><description>&lt;p&gt;I had to repair a flawed Subversion repository recently (not all files were committed). I had my local repository checked out. This was the flawed part, containing only parts of the folders and files it should.&lt;/p&gt;
+&lt;p&gt;Then, I got a zip file from the machine where it was working. Problem: It contained .svn folders from the other developer. So to merge these i did the following workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Delete all .svn folders from other developer’s zip&lt;/li&gt;
+&lt;li&gt;Move other developers folder over on top of my local install.&lt;/li&gt;
+&lt;li&gt;Commit all missing files&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Of course this will only work if there are no .svn folders in other developer’s file, because then svn authentication, paths, etc. will be messed up, and commit will fail.&lt;/p&gt;
+&lt;p&gt;Luckily, Sanil S (IamTechie blog) wrote a nice little script that actually adds a context menu in Windows explorer:&lt;br/&gt;
+&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg"&gt;&lt;img alt="" class="alignnone size-full wp-image-1415" height="288" sizes="(max-width: 360px) 100vw, 360px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn.jpg 360w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/03/delete-svn-300x240.jpg 300w" title="delete-svn" width="360"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1414-1"&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;delete_svn_subfolders.reg · &lt;a href="https://gist.github.com/jesperronn/848907/66427a7b4a4046e5aa0e0c2aea6b160ac34690bc"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;
+Just save this file as “delete_svn_subfolders.reg”. When you run it, then you will have the new windows explorer context menu item shown in the image.&lt;/p&gt;
+&lt;p&gt;The full script (repeated for the ones with javascript disabled:)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Windows Registry Editor Version 5.00
+;
+; Running this file will give you an extra context menu item in Windows Explorer
+; "Delete SVN folders"
+;
+; For the selected folder, it will remove all subfolders named ".svn" and their content
+; Tip from http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/
+;
+; Enrichened with comments by Jesper Rønn-Jensen ( http://justaddwater.dk/ )
+;
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]
+@="Delete SVN Folders"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]
+@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""
+&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More info:&lt;/p&gt;
+&lt;p&gt;IamTechie: &lt;a href="http://www.iamatechie.com/remove-all-svn-folders-in-windows-xp-vista/"&gt;How to remove all “.svn” folders in Windows XP &amp;amp; Vista?&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>GWT relevant snippets for IntelliJ Idea editor</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/10/05/gwt-relevant-snippets-for-intellij-idea-editor/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1361</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 05 Oct 2010 21:47:32 +0000</pubDate><description>&lt;p&gt;I created a list of snippets that I loaded into my IntelliJ editor, which I find useful when working with Google Webtoolkit (GWT). So far, it’s a very short list.&lt;/p&gt;
+&lt;p&gt;Snippet 1: Live template to bootstrap a class to use UI binder logic. Very useful when converting existing (pre gwt 2.0) Java classes to UI binder pattern, which gives better separation of logic and view.&lt;/p&gt;
+&lt;p&gt;Snippet 2: Create new UiBinder.ui.xml file. Intellij has support for creating entire new java class + uibinder file. That is useful for new classes, but most often I find myself converting an existing class, and needed this shortcut for that.&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1361-1"&gt;&lt;code&gt;/* add this to IntelliJ Idea "File&amp;gt;Settings&amp;gt; Live templates"
+ *
+ * Abbreviation: binder
+ * Group:        user
+ * Description:  GWT UiBinder bootstrapping on existing class
+ *
+ */
+
+    @com.google.gwt.uibinder.client.UiTemplate("$CLASS$.ui.xml")
+    interface Binder extends com.google.gwt.uibinder.client.UiBinder&amp;lt;com.google.gwt.user.client.ui.HTMLPanel,$CLASS$&amp;gt; {
+    }
+
+    private static Binder ourUiBinder = GWT.create(Binder.class);
+
+    //public $CLASS$() {
+    //    com.google.gwt.user.client.ui.HTMLPanel rootElement = ourUiBinder.createAndBindUi(this);
+    //}
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;com.google.gwt.template.binder.java · &lt;a href="https://gist.github.com/jesperronn/612402/79c24f9b9269c8b65c829e0bd1df0034d0805075"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;pre class="archive-code" data-recovery-code="gist-1361-2"&gt;&lt;code&gt;&amp;lt;!-- 
+  add this to IntelliJ Idea "File &amp;gt; Settings &amp;gt; File templates"
+  "Templates" tab
+  Name:      GWT UI binder
+  Extension: xml
+
+--&amp;gt;
+&amp;lt;ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'&amp;gt;
+  &amp;lt;${ROOT_TAG_NAME}&amp;gt;
+    
+  &amp;lt;/${ROOT_TAG_NAME}&amp;gt;
+&amp;lt;/ui:UiBinder&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;com.google.gwt.template.file.uibinder.xml · &lt;a href="https://gist.github.com/jesperronn/612402/79c24f9b9269c8b65c829e0bd1df0034d0805075"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt; &lt;/p&gt;
+</description></item><item><title>Explanation of Firebug Net Panel Findings</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/04/22/explanation-of-firebug-net-panel-findings/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1311</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 22 Apr 2010 13:07:11 +0000</pubDate><description>&lt;p&gt;Jan Odvarko – one of the Firebug developers – posted some very good explanations on the information available from the Firebug net panel.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" class="aligncenter size-full wp-image-1312" height="229" sizes="(max-width: 520px) 100vw, 520px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/04/firebug-1.5-netpanel-explained.png" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/04/firebug-1.5-netpanel-explained.png 520w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/04/firebug-1.5-netpanel-explained-300x132.png 300w" title="firebug-1.5-netpanel-explained" width="520"/&gt;&lt;/p&gt;
+&lt;p&gt;Here is the explanation of the detailed mouseover view when zooming in on each request:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" class="aligncenter size-full wp-image-1313" height="235" sizes="(max-width: 520px) 100vw, 520px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/04/firebug-1.5-network-tooltip.png" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/04/firebug-1.5-network-tooltip.png 520w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/04/firebug-1.5-network-tooltip-300x135.png 300w" title="firebug-1.5-network-tooltip" width="520"/&gt;&lt;/p&gt;
+&lt;blockquote cite="http://www.softwareishard.com/blog/firebug/firebug-net-panel-timings/"&gt;
+&lt;ul&gt;
+&lt;li&gt;The second request started &lt;strong&gt;109ms&lt;/strong&gt; after the start of  the first request (since the beginning of the waterfall graph).&lt;/li&gt;
+&lt;li&gt;There are two numbers for each &lt;strong&gt;request phase&lt;/strong&gt; (5  phases). The first number on the left says when the phase started within  the request. The second number on the right (closer to the phase label)  says the time needed to complete each phase. In this case, the first  three phases took zero time, and so the &lt;strong&gt;Waiting&lt;/strong&gt; phase  was the first real and it needed 32ms to complete. The &lt;strong&gt;Receiving&lt;/strong&gt; phase started in &lt;strong&gt;32nd ms&lt;/strong&gt; of the request and needed &lt;strong&gt;15ms&lt;/strong&gt; to complete&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;DOMContenLoaded&lt;/strong&gt;&lt;/em&gt; event was fired &lt;strong&gt;7ms&lt;/strong&gt; after this request started. If this number is negative the event was  fired before the request is started.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;load&lt;/strong&gt;&lt;/em&gt; event was fired &lt;strong&gt;189ms&lt;/strong&gt; after this request started. If this number is negative the event was  fired before the request is started.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are some notes about each request phase.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DNS Lookup&lt;/strong&gt;: DNS resolution time&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connecting&lt;/strong&gt;: Elapsed time required to create a TCP  connection.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Blocking&lt;/strong&gt; (not on the screenshot): Elapsed time  spent in a browser queue waiting for a network connection. Displayed  only in the case where this situation happens (see also &lt;a href="http://www.softwareishard.com/blog/firebug/page-load-analysis-using-firebug/"&gt;this  post&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sending&lt;/strong&gt;: Time needed to send request data to the  server.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Waiting&lt;/strong&gt;: Waiting for the response (till the first  byte is received from the server).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Receiving&lt;/strong&gt;: Time necessary to download response  body.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I found myself reading up on this because I did a HTML5 offline experiment, where the “&lt;a href="http://groups.google.com/group/firebug/browse_thread/thread/e920884868df9555#"&gt;HTML5  .manifest files did not appear in Firebug net panel&lt;/a&gt;”&lt;/p&gt;
+&lt;p&gt;Jan Odvarko has two excellent posts explaining most functionality of the Firebug Net panel. The two posts are highly recommendable&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.softwareishard.com/blog/firebug/firebug-net-panel-timings/"&gt;Firebug  Net Panel Timings&lt;/a&gt; (March 2010)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.softwareishard.com/blog/firebug/introduction-to-firebug-net-panel/"&gt;Introduction  to Firebug: Net Panel&lt;/a&gt; (May 2009)&lt;/li&gt;
+&lt;/ul&gt;
+</description></item><item><title>Greasemonkey Debugging Tips: How to Determine Why your Script Is Not Running</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/09/18/greasemonkey-debugging-tips-how-to-determine-why-your-script-is-not-running/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1144</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 18 Sep 2009 20:27:03 +0000</pubDate><description>&lt;p&gt;After running into some trouble with getting a Greasemonkey to work, I just wanted to share this list with you of things to look out for when your Greasemonkey script does not seem to run. What are the common pitfalls you see around. I’ll gladly add them here.&lt;/p&gt;
+&lt;p&gt;I am trying to get a Greasemonkey script to run on a page. But it does not. How do you debug scripts?&lt;br/&gt;
+What are the smallest possible baby-steps to start a new Greasemonkey script?&lt;/p&gt;
+&lt;p&gt;———-&lt;/p&gt;
+&lt;p&gt;You can alert a message:&lt;/p&gt;
+&lt;p&gt;alert(‘hello from Greasemonkey’)&lt;/p&gt;
+&lt;p&gt;if this does not work, you probably need to check if your included sites match the current URL.&lt;/p&gt;
+&lt;p&gt;For instance, I had to change from&lt;/p&gt;
+&lt;p&gt;// @include        http://www.lavpriskoekken.dk/shop/*&lt;/p&gt;
+&lt;p&gt;to&lt;/p&gt;
+&lt;p&gt;// @include        http://*lavpriskoekken.dk/shop/*&lt;/p&gt;
+&lt;p&gt;———-&lt;/p&gt;
+&lt;p&gt;You can write logs everywhere in your scripts to get better traces of what if being done in them:&lt;/p&gt;
+&lt;p&gt;GM_log(“Hello, World!”);&lt;/p&gt;
+&lt;p&gt;If this does not work, check your settings in Firebug console. Set checkmark at:&lt;br/&gt;
+* Show Chrome Errors&lt;br/&gt;
+* Show Chrome Messages&lt;/p&gt;
+&lt;p&gt;http://wiki.greasespot.net/GM%5Flog&lt;/p&gt;
+&lt;p&gt;More info: http://wiki.greasespot.net/Greasemonkey%5FManual%3AOther%5FUseful%5FTools#JavaScript%5FConsole&lt;/p&gt;
+&lt;p&gt;———-&lt;/p&gt;
+&lt;p&gt;Problem with @require statements:&lt;/p&gt;
+&lt;p&gt;Adding a line in your config like this:&lt;br/&gt;
+// @require        http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js&lt;/p&gt;
+&lt;p&gt;makes you able to use jQuery directly. Test it like so:&lt;br/&gt;
+alert(jQuery.toString() );&lt;/p&gt;
+&lt;p&gt;if that does not work, then you have probably added the @require statement after installing/creating the script. Try to uninstall the script, and then reinstall it again.&lt;/p&gt;
+</description></item><item><title>2 Must-Know HTML Table Colum Features Any Webdeveloper Should Be Aware Of</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/09/02/2-must-know-html-table-colum-features-any-webdeveloper-should-be-aware-of/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1135</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 02 Sep 2009 13:23:49 +0000</pubDate><description>&lt;p&gt;I was reading up on the good old HTML specification and discovered a feature I had always wanted — and it’s already there:&lt;br/&gt;
+Creating widths of columns that will work like percentages, but will also pay attention to any small, fixed-width columns.&lt;/p&gt;
+&lt;p&gt;Take a look at HTML’s proportional widths and amount alignment features.&lt;/p&gt;
+&lt;p&gt;Look at this from HTML specification of &amp;lt;COL&amp;gt; elements:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Authors may specify column widths in three ways:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;strong&gt;Fixed&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A fixed width specification is given in pixels (e.g., &lt;samp&gt; width&lt;/samp&gt;=”30″). A fixed-width specification enables incremental rendering.&lt;/dd&gt;
+&lt;dt&gt;&lt;strong&gt;Percentage&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;A percentage specification (e.g., &lt;samp&gt;width&lt;/samp&gt;=”20%”) is based on the percentage of the horizontal space available to the table (between the current left and right margins, including floats). Note that this space does not depend on the table itself, and thus percentage specifications enable incremental rendering.&lt;/dd&gt;
+&lt;dt&gt;&lt;strong&gt;Proportional&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;Proportional specifications (e.g., &lt;samp&gt;width&lt;/samp&gt;=”3*”) refer to portions of the horizontal space &lt;em&gt;required&lt;/em&gt; by a table. If the table width is given a fixed value via the &lt;samp&gt;width&lt;/samp&gt; attribute of the &lt;a href="http://www.w3.org/TR/html4/struct/tables.html#edef-TABLE"&gt;&lt;samp&gt;TABLE&lt;/samp&gt;&lt;/a&gt; element, user agents may render the table incrementally even with proportional columns.However, if the table does not have a fixed width, user agents must receive all table data before they can determine the horizontal space required by the table. Only then may this space be allotted to proportional columns.&lt;p&gt;&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Proportional widths! Nice. This means that you can create tables like this example (i have swapped the original HTML4 style to lowercase XHTML):&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Once the (visual) user agent has received the table’s data: the available horizontal space will be alloted by the user agent as follows: First the user agent will allot 30 pixels to columns one and two. Then, the minimal space required for the third column will be reserved. &lt;strong&gt;The remaining horizontal space will be divided into six equal portions (since 2* + 1* + 3* = 6 portions)&lt;/strong&gt;. Column four (2*) will receive two of these portions, column five (1*) will receive one, and column six (3*) will receive three.&lt;/p&gt;
+&lt;pre&gt;&amp;lt;table&amp;gt;
+&amp;lt;colgroup&amp;gt;
+  &amp;lt;col width="30"/&amp;gt;
+&amp;lt;colgroup&amp;gt;
+  &amp;lt;col width="30"/&amp;gt;
+  &amp;lt;col width="0*"/&amp;gt;
+  &amp;lt;col width="2*"/&amp;gt;
+&amp;lt;colgroup align="center"&amp;gt;
+  &amp;lt;col width="1*"/&amp;gt;
+  &amp;lt;col width="3*" align="char" char=":"/&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt; ...
+...rows...
+&amp;lt;/table&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This leaves me with one big question: How is browser support for &amp;lt;col width=”2*”&amp;gt; ????&lt;/p&gt;
+&lt;p&gt;BONUS: Did you notice the little align feature ‘align=”char” char=”:” ‘ so that you can correctly align your decimal amounts? I was not aware of that either!&lt;/p&gt;
+&lt;p&gt;More info in W3C’s HTML4 specification “&lt;a href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.4.4"&gt;Calculating the widths of columns&lt;/a&gt;“&lt;/p&gt;
+</description></item><item><title>Selection Groups in Rails made less cumbersome</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/09/01/selection-groups-in-rails-made-less-cumbersome/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1128</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 01 Sep 2009 12:50:32 +0000</pubDate><description>&lt;p&gt;I made this addition today after (once again) struggling with option groups for a nested Rails model.&lt;/p&gt;
+&lt;p&gt;My solution: create a new tag for FormOptionsHelper: grouped_select &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://gist.github.com/179075"&gt;http://gist.github.com/179075&lt;/a&gt;&lt;/p&gt;
+&lt;div&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1128-1"&gt;&lt;code&gt;### lib/form_options_helper.rb 
+require 'action_view/helpers/form_helper'
+module ActionView
+  module Helpers
+    module FormOptionsHelper
+ 
+      ##
+      def grouped_select(object, method, choices, options = {}, html_options = {})
+        InstanceTag.new(object, method, self, options.delete(:object)).to_grouped_select_tag(choices, options, html_options)
+      end
+      
+    end
+    
+    class InstanceTag
+      include FormOptionsHelper
+      def to_grouped_select_tag(choices, options, html_options)
+        html_options = html_options.stringify_keys
+        add_default_name_and_id(html_options)
+        value = value(object)
+        selected_value = options.has_key?(:selected) ? options[:selected] : value
+        disabled_value = options.has_key?(:disabled) ? options[:disabled] : nil
+        content_tag("select", add_options(grouped_options_for_select(choices, :selected =&amp;gt; selected_value, :disabled =&amp;gt; disabled_value), options, selected_value), html_options)
+      end
+ 
+    end
+    
+    class FormBuilder
+      def grouped_select(method, choices, options = {}, html_options = {})
+        @template.grouped_select(@object_name, method, choices, objectify_options(options), @default_options.merge(html_options))
+      end
+    end
+  end
+end
+
+### config/environment.rb
+require 'form_options_helper'
+
+### app/models/expense_type.rb 
+class ExpenseType &amp;lt; ActiveRecord::Base
+  validates_uniqueness_of :name
+  
+  #returns grouped options split in 'popular' and 'all'
+  def self.groups
+    all_types = self.all.map{|t| [t.name, t.id]}
+    [
+      ['popular', all_types[0..2]],
+      ['all', all_types]
+    ]
+  end
+  
+end
+
+
+### app/views/expense_report/_expense_item.rb
+&amp;lt;li class="expense_item"&amp;gt;
+  &amp;lt;%= expense.grouped_select :expense_type_id, ExpenseType.groups, {:include_blank =&amp;gt; true}, {:class =&amp;gt; 'expense_type'} %&amp;gt;
+  ...
+&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;form_options_helper_to_add_grouped_select.rb · &lt;a href="https://gist.github.com/jesperronn/179083/ed4df9fcbfa2ee5938fa70533d20f25b70a87ffd"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+</description></item></channel></rss>

@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Change history of SVN repository</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2015/03/29/easter-egg-css-circles/" rel="prev" title="Easter egg CSS circles"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2015/12/13/ruby-make-list-minimum-length/" rel="next" title="Ruby make list minimum length"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2015/04/15/change-history-of-svn-repository/" rel="canonical"/>
+<link href="https://justaddwater.dk/2015/04/15/change-history-of-svn-repository/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2015/03/29/easter-egg-css-circles/" rel="prev">Easter egg CSS circles</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2015/12/13/ruby-make-list-minimum-length/" rel="next">Ruby make list minimum length</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1759">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2015/04/15/change-history-of-svn-repository/" rel="bookmark" title="Permanent Link: Change history of SVN repository">Change history of SVN repository</a></h2>
+	
+			<div class="entry">
+				<p>Somebody asked me if it’s possible to change history of an SVN repository like you can do in Git.</p>
+<p>The easiest parts to change are:</p>
+<ul>
+<li>commit date</li>
+<li>commit log message</li>
+</ul>
+<p>With this, you can easily modify time stamps if, for instance, your svn server clock is wrong.</p>
+<h2>Step 1: Modify repository to accept property changes</h2>
+<p>Make sure your svn repository accepts property changes. (commit dates and messages are just properties which are basically unversioned).</p>
+<p>For your repository, you need to make sure the hook file `pre-revprop-change` exists, is executable and has exit code 0. An easy way is to write a file which always exists with code 0:</p>
+<p># write this file to `repository_directory/hooks/pre-revprop-change`</p>
+<blockquote>
+<pre>#!/usr/bin/env sh</pre>
+<pre>exit 0</pre>
+</blockquote>
+<h2> Step 2: change date on the revision you want:</h2>
+<p>In this example I will set the date for revision 1 to May 1st, 1981.</p>
+<blockquote>
+<pre>svn propset --revprop -r 1 svn:date <span class="pl-s1"><span class="pl-pds">"1981</span>-05-01T10:00:00.000000Z<span class="pl-pds">"</span></span></pre>
+</blockquote>
+<p>`svn propset` command will set certain properties. You can set many properties, and in this example we manipulate `svn:date`. If we want to change the log message, we can use `svn:log`.</p>
+<p>I deliberately chose a date from before SVN was made. Subversion is from 2001, so this commit is now made 20 years before SVN was out.</p>
+<h2>All combined</h2>
+<p>I created a combined script, which has has the steps mentioned above, and also iterates to change all dates in a repository:</p>
+<p> </p>
+<p> </p>
+<h3><div class="archive-gist"><pre class="archive-code" data-recovery-code="gist-1759-1"><code>#!/usr/bin/env bash
+# set -x
+# script here will create new subversion repository (file based).
+# then it will make 10 commits
+# Then we will manipulate the commit dates of the ten commits
+
+START_FOLDER=$(pwd)
+REPO=repo02
+WD=working2
+HOOKFILE=$REPO/hooks/pre-revprop-change
+# svn repository
+svnadmin create $REPO
+
+echo '#!/usr/bin/env bash' &gt; $HOOKFILE
+echo 'exit 0' &gt;&gt; $HOOKFILE
+chmod +x $HOOKFILE
+
+
+#checkout a working copy
+
+cd "$START_FOLDER"
+
+svn checkout "file://$START_FOLDER/$REPO" "$WD"
+cd "$START_FOLDER"
+cd "$WD"
+
+touch README.txt
+svn add README.txt
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+   echo "line $i" &gt;&gt; README.txt
+   svn ci -m "commit number $i (originally created $(date +"%Y-%m-%d %T"))"
+done
+
+svn update
+svn log
+</code></pre><p class="archive-code-source">svn_create.sh · <a href="https://gist.github.com/jesperronn/174cea58433d2f06968f/0c07c4a67dac3e13ebf84ba04b3d63be17818999">Original gist</a></p><pre class="archive-code" data-recovery-code="gist-1759-2"><code>#!/usr/bin/env bash
+# 
+# We have 10 commits in a repository. Lets set commit dates to May 1st, 1981-1990
+#
+# set -x
+
+START_FOLDER=$(pwd)
+WD=working2
+
+
+cd "$START_FOLDER"
+cd "$WD"
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+  YEAR=$(echo "1980 + $i" | bc )
+  svn propset --revprop -r $i  svn:date "$YEAR-05-01T10:00:00.000000Z"
+done
+
+svn update
+</code></pre><p class="archive-code-source">svn_modify.sh · <a href="https://gist.github.com/jesperronn/174cea58433d2f06968f/0c07c4a67dac3e13ebf84ba04b3d63be17818999">Original gist</a></p></div>The result</h3>
+<p>The result is a fine modified commit history which could look like this</p>
+<blockquote>
+<pre>$ svn log
+
+
+</pre>
+<p class="p1"><span class="s1">r10 | jesper | 1990-05-01 12:00:00 +0200 (Tue, 01 May 1990) | 1 line<br/>
+</span>commit number 10 (originally created 2015-04-15 22:21:35)<br/>
+————————————————————————<br/>
+r9 | jesper | 1989-05-01 12:00:00 +0200 (Mon, 01 May 1989) | 1 line<br/>
+commit number 9 (originally created 2015-04-15 22:21:34)<br/>
+————————————————————————<br/>
+r8 | jesper | 1988-05-01 12:00:00 +0200 (Sun, 01 May 1988) | 1 line<br/>
+commit number 8 (originally created 2015-04-15 22:21:33)<br/>
+————————————————————————<br/>
+r7 | jesper | 1987-05-01 12:00:00 +0200 (Fri, 01 May 1987) | 1 line<br/>
+commit number 7 (originally created 2015-04-15 22:21:32)<br/>
+————————————————————————<br/>
+r6 | jesper | 1986-05-01 12:00:00 +0200 (Thu, 01 May 1986) | 1 line<br/>
+commit number 6 (originally created 2015-04-15 22:21:31)<br/>
+————————————————————————<br/>
+r5 | jesper | 1985-05-01 12:00:00 +0200 (Wed, 01 May 1985) | 1 line<br/>
+commit number 5 (originally created 2015-04-15 22:21:30)<br/>
+————————————————————————<br/>
+r4 | jesper | 1984-05-01 12:00:00 +0200 (Tue, 01 May 1984) | 1 line<br/>
+commit number 4 (originally created 2015-04-15 22:21:29)<br/>
+————————————————————————<br/>
+r3 | jesper | 1983-05-01 12:00:00 +0200 (Sun, 01 May 1983) | 1 line<br/>
+commit number 3 (originally created 2015-04-15 22:21:28)<br/>
+————————————————————————<br/>
+r2 | jesper | 1982-05-01 12:00:00 +0200 (Sat, 01 May 1982) | 1 line<br/>
+commit number 2 (originally created 2015-04-15 22:21:27)<br/>
+————————————————————————<br/>
+r1 | jesper | 1981-05-01 12:00:00 +0200 (Fri, 01 May 1981) | 1 line<br/>
+commit number 1 (originally created 2015-04-15 22:21:26)<br/>
+————————————————————————</p>
+</blockquote>
+<h2><span style="line-height: 1.5;">More info</span></h2>
+<ul>
+<li>SVN book <a href="http://svnbook.red-bean.com/en/1.7/svn.ref.reposhooks.pre-revprop-change.html">chapter on “pre-revprop-change”</a></li>
+<li>Rooot.net “<a href="http://www.rooot.net/en/development/code/16-change-svn-commit-log-date.html">Change a SVN commit log message or date</a>“</li>
+<li>Stackoverflow: <a class="question-hyperlink" href="http://stackoverflow.com/questions/692851/can-i-go-back-and-edit-comments-on-an-svn-checkin">Can I go back and edit comments on an SVN checkin?</a></li>
+<li>Stackoverflow: <a class="question-hyperlink" href="http://stackoverflow.com/questions/633353/change-the-timestamp-of-a-svn-revision">Change the timestamp of a SVN revision</a></li>
+</ul>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Wednesday, April 15th, 2015 at 23:06 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/git/" rel="category tag">git</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2015/04/15/change-history-of-svn-repository/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+
+			
+		<p class="nocomments" id="comments">Comments are closed.</p>
+
+	
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+</body></html>

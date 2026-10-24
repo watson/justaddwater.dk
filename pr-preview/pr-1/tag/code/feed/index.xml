@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Code – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/code/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/code/feed/" rel="self" type="application/rss+xml" /><item><title>Ruby make list minimum length</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2015/12/13/ruby-make-list-minimum-length/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1781</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 13 Dec 2015 20:20:01 +0000</pubDate><description>&lt;p&gt;In a Ruby on Rails app, I wanted a list to be at least of two items. This could be done in several ways.&lt;/p&gt;
+&lt;p&gt;Here is a first naïve impementation:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+# Naïve implementation, just return whatever number I need
+def sum_up_a(existing)
+  return 2 if existing == 0
+  return 1 if existing == 1
+  return 0
+end
+
+sum_up_a(0)   # =&amp;gt; 2
+sum_up_a(1)   # =&amp;gt; 1
+sum_up_a(2)   # =&amp;gt; 0
+sum_up_a(3)   # =&amp;gt; 0
+sum_up_a(10)  # =&amp;gt; 0
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A slightly improved version could investigate number of existing, and return the diff only if needed:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+MIN_COUNT = 2
+# slightly improved with less conditionals
+def sum_up_b(existing)
+  return 0 if existing &amp;gt;= MIN_COUNT
+  MIN_COUNT - existing
+end
+
+sum_up_b(0)   # =&amp;gt; 2
+sum_up_b(1)   # =&amp;gt; 1
+sum_up_b(2)   # =&amp;gt; 0
+sum_up_b(3)   # =&amp;gt; 0
+sum_up_b(10)  # =&amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Now, my favourite. If you look at the result of “MIN_COUNT – existing”. This number is negative or zero if we dont want extra rows. This means that we can rewrite the algorithm without any conditional logic like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+# my favorite: return the biggest number either 0 or the difference
+# Works well because difference is only positive for numbers where I 
+# need some extra rows
+def sum_up_c(existing)
+  [MIN_COUNT - existing, 0].max 
+end
+
+sum_up_c(0)   # =&amp;gt; 2
+sum_up_c(1)   # =&amp;gt; 1
+sum_up_c(2)   # =&amp;gt; 0
+sum_up_c(3)   # =&amp;gt; 0
+sum_up_c(10)  # =&amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I like the latter, since too many conditional statements tend to clutter the logic. Just a short tip and a reminder for myself next time I run into this kind of problem.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Complete example gist avalilable on Github:&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1781-1"&gt;&lt;code&gt;MIN_COUNT = 2
+
+# Naïve implementation, just return whatever number I need
+def sum_up_a(existing)
+  return 2 if existing == 0
+  return 1 if existing == 1
+  return 0
+end
+
+sum_up_a(0)   # =&amp;gt; 2
+sum_up_a(1)   # =&amp;gt; 1
+sum_up_a(2)   # =&amp;gt; 0
+sum_up_a(3)   # =&amp;gt; 0
+sum_up_a(10)  # =&amp;gt; 0
+
+
+# slightly improved with less conditionals
+def sum_up_b(existing)
+  return 0 if existing &amp;gt;= MIN_COUNT
+  MIN_COUNT - existing
+end
+
+sum_up_b(0)   # =&amp;gt; 2
+sum_up_b(1)   # =&amp;gt; 1
+sum_up_b(2)   # =&amp;gt; 0
+sum_up_b(3)   # =&amp;gt; 0
+sum_up_b(10)  # =&amp;gt; 0
+
+
+# my favorite: return the biggest number either 0 or the difference
+# Works well because difference is only positive for numbers where I 
+# need some extra rows
+def sum_up_c(existing)
+  [MIN_COUNT - existing, 0].max 
+end
+
+sum_up_c(0)   # =&amp;gt; 2
+sum_up_c(1)   # =&amp;gt; 1
+sum_up_c(2)   # =&amp;gt; 0
+sum_up_c(3)   # =&amp;gt; 0
+sum_up_c(10)  # =&amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;fill_up_to.rb · &lt;a href="https://gist.github.com/jesperronn/8c5fe0d78f77adc7320f/bd3243090e2f5cea5d60b6fb9770553eb9303453"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+</description></item><item><title>Forgotten Subversion Commands, Undo, Merge Branches and More</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2012/06/28/forgotten-subversion-commands-undo-merge-branches-and-more/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1587</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 28 Jun 2012 19:42:46 +0000</pubDate><description>&lt;p&gt;In a current project I use a lot of Subversion (svn) from the command-line.&lt;/p&gt;
+&lt;p&gt;Subversion recently has lost terrain to Git for several reasons. But actually, svn is capable of doing many of the things I love from Git.&lt;/p&gt;
+&lt;p&gt;Here are some less known commands I find extremely helpful.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Undo last commit&lt;/h3&gt;
+&lt;pre&gt;svn merge -r HEAD:PREV .&lt;/pre&gt;
+&lt;p&gt;This commands merges in the changes required to go from latest version (HEAD) and back to the previous (PREV).&lt;/p&gt;
+&lt;p&gt;It also makes sense to view latest commit comment, and possibly include the revision number/description in your new commit message.&lt;/p&gt;
+&lt;pre&gt;svn log --limit 1&lt;/pre&gt;
+&lt;p&gt;After this, you should to an `svn status` and (if you are satisfied with the result), then commit:&lt;/p&gt;
+&lt;pre&gt;svn commit -m "reverted accidentally committed previous version"&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href="http://stackoverflow.com/questions/747713/subversion-retract-accidental-checkin/747758#747758"&gt;http://stackoverflow.com/questions/747713/subversion-retract-accidental-checkin/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;View files changed since last update&lt;/h3&gt;
+&lt;pre&gt;svn st -u&lt;/pre&gt;
+&lt;p&gt;The -u flag gives  an overview of &lt;strong&gt;what has been updated on the server.&lt;/strong&gt; This is what IDEs like Eclipse and IntelliJ do behind the scenes.&lt;/p&gt;
+&lt;p&gt;I have seen much confusion caused when `svn log` will not show what changed on the server. In case you need more info, then investigate the changes with&lt;/p&gt;
+&lt;pre&gt;svn log -r BASE:HEAD&lt;/pre&gt;
+&lt;p&gt;As opposed to `svn log`, this command actually shows log messages on the server.&lt;/p&gt;
+&lt;p&gt;and if you need the list of files changed:&lt;/p&gt;
+&lt;pre&gt;svn diff -r xxx:HEAD --summarize&lt;/pre&gt;
+&lt;p&gt;Where xxx represents the version number of BASE (and you can get it with `svn info`)&lt;/p&gt;
+&lt;p&gt;More info: &lt;a href="http://stackoverflow.com/questions/1444005/displaying-a-list-of-files-that-have-changed-since-last-changeset-in-svn"&gt;http://stackoverflow.com/questions/1444005/displaying-a-list-of-files-that-have-changed-since-last-changeset-in-svn&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Merge to branch from trunk&lt;/h3&gt;
+&lt;p&gt;After branching, it’s easy to keep up-to-date with changes of the trunk. Just go to the branch, and merge all from trunk, like this:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;cd branch
+svn merge ^/trunk&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;where as of Subversion 1.6, the  caret “^” is a handy annotation for the base repository url.&lt;/p&gt;
+&lt;p&gt;After this merge, you can just commit the changes with a standard comment that changes have been merge.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Merge from trunk to current branch&lt;/h3&gt;
+&lt;p&gt;In this case I want to merge all changes from trunk to a specific branch. (I am doing this daily to keep my branch updated). First step is to find the branch split point:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;$ svn log --stop-on-copy | tail -n 4
+r1769 | jesper | 2012-05-09 11:07:45 +0200 (Wed, 09 May 2012) | 1 line&lt;/pre&gt;
+&lt;pre&gt;Adding the new branch in subversion
+------------------------------------------------------------------------&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So, the revision number is “1769”, which marks the first split point of the branch.&lt;/p&gt;
+&lt;p&gt;We now have a way to target all trunk changes with a higher revision number than “1769”.&lt;/p&gt;
+&lt;p&gt;The merge command is then:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt; svn merge -r 1769:HEAD ^/trunk .&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;If that matters I am using svn 1.6.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+</description></item><item><title>GWT Developer Plugin now Works with Firefox 9</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2012/01/28/gwt-developer-plugin-now-works-with-firefox-9/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1562</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sat, 28 Jan 2012 13:38:44 +0000</pubDate><description>&lt;p&gt;(UPDATED) The GWT developer plugin has been updated to works with Firefox 9, a couple of days ago.&lt;/p&gt;
+&lt;p&gt;Its not yet officially available, but can be downloaded directly from the codebase:&lt;br/&gt;
+&lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;google-web-toolkit.googlecode.com/svn/trunk/ prebuilt folder&lt;/a&gt; in here  is the &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/gwt-dev-plugin.xpi"&gt;gwt-dev-plugin.xpi&lt;/a&gt;, and it works like a charm :)&lt;/p&gt;
+&lt;p&gt;Previously i wrote when the plugin was updated to &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/10/10/gwt-developer-plugin-for-firefox-7-is-now-ready/"&gt;work with Firefox 7 and 8&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More info in the group discussion: “&lt;a href="https://groups.google.com/group/google-web-toolkit/browse_thread/thread/8d9d369fdbfdf87e/98f045c1eb38af0d#cdb775c291719219"&gt;GWT Developer Plugin for Firefox 9&lt;/a&gt;”&lt;/p&gt;
+&lt;p&gt;What timing, as Mozilla is likely to release &lt;a href="https://wiki.mozilla.org/Releases#Firefox_10"&gt;Firefox 10 this coming Tuesday&lt;/a&gt;. For the sake of web developers that use GWT, i hope the plugin updates can come sooner in the future.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE 2012-02-02: This thread in the google group follows &lt;a href="https://groups.google.com/group/google-web-toolkit/browse_thread/thread/2a259452c849c881#"&gt;plugin development for Firefox 10&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+</description></item><item><title>Batch Screenshots with webkit2png</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2012/01/23/batch-screenshots-with-webkit2png/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1544</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 23 Jan 2012 14:00:53 +0000</pubDate><description>&lt;p&gt;For projects I sometimes have lots of screenshots which I have to repeat whenever I change subtle things in the CSS or HTML.&lt;/p&gt;
+&lt;p&gt;I ended up creating this little handy script based on webkit2png (download source)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;div&gt;#!/usr/bin/env sh
+HOST="http://localhost:8080/myproject/viewer"
+/usr/bin/python webkit2png -F -o "01dashboard" $HOST/dashboard
+/usr/bin/python webkit2png -F -o "02showdetail" $HOST/detail
+/usr/bin/python webkit2png -F -o "03listpage" $HOST/list&lt;/div&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;This created the following 3 files in my directory:&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;div&gt;$ ls -1
+01dashboard.png
+02showdetail.png
+03listpage.png&lt;/div&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;Really simple and easy to use.&lt;/div&gt;
+&lt;div&gt;It only requires you to download webkit2png script (&lt;a href="https://github.com/paulhammond/webkit2png"&gt;download on github&lt;/a&gt;).&lt;/div&gt;
+</description></item><item><title>Maven mirrorOf * in settings.xml breaks the build</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2012/01/20/maven-mirrorof-in-settings-xml-breaks-the-build/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1550</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 20 Jan 2012 21:37:59 +0000</pubDate><description>&lt;p&gt;In our maven3 pom.xml files for a particular project, we have defined a reference to an internal Nexus repository. Since we are behind a firewall, the Nexus repository also has to be mirror of the outside world. I discovered that this &lt;strong&gt;generic &amp;lt;mirrorOf&amp;gt; from my settings.xml is actually evil&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;!-- settings.xml --&amp;gt;
+&amp;lt;mirrors&amp;gt;
+  &amp;lt;mirror&amp;gt;
+    &amp;lt;id&amp;gt;insideFirewallRepo&amp;lt;/id&amp;gt;
+    &amp;lt;mirrorOf&amp;gt;*&amp;lt;/mirrorOf&amp;gt;
+    &amp;lt;name&amp;gt;Mirror of the world outside.&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://nexus_url/nexus/content/groups/public/&amp;lt;/url&amp;gt;
+  &amp;lt;/mirror&amp;gt;
+&amp;lt;/mirrors&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The reason for this being evil was our project pom files which had the following references&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;properties&amp;gt;
+  &amp;lt;nexus.url&amp;gt;http://nexus_url/nexus&amp;lt;/nexus.url&amp;gt;
+  &amp;lt;subversion.url&amp;gt;http://svn_url/svn&amp;lt;/subversion.url&amp;gt;
+&amp;lt;/properties&amp;gt;
+
+  &amp;lt;scm&amp;gt;
+    &amp;lt;connection&amp;gt;scm:svn:${subversion.url}/common-gwt-gui/trunk&amp;lt;/connection&amp;gt;
+&amp;lt;/scm&amp;gt;
+
+&amp;lt;repositories&amp;gt;
+    &amp;lt;repository&amp;gt;
+        &amp;lt;id&amp;gt;nexus-repo-releases&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;Nexus Repo&amp;lt;/name&amp;gt;
+        &amp;lt;url&amp;gt;${nexus.url}/content/groups/public/&amp;lt;/url&amp;gt;
+        &amp;lt;releases&amp;gt; &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt; &amp;lt;/releases&amp;gt;
+        &amp;lt;snapshots&amp;gt; &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt; &amp;lt;/snapshots&amp;gt;
+    &amp;lt;/repository&amp;gt;
+    &amp;lt;repository&amp;gt;
+        &amp;lt;id&amp;gt;nexus-repo-snapshots&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;Nexus Repo&amp;lt;/name&amp;gt;
+        &amp;lt;url&amp;gt;${nexus.url}/content/groups/public-snapshots/&amp;lt;/url&amp;gt;
+        &amp;lt;releases&amp;gt; &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt; &amp;lt;/releases&amp;gt;
+        &amp;lt;snapshots&amp;gt; &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt; &amp;lt;/snapshots&amp;gt;
+    &amp;lt;/repository&amp;gt;
+ &amp;lt;/repositories&amp;gt;&lt;/pre&gt;
+&lt;pre&gt;[repeat the &amp;lt;repositories&amp;gt; section for &amp;lt;pluginRepositories&amp;gt;]&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;And the same pom file contains the following &amp;lt;distributionManagement&amp;gt; section:&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;distributionManagement&amp;gt;
+    &amp;lt;repository&amp;gt;
+        &amp;lt;id&amp;gt;company.releases&amp;lt;/id&amp;gt;
+        &amp;lt;url&amp;gt;${nexus.url}/content/repositories/company/&amp;lt;/url&amp;gt;
+    &amp;lt;/repository&amp;gt;
+    &amp;lt;snapshotRepository&amp;gt;
+        &amp;lt;id&amp;gt;company.snapshots&amp;lt;/id&amp;gt;
+        &amp;lt;url&amp;gt;${nexus.url}/content/repositories/company-snapshots/&amp;lt;/url&amp;gt;
+    &amp;lt;/snapshotRepository&amp;gt;
+&amp;lt;/distributionManagement&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Finally we have the maven release-plugin, but this irrelevant for now:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;build&amp;gt;
+    &amp;lt;plugins&amp;gt;
+        &amp;lt;plugin&amp;gt;
+            &amp;lt;artifactId&amp;gt;maven-release-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;configuration&amp;gt;
+                &amp;lt;tagBase&amp;gt;${subversion.url}/project_name/releases&amp;lt;/tagBase&amp;gt;
+            &amp;lt;/configuration&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+    &amp;lt;/plugins&amp;gt;
+ &amp;lt;/build&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Error message: Using the wrong repository for snapshots&lt;/h2&gt;
+&lt;p&gt;Now, the generic mirrorOf * in settings.xml actually overrides the specific repository information we set in the pom.xml. Because of that setting, the pom.xml &amp;lt;repository&amp;gt; is not used. And the result is an error message like this. (error message enhanced in bold)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/maven-metadata
+.xml
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/maven-metadata
+.xml
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/dependency_project
+-1.18-SNAPSHOT.pom
+[WARNING] The POM for com.company:dependency_project:jar:1.18-SNAPSHOT is missing, no dependency information available
+Downloading: http://nexus_url/nexus/content/groups/public/com/company/dependency_project/1.18-SNAPSHOT/dependency_project
+-1.18-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] project_name ...................................... FAILURE [1.108s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.364s
+[INFO] Finished at: Fri Jan 20 12:28:04 CET 2012
+[INFO] Final Memory: 5M/15M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project project_name: Could not resolve dependencies for project com.company:project_name:jar:2.1.1
+3-SNAPSHOT: Could not find artifact com.company:dependency_project:jar:1.18-SNAPSHOT in &lt;strong&gt;insideFirewallRepo (http://nexus_url
+/nexus/content/groups/public/&lt;/strong&gt;) -&amp;gt; [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn &amp;lt;goals&amp;gt; -rf :project_name&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;Notice that the errormessage actually gave the ID of our &amp;lt;mirror&amp;gt; from settings.xml:
+&amp;lt;!-- settings.xml --&amp;gt;
+ &amp;lt;mirrors&amp;gt;
+   &amp;lt;mirror&amp;gt;
+     &amp;lt;id&amp;gt;&lt;strong&gt;insideFirewallRepo&lt;/strong&gt;&amp;lt;/id&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;So problem is that maven actually does not use the pom.xml settings, but we can easily fix this.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Solution: Exclude local repositories from mirrorOf *&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;We need to force Maven to use the &amp;lt;repository&amp;gt; values from the project pom.xml. And  maven can do just that, since we need to take the &amp;lt;repository&amp;gt; ids and exclude them from mirrorOf *.&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;Take the repository ids from the pom file:&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;repositories&amp;gt;
+&amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;&lt;strong&gt;nexus-repo-releases&lt;/strong&gt;&amp;lt;/id&amp;gt;&amp;lt;repository&amp;gt;
+&amp;lt;repository&amp;gt;&amp;lt;id&amp;gt;&lt;strong&gt;nexus-repo-snapshots&lt;/strong&gt;&amp;lt;/id&amp;gt;&amp;lt;repository&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;And exclude them to mirrorOf in settings.xml (add an exclamation mark in front of them). Line added enhanced in bold:&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&amp;lt;!-- settings.xml --&amp;gt;
+&amp;lt;mirrors&amp;gt;
+  &amp;lt;mirror&amp;gt;
+    &amp;lt;id&amp;gt;insideFirewallRepo&amp;lt;/id&amp;gt;
+    &amp;lt;mirrorOf&amp;gt;&lt;strong&gt;!nexus-repo-releases,!nexus-repo-snapshots,*&lt;/strong&gt;&amp;lt;/mirrorOf&amp;gt;
+    &amp;lt;name&amp;gt;Mirror of the world outside.&amp;lt;/name&amp;gt;
+    &amp;lt;url&amp;gt;http://nexus_url/nexus/content/groups/public/&amp;lt;/url&amp;gt;
+  &amp;lt;/mirror&amp;gt;
+&amp;lt;/mirrors&amp;gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Most users could probably just remove the &amp;lt;mirrors&amp;gt; block from settings.xml, but in this particular project, that is not possible since firewall blocks for access to maven central. So, in order for us to use external dependencies, we must use the &amp;lt;mirror&amp;gt; in settings.xml&lt;/p&gt;
+&lt;p&gt;Then, you could argue, to use &amp;lt;proxy&amp;gt; instead of &amp;lt;mirrors&amp;gt; in settings.xml. This may be a decent solution as well, but in my case i wanted to avoid that, since the company proxy required user/password. Our jenkins build machines would then have my username/password, and it would lock my account whenever my password expires.&lt;/p&gt;
+&lt;p&gt;Within those constraints, the &amp;lt;mirror&amp;gt; block with excluded internal repositories seems like a decent fit.&lt;/p&gt;
+&lt;p&gt;For the issues described in this article, I have been using Maven 3.0.3 and Sonatype Nexus 1.9.2&lt;/p&gt;
+</description></item><item><title>IntelliJ Structural Search to Convert from JUnit3 to Junit4</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2012/01/18/intellij-structural-search-to-convert-from-junit3-to-junit4/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1541</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 18 Jan 2012 12:37:24 +0000</pubDate><description>&lt;p&gt;Just a quick tip for intellij users. For an old project i wanted to convert JUnit 3 testcases to JUnit4 format. Most stuff was already in place, but after the conversion, i found that some of the old “assertTrue”, “assertFalse”, and “assertEquals” statements were failing.&lt;/p&gt;
+&lt;p&gt;So i ended up with some short search/replace, which are really handy in IntelliJ.&lt;/p&gt;
+&lt;h2&gt;Replace “assertTrue” and “assertFalse” with “assertThat”&lt;/h2&gt;
+&lt;p&gt;Search template&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;assertTrue($msg$, $actual$);&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Replacement template:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;org.junit.Assert.assertThat.assertThat($msg$, $actual$, org.hamcrest.core.Is.is(true));&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Remove “assertEquals” with delta values&lt;/h2&gt;
+&lt;p&gt;Search template&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;assertEquals($msg$, $expected$, $actual$, $delta$);&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Replacement template:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;org.junit.Assert.assertThat($msg$, $actual$, org.hamcrest.core.Is.is($expected$));&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Optional Replace “assertEquals” with “assertThat”&lt;/h2&gt;
+&lt;p&gt;Search template&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;assertEquals($msg$, $expected$, $actual$);&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Replacement template:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;org.junit.Assert.assertThat.assertThat($msg$, $actual$, org.hamcrest.core.Is.is($expected$));&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat.png"&gt;&lt;img alt="" class="aligncenter size-medium wp-image-1542" height="247" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat-300x247.png" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat-300x247.png 300w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2012/01/intellij-structural-search-assertequals-replace-by-assertThat.png 714w" title="intellij-structural-search-assertequals-replace-by-assertThat" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>GWT Developer plugin for Firefox 7 is now Ready</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/10/10/gwt-developer-plugin-for-firefox-7-is-now-ready/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1531</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 10 Oct 2011 22:18:42 +0000</pubDate><description>&lt;p&gt;&lt;strong&gt;UPDATED 2011-12-14:&lt;/strong&gt; &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;Prebuilt&lt;/a&gt; folder now contains Firefox 8 version of the GWT developer plugin.&lt;/p&gt;
+&lt;p&gt;Since Firefox 7 was released, i have defered upgrading for one simple reason: At work I am dependent on GWT Developer plugin.&lt;/p&gt;
+&lt;p&gt;Today I found the ready-to-release plugin which actually works with Firefox 7:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/"&gt;http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/&lt;/a&gt; in here  is the &lt;a href="http://google-web-toolkit.googlecode.com/svn/trunk/plugins/xpcom/prebuilt/gwt-dev-plugin.xpi"&gt;gwt-dev-plugin.xpi&lt;/a&gt;, and it works like a charm :)&lt;/p&gt;
+&lt;p&gt;(In firefox, it asks you to download. And then you can drag the downloaded .xpi back into the browser to install. Why Firefox will not instantly recognize the .xpi file is kind of strange)&lt;/p&gt;
+</description></item><item><title>Java Friday Fun: @WTF annotations in code</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/09/16/java-friday-fun-wtf-annotations-in-code/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1492</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 16 Sep 2011 20:52:08 +0000</pubDate><description>&lt;p&gt;Time for a little geeky gimmick. Some developers see and express a lot of “WTF??” while trying to understand code&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg"&gt;&lt;img alt="" class="aligncenter size-medium wp-image-1493" height="282" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm-300x282.jpg 300w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2011/09/focus-shift-cartoon-wtf-per-minute-wtfm.jpg 500w" title="focus-shift-cartoon-wtf-per-minute-wtfm" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;IN this spirit, i created a quick @WTF annotation for Java.&lt;/p&gt;
+&lt;p&gt;Besides being completely useless (its removed at compile time), its only purpose is to give developers a new way to express themselves in code.&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1492-1"&gt;&lt;code&gt;@Retention(RetentionPolicy.SOURCE)
+@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.LOCAL_VARIABLE})
+public @interface WTF {
+
+    /**
+     * Optionally specify &amp;lt;code&amp;gt;explain&amp;lt;/code&amp;gt;, and write why you dont understand this annotated element
+     */
+    String explain() default "";
+
+    /**
+     * Optionally add &amp;lt;code&amp;gt;explanation&amp;lt;/code&amp;gt;, and to explain why and how the element should be used
+     */
+    @Deprecated
+    String  explanation() default "";
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;WTF.java · &lt;a href="https://gist.github.com/jesperronn/1222965/75b3c000966a9920c2c58e29421ee37256038550"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;The cartoon states “The only valid measurement of code quality: WTFs/minute”. With the &amp;lt;code&amp;gt;@WTF&amp;lt;/code&amp;gt; annotations, I would like to take it a little further. By annotating the code, you can actually encourage colleagues to help you fix it.&lt;/p&gt;
+&lt;p&gt;The best fix for WTF-code is of course to refactor, so that it becomes readable.&lt;/p&gt;
+&lt;p&gt;Interesting article:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.gridshore.nl/2008/03/29/how-wtfs-improve-code-quality-awareness/"&gt;http://www.gridshore.nl/2008/03/29/how-wtfs-improve-code-quality-awareness/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The original cartoon strip:  &lt;a href="http://www.osnews.com/story/19266/WTFs_m"&gt;http://www.osnews.com/story/19266/WTFs_m&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Windows SVN pre-commit-hook</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/06/10/windows-svn-pre-commit-hook/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1354</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 10 Jun 2010 08:23:32 +0000</pubDate><description>&lt;p&gt;At a current project I work on, we use a Windows server to run our subversion repository. &lt;/p&gt;
+&lt;p&gt;I wanted to set up the pre-commit hook so that commits with empty comment are automatically rejected.&lt;/p&gt;
+&lt;p&gt;All commit-hook example files that go with Subversion are written in bash (as unix servers tend to be the normal). &lt;/p&gt;
+&lt;p&gt;Here is a the pre-commit hook rewritten as a windows .bat file.&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1354-1"&gt;&lt;code&gt;REM Subversion pre-commit hook for Windows machine
+REM put this in your SVN repository folder /hooks/pre-commit.bat
+REM we use it with svn version 
+REM http://stackoverflow.com/questions/869248/windows-pre-commit-hook-for-comment-length-subversion
+
+@echo off  
+:: Stops commits that have empty log messages.        
+@echo off  
+
+setlocal  
+
+rem Subversion sends through the path to the repository and transaction id  
+set REPOS=%1  
+set TXN=%2           
+
+rem line below ensures at least one character ".", 5 characters require change to "....."
+svnlook log %REPOS% -t %TXN% | findstr . &amp;gt; nul  
+if %errorlevel% gtr 0 (goto err) else exit 0  
+
+:err  
+echo. 1&amp;gt;&amp;amp;2  
+echo Your commit has been blocked because you didn't enter a comment. 1&amp;gt;&amp;amp;2  
+echo Write a log message describing the changes made and try again. 1&amp;gt;&amp;amp;2
+echo Thanks 1&amp;gt;&amp;amp;2
+exit 1
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;pre-commit.bat · &lt;a href="https://gist.github.com/jesperronn/432704/ba29b920034d1a997b119a13740e9e1458f43455"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+</description></item><item><title>Seeding Rails App With RESTful Address Data</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2010/04/28/seeding-rails-app-with-restful-address-data/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1341</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 28 Apr 2010 10:55:26 +0000</pubDate><description>&lt;p&gt;Grabbing data from Restful webservices has never been easier. I use this code in the Rails /db/seeds.rb file to grab data from the Danish webservice with addresses, municipalities, regions, etc.&lt;/p&gt;
+&lt;p&gt;I decided to import the data into a local database to ensure it could work offline.&lt;/p&gt;
+&lt;p&gt;Code from &lt;code&gt;/db/seeds.rb&lt;/code&gt; file:&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1341-1"&gt;&lt;code&gt;# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+
+class Seeds
+  require 'httparty'
+  include HTTParty
+  base_uri 'oiorest.dk/danmark/'
+end
+
+Kommune.delete_all
+
+regioner = Seeds.get('/regioner')['regioner']['region']
+Region.transaction do 
+  Region.delete_all
+  regioner.each do |item| 
+    r = Region.new(:name =&amp;gt; item['navn'])
+    r.id = item['nr']
+    r.save
+  end
+end
+
+Region.all.each do |r|
+  kommuner = Seeds.get("/regioner/#{r.id}/kommuner")['kommuner']['kommune']
+  Kommune.transaction do
+    kommuner.each do |item|
+      k = Kommune.new( :name =&amp;gt; item['navn'])
+      k.region_id = r.id 
+      k.id = item['nr']
+      k.save
+    end
+  end
+  
+end&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;seeds.rb · &lt;a href="https://gist.github.com/jesperronn/382105/0926b27e975e0235b88db895c57f89ff5a746129"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Now I can access municipalities in a grouped selectbox like so in the view code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;%
+ options = option_groups_from_collection_for_select(Region.all, :kommuner, :name, :id, :name) 
+%&amp;gt;
+
+&amp;lt;%=
+ f.select("kommune_id", options, {}, {:class =&amp;gt; "short"}) 
+%&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The final result rendered in the user interface:&lt;br/&gt;
+&lt;img alt="" class="aligncenter size-full wp-image-1343" height="253" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2010/04/Screen-shot-2010-04-28-at-3.18.06-PM.png" title="Rails rendered optgroup selectbox" width="286"/&gt;&lt;/p&gt;
+&lt;p&gt;This code is based on Rails 2.3.5.&lt;/p&gt;
+</description></item></channel></rss>

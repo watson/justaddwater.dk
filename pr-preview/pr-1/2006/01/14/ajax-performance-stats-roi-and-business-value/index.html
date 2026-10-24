@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | AJAX performance stats, ROI, and business value</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/01/14/ajax-performance-stats-roi-and-business-value/feed/" rel="alternate" title="justaddwater.dk » AJAX performance stats, ROI, and business value Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/01/12/blog-software-usability/" rel="prev" title="WordPress Dashboard improvements: Five things I’d like my blog software to do"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/01/15/user-experience-clear-and-easy-to-use-definition-needed/" rel="next" title="User Experience. Clear and easy-to-use definition needed"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/01/14/ajax-performance-stats-roi-and-business-value/" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/01/14/ajax-performance-stats-roi-and-business-value/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2006/01/12/blog-software-usability/" rel="prev">WordPress Dashboard improvements: Five things I’d like my blog software to do</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2006/01/15/user-experience-clear-and-easy-to-use-definition-needed/" rel="next">User Experience. Clear and easy-to-use definition needed</a> »</div>
+		</div>
+	
+		<div class="post" id="post-71">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2006/01/14/ajax-performance-stats-roi-and-business-value/" rel="bookmark" title="Permanent Link: AJAX performance stats, ROI, and business value">AJAX performance stats, ROI, and business value</a></h2>
+	
+			<div class="entry">
+				<p>How do you build a system that can deliver and update content to 100,000 people simultaneously? Via <a href="http://ajaxian.com/?p=735" title="Ajax Reduces Load on MacRumors.com Servers">Ajaxian.com</a> I saw this article from MacRumors on what traffic they got when Steve Jobs delivered his keynote on MacWorld a few days ago.</p>
+<blockquote><p>On January 10th, 2006, <a href="http://www.macrumors.com/">MacRumors.com</a> successfully delivered live updates of the Macworld San Francisco  Keynote speech to over 100,000 people  simultaneously using the  latest web technologies.</p>
+<p style="margin-left: 2em; margin-right: 2em; font-size: smaller"><em>“By far the best mac keynote coverage I have ever seen. No constant page refreshing. No ‘page will update every three minutes’ even though they never do. I just let the page update every minute like it was supposed to. It was actually weird to get coverage without some sort of connection failure.” – MacRumors member, war</em></p>
+</blockquote>
+<p>The live coverage web solution is basically a transscript updated frequently during the keynote. One article is about the <a href="http://www.macrumors.com/events/mwsf2006-stats.php" title="MacRumors.com's Webcast Stats during the Macworld San Francisco 2006 Keynote">traffic they experienced</a>:</p>
+<blockquote><p>Our site was linked to widely across the web, including prominent links from <a href="http://www.digg.com/">Digg</a> and <a href="http://www.slashdot.org/">Slashdot</a> — two popular technology sites.   These links caused no noticable “spike” in our number of visitors, illustrating the magnitude of traffic that <em>MacRumorsLive</em> was already receiving.</p>
+<p>We peaked at approximately <strong>103,000</strong> simultaneous web visitors and <strong>6,000</strong> IRC viewers during the  Keynote speech and transmited over <strong>32 GB</strong> of data in a three hour period.  If not for  the  efficiency of the <em>MacRumorsLive</em> AJAX update system, the same webcast would have required approximately twice as many servers and would have had to transfer almost 6 times as much data (196 GB).</p></blockquote>
+<p>With peak loads that reaches insane levels of almost 4,000 hits per second:</p>
+<blockquote>
+<table>
+<tbody><tr>
+<td>Hits/second <sup>(2)</sup></td>
+<td>3,812</td>
+</tr>
+<tr>
+<td>IRC users</td>
+<td>6,079</td>
+</tr>
+<tr>
+<td>Simultaneous visitors</td>
+<td>109,000</td>
+</tr>
+<tr>
+<td>Bandwidth <sup>(3)</sup></td>
+<td>approx. 77Mbit/sec</td>
+</tr>
+</tbody></table>
+</blockquote>
+<div align="center">
+<pre id="line1"><a class="imagelink" href="http://www.macrumors.com/events/mwsf2006-stats.php" title="MacWorld keynote hits graph (from macrumors.com)"><img alt="MacWorld keynote hits graph (from macrumors.com)" height="235" id="image72" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2006/01/hits-20060110.gif" width="480"/></a></pre>
+</div>
+<div align="center"><span class="start-tag"><span class="start-tag">Hits per second from ~8am to ~12:30pm. Average over each minute.</span></span></div>
+<p>They also posted an article about <a href="http://www.macrumorslive.com/about/" title="MacRumorsLive.com: EQX Webcast System">how they built the system</a> which is insanely interesting</p>
+<blockquote><p>Traditionally, websites have coped with visitors during the keynotes by swapping to text-only pages, using HTML Meta Refresh to reload the page at set intervals, usually every three minutes, for example, <a href="http://www.macrumors.com/events/mwsf2005.html" target="_blank">MacRumors’ coverage from MacWorld in January 2005</a>. As a result, the sites lose their identity and branding, and cannot make best use of the additional traffic for site promotion.</p>
+<p>Even with all this simplification the sheer number of visitors can still take the server down. To provide the best coverage during live events an improved system is required.</p></blockquote>
+<blockquote><p>As this system is retaining the normal layout of the site, all the necessary objects (CSS, images &amp; Javascript) also need to be loaded. This increases the load placed on the web servers considerably in comparison to the old system, which only had a single text file to display. Even with the ability to use multiple servers, the web server software needs to be improved.</p>
+<p>By using <a href="http://www.php.net/" target="_blank">PHP</a> to generate the necessary HTML &amp; XML files every ten seconds, rather than each time the file is requested, it is possible to use small &amp; simple web servers to deliver the public site, without the overhead of database usage. Two web server software packages are employed – <a href="http://www.lighttpd.net/" target="_blank">lighttpd</a> and <a href="http://www.acme.com/software/thttpd/" target="_blank">thttpd</a> – with <a href="http://httpd.apache.org/" target="_blank">Apache</a> still being used for the administration interface.</p>
+<p>The efficiency of these packages over Apache is considerable and allows quite modest hardware to be used to serve a large number of visitors. Benchmarks of lighttpd compared to various other packages can be found on <a href="http://www.lighttpd.net/benchmark/" target="_blank">their website</a>. In our tests, thttpd was able to sustain in excess of 3,300 hits per second, whereas Apache managed only 600 hits per second for 20 seconds, before overloading the server due to memory usage. [1]</p>
+<p>The use of these more specialised web servers allows a vast number of simultaneous visitors to be supported – as the system stands at the moment, in excess of 200,000.</p></blockquote>
+<p>This reminds me of Ajaxinfo (the guys behind <a href="http://blogs.ebusiness-apps.com/andre/?p=52">AJAX usability metrics</a>), <strong><a href="http://www.ajaxinfo.com/default~viewart~18.htm">AJAX ROI faceoff</a>,</strong> where a traditional webapp is compared to an AJAX webapp. For the visually oriented, there is a video comparing the two applications at the end of the article.</p>
+<blockquote><p>Recently on Developer.com, I looked at ways for developers to <a href="http://www.developer.com/xml/article.php/3554271">communicate the value of Ajax</a> in dollars and cents. Arguing for or against a technology usually creates some stress for developers, who tend to speak a different language from business decision makers.</p>
+<table border="0" cellpadding="5" width="100%">
+<tbody><tr align="center" bgcolor="#f0f0f0">
+<td><strong>Developers talk about</strong><p></p>
+<div align="left">
+<ul>
+<li>Usability</li>
+<li>Bandwidth</li>
+<li>Ramp-up</li>
+<li>Cost of Ownership</li>
+</ul>
+</div>
+</td>
+<td><strong>Managers talk about</strong><p></p>
+<div align="left">
+<ul>
+<li>Efficiency</li>
+<li>Transaction costs</li>
+<li>Training costs</li>
+<li>Return on Investment (ROI)</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p>Right at the point. Performance website or not, the metrics he mentions above are almost like something Jakob Nielsen could have done. Conclusions:</p>
+<blockquote><p>Although every new technology should be greeted with a healthy amount of skepticism, there are clearly demonstrable, quantifiable advantages to using an Ajax architecture in a Web application. These cost savings originate primarily from time savings, but also from reductions in bandwidth requirements.</p>
+<p>A representative test case showed that a business can save between 500 and 2,800 man hours per year on a 10-step hypothetical process, saving roughly 4 seconds per step (a between 30% and 70% reduction in labor costs).</p>
+<p>Although the benefits of improved application architecture extend beyond mere time savings, when included in the decision making process, an ROI approach such as this can help make a solid business case for Ajax.</p></blockquote>
+<p align="center"><img alt="Total time taken (AJAX vs traditional webapp)" height="241" id="image73" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2006/01/totaltimetaken.gif" width="300"/><img alt="Total bytes transferred (AJAX vs traditional webapp)" height="241" id="image74" src="/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2006/01/bytestransferred.gif" width="300"/></p>
+<p>The benefits listed here are very similar to benefits when we’re arguing for web-standards: Reduced bandwith, training costs, cost of ownership, and increased return on investment. But for the time being I still believe that AJAX has increased learning costs for developers. (Although most developers are really keen on using AJAX and webstandards it still requires expert knowledge regarding libraries, backend integration and browser compatibility — to name a few).<br/>
+I’d be happy to hear your comments on this. Please share more info here. Also check out Ajaxinfo’s <a href="http://www.ajaxinfo.com/default~viewart~22.htm">Call for AJAX Studies</a>.</p>
+<p><strong>UPDATE:  </strong>Just saw Jonathan Boutelle’s <a href="http://www.jonathanboutelle.com/mt/archives/2006/01/bandwidth_savin.html" title="Jonathan Boutelle: Bandwith Savings with AJAX">Bandwidth Savings with AJAX</a> blog post, that covers the same story and has a good point on AJAX fit frequently used applications:</p>
+<blockquote><p>The old-school RIA technology vendors always made the claim that using the RIA paradigm saves you bandwidth. Numbers on this were always hard to get, and hard to trust.</p>
+<p>Theoretically it always made sense that an RIA would consume less bandwidth (in exchange for a larger initial download). The longer a user continues to use the application, the greater this benefit (so an RIA word processor might make more sense than an RIA news site).</p>
+<p>Now, watching a keynote presentation takes at least an hour, so it’s definitely long enough to provide benefit. What we see in this case is really different though: AJAX is basically being used as a <em>broadcast technique</em>, grabbing new data every minute so that the user doesn’t have to refresh the entire page. For covering live events that have a large audience, this makes a ton of sense. Expect to see more content sites “pushing” content out to their users this way.</p></blockquote>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/macrumor" href="/justaddwater.dk/pr-preview/pr-1/topics/macrumor/" rel="tag">macrumor</a>, <a data-original-url="http://technorati.com/tag/ajax" href="/justaddwater.dk/pr-preview/pr-1/topics/ajax/" rel="tag"> ajax</a>, <a data-original-url="http://technorati.com/tag/performance" href="/justaddwater.dk/pr-preview/pr-1/topics/performance/" rel="tag"> performance</a>, <a data-original-url="http://technorati.com/tag/ajaxian" href="/justaddwater.dk/pr-preview/pr-1/topics/ajaxian/" rel="tag"> ajaxian</a>, <a data-original-url="http://technorati.com/tag/macworld" href="/justaddwater.dk/pr-preview/pr-1/topics/macworld/" rel="tag"> macworld</a>, <a data-original-url="http://technorati.com/tag/architecture" href="/justaddwater.dk/pr-preview/pr-1/topics/architecture/" rel="tag"> architecture</a>, <a data-original-url="http://technorati.com/tag/webdevelopment" href="/justaddwater.dk/pr-preview/pr-1/topics/webdevelopment/" rel="tag"> webdevelopment</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Saturday, January 14th, 2006 at 00:10 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/ajax/" rel="category tag">AJAX</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/best-of-justaddwater/" rel="category tag">Best of Justaddwater</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/businesscase/" rel="category tag">Businesscase</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/performance/" rel="category tag">Performance</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/usability/" rel="category tag">Usability</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/" rel="category tag">Web Standards</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/web-statistics/" rel="category tag">Web Statistics</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2006/01/14/ajax-performance-stats-roi-and-business-value/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">19 Responses to “AJAX performance stats, ROI, and business value”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-68">
+			<cite><a class="url" href="http://blogs.ebusiness-apps.com/andre" rel="external">Andre Charland</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-68" title="">January 14th, 2006 at 01:22 (GMT-1)</a> </small>
+
+			<p>Great post Jesper!  I’m glad to see the conversation around performance and usability metrics is evolving and going deeper!  I think things will get exciting this year as more main stream developers and managers start grasping these concepts.</p>
+<p>I’d like to offer both you and Thomas free copies of our AJAX components and betas as our suite evolves in 2006.  Please email me acharland [at] ebusinessapps [dot] com and I’ll get them over to you.</p>
+<p>Keep up the great blog and be sure to let us know about your case studies!</p>
+<p>Andre.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-71">
+			<cite><a class="url" href="http://visitjesper.homeip.net" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-71" title="">January 14th, 2006 at 14:14 (GMT-1)</a> </small>
+
+			<p>Andre,<br/>
+thanks for the flattering words. I’ll send you a mail with contact details. Thomas and I would love to check out your suite (but of course we cannot guarantee to use it).</p>
+<p>I really hope your foresight comes true regarding more AJAX and usability metrics. Presently, I think that the material your company posted is very good and can probably serve as a template for anybody that want to document performance of AJAX applications.</p>
+<p>So back to you: YOU keep up the good work!</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-75">
+			<cite><a class="url" href="http://www.webword.com/2006/01/15/ajax-performance-stats-roi-and-business-value/" rel="external">WebWord » Blog Archive » AJAX performance stats, ROI, and business value</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-75" title="">January 15th, 2006 at 15:11 (GMT-1)</a> </small>
+
+			<p>[…] Is Ajax a smart move? (Source: JustAddWater.dk, Authos: Jesper Rønn-Jensen) — The benefits listed here are very similar to benefits when we’re arguing for web-standards: Reduced bandwith, training costs, cost of ownership, and increased return on investment. But for the time being I still believe that AJAX has increased learning costs for developers.” […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-76">
+			<cite><a class="url" href="http://visitjesper.homeip.net" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-76" title="">January 15th, 2006 at 22:38 (GMT-1)</a> </small>
+
+			<p>Just to clarify my opinion: I still AJAX is a smart move. There are significant productivity benefits (as documented) when <em>using</em> an AJAX application. </p>
+<p>My point is that the development costs may be increased because of learning costs and that this extra cost should not be ignored.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-453">
+			<cite><a class="url" href="http://visitjesper.homeip.net" rel="external">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-453" title="">February 3rd, 2006 at 11:40 (GMT-1)</a> </small>
+
+			<p>For the techies, there are some good hands-on tips from Alexander Kirk:<br/>
+10 Realistic Steps to a Faster Website<br/>
+<a href="http://alexander.kirk.at/2006/02/02/10-steps-to-a-faster-web-site/" rel="external">http://alexander.kirk.at/2006/02/02/10-steps-to-a-faster-web-site/</a></p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-954">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/02/08/ajax-businesscase/">justaddwater.dk | AJAX businesscase: Reduce development costs and increase usability</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-954" title="">February 8th, 2006 at 12:07 (GMT-1)</a> </small>
+
+			<p>[…] As a followup to my earlier post “AJAX performance stats, ROI, and business value“, I decided that I’d share with you some considerations on a recent project I was involved in. I can’t give you all the juicy details, and I might never be able to show you the final solution or tell, who the customer is. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-959">
+			<cite><a class="url" href="http://ajaxian.com/archives/ajax-case-study-simple-validations-reduce-costsincrease-usability" rel="external">Ajaxian » Ajax Case Study - Simple Validations Reduce Costs/Increase Usability</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-959" title="">February 8th, 2006 at 21:24 (GMT-1)</a> </small>
+
+			<p>[…] In a follow-up to his previous post, Jesper Rønn-Jensen looks yet again at business uses of Ajax technologies – specifically a case study looking at one of his recent usability issues. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-1020">
+			<cite><a class="url" href="http://ramblings.nohype.de" rel="external">kai</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-1020" title="">February 10th, 2006 at 15:51 (GMT-1)</a> </small>
+
+			<p>Thanks for giving such a detailed view on that matter.<br/>
+It is always nice to have that kind of information in one place and your blog post provides a nive overview of the possibilites that lie ahead.</p>
+<p>I especially liked the fact that this high-performance system also stretched to the design of the webserver platform. I guess that AJAX saves enough bandwidth to increase the speed and application reaction for smaller sites and AJAX is a big step in the right direction. But it seems to me that also the combination of lighttpd and thttpd did a lot for the user experience in this scenario. And it’s nice that you take it all into account.</p>
+<p>So Jonathan is definitely right in pointing out that “For covering live events that have a large audience, this makes a ton of sense”, but that this goes even beyond AJAX…</p>
+<p>Just my 2cents</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-1225">
+			<cite><a class="url" href="http://ntschutta.com/jat/?p=86" rel="external">ntschutta.com</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-1225" title="">February 21st, 2006 at 04:01 (GMT-1)</a> </small>
+
+			<p><strong>The Upside of Ajax</strong></p>
+<p>	Near as I can tell, none of the major Ajax sites have referenced Tim Bray’s piece entitled The Real AJAX Upside.  Tim hits on some of my company’s reasons for adding Ajax to our applications – it makes them perform better (or, more precise…</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-33372">
+			<cite><a class="url" href="/justaddwater.dk/pr-preview/pr-1/2006/10/14/happy-birthday/">justaddwater.dk | Happy Birthday Justaddwater :)</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-33372" title="">November 29th, 2006 at 15:40 (GMT-1)</a> </small>
+
+			<p>[…] AJAX performance stats, ROI, and business value […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-416187">
+			<cite><a class="url" href="http://www.intrasoft-spb.ru/en/index.html" rel="external">amp</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-416187" title="">May 5th, 2008 at 11:39 (GMT-1)</a> </small>
+
+			<p>We came across serious performance problem in some of our projects. After reading this information we made design to rewrite some of functions with help of AJAX. Intermediate results show that “bottle-neck” almost disappear.  Thanks a lot!</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-457198">
+			<cite><a class="url" href="http://business-glossary.com/" rel="external">Sanjeev</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-457198" title="">November 24th, 2008 at 07:35 (GMT-1)</a> </small>
+
+			<p>The Microsoft AJAX Library 3.5 is a standalone collection of the standards-based JavaScript classes that are automatically included when using ASP.NET AJAX in ASP.NET 3.5 SP1. It is supported by the most popular browsers and can be used to build client-centric Web applications without using ASP.NET.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-486298">
+			<cite><a class="url" href="http://www.just-pens.co.uk" rel="external">Just Pens</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-486298" title="">May 15th, 2009 at 12:01 (GMT-1)</a> </small>
+
+			<p>Wow.  That is some traffic that was received there.  Most servers would bottom out with that amount of load in such a short space of time.  I think the technology that is available is improving drastically.</p>
+<p>I still see mixed opinions whether the internet is getting over stretched or not.  Some say it’s all speculation whilst other experts say there’s a real possibility that the internet could bottom out due to excessive load.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-486442">
+			<cite><a class="url" href="http://www.countlesswastedhours.com" rel="external">Tech Blog</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-486442" title="">May 18th, 2009 at 13:49 (GMT-1)</a> </small>
+
+			<p>I had no idea that Ajax could produce such a reduction in bandwidth – gonna have to learn more about it for sure.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-487536">
+			<cite><a class="url" href="http://www.gelsenpv.de" rel="external">Toni</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-487536" title="">July 16th, 2009 at 14:26 (GMT-1)</a> </small>
+
+			<p>Hey Jesper!<br/>
+Thanks for this words. I never relized that it could produce such a reduction, too. Very interesting thou.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-487615">
+			<cite><a class="url" href="http://www.cafepress.com/iberikus/6341205" rel="external">namaste tshirt</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-487615" title="">July 21st, 2009 at 05:17 (GMT-1)</a> </small>
+
+			<p>I think everyone should go to college and get a degree and then spend six months as a bartender and six months as a cabdriver. Then they would really be educated.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-487646">
+			<cite><a class="url" href="http://everybodys-darling.com/" rel="external">Trend Scout</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-487646" title="">July 23rd, 2009 at 14:36 (GMT-1)</a> </small>
+
+			<p>Thanks for sharing this!<br/>
+I bookmarked this page because your post is knowledgeable.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-488698">
+			<cite><a class="url" href="http://publicdomainprogress.info" rel="external">Donnie</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488698" title="">August 29th, 2009 at 17:56 (GMT-1)</a> </small>
+
+			<p>Nice Info Jesper!<br/>
+Yes, I believe it’s totallly insane with almost 4,000 hits/second and still in the good performance ..<br/>
+seems this AJAX suits for many dev and  mgrs.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-488799">
+			<cite><a class="url" href="http://www.zoomprofit.info/" rel="external">adiw</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488799" title="">September 1st, 2009 at 21:02 (GMT-1)</a> </small>
+
+			<p>I especially liked the fact that this high-performance system also stretched to the design of the webserver platform. I guess that AJAX saves enough bandwidth to increase the speed and application reaction for smaller sites and AJAX is a big step in the right direction. But it seems to me that also the combination of lighttpd and thttpd did a lot for the user experience in this scenario. And it’s nice that you take it all into account.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

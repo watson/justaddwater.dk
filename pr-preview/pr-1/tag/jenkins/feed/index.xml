@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>jenkins – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/jenkins/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/tag/jenkins/feed/" rel="self" type="application/rss+xml" /><item><title>Count number of jobs in Hudson</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2012/06/14/count-number-of-jobs-in-hudson/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1596</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 14 Jun 2012 10:42:53 +0000</pubDate><description>&lt;p&gt;I wanted to count the number of jobs running on a Hudson server (continuous integration) at work.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;This javascript counts the number of lines in the table with all jobs:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt;document.getElementById("projectstatus").children[0].children.length&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Or save this as a browser toolbar bookmarklet:&lt;/p&gt;
+&lt;pre&gt;Name: #HudsonJobs
+ javascript:(function(e){alert(document.getElementById("projectstatus").children[0].children.length);e.preventDefault()})()&lt;/pre&gt;
+&lt;p&gt;This line finds the table with id=”projectstatus”, and counts the TR elements inside of it’s TBODY.&lt;/p&gt;
+&lt;p&gt;At work it said 445 lines, including the table header.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Which means that this hudson server has configured 444 jobs.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;That’s insane!&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;How many jobs are on your Hudson servers?&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;(I am currently relying on the html structure for Hudson version 2.1.2. It may work for other versions as well)&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+</description></item></channel></rss>

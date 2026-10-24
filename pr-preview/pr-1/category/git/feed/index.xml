@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>git – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/category/git/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/category/git/feed/" rel="self" type="application/rss+xml" /><item><title>Git extract folder from project with history and tags</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2016/11/02/git-extract-folder-from-project-with-history-and-tags/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1809</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 02 Nov 2016 19:40:32 +0000</pubDate><description>&lt;p&gt;This is a short note regarding the use of `git filter-branch` when you want to split a git repository and preserve the history.&lt;/p&gt;
+&lt;p&gt;I had some issues in finding the correct parameters. In case this also can help others, you can find the command here.&lt;/p&gt;
+&lt;p&gt;In case you are not yet familiar with the possibilities of `git filter-branch`, I suggest you look into the  &lt;a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#The-Nuclear-Option:-filter-branch"&gt;Git book: Rewriting history&lt;/a&gt;, which has a good introduction to the command.&lt;/p&gt;
+&lt;p&gt;Now, to start you should clone the repository you want to change (since you will completely rewrite history in the new repos).&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;In short, without further explanation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ORIG=path_to_original_repos&lt;br/&gt;
+DEST=destination_of_rewritten_repos&lt;br/&gt;
+DIR=directory_you_want_to_extract_from_ORIG&lt;/code&gt;&lt;/p&gt;&lt;code&gt;
+&lt;/code&gt;&lt;p&gt;&lt;code&gt;git clone $ORIG $DEST &amp;amp;&amp;amp; \&lt;br/&gt;
+cd $DEST &amp;amp;&amp;amp; \&lt;br/&gt;
+git filter-branch --prune-empty --tag-name-filter cat --subdirectory-filter $DIR -- --all&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A few notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--prune-empty&lt;/code&gt; will remove all commits that has no relation to the folder you extract&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--tag-name-filter cat&lt;/code&gt; will also rewrite any tags you put on the commits that are rewritten&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--subdirectory-filter&lt;/code&gt; takes a foldername as parameter, but I needed to add &lt;code&gt;-- --all&lt;/code&gt; to make it work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;
+</description></item><item><title>Git tip to remove remote branches already merged</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2016/08/25/git-tip-to-remove-remote-branches-already-merged/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1798</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 25 Aug 2016 09:54:43 +0000</pubDate><description>&lt;p&gt;Let’s talk about source control and an efficient way of using Git.&lt;/p&gt;
+&lt;p&gt;I like the projects where you have a `master` branch and a few feature branches, which are actively being worked upon. Only a few branches are present at a given time, and this is less confusing for the contributors in the repository.&lt;/p&gt;
+&lt;p&gt;A couple of times I have been on a project where old branches were not cleaned up. &lt;/p&gt;
+&lt;p&gt;I found that it’s really easy to list these branches and clean them up.&lt;/p&gt;
+&lt;p&gt;Step 1: List all branches that are already merged:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --merged&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Lists all remote branches which are already merged. In case you want to find the old ones, you can sort them by commit date with the flag `–sort=committerdate`&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --sort committerdate&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Committerdate flag will put the most recent branches last (you can reverse with minus: `&lt;code&gt;--sort=-committerdate&lt;/code&gt;`.&lt;/p&gt;
+&lt;p&gt;Step 2: List only relevant branches.&lt;/p&gt;
+&lt;p&gt;The list returned from above will also contain origin/HEAD and origin/master with we have to filter out:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;we simply remove them with `grep -v`&lt;/p&gt;
+&lt;p&gt;Step 3: Feed list into a delete command&lt;/p&gt;
+&lt;p&gt;The above command will give you a list of branches to remove. Review the list carefully by printing each line:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin | xargs -n 1 echo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;When you are satisfied, you can remove each branch with a git push command. Example&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git push --delete origin merged_branch1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can simply repeat this for as many times as you have branches with the above expression. So, in total your final command will be:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin | xargs -n 1  git push --delete origin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;And done :)&lt;/p&gt;
+&lt;p&gt;This post is following my series of blog posts with &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/09/30/collection-of-useful-git-tips-to-get-started/"&gt;useful Git Tips&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Change history of SVN repository</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2015/04/15/change-history-of-svn-repository/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1759</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 15 Apr 2015 22:06:48 +0000</pubDate><description>&lt;p&gt;Somebody asked me if it’s possible to change history of an SVN repository like you can do in Git.&lt;/p&gt;
+&lt;p&gt;The easiest parts to change are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;commit date&lt;/li&gt;
+&lt;li&gt;commit log message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With this, you can easily modify time stamps if, for instance, your svn server clock is wrong.&lt;/p&gt;
+&lt;h2&gt;Step 1: Modify repository to accept property changes&lt;/h2&gt;
+&lt;p&gt;Make sure your svn repository accepts property changes. (commit dates and messages are just properties which are basically unversioned).&lt;/p&gt;
+&lt;p&gt;For your repository, you need to make sure the hook file `pre-revprop-change` exists, is executable and has exit code 0. An easy way is to write a file which always exists with code 0:&lt;/p&gt;
+&lt;p&gt;# write this file to `repository_directory/hooks/pre-revprop-change`&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;#!/usr/bin/env sh&lt;/pre&gt;
+&lt;pre&gt;exit 0&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt; Step 2: change date on the revision you want:&lt;/h2&gt;
+&lt;p&gt;In this example I will set the date for revision 1 to May 1st, 1981.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;svn propset --revprop -r 1 svn:date &lt;span class="pl-s1"&gt;&lt;span class="pl-pds"&gt;"1981&lt;/span&gt;-05-01T10:00:00.000000Z&lt;span class="pl-pds"&gt;"&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;`svn propset` command will set certain properties. You can set many properties, and in this example we manipulate `svn:date`. If we want to change the log message, we can use `svn:log`.&lt;/p&gt;
+&lt;p&gt;I deliberately chose a date from before SVN was made. Subversion is from 2001, so this commit is now made 20 years before SVN was out.&lt;/p&gt;
+&lt;h2&gt;All combined&lt;/h2&gt;
+&lt;p&gt;I created a combined script, which has has the steps mentioned above, and also iterates to change all dates in a repository:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1759-1"&gt;&lt;code&gt;#!/usr/bin/env bash
+# set -x
+# script here will create new subversion repository (file based).
+# then it will make 10 commits
+# Then we will manipulate the commit dates of the ten commits
+
+START_FOLDER=$(pwd)
+REPO=repo02
+WD=working2
+HOOKFILE=$REPO/hooks/pre-revprop-change
+# svn repository
+svnadmin create $REPO
+
+echo '#!/usr/bin/env bash' &amp;gt; $HOOKFILE
+echo 'exit 0' &amp;gt;&amp;gt; $HOOKFILE
+chmod +x $HOOKFILE
+
+
+#checkout a working copy
+
+cd "$START_FOLDER"
+
+svn checkout "file://$START_FOLDER/$REPO" "$WD"
+cd "$START_FOLDER"
+cd "$WD"
+
+touch README.txt
+svn add README.txt
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+   echo "line $i" &amp;gt;&amp;gt; README.txt
+   svn ci -m "commit number $i (originally created $(date +"%Y-%m-%d %T"))"
+done
+
+svn update
+svn log
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;svn_create.sh · &lt;a href="https://gist.github.com/jesperronn/174cea58433d2f06968f/0c07c4a67dac3e13ebf84ba04b3d63be17818999"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;pre class="archive-code" data-recovery-code="gist-1759-2"&gt;&lt;code&gt;#!/usr/bin/env bash
+# 
+# We have 10 commits in a repository. Lets set commit dates to May 1st, 1981-1990
+#
+# set -x
+
+START_FOLDER=$(pwd)
+WD=working2
+
+
+cd "$START_FOLDER"
+cd "$WD"
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+  YEAR=$(echo "1980 + $i" | bc )
+  svn propset --revprop -r $i  svn:date "$YEAR-05-01T10:00:00.000000Z"
+done
+
+svn update
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;svn_modify.sh · &lt;a href="https://gist.github.com/jesperronn/174cea58433d2f06968f/0c07c4a67dac3e13ebf84ba04b3d63be17818999"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;The result&lt;/h3&gt;
+&lt;p&gt;The result is a fine modified commit history which could look like this&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;$ svn log
+
+
+&lt;/pre&gt;
+&lt;p class="p1"&gt;&lt;span class="s1"&gt;r10 | jesper | 1990-05-01 12:00:00 +0200 (Tue, 01 May 1990) | 1 line&lt;br/&gt;
+&lt;/span&gt;commit number 10 (originally created 2015-04-15 22:21:35)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r9 | jesper | 1989-05-01 12:00:00 +0200 (Mon, 01 May 1989) | 1 line&lt;br/&gt;
+commit number 9 (originally created 2015-04-15 22:21:34)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r8 | jesper | 1988-05-01 12:00:00 +0200 (Sun, 01 May 1988) | 1 line&lt;br/&gt;
+commit number 8 (originally created 2015-04-15 22:21:33)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r7 | jesper | 1987-05-01 12:00:00 +0200 (Fri, 01 May 1987) | 1 line&lt;br/&gt;
+commit number 7 (originally created 2015-04-15 22:21:32)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r6 | jesper | 1986-05-01 12:00:00 +0200 (Thu, 01 May 1986) | 1 line&lt;br/&gt;
+commit number 6 (originally created 2015-04-15 22:21:31)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r5 | jesper | 1985-05-01 12:00:00 +0200 (Wed, 01 May 1985) | 1 line&lt;br/&gt;
+commit number 5 (originally created 2015-04-15 22:21:30)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r4 | jesper | 1984-05-01 12:00:00 +0200 (Tue, 01 May 1984) | 1 line&lt;br/&gt;
+commit number 4 (originally created 2015-04-15 22:21:29)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r3 | jesper | 1983-05-01 12:00:00 +0200 (Sun, 01 May 1983) | 1 line&lt;br/&gt;
+commit number 3 (originally created 2015-04-15 22:21:28)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r2 | jesper | 1982-05-01 12:00:00 +0200 (Sat, 01 May 1982) | 1 line&lt;br/&gt;
+commit number 2 (originally created 2015-04-15 22:21:27)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r1 | jesper | 1981-05-01 12:00:00 +0200 (Fri, 01 May 1981) | 1 line&lt;br/&gt;
+commit number 1 (originally created 2015-04-15 22:21:26)&lt;br/&gt;
+————————————————————————&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;&lt;span style="line-height: 1.5;"&gt;More info&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SVN book &lt;a href="http://svnbook.red-bean.com/en/1.7/svn.ref.reposhooks.pre-revprop-change.html"&gt;chapter on “pre-revprop-change”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rooot.net “&lt;a href="http://www.rooot.net/en/development/code/16-change-svn-commit-log-date.html"&gt;Change a SVN commit log message or date&lt;/a&gt;“&lt;/li&gt;
+&lt;li&gt;Stackoverflow: &lt;a class="question-hyperlink" href="http://stackoverflow.com/questions/692851/can-i-go-back-and-edit-comments-on-an-svn-checkin"&gt;Can I go back and edit comments on an SVN checkin?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stackoverflow: &lt;a class="question-hyperlink" href="http://stackoverflow.com/questions/633353/change-the-timestamp-of-a-svn-revision"&gt;Change the timestamp of a SVN revision&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description></item><item><title>Rewrite author/email in git history</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2015/01/21/rewrite-authoremail-in-git-history/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1733</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 21 Jan 2015 14:25:38 +0000</pubDate><description>&lt;p&gt;After my harddisk crashed and I reinstalled the machine recently, I misconfigured my Git to set EMAIL as email address.&lt;/p&gt;
+&lt;p&gt;This made Git history look horrible, with incorrect email, image. By accident I even wrote an incorrect name at one point.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09.png"&gt;&lt;img alt="git history github" class="aligncenter size-medium wp-image-1734" height="265" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09-300x265.png" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09-300x265.png 300w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09.png 898w" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Note the missing image.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Now it turns out my git repository was full of EMAIL instead of my correct email address.&lt;/p&gt;
+&lt;pre&gt;$git log --pretty=fuller -1 9461d8b
+commit 9461d8b
+Author:     Jesper Rønn-Jensen &amp;lt;EMAIL&amp;gt;
+AuthorDate: Tue Jan 13 09:56:13 2015 +0100
+Commit:     Jesper Rønn-Jensen &amp;lt;EMAIL&amp;gt;
+CommitDate: Tue Jan 13 09:56:13 2015 +0100
+    adding install of hipchat and sourcetree&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I had to rewrite the history in order to fix the email addresses. Turns out `git filter-branch` could help:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre class="archive-code" data-repair-code="paragraph-1733-10"&gt;&lt;code&gt;NEW_MAIL="jesp….@gmail.com"
+git filter-branch --env-filter '
+if [[ "$GIT_AUTHOR_EMAIL" = "EMAIL" || "$GIT_AUTHOR_EMAIL" = "$NEW_MAIL" ]]
+then
+if [[ "$GIT_AUTHOR_NAME" = "Ben Alman" ]]
+then
+GIT_AUTHOR_NAME="Jesper Rønn-Jensen"
+GIT_COMMITTER_NAME="Jesper Rønn-Jensen"
+export GIT_AUTHOR_NAME
+export GIT_COMMITTER_NAME
+fi
+
+GIT_AUTHOR_EMAIL="$NEW_MAIL"
+GIT_COMMITTER_EMAIL="$NEW_MAIL"
+export GIT_AUTHOR_EMAIL
+export GIT_COMMITTER_EMAIL
+fi
+' -- --all&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;10 seconds later, I could push the changed repository up back on the server. The result was much better:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png"&gt;&lt;img alt="github log images fixed" class="aligncenter size-medium wp-image-1735" height="300" sizes="(max-width: 203px) 100vw, 203px" src="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png" srcset="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png 203w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-691x1024.png 691w, https://watson.github.io/justaddwater.dk/pr-preview/pr-1/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png 852w" width="203"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Nice result :) All of this trouble was because I wanted to script the setup of a new machine. I used &lt;a href="https://github.com/jesperronn/cowboy-dotfiles/commits/master" title="Github.com: jesperronn/cowboy-dotfiles"&gt;my clone of Ben Alman’s dotfiles&lt;/a&gt;, and this way his name slipped in before I figured out how to configure the .gitconfig file.&lt;/p&gt;
+&lt;p&gt;I really like that Git enables you to do almost anything. Especially that you can make mistakes and fix them later :)&lt;/p&gt;
+</description></item><item><title>Collection of useful Git Tips to get started</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2011/09/30/collection-of-useful-git-tips-to-get-started/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1520</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 30 Sep 2011 18:44:17 +0000</pubDate><description>&lt;p&gt;I thought it was time to collect some of my most useful findings when working with Git.&lt;/p&gt;
+&lt;p&gt;These are typically from situations where I found a useful way, which I wanted to jot down. Also I have answered and asked some questions on StackOverflow. The good thing about it, is that I am always able to find it again this way.&lt;/p&gt;
+&lt;p&gt;Justaddwater.dk posts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/" rel="bookmark" title="Permanent Link to How to make Git ignore files that already exist in your project"&gt;How to make Git ignore files that already exist in your project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/09/30/spoken-git-commit-log-%E2%80%94-another-annoyance-at-the-office/" rel="bookmark" title="Permanent Link to Spoken Git Commit Log — Another Annoyance at the Office"&gt;Spoken Git Commit Log — Another Annoyance at the Office&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/" rel="bookmark" title="Permanent Link to How to add Git Pull Shortcut to Different Github Branches"&gt;How to add Git Pull Shortcut to Different Github Branches&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/03/09/using-git-for-svn-repositories-workflow/" rel="bookmark" title="Permanent Link to Using Git for SVN Repositories Workflow"&gt;Using Git for SVN Repositories Workflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/02/21/using-local-file-based-git-server-laziness/" rel="bookmark" title="Permanent Link to Using Local File-based Git — Server Laziness"&gt;Using Local File-based Git — Server Laziness&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;StackOverflow posts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/266395/git-svn-how-do-i-create-a-new-svn-branch-via-git/1911069#1911069"&gt;git-svn: how do I create a new svn branch via git?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/728931/how-to-switch-svn-branches-using-git-svn"&gt;How to switch svn branches using git-svn?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/1519006/git-how-to-create-remote-branch" title="I created a local branch which I want to 'push' upstream. There is a similar question here on Stackoverflow on how to track a newly created remote branch.   However, my workflow is slightly different. ..."&gt;Git how to create remote branch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/1459150/how-to-undo-git-commit-amend-done-instead-of-git-commit" title="I accidentally amended my previous commit. The commit should have been separate to keep history of the changes I made to a particular file.  Is there a way to undo that last commit? If I do something ..."&gt;How to undo “git commit –amend” done instead of “git commit”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/1337320/how-to-grep-git-commits-for-a-certain-word" title='In a Git code repository I want to list all commits that contain a certain word  I tried this:     git log -p | grep --context=4 "word"  but it does not necessarily give me back the filename (unless ...'&gt;How to grep git commits for a certain word&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/1554222/git-svn-clone-how-to-defer-fetch-of-revision-history" title="I often have the case that I want to work on a SVN repository right away. But an ordinary git svn clone [url] also clones the entire history. So I want to speed things up. The first part is to fetch ..."&gt;Git svn clone: How to defer fetch of revision history&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/1486819/which-git-commit-stats-are-easy-to-pull" title="Previously I have enjoyed TortoiseSvn's ability to generate simple commit stats for a given SVN repository. I wonder what is available in Git and am particularly interested in :   Number of commits ..."&gt;Which Git commit stats are easy to pull&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/1441156/git-how-to-save-a-preset-git-log-format" title='I really like the short git log format where I can see author, date and change description like this:  git log --pretty=format:"%h%x09%an%x09%ad%x09%s"   Which outputs:    fbc3503 mads    Thu Dec 4 ...'&gt;Git how to save a preset git log –format&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/2281772/view-remote-git-revision-on-heroku" title="For deploying to Heroku, I use git push heroku master. But how do I see which revision I pushed up to heroku? (I'm often in doubt if I pushed the recent version up)  For those not familiar with it, ..."&gt;View remote Git revision on Heroku&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/1441010/the-shortest-possible-output-from-git-log-containing-author-and-date" title="How can I show a git log output with (at least) this information:  * author * commit date * change  I want it compressed to one line per log entry. What's the shortest possible format for that?  ..."&gt;The shortest possible output from git log containing author and date&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/1873400/git-how-to-find-out-which-single-commits-that-done-on-one-branch-and-not-another" title='I am about to create a patch file for a project. My branch is the "master" in my local repository. And the remote upstream branch is mapped to the local branch "origin". \ With this command I can ...'&gt;Git how to find out which single commits that done on one branch and not another&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;&lt;/ol&gt;
+</description></item><item><title>How to make Git ignore files that already exist in your project</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/12/07/how-to-make-git-ignore-files-that-already-exist-in-your-project/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1247</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 07 Dec 2009 12:28:34 +0000</pubDate><description>&lt;p&gt;For a project I’m working on, I had to change some files with personal settings, and the files kept showing up with a &lt;code&gt;git status&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Adding files to .gitignore that are already tracked does not work. (and it’s actually pretty well documented in the documentation). In stead, it’s possible to use this command:&lt;/p&gt;
+&lt;pre&gt;git update-index --assume-unchanged [filename(s)]&lt;/pre&gt;
+&lt;p&gt;From &lt;a href="http://www.kernel.org/pub/software/scm/git/docs/git-update-index.html"&gt;git-update-index manual page&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote cite="http://www.kernel.org/pub/software/scm/git/docs/git-update-index.html"&gt;
+&lt;pre&gt;&lt;code&gt;--assume-unchanged
+--no-assume-unchanged&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When these flags are specified, the object names recorded for the paths are not updated. Instead, these options set and unset the “assume unchanged” bit for the paths.&lt;/p&gt;
+&lt;p&gt;When the “assume unchanged” bit is on, git stops checking the working tree files for possible modifications, so you need to manually unset the bit to tell git when you change the working tree file. This is sometimes helpful when working with a big project on a filesystem that has very slow lstat(2) system call (e.g. cifs).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Fantastic! my system files are now ignored by git :)&lt;/p&gt;
+&lt;p&gt;It’s an incredibly useful tip for example if you have files that MUST live in the repository and that servers/editors change. In this particular project, Tomcat keeps changing two files. Furthermore I have changed the log-level from INFO to WARN which I should not commit into the repository.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git update-index --assume-unchanged&lt;/code&gt; lets me do exactly that.&lt;/p&gt;
+</description></item><item><title>Spoken Git Commit Log — Another Annoyance at the Office</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/09/30/spoken-git-commit-log-%e2%80%94-another-annoyance-at-the-office/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1161</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 30 Sep 2009 08:23:26 +0000</pubDate><description>&lt;p&gt;Here is a short one-liner that really annoyed my colleagues today.&lt;br/&gt;
+I set my mac to read aloud all changes in the repository since yesterday:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; git  log --pretty=format:"%an commit %s, %ad." --date=relative --since=yesterday |say
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;if you remove the “say” command in the end it’s actually pretty readable:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+pagerbak commit VA17, 34 minutes ago.
+pagerbak commit VA17 - Not used, 35 minutes ago.
+therikss commit , 48 minutes ago.
+pagerbak commit Checkstyle configuration, 56 minutes ago.
+pagerbak commit Checkstyle configuration, 56 minutes ago.
+pagerbak commit Checkstyle configuration, 57 minutes ago.
+pagerbak commit Checkstyle configuration, 57 minutes ago.
+pagerbak commit Checkstyle configuration, 57 minutes ago.
+pagerbak commit Checkstyle configuration, 57 minutes ago.
+pagerbak commit Checkstyle configuration, 58 minutes ago.
+pagerbak commit Library update. Axis2 updated, 58 minutes ago.
+pagerbak commit Checkstyle configuration, 59 minutes ago.
+pagerbak commit New certificates, VA17, Library update, Checkstyle, 60 minutes ago.
+pagerbak commit Checkstyle configuration, 61 minutes ago.
+pagerbak commit Checkstyle configuration, 62 minutes ago.
+pagerbak commit ?, 63 minutes ago.
+pagerbak commit Checkstyle configuration, 63 minutes ago.
+pagerbak commit Added a few extra SAML2 related methods for VA17, 64 minutes ago.
+nstrandb commit fixes, 75 minutes ago.
+nstrandb commit fixes, 75 minutes ago.
+pagerbak commit VA17 Login for existing user work., 76 minutes ago.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While reading it aloud seems pretty evil and intriguing, it was actually bit of a laugh at the office.&lt;/p&gt;
+&lt;p&gt;PS. Time to look for a better hobby :)&lt;/p&gt;
+</description></item><item><title>How to add Git Pull Shortcut to Different Github Branches</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/08/23/how-to-add-git-pull-shortcut-to-different-github-branches/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1117</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 23 Aug 2009 21:42:45 +0000</pubDate><description>&lt;p&gt;&lt;strong&gt;UPDATE 9 hours later: Changed to “remote = origin” to the specific branch “remote = dean” which works!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Short explanation on how to pull changes from different Git repositories into your local Git repository.&lt;/p&gt;
+&lt;p&gt;Last week I worked with three different Github forks of a project. Now for standard, when you clone a Github repository, the remote repository is automatically added so you can do a simple git pull (instead of the verbose version “git pull origin master”)&lt;/p&gt;
+&lt;p&gt;Now, let’s say you’d like to pull changes from another branch/fork on Github:&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-4"&gt;&lt;code&gt;git remote add dean git://github.com/dstrelau/webrat.git
+git co -b dean
+git pull dean master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Git pull dean master will work. but “git pull” gives the following message:&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-6"&gt;&lt;code&gt;[~/othercode/webrat (master)] ➔ git co dean
+Switched to branch 'dean'
+[~/othercode/webrat (dean)] ➔ git pull
+You asked me to pull without telling me which branch you
+want to merge with, and 'branch.dean.merge' in
+your configuration file does not tell me either.    Please
+specify which branch you want to merge on the command line and
+try again (e.g. 'git pull &amp;lt;repository&amp;gt; &amp;lt;refspec&amp;gt;').
+See git-pull(1) for details.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you often merge with the same branch, you may want to&lt;br/&gt;
+configure the following variables in your configuration&lt;br/&gt;
+file:&lt;/p&gt;
+&lt;pre class="archive-code" data-repair-code="paragraph-1117-8"&gt;&lt;code&gt;branch.dean.remote = &amp;lt;nickname&amp;gt;
+branch.dean.merge = &amp;lt;remote-ref&amp;gt;
+remote.&amp;lt;nickname&amp;gt;.url = &amp;lt;url&amp;gt;
+remote.&amp;lt;nickname&amp;gt;.fetch = &amp;lt;refspec&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See git-config(1) for details.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2&gt;Solution to get the shorthand “git pull” to work:&lt;/h2&gt;
+&lt;p&gt;Add the following section to [project_dir]/.git/config&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-11"&gt;&lt;code&gt;[branch "dean"]
+remote = dean
+merge = refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;So my ./git/config file now looks like this:&lt;/p&gt;
+&lt;blockquote&gt;&lt;pre class="archive-code" data-repair-code="paragraph-1117-13"&gt;&lt;code&gt;[core]
+repositoryformatversion = 0
+filemode = true
+bare = false
+logallrefupdates = true
+ignorecase = true
+[remote "origin"]
+url = git://github.com/brynary/webrat.git
+fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+remote = origin
+merge = refs/heads/master
+[remote "jonas"]
+url = git://github.com/jnicklas/webrat.git
+fetch = +refs/heads/*:refs/remotes/jonas/*
+[branch "jonas"]
+remote = jonas
+merge = refs/heads/master
+[remote "dean"]
+url = git://github.com/dstrelau/webrat.git
+fetch = +refs/heads/*:refs/remotes/dean/*
+[branch "dean"]
+remote = dean
+merge = refs/heads/master
+[branch "orig"]
+remote = origin
+merge = refs/heads/master&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+</description></item><item><title>Using Git for SVN Repositories Workflow</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/03/09/using-git-for-svn-repositories-workflow/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1038</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 09 Mar 2009 13:52:11 +0000</pubDate><description>&lt;p&gt;For the last months I have been using Git to work with my Subversion repositories. Besides from &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/01/17/git-side-benefit-reducing-disk-usage/" title="justaddwater.dk | Git Side Benefit: Reducing Disk Usage"&gt;reducing disk usage&lt;/a&gt;, Git also makes my work slightly faster and independent of network access — I can make commits to repository which is sync’ed later when I get online.&lt;/p&gt;
+&lt;p&gt;One challenge though: Using branches&lt;/p&gt;
+&lt;p&gt;I ran into some pitfalls when using branches in Subversion repository. Here is a quick guide to how I setup and work with svn branches in git-svn.&lt;/p&gt;
+&lt;h3&gt;Useful git-svn command cheatsheet&lt;/h3&gt;
+&lt;p&gt;For the lazy reader, let’s just start with the compressed cheatsheet :)&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-1"&gt;&lt;code class="language-bash"&gt;git svn clone -s [url_to_svn_repository] [project_name]
+
+git branch -a #show all branches local(git) and remote(svn)
+
+git status
+
+git svn info #show svn details (also URL)
+
+#create local Git branch that mirrors remote svn branch
+
+git checkout -b local/RELEASE-0.12 RELEASE-0.12 #will connect with a remote svn branch named 'RELEASE-0.12'
+
+git svn dcommit --dry-run # -n will show which svn branch you will commit into:
+
+#=&amp;gt; Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...
+
+git svn rebase # pull changes from svn repository
+
+git svn dcommit # push your local git commits to svn repository&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 1: Clone your repository with trunk, branches and tags&lt;/h3&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-2"&gt;&lt;code class="language-bash"&gt;git svn clone -s [url_to_svn_repository] [project_name]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The -s flag is important: It tells git to clone a standard svn layout with /trunk, /tags, /branches. NOTE that you have to use this -s flag to work with branches! Very important :)&lt;/p&gt;
+&lt;p&gt;Example: The Trac code repository has this layout by default. To make a git clone we do:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-3"&gt;&lt;code class="language-bash"&gt;git clone -s http://svn.edgewall.org/repos/trac trac.git
+
+Initialized empty Git repository in /Users/jesper/othercode/trac.git/.git/
+A    svntrac/__init__.py
+
+[...]
+
+M    trac/admin/console.py
+r7937 = 2aab87158be06edb1a1931240a453cac762c4615 (trunk)
+Auto packing your repository for optimum performance. You may also
+run "git gc" manually. See "git help gc" for more information.
+Counting objects: 13630, done.
+Compressing objects: 100% (13146/13146), done.
+Writing objects: 100% (13630/13630), done.
+Total 13630 (delta 10584), reused 0 (delta 0)
+Removing duplicate objects: 100% (256/256), done.
+Checked out HEAD:
+http://svn.edgewall.org/repos/trac/trunk r7937&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SVN info shows the remote svn url:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-4"&gt;&lt;code class="language-bash"&gt;cd trac.git/
+git svn info
+
+Path: .
+URL: http://svn.edgewall.org/repos/trac/trunk
+Repository Root: http://svn.edgewall.org/repos/trac
+Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2
+Revision: 7937
+Node Kind: directory
+Schedule: normal
+Last Changed Author: rblank
+Last Changed Rev: 7937
+Last Changed Date: 2009-03-07 03:52:37 +0100 (Sat, 07 Mar 2009)&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 2: Create local branch to mirror svn branch&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git branch -a&lt;/code&gt; shows all branches and tags  (both local and remote ones)&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;git branch -a&lt;/code&gt; to see all remote branches:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-5"&gt;&lt;code class="language-bash"&gt;git branch -a
+
+* master
+0.10-stable
+0.11-stable
+cboos-dev
+cmlenz-dev
+debian
+debian-dev
+jonas-dev
+tags/debian
+tags/debian-dev
+tags/trac-0.10
+tags/trac-0.10.1
+tags/trac-0.10.2
+tags/trac-0.10.3
+[...]
+trunk
+utopiste-dev&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create local branch with same name as remote branch:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-6"&gt;&lt;code class="language-bash"&gt;git checkout -b local/0.11-stable 0.11-stable
+
+Switched to a new branch "local/0.11-stable"&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 3: verify you are on new branch&lt;/h3&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-7"&gt;&lt;code class="language-bash"&gt;git svn dcommit --dry-run
+
+Committing to http://svn.edgewall.org/repos/trac/branches/0.11-stable ...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(or git svn info)&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-8"&gt;&lt;code class="language-bash"&gt;git svn info
+
+git svn info
+Path: .
+URL: http://svn.edgewall.org/repos/trac/branches/0.11-stable
+Repository Root: http://svn.edgewall.org/repos/trac
+Repository UUID: af82e41b-90c4-0310-8c96-b1721e28e2e2
+Revision: 7930
+Node Kind: directory
+Schedule: normal
+Last Changed Author: rblank
+Last Changed Rev: 7930
+Last Changed Date: 2009-03-03 00:41:48 +0100 (Tue, 03 Mar 2009)&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 4: work with code&lt;/h3&gt;
+&lt;p&gt;now you are free to work on the local branch: ‘local/0.11-stable’. Hack on and commit to git with commands like:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-9"&gt;&lt;code class="language-bash"&gt;git status
+
+git add filename
+
+git commit -m 'my commit comment'&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Repeat as much as you like. There are two strategies: Work on the master branch and then commit to the svn branch later.&lt;/p&gt;
+&lt;h3&gt;Step 5: commit to svn&lt;/h3&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-10"&gt;&lt;code class="language-bash"&gt;git svn rebase #to pull changes from svn before commit
+
+git svn dcommit&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you get an error like this:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-11"&gt;&lt;code class="language-bash"&gt;git svn dcommit
+Cannot dcommit with a dirty index.  Commit your changes first, or stash them with `git stash'.
+at /usr/local/libexec/git-core//git-svn line 431&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just do what it says:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-12"&gt;&lt;code class="language-bash"&gt;git stash
+
+git svn dcommit
+
+git stash apply&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The last line gets your dirty files back in your working directory.&lt;br/&gt;
+Applying change to multiple branches&lt;/p&gt;
+&lt;p&gt;Assume your change now is applied to the branch ‘0.11-stable’.&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-1038-13"&gt;&lt;code class="language-bash"&gt;git checkout master
+git log –1
+#=&amp;gt; shows log of your latest commit
+#To apply these changes to Trunk, now you should change branch and merge:
+
+git checkout local/0.11-stable
+git merge master #will merge changes to the current branch (local/0.11-stable) from trunk/master.
+
+git svn dcommit #to commit the merged changes into the svn repository&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Related posts:&lt;/h3&gt;
+&lt;p&gt;* &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/02/21/using-local-file-based-git-server-laziness/" title="justaddwater.dk | Using Local File-based Git — Server Laziness"&gt;Using Local File-based Git — Server Laziness&lt;/a&gt; (Feb 21st)&lt;br/&gt;
+* &lt;a href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2009/01/17/git-side-benefit-reducing-disk-usage/" title="justaddwater.dk | Git Side Benefit: Reducing Disk Usage"&gt; Git Side Benefit: Reducing Disk Usage&lt;/a&gt; (Jan 17th)&lt;br/&gt;
+* Dr Nic’s Gitify command: &lt;a href="http://drnicwilliams.com/2007/11/22/going-offline-without-your-favourite-subversion-repository/"&gt;Going offline without your favourite Subversion repository?&lt;/a&gt; (Nov 2007)&lt;/p&gt;
+</description></item></channel></rss>

@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Technique — locating problems in HTML</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/pr-preview/pr-1/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/pr-preview/pr-1/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/pr-preview/pr-1/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+ 
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/09/18/toolbox/" rel="prev" title="Toolbox — locating problems in HTML"/>
+<link href="/justaddwater.dk/pr-preview/pr-1/2006/09/28/all-ie-browsers-standalone-on-same-pc/" rel="next" title="All IE Browsers Standalone On Same PC"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/09/18/technique/" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/09/18/technique/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/pr-preview/pr-1/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/pr-preview/pr-1/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/pr-preview/pr-1/2006/09/18/toolbox/" rel="prev">Toolbox — locating problems in HTML</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/pr-preview/pr-1/2006/09/28/all-ie-browsers-standalone-on-same-pc/" rel="next">All IE Browsers Standalone On Same PC</a> »</div>
+		</div>
+	
+		<div class="post" id="post-393">
+			<h2><a href="/justaddwater.dk/pr-preview/pr-1/2006/09/18/technique/" rel="bookmark" title="Permanent Link: Technique — locating problems in HTML">Technique — locating problems in HTML</a></h2>
+	
+			<div class="entry">
+				<p>Technique for using the toolbox: Locating problems in HTML.</p>
+<p>I decided to make a little toolbox that’s easy to apply on web pages, when investigating problems with web pages. Basically, it’s the tools I used when investigating the case I described in  “<a href="/justaddwater.dk/pr-preview/pr-1/2006/06/29/webstandards-case-study/">Why web standards matter (case study)</a>”</p>
+<p>I split this into two posts. This is the second part. The first one is about the <a href="/justaddwater.dk/pr-preview/pr-1/2006/09/18/toolbox/">toolbox</a>.</p>
+<h3>Web standards investigation technique</h3>
+<p>The case study shwoed a page in big trouble and the problem turned out to be a combination of different things that led to the guidelines:</p>
+<ul>
+<li>Avoid JavaScript (where appropriate)</li>
+<li>Remove HTML errors and warnings</li>
+<li>Remove elements without content</li>
+</ul>
+<p>The following steps can be used on any page to assess if the page is likely to benefit from a rework. Of course I cannot guarantee that the investigation technique can find the root to trouble on any page. And it’s not likely that this checklist can replace a thorough investigation (which you’ll probably end up with in some cases). </p>
+<p>However it might be a good starting point if something is not working or going wrong.</p>
+<p><a href="#technique1">JavaScript errors</a><br/>
+<a href="#technique2">HTML errors and warnings</a><br/>
+<a href="#technique3">Total code weight</a><br/>
+<a href="#technique4">Content to markup ratio</a><br/>
+<a href="#technique5">Number of <code>img</code> elements</a><br/>
+<a href="#technique6">Number of <code>table</code> elements (used for layout)</a><br/>
+<a href="#technique7">Total number of elements in the DOM</a></p>
+<dl>
+<dt><a name="technique1"></a>1. JavaScript errors</dt>
+<dd>JavaScript errors are important to get rid of as errors in JavaScript prevent your code from running. The Firebug extension for Firefox comes in handy, as it shows a little icon on the statusbar. It’s normally a green checkmark (but converts to a red icon and displays the number of JavaScript errors. A click shows the Firebug console with additional information on each error. Goal is to have 0 JavaScript errors.</dd>
+<dd>A little more on JavaScript should be avoided (where appropriate): JavaScript is perfectly OK to use for adding functionality to your page. But, you should probably not use it for things like making a print version of you page (use CSS), or render stuff on your page during load (<code>document.write</code>).</dd>
+<dt><a name="technique2"></a>2. HTML errors and warnings</dt>
+<dd>HTML errors and warnings will in most cases lead to browser misinterpretation of your web page (because web standards only describe what to do when HTML is correct). HTML Validator (based on Tidy) comes in handy here: It shows an icon in the status bar. The icon is a green checkmark that changes to a warning icon whenever errors are present (and there is a setting that shows you both the icon and text about how many warnings.</dd>
+<dd>The error messages are mostly good, letting you know exactly where the problem is in the HTML source.</dd>
+<dd>Its realistic to aim for 0 HTML errors and warnings (but on a rare occation there can be reasons for leaving a few warnings in).</dd>
+<dt><a name="technique3"></a>3. Total code weight</dt>
+<dd>The “page info” bookmarklet tells you total code weight. In general, this number should be as low as possible because that means sending fewer bytes to the client, making code easier to interpret for the browser.</dd>
+<dd>Ideally, </dd>
+<dt><a name="technique4"></a>4. Content to markup ratio</dt>
+<dd>Also from the “page info” bookmarklet. The relation between size of content compared to entire footprint of HTML page. The higher ratio the better. </dd>
+<dd>In my experience, pages designed using tables and transparent images for layout has a content/markup ratio around 10-20%. Removing tables and unnecessary pixels easily bring the ratio up on the better side of 50%.</dd>
+<dd>Of course, the exact ratio to aim for is depending on the type of page: The more content-heavy, the better the ratio.</dd>
+<dt><a name="technique5"></a>5. Number of <code>img</code> elements</dt>
+<dd>Count number of images with bookmarlet “#img”. The number itself should respond approximately to the number of images providing content on the page. Use it to assess if there are transparent images or other images that don’t convey any content to the user.</dd>
+<dt><a name="technique6"></a>6. Number of <code>table</code> elements (used for layout)</dt>
+<dd>Count number with bookmarklet “#table”. Use it to assess if tables are used for layout. Tables should only be used for tabular content. Also, the other bookmarklet “Number table rows” is sometimes handy to count the number of rows used.</dd>
+<dt><a name="technique7"></a>7. Total number of elements in the DOM</dt>
+<dd>Count total number of elements in DOM with the bookmarklet “#elements”. In the case study, I had a page with 27,000 DOM nodes (and that was asking for trouble).</dd>
+</dl>
+<p>All in all, these numbers can hint problems in your page and make it easier to guess what to do about it. I’m using this to estimate which pages to change (and which could be left).</p>
+<h3>Summary</h3>
+<p>These are the basic techniques that have been helpful for me when investigating web standards related issues in web pages. The technique here is complimented with the page describing the <a href="/justaddwater.dk/pr-preview/pr-1/2006/09/18/toolbox/">toolbox for locating problems in HTML</a>.</p>
+<p>Related reading:</p>
+<ul>
+<li><a href="/justaddwater.dk/pr-preview/pr-1/2006/09/18/toolbox/">toolbox for locating problems in HTML</a></li>
+<li><a href="/justaddwater.dk/pr-preview/pr-1/2006/06/29/webstandards-case-study/">Why web standards matter (case study)</a></li>
+</ul>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/javascript" href="/justaddwater.dk/pr-preview/pr-1/topics/javascript/" rel="tag">javascript</a>, <a data-original-url="http://technorati.com/tag/bookmarklet" href="/justaddwater.dk/pr-preview/pr-1/topics/bookmarklet/" rel="tag"> bookmarklet</a>, <a data-original-url="http://technorati.com/tag/toolbox" href="/justaddwater.dk/pr-preview/pr-1/topics/toolbox/" rel="tag"> toolbox</a>, <a data-original-url="http://technorati.com/tag/webstandards" href="/justaddwater.dk/pr-preview/pr-1/topics/webstandards/" rel="tag"> webstandards</a>, <a data-original-url="http://technorati.com/tag/web+standards" href="/justaddwater.dk/pr-preview/pr-1/topics/web-standards/" rel="tag"> web standards</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, September 18th, 2006 at 22:37 (GMT-1)						and is filed under <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/css/" rel="category tag">CSS</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/html/" rel="category tag">HTML</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/justaddwaterdk/" rel="category tag">justaddwater.dk</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/web-development/" rel="category tag">Web Development</a>, <a href="/justaddwater.dk/pr-preview/pr-1/category/webstandards/" rel="category tag">Web Standards</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/pr-preview/pr-1/2006/09/18/technique/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+
+			
+		<p class="nocomments" id="comments">Comments are closed.</p>
+
+	
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/pr-preview/pr-1/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/pr-preview/pr-1/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+</body></html>
