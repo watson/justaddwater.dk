@@ -157,14 +157,26 @@ both the repository's project URL and a future custom domain. The workflow
 installs the Python dependencies for validation and never contacts the old
 WordPress server.
 
-In the repository's **Settings → Pages**, choose **GitHub Actions** as the source.
-Pushes to `main` and manual workflow runs deploy the archive.
+In the repository's **Settings → Pages**, choose **Deploy from a branch** as the
+source, with the `gh-pages` branch and `/ (root)` folder. The `github-pages`
+environment's deployment branches must include `gh-pages`. Pushes and manual
+workflow runs on `main` commit the archive to the root of `gh-pages`, leaving
+`pr-preview/` untouched.
+
+Each pull request from a branch in this repository is validated in the same way
+and published at `/pr-preview/pr-<number>/` below the archive, using
+[Deploy PR Preview](https://github.com/marketplace/actions/deploy-pr-preview). A
+comment on the pull request links to the preview, and closing the pull request
+removes it. Pull requests from forks are validated but not published. Every open
+preview is a full copy of the archive, and GitHub Pages limits a published site to
+1 GB.
 
 For a custom domain, verify ownership in GitHub, set `justaddwater.dk` in the Pages
 settings, and then update the apex and `www` DNS records at one.com. Changing DNS
 or the original hosting account is a separate cutover. The current apex A record
-has a 12-hour TTL; reduce it ahead of a planned switch. The workflow automatically
-uses the custom domain's root path after another deployment.
+has a 12-hour TTL; reduce it ahead of a planned switch. GitHub adds a `CNAME` file
+to `gh-pages`, which later deployments keep. The workflow automatically uses the
+custom domain's root path after another deployment.
 
 ## Reproduce the capture
 
