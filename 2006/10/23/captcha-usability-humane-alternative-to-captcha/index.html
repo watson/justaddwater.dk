@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | CAPTCHA usability: Humane alternative to CAPTCHA</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/feed/" rel="alternate" title="justaddwater.dk » CAPTCHA usability: Humane alternative to CAPTCHA Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/2006/10/20/blogging-policy-and-guidelines/" rel="prev" title="Blogging Policy and Guidelines"/>
+<link href="/justaddwater.dk/2006/10/25/ie7-accessibility-magnification/" rel="next" title="IE7 Accessibility: Magnification"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/2006/10/20/blogging-policy-and-guidelines/" rel="prev">Blogging Policy and Guidelines</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/2006/10/25/ie7-accessibility-magnification/" rel="next">IE7 Accessibility: Magnification</a> »</div>
+		</div>
+	
+		<div class="post" id="post-428">
+			<h2><a href="/justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/" rel="bookmark" title="Permanent Link: CAPTCHA usability: Humane alternative to CAPTCHA">CAPTCHA usability: Humane alternative to CAPTCHA</a></h2>
+	
+			<div class="entry">
+				<p>Revisiting CAPTCHA: Since W3C wrote about “<a href="http://www.w3.org/TR/turingtest/">inaccessibility of CAPTCHA</a>” almost a year ago, a new technique has emerged:</p>
+<p>Using technology, to make it easier for humans, and challenging for robots to fill out a form, and using a more traditional fall-back method in the rare cases where the system cannot detect if a human is filling in the form.</p>
+<p>CAPTCHA is for instance showing an image with distorted text in order to make it impossible for computers to read. The side effect has been problems for people using assistive technology such as blind people using screenreaders. </p>
+<p>The problem from an accessibility point of view, is that most CAPTCHAs challenge people just as much as they challenge machines. Sam Ruby <a href="http://www.intertwingly.net/blog/2006/05/30/Captcha-this" title="Sam Ruby: Captcha this!">described an alternative</a> back in June:</p>
+<blockquote cite="http://www.intertwingly.net/blog/2006/05/30/Captcha-this"><p>I’ve implemented an unusual captcha system.  </p>
+<p>First, the images are not distorted.  In fact, if you have posted to my weblog in the past 90 days, or have visited it within the past week (but more than an hour ago), and aren’t running afoul of the throttle, the display of the image will be entirely suppressed; furthermore, the input field will be pre-filled in for you and hidden.  </p>
+<p>If you are not recognized, but have JavaScript turned on, DHTML will be used to fill in that input field for you, and that portion of the form will be set to display:none.  </p>
+<p>In fact, even if you are new, have both JavaScript and images turned off, you will find that the alt attribute of the image will contain the necessary text.</p>
+<p>I’m really not targetting humans with this.</p></blockquote>
+<p>So, much of this is learning from usability: <strong>Stop hurting the users!</strong> There are so many problems with traditional CAPTCHAs described already by <a href="/justaddwater.dk/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-people/">me</a>, <a href="http://www.456bereastreet.com/archive/200512/captcha_is_bad_for_accessibility/">Roger Johannson</a>, <a href="http://standards-schmandards.com/2005/captcha" title="Standards Schmandards: Proposal for an Accessible Captcha">Peter Krantz</a>, <a href="http://softwareas.com/captcha-impossibillis" title="Software As She’s Developed: Captcha Impossibillis">Michael Mahemoff</a>, <a href="http://www.access-matters.com/2005/05/22/quiz-115-did-a-captcha-catch-ya/" title="Access Matters: Did a CAPTCHA catch ya">Bob Easton</a>, <a href="http://www.wait-till-i.com/index.php?p=203" title="">Christian Heilmann</a>. </p>
+<p>I really like the new and far more usable approach as it still makes it hard for machines, but this time easier for humans.</p>
+<p>I just saw that in Microsofts AJAX toolkit for .NET, there is a “NoBot” widget: http://ajax.asp.net/ajaxtoolkit/NoBot/NoBot.aspx</p>
+<blockquote cite="http://ajax.asp.net/ajaxtoolkit/NoBot/NoBot.aspx">
+<p>NoBot is a control that attempts to provide CAPTCHA-like bot/spam prevention without requiring any user interaction. This approach is easier to bypass than an implementation that requires actual human intervention, but NoBot has the benefit of being completely invisible. NoBot is probably most relevant for low-traffic sites where blog/comment spam is a problem and 100% effectiveness is not required.</p>
+<p>NoBot employs a few different anti-bot techniques:</p>
+<p>    * Forcing the client’s browser to perform a configurable JavaScript calculation and verifying the result as part of the postback. (Ex: the calculation may be a simple numeric one, or may also involve the DOM for added assurance that a browser is involved)<br/>
+    * Enforcing a configurable delay between when a form is requested and when it can be posted back. (Ex: a human is unlikely to complete a form in less than two seconds)<br/>
+    * Enforcing a configurable limit to the number of acceptable requests per IP address per unit of time. (Ex: a human is unlikely to submit the same form more than five times in one minute)</p>
+<p>NoBot can be tested by violating any of the above techniques: posting back quickly, posting back many times, or disabling JavaScript in the browser.</p></blockquote>
+<p>Very nice work, Microsoft! I’d really like this approach ported to WordPress (our justaddwater.dk blog software). </p>
+<p>Last week we had 1,334 spam comments that were all caught by the Akismet plugin (except for a dozen that we had to remove manually).</p>
+<p>Related reading:</p>
+<ul>
+<li><a href="/justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/" rel="bookmark" title="Permanent Link: Blog usability: Avoid spam comments">Blog usability: Avoid spam comments</a></li>
+<li><a href="/justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/" rel="bookmark" title="Permanent Link: Blog usability: Avoid spam comments (part 2)">Blog usability: Avoid spam comments (part 2)</a></li>
+<li><a href="/justaddwater.dk/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-people/" rel="bookmark" title="Permanent Link: Captcha usability revisited: Google inaccessible to blind people">Captcha usability revisited: Google inaccessible to blind people</a></li>
+<li>Microsoft ASP.NET AJAX controls Toolkit: <a href="http://ajax.asp.net/ajaxtoolkit/NoBot/NoBot.aspx">NoBot example</a></li>
+</ul>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/accessibility" href="/justaddwater.dk/topics/accessibility/" rel="tag">accessibility</a>, <a data-original-url="http://technorati.com/tag/ajax" href="/justaddwater.dk/topics/ajax/" rel="tag"> ajax</a>, <a data-original-url="http://technorati.com/tag/microsoft" href="/justaddwater.dk/topics/microsoft/" rel="tag"> microsoft</a>, <a data-original-url="http://technorati.com/tag/atlas" href="/justaddwater.dk/topics/atlas/" rel="tag"> atlas</a>, <a data-original-url="http://technorati.com/tag/.net" href="/justaddwater.dk/topics/net/" rel="tag"> .net</a>, <a data-original-url="http://technorati.com/tag/javascript" href="/justaddwater.dk/topics/javascript/" rel="tag"> javascript</a>, <a data-original-url="http://technorati.com/tag/wordpress" href="/justaddwater.dk/topics/wordpress/" rel="tag"> wordpress</a>, <a data-original-url="http://technorati.com/tag/akismet" href="/justaddwater.dk/topics/akismet/" rel="tag"> akismet</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Monday, October 23rd, 2006 at 15:25 (GMT-1)						and is filed under <a href="/justaddwater.dk/category/accessibility/" rel="category tag">Accessibility</a>, <a href="/justaddwater.dk/category/usability/" rel="category tag">Usability</a>, <a href="/justaddwater.dk/category/webstandards/" rel="category tag">Web Standards</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">21 Responses to “CAPTCHA usability: Humane alternative to CAPTCHA”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-20266">
+			<cite><a class="url" href="http://www.webword.com/wp/2006/10/23/usability-tidbits-for-monday-20-october-2006/" rel="external">WebWord » Blog Archive » Usability Tidbits for Monday 20-October-2006</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-20266" title="">October 23rd, 2006 at 18:42 (GMT-1)</a> </small>
+
+			<p>[…] CAPTCHA usability – “Stop hurting the users!” […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-22560">
+			<cite>Aankhen</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-22560" title="">November 1st, 2006 at 09:07 (GMT-1)</a> </small>
+
+			<p>So if I disable JavaScript in my browser, any site using this NoBot widget will think I’m a spam bot?</p>
+<p>I don’t condone the use of CAPTCHAs, but this doesn’t seem like a viable alternative to me.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-24218">
+			<cite>Kim</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24218" title="">November 6th, 2006 at 23:47 (GMT-1)</a> </small>
+
+			<p>Hi,</p>
+<p>Why not use a simple question like I’ve done for some time now. For instance… which day comes after sunday or what is color is an orange? Simpel and efficient.</p>
+<p>Great blog.</p>
+<p>Kim</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-24325">
+			<cite><a class="url" href="http://foolswisdom.com" rel="external">Lloyd D Budd</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24325" title="">November 7th, 2006 at 05:51 (GMT-1)</a> </small>
+
+			<p>Kim, your method only works as long as it is not profitable enough — ugh, I don’t want to try and get inside the head of spammers.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-403115">
+			<cite><a class="url" href="http://sinistras.aranha.com.br/2006/12/captcha/" rel="external">Urls Sinistras » Captcha</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-403115" title="">March 18th, 2008 at 21:49 (GMT-1)</a> </small>
+
+			<p>[…] CAPTCHA usability: Humane alternative to CAPTCHA. […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-410445">
+			<cite><a class="url" href="http://www.cartaomega.com.br" rel="external">Rafael Franco</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-410445" title="">April 14th, 2008 at 03:33 (GMT-1)</a> </small>
+
+			<p>I think Captcha’s can input a difficulty level to newbiews. Then, it is important to think that it will be really necessary to a website, because the negative effects can bring problems to site.</p>
+<p>Rafael Franco<br/>
+Unicard <a href="http://www.cartaomega.com.br" rel="external">Mega Bonus</a></p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-410464">
+			<cite><a class="url" href="http://www.cartaomega.com.br" rel="external">Rafael</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-410464" title="">April 14th, 2008 at 05:02 (GMT-1)</a> </small>
+
+			<p>I think too, that kim’s method only works as long as it is not profitable enough.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-410796">
+			<cite><a class="url" href="http://duncanhalley.co.uk" rel="external">Dunc</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-410796" title="">April 14th, 2008 at 15:25 (GMT-1)</a> </small>
+
+			<p>With the increasing use of CAPTCHA, I wonder if we will see more ‘human powered’ spam, with spammers employing people to post comments manually.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-410834">
+			<cite><a class="url" href="http://geekministry.com" rel="external">kim</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-410834" title="">April 14th, 2008 at 16:37 (GMT-1)</a> </small>
+
+			<p>I wonder how many of you actually read what I write about my little script so I quote… “SpamTrap is NOT a guarantee against spam! It’s just another tool in the spam fighting toolbox, just like Captcha” and it’s obviously for non tech people…</p>
+<p>Human powered spam is the next big thing… and there is absolutely nothing you can do about it. </p>
+<p>Kim</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-426790">
+			<cite><a class="url" href="http://referencedesigner.com/tutorials/js/js_1.php" rel="external">Heather</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-426790" title="">June 28th, 2008 at 10:04 (GMT-1)</a> </small>
+
+			<p>Millions of man hours are wasted in filling the captcha. This article is a welcome gesture to remove manpower wastage.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-438740">
+			<cite><a class="url" href="http://www.halegroves.com/uv-bulbs/" rel="external">Hale Groves</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-438740" title="">August 28th, 2008 at 03:23 (GMT-1)</a> </small>
+
+			<p>Captcha can drive me crazy.  I have resubmitted pages before about 4 times before I got the CAPTCHA correct.  I like the new ones that ask questions like, “When was the Constitution of the Untited States ratified”?  I can Google the answer in seconds and I learn a bit of trivia. I’m OK with that and I’m sure SPAM bots will never figure our random things like this.</p>
+<p>I’ve also seen SPAM question like, “What is the 2nd letter of the the third word in this question?” (Answer is h).</p>
+<p>I’m just not a big fan of letters so distorted you can’t make them out, if you press the “read it to me” button it’s almost impossible to make out the letters also.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-486464">
+			<cite><a class="url" href="http://www.capitalA.co.uk" rel="external">Edinburgh Architect</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-486464" title="">May 18th, 2009 at 21:57 (GMT-1)</a> </small>
+
+			<p>I think the use of CAPTCHA could be legally challenged here in the UK. Architects like me have had to wrestle with the Disability Discrimination Act (DDA). for the last few years here, working out how to make our buildings accessible to people with every imaginable disability. Its a very difficult and frustrating job sometimes, especially as the official guidelines are not clear. The law here relies on court cases to establish legal president, which will then be worked into all future guidelines. There have been a number of cases over the last few years, usually against large property owners (McDonald’s for example)</p>
+<p>It seems that the Equality and Human Rights Commission here has now published guidelines relating to accessibility of websites. It is now just a matter of time before someone who is visually impaired challenges the use of CAPTCHA. </p>
+<p>Check out their website for more details.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-487143">
+			<cite><a class="url" href="http://www.seviourbooks.com" rel="external">Techie</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-487143" title="">June 23rd, 2009 at 00:36 (GMT-1)</a> </small>
+
+			<p>I agree with Hale Groves, it is pretty annoying when you have to try several times over to enter a captcha containing some of the less distinct letters. Moreover, the use of pastel colours on similar backgrounds doesn’t help.<br/>
+Just yesterday, I decided to try the audio output alternative because a text input box had not accepted a couple of attempts. The audio turned out to be a snatch of rapid conversation – no chance of transcribing that. So I too prefer to be asked a question or a simple calculation; what’s wrong with that as a way of determining that it is a human on the input end?</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-487216">
+			<cite><a class="url" href="http://www.serenitebiz.com" rel="external">Joe</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-487216" title="">June 26th, 2009 at 16:25 (GMT-1)</a> </small>
+
+			<p>I kinda like the captcha’s that many drupal users have implemented where there it presents a nonsense phrase and the asks what is the first word in the phrase . . . .  No matter how nonsensical the word is, you can at least read the letters and duplicate the phrase.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-488341">
+			<cite><a class="url" href="http://www.johnpreator.com" rel="external">John</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488341" title="">August 16th, 2009 at 15:05 (GMT-1)</a> </small>
+
+			<p>I can’t stand the captchas that bend the words and add squiggles (is it a dash? or an apostraphe?) – I’ve sometimes just discarded my comment after 4 or five attempts to get it right. As for listening to the audio, sometimes I’m prompted to install upgrades (that I don’t need if I can listen to music with no problem, or I just installed the same update yesterday!), so they don’t help. Yes Techie, a simple sum or trivia question is best IMHO</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-488922">
+			<cite><a class="url" href="http://eddieglorioso.com" rel="external">Eddie</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-488922" title="">September 6th, 2009 at 19:44 (GMT-1)</a> </small>
+
+			<p>The worst ones to solve are the Captchas that myspace uses and Google – I get them wrong a couple of times before I can get it right due to not wearing my glasses – still though –</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-489332">
+			<cite><a class="url" href="http://buildingcomputersforbeginners.blogspot.com" rel="external">Marvin Africa</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-489332" title="">September 23rd, 2009 at 17:02 (GMT-1)</a> </small>
+
+			<p>In the past I’ve sometimes given up trying to get past some over zealous captchas. </p>
+<p>Maybe genuine comments should be given strong keyword orientated backlinks. If a good comment was considered more valuable web users would work harder to make sure they get what they are after, and that is backlinks. </p>
+<p>A start would be to stop linking the name field back to a website. It would make more sense to have a keyword field that links back to the website. Then take out the option to have any live links in the comment box.  Continue with using filters and good eyesight to seperate the unwanted spam from the genuine comments. Captchas have to evolve as the bots will always figure them out eventually. </p>
+<p>I can imagine someday having to complete an entire level of super mario just to prove that I am a human being (or am I?)</p>
+<p>Marvin Africa</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-489436">
+			<cite><a class="url" href="http://www.businesscommunicationblog.com/" rel="external">business communication</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-489436" title="">September 27th, 2009 at 02:39 (GMT-1)</a> </small>
+
+			<p>I think that the captcha process is very confusing, especially for those who are new to it.  It can be very difficult to get the symbols correct because frequently they are very hard to read.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-489751">
+			<cite><a class="url" href="http://jasonsantini.com/" rel="external">Jason S.</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-489751" title="">October 6th, 2009 at 02:08 (GMT-1)</a> </small>
+
+			<p>Though my eye doctor says that I have perfect vision I still get stumped by a couple of catcha’s that I have to input multiple times, such as myspace and facebook – I think there has to be a better solution than me trying to make a comment on a buddys profile but have to type in teh captcha 3 or more time.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-490008">
+			<cite><a class="url" href="http://www.ars-logo-design.com" rel="external">Mark</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-490008" title="">October 13th, 2009 at 02:13 (GMT-1)</a> </small>
+
+			<p>We run a commercial website and after struggling with different spam prevention systems, we decided to let spammers do their job and make our customers’ lives easier. We prefer to clean up a database and have higher sales volumes; CAPTCHA is a hassle and some prospects are not interested in coping with it.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-490450">
+			<cite><a class="url" href="http://lehtia.com" rel="external">Marisa</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-490450" title="">October 27th, 2009 at 14:22 (GMT-1)</a> </small>
+
+			<p>Akismet has been a real good for detecting spam comments and I never use anything else on blogs. If you don’t approve comments automatically then you can spend a few minutes every week to quickly scan all the spam mails through. There is a little change that some usefull comments will end up in the spam folder but that is a fact of todays websites and comments.<br/>
+If you really want to do blog commenting then you should try a few times if your comment is not approved immediatly. Not all comment will go to the akismet spam folder.<br/>
+I really hate those hard to read captcha’s some sites use. If you use cpatcha then automated browser calculated one sounds like a real good option. Not sure if spammers can replicate that browser behaviour and make delay to commenting but it’s not in the near future.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

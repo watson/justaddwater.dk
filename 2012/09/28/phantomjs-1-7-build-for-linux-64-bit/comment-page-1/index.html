@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | PhantomJS 1.7 build for Linux 64 bit</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/feed/" rel="alternate" title="justaddwater.dk » PhantomJS 1.7 build for Linux 64 bit Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/2012/06/28/forgotten-subversion-commands-undo-merge-branches-and-more/" rel="prev" title="Forgotten Subversion Commands, Undo, Merge Branches and More"/>
+<link href="/justaddwater.dk/2012/11/09/git-checkout-old-revisions-by-date/" rel="next" title="Git checkout old revisions by date"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/2012/06/28/forgotten-subversion-commands-undo-merge-branches-and-more/" rel="prev">Forgotten Subversion Commands, Undo, Merge Branches and More</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/2012/11/09/git-checkout-old-revisions-by-date/" rel="next">Git checkout old revisions by date</a> »</div>
+		</div>
+	
+		<div class="post" id="post-1663">
+			<h2><a href="/justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/" rel="bookmark" title="Permanent Link: PhantomJS 1.7 build for Linux 64 bit">PhantomJS 1.7 build for Linux 64 bit</a></h2>
+	
+			<div class="entry">
+				<p>At a project I work on, we needed PhantomJS to run from a Redhat Fedora 64 bit machine.</p>
+<p>Since phantomJs is just released this week, I needed to build it myself.</p>
+<p> </p>
+<p>I post this link to the binary in case it can benefit others.</p>
+<p> </p>
+<p><a href="http://dl.dropbox.com/u/54307969/phantomjs-1.7.0-linux-x86_64.tar.gz">PhantomJs 1.7.0 built on Linux Redhat Fedora 64 bit</a></p>
+<p> </p>
+<p> </p>
+<p>PhantomJS is a fantastic tool for automating tests, since it is a headless browser which we wrapped in our automation framework to run javascript based tests very fast and easily.</p>
+<p> </p>
+<p>I followed the <a href="http://phantomjs.org/build.html" title="Phantomjs 1.7.0 official build instructions">build instructions</a> (the instructions described for Amazon EC2 also worked on the fedora I am running).</p>
+<blockquote>
+<pre>sudo yum install gcc gcc-c++ make git openssl-devel freetype-devel fontconfig-devel
+git clone git://github.com/ariya/phantomjs.git
+cd phantomjs
+git checkout 1.7
+./build.sh --jobs 1</pre>
+<pre></pre>
+<pre>#(added step below by me)
+sudo yum install upx</pre>
+<pre>After finishing the build, run deploy/package.sh which creates PhantomJS binary tarball that can be moved around and/or extracted to a different location. This is the correct way to install the built binary into an arbitrary directory, i.e. do not simply copy the executable as it won't work.</pre>
+</blockquote>
+<p>The link I posted is the actual outcome of ./deploy/package.sh</p>
+<p> </p>
+<p>For other operating systems, you could probably just get the binary at the official <a href="http://phantomjs.org/download.html">PhantomJs download page</a>.</p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Friday, September 28th, 2012 at 09:54 (GMT-1)						and is filed under <a href="/justaddwater.dk/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/category/continous-integration/" rel="category tag">Continous integration</a>, <a href="/justaddwater.dk/category/testing-2/" rel="category tag">Testing</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">4 Responses to “PhantomJS 1.7 build for Linux 64 bit”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-651002">
+			<cite>venkat</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-651002" title="">October 8th, 2012 at 12:11 (GMT-1)</a> </small>
+
+			<p>Phantom Js is a fantastic tool for automating tests, since it is a headless browser which we wrapped in our automation framework to run javascript based tests very fast and eas</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-651010">
+			<cite><a class="url" href="http://www.cubiccodes.com" rel="external">jijojohn</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-651010" title="">October 9th, 2012 at 06:16 (GMT-1)</a> </small>
+
+			<p>Phantom js is a fantastic tool for automatic test,awesome…</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-651023">
+			<cite><a class="url" href="http://www.darwinconsultants.co.uk" rel="external">Darwin</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-651023" title="">October 10th, 2012 at 17:17 (GMT-1)</a> </small>
+
+			<p>Good tool for testing. I need it for a different OS though</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-651079">
+			<cite><a class="url" href="http://www.steamatic.ca" rel="external">David</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-651079" title="">October 17th, 2012 at 06:58 (GMT-1)</a> </small>
+
+			<p>Phantom Js is a superb tool and I use it for my automation tests.Also the javascript tests run very quickly.It is an optimal solution for headless website testing,screen capture,page automation and network automation.Thanks for sharing your article.it has been quiet helpful to me.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

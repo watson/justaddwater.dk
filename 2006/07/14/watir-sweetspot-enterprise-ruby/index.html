@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Watir: Another sweetspot for Enterprise Ruby </title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/2006/07/14/watir-sweetspot-enterprise-ruby/feed/" rel="alternate" title="justaddwater.dk » Watir: Another sweetspot for Enterprise Ruby Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/2006/07/05/justaddwaterdk-photoshoot/" rel="prev" title="Justaddwater.dk photoshoot"/>
+<link href="/justaddwater.dk/2006/08/09/irregular-publishing-frequency/" rel="next" title="Blog Usability: Irregular Publishing Frequency"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/07/14/watir-sweetspot-enterprise-ruby/" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/07/14/watir-sweetspot-enterprise-ruby/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/2006/07/05/justaddwaterdk-photoshoot/" rel="prev">Justaddwater.dk photoshoot</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/2006/08/09/irregular-publishing-frequency/" rel="next">Blog Usability: Irregular Publishing Frequency</a> »</div>
+		</div>
+	
+		<div class="post" id="post-362">
+			<h2><a href="/justaddwater.dk/2006/07/14/watir-sweetspot-enterprise-ruby/" rel="bookmark" title="Permanent Link: Watir: Another sweetspot for Enterprise Ruby">Watir: Another sweetspot for Enterprise Ruby</a></h2>
+	
+			<div class="entry">
+				<p>There are many speculations regarding Ruby (the programming language) and it’s ready-ness for enterprise use. The other day, a colleague of mine found an absolutely sweet spot: Automated testing via the browser interface.</p>
+<p><a href="http://wtr.rubyforge.org/" title="Watir: ">Watir</a> stands for “Web Application Testing in Ruby”, you write a few lines of Ruby that fires up Internet Explorer, and then clicks around, fills in form fields, submits, etc.</p>
+<p>My colleague used a couple of hours to write a few lines to integration test a complex system for a financial customer. He modified it to repeat the same test in three different environments and via timers found out that one of the environments performed very badly.</p>
+<p>I saw my colleague demo it yesterday, and both testers and developers present were absolutely impressed by the jar-dropping demo. Comments: “We could have used this much earlier”, “Despite that I don’t know Ruby, It’s easy to understand what it does”. Everybody in the project room went around smiling (<a href="http://loudthinking.com/" title="Loudthinking: David Heinemeier Hansson">David Heinemeier</a> would probably say “happy”)</p>
+<p>It’s nothing new that automated browser testing can be done, but when I ask about the alternatives, I’m told that they’re too complex to get started with, and sometimes take forever to set up.</p>
+<p>Watir gets started with just four lines of code:</p>
+<pre class="archive-code" data-recovery-code="post-362-1"><code class="language-ruby">require 'watir'
+require 'watir/WindowHelper'
+include Watir
+
+ie = IE.new
+ie.goto(test_site)</code></pre>
+<p>In my opinion, Watir + Ruby is a winnner. So easy to get started. So great payoff for a small amount of time invested. Jaw-dropping reactions on developers and testers that don’t even know Ruby. It’s a definite winner.</p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/ruby" href="/justaddwater.dk/topics/ruby/" rel="tag">ruby</a>, <a data-original-url="http://technorati.com/tag/enterprise" href="/justaddwater.dk/topics/enterprise/" rel="tag"> enterprise</a>, <a data-original-url="http://technorati.com/tag/business+case" href="/justaddwater.dk/topics/business-case/" rel="tag"> business case</a>, <a data-original-url="http://technorati.com/tag/watir" href="/justaddwater.dk/topics/watir/" rel="tag"> watir</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Friday, July 14th, 2006 at 11:18 (GMT-1)						and is filed under <a href="/justaddwater.dk/category/businesscase/" rel="category tag">Businesscase</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/2006/07/14/watir-sweetspot-enterprise-ruby/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">7 Responses to “Watir: Another sweetspot for Enterprise Ruby”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-8583">
+			<cite>Heiko</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-8583" title="">July 18th, 2006 at 09:53 (GMT-1)</a> </small>
+
+			<p>Hi!</p>
+<p>Selenium is also easy and good.<br/>
+<a href="http://www.openqa.org/selenium/" rel="external">http://www.openqa.org/selenium/</a></p>
+<p>+</p>
+<p><a href="http://jameleon.sourceforge.net/" rel="external">http://jameleon.sourceforge.net/</a></p>
+<p><a href="http://sahi.sourceforge.net/" rel="external">http://sahi.sourceforge.net/</a></p>
+<p>Heiko</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-8741">
+			<cite>Tobias H. Michaelsen</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-8741" title="">July 22nd, 2006 at 21:14 (GMT-1)</a> </small>
+
+			<p>You should also check out Scott Hanselman’s <a href="http://www.hanselman.com/blog/IntroducingWatirMakerRecordingForRubybasedWatir.aspx" rel="external">WatirMaker</a>. It is a recording program for generating runy scripts for Watir automatically. It is written in C# and is Windows-only. But a <a href="http://www.hanselman.com/blog/WatirMakerWrittenAgainInRuby.aspx" rel="external" title="Ruby version of WatirMaker">Ruby version</a> has also been made.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-8742">
+			<cite>Tobias H. Michaelsen</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-8742" title="">July 22nd, 2006 at 21:17 (GMT-1)</a> </small>
+
+			<p>“runy script” – argh! :) Should have been “Ruby”</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-8746">
+			<cite><a class="url" href="/justaddwater.dk/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-8746" title="">July 22nd, 2006 at 21:48 (GMT-1)</a> </small>
+
+			<p>Thanks for the comments. </p>
+<p>After spending some more time working with Watir, this is great news that you  can record them. Thanks for letting me know, I’ll look into that first thing Monday morning!</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-9259">
+			<cite><a class="url" href="http://blog.olle.ter.dk" rel="external">Olle Jonsson</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-9259" title="">August 3rd, 2006 at 13:42 (GMT-1)</a> </small>
+
+			<p>I found <a href="http://olle.ter.dk/blog/?p=213" rel="external" title="Watir, Ruby and more">an old post at my blog</a>, almost a complete mirror of these sentiments.</p>
+<p>As a lone consultant, I had to celebrate its genius alone. :-)</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-363871">
+			<cite><a class="url" href="/justaddwater.dk/2007/11/20/how-to-run-javascript-from-watir-scripts/">justaddwater.dk | How to Run JavaScript From Watir Scripts</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-363871" title="">November 20th, 2007 at 21:12 (GMT-1)</a> </small>
+
+			<p>[…] What’s Watir? Read “Watir: Another sweetspot for Enterprise Ruby” […]</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>outlook – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/tag/outlook/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/tag/outlook/feed/" rel="self" type="application/rss+xml" /><item><title>Fixed Outlook 2003 Corruption after Power Blackout</title><link>https://watson.github.io/justaddwater.dk/2011/04/05/fixed-outlook-2003-corruption-after-power/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1457</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 05 Apr 2011 08:20:34 +0000</pubDate><description>&lt;p&gt;The power disappeared at our office, and killed outlook 2003. Suddently I got this error:&lt;br/&gt;
+&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened.png"&gt;&lt;img alt="Outlook 2003: Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened." class="aligncenter size-medium wp-image-1456" height="56" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened-300x56.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened-300x56.png 300w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2011/04/unable-to-start-outlook-unable-to-open-the-outlook-window-the-set-of-folders-could-not-be-opened.png 630w" title="unable-to-start-outlook-unable-to-open-the-outlook-window--the-set-of-folders-could-not-be-opened" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Cannot start Microsoft Outlook. Unable to open the Outlook window. The set of folders could not be opened.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I followed advice from a &lt;a href="http://social.technet.microsoft.com/Forums/en/outlook/thread/a111e6d8-491f-449e-9b57-1b77f99e9aad"&gt;forum thread, that recommended to run “outlook.exe /resetnavpane”&lt;/a&gt;, but with no luck.&lt;/p&gt;
+&lt;p&gt;Then, from the command line, i tried all relevant flags found on “&lt;a href="http://www.outlook-tips.net/howto/commandlines.htm"&gt;outlook tips: using command line&lt;/a&gt;“.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;&lt;br/&gt;
+C:\Program Files\Microsoft Office\Office11&amp;gt;outlook /resetnavpane&lt;/code&gt;&lt;/p&gt;&lt;code&gt;
+&lt;p&gt;C:\Program Files\Microsoft Office\Office11&amp;gt;outlook /safe&lt;/p&gt;
+&lt;p&gt;C:\Program Files\Microsoft Office\Office11&amp;gt;outlook /resetfoldernames&lt;/p&gt;
+&lt;p&gt;C:\Program Files\Microsoft Office\Office11&amp;gt;outlook /resetfolders&lt;/p&gt;
+&lt;/code&gt;&lt;p&gt;&lt;code&gt;C:\Program Files\Microsoft Office\Office11&amp;gt;outlook /cleanprofile&lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;At the end it turned out, that none of the above worked.. Until I shut down Microsoft Communicator!&lt;/p&gt;
+&lt;p&gt;Now, this worked like a charm:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;&lt;br/&gt;
+C:\Program Files\Microsoft Office\Office11&amp;gt;outlook.exe /resetfolders&lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Lesson learned: Remember to shut down Microsoft office communicator, before trying to repair outlook&lt;/p&gt;
+</description></item></channel></rss>

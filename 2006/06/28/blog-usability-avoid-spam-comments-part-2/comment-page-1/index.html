@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Blog Usability: Avoid Spam Comments (Part 2)</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/feed/" rel="alternate" title="justaddwater.dk » Blog Usability: Avoid Spam Comments (Part 2) Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/2006/06/28/mobile-web-best-practices/" rel="prev" title="Mobile Web Best Practices"/>
+<link href="/justaddwater.dk/2006/06/29/webstandards-case-study/" rel="next" title="Why Web Standards Matter (Case Study)"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/2006/06/28/mobile-web-best-practices/" rel="prev">Mobile Web Best Practices</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/2006/06/29/webstandards-case-study/" rel="next">Why Web Standards Matter (Case Study)</a> »</div>
+		</div>
+	
+		<div class="post" id="post-344">
+			<h2><a href="/justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/" rel="bookmark" title="Permanent Link: Blog Usability: Avoid Spam Comments (Part 2)">Blog Usability: Avoid Spam Comments (Part 2)</a></h2>
+	
+			<div class="entry">
+				<p><img align="right" alt="Can of SPAM" id="image346" src="/justaddwater.dk/wp-content/uploads/2006/06/spamcan-small2_resize.jpg" style="margin-left: 10px"/>In our previous article <a href="/justaddwater.dk/2006/06/24/blog-usability-avoid-spam-comments/" title="justaddwater.dk: Blog usability: Avoid spam comments">Blog usability: Avoid spam comments</a> we discussed the two ways we currently where fighting spam comments on our blog:</p>
+<ol>
+<li>Use Akismet for WordPress</li>
+<li>Make a spam filter against BBCode like “[/url]”</li>
+</ol>
+<p>The latter being a quick and dirty solution we had to implemented to deal with a lot of spam comments that for some reason where slipping though Akismet.</p>
+<p>Today we then implemented one of the possible future protection mechanisms that we also discussed: <strong>Remove standard URLs for posting comments</strong>.</p>
+<p>WordPress uses <code>/wp-comments-post.php</code> as the receiving URL when posting new comments. Some spammers exploit this and automatically send their spam directly to that URL (without actually filling out the comment form on the blog). The popular solution has therefore been to rename the file <code>wp-comments-post.php</code> and update the comment form to use the new filename.</p>
+<p><strong>But there are two drawbacks to this solution:</strong></p>
+<ol>
+<li>When updating your WordPress installation to a newer version the renamed file is of course deleted and replaced with a new version with the old name. If you forget to rename the new file nobody will be able to leave a comment on your site since your theme still points to the renamed version of the file (which is now deleted).</li>
+<li>If you publish your WordPress theme or move it to another WordPress installation chances are that the comment form will break because the file hasn’t been renamed on other systems.</li>
+</ol>
+<p>The solution we implemented today doesn’t actually rename the <code>wp-comments-post.php</code> file. Instead we deny all access to it via htaccess and point to it via a symbolic link we create in our theme directory. We then make our comment form point to this symbolic link instead.</p>
+<p>Since the symbolic link is located in our theme directory it is never deleted when we upgrade to a newer version of WordPress and if the theme is copied to another server the symbolic link will be copied as well — hence the comment form is not in risk of breaking.</p>
+<h3>Simple 3-Step Implementation Guide</h3>
+<p><small>If you don’t have shell access you must ask your host provider to do this for you</small></p>
+<ol>
+<li><strong>Create Symbolic Link</strong><br/>
+Create a symbolic link from your theme directory to the <code>wp-comments-post.php</code> file:Go to the directory of your current theme (in our case <code>wp-content/themes/jaw/</code>) and execute the following command:<p></p>
+<p><kbd>ln -s ../../../wp-comments-post.php my-comments-post.php</kbd></p>
+<p><small>In this example we name the symbolic link <code>my-comments-post.php</code>, but you can choose any name.</small></p></li>
+<li><strong>Update Comment Form</strong><br/>
+Still in your theme directory you need to find which files that contain links to the <code>wp-comments-post.php</code> file. To do this execute the following command:<p></p>
+<p><kbd>grep -l wp-comments-post.php *</kbd></p>
+<p>You will then get a list of the files you need to edit. Now update each file so that the link to <code>wp-comments-post.php</code> instead point to the symbolic link. This is usually done by changing the following:</p>
+<pre class="archive-code" data-recovery-code="post-344-1"><code>&lt;form action="&lt;?php <span style="color: #ff0000">echo get_option('siteurl');</span> ?&gt;/<span style="color: #ff0000">wp-comments-post.php</span>" method="post" id="commentform"&gt;</code></pre>
+<p>To this:</p>
+<pre class="archive-code" data-recovery-code="post-344-2"><code>&lt;form action="&lt;?php <span style="color: #ff0000">bloginfo('template_directory');</span> ?&gt;/<span style="color: #ff0000">my-comments-post.php</span>" method="post" id="commentform"&gt;</code></pre></li>
+<li><strong>Deny Access To Old File</strong><br/>
+To make sure that the old <code>wp-comments-post.php</code> file cannot be accessed from the internet, edit your <code>.htaccess</code> file in the root of your website and add the following to the top of the file:<p></p>
+<pre class="archive-code" data-recovery-code="post-344-3"><code>&lt;Files wp-comments-post.php&gt;
+    Deny from all
+&lt;/Files&gt;</code></pre>
+<p>To verify that the update to the htaccess file works, try to open the <code>wp-comments-post.php</code> file in a browser (i.e. http://www.yourblog.com/wp-comments-post.php) and see if you get a “403 Forbidden” page telling you that you do not have permission to access the document.</p></li>
+</ol>
+<p><strong>Remember:</strong> Make sure to test that your comment form still works when you are done with the modifications.</p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/blog+usability" href="/justaddwater.dk/topics/blog-usability/" rel="tag">blog usability</a>, <a data-original-url="http://technorati.com/tag/spam+comments" href="/justaddwater.dk/topics/spam-comments/" rel="tag"> spam comments</a>, <a data-original-url="http://technorati.com/tag/akismet" href="/justaddwater.dk/topics/akismet/" rel="tag"> akismet</a>, <a data-original-url="http://technorati.com/tag/bbcode" href="/justaddwater.dk/topics/bbcode/" rel="tag"> bbcode</a>, <a data-original-url="http://technorati.com/tag/guide" href="/justaddwater.dk/topics/guide/" rel="tag"> guide</a>, <a data-original-url="http://technorati.com/tag/wordpress" href="/justaddwater.dk/topics/wordpress/" rel="tag"> wordpress</a>, <a data-original-url="http://technorati.com/tag/blogging" href="/justaddwater.dk/topics/blogging/" rel="tag"> blogging</a>, <a data-original-url="http://technorati.com/tag/justaddwater.dk" href="/justaddwater.dk/topics/justaddwater.dk/" rel="tag"> justaddwater.dk</a>, <a data-original-url="http://technorati.com/tag/htaccess" href="/justaddwater.dk/topics/htaccess/" rel="tag"> htaccess</a>, <a data-original-url="http://technorati.com/tag/wordpress+theme" href="/justaddwater.dk/topics/wordpress-theme/" rel="tag"> wordpress theme</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Thomas Watson Steen						 
+						on Wednesday, June 28th, 2006 at 19:26 (GMT-1)						and is filed under <a href="/justaddwater.dk/category/blogging/" rel="category tag">Blogging</a>, <a href="/justaddwater.dk/category/justaddwaterdk/" rel="category tag">justaddwater.dk</a>, <a href="/justaddwater.dk/category/wordpress/" rel="category tag">WordPress</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/2006/06/28/blog-usability-avoid-spam-comments-part-2/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">13 Responses to “Blog Usability: Avoid Spam Comments (Part 2)”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-7600">
+			<cite><a class="url" href="http://www.burek.co.yu" rel="external">Ivan Minic</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-7600" title="">June 30th, 2006 at 00:33 (GMT-1)</a> </small>
+
+			<p>Why simply not integrtating captcha?</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-7617">
+			<cite><a class="url" href="/justaddwater.dk/">Jesper Rønn-Jensen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-7617" title="">June 30th, 2006 at 17:16 (GMT-1)</a> </small>
+
+			<p>Ivan, I wrote about the accessibility problems of CAPTCHA earlier in “<a href="/justaddwater.dk/2006/01/30/captcha-usability-revisited-google-inaccessible-to-blind-people/">Captcha usability revisited: Google inaccessible to blind people</a>”</p>
+<p>Spam number update: As we implemented this we got approx. 500 spam comments per day on this blog. After implementing like Thomas describes above, we went from 500 to 28 the last day. </p>
+<p>So if we assume for a moment that the spam level is the same, this trick stops 472 of 500 spam comments. Impressive!</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-78381">
+			<cite><a class="url" href="/justaddwater.dk/2007/02/06/100000-blog-spam-comments/">justaddwater.dk | 100,000 Blog Spam Comments</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-78381" title="">February 6th, 2007 at 13:57 (GMT-1)</a> </small>
+
+			<p>[…] We have for example been blocking certain keywords that we found where common in spam that slipped through Akismet, or we have been changing the standard WordPress URL for posting comments. Finally we have incorporated a little htaccess hack that validates the posters referral URL. This should of cause be our own domain justaddwater.dk, but many spammers actually put some garbage into this header field – and we can then easily block it directly in the Apache web server before it even reaches WordPress. UPDATE: We also allow empty referrals (thanks Håvard, for pointing this out) […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-89144">
+			<cite><a class="url" href="http://xhtmlforum.de/44586-barrierefreie-alternative-zu-captchas-2.html#post325663" rel="external">Barrierefreie Alternative zu Captcha's? - Seite 2 - XHTMLforum</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-89144" title="">February 22nd, 2007 at 12:49 (GMT-1)</a> </small>
+
+			<p>[…] Schuss ins Blaue sinnvoll. Dort reicht es allem Anschein nach schon aus die Skripte umzubenennen (JustAddWater.dk – Blog Usability: Avoid Spam Comments (Part 2)) um einen Großteil des Spams abzuwehren.    __________________ Markus […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-89152">
+			<cite><a class="url" href="http://xhtmlforum.de/44586-barrierefreie-alternative-zu-captchas-3.html#post325666" rel="external">Barrierefreie Alternative zu Captcha's? - Seite 3 - XHTMLforum</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-89152" title="">February 22nd, 2007 at 12:59 (GMT-1)</a> </small>
+
+			<p>[…] Schuss ins Blaue sinnvoll. Dort reicht es allem Anschein nach schon aus die Skripte umzubenennen (JustAddWater.dk – Blog Usability: Avoid Spam Comments (Part 2)) um einen Großteil des Spams abzuwehren.    Tja, das würde ich wie gesagt nicht unterschreiben, […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-119318">
+			<cite><a class="url" href="/justaddwater.dk/2007/04/02/spam-blog-posted-182-articles-in-one-day/">justaddwater.dk | Spam Blog Posted 182 Articles in One Day</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-119318" title="">April 2nd, 2007 at 02:35 (GMT-1)</a> </small>
+
+			<p>[…] written about our spam comment countermeasures in “how to avoid spam comments” (part 1, part 2), and the last 2 months since we passed 100,000 spam comments, we have had another 57,000 spam […]</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-228255">
+			<cite><a class="url" href="http://www.suniforce.com/" rel="external">Tony Joolo</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-228255" title="">August 6th, 2007 at 21:14 (GMT-1)</a> </small>
+
+			<p>CAPTCHAS shouldn’t be difficult to read. Every implementation I’ve ever seen is terrible. Computers are pretty good at OCR, so why are we providing humans with an OCR problem? The one thing we know humans are better than computers at is logic problems. A better CAPTCHA would be “type the second word from the end of this sentence”, then you’d type “this” to pass the test. How about alternate the font color of each word and tell them to type the blue word?. Or alternate the size of font and ask the user to type the word with the smallest font? Or the word that has a smiley face instead of an ‘O’? Or type the first letter of each word in the sentence? Humans are better suited than computers for all those problems.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-392808">
+			<cite><a class="url" href="http://pokredyt.pl" rel="external">Kredyt Mieszkaniowy</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-392808" title="">February 1st, 2008 at 12:09 (GMT-1)</a> </small>
+
+			<p>CAPTCHAS isn’t difficult to read!</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-413137">
+			<cite><a class="url" href="http://www.globalkredyt.pl" rel="external">kredyt bez bik</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-413137" title="">April 22nd, 2008 at 14:14 (GMT-1)</a> </small>
+
+			<p>captcha alway makes problem, I prefer to use any math question.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-438798">
+			<cite><a class="url" href="http://carvoeiroinportugal.com/" rel="external">Carvoeiro in Portugal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-438798" title="">August 28th, 2008 at 15:32 (GMT-1)</a> </small>
+
+			<p>The math questions are being used a lot at the moment! I think that they will go out of fashion, because it is going to be easier to crack than an image captcha! A computer can read a web page and add 3 to 5 also!<br/>
+I have seen image captchas on rapid share, where they put a captcha with dogs and cats behind the letters, and you have to type the letters that have a dog behind, that’s smart but a big pain because its all blurry!</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-441613">
+			<cite><a class="url" href="http://ocartaodecredito.com" rel="external">Cartao de Credito</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-441613" title="">September 3rd, 2008 at 21:56 (GMT-1)</a> </small>
+
+			<p>Hello! I think these are great ideas! I have been using askimet and it is working great for my site!</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-448846">
+			<cite>jitendra</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-448846" title="">September 26th, 2008 at 06:29 (GMT-1)</a> </small>
+
+			<p>I was using manual posting technique, but I am not able to post comment in any site.</p>
+<p>May be my URL “gigaturn” has been listed in block-list by wp-comments-post.</p>
+<p>Any solution for this problem would be appreciated.</p>
+<p>Thanks in advance!</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-509779">
+			<cite><a class="url" href="/justaddwater.dk/2006/10/23/captcha-usability-humane-alternative-to-captcha/">justaddwater.dk | CAPTCHA usability: Humane alternative to CAPTCHA</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-509779" title="">January 31st, 2011 at 20:26 (GMT-1)</a> </small>
+
+			<p>[…] Blog usability: Avoid spam comments (part 2) […]</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Thomas Watson Steen" src="/justaddwater.dk/wp-content/jaw/userphoto/1.jpg" title="Photograph of author Thomas Watson Steen"/></p><p>Working the web since 1995, Thomas Watson Steen is a web standards and usability expert. He is a partner in the company '3dbyggeri danmark', a new IT start-up in Denmark specializing in consulting and IT services to the construction sector.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

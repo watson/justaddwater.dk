@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/justaddwater-comment-subscriptionpng/feed/" rel="self" type="application/rss+xml" /><item><title>Git extract folder from project with history and tags</title><link>https://watson.github.io/justaddwater.dk/2016/11/02/git-extract-folder-from-project-with-history-and-tags/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1809</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 02 Nov 2016 19:40:32 +0000</pubDate><description>&lt;p&gt;This is a short note regarding the use of `git filter-branch` when you want to split a git repository and preserve the history.&lt;/p&gt;
+&lt;p&gt;I had some issues in finding the correct parameters. In case this also can help others, you can find the command here.&lt;/p&gt;
+&lt;p&gt;In case you are not yet familiar with the possibilities of `git filter-branch`, I suggest you look into the  &lt;a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#The-Nuclear-Option:-filter-branch"&gt;Git book: Rewriting history&lt;/a&gt;, which has a good introduction to the command.&lt;/p&gt;
+&lt;p&gt;Now, to start you should clone the repository you want to change (since you will completely rewrite history in the new repos).&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;In short, without further explanation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ORIG=path_to_original_repos&lt;br/&gt;
+DEST=destination_of_rewritten_repos&lt;br/&gt;
+DIR=directory_you_want_to_extract_from_ORIG&lt;/code&gt;&lt;/p&gt;&lt;code&gt;
+&lt;/code&gt;&lt;p&gt;&lt;code&gt;git clone $ORIG $DEST &amp;amp;&amp;amp; \&lt;br/&gt;
+cd $DEST &amp;amp;&amp;amp; \&lt;br/&gt;
+git filter-branch --prune-empty --tag-name-filter cat --subdirectory-filter $DIR -- --all&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A few notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--prune-empty&lt;/code&gt; will remove all commits that has no relation to the folder you extract&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--tag-name-filter cat&lt;/code&gt; will also rewrite any tags you put on the commits that are rewritten&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--subdirectory-filter&lt;/code&gt; takes a foldername as parameter, but I needed to add &lt;code&gt;-- --all&lt;/code&gt; to make it work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;
+</description></item><item><title>Git tip to remove remote branches already merged</title><link>https://watson.github.io/justaddwater.dk/2016/08/25/git-tip-to-remove-remote-branches-already-merged/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1798</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 25 Aug 2016 09:54:43 +0000</pubDate><description>&lt;p&gt;Let’s talk about source control and an efficient way of using Git.&lt;/p&gt;
+&lt;p&gt;I like the projects where you have a `master` branch and a few feature branches, which are actively being worked upon. Only a few branches are present at a given time, and this is less confusing for the contributors in the repository.&lt;/p&gt;
+&lt;p&gt;A couple of times I have been on a project where old branches were not cleaned up. &lt;/p&gt;
+&lt;p&gt;I found that it’s really easy to list these branches and clean them up.&lt;/p&gt;
+&lt;p&gt;Step 1: List all branches that are already merged:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --merged&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Lists all remote branches which are already merged. In case you want to find the old ones, you can sort them by commit date with the flag `–sort=committerdate`&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --sort committerdate&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Committerdate flag will put the most recent branches last (you can reverse with minus: `&lt;code&gt;--sort=-committerdate&lt;/code&gt;`.&lt;/p&gt;
+&lt;p&gt;Step 2: List only relevant branches.&lt;/p&gt;
+&lt;p&gt;The list returned from above will also contain origin/HEAD and origin/master with we have to filter out:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;we simply remove them with `grep -v`&lt;/p&gt;
+&lt;p&gt;Step 3: Feed list into a delete command&lt;/p&gt;
+&lt;p&gt;The above command will give you a list of branches to remove. Review the list carefully by printing each line:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin | xargs -n 1 echo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;When you are satisfied, you can remove each branch with a git push command. Example&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git push --delete origin merged_branch1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can simply repeat this for as many times as you have branches with the above expression. So, in total your final command will be:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$ git branch -r --merged | cut -d / -f 2 | grep -v master | grep -v origin | xargs -n 1  git push --delete origin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;And done :)&lt;/p&gt;
+&lt;p&gt;This post is following my series of blog posts with &lt;a href="https://watson.github.io/justaddwater.dk/2011/09/30/collection-of-useful-git-tips-to-get-started/"&gt;useful Git Tips&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Ruby make list minimum length</title><link>https://watson.github.io/justaddwater.dk/2015/12/13/ruby-make-list-minimum-length/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1781</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 13 Dec 2015 20:20:01 +0000</pubDate><description>&lt;p&gt;In a Ruby on Rails app, I wanted a list to be at least of two items. This could be done in several ways.&lt;/p&gt;
+&lt;p&gt;Here is a first naïve impementation:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+# Naïve implementation, just return whatever number I need
+def sum_up_a(existing)
+  return 2 if existing == 0
+  return 1 if existing == 1
+  return 0
+end
+
+sum_up_a(0)   # =&amp;gt; 2
+sum_up_a(1)   # =&amp;gt; 1
+sum_up_a(2)   # =&amp;gt; 0
+sum_up_a(3)   # =&amp;gt; 0
+sum_up_a(10)  # =&amp;gt; 0
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A slightly improved version could investigate number of existing, and return the diff only if needed:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+MIN_COUNT = 2
+# slightly improved with less conditionals
+def sum_up_b(existing)
+  return 0 if existing &amp;gt;= MIN_COUNT
+  MIN_COUNT - existing
+end
+
+sum_up_b(0)   # =&amp;gt; 2
+sum_up_b(1)   # =&amp;gt; 1
+sum_up_b(2)   # =&amp;gt; 0
+sum_up_b(3)   # =&amp;gt; 0
+sum_up_b(10)  # =&amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Now, my favourite. If you look at the result of “MIN_COUNT – existing”. This number is negative or zero if we dont want extra rows. This means that we can rewrite the algorithm without any conditional logic like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+# my favorite: return the biggest number either 0 or the difference
+# Works well because difference is only positive for numbers where I 
+# need some extra rows
+def sum_up_c(existing)
+  [MIN_COUNT - existing, 0].max 
+end
+
+sum_up_c(0)   # =&amp;gt; 2
+sum_up_c(1)   # =&amp;gt; 1
+sum_up_c(2)   # =&amp;gt; 0
+sum_up_c(3)   # =&amp;gt; 0
+sum_up_c(10)  # =&amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I like the latter, since too many conditional statements tend to clutter the logic. Just a short tip and a reminder for myself next time I run into this kind of problem.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Complete example gist avalilable on Github:&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1781-1"&gt;&lt;code&gt;MIN_COUNT = 2
+
+# Naïve implementation, just return whatever number I need
+def sum_up_a(existing)
+  return 2 if existing == 0
+  return 1 if existing == 1
+  return 0
+end
+
+sum_up_a(0)   # =&amp;gt; 2
+sum_up_a(1)   # =&amp;gt; 1
+sum_up_a(2)   # =&amp;gt; 0
+sum_up_a(3)   # =&amp;gt; 0
+sum_up_a(10)  # =&amp;gt; 0
+
+
+# slightly improved with less conditionals
+def sum_up_b(existing)
+  return 0 if existing &amp;gt;= MIN_COUNT
+  MIN_COUNT - existing
+end
+
+sum_up_b(0)   # =&amp;gt; 2
+sum_up_b(1)   # =&amp;gt; 1
+sum_up_b(2)   # =&amp;gt; 0
+sum_up_b(3)   # =&amp;gt; 0
+sum_up_b(10)  # =&amp;gt; 0
+
+
+# my favorite: return the biggest number either 0 or the difference
+# Works well because difference is only positive for numbers where I 
+# need some extra rows
+def sum_up_c(existing)
+  [MIN_COUNT - existing, 0].max 
+end
+
+sum_up_c(0)   # =&amp;gt; 2
+sum_up_c(1)   # =&amp;gt; 1
+sum_up_c(2)   # =&amp;gt; 0
+sum_up_c(3)   # =&amp;gt; 0
+sum_up_c(10)  # =&amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;fill_up_to.rb · &lt;a href="https://gist.github.com/jesperronn/8c5fe0d78f77adc7320f/bd3243090e2f5cea5d60b6fb9770553eb9303453"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+</description></item><item><title>Change history of SVN repository</title><link>https://watson.github.io/justaddwater.dk/2015/04/15/change-history-of-svn-repository/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1759</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 15 Apr 2015 22:06:48 +0000</pubDate><description>&lt;p&gt;Somebody asked me if it’s possible to change history of an SVN repository like you can do in Git.&lt;/p&gt;
+&lt;p&gt;The easiest parts to change are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;commit date&lt;/li&gt;
+&lt;li&gt;commit log message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With this, you can easily modify time stamps if, for instance, your svn server clock is wrong.&lt;/p&gt;
+&lt;h2&gt;Step 1: Modify repository to accept property changes&lt;/h2&gt;
+&lt;p&gt;Make sure your svn repository accepts property changes. (commit dates and messages are just properties which are basically unversioned).&lt;/p&gt;
+&lt;p&gt;For your repository, you need to make sure the hook file `pre-revprop-change` exists, is executable and has exit code 0. An easy way is to write a file which always exists with code 0:&lt;/p&gt;
+&lt;p&gt;# write this file to `repository_directory/hooks/pre-revprop-change`&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;#!/usr/bin/env sh&lt;/pre&gt;
+&lt;pre&gt;exit 0&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt; Step 2: change date on the revision you want:&lt;/h2&gt;
+&lt;p&gt;In this example I will set the date for revision 1 to May 1st, 1981.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;svn propset --revprop -r 1 svn:date &lt;span class="pl-s1"&gt;&lt;span class="pl-pds"&gt;"1981&lt;/span&gt;-05-01T10:00:00.000000Z&lt;span class="pl-pds"&gt;"&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;`svn propset` command will set certain properties. You can set many properties, and in this example we manipulate `svn:date`. If we want to change the log message, we can use `svn:log`.&lt;/p&gt;
+&lt;p&gt;I deliberately chose a date from before SVN was made. Subversion is from 2001, so this commit is now made 20 years before SVN was out.&lt;/p&gt;
+&lt;h2&gt;All combined&lt;/h2&gt;
+&lt;p&gt;I created a combined script, which has has the steps mentioned above, and also iterates to change all dates in a repository:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1759-1"&gt;&lt;code&gt;#!/usr/bin/env bash
+# set -x
+# script here will create new subversion repository (file based).
+# then it will make 10 commits
+# Then we will manipulate the commit dates of the ten commits
+
+START_FOLDER=$(pwd)
+REPO=repo02
+WD=working2
+HOOKFILE=$REPO/hooks/pre-revprop-change
+# svn repository
+svnadmin create $REPO
+
+echo '#!/usr/bin/env bash' &amp;gt; $HOOKFILE
+echo 'exit 0' &amp;gt;&amp;gt; $HOOKFILE
+chmod +x $HOOKFILE
+
+
+#checkout a working copy
+
+cd "$START_FOLDER"
+
+svn checkout "file://$START_FOLDER/$REPO" "$WD"
+cd "$START_FOLDER"
+cd "$WD"
+
+touch README.txt
+svn add README.txt
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+   echo "line $i" &amp;gt;&amp;gt; README.txt
+   svn ci -m "commit number $i (originally created $(date +"%Y-%m-%d %T"))"
+done
+
+svn update
+svn log
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;svn_create.sh · &lt;a href="https://gist.github.com/jesperronn/174cea58433d2f06968f/0c07c4a67dac3e13ebf84ba04b3d63be17818999"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;pre class="archive-code" data-recovery-code="gist-1759-2"&gt;&lt;code&gt;#!/usr/bin/env bash
+# 
+# We have 10 commits in a repository. Lets set commit dates to May 1st, 1981-1990
+#
+# set -x
+
+START_FOLDER=$(pwd)
+WD=working2
+
+
+cd "$START_FOLDER"
+cd "$WD"
+
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+  YEAR=$(echo "1980 + $i" | bc )
+  svn propset --revprop -r $i  svn:date "$YEAR-05-01T10:00:00.000000Z"
+done
+
+svn update
+&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;svn_modify.sh · &lt;a href="https://gist.github.com/jesperronn/174cea58433d2f06968f/0c07c4a67dac3e13ebf84ba04b3d63be17818999"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;The result&lt;/h3&gt;
+&lt;p&gt;The result is a fine modified commit history which could look like this&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;$ svn log
+
+
+&lt;/pre&gt;
+&lt;p class="p1"&gt;&lt;span class="s1"&gt;r10 | jesper | 1990-05-01 12:00:00 +0200 (Tue, 01 May 1990) | 1 line&lt;br/&gt;
+&lt;/span&gt;commit number 10 (originally created 2015-04-15 22:21:35)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r9 | jesper | 1989-05-01 12:00:00 +0200 (Mon, 01 May 1989) | 1 line&lt;br/&gt;
+commit number 9 (originally created 2015-04-15 22:21:34)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r8 | jesper | 1988-05-01 12:00:00 +0200 (Sun, 01 May 1988) | 1 line&lt;br/&gt;
+commit number 8 (originally created 2015-04-15 22:21:33)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r7 | jesper | 1987-05-01 12:00:00 +0200 (Fri, 01 May 1987) | 1 line&lt;br/&gt;
+commit number 7 (originally created 2015-04-15 22:21:32)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r6 | jesper | 1986-05-01 12:00:00 +0200 (Thu, 01 May 1986) | 1 line&lt;br/&gt;
+commit number 6 (originally created 2015-04-15 22:21:31)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r5 | jesper | 1985-05-01 12:00:00 +0200 (Wed, 01 May 1985) | 1 line&lt;br/&gt;
+commit number 5 (originally created 2015-04-15 22:21:30)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r4 | jesper | 1984-05-01 12:00:00 +0200 (Tue, 01 May 1984) | 1 line&lt;br/&gt;
+commit number 4 (originally created 2015-04-15 22:21:29)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r3 | jesper | 1983-05-01 12:00:00 +0200 (Sun, 01 May 1983) | 1 line&lt;br/&gt;
+commit number 3 (originally created 2015-04-15 22:21:28)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r2 | jesper | 1982-05-01 12:00:00 +0200 (Sat, 01 May 1982) | 1 line&lt;br/&gt;
+commit number 2 (originally created 2015-04-15 22:21:27)&lt;br/&gt;
+————————————————————————&lt;br/&gt;
+r1 | jesper | 1981-05-01 12:00:00 +0200 (Fri, 01 May 1981) | 1 line&lt;br/&gt;
+commit number 1 (originally created 2015-04-15 22:21:26)&lt;br/&gt;
+————————————————————————&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;&lt;span style="line-height: 1.5;"&gt;More info&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SVN book &lt;a href="http://svnbook.red-bean.com/en/1.7/svn.ref.reposhooks.pre-revprop-change.html"&gt;chapter on “pre-revprop-change”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rooot.net “&lt;a href="http://www.rooot.net/en/development/code/16-change-svn-commit-log-date.html"&gt;Change a SVN commit log message or date&lt;/a&gt;“&lt;/li&gt;
+&lt;li&gt;Stackoverflow: &lt;a class="question-hyperlink" href="http://stackoverflow.com/questions/692851/can-i-go-back-and-edit-comments-on-an-svn-checkin"&gt;Can I go back and edit comments on an SVN checkin?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stackoverflow: &lt;a class="question-hyperlink" href="http://stackoverflow.com/questions/633353/change-the-timestamp-of-a-svn-revision"&gt;Change the timestamp of a SVN revision&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description></item><item><title>Easter egg CSS circles</title><link>https://watson.github.io/justaddwater.dk/2015/03/29/easter-egg-css-circles/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1747</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 29 Mar 2015 18:49:11 +0000</pubDate><description>&lt;p&gt;We are approaching easter, and I couldn’t resist to make eggs on the project I am working on these days:&lt;/p&gt;
+&lt;p&gt;Now:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-with-easter-eggs.png"&gt;&lt;img alt="screenshot-with-easter-eggs" class="aligncenter size-medium wp-image-1748" height="222" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-with-easter-eggs-300x222.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-with-easter-eggs-300x222.png 300w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-with-easter-eggs.png 380w" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Before&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-without-easter-eggs.png"&gt;&lt;img alt="screenshot-without-easter-eggs" class="aligncenter size-medium wp-image-1749" height="194" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-without-easter-eggs-300x194.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-without-easter-eggs-300x194.png 300w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-without-easter-eggs.png 376w" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;The trick is really easy. CSS border radius can be applied in ellipsis shapes. Each corner has a  vertical and a horizontal radius. So you really just have to change the vertical radius of each corner like this:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44.png"&gt;&lt;img alt="Screen Shot 2015-03-27 at 09.59.44" class="aligncenter size-medium wp-image-1750" height="99" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44-300x99.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44-300x99.png 300w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44.png 576w" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And voila, the 60% and 40% vertical radius will do the trick.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I can highly recommend this really interesting presentation from Lea Verou on border-radius. It’s 14 minutes and highly worth the time.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Also, CSS Tricks has a collection of pre-cooked css shapes for inspiration: &lt;a href="https://css-tricks.com/examples/ShapesOfCSS"&gt;CSS-Tricks.com:ShapesOfCSS&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Rewrite author/email in git history</title><link>https://watson.github.io/justaddwater.dk/2015/01/21/rewrite-authoremail-in-git-history/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1733</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 21 Jan 2015 14:25:38 +0000</pubDate><description>&lt;p&gt;After my harddisk crashed and I reinstalled the machine recently, I misconfigured my Git to set EMAIL as email address.&lt;/p&gt;
+&lt;p&gt;This made Git history look horrible, with incorrect email, image. By accident I even wrote an incorrect name at one point.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09.png"&gt;&lt;img alt="git history github" class="aligncenter size-medium wp-image-1734" height="265" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09-300x265.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09-300x265.png 300w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.16.09.png 898w" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Note the missing image.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Now it turns out my git repository was full of EMAIL instead of my correct email address.&lt;/p&gt;
+&lt;pre&gt;$git log --pretty=fuller -1 9461d8b
+commit 9461d8b
+Author:     Jesper Rønn-Jensen &amp;lt;EMAIL&amp;gt;
+AuthorDate: Tue Jan 13 09:56:13 2015 +0100
+Commit:     Jesper Rønn-Jensen &amp;lt;EMAIL&amp;gt;
+CommitDate: Tue Jan 13 09:56:13 2015 +0100
+    adding install of hipchat and sourcetree&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I had to rewrite the history in order to fix the email addresses. Turns out `git filter-branch` could help:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre class="archive-code" data-repair-code="paragraph-1733-10"&gt;&lt;code&gt;NEW_MAIL="jesp….@gmail.com"
+git filter-branch --env-filter '
+if [[ "$GIT_AUTHOR_EMAIL" = "EMAIL" || "$GIT_AUTHOR_EMAIL" = "$NEW_MAIL" ]]
+then
+if [[ "$GIT_AUTHOR_NAME" = "Ben Alman" ]]
+then
+GIT_AUTHOR_NAME="Jesper Rønn-Jensen"
+GIT_COMMITTER_NAME="Jesper Rønn-Jensen"
+export GIT_AUTHOR_NAME
+export GIT_COMMITTER_NAME
+fi
+
+GIT_AUTHOR_EMAIL="$NEW_MAIL"
+GIT_COMMITTER_EMAIL="$NEW_MAIL"
+export GIT_AUTHOR_EMAIL
+export GIT_COMMITTER_EMAIL
+fi
+' -- --all&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;10 seconds later, I could push the changed repository up back on the server. The result was much better:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png"&gt;&lt;img alt="github log images fixed" class="aligncenter size-medium wp-image-1735" height="300" sizes="(max-width: 203px) 100vw, 203px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-203x300.png 203w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24-691x1024.png 691w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/01/Screen-Shot-2015-01-21-at-15.24.24.png 852w" width="203"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Nice result :) All of this trouble was because I wanted to script the setup of a new machine. I used &lt;a href="https://github.com/jesperronn/cowboy-dotfiles/commits/master" title="Github.com: jesperronn/cowboy-dotfiles"&gt;my clone of Ben Alman’s dotfiles&lt;/a&gt;, and this way his name slipped in before I figured out how to configure the .gitconfig file.&lt;/p&gt;
+&lt;p&gt;I really like that Git enables you to do almost anything. Especially that you can make mistakes and fix them later :)&lt;/p&gt;
+</description></item><item><title>iPhoto 11 performance tuning tips, revised</title><link>https://watson.github.io/justaddwater.dk/2014/03/09/iphoto-11-performance-tuning-tips-revised/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1709</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 09 Mar 2014 19:41:07 +0000</pubDate><description>&lt;p&gt;My iPhoto library with 6000+ family photos was running slow on my macbook. So I looked for performance tuning tips on the net.&lt;/p&gt;
+&lt;p&gt;Here are the adjusted tip, which works for me.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;This &lt;a href="https://discussions.apple.com/thread/3012995?start=60&amp;amp;tstart=0"&gt;Apple support  thread&lt;/a&gt; mentioned 3 tips:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Upgrade RAM&lt;/li&gt;
+&lt;li&gt;Turn off visual bling in overview pages&lt;/li&gt;
+&lt;li&gt;Vacuum iPhoto database file&lt;span style="line-height: 1.5em;"&gt; &lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Could not do anything with tip 1 today (and I presume I cannot update the RAM on this 2012 macbook air)&lt;/p&gt;
+&lt;p&gt;Tip2 works: Go into settings &amp;gt; “appearance” and turn off “Outline” and “Drop shadow” in the overviews.&lt;/p&gt;
+&lt;p&gt;Tip3 needs adjustment. Originally *.db files were only in top folder ‘ ~/Pictures/iPhoto\ Library/’&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Adjusted command to vacuum iPhoto database files:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;cd ~/Pictures/iPhoto\ Library/ &amp;amp;&amp;amp;  for dbase in `find . -name '*.db'`; do sqlite3 $dbase "vacuum;"; done&lt;/pre&gt;
+&lt;/blockquote&gt;
+</description></item><item><title>Generate CSS sprite for all world’s flags</title><link>https://watson.github.io/justaddwater.dk/2013/06/19/generate-css-sprite-for-all-worlds-flags/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1594</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 19 Jun 2013 12:46:24 +0000</pubDate><description>&lt;p&gt;Recently i worked on a project, which had to use flag icons for all flags in the world. The implementation looked like this:&lt;/p&gt;
+&lt;p&gt;css file:&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;In order to reduce the number of HTTP requests, I wanted to change it to using CSS sprites instead.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;CSS file now has changed to lines like this:&lt;/p&gt;
+&lt;p&gt;.er_16{ background-position: -20px 0; }&lt;br/&gt;
+.es_16{ background-position: -20px -20px; }&lt;br/&gt;
+.et_16{ background-position: -20px -40px; }&lt;br/&gt;
+.fi_16{ background-position: -20px -60px; }&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&amp;gt; Generation of sprite: http://spritegen.website-performance.org/&lt;/p&gt;
+&lt;p&gt;&amp;gt; * Upload zip file with flags (in my case all the 16×16 px flags)&lt;br/&gt;
+&amp;gt; * ignore duplicate images&lt;br/&gt;
+&amp;gt; * build direction vertical&lt;br/&gt;
+&amp;gt; * offset 4px (since the images are 16×14, this will make a 20-20 grid)&lt;br/&gt;
+&amp;gt; * background/transparency colour: #ffffff&lt;br/&gt;
+&amp;gt; * output format: PNG&lt;br/&gt;
+&lt;span style="font-size: 13px; line-height: 19px;"&gt;&amp;gt; * Compress Image with OptiPNG: YES&lt;br/&gt;
+&lt;/span&gt;&lt;span style="font-size: 13px; line-height: 19px;"&gt;&amp;gt; * Number of colours: True colour&lt;br/&gt;
+&lt;/span&gt;&lt;span style="font-size: 13px; line-height: 19px;"&gt;&amp;gt; * css suffix: _16 (to indicate 16px icons)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Oh, before creatign the zip file, I removed all countries not matching a two-letter code.&lt;/p&gt;
+&lt;p&gt;cd 16/&lt;/p&gt;
+&lt;p&gt;find . -type f -name ‘???????*’ |xargs -I{} rm {}&lt;/p&gt;
+&lt;p&gt;This would remove countries named “_African Union.png”, “_United Nations.png”, “Olimpic Movement.png”  and similar.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;For the following sizes of flags, I used these offset values:&lt;/p&gt;
+&lt;p&gt;16px, offset 4px will make a 20px grid&lt;/p&gt;
+&lt;p&gt;24px, offset 6px will make a 30px grid&lt;/p&gt;
+&lt;p&gt;32px, offset 8px will make a 40pxgrid&lt;/p&gt;
+&lt;p&gt;48px, offset 2px will make a 50px grid&lt;/p&gt;
+&lt;p&gt;64px, offset 6px will make a 70px grid&lt;/p&gt;
+&lt;p&gt;128px, offset 2px will make a 130px grid&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+</description></item><item><title>Git checkout old revisions by date</title><link>https://watson.github.io/justaddwater.dk/2012/11/09/git-checkout-old-revisions-by-date/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1658</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 09 Nov 2012 22:24:06 +0000</pubDate><description>&lt;p&gt;I wanted to do some code stats for a repository. This line checks out old revisions by date and shows code stats:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git checkout `git rev-list -n 1 --before="2012-03-01" master`&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, I ran cloc to count lines of code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cloc .&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Its really easy to register the point in time as a git branch so that you can get back and count lines of code later:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git co -b 2012-03&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can always verify latest revision like so:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Git log -1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The combination of git and cloc makes it really simple to keep history of codebase changes.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description></item><item><title>PhantomJS 1.7 build for Linux 64 bit</title><link>https://watson.github.io/justaddwater.dk/2012/09/28/phantomjs-1-7-build-for-linux-64-bit/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1663</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 28 Sep 2012 08:54:39 +0000</pubDate><description>&lt;p&gt;At a project I work on, we needed PhantomJS to run from a Redhat Fedora 64 bit machine.&lt;/p&gt;
+&lt;p&gt;Since phantomJs is just released this week, I needed to build it myself.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I post this link to the binary in case it can benefit others.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dl.dropbox.com/u/54307969/phantomjs-1.7.0-linux-x86_64.tar.gz"&gt;PhantomJs 1.7.0 built on Linux Redhat Fedora 64 bit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;PhantomJS is a fantastic tool for automating tests, since it is a headless browser which we wrapped in our automation framework to run javascript based tests very fast and easily.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I followed the &lt;a href="http://phantomjs.org/build.html" title="Phantomjs 1.7.0 official build instructions"&gt;build instructions&lt;/a&gt; (the instructions described for Amazon EC2 also worked on the fedora I am running).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;sudo yum install gcc gcc-c++ make git openssl-devel freetype-devel fontconfig-devel
+git clone git://github.com/ariya/phantomjs.git
+cd phantomjs
+git checkout 1.7
+./build.sh --jobs 1&lt;/pre&gt;
+&lt;pre&gt;&lt;/pre&gt;
+&lt;pre&gt;#(added step below by me)
+sudo yum install upx&lt;/pre&gt;
+&lt;pre&gt;After finishing the build, run deploy/package.sh which creates PhantomJS binary tarball that can be moved around and/or extracted to a different location. This is the correct way to install the built binary into an arbitrary directory, i.e. do not simply copy the executable as it won't work.&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The link I posted is the actual outcome of ./deploy/package.sh&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;For other operating systems, you could probably just get the binary at the official &lt;a href="http://phantomjs.org/download.html"&gt;PhantomJs download page&lt;/a&gt;.&lt;/p&gt;
+</description></item></channel></rss>

@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | The IE PNG fix vs. Accessibility</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/2006/11/06/the-ie-png-fix-vs-accessibility/feed/" rel="alternate" title="justaddwater.dk » The IE PNG fix vs. Accessibility Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/2006/10/31/actual-browser-sizes-final/" rel="prev" title="Actual Browser Sizes (final)"/>
+<link href="/justaddwater.dk/2006/11/10/bad-usability-calendar-2007-open-for-proposals/" rel="next" title="Bad Usability Calendar 2007 open for proposals"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2006/11/06/the-ie-png-fix-vs-accessibility/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2006/11/06/the-ie-png-fix-vs-accessibility/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/2006/10/31/actual-browser-sizes-final/" rel="prev">Actual Browser Sizes (final)</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/2006/11/10/bad-usability-calendar-2007-open-for-proposals/" rel="next">Bad Usability Calendar 2007 open for proposals</a> »</div>
+		</div>
+	
+		<div class="post" id="post-437">
+			<h2><a href="/justaddwater.dk/2006/11/06/the-ie-png-fix-vs-accessibility/" rel="bookmark" title="Permanent Link: The IE PNG fix vs. Accessibility">The IE PNG fix vs. Accessibility</a></h2>
+	
+			<div class="entry">
+				<p>It is no secret that all versions of Internet Explorer on Windows prior to version 7.0 has a flaw in its PNG renderer. The flaw basically involves the rendering of the alpha transparency and means that the images cannot fade nicely into the background.</p>
+<h3>The IE PNG bug explained</h3>
+<p>In the screenshots below you can see the same image as it is seen in Internet Explorer 6 and Internet Explorer 7 <small>(Gray border added around the edge of the screenshot for your viewing pleasure)</small>:</p>
+<p><img alt="Screenshot of IE6 png bug" src="/justaddwater.dk/wp-content/uploads/2006/11/png-alpha-trans2.png" title="Screenshot of IE6 png bug"/><br/>
+<small>PNG alpha transparency bug as seen in IE6</small></p>
+<p><img alt="Screenshot of IE6 png bug fixed" src="/justaddwater.dk/wp-content/uploads/2006/11/png-alpha-trans-fixed2.png" title="Screenshot of IE6 png bug fixed"/><br/>
+<small>No PNG alpha transparency bug as seen in IE7</small></p>
+<p>Instead of showing what is truly behind the image all IE renderer’s prior to IE 7 just shows an ugly, bluish/gray background color.</p>
+<h3>The solution and a new problem</h3>
+<p>Several people have found solutions to this problem. Most noticeably is <a href="http://homepage.ntlworld.com/bobosola/" title="The PNG problem in Windows Internet Explorer">the fix by Bob Osola</a> where I have also borrowed the above examples.</p>
+<p><strong>There is one problem though with these kind of fixes, and that problem is accessibility.</strong></p>
+<p>The idea is that you embed a piece of JavaScript in your webpage that, just before the images are displayed, runs through the DOM and replaces any img element that display a PNG image with a span element. What’s special about this span element is that it has a style attribute with a special IE-only filter called:</p>
+<p><code>DXImageTransform.Microsoft.AlphaImageLoader</code></p>
+<p>This filter then renders the original image inside the span element and the user sees the image as if it was just a regular img element.</p>
+<p>But what about screen readers? Will they still recognize this as a regular image? Some may say that screen readers don’t use JavaScript anyway and therefore never gets their DOM changed. But the most popular screen reader of them all for Windows called <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> is just a regular Windows program running next to the browser and just reads whatever code the browser holds.</p>
+<p><strong>Does anybody have any thoughts or experience with this? Am I for example right in my assumption that JAWS actually reads the generated code? And will that in fact be a problem? Please drop a comment with your thoughts.</strong></p>
+<p><ins>Update 2006-11-06 19:10 (CET)</ins><br/>
+To better understand the accessibility implications, here is an update to clarify what Bob Osolas fix actually does. Take this example of a regular img element:</p>
+<p><code style="text-align: left">&lt;img src="<b>/images/sunset.png</b>" align="<b>left</b>" alt="<b>Sunset over New York</b>" width="<b>654</b>" height="<b>321</b>" id="<b>img421</b>" class="<b>largeimage</b>" style="<b>border: 1px solid black</b>" /&gt;</code></p>
+<p>That is then translated into this span element:</p>
+<p><code style="text-align: left">&lt;span id="<b>img421</b>" class="<b>largeimage</b>" title="<b>Sunset over New York</b>" style="width:<b>654</b>px; height:<b>321</b>px; float:<b>left</b>; display:inline-block; <b>border: 1px solid black</b>; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<b>/images/sunset.png</b>', sizingMethod='scale');"&gt;&lt;/span&gt;</code></p>
+<p>In turn if the original img element is wrapped in an a element (i.e. is linkable) the following css is also added to the style attribute of the span element:</p>
+<p><code>cursor:hand;</code></p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/Internet+Explorer" href="/justaddwater.dk/topics/internet-explorer/" rel="tag">Internet Explorer</a>, <a data-original-url="http://technorati.com/tag/IE" href="/justaddwater.dk/topics/ie/" rel="tag"> IE</a>, <a data-original-url="http://technorati.com/tag/IE6" href="/justaddwater.dk/topics/ie6/" rel="tag"> IE6</a>, <a data-original-url="http://technorati.com/tag/IE7" href="/justaddwater.dk/topics/ie7/" rel="tag"> IE7</a>, <a data-original-url="http://technorati.com/tag/png+fix" href="/justaddwater.dk/topics/png-fix/" rel="tag"> png fix</a>, <a data-original-url="http://technorati.com/tag/images" href="/justaddwater.dk/topics/images/" rel="tag"> images</a>, <a data-original-url="http://technorati.com/tag/accessibility" href="/justaddwater.dk/topics/accessibility/" rel="tag"> accessibility</a>, <a data-original-url="http://technorati.com/tag/screen+reader" href="/justaddwater.dk/topics/screen-reader/" rel="tag"> screen reader</a>, <a data-original-url="http://technorati.com/tag/JAWS" href="/justaddwater.dk/topics/jaws/" rel="tag"> JAWS</a>, <a data-original-url="http://technorati.com/tag/DOM" href="/justaddwater.dk/topics/dom/" rel="tag"> DOM</a>, <a data-original-url="http://technorati.com/tag/HTML" href="/justaddwater.dk/topics/html/" rel="tag"> HTML</a>, <a data-original-url="http://technorati.com/tag/JavaScript" href="/justaddwater.dk/topics/javascript/" rel="tag"> JavaScript</a>, <a data-original-url="http://technorati.com/tag/web+development" href="/justaddwater.dk/topics/web-development/" rel="tag"> web development</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Thomas Watson Steen						 
+						on Monday, November 6th, 2006 at 14:08 (GMT-1)						and is filed under <a href="/justaddwater.dk/category/accessibility/" rel="category tag">Accessibility</a>, <a href="/justaddwater.dk/category/webstandards/javascript/" rel="category tag">JavaScript</a>, <a href="/justaddwater.dk/category/web-development/" rel="category tag">Web Development</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/2006/11/06/the-ie-png-fix-vs-accessibility/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">13 Responses to “The IE PNG fix vs. Accessibility”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-24110">
+			<cite><a class="url" href="http://www.rupux.com.ar/blog" rel="external">rupux</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24110" title="">November 6th, 2006 at 16:07 (GMT-1)</a> </small>
+
+			<p>well, thats the IE works, fix under fix…</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-24115">
+			<cite>Chris</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24115" title="">November 6th, 2006 at 16:46 (GMT-1)</a> </small>
+
+			<p>I can think of a fix as dirty as the whole png+ie thing:<br/>
+You don’t replace the image by just a span, but two nested spans. The inner is set to display:none; and contains the alt-text (this is what the screen-reader is supposed to show, if I remember correct). The screen-reader will ignore the display:none; the browser not.<br/>
+Everyone should be happy…</p>
+<p>Maybe it helps also to use just one span and put the images’ alt in the title of the span.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-24120">
+			<cite>Chris</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24120" title="">November 6th, 2006 at 17:07 (GMT-1)</a> </small>
+
+			<p>Oh and there’s another out-of-the-box-fix, IE7 from Dean Edwards: <a href="http://dean.edwards.name/IE7/" rel="external">http://dean.edwards.name/IE7/</a></p>
+<p>Afaik his fix includes background-images which is a problem for the Bob Osola-fix…</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-24156">
+			<cite><a class="url" href="/justaddwater.dk/">Thomas Watson Steen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24156" title="">November 6th, 2006 at 19:22 (GMT-1)</a> </small>
+
+			<p>Hi Chris</p>
+<p>Actually the Bob Osola fix does use a title attribute in the span element. It takes either the alt or the title attribute of the img element if they are used.</p>
+<p>I’ve updated the post with information on what exactly is translated from the original img element.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-24159">
+			<cite><a class="url" href="/justaddwater.dk/">Thomas Watson Steen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24159" title="">November 6th, 2006 at 19:34 (GMT-1)</a> </small>
+
+			<p>Very interesting with the IE7 library from Dean Edwards btw… I will definitely look into it :)</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-24185">
+			<cite><a class="url" href="http://www.baekdal.com" rel="external">Thomas Baekdal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24185" title="">November 6th, 2006 at 21:40 (GMT-1)</a> </small>
+
+			<p>Just a thought, In what cases do you need an image to display transparent – where it is not for layout purposes?</p>
+<p>The reason I ask is that is that if it is only for layout purposes you will do well leaving it out of your HTML and put in into your stylesheet. Then you can make it transparent and no longer worry about accesibility.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-24364">
+			<cite>Chris</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24364" title="">November 7th, 2006 at 07:09 (GMT-1)</a> </small>
+
+			<p>Hi Thomas (B): One problem persists (either way), AlphaImageLoader does not background-repeat or background-position. Many images with transparency are used with repeat…</p>
+<p>Hi Thomas (WS): I see … Well these issues will be same with the IE7-script, I guess.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-24438">
+			<cite><a class="url" href="/justaddwater.dk/">Thomas Watson Steen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-24438" title="">November 7th, 2006 at 11:17 (GMT-1)</a> </small>
+
+			<p>Hi Thomas (B)</p>
+<blockquote><p>Just a thought, In what cases do you need an image to display transparent – where it is not for layout purposes?</p></blockquote>
+<p>You are right… A regular photo would of cause not make use of alpha transparency, but a logo could (a photo would usually be JPEG anyway).</p>
+<p>Another thing is if the image is linked. In that case I don’t think it would be a good idea to apply it as a background via CSS. In that case you would need a bit of hacking to make it work (hacking != good).</p>
+<p>Another thing is that many images are used to describe something and are actually very important to the context. I don’t know exactly how screen readers interpret HTML (and that is partly why I have written this post), but I would imagine that if the screen reader can actually “see” that this is an image it would somehow notify the user (and of cause read its alt or title attribute). If instead it was replaced by a div or span element as Bob’s hack does, the screen reader would then not recognize it as an image. I imagine it would still read the title attribute – but not inform the user that this was an image.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-25088">
+			<cite><a class="url" href="http://www.baekdal.com" rel="external">Thomas Baekdal</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-25088" title="">November 8th, 2006 at 23:11 (GMT-1)</a> </small>
+
+			<p>Thomas (lots of Thomas’ here :o)), </p>
+<p>I understand what you are saying, and I do not disagree with you. </p>
+<p>I have been trying find an example I have (somewhere) where text is used instead images, but is still displayed using transparent PNG’s in the browser (using CSS) – and one that is not a “hack”. Unfortunately I cannot find it (I got it somewhere – I have used it a couple of years back).</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-25407">
+			<cite><a class="url" href="http://www.heitamag.com" rel="external">adrian kirsten</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-25407" title="">November 9th, 2006 at 20:19 (GMT-1)</a> </small>
+
+			<p>is there no simple something i can just add into my site and it does all the transparencies without me having to identify each and every image? like i found this one a while ago, but it ignores my css images, which makes my site look awefull in IE. That site never went live because of that problem. </p>
+<p>Im a designer, not a coder. So for me it is kind of hard to do things like that. I just need something that works and is straightforward and simple to use. </p>
+<p>Is there something like that? Is there? *sniffle*</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-25710">
+			<cite><a class="url" href="/justaddwater.dk/">Thomas Watson Steen</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-25710" title="">November 10th, 2006 at 14:26 (GMT-1)</a> </small>
+
+			<p>Hi Adrian</p>
+<p>There is a couple of different things you can do depending on the way you use PNG images.</p>
+<p>If you are just using regular &lt;img&gt; elements, I suggest that you just follow method 2 on Bob Osolas website:<br/>
+<a href="http://homepage.ntlworld.com/bobosola/pnghowto.htm" rel="external">http://homepage.ntlworld.com/bobosola/pnghowto.htm</a></p>
+<p>To quote his page there is also fixes available if you use input image buttons or image maps:</p>
+<blockquote><p>There is also an <a href="http://homepage.ntlworld.com/bobosola/imagemap.htm" rel="external">imagemap version</a> if you want to use imagemaps and/or form input images and a <a href="http://homepage.ntlworld.com/bobosola/png_mouseover.htm" rel="external">rollover version</a> which enables the use of transparent PNGs in rollovers.</p></blockquote>
+<p>If you use any of the above I suggest that you read all the information available on his site – even though you are not a programmer ;) The main issue is that if you apply CSS styles directly to an &lt;img&gt; element these styles will no longer work since the &lt;img&gt; element is now changed to a &lt;span&gt; element – just remember to for example use a class named “image” instead.</p>
+<p>As he mentions there are also other solutions that might suit you better through:</p>
+<blockquote>
+<h2>Other Solutions</h2>
+<p>There are many other solutions to this problem – you may wish to check them out to see if they better fit your needs:</p>
+<p><a href="http://webfx.eae.net/dhtml/pngbehavior/pngbehavior.html" rel="external">PNG Behavior – uses .htc file &amp; 1px GIF</a><br/>
+<a href="http://youngpup.net/_ui_webapp/getFrames.asp?request=/snippets/sleight.xml" rel="external">Youngpup – IE behavior &amp; 1px GIF</a><br/>
+<a href="http://www.daltonlp.com/daltonlp.cgi?item_type=1&amp;item_id=217" rel="external">Lloyd Dalton – CSS only, no JS</a></p>
+<p>Fred Boyle emailed me with a Flash solution. He says you can <em> "simply import the PNG into Flash and use the generated Flash movie using the WMODE parameter set to "transparent". This works wonderfully!" </em>. I am not a user of Flash so cannot comment on this approach but hopefully some may find it helpful.</p></blockquote>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-48529">
+			<cite><a class="url" href="http://www.expertcs.com" rel="external">Joseph Mathieu</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-48529" title="">December 27th, 2006 at 19:09 (GMT-1)</a> </small>
+
+			<p>I used the png fix on my side navigation’s background image…  The fix prevents my navigation links to function.  Is there a way around this problem?</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Thomas Watson Steen" src="/justaddwater.dk/wp-content/jaw/userphoto/1.jpg" title="Photograph of author Thomas Watson Steen"/></p><p>Working the web since 1995, Thomas Watson Steen is a web standards and usability expert. He is a partner in the company '3dbyggeri danmark', a new IT start-up in Denmark specializing in consulting and IT services to the construction sector.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

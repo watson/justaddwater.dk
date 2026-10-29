@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>screenshot – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/tag/screenshot/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/tag/screenshot/feed/" rel="self" type="application/rss+xml" /><item><title>Batch Screenshots with webkit2png</title><link>https://watson.github.io/justaddwater.dk/2012/01/23/batch-screenshots-with-webkit2png/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1544</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 23 Jan 2012 14:00:53 +0000</pubDate><description>&lt;p&gt;For projects I sometimes have lots of screenshots which I have to repeat whenever I change subtle things in the CSS or HTML.&lt;/p&gt;
+&lt;p&gt;I ended up creating this little handy script based on webkit2png (download source)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;div&gt;#!/usr/bin/env sh
+HOST="http://localhost:8080/myproject/viewer"
+/usr/bin/python webkit2png -F -o "01dashboard" $HOST/dashboard
+/usr/bin/python webkit2png -F -o "02showdetail" $HOST/detail
+/usr/bin/python webkit2png -F -o "03listpage" $HOST/list&lt;/div&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;This created the following 3 files in my directory:&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;div&gt;$ ls -1
+01dashboard.png
+02showdetail.png
+03listpage.png&lt;/div&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;div&gt;Really simple and easy to use.&lt;/div&gt;
+&lt;div&gt;It only requires you to download webkit2png script (&lt;a href="https://github.com/paulhammond/webkit2png"&gt;download on github&lt;/a&gt;).&lt;/div&gt;
+</description></item><item><title>Download Pages — IE vs. Firefox</title><link>https://watson.github.io/justaddwater.dk/2008/08/28/download-pages-ie-vs-firefox/</link><guid isPermaLink="false">http://justaddwater.dk/?p=951</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 28 Aug 2008 11:49:10 +0000</pubDate><description>&lt;p&gt;Here are two different download paradigms presented by &lt;a href="http://www.mozilla-europe.org/en/firefox/"&gt;Firefox download page&lt;/a&gt; and &lt;a href="http://www.microsoft.com/windows/internet-explorer/beta/worldwide-sites.aspx?icid=ie8_asdf123"&gt;Microsoft Internet Explorer 8 download page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class="wp-caption aligncenter" id="attachment_954" style="width: 310px"&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-ie8-download-crop.png"&gt;&lt;img alt="Internet explorer 8 download page" aria-describedby="caption-attachment-954" class="size-medium wp-image-954" height="260" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-ie8-download-crop-300x260.png" title="28-08-2008-ie8-download-crop" width="300"/&gt;&lt;/a&gt;&lt;p class="wp-caption-text" id="caption-attachment-954"&gt;Internet explorer 8 download page&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;
+(&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-ie8-download-full.png"&gt;full size&lt;/a&gt;)&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;div class="wp-caption aligncenter" id="attachment_952" style="width: 310px"&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-getfirefox-crop.png"&gt;&lt;img alt="Firefox download page" aria-describedby="caption-attachment-952" class="size-medium wp-image-952" height="226" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-getfirefox-crop-300x226.png" title="28-08-2008-getfirefox-crop" width="300"/&gt;&lt;/a&gt;&lt;p class="wp-caption-text" id="caption-attachment-952"&gt;Firefox download page&lt;/p&gt;&lt;/div&gt;&lt;br/&gt;
+(&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2008/08/28-08-2008-getfirefox-full.png"&gt;full size&lt;/a&gt;)&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;It is interesting to see the difference in prioritation of the actions. Microsoft makes all download actions equally important. Which results in 20 download icons that all fight to drag attention.&lt;/p&gt;
+&lt;p&gt;Firefox, on the contrary, acknowledges that there can be only one primary action. It makes fair guesses about my operating system and language and presents to me the version i am most likely to want.&lt;br/&gt;
+However, it is interesting to see that secondary actions are completely downprioritized. I cannot immediately figure out how I select another language. &lt;/p&gt;
+</description></item></channel></rss>

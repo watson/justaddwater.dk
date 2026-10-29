@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>CSS – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/category/webstandards/css/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/category/webstandards/css/feed/" rel="self" type="application/rss+xml" /><item><title>Easter egg CSS circles</title><link>https://watson.github.io/justaddwater.dk/2015/03/29/easter-egg-css-circles/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1747</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 29 Mar 2015 18:49:11 +0000</pubDate><description>&lt;p&gt;We are approaching easter, and I couldn’t resist to make eggs on the project I am working on these days:&lt;/p&gt;
+&lt;p&gt;Now:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-with-easter-eggs.png"&gt;&lt;img alt="screenshot-with-easter-eggs" class="aligncenter size-medium wp-image-1748" height="222" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-with-easter-eggs-300x222.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-with-easter-eggs-300x222.png 300w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-with-easter-eggs.png 380w" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Before&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-without-easter-eggs.png"&gt;&lt;img alt="screenshot-without-easter-eggs" class="aligncenter size-medium wp-image-1749" height="194" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-without-easter-eggs-300x194.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-without-easter-eggs-300x194.png 300w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/screenshot-without-easter-eggs.png 376w" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;The trick is really easy. CSS border radius can be applied in ellipsis shapes. Each corner has a  vertical and a horizontal radius. So you really just have to change the vertical radius of each corner like this:&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44.png"&gt;&lt;img alt="Screen Shot 2015-03-27 at 09.59.44" class="aligncenter size-medium wp-image-1750" height="99" sizes="(max-width: 300px) 100vw, 300px" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44-300x99.png" srcset="https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44-300x99.png 300w, https://watson.github.io/justaddwater.dk/wp-content/uploads/2015/03/Screen-Shot-2015-03-27-at-09.59.44.png 576w" width="300"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And voila, the 60% and 40% vertical radius will do the trick.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I can highly recommend this really interesting presentation from Lea Verou on border-radius. It’s 14 minutes and highly worth the time.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Also, CSS Tricks has a collection of pre-cooked css shapes for inspiration: &lt;a href="https://css-tricks.com/examples/ShapesOfCSS"&gt;CSS-Tricks.com:ShapesOfCSS&lt;/a&gt;&lt;/p&gt;
+</description></item><item><title>Script identifying CSS shorthand possibilities</title><link>https://watson.github.io/justaddwater.dk/2009/10/21/script-identifying-css-shorthand-possibilities/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1211</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 21 Oct 2009 12:29:17 +0000</pubDate><description>&lt;p&gt;For my own convenience I created this script to identify css files where colors like #aaaaaa can be rewritten in the short form #aaa&lt;/p&gt;
+&lt;p&gt;(saves bandwith, but can also make it easier to identify similar colors)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+grep -nE '#([0-9a-f])\1([0-9a-f])\2([0-9a-f])\3' **/*.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;output from a random project:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+css/actions.css:19:  color: #000000;
+css/actions.css:38:  color: #000000 !important;
+css/actions.css:53:  color: #ffffff !important;
+css/admin.css:90:	color: #cccccc;
+css/admin.css:94:	color: #aaaaaa !important;
+&lt;/code&gt;&lt;/pre&gt;
+</description></item><item><title>Print CSS Background Logo Hack</title><link>https://watson.github.io/justaddwater.dk/2009/09/29/print-css-background-logo-hack/</link><guid isPermaLink="false">http://justaddwater.dk/2009/09/29/print-css-background-logo-hack/</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 29 Sep 2009 09:08:58 +0000</pubDate><description>&lt;p&gt;I learned this nice little hack to bypass the standard browser setting that normally prevents background images from being printed. &lt;/p&gt;
+&lt;p&gt;The hack makes use of converting the background-image to a list item with an image. &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* Hack, to trick the browser to print another logo 
+   Unfortunetaly, Firefox on Windows doesn't show logo on print 
+    — see Mozilla bug 133490 for further details */
+#header {
+  display: list-item; 
+  list-style-image: url(../images/logo_print.gif); 
+  list-style-position: inside;
+	margin: 0 !important;
+  padding: 0 !important;
+	height: 50pt;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This way, you don’t have to fall back to inserting an image tag in your HTML for the logo. Instead, just have an a element that contains the corporate logo text, and nothing all.&lt;/p&gt;
+</description></item><item><title>CSS Styling Buttons Problem with Underlined Text</title><link>https://watson.github.io/justaddwater.dk/2009/09/16/css-styling-buttons-problem-with-underlined-text/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1141</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 16 Sep 2009 08:32:56 +0000</pubDate><description>&lt;p&gt;I ran into the challenge the other day to style a&amp;lt;button&amp;gt; element to make it look like a link (with underline and everything).&lt;/p&gt;
+&lt;p&gt;Unfortunately, the &amp;lt;button&amp;gt; element does not react to text-decoration: underline;&lt;/p&gt;
+&lt;p&gt;But according to &lt;a href="http://csscreator.com/node/25902" title="CSS Forum: [Solved?] Doctype prevents underline in button input"&gt;a discussion at the CSS Creator forum&lt;/a&gt;, there is a way out:&lt;/p&gt;
+&lt;blockquote cite="http://csscreator.com/node/25902"&gt;&lt;p&gt;I was just messing around with it and for some reason this doesn’t work:&lt;br/&gt;
+&lt;code&gt;input {text-decoration:underline;}&lt;/code&gt;&lt;br/&gt;
+but this does:&lt;br/&gt;
+&lt;code&gt;input {text-decoration:underline;float:left;}&lt;/code&gt;&lt;br/&gt;
+and&lt;br/&gt;
+&lt;code&gt;input{text-decoration:underline;display:block;}&lt;/code&gt;&lt;br/&gt;
+and&lt;br/&gt;
+&lt;code&gt;input{text-decoration:underline;position:absolute;}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Don’t ask me…  I can’t explain this one.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Interesting!&lt;/p&gt;
+&lt;p&gt;I ended up implementing it as &lt;code&gt;display:inline-block;&lt;/code&gt; which also works fine. Here is my final rules for styling buttons as links&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;.clickable, button.tertiary, input.tertiary{
+  color: #339;
+  text-decoration: underline;
+  display: inline-block; /* else underline won't work */
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  padding: 0;
+}
+.clickable:hover, button.tertiary:hover, input.tertiary:hover{
+  text-decoration: underline;
+  color: #669;
+}&lt;/pre&gt;
+&lt;/blockquote&gt;
+</description></item><item><title>CSS Fun: Flag Deprecated HTML Tags</title><link>https://watson.github.io/justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/</link><guid isPermaLink="false">http://justaddwater.dk/?p=990</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 08 Jan 2009 10:47:14 +0000</pubDate><description>&lt;p&gt;Here is a little fun CSS snippet that helped me identify deprecated HTML on a recent project. Put these lines into the CSS file of your website:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;&lt;br/&gt;
+/* Watch out for invalid/deprecated HTML in CMS */&lt;br/&gt;
+b{font-size: x-large; background-color: fuchsia; color: yellow; font-weight: normal;}&lt;br/&gt;
+i{font-size: x-large; background-color: lime; color: blue; font-style: normal}&lt;br/&gt;
+font{background-color: aqua; color: red}&lt;br/&gt;
+b,i,font{text-decoration: blink;}&lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif"&gt;&lt;img alt="" class="alignnone size-full wp-image-991" height="165" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif" title="blink-and-flag-deprecated-font-b-i-tags" width="249"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This was really useful for identifying dirty HTML that was generated from a Microsoft-based CMS. &lt;/p&gt;
+&lt;p&gt;Coloring and blinking text makes the editors aware that something is wrong. Two major advantages for this approach:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instant attention on HTML validation errors (also for non-developers)&lt;/li&gt;
+&lt;li&gt;Developers spend less time on hunting down invalid HTML that constantly sneaks into the web application.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These lines may also be useful to you — unless you are able to guard your HTML before it’s inserted in your application (something that was not possible at this project).&lt;/p&gt;
+</description></item><item><title>IE CSS Bug: Limited @include Statements</title><link>https://watson.github.io/justaddwater.dk/2008/07/01/ie-css-bug-limited-include-statements/</link><guid isPermaLink="false">http://justaddwater.dk/?p=939</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 01 Jul 2008 12:57:14 +0000</pubDate><description>&lt;p&gt;I found out that Internet explorer only interprets 32 @include statements in CSS for a webpage. The rest is silently ignored. &lt;/p&gt;
+&lt;p&gt;Tested with IE7. Has anybody tried this with IE8?&lt;/p&gt;
+&lt;p&gt;For more info see:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.agum.com/web/2008/03/11/internet-explorer-issue-maximum-of-32-css-import/" rel="bookmark" title="Agnum.com: Internet Explorer issue - maximum of 32 CSS @import"&gt;Internet Explorer issue – maximum of 32 CSS @import&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PS. Silent ignorance is just about the worst form for ignorance when coding. The least they could do was to display an error in the error console.&lt;/p&gt;
+</description></item><item><title>Fixes to Common CSS Problems</title><link>https://watson.github.io/justaddwater.dk/2008/06/16/fixes-to-common-css-problems/</link><guid isPermaLink="false">http://justaddwater.dk/?p=932</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Mon, 16 Jun 2008 14:10:22 +0000</pubDate><description>&lt;p&gt;Just home again from two weeks vacation, I found this in my delicious popular feed (i usually scan the delicious popular feed for links others find interesting).&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.noupe.com/css/using-css-to-fix-anything-20-common-bugs-and-fixes.html" title="Noupe.com: Using CSS to Fix Anything: 20+ Common Bugs and Fixes"&gt;Using CSS to Fix Anything: 20+ Common Bugs and Fixes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Good explanations to some of the usual I run into. For instance, the double margin float bug in IE 6 &lt;/p&gt;
+&lt;p&gt;&lt;img alt="double margin float bug" data-original-url="http://noupe.com/img/cb11.gif" src="https://watson.github.io/justaddwater.dk/archive-assets/missing/8501ce86827e79cdc4c5cf2e.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;There are also examples of simple round corners (similar to the ones I have &lt;a href="https://watson.github.io/justaddwater.dk/2008/05/26/jquery-rounded-corners-technorati-style/"&gt;described last month&lt;/a&gt;), links to good explanations on float theory, and more.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Technorati Tags: &lt;a data-original-url="http://technorati.com/tag/css" href="https://watson.github.io/justaddwater.dk/topics/css/" rel="tag"&gt;css&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</description></item><item><title>Debugging CSS: My Best Productivity Tip Ever</title><link>https://watson.github.io/justaddwater.dk/2007/04/30/debugging-css-my-best-productivity-tip-ever/</link><guid isPermaLink="false">http://justaddwater.dk/2007/04/30/debugging-css-my-best-productivity-tip-ever/</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 29 Apr 2007 22:07:26 +0000</pubDate><description>&lt;p&gt;Firebug keeps surprising me. I’ve recently been working on code for several web designs and this little trick helped me to understand existing HTML and CSS much faster. Just to give an example I use our Justaddwater RSS feed page (but could be any page).&lt;/p&gt;
+&lt;p&gt;Before you start, &lt;a href="http://www.getfirebug.com/"&gt;get Firebug&lt;/a&gt; for Firefox (if you haven’t got it already).&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt; Press F12 and the Firebug window appears below in the browser window&lt;/li&gt;
+&lt;li&gt;Start the HTML inspector and mouse over any element, you want to learn about.&lt;br/&gt;
+&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector.png" title="firebug-css-tip-start-html-inspector.png"&gt;&lt;img alt="firebug-css-tip-start-html-inspector-thumb.png" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2007/04/firebug-css-tip-start-html-inspector-thumb.png"/&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Now, you can see the HTML, the hierachy,and the CSS rules. For me it has been very useful, that overridden CSS rules are marked with strikethrough text. That’s a very handy information when CSS specificity plays in with a trick or two.&lt;/li&gt;
+&lt;li&gt;Press escape to stop inspector mode, and move mouse down to CSS rules.&lt;/li&gt;
+&lt;li&gt;Mouse over the CSS rules reveal a small icon to toggle the line. See screenshot animation below.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="firebug-css-bugfix-toggle.gif" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2007/04/firebug-css-bugfix-toggle.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;This trick will probably completely replace my use of “edit CSS” in &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/60" title="Web developer toolbar Firefox Add-on"&gt;Webdeveloper toolbar&lt;/a&gt;, the nifty &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/2104" title="CSSViewer Firefox Add-on"&gt;CSSViewer add-on&lt;/a&gt;, and the &lt;a href="http://slayeroffice.com/tools/modi/v2.0/modi_help.html" title="Slayeroffice: Modi2 (mouse over DOM inspector) by Steve Chipmann"&gt;mouseover DOM inspector&lt;/a&gt; bookmarklet.&lt;/p&gt;
+&lt;p&gt;Related info:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Justaddwater: &lt;a href="https://watson.github.io/justaddwater.dk/2005/11/30/web-developers-collection-of-browser-tools/" rel="bookmark" title="Permanent Link: Web developer’s collection of browser tools"&gt;Web developer’s collection of browser tool&lt;/a&gt; (November 2005)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.getfirebug.com/keyboard.html"&gt;Firebug keyboard shortcuts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;small&gt;Technorati Tags: &lt;a data-original-url="http://technorati.com/tag/css" href="https://watson.github.io/justaddwater.dk/topics/css/" rel="tag"&gt;css&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/debug" href="https://watson.github.io/justaddwater.dk/topics/debug/" rel="tag"&gt; debug&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/debugging" href="https://watson.github.io/justaddwater.dk/topics/debugging/" rel="tag"&gt; debugging&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/style+editor" href="https://watson.github.io/justaddwater.dk/topics/style-editor/" rel="tag"&gt; style editor&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/css+view" href="https://watson.github.io/justaddwater.dk/topics/css-view/" rel="tag"&gt; css view&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/firefox+plugin" href="https://watson.github.io/justaddwater.dk/topics/firefox-plugin/" rel="tag"&gt; firefox plugin&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/firefox+add-on" href="https://watson.github.io/justaddwater.dk/topics/firefox-add-on/" rel="tag"&gt; firefox add-on&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/modi2" href="https://watson.github.io/justaddwater.dk/topics/modi2/" rel="tag"&gt; modi2&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/slayeroffice" href="https://watson.github.io/justaddwater.dk/topics/slayeroffice/" rel="tag"&gt; slayeroffice&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/firebug" href="https://watson.github.io/justaddwater.dk/topics/firebug/" rel="tag"&gt; firebug&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/productivity" href="https://watson.github.io/justaddwater.dk/topics/productivity/" rel="tag"&gt; productivity&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</description></item><item><title>E-Texteditor For Windows</title><link>https://watson.github.io/justaddwater.dk/2007/04/28/e-texteditor-for-windows/</link><guid isPermaLink="false">http://justaddwater.dk/2007/04/28/e-texteditor-for-windows/</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 27 Apr 2007 22:55:38 +0000</pubDate><description>&lt;p&gt;I have been looking a fast, intuitive editor for my Windows laptop.&lt;/p&gt;
+&lt;p&gt;Now I stopped looking. E-texteditor for windows is very intuitive and easy to use.  I highly recommend watching the screencast (a short tour of some of the best features). Although it’s still in beta, it seems so much better than the alternatives.&lt;/p&gt;
+&lt;p&gt;I’m using it for HTML, CSS, JavaScript, Ruby on Rails editing. And it just works.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.e-texteditor.com/index.html" title="E-texteditor homepage with screenshot"&gt;&lt;img alt="e-texteditor-homepage.png" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2007/04/e-texteditor-homepage.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One note for avoiding future head-scratching: In order to get the keyboard shortcuts (so-called bundles) to work, I had to delete Cygwin and let E install it automatically. Afterwards I had to add packages manually: Subversion (svn)&lt;/p&gt;
+&lt;p&gt;Other improvements that would be handy:&lt;br/&gt;
+In HTML mode there is a shortcut “doctype [tab]”, but there is no shortcut for creating the rest of the HTML document. It’s probably easy to add (but  i’m not into doing it yet). Besides, I think an addition like this would be a benefit to everybody, so it should be included in the general bundle.&lt;/p&gt;
+&lt;p&gt;In Ruby files, when looking on Ruby on Rails, it defaults the files to Ruby (because they are and they end in .rb). However, there is a lot of functionality with regards to Rails, so it would actually work better, if .rb defaulted to Ruby. Here is a &lt;a href="http://www.e-texteditor.com/forum/viewtopic.php?p=3361#3361" title="E-texteditor forum: Set Rails file from Ruby to Rails"&gt;workaround to add .rb files to Rails syntax&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also added a bug report “&lt;a href="http://www.e-texteditor.com/forum/viewtopic.php?t=1120" title="E-Texteditor forum"&gt;Block selection should work without the mouse&lt;/a&gt;” (guess I’m a usability geek).&lt;/p&gt;
+&lt;p&gt;The simple &lt;a href="http://cheat.errtheblog.com/s/e/" title="ErrTheBlog E-texteditor cheatsheet."&gt;cheatsheet for E-texteditor&lt;/a&gt; at errtheblog is worth checking out, although it contains only the general shortcuts and not the Rails specific ones. Via: &lt;a href="http://www.rubyinside.com/e-texteditor-a-windows-textmate-or-why-apple-should-buy-textmate-413.html" rel="bookmark" title="RubyInside: E-TextEditor: A Windows TextMate? (Or "&gt;RubyInside&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Technorati Tags: &lt;a data-original-url="http://technorati.com/tag/editor" href="https://watson.github.io/justaddwater.dk/topics/editor/" rel="tag"&gt;editor&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/e-texteditor" href="https://watson.github.io/justaddwater.dk/topics/e-texteditor/" rel="tag"&gt; e-texteditor&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/etexteditor" href="https://watson.github.io/justaddwater.dk/topics/etexteditor/" rel="tag"&gt; etexteditor&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/windows" href="https://watson.github.io/justaddwater.dk/topics/windows/" rel="tag"&gt; windows&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/textmate" href="https://watson.github.io/justaddwater.dk/topics/textmate/" rel="tag"&gt; textmate&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/html" href="https://watson.github.io/justaddwater.dk/topics/html/" rel="tag"&gt;  html&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/css" href="https://watson.github.io/justaddwater.dk/topics/css/" rel="tag"&gt; css&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/javascript" href="https://watson.github.io/justaddwater.dk/topics/javascript/" rel="tag"&gt; javascript&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/rails" href="https://watson.github.io/justaddwater.dk/topics/rails/" rel="tag"&gt; rails&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/ruby+on+rails" href="https://watson.github.io/justaddwater.dk/topics/ruby-on-rails/" rel="tag"&gt; ruby on rails&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/ruby" href="https://watson.github.io/justaddwater.dk/topics/ruby/" rel="tag"&gt; ruby&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/rubyonrails" href="https://watson.github.io/justaddwater.dk/topics/rubyonrails/" rel="tag"&gt; rubyonrails&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/cygwin" href="https://watson.github.io/justaddwater.dk/topics/cygwin/" rel="tag"&gt; cygwin&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</description></item><item><title>Rounded Corners the Technorati Way</title><link>https://watson.github.io/justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/</link><guid isPermaLink="false">http://justaddwater.dk/2007/02/15/rounded-corners-the-technorati-way/</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 15 Feb 2007 11:01:05 +0000</pubDate><description>&lt;p&gt;It’s been a while where web standards don’t get the attention it deserves on this blog. In that spirit, here’s a behind-the-scenes view on how Technorati makes rounded corners on a faded background.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Technorati screenshot of box with rounded corners on faded background (showing Justaddwater Ranks no. 9980 on Technorati)" id="image549" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2007/02/technorati-rounded-corner-justadwater-rank-9980-mini.png"/&gt;&lt;/p&gt;
+&lt;p&gt;I remember Eric Meyer mentioned this solution back at a workshop in 2005 (before he could actually tell that it was for  Technorati — the redesign was unveiled a few days later).&lt;/p&gt;
+&lt;h3&gt;Technique&lt;/h3&gt;
+&lt;p&gt;HTML for the box:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-550-1"&gt;&lt;code class="language-html"&gt;&amp;lt;div class="bloginfo-summary boxc"&amp;gt;
+  &amp;lt;h2&amp;gt;..&amp;lt;/h2&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;..&amp;lt;/li&amp;gt;
+    ..
+  &amp;lt;/ul&amp;gt;
+  &amp;lt;b class="cn tr"&amp;gt;&amp;lt;/b&amp;gt;
+  &amp;lt;b class="cn br"&amp;gt;&amp;lt;/b&amp;gt;
+  &amp;lt;b class="cn tl"&amp;gt;&amp;lt;/b&amp;gt;
+  &amp;lt;b class="cn bl"&amp;gt;&amp;lt;/b&amp;gt;
+&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The HTML is then styled with the following CSS:&lt;/p&gt;
+&lt;pre class="archive-code" data-recovery-code="post-550-2"&gt;&lt;code class="language-css"&gt;div.bloginfo-summary {background:
+  url(http://static.technorati.com/static/css/img/bg/fade-lightgreen.png) repeat-x;
+  float:left;margin-bottom:20px;padding:10px;width:690px}
+/* Large radius image backgrounds */
+.boxc {position:relative;}
+.boxc b.cn { height: 10px; width: 10px; background:
+ url(http://static.technorati.com/static/css/img/corners/white.png) no-repeat;
+ position:absolute;
+ }
+.boxc b.tl {top: -1px; left: -1px; background-position: top left;}
+.boxc b.tr {top: -1px; right: -1px; background-position: top right;}
+.boxc b.bl {bottom: -1px; left: -1px; background-position: bottom left;}
+.boxc b.br {bottom: -1px; right: -1px; background-position: bottom right;}
+
+/* IE Filters */
+    * html .boxc b.bl {bottom:-2px}
+    * html .boxc b.br {bottom:-2px}
+    * html .boxc b.cn {background-image:
+       url(http://static.technorati.com/static/css/img/corners/white.gif);
+       line-height: 1px;
+       font-size: 1px;
+      }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So, graphically displayed, the &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt; elements are actually positioned in each corner with no content:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Technorati screenshot of box with rounded corners on faded background showing HTML elements" id="image553" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2007/02/technorati-rounded-corner-html-tags-mini.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Note that the background-image for the faded box is one thin sliced faded image:&lt;br/&gt;
+&lt;img alt="technorati faded background slice" data-original-url="http://static.technorati.com/static/css/img/bg/fade-lightgreen.png" src="https://watson.github.io/justaddwater.dk/archive-assets/external/ed27112c67343781263d4c04.png"/&gt;&lt;/p&gt;
+&lt;p&gt;The corners is made with only one image that’s positioned differently depending on which corner it’s in. The image is actually a transparent circle on white background.&lt;/p&gt;
+&lt;p style="background-color: #339933; color: #dddddd; height: 30px; line-height: 30px"&gt;&lt;img alt="technorati rounded corner image" data-original-url="http://static.technorati.com/static/css/img/corners/white.gif" src="https://watson.github.io/justaddwater.dk/archive-assets/external/525cb62f01983584667990cf.gif"/&gt; shown on dark background for clarity.&lt;/p&gt;
+&lt;p&gt;So I &lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2007/03/technorati-style-rounded-corners.html" title="Example page: technorati-style rounded corners"&gt;included the final example on a separate page&lt;/a&gt; (because the WordPress editor doesn’t let me add the HTML code precisely as it’s required)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2007/03/technorati-style-rounded-corners.html" title="Example page: technorati-style rounded corners"&gt;example page: technorati-style rounded corners&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More info&lt;br/&gt;
+Eric Meyer: &lt;a href="http://meyerweb.com/eric/thoughts/2005/06/21/technorati-redesigns/"&gt;Technorati Redesigns&lt;/a&gt; (June 2005)&lt;br/&gt;
+Smileycat: &lt;a href="http://www.smileycat.com/miaow/archives/000044.html"&gt;CSS Rounded Corners Roundup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Technorati Tags: &lt;a data-original-url="http://technorati.com/tag/web+standards" href="https://watson.github.io/justaddwater.dk/topics/web-standards/" rel="tag"&gt;web standards&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/css" href="https://watson.github.io/justaddwater.dk/topics/css/" rel="tag"&gt; css&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/html" href="https://watson.github.io/justaddwater.dk/topics/html/" rel="tag"&gt; html&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/rounded+corners" href="https://watson.github.io/justaddwater.dk/topics/rounded-corners/" rel="tag"&gt; rounded corners&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/technorati" href="https://watson.github.io/justaddwater.dk/topics/technorati/" rel="tag"&gt; technorati&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/tantek+celic" href="https://watson.github.io/justaddwater.dk/topics/tantek-celic/" rel="tag"&gt; tantek celic&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/eric+meyer" href="https://watson.github.io/justaddwater.dk/topics/eric-meyer/" rel="tag"&gt; eric meyer&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</description></item></channel></rss>

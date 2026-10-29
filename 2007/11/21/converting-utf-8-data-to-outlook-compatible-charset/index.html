@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Converting UTF-8 Data to Outlook Compatible Charset</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/feed/" rel="alternate" title="justaddwater.dk » Converting UTF-8 Data to Outlook Compatible Charset Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/2007/11/20/how-to-run-javascript-from-watir-scripts/" rel="prev" title="How to Run JavaScript From Watir Scripts"/>
+<link href="/justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/" rel="next" title="Announcement: Spam Filter Free Day"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/" rel="canonical"/>
+<link href="https://justaddwater.dk/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/2007/11/20/how-to-run-javascript-from-watir-scripts/" rel="prev">How to Run JavaScript From Watir Scripts</a></div>
+			<div class="alignright"><a href="/justaddwater.dk/2007/11/27/announcement-spam-filter-free-day/" rel="next">Announcement: Spam Filter Free Day</a> »</div>
+		</div>
+	
+		<div class="post" id="post-784">
+			<h2><a href="/justaddwater.dk/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/" rel="bookmark" title="Permanent Link: Converting UTF-8 Data to Outlook Compatible Charset">Converting UTF-8 Data to Outlook Compatible Charset</a></h2>
+	
+			<div class="entry">
+				<p>A problem in a current Rails app just found a decent solution, as Danish letters like æøå did not show up decently. It turned out (surprise) that Outlook had a problem accepting UTF-8 charset.</p>
+<p>On the Meeting model in the Rails app I want to save to calendar in an Outlook compatible format. We solved it like this by converting from UTF-8 to ISO-8859-1 when creating the icalendar event.</p>
+<p>meeting.rb:<br/>
+</p><pre class="archive-code" data-recovery-code="post-784-1"><code class="language-ruby">require 'icalendar'
+require 'date'
+
+class Meeting &lt; ActiveRecord::Base
+  belongs_to :room
+  belongs_to :journal
+
+  def to_event
+    event = Icalendar::Event.new
+    event.summary = "Møde " + (journal.number || "no number..")
+    event.description = description.split("\n").join("\n\n")
+    event.klass = "PUBLIC"
+    event.start = start.to_datetime
+    event.end = self.end.to_datetime
+    event.location = meeting.room.name + " " meeting.room.address
+    event
+  end</code></pre>
+
+And meetings_controller.rb:
+<pre class="archive-code" data-recovery-code="post-784-2"><code class="language-ruby">require 'icalendar'
+require 'iconv'
+
+class MeetingsController &lt; ApplicationController
+  include Icalendar
+  def show
+    @courtmeeting = Courtmeeting.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml  =&gt; @courtmeeting }
+format.ical { render :text =&gt; render_to_ical([@courtmeeting])  }
+end
+end
+
+  def render_to_ical(courtmeetings)
+headers['Content-Type'] = "text/calendar; charset=ISO-8859-1"
+cal = Calendar.new
+courtmeetings.each do |meeting|
+cal.add_event(meeting.to_event)
+end
+Iconv.iconv('ISO-8859-1', 'UTF-8', cal.to_ical).to_s
+end
+end</code></pre><br/>
+Very simple, yet very effective way to have your meetings exposed to Outlook in a way that solves the character encoding problems.<p></p>
+<p><small>Technorati Tags: <a data-original-url="http://technorati.com/tag/ruby" href="/justaddwater.dk/topics/ruby/" rel="tag">ruby</a>, <a data-original-url="http://technorati.com/tag/ruby+on+rails" href="/justaddwater.dk/topics/ruby-on-rails/" rel="tag"> ruby on rails</a>, <a data-original-url="http://technorati.com/tag/charset" href="/justaddwater.dk/topics/charset/" rel="tag"> charset</a>, <a data-original-url="http://technorati.com/tag/encoding" href="/justaddwater.dk/topics/encoding/" rel="tag"> encoding</a>, <a data-original-url="http://technorati.com/tag/utf-8" href="/justaddwater.dk/topics/utf-8/" rel="tag"> utf-8</a>, <a data-original-url="http://technorati.com/tag/latin-1" href="/justaddwater.dk/topics/latin-1/" rel="tag"> latin-1</a>, <a data-original-url="http://technorati.com/tag/iso-8859-1" href="/justaddwater.dk/topics/iso-8859-1/" rel="tag"> iso-8859-1</a>, <a data-original-url="http://technorati.com/tag/iconv" href="/justaddwater.dk/topics/iconv/" rel="tag"> iconv</a></small></p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Wednesday, November 21st, 2007 at 15:30 (GMT-1)						and is filed under <a href="/justaddwater.dk/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/category/ruby-on-rails/" rel="category tag">Ruby on Rails</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/2007/11/21/converting-utf-8-data-to-outlook-compatible-charset/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">5 Responses to “Converting UTF-8 Data to Outlook Compatible Charset”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-410832">
+			<cite><a class="url" href="http://www.ncode.nl/" rel="external">Jorrit Schippers</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-410832" title="">April 14th, 2008 at 16:33 (GMT-1)</a> </small>
+
+			<p>This article suggests that Outlook 2003 is incapable of accepting UTF-8 messages. This is not true. It might be a component between the originating mailserver and Outlook that mangles the contents, as I have experienced myself. To be on the safe side, use Content-Transfer-Encoding: quoted-printable (and encode the contents accordingly)</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-419890">
+			<cite><a class="url" href="http://poncostuff.com/" rel="external">thomas</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-419890" title="">May 23rd, 2008 at 05:26 (GMT-1)</a> </small>
+
+			<p>Hew what about outlook 2007 ? but character encoding problems ? Thanks for your info man ! Help Me</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-479811">
+			<cite><a class="url" href="http://www.gaming-network.com" rel="external">Simon</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-479811" title="">March 23rd, 2009 at 14:28 (GMT-1)</a> </small>
+
+			<p>We have this problem on Outlook 2007, we send the body as UTF-8 with the correct encoding type in header, but Outlook views it as not UTF-8.</p>
+
+		</li>
+
+	
+
+
+	
+		<li id="comment-509869">
+			<cite>Jack Heath</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-509869" title="">February 1st, 2011 at 14:52 (GMT-1)</a> </small>
+
+			<p>This issue was related to the system not reading the correct encoding for the file. It was a common bug in 2003 which may carry over to Outlook 2007/2010 emails sent from an unpatched 2003 client in text format. To resolve it, I just opened an email (any email will work) and added then encoding option to the quick-bar, then I selected UTF-8 as an encoding option. Once done, Outlook will add UTF-8 to the list and be able to autos-elect between both UTF-Western and UTF-8 formats.</p>
+
+		</li>
+
+	
+
+
+	
+		<li class="alt" id="comment-511724">
+			<cite><a class="url" href="http://www.anibaltrejo.com" rel="external">Anibal Trejo</a></cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-511724" title="">February 19th, 2011 at 14:58 (GMT-1)</a> </small>
+
+			<p>Thanks! Ive used part of this info to solve Outlook problem reading my html generated signature. Since i have spanish with accents on it, Outlook was translating accented characters into rubbish. :)</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>

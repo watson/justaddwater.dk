@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Comments on: Contributing to Wikipedia usability resources</title><link>https://watson.github.io/justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/feed/" rel="self" type="application/rss+xml" /><item><title>By: Jesper Rønn-Jensen</title><link>https://watson.github.io/justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/#comment-32387</link><guid isPermaLink="false">http://justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/#comment-32387</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sun, 26 Nov 2006 12:35:26 +0000</pubDate><description>&lt;p&gt;Amazing how fast it goes, but a wikipedia user called &lt;a href="http://en.wikipedia.org/wiki/User:Fred_Bradstadt" rel="external"&gt;Fred Bradstadt&lt;/a&gt; has already edited my added citations in wikipedia to follow a format that looks much smarter.&lt;/p&gt;
+&lt;p&gt;New link syntax:&lt;br/&gt;
+&lt;code&gt;&amp;lt;ref name="Nielsen 2002"&amp;gt;{{cite web&lt;br/&gt;
+| last = Nielsen&lt;br/&gt;
+| first = Jakob&lt;br/&gt;
+| authorlink = Jakob Nielsen&lt;br/&gt;
+| title = Interview – Jakob Nielsen, Ph.D.&lt;br/&gt;
+| publisher = Sitepoint&lt;br/&gt;
+| date = 2002-11-06&lt;br/&gt;
+| url = http://...&lt;br/&gt;
+| accessdate = 2006-11-24}}&amp;lt;/ref&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;And in the bottom section added a &lt;code&gt;references&lt;/code&gt; tag that holds all:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;==References==&lt;br/&gt;
+&amp;lt;references/&amp;gt;&lt;/code&gt;&lt;/p&gt;
+</description></item><item><title>By: Jesper Rønn-Jensen</title><link>https://watson.github.io/justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/#comment-32160</link><guid isPermaLink="false">http://justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/#comment-32160</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sat, 25 Nov 2006 19:28:40 +0000</pubDate><description>&lt;p&gt;Matthew: I guess you always want the last say :)&lt;/p&gt;
+</description></item><item><title>By: Matthew Oliphant</title><link>https://watson.github.io/justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/#comment-32119</link><guid isPermaLink="false">http://justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/#comment-32119</guid><dc:creator>Matthew Oliphant</dc:creator><pubDate>Sat, 25 Nov 2006 15:22:15 +0000</pubDate><description>&lt;p&gt;And who was the last person to comment on Frank’s article?  Small world. :)&lt;/p&gt;
+</description></item><item><title>By: Jesper Rønn-Jensen</title><link>https://watson.github.io/justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/#comment-32095</link><guid isPermaLink="false">http://justaddwater.dk/2006/11/25/contributing-to-wikipedia-usability-resources/#comment-32095</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Sat, 25 Nov 2006 13:42:12 +0000</pubDate><description>&lt;p&gt;By the way, finding the right page explaining how to make citations took me longer time than expected. I eventually ended at &lt;a href="http://en.wikipedia.org/wiki/Wikipedia:Template_messages/Sources_of_articles/Generic_citations" rel="external"&gt;Wikipedia Citation templates&lt;/a&gt; where I found a usable explanation.&lt;/p&gt;
+</description></item></channel></rss>

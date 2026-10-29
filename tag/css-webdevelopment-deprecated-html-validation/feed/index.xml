@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>css webdevelopment deprecated html validation – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/tag/css-webdevelopment-deprecated-html-validation/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/tag/css-webdevelopment-deprecated-html-validation/feed/" rel="self" type="application/rss+xml" /><item><title>CSS Fun: Flag Deprecated HTML Tags</title><link>https://watson.github.io/justaddwater.dk/2009/01/08/css-fun-flag-deprecated-html-tags/</link><guid isPermaLink="false">http://justaddwater.dk/?p=990</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 08 Jan 2009 10:47:14 +0000</pubDate><description>&lt;p&gt;Here is a little fun CSS snippet that helped me identify deprecated HTML on a recent project. Put these lines into the CSS file of your website:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;&lt;br/&gt;
+/* Watch out for invalid/deprecated HTML in CMS */&lt;br/&gt;
+b{font-size: x-large; background-color: fuchsia; color: yellow; font-weight: normal;}&lt;br/&gt;
+i{font-size: x-large; background-color: lime; color: blue; font-style: normal}&lt;br/&gt;
+font{background-color: aqua; color: red}&lt;br/&gt;
+b,i,font{text-decoration: blink;}&lt;br/&gt;
+&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif"&gt;&lt;img alt="" class="alignnone size-full wp-image-991" height="165" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2009/01/blink-and-flag-deprecated-font-b-i-tags.gif" title="blink-and-flag-deprecated-font-b-i-tags" width="249"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This was really useful for identifying dirty HTML that was generated from a Microsoft-based CMS. &lt;/p&gt;
+&lt;p&gt;Coloring and blinking text makes the editors aware that something is wrong. Two major advantages for this approach:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instant attention on HTML validation errors (also for non-developers)&lt;/li&gt;
+&lt;li&gt;Developers spend less time on hunting down invalid HTML that constantly sneaks into the web application.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These lines may also be useful to you — unless you are able to guard your HTML before it’s inserted in your application (something that was not possible at this project).&lt;/p&gt;
+</description></item></channel></rss>

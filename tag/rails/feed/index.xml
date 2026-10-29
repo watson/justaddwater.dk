@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>rails – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/tag/rails/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/tag/rails/feed/" rel="self" type="application/rss+xml" /><item><title>Seeding Rails App With RESTful Address Data</title><link>https://watson.github.io/justaddwater.dk/2010/04/28/seeding-rails-app-with-restful-address-data/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1341</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Wed, 28 Apr 2010 10:55:26 +0000</pubDate><description>&lt;p&gt;Grabbing data from Restful webservices has never been easier. I use this code in the Rails /db/seeds.rb file to grab data from the Danish webservice with addresses, municipalities, regions, etc.&lt;/p&gt;
+&lt;p&gt;I decided to import the data into a local database to ensure it could work offline.&lt;/p&gt;
+&lt;p&gt;Code from &lt;code&gt;/db/seeds.rb&lt;/code&gt; file:&lt;/p&gt;
+&lt;p&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1341-1"&gt;&lt;code&gt;# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+
+class Seeds
+  require 'httparty'
+  include HTTParty
+  base_uri 'oiorest.dk/danmark/'
+end
+
+Kommune.delete_all
+
+regioner = Seeds.get('/regioner')['regioner']['region']
+Region.transaction do 
+  Region.delete_all
+  regioner.each do |item| 
+    r = Region.new(:name =&amp;gt; item['navn'])
+    r.id = item['nr']
+    r.save
+  end
+end
+
+Region.all.each do |r|
+  kommuner = Seeds.get("/regioner/#{r.id}/kommuner")['kommuner']['kommune']
+  Kommune.transaction do
+    kommuner.each do |item|
+      k = Kommune.new( :name =&amp;gt; item['navn'])
+      k.region_id = r.id 
+      k.id = item['nr']
+      k.save
+    end
+  end
+  
+end&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;seeds.rb · &lt;a href="https://gist.github.com/jesperronn/382105/0926b27e975e0235b88db895c57f89ff5a746129"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;Now I can access municipalities in a grouped selectbox like so in the view code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;%
+ options = option_groups_from_collection_for_select(Region.all, :kommuner, :name, :id, :name) 
+%&amp;gt;
+
+&amp;lt;%=
+ f.select("kommune_id", options, {}, {:class =&amp;gt; "short"}) 
+%&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The final result rendered in the user interface:&lt;br/&gt;
+&lt;img alt="" class="aligncenter size-full wp-image-1343" height="253" src="https://watson.github.io/justaddwater.dk/wp-content/uploads/2010/04/Screen-shot-2010-04-28-at-3.18.06-PM.png" title="Rails rendered optgroup selectbox" width="286"/&gt;&lt;/p&gt;
+&lt;p&gt;This code is based on Rails 2.3.5.&lt;/p&gt;
+</description></item><item><title>Selection Groups in Rails made less cumbersome</title><link>https://watson.github.io/justaddwater.dk/2009/09/01/selection-groups-in-rails-made-less-cumbersome/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1128</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 01 Sep 2009 12:50:32 +0000</pubDate><description>&lt;p&gt;I made this addition today after (once again) struggling with option groups for a nested Rails model.&lt;/p&gt;
+&lt;p&gt;My solution: create a new tag for FormOptionsHelper: grouped_select &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://gist.github.com/179075"&gt;http://gist.github.com/179075&lt;/a&gt;&lt;/p&gt;
+&lt;div&gt;&lt;div class="archive-gist"&gt;&lt;pre class="archive-code" data-recovery-code="gist-1128-1"&gt;&lt;code&gt;### lib/form_options_helper.rb 
+require 'action_view/helpers/form_helper'
+module ActionView
+  module Helpers
+    module FormOptionsHelper
+ 
+      ##
+      def grouped_select(object, method, choices, options = {}, html_options = {})
+        InstanceTag.new(object, method, self, options.delete(:object)).to_grouped_select_tag(choices, options, html_options)
+      end
+      
+    end
+    
+    class InstanceTag
+      include FormOptionsHelper
+      def to_grouped_select_tag(choices, options, html_options)
+        html_options = html_options.stringify_keys
+        add_default_name_and_id(html_options)
+        value = value(object)
+        selected_value = options.has_key?(:selected) ? options[:selected] : value
+        disabled_value = options.has_key?(:disabled) ? options[:disabled] : nil
+        content_tag("select", add_options(grouped_options_for_select(choices, :selected =&amp;gt; selected_value, :disabled =&amp;gt; disabled_value), options, selected_value), html_options)
+      end
+ 
+    end
+    
+    class FormBuilder
+      def grouped_select(method, choices, options = {}, html_options = {})
+        @template.grouped_select(@object_name, method, choices, objectify_options(options), @default_options.merge(html_options))
+      end
+    end
+  end
+end
+
+### config/environment.rb
+require 'form_options_helper'
+
+### app/models/expense_type.rb 
+class ExpenseType &amp;lt; ActiveRecord::Base
+  validates_uniqueness_of :name
+  
+  #returns grouped options split in 'popular' and 'all'
+  def self.groups
+    all_types = self.all.map{|t| [t.name, t.id]}
+    [
+      ['popular', all_types[0..2]],
+      ['all', all_types]
+    ]
+  end
+  
+end
+
+
+### app/views/expense_report/_expense_item.rb
+&amp;lt;li class="expense_item"&amp;gt;
+  &amp;lt;%= expense.grouped_select :expense_type_id, ExpenseType.groups, {:include_blank =&amp;gt; true}, {:class =&amp;gt; 'expense_type'} %&amp;gt;
+  ...
+&amp;lt;/li&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;p class="archive-code-source"&gt;form_options_helper_to_add_grouped_select.rb · &lt;a href="https://gist.github.com/jesperronn/179083/ed4df9fcbfa2ee5938fa70533d20f25b70a87ffd"&gt;Original gist&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+</description></item><item><title>Shorthand to clean up installed Rubygems (but don’t cleanup Rails)</title><link>https://watson.github.io/justaddwater.dk/2009/05/29/shorthand-to-clean-up-installed-rubygems-but-dont-cleanup-rails/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1098</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 29 May 2009 07:57:23 +0000</pubDate><description>&lt;p&gt;I trimmed my installed Rubygems on my local development machine. The command “&lt;code&gt;sudo gem cleanup&lt;/code&gt;” is just for that.&lt;/p&gt;
+&lt;p&gt;Only problem: What about my older Rails apps that require a specific version of Rails, ActiveRecord, etc.?&lt;/p&gt;
+&lt;p&gt;My solution:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;gem list --no-versions | grep -v "^active" | grep -v "^action" | grep -v "^rails$" | xargs sudo gem cleanup {}&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Any suggestions on how to make it even simpler?&lt;/p&gt;
+</description></item><item><title>Plugin for Rails’s Resource Controller</title><link>https://watson.github.io/justaddwater.dk/2008/11/07/plugin-for-railss-resource-controller/</link><guid isPermaLink="false">http://justaddwater.dk/?p=969</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Fri, 07 Nov 2008 15:15:59 +0000</pubDate><description>&lt;p&gt;If you’re using Resource Controller for Ruby on Rails, you may want to look atthe plugin I just created.&lt;/p&gt;
+&lt;p&gt;From the readme file:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;ResouceControllerRespondTo&lt;br/&gt;
+==========================&lt;/p&gt;
+&lt;p&gt;Extends ResourceController plugin for Rails to make it respond_to .xml and .json formats&lt;/p&gt;
+&lt;p&gt;Based on code by Florent Piteau and Joe Fiorini… Jesper merely provided the glue and packed as plugin.&lt;br/&gt;
+See &lt;a href="http://groups.google.com/group/resource_controller/browse_thread/thread/ec9100db655bc5a9"&gt;resource controller forum thread&lt;/a&gt; for the complete discussion&lt;/p&gt;
+&lt;p&gt;Copyright (c) 2008 Jesper Rønn-Jensen (&lt;a href="https://watson.github.io/justaddwater.dk/"&gt;www.justaddwater.dk&lt;/a&gt;), released under the MIT license
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;More info:&lt;br/&gt;
+&lt;a href="http://github.com/jesperronn/resource_controller_respond_to/"&gt;resource_controller_respond_to&lt;/a&gt; plugin on GitHub&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/giraffesoft/resource_controller/"&gt;resource_controller&lt;/a&gt; on GitHub&lt;/p&gt;
+</description></item><item><title>My Talk at Reboot8: Prototyping</title><link>https://watson.github.io/justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</link><guid isPermaLink="false">http://justaddwater.dk/2006/06/01/my-talk-at-reboot8-prototyping/</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Thu, 01 Jun 2006 09:27:11 +0000</pubDate><description>&lt;p&gt;Today is the time for my ten minute presentation at Reboot. I have ten minutes between 16.45 and 17.30 to give my talk.&lt;/p&gt;
+&lt;p&gt;Topic: Prototype driven development with Ruby on Rails, and demo of the application we made at Capgemini with the Danish public Agency of Companies and Commerce.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Presentation&lt;/strong&gt; (Powerpoint format) for download here:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt" id="p283" title="Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails"&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt" id="p283-archive-2" title="Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails"&gt;
+&lt;/a&gt;&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt" id="p283-archive-3" title="Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails"&gt;&lt;/a&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt" id="p283-archive-4" title="Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails"&gt; &lt;/a&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt" id="p283-archive-5" title="Powerpoint presentation (1.11MB) Prototype driven development with Ruby on Rails"&gt; &lt;/a&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.ppt" id="p283-archive-6"&gt;Prototype driven development with Ruby on Rails: Powerpoint version (1.11 MB)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.pdf" id="p285"&gt;Prototype driven development with Ruby on Rails&lt;/a&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.pdf"&gt;:&lt;/a&gt;&lt;a href="https://watson.github.io/justaddwater.dk/wp-content/uploads/2006/06/pres%202006-06-01%20reboot.pdf" id="p285-archive-2"&gt; PDF version (1.04MB)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;Request: Could somebody &lt;strong&gt;convert my Powerpoint to PDF?&lt;/strong&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ins&gt;Thanks to Thomas Maas and Guy Dickinson for converting to PDF!&lt;/ins&gt;&lt;/p&gt;
+&lt;h3&gt;Additional material&lt;/h3&gt;
+&lt;p&gt;Here are material if you are looking for more info:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://rubyonrails.org" title="Ruby on Rails Website"&gt;Ruby on Rails&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Links to agile software development methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Agile_software_development"&gt;Agile software development&lt;/a&gt; (wikipedia)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Extreme_Programming"&gt;Extreme Programming&lt;/a&gt; (wikipedia)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Scrum_%28in_management%29"&gt;Scrum (in management)&lt;/a&gt; (wikipedia)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/Lean_software_development"&gt;Lean software development&lt;/a&gt; (wikipedia)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gettingreal.37signals.com/"&gt;Getting Real&lt;/a&gt; (37Signals)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Your feedback&lt;/h3&gt;
+&lt;p&gt;One more thing: I would really like your feedback! This is my &lt;strong&gt;first presentation in English&lt;/strong&gt;, and also my first with many people (potentionally!) listening.&lt;/p&gt;
+&lt;p&gt;Furthermore, I only have ten minutes, so it will be a big challenge for me to get to the point. Hope you enjoy it.&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Technorati Tags: &lt;a data-original-url="http://technorati.com/tag/reboot" href="https://watson.github.io/justaddwater.dk/topics/reboot/" rel="tag"&gt;reboot&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/reboot8" href="https://watson.github.io/justaddwater.dk/topics/reboot8/" rel="tag"&gt; reboot8&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/conference" href="https://watson.github.io/justaddwater.dk/topics/conference/" rel="tag"&gt; conference&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/speaking" href="https://watson.github.io/justaddwater.dk/topics/speaking/" rel="tag"&gt; speaking&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/ruby+on+rails" href="https://watson.github.io/justaddwater.dk/topics/ruby-on-rails/" rel="tag"&gt; ruby on rails&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/capgemini" href="https://watson.github.io/justaddwater.dk/topics/capgemini/" rel="tag"&gt; capgemini&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/copenhagen" href="https://watson.github.io/justaddwater.dk/topics/copenhagen/" rel="tag"&gt; copenhagen&lt;/a&gt;, &lt;a data-original-url="http://technorati.com/tag/denmark" href="https://watson.github.io/justaddwater.dk/topics/denmark/" rel="tag"&gt; denmark&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+</description></item></channel></rss>

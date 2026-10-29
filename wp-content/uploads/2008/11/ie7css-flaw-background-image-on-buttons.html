@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-type"/>
+		<title>Page Title</title>
+		<style media="screen" type="text/css">
+    	button, input{
+			background:url("/justaddwater.dk/archive-assets/external/4ca961c40d3656a8f3281fff.png") no-repeat 0 0;
+			padding: 1px 4px 3px 4px;
+			border:1px solid lime;
+			color: yellow;
+    	}
+    	#button2{
+    		background-color:red;
+    	}
+    	
+		</style>
+	<link href="/justaddwater.dk/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/archive-assets/archive.js"></script></head>
+	<body>
+		<h1>IE bug: background-image is 1px away from border on buttons</h1>		
+		<p>I have buttons that are styled with border and background-image. Must work in IE7. But there is a small 1px gap between border and the background-image.</p>
+		<p>How to overcome this problem?</p>
+		<div class="archive-local-form" role="group">
+			<p><label><input name="button1" type="submit" value="input type=submit has the error"/></label></p>
+			<p><label>Background-color should never shine through:<br/>
+				<input id="button2" name="button2" type="button" value="input type=button, background-color red)"/></label></p>
+			<p><label><button name="button3" value="buttons also have the error">Buttons also have the error</button></label></p>
+
+		</div>
+		<p>Problem is especially annoying when buttons must have gradient images.</p>
+	
+</body></html>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>groovy – justaddwater.dk</title><link>https://watson.github.io/justaddwater.dk/tag/groovy/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/tag/groovy/feed/" rel="self" type="application/rss+xml" /><item><title>Groovy for Hudson console</title><link>https://watson.github.io/justaddwater.dk/2010/04/20/groovy-for-hudson-console/</link><guid isPermaLink="false">http://justaddwater.dk/?p=1305</guid><dc:creator>Jesper Rønn-Jensen</dc:creator><pubDate>Tue, 20 Apr 2010 11:25:23 +0000</pubDate><description>&lt;p&gt;Hudson continuous integration server has a console which is good for testing scripts and access to commands that your Hudson jobs need.&lt;/p&gt;
+&lt;p&gt;The hudson console only let’s you run Groovy script. To run commands on the machine, Groovy has the method &lt;code&gt;"string".execute()&lt;/code&gt;. So now I can use this snippet to test versions of Ruby, JRuby, etc:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def commands = ["ruby --version", "gem environment", "which ruby", "which gem", "jruby --version"]
+
+commands.each{
+  run(it)
+}
+
+def run(cmd) {
+  //def proc = commands[1].execute()
+  def proc = cmd.execute()
+  proc.waitFor()
+
+  // Obtain status and output
+  println "return code: ${ proc.exitValue()}"
+  println "stderr: ${proc.err.text}"
+  println "stdout: ${proc.in.text}" // *out* from the external program is *in* for groovy
+
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Example borrowed from and shrinkwrapped from &lt;a href="http://groovy.codehaus.org/JN1015-Collections"&gt;groovy.codehaus.org/JN1015-Collections&lt;/a&gt;&lt;/p&gt;
+</description></item></channel></rss>

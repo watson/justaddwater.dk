@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head profile="http://gmpg.org/xfn/11">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+<title>justaddwater.dk | Git extract folder from project with history and tags</title>
+
+<meta content="WordPress 5.1.27" name="generator"/>
+
+<link href="/justaddwater.dk/wp-content/themes/jaw/style.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/justaddwater.dk/feed/" rel="alternate" title="justaddwater.dk RSS Feed" type="application/rss+xml"/>
+
+<link href="/justaddwater.dk/favicon.ico" rel="shortcut icon"/>
+
+<style media="screen" type="text/css">
+
+	#page { background: url("/justaddwater.dk/wp-content/themes/jaw/images/kubrickbgwide.jpg") repeat-y top; border: none; } 
+
+</style>
+
+
+<link href="/justaddwater.dk/2016/11/02/git-extract-folder-from-project-with-history-and-tags/feed/" rel="alternate" title="justaddwater.dk » Git extract folder from project with history and tags Comments Feed" type="application/rss+xml"/>
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link href="/justaddwater.dk/wp-includes/css/dist/block-library/style.min.css" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+
+
+
+
+ 
+<link href="/justaddwater.dk/2016/08/25/git-tip-to-remove-remote-branches-already-merged/" rel="prev" title="Git tip to remove remote branches already merged"/>
+<meta content="WordPress 5.1.27" name="generator"/>
+<link href="https://justaddwater.dk/2016/11/02/git-extract-folder-from-project-with-history-and-tags/comment-page-1/#comments" rel="canonical"/>
+<link href="https://justaddwater.dk/2016/11/02/git-extract-folder-from-project-with-history-and-tags/" rel="shortlink"/>
+<link rel="alternate" type="application/json+oembed"/>
+<link rel="alternate" type="text/xml+oembed"/>
+<style media="screen" type="text/css">
+
+/* Begin Contact Form CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 1px solid #ff0000;
+}
+
+.contactsubmit {
+}
+/* End Contact Form CSS */
+
+	</style>
+
+
+
+
+<link href="/justaddwater.dk/archive-assets/archive.css" rel="stylesheet"/><script defer="defer" src="/justaddwater.dk/archive-assets/archive.js"></script></head>
+<body>
+<div id="page">
+
+<div id="header">
+	<div id="headerimg">
+		<h1><a href="/justaddwater.dk/">justaddwater.dk</a></h1>
+		<div class="description">Instant Usability &amp; Web Standards</div>
+		<div class="quote">“I would love to change the world,<br/>                but they won’t give me the source code.”</div>
+	</div>
+</div>
+
+	<div class="widecolumn" id="content">
+				
+  	
+		<div class="navigation">
+			<div class="alignleft">« <a href="/justaddwater.dk/2016/08/25/git-tip-to-remove-remote-branches-already-merged/" rel="prev">Git tip to remove remote branches already merged</a></div>
+			<div class="alignright"></div>
+		</div>
+	
+		<div class="post" id="post-1809">
+			<h2><a href="/justaddwater.dk/2016/11/02/git-extract-folder-from-project-with-history-and-tags/" rel="bookmark" title="Permanent Link: Git extract folder from project with history and tags">Git extract folder from project with history and tags</a></h2>
+	
+			<div class="entry">
+				<p>This is a short note regarding the use of `git filter-branch` when you want to split a git repository and preserve the history.</p>
+<p>I had some issues in finding the correct parameters. In case this also can help others, you can find the command here.</p>
+<p>In case you are not yet familiar with the possibilities of `git filter-branch`, I suggest you look into the  <a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#The-Nuclear-Option:-filter-branch">Git book: Rewriting history</a>, which has a good introduction to the command.</p>
+<p>Now, to start you should clone the repository you want to change (since you will completely rewrite history in the new repos).</p>
+<p> </p>
+<p>In short, without further explanation:</p>
+<p><code>ORIG=path_to_original_repos<br/>
+DEST=destination_of_rewritten_repos<br/>
+DIR=directory_you_want_to_extract_from_ORIG</code></p><code>
+</code><p><code>git clone $ORIG $DEST &amp;&amp; \<br/>
+cd $DEST &amp;&amp; \<br/>
+git filter-branch --prune-empty --tag-name-filter cat --subdirectory-filter $DIR -- --all</code></p>
+<p>A few notes:</p>
+<ul>
+<li><code>--prune-empty</code> will remove all commits that has no relation to the folder you extract</li>
+<li><code>--tag-name-filter cat</code> will also rewrite any tags you put on the commits that are rewritten</li>
+<li><code>--subdirectory-filter</code> takes a foldername as parameter, but I needed to add <code>-- --all</code> to make it work</li>
+</ul>
+<p> </p>
+	
+					
+				<p class="postmetadata alt">
+					<small>
+						This entry was posted by Jesper Rønn-Jensen						 
+						on Wednesday, November 2nd, 2016 at 20:40 (GMT-1)						and is filed under <a href="/justaddwater.dk/category/code/" rel="category tag">Code</a>, <a href="/justaddwater.dk/category/git/" rel="category tag">git</a>.
+						You can follow any responses to this entry through the <a href="/justaddwater.dk/2016/11/02/git-extract-folder-from-project-with-history-and-tags/feed/">RSS 2.0</a> feed. 
+						
+													Both comments and pings are currently closed.			
+						
+												
+					</small>
+				</p>
+	
+			</div>
+
+		</div>
+
+
+		
+	
+
+
+	<h3 id="comments">One Response to “Git extract folder from project with history and tags”</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-661565">
+			<cite>Geert Verschaeve</cite> Says:
+						<br/>
+
+			<small class="commentmetadata"><a href="#comment-661565" title="">November 19th, 2016 at 08:42 (GMT-1)</a> </small>
+
+			<p>I’ve been having problems with Git every I started applying it, especially because a mistake is quickly made. That said, I love how easy it is to undo mistakes. So thanks for the “— –all comment”, I’ve just tested it and to be honest, didn’t even know I could split AND preserve the history.</p>
+
+		</li>
+
+	
+
+
+	
+	</ol>
+
+ 
+
+	
+		
+	</div>
+
+    <div id="sidebar">
+        <ul>
+
+<li class="widget JAWAuthorWidgets_aboutTheAuthorWidget" id="about-the-author"><h2 class="widgettitle">About the Author</h2>
+<p style="text-align: center"><img alt="Photograph of author Jesper Rønn-Jensen" src="/justaddwater.dk/wp-content/jaw/userphoto/2.jpg" title="Photograph of author Jesper Rønn-Jensen"/></p><p>Jesper Rønn-Jensen, front-end web developer, usability specialist at  Nine A/S.</p><p>Acts as a usability evangelist and web-standards front-runner mostly working with web prototypes, or sketching wireframes for web applications.</p>
+</li>
+
+        </ul>
+    </div>
+
+
+<hr/>
+<div id="footer">
+	<p><a href="/justaddwater.dk/privacy/" title="Justaddwater.dk Privacy Policy">Privacy Policy</a><br/>justaddwater.dk was proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>. It is now a static site (<a href="https://github.com/watson/justaddwater.dk">source</a>).</p>
+</div>
+</div>
+
+
+
+
+
+
+</body></html>
