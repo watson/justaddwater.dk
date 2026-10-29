@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Comments on: How to Run JavaScript From Watir Scripts</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2007/11/20/how-to-run-javascript-from-watir-scripts/</link><description>Instant Usability &amp;amp; Web Standards — static archive</description><language>en-US</language><atom:link href="https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2007/11/20/how-to-run-javascript-from-watir-scripts/feed/" rel="self" type="application/rss+xml" /><item><title>By: Fabienphilipp</title><link>https://watson.github.io/justaddwater.dk/pr-preview/pr-1/2007/11/20/how-to-run-javascript-from-watir-scripts/#comment-387238</link><guid isPermaLink="false">http://justaddwater.dk/2007/11/20/how-to-run-javascript-from-watir-scripts/#comment-387238</guid><dc:creator>Fabienphilipp</dc:creator><pubDate>Wed, 02 Jan 2008 18:41:06 +0000</pubDate><description>&lt;p&gt;Dear Sir,&lt;/p&gt;
-&lt;p&gt;I used a call javascript function from Watir script so as to go to the superior page.&lt;br/&gt;
-win = $ie.frame(“home”).document.parentWindow&lt;br/&gt;
-win.gotoSeq(‘next’)&lt;br/&gt;
-However $ie rest on the old page. Must update on $ie through hwnd for example? &lt;/p&gt;
-&lt;p&gt;Yours faithfully,&lt;/p&gt;
-&lt;p&gt;Fabien.&lt;/p&gt;
-</description></item></channel></rss>
